@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en-US" typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
+<head><meta property="dc:language" content="en" lang="">
+		<title>Gap Analysis</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
+		
+	<style>/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* --- INLINES --- */
+em.rfc2119 { 
+    text-transform:     lowercase;
+    font-variant:       small-caps;
+    font-style:         normal;
+    color:              #900;
+}
+
+h1 acronym, h2 acronym, h3 acronym, h4 acronym, h5 acronym, h6 acronym, a acronym,
+h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, a abbr {
+    border: none;
+}
+
+dfn {
+    font-weight:    bold;
+}
+
+a.internalDFN {
+    color:  inherit;
+    border-bottom:  1px solid #99c;
+    text-decoration:    none;
+}
+
+a.externalDFN {
+    color:  inherit;
+    border-bottom:  1px dotted #ccc;
+    text-decoration:    none;
+}
+
+a.bibref {
+    text-decoration:    none;
+}
+
+cite .bibref {
+    font-style: normal;
+}
+
+code {
+    color:  #C83500;
+}
+
+/* --- TOC --- */
+.toc a, .tof a {
+    text-decoration:    none;
+}
+
+a .secno, a .figno {
+    color:  #000;
+}
+
+ul.tof, ol.tof {
+    list-style: none outside none;
+}
+
+.caption {
+    margin-top: 0.5em;
+    font-style:   italic;
+}
+
+/* --- TABLE --- */
+table.simple {
+    border-spacing: 0;
+    border-collapse:    collapse;
+    border-bottom:  3px solid #005a9c;
+}
+
+.simple th {
+    background: #005a9c;
+    color:  #fff;
+    padding:    3px 5px;
+    text-align: left;
+}
+
+.simple th[scope="row"] {
+    background: inherit;
+    color:  inherit;
+    border-top: 1px solid #ddd;
+}
+
+.simple td {
+    padding:    3px 10px;
+    border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+    background: #f0f6ff;
+}
+
+/* --- DL --- */
+.section dd > p:first-child {
+    margin-top: 0;
+}
+
+.section dd > p:last-child {
+    margin-bottom: 0;
+}
+
+.section dd {
+    margin-bottom:  1em;
+}
+
+.section dl.attrs dd, .section dl.eldef dd {
+    margin-bottom:  0;
+}
+
+@media print {
+    .removeOnSave {
+        display: none;
+    }
+}
+</style><style>/* --- PERMALINKS --- */
+
+
+.permalink {
+    width: 1px;
+    height: 1px;
+    overflow: visible;
+    font-size: 10pt;
+    font-style: normal;
+    vertical-align: middle;
+    margin-left: 4px;
+    
+	float: right;
+    
+    
+}
+
+.permalink a, .permalink a:link, .permalink a:visited, .permalink a:hover, .permalink a:focus, .permalink a:active 
+{
+	background:transparent !important;
+	text-decoration:none;
+    font-weight: bold;
+	color:#666 !important;
+}
+
+.permalink abbr {
+	border:0;
+}
+</style><link href="https://www.w3.org/StyleSheets/TR/W3C-ED" rel="stylesheet"><!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]--></head>
+	<body id="respecDocument" role="document" class="h-entry"><div id="respecHeader" role="contentinfo" class="head">
+  <p>
+      
+        
+            <a href="http://www.w3.org/"><img src="https://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width="72"></a>
+        
+      
+  </p>
+  <h1 class="title p-name" id="title" property="dcterms:title">Gap Analysis</h1>
+  
+  <h2 id="w3c-editor-s-draft-09-january-2015"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2015-01-09">09 January 2015</time></h2>
+  <dl>
+    
+      <dt>This version:</dt>
+      <dd><a class="u-url" href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd>
+      <dt>Latest published version:</dt>
+      <dd><a href="http://www.w3.org/TR/coga-gap-analysis/">http://www.w3.org/TR/coga-gap-analysis/</a></dd>
+    
+    
+      <dt>Latest editor's draft:</dt>
+      <dd><a href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd>
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    <dt>Editors:</dt>
+    <dd class="p-author h-card vcard" property="bibo:editor" resource="_:editor0"><span property="rdf:first" typeof="foaf:Person"><span property="foaf:name" class="p-name fn">Lisa Seeman</span></span>
+<span property="rdf:rest" resource="_:editor1"></span>
+</dd>
+<dd class="p-author h-card vcard" resource="_:editor1"><span property="rdf:first" typeof="foaf:Person"><meta property="foaf:name" content="Michael Cooper"><a class="u-url url p-name fn" property="foaf:homepage" href="http://www.w3.org">Michael Cooper</a>, <abbr title="World Wide Web Consortium">W3C</abbr>, <span class="ed_mailto"><a class="u-email email" property="foaf:mbox" href="mailto:cooper@w3.org">cooper@w3.org</a></span></span>
+<span property="rdf:rest" resource="rdf:nil"></span>
+</dd>
+
+    
+    
+  </dl>
+  
+  
+  
+  
+    
+      <p class="copyright">
+        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
+        2014-2015
+        
+        <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
+        (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+        <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+        <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>), 
+        
+        All Rights Reserved.
+        
+        <abbr title="World Wide Web Consortium">W3C</abbr> <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+        <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+        
+          <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
+        
+        rules apply.
+      </p>
+    
+  
+  <hr>
+</div>
+		<section property="dc:abstract" class="introductory" id="abstract"><h2 resource="#h-abstract" id="h-abstract"><span property="xhv:role" resource="xhv:heading">Abstract</span></h2>
+			<p>A gap analysis identifies the gap between where you are now and where you want to be. This document is a gap analysis of the state of accessibility for People with learning disabilities and cognitive disabilities when using the Web and information technologies. We aim to identify and describe the current situation and contrast it to what we want to happen. This document is not a specification (non-normative). It will be used as a base document to suggest techniques and create a roadmap for improving accessibility for people with learning disabilities and cognitive disabilities. </p>
+			<p>This document is divided into sections. This introduction is the first section. The second section analyses the current situation, in terms of user groups, technologies and existing standards. Subsequent sections will identify gaps and potentials and make suggestions for techniques and for the roadmap. </p>
+		</section><section id="sotd" class="introductory"><h2 resource="#h-sotd" id="h-sotd"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
+  
+    
+      
+        <p>
+          <em>This section describes the status of this document at the time of its publication.
+          Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the
+          latest revision of this technical report can be found in the <a href="http://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+          http://www.w3.org/TR/.</em>
+        </p>
+        
+        
+			<p>@@</p>
+		
+        
+        <p>
+          This document was published by the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as an Editor's Draft.
+          
+          
+            If you wish to make comments regarding this document, please send them to 
+            <a href="mailto:public-comments-wcag20@w3.org">public-comments-wcag20@w3.org</a> 
+            (<a href="mailto:public-comments-wcag20-request@w3.org?subject=subscribe">subscribe</a>,
+            <a href="http://lists.w3.org/Archives/Public/public-comments-wcag20/">archives</a>).
+          
+          
+          
+          
+          
+            
+            All comments are welcome.
+            
+          
+        </p>
+        
+        
+        
+          <p>
+            Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+            Membership. This is a draft document and may be updated, replaced or obsoleted by other
+            documents at any time. It is inappropriate to cite this document as other than work in
+            progress.
+          </p>
+        
+        
+        
+        <p>
+          
+            This document was produced by a group operating under the 
+            <a id="sotd_patent" property="w3p:patentRules" href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 <abbr title="World Wide Web Consortium">W3C</abbr> Patent
+            Policy</a>.
+          
+          
+          
+            
+              <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="http://www.w3.org/2004/01/pp-impl/35422/status" rel="disclosure">public list of any patent
+              disclosures</a> 
+            
+            made in connection with the deliverables of the group; that page also includes
+            instructions for disclosing a patent. An individual who has actual knowledge of a patent
+            which the individual believes contains
+            <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
+            Claim(s)</a> must disclose the information in accordance with
+            <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
+            6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          
+          
+        </p>
+        
+          <p>This document is governed by the <a id="w3c_process_revision" href="http://www.w3.org/2014/Process-20140801/">1 August 2014 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+          </p>
+        
+        
+      
+    
+  
+</section><section id="toc"><h2 resource="#h-toc" id="h-toc" class="introductory"><span property="xhv:role" resource="xhv:heading">Table of Contents<span typeof="bookmark" class="permalink"><a href="#toc" property="url" aria-label="Permalink for toc" title="Permalink for toc"><span property="title" content="Table of Contents">§</span></a></span></span></h2><ul id="respecContents" role="directory" class="toc"><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#importance-of-this-document"><span class="secno">1.1 </span>Importance of This Document</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><span class="secno">1.2 </span>Assumptions</a></li><li class="tocline"><a class="tocxref" href="#comments"><span class="secno">1.3 </span>Comments</a></li></ul></li><li class="tocline"><a class="tocxref" href="#summary-of-user-groups-and-cognitive-function"><span class="secno">2. </span>Summary of User Groups and Cognitive Function</a></li><li class="tocline"><a class="tocxref" href="#gap-analysis"><span class="secno">3. </span>Gap Analysis</a></li><li class="tocline"><a class="tocxref" href="#review-of-current-standards-and-technologies"><span class="secno">4. </span>Review of Current Standards and Technologies</a></li><li class="tocline"><a class="tocxref" href="#business-case-and-dynamics"><span class="secno">5. </span>Business Case and Dynamics</a></li><li class="tocline"><a class="tocxref" href="#gap-analysis-1"><span class="secno">6. </span>Gap Analysis</a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A. </span>Acknowledgments</a><ul class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">A.2 </span>Enabling funders</a></li></ul></li></ul></section>
+		
+		<section property="bibo:hasPart" resource="#introduction" typeof="bibo:Chapter" class="informative" id="introduction">
+			<!--OddPage--><h2 resource="#h-introduction" id="h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction<span typeof="bookmark" class="permalink"><a href="#introduction" property="url" aria-label="Permalink for introduction" title="Permalink for introduction"><span property="title" content="1. Introduction">§</span></a></span></span></h2><p><em>This section is non-normative.</em></p>
+<p> this is a test edit by lisa</p>
+			<p>A gap analysis identifies the gap between where you are now and where you want to be. This document is a gap analysis of the state of accessibility for People with learning disabilities and cognitive disabilities when using the Web and Information and Communication Technologies (ICT). We aim to identify and describe the current situation and contrast it to what we want to happen.</p>
+			<p>&nbsp;This document will be used as a base document to enable discussion, suggest techniques and create a roadmap for improving accessibility for people with learning disabilities and cognitive disabilities.</p>
+			<p>This document is divided into sections:</p>
+			<ul>
+				<li>The first section reviews the current situation, in terms of user groups, research, technologies and existing standards. It is currently at is first draft and we are asking for comments. Please let us know if you are aware of omissions.</li>
+				<li>The second section will identify gaps between the current situation and the potential for accessibility support. This section is not yet at review stage.</li>
+				<li>The third section makes suggestions for improving accessibility for people with learning disabilities and cognitive disabilities, including techniques and proposals for the roadmap, and an outline of what needs to be done. It is currently at is first draft and we invite comments.</li>
+			</ul>
+			
+			<section property="bibo:hasPart" resource="#importance-of-this-document" typeof="bibo:Chapter" id="importance-of-this-document">
+				<h3 resource="#h-importance-of-this-document" id="h-importance-of-this-document"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.1 </span>Importance of This Document<span typeof="bookmark" class="permalink"><a href="#importance-of-this-document" property="url" aria-label="Permalink for importance-of-this-document" title="Permalink for importance-of-this-document"><span property="title" content="1.1 Importance of This Document">§</span></a></span></span></h3>
+				<p>This document is important because enabling people with learning and cognitive disabilities to use the Web and ICT is of critical importance to both the individuals and to society.</p>
+				<p>More and more the internet and ICT has become the main way people stay informed and current on news and health information, keep in touch with friends and family, and provides independence, convenient shopping, and other. People who cannot use these interfaces will have an increased feeling of being disabled and alienation from society. </p>
+				<p>Further, with the advent of the Web of Things everyday physical objects are connected to the Internet and have ICT interfaces. Being able to use these interfaces now is an essential component of allowing people to maintain their independence, stay in the work force for longer and stay safe. &nbsp;</p>
+				<p>Consider that the population is aging. By 2050 it is projected there will be 115 million people with dementia worldwide. It is essential to the economy and society that people with mild and moderate levels of dementia stay as active as possible and participate in society for as long as possible. However, at the moment even people with only a mild cognitive decline find may standard applications impossible to use. That means more and more people are dependent on care givers for things that they could do themselves, increasing the crippling cost of care and reducing human dignity.</p>
+				<p>We therefore invite you to review this draft, comment and consider how your technologies and work may be effected by these issues.</p>
+			</section>
+			<section property="bibo:hasPart" resource="#assumptions" typeof="bibo:Chapter" id="assumptions">
+				<h3 resource="#h-assumptions" id="h-assumptions"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>Assumptions<span typeof="bookmark" class="permalink"><a href="#assumptions" property="url" aria-label="Permalink for assumptions" title="Permalink for assumptions"><span property="title" content="1.2 Assumptions">§</span></a></span></span></h3>
+				<p>There is a huge number of cognitive disabilities and variations of them. If we attempt an analysis of all the possibilities, the job will be too big and nothing will be achieved. Therefore we are adopting a phased approach, selecting in phase one a limited scope of eight diverse disabilities, and hope to achieve something useful within that scope. Also note that helping users improve skills, and emotional disabilities, are out of scope for phase one. We anticipate this analysis will continue to a second or third phase where more user groups are analyzed and the existing analyses are updated with new research and with new technologies and scenarios. </p>
+			</section>
+			<section property="bibo:hasPart" resource="#comments" typeof="bibo:Chapter" id="comments">&nbsp;
+				<h3 resource="#h-comments" id="h-comments"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.3 </span>Comments<span typeof="bookmark" class="permalink"><a href="#comments" property="url" aria-label="Permalink for comments" title="Permalink for comments"><span property="title" content="1.3 Comments">§</span></a></span></span></h3>
+				<p>This is an early and incomplete draft for review and to help us get comments and early feedback. We are particularly interested in:</p>
+				<ul>
+					<li>Omitted challenges, use cases and issues.</li>
+					<li>Issues involving your technologies/work and people with learning and cognitive disabilities.</li>
+					<li>Other omitted research</li>
+				</ul>
+				<p>We welcome comments and suggestions. Please send comments to … All comments will be reviewed and discussed by the task force. Although we cannot commit to formally responding to all comments on this draft, the discussions can be tracked in the task force minutes.&nbsp; </p>
+			</section>
+		</section>
+		<section property="bibo:hasPart" resource="#summary-of-user-groups-and-cognitive-function" typeof="bibo:Chapter" id="summary-of-user-groups-and-cognitive-function">
+			<!--OddPage--><h2 resource="#h-summary-of-user-groups-and-cognitive-function" id="h-summary-of-user-groups-and-cognitive-function"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Summary of User Groups and Cognitive Function<span typeof="bookmark" class="permalink"><a href="#summary-of-user-groups-and-cognitive-function" property="url" aria-label="Permalink for summary-of-user-groups-and-cognitive-function" title="Permalink for summary-of-user-groups-and-cognitive-function"><span property="title" content="2. Summary of User Groups and Cognitive Function">§</span></a></span></span></h2>
+			<p>Include: mapping of disabilities and cognitive function.</p>
+		</section>
+		<section property="bibo:hasPart" resource="#gap-analysis" typeof="bibo:Chapter" id="gap-analysis">
+			<!--OddPage--><h2 resource="#h-gap-analysis" id="h-gap-analysis"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>Gap Analysis<span typeof="bookmark" class="permalink"><a href="#gap-analysis" property="url" aria-label="Permalink for gap-analysis" title="Permalink for gap-analysis"><span property="title" content="3. Gap Analysis">§</span></a></span></span></h2>
+			<p>Includes table Mapping Cognitive Issues to Accessibility Issues</p>
+			<p class="ednote">The TOC proposal included methodology for performing gap analysis, but it had the same content as the methodology in user research below, so wasn't included here.</p>
+		</section>
+		<section property="bibo:hasPart" resource="#review-of-current-standards-and-technologies" typeof="bibo:Chapter" id="review-of-current-standards-and-technologies">
+			<!--OddPage--><h2 resource="#h-review-of-current-standards-and-technologies" id="h-review-of-current-standards-and-technologies"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>Review of Current Standards and Technologies<span typeof="bookmark" class="permalink"><a href="#review-of-current-standards-and-technologies" property="url" aria-label="Permalink for review-of-current-standards-and-technologies" title="Permalink for review-of-current-standards-and-technologies"><span property="title" content="4. Review of Current Standards and Technologies">§</span></a></span></span></h2>
+		</section>
+		<section property="bibo:hasPart" resource="#business-case-and-dynamics" typeof="bibo:Chapter" id="business-case-and-dynamics">
+			<!--OddPage--><h2 resource="#h-business-case-and-dynamics" id="h-business-case-and-dynamics"><span property="xhv:role" resource="xhv:heading"><span class="secno">5. </span>Business Case and Dynamics<span typeof="bookmark" class="permalink"><a href="#business-case-and-dynamics" property="url" aria-label="Permalink for business-case-and-dynamics" title="Permalink for business-case-and-dynamics"><span property="title" content="5. Business Case and Dynamics">§</span></a></span></span></h2>
+				<ol>
+					<li> Positives <ol>
+							<li> Cognitive load–dispatches </li>
+							<li> Aging society </li>
+							<li> Veterans with brain injury  </li>
+						</ol></li>
+					<li> Negative <ol>
+							<li> Detracting from other peoples experience </li>
+							<li> Legitimate variance nurodiversity </li>
+							<li> Legislation based guidelines are burdensome and restrict author freedoms (hence metadata markup clues) </li>
+							<li> Cross cultural and language learners </li>
+						</ol></li>
+				</ol>
+		</section>
+		<section property="bibo:hasPart" resource="#gap-analysis-1" typeof="bibo:Chapter" id="gap-analysis-1">
+			<!--OddPage--><h2 resource="#h-gap-analysis-1" id="h-gap-analysis-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">6. </span>Gap Analysis<span typeof="bookmark" class="permalink"><a href="#gap-analysis-1" property="url" aria-label="Permalink for gap-analysis-1" title="Permalink for gap-analysis-1"><span property="title" content="6. Gap Analysis">§</span></a></span></span></h2>
+				<ol>
+					<li> Summary of where we are </li>
+					<li> Potential of where we could be </li>
+					<li> Identification of gaps </li>
+				</ol>
+		</section>
+		<!--
+		<section class="appendix" id="changelog">
+			<h2>Change Log</h2>
+			<section>
+				<h2>Substantive changes since the <a href="@@">last public working draft</a></h2>
+				<ul>
+					<li>@@</li>
+					<!- EdNote: After each WD publish, move contents of this list into the next one below. ->
+				</ul>
+			</section>
+			<section>
+				<h2>Other substantive changes since the <a href="@@">First Public Working Draft</a></h2>
+				<ul>
+					<li>@@</li>
+					<!- EdNote: After each WD publish, move previous list into this one. ->
+				</ul>
+			</section>
+		</section>
+		-->
+		<section property="bibo:hasPart" resource="#acknowledgements" typeof="bibo:Chapter" class="appendix informative section" id="acknowledgements">
+	<!--OddPage--><h2 resource="#h-acknowledgements" id="h-acknowledgements"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>Acknowledgments<span typeof="bookmark" class="permalink"><a href="#acknowledgements" property="url" aria-label="Permalink for acknowledgements" title="Permalink for acknowledgements"><span property="title" content="A. Acknowledgments">§</span></a></span></span></h2><p><em>This section is non-normative.</em></p>
+	<p>The following people contributed to the development of this document.</p>
+	<section property="bibo:hasPart" resource="#ack_group" typeof="bibo:Chapter" class="section" id="ack_group">
+		<h3 resource="#h-ack_group" id="h-ack_group"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication<span typeof="bookmark" class="permalink"><a href="#ack_group" property="url" aria-label="Permalink for ack_group" title="Permalink for ack_group"><span property="title" content="A.1 Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication">§</span></a></span></span></h3>
+		<ul>
+			<li>Jim Allan (Invited Expert)</li>
+			<li>Tim Boland (National Institute of Standards and Technology (NIST))</li>
+			<li>Michael Cooper (<abbr title="World Wide Web Consortium">W3C</abbr>/<abbr title="Massachusetts Institute of Technology">MIT</abbr>)</li>
+			<li>Deborah Dahl (Invited Expert)</li>
+			<li>Katherine Diebel (Invited Expert)</li>
+			<li>Chaohai Ding (University of Southampton)</li>
+			<li>Anthony Doran (Invited Expert)</li>
+			<li>E.A. Draffan (University of Southampton)</li>
+			<li>Michel Fitos (Invited Expert)</li>
+			<li>John Foliot (Invited Expert)</li>
+			<!-- <li>Karl Groves (The Paciello Group, LLC)</li> -->
+			<li>Katie Haritos-Shea (Invited Expert)</li>
+			<li>Barry Johnson (Deque Systems, Inc.)</li>
+			<li>Susann Keohane (IBM Corporation)</li>
+			<li>Dr Kinshuk (Invited Expert)</li>
+			<li>Andrew Kirkpatrick (Adobe Systems Inc.)</li>
+			<li>Steve Lee (Invited Expert)</li>
+			<li>Katherine Mancuso (Invited Expert)</li>
+			<li>Neil Milliken (British Broadcasting Corporation)</li>
+			<li>Mary Jo Mueller (IBM Corporation)</li>
+			<li>Liddy Nevile (Invited Expert)</li>
+			<li>Joshue O Connor (Invited Expert)</li>
+			<li>Joseph Karr O'Connor (Invited Expert)</li>
+			<li>John Rochford (Invited Expert)</li>
+			<li>Debra Ruh (Invited Expert)</li>
+			<li>Janina Sajka (Invited Expert, The Linux Foundation)</li>
+			<li>Richard Schwerdtfeger (IBM Corporation)</li>
+			<li>Lisa Seeman (Invited Expert) </li>
+			<!-- <li>Mike Shebanek (Yahoo!, Inc.)</li> -->
+			<li>Cynthia Shelly (Microsoft Corporation) </li>
+			<li>Suzanne Taylor (Pearson plc)</li>
+			<li>Elle Waters (Invited Expert)</li>
+		</ul>
+	</section>
+	<!--
+	<section class="section" id="ack_others">
+		<h4>Other contributors, commenters, and previously active task force participants</h4>
+		<ul>
+			<li>@@</li>
+		</ul>
+	</section>
+	-->
+	<section property="bibo:hasPart" resource="#ack_funders" typeof="bibo:Chapter" class="section" id="ack_funders">
+		<h3 resource="#h-ack_funders" id="h-ack_funders"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.2 </span>Enabling funders<span typeof="bookmark" class="permalink"><a href="#ack_funders" property="url" aria-label="Permalink for ack_funders" title="Permalink for ack_funders"><span property="title" content="A.2 Enabling funders">§</span></a></span></span></h3>
+		<p>This publication has been funded in part with Federal funds from the U.S. Department of Education, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR) under contract number ED-OSE-10-C-0067. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+	</section>
+</section>
+
+	
+
+</body></html>
