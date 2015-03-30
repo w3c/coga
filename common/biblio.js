@@ -33,6 +33,26 @@ var biblio = {
 			"publishDate": "1994",
 			},
 			
+"Bruandet-1": {
+		"title": "A cognitive characterization of dyscalculia in Turner syndrome",
+		"authors":"Bruandet, M.",
+		"publisher": "Neuropsychologia, Volume 42, Issue 3",
+		"etAl": true,
+		"publishDate": "2004",
+		//"pages": "288-98",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/14670569",
+		},		
+			
+	"Butterworth-1":
+			 {
+		"title": "The Mathematical Brain",
+		"publisher": "London: Macmillan",
+		"authors":"Butterworth, B.",
+		"etAl": false,
+		
+		"publishDate": "1999",
+		},
+			
 			"Cao-1": {
 		"title": "Deficient orthographic and phonological representations in children with dyslexia revealed by brain activation patterns",
 		"href": "http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03",
@@ -48,6 +68,16 @@ var biblio = {
                 "publishDate": "2006",
 		},
 			
+			"Cohen-Kadosh-1": {
+		"title": "Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing",
+		"publisher": "Current Biology, Volume 17, Issue 8",
+		"authors":"Cohen Kadosh, R.",
+		"etAl": true,
+		//"pages": "689-93",
+		"publishDate": "2007",
+		"href": "http://www.sciencedirect.com/science/article/pii/S0960982207010652",
+		},
+		
 			"Dejerine-1": {
 				"title": "Sur un cas de cécité verbale avec agraphie, suivi d’autopsie",
 				"publisher": "C. R. Societe du Biologie 43",
@@ -135,7 +165,16 @@ var biblio = {
 		"publishDate": "1993",
 	},
 	
-	
+	"Geary-1": {
+		"title": "Mathematical disabilities: cognitive, neuropsychological, and genetic components",
+		"authors":"Geary, D.C.",
+		"publisher": "Psychological Bulletin, Volume 114, Issue 2",
+		"etAl": false,
+		"publishDate": "1993",
+		//"pages": "345-362",
+		"href": "http://psycnet.apa.org/psycinfo/1994-02259-001",
+		},
+		
 	"Geschwind-1": {
 		"title": "Disconnexion syndromes in animals and man. I.",
 		"publisher": "Brain 88",
@@ -155,6 +194,18 @@ var biblio = {
 		// "publishedBy": "Macmillan Publishers LTD",
 		"publishDate": "1986",
 	},
+	
+	"Ladislav-1": {
+		"title": "Developmental Dyscalculia",
+		"publisher": "Journal of Learning Disabilities.  vol. 7 no. 3",
+		"authors":"Ladislav, K.",
+		"etAl": false,
+		//"pages": "164-177",
+		"publishDate": "1974",
+		"href": "http://ldx.sagepub.com/content/7/3/164.short",
+		},
+
+
 	
 	"Lyon-1": {
 		"title": "Neuroimaging a window to the neurological foundations of learning and behavior in children",
@@ -208,6 +259,16 @@ var biblio = {
 		// "publishedBy": "American Association for the Advancement of Science",
 		"publishDate": "1990",
 	},
+	
+	"Price-1": {
+		"title": "Impaired parietal magnitude processing in developmental dyscalculia",
+		"publisher": "Current Biology, Volume 17, Issue 24",
+		"authors":"Price, G.R.",
+		"etAl": true,
+		//"pages": "1042-43",
+		"publishDate": "2007",
+		"href": "http://www.cell.com/current-biology/retrieve/pii/S0960982207020726",
+		},
 
 
 
@@ -266,6 +327,25 @@ var biblio = {
 		"publishDate": "1993",
 	},
 	
+"Shalev-1":	{
+		"title": "Developmental Dyscalculia",
+		"publisher": "Journal of Child Neurology vol. 19 no. 10",
+		"authors":"Shalev, R.S.",
+		"etAl": false,
+		//"pages": "765—771",
+		"publishDate": "2004",
+		},
+		
+"Shalev-2": {
+		"title": "Developmental Dyscalculia Is a Familial Learning Disability",
+		"publisher": "Journal of learning disabilities,  vol. 34, no. 1",
+		"authors":"Shalev, R.S.",
+		"etAl": true,
+		//"pages": "1042-43",
+		"publishDate": "2001",
+		"href": "http://ldx.sagepub.com/content/34/1/59.short",
+		},
+	
 	
 	"Shaywitz-1": {
 		"title": "Functional disruption in the organization of the brain for reading in dyslexia",
@@ -277,6 +357,7 @@ var biblio = {
 		"publishDate": "1998",
 		},
 		
+			
 
 "Stein-1": {
 		"title": "The magnocellular theory of developmental dyslexia",
@@ -301,5 +382,13 @@ var biblio = {
 		"etAl": true,
 		"deliveredBy": "http://www.w3.org/WAI/PF/",
 	},
+	"Wilson-1":
+                {
+		"title": "Dyscalculia primer and resource guide",
+		"authors":"Wilson, A.J.",
+		"etAl": false,
+		"publishDate": "2008",
+		"href": "http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm",
+		},
 	
 };
