@@ -1,4 +1,14 @@
 var biblio = {
+
+	"APA-1": {
+		"title": "Diagnostic and statistical manual of mental disorders (DSM-5).",
+		"authors": "American Psychiatric Association",
+		"etAl": false,
+		"publisher": "Washington D.C.: American Psychiatric Association.",
+		"publishDate": "2013",
+
+		},
+		
 	"Arcos-Burgos-1": {
 		"title": "A common variant of the latrophilin 3 gene, LPHN3, confers susceptibility to ADHD and predicts effectiveness of stimulant medication.",
 		"authors": "Arcos-Burgos, M.",
@@ -6,6 +16,15 @@ var biblio = {
 		"publisher": "Molecular Psychiatry, Vol 15 No. 11",
 		//"pages": "1053-1066",
 		"publishDate": "2010",
+		},
+		
+	"Banaschewski-1": {
+		"title": "Colour perception in ADHD.",
+		"authors": "Banaschewski, T.",
+		"etAl": true,
+		"publisher": "Journal of child psychology and psychiatry, and allied disciplines, Vol 47 Issue 6",
+		"publishDate": "2006",
+		//"pages": "568-572",
 		},
 
 	"Benson-1": {
@@ -50,7 +69,16 @@ var biblio = {
 		"publishDate": "2004",
 		//"pages": "288-98",
 		"href": "http://www.ncbi.nlm.nih.gov/pubmed/14670569",
-		},		
+		},	
+		
+	"Bussing-1": {
+		"title": "Explanatory Models of ADHD Do They Differ by Ethnicity, Child Gender, or Treatment Status?",
+		"authors": "Bussing, R.",
+		"etAl": true,
+		"publisher": "Journal of Emotional and Behavioral Disorders, Vol 6 Issue 4",
+		"publishDate": "1998",
+		//"pages": "233-242",
+		},	
 			
 	"Butterworth-1":
 			 {
@@ -148,6 +176,20 @@ var biblio = {
 		"publishDate": "2013",
 		//"pages": "447-461",
 		"href": "http://www.ncbi.nlm.nih.gov/pubmed/23724008",
+		},
+
+
+	"de-Cock-1": {
+		"title": "Does perinatal exposure to endocrine disruptors induce autism spectrum and attention deficit hyperactivity disorders? Review.",
+		"authors": [
+			"de Cock, M.",
+			"Maas, Y. G.",
+			"Van De Bor, M."
+                        ],
+		"etAl": false,
+		"publisher": "Acta Paediatrica (Review), Vol 101 Issue 8",
+		//"pages": "811-818",
+		"publishDate": "2012",
 		},		
 		
 			"Dejerine-1": {
@@ -217,7 +259,21 @@ var biblio = {
 		// "publishedBy": "Macmillan Publishers LTD",
 		"publishDate": "1996",
 	},
-
+	
+	"Faraone-1": {
+		"title": "The worldwide prevalence of ADHD: is it an American condition?",
+		"authors": [
+			"Faraone, S. V.",
+			"Sergeant, J.",
+			"Gilberg, C.",
+			"Biedrman, J."
+                        ],
+		"etAl": false,
+		"publisher": "World Psychiatry, Vol 2 Issue 2",
+		"publishDate": "2003",
+		//"pages": "104-113",
+		},
+		
 	"Franke-1": {
 		"title": "The genetics of attention deficit/hyperactivity disorder in adults, a review.",
 		"authors": "Franke, B.",
@@ -331,6 +387,15 @@ var biblio = {
 		//"pages": "487-492",
 		},
 		
+	"Kessler-1": {
+		"title": "The prevalence and correlates of adult ADHD in the United States: results from the National Comorbidity Survey Replication.",
+		"authors": "Kessler, R. C.",
+		"etAl": true,
+		"publisher": "The American Journal of Psychiatry, Vol 163 Issue 4",
+		"publishDate": "2006",
+		//"pages": "716-723",
+		},
+		
 	"Ladislav-1": {
 		"title": "Developmental Dyscalculia",
 		"publisher": "Journal of Learning Disabilities.  vol. 7 no. 3",
@@ -341,7 +406,18 @@ var biblio = {
 		"href": "http://ldx.sagepub.com/content/7/3/164.short",
 		},
 
-
+	"Lindsay-1": {
+		"title": "Attentional function as measured by a Continuous Performance Task in children with dyscalculia.",
+		"authors": [
+			"Lindsay, R. L.",
+			"Tomazic, T.",
+			"Accardo, P. J."
+                        ],
+		"etAl": false,
+		"publisher": "Journal of developmental and behavioral pediatrics, Vol 22 Issue 5",
+		"publishDate": "2001",
+		//"pages": "287-92",
+		},
 	
 	"Lyon-1": {
 		"title": "Neuroimaging a window to the neurological foundations of learning and behavior in children",
@@ -372,6 +448,46 @@ var biblio = {
 		"publishDate": "2005",
 		//"pages": "337-384",
 		"href": "http://www.ncbi.nlm.nih.gov/pubmed/15782085",
+		},
+
+	"Mayo-1": {
+		"title": "Attention-deficit/hyperactivity disorder (ADHD) in children Treatments and drugs.",
+		"authors": "Mayo Clinic",
+		"etAl": false,
+		"href": "http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647",
+		//"accessed": "22 September 2014",
+		"publishDate": "n. d.",
+		},
+		
+	"Meyer-1": {
+		"title": "Fine motor skills in South African children with symptoms of ADHD: influence of subtype, gender, age, and hand dominance.",
+		"authors": [
+			"Meyer, A.",
+			"Sagvolden, T."
+                        ],
+		"etAl": false,
+		"publisher": "Behavioral and Brain Functions, Volume 2 Issue 1",
+		"publishDate": "2006",
+		//"pages": "2-33",
+		},
+		
+	"Nigg-1": {
+		"title": "Cognitive Impairments Found With Attention-Deficit/Hyperactivity Disorder.",
+		"authors": "Nigg, J. T.",
+		"etAl": false,
+		"publisher": "Psychiatric Times",
+		"publishDate": "2009",
+		"href": "http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder",
+		//"accessed": "10 September 2014",
+		},
+		
+	"NRC-1": {
+		"title": "About ADHD Causes and Brain Chemistry..",
+		"authors": "National Resource Center on ADHD",
+		"etAl": false,
+		"href": "http://www.help4adhd.org/en/about/causes",
+		//"accessed": "15 September 2014",
+		"publishDate": "n. d.",
 		},
 		
 	"Pauc-1": {
@@ -418,6 +534,15 @@ var biblio = {
 		// "publishedBy": "American Association for the Advancement of Science",
 		"publishDate": "1990",
 	},
+	
+	"Polanczyk-1": {
+		"title": "The worldwide prevalence of ADHD: a systematic review and metaregression analysis.",
+		"authors": "Polanczyk, G.",
+		"etAl": true,
+		"publisher": "The American Journal of Psychiatry, Vol 164 Issue 6",
+		"publishDate": "2007",
+		//"pages": "942-948",
+		},
 	
 	"Price-1": {
 		"title": "Impaired parietal magnitude processing in developmental dyscalculia",
@@ -527,6 +652,15 @@ var biblio = {
 		"publishDate": "1998",
 		},
 		
+	"Sinfield-1": {
+		"title": "Colors and ADHD: How Color Coding Can Make Your Life Easier.",
+		"authors": "Sinfield, J.",
+		"etAl": false,
+		"href": "http://untappedbrilliance.com/colors-adhd",
+		//"accessed": "22 September 2014",
+		"publishDate": "2014",
+		},
+		
 	"Smith-1": {
 		"title": "Adult ADD / ADHD Self-Help.",
 		"authors": [
@@ -606,6 +740,26 @@ var biblio = {
 		"publishDate": "2014",
 		//"accessed": "11 September 2014",
 		},
+		
+"Willcutt-1": {
+		"title": "Recent Developments in Neuropsychological Models of Childhood Psychiatric Disorders",
+		"authors": [
+			"Willcutt, E.",
+			"Sonuga-Barke, E.",
+			"Nigg, J. T.",
+			"Sergeant , J. A."
+                        ],
+		"editors": [
+			"T. Banaschewski",
+			" L. A. Rohde"
+                        ],
+		"publisher": "Advances in Biological Psychiatry, volume 24: Recent Trends and Developments, Basel: Karger",
+		"etAl": false,
+		"publishDate": "2008",
+		//"pages": "195-226",
+
+		},
+		
 	"WHO-1": {
 		"title": "The ICD-10 Classification of Mental and Behavioural Disorders Clinical descriptions and diagnostic guidelines.",
 		"authors": "World Health Organisation",
