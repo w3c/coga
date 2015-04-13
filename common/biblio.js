@@ -1,4 +1,13 @@
 var biblio = {
+	"Arcos-Burgos-1": {
+		"title": "A common variant of the latrophilin 3 gene, LPHN3, confers susceptibility to ADHD and predicts effectiveness of stimulant medication.",
+		"authors": "Arcos-Burgos, M.",
+		"etAl": true,
+		"publisher": "Molecular Psychiatry, Vol 15 No. 11",
+		//"pages": "1053-1066",
+		"publishDate": "2010",
+		},
+
 	"Benson-1": {
 		"title": "The Neurology of Thinking",
 		"publisher": "Oxford Univ. Press",
@@ -67,7 +76,49 @@ var biblio = {
                 //"pages": "1041–1050",
                 "publishDate": "2006",
 		},
-			
+		
+	"Castellanos-1": {
+		"title": "Characterizing cognition in ADHD: beyond executive dysfunction.",
+		"authors": [
+			"Castellanos, F. X.",
+			"Sonuga-Barke, J. S.",
+			"Milham, M. P.",
+			"Tannock, R."
+                        ],
+		"publisher": "Trends in Cognitive Sciences, Volume 10 Issue 3",
+		"etAl": false,
+		"publishDate": "2006",
+		//"pages": "117-123",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/16460990",
+		},
+
+	"CDC-1": {
+		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD) Symptoms and Diagnosis.",
+		"authors": "Centers for Disease Control and Prevention",
+		"href": "http://www.cdc.gov/ncbddd/adhd/diagnosis.html",
+		//"accessed": "10 September 2014",
+		"etAl": false,
+		"publishDate": "2014",
+		},
+		
+	"CDC-2": {
+		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD) Key Findings: Trends in the Parent-Report of Health Care Provider-Diagnosis and Medication Treatment for ADHD: United States, 2003-2011",
+		"authors": "Centers for Disease Control and Prevention",
+		"href": "http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html",
+		//"accessed": "12 September 2014",
+		"etAl": false,
+		"publishDate": "2014",
+		},
+
+	"CDC-3": {
+		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD): Facts About ADHD.",
+		"authors": "Centers for Disease Control and Prevention",
+		"href": "http://www.cdc.gov/ncbddd/adhd/facts.html",
+		//"accessed": "11 September 2014",
+		"etAl": false,
+		"publishDate": "2014",
+		},
+							
 			"Cohen-Kadosh-1": {
 		"title": "Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing",
 		"publisher": "Current Biology, Volume 17, Issue 8",
@@ -77,6 +128,27 @@ var biblio = {
 		"publishDate": "2007",
 		"href": "http://www.sciencedirect.com/science/article/pii/S0960982207010652",
 		},
+
+	"Cummins-1": {
+		"title": "Tools To manage Your Adult ADHD - UPDATED",
+		"authors": "Cummins, M.",
+
+		"href": "http://marlacummins.com/50-tools-to-manage-your-adult-adhd/",
+		"etAl": false,
+		"publishDate": "2014",
+		//"accessed": "11 September 2014",
+		},
+		
+		
+"Czamara-1": {
+		"title": "Children with ADHD symptoms have a higher risk for reading, spelling and math difficulties in the GINIplus and LISAplus cohort studies",
+		"authors": "Czamara, D.",
+		"publisher": "PLOS One, Volume 8(5)",
+		"etAl": true,
+		"publishDate": "2013",
+		//"pages": "447-461",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/23724008",
+		},		
 		
 			"Dejerine-1": {
 				"title": "Sur un cas de cécité verbale avec agraphie, suivi d’autopsie",
@@ -102,6 +174,32 @@ var biblio = {
 		// "publishedBy": "Oxford University Press",
 		"publishDate": "1994",
 	},
+	
+	"Demurie-1": {
+		"title": "Common alterations in sensitivity to type but not amount of reward in ADHD and autism spectrum disorders.",
+		"authors": [
+			"Demurie, E.",
+			"Roeyers, H.",
+			"Baeyens, D.",
+			"Sonuga-Barke, E."
+                        ],
+		"publisher": "Journal of Child Psychology and Psychiatry, Vol 52 Issue 11",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/21223259",
+		"etAl": false,
+		"publishDate": "2011",
+		//"pages": "1164-1173",
+		},
+		
+			"Duffy-1": {
+		"title": "The Write Tools for ADHD Students.",
+		"authors": "Duffy, F.",
+		"publisher": "ADDitude",
+		"href": "http://www.additudemag.com/adhd/article/9365.html",
+		"etAl": false,
+		"publishDate": "n. d.",
+		//"accessed": "11 September 2014",
+		},
+
 		
 	"Eden-1": {
 		"title": "Abnormal processing of visual motion in dyslexia revealed by functional brain imaging.",
@@ -119,7 +217,16 @@ var biblio = {
 		// "publishedBy": "Macmillan Publishers LTD",
 		"publishDate": "1996",
 	},
-	
+
+	"Franke-1": {
+		"title": "The genetics of attention deficit/hyperactivity disorder in adults, a review.",
+		"authors": "Franke, B.",
+		"etAl": true,
+		"publisher": "Molecular Psychiarty, Vol 17 No. 10",
+		//"pages": "960-987",
+		"publishDate": "2012",
+		},
+		
 	"Friedman-1": {
 		"title":"Clinical Neuropsychology",
 		"publisher": "Oxford Univ. Press, New York",
@@ -175,6 +282,20 @@ var biblio = {
 		"href": "http://psycnet.apa.org/psycinfo/1994-02259-001",
 		},
 		
+	"Germanò-1": {
+		"title": "Comorbidity of ADHD and Dyslexia.",
+		"authors": [
+			"Germanò, E.",
+			"Gagliano, A.",
+			"Curatolo, P."
+		],
+		"publisher": "Developmental Neuropsychology, Volume 35 Issue 5",
+		"etAl": false,
+		"publishDate": "2010",
+		//"pages": "475-493",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/20721770",
+		},
+		
 	"Geschwind-1": {
 		"title": "Disconnexion syndromes in animals and man. I.",
 		"publisher": "Brain 88",
@@ -195,6 +316,21 @@ var biblio = {
 		"publishDate": "1986",
 	},
 	
+	"Kadesjö-1": {
+		"title": "The Comorbidity of ADHD in the General Population of Swedish School-age Children.",
+		"authors": [
+			"Kadesjö, B.",
+			"Gillberg, C.",
+			"Nigg, J. T.",
+			"Sergeant , J. A."
+                        ],
+		"publisher": "Journal of Child Psychology and Psychiatry, Vol 42 Issue 4",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/11383964",
+		"etAl": false,
+		"publishDate": "2001",
+		//"pages": "487-492",
+		},
+		
 	"Ladislav-1": {
 		"title": "Developmental Dyscalculia",
 		"publisher": "Journal of Learning Disabilities.  vol. 7 no. 3",
@@ -222,7 +358,30 @@ var biblio = {
 	
 		"publishDate": "1996",
 	},
-
+	
+       "Martinussen-1": {
+		"title": "A Meta-Analysis of Working Memory Impairments in Children With Attention-Deficit/Hyperactivity Disorder.",
+		"authors": [
+			"Martinussen, R.",
+			"Hayden, J.",
+			"Hogg-Johnson, S.",
+			"Tannock, R."
+                        ],
+		"publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Volume 44 Issue 4",
+		"etAl": false,
+		"publishDate": "2005",
+		//"pages": "337-384",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/15782085",
+		},
+		
+	"Pauc-1": {
+		"title": "Comorbidity of dyslexia, dyspraxia, attention deficit disorder (ADD), attention deficit hyperactive disorder (ADHD), obsessive compulsive disorder (OCD) and Tourette's syndrome in children: A prospective epidemiological study.",
+		"authors": "Pauc, R.",
+		"publisher": "Clinical Chiropractic, Volume 8 Issue 4",
+		"etAl": false,
+		"publishDate": "2005",
+		//"pages": "189-198",
+		},
 
 	
 	"Paulesu-1": {
@@ -307,6 +466,17 @@ var biblio = {
 		"publishDate": "1997",
 	},
 	
+	"Semrud-Clikeman-1": {
+		"title": "Comorbidity between ADDH and Learning Disability: A Review and Report in a Clinically Referred Sample.",
+		"authors": "Semrud-Clikeman, M.",
+		"publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Volume 31 Issue 3",
+		"etAl": true,
+		"publishDate": "2013",
+		//"pages": "438-448",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/1592775",
+		},	
+
+	
 	"Talairach-1": {
 		"title": "Coplanar Stereotaxic Atlas of the Human Brain. Three-Dimensional Proportional System: An Approach to Cerebral Imaging",
 		"publisher": "Thieme, New York",
@@ -357,7 +527,17 @@ var biblio = {
 		"publishDate": "1998",
 		},
 		
-			
+	"Smith-1": {
+		"title": "Adult ADD / ADHD Self-Help.",
+		"authors": [
+			"Smith, M.",
+			"Segal, R."
+                        ],
+		"publisher": "Helpguide",
+		"href": "http://www.helpguide.org/articles/add-adhd/adult-adhd-attention-deficit-disorder-self-help.htm",
+		"etAl": false,
+		//"accessed": "10 September 2014",
+		},			
 
 "Stein-1": {
 		"title": "The magnocellular theory of developmental dyslexia",
@@ -366,6 +546,16 @@ var biblio = {
 		"authors": "Stein J.",
 		"etAl": false,
                 //"pages": "12-36",
+		},
+		
+	"Tartakovsky-1": {
+		"title": "15 ADHD-Friendly Tips to Fire Up Your Focus.",
+		"authors": "Tartakovsky, M.",
+		"publisher": "Psych Central",
+		"href": "http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767",
+		"etAl": false,
+		"publishDate": "2013",
+		//"accessed": "10 September 2014",
 		},
 
 	"WAI-ARIA": {
@@ -382,6 +572,49 @@ var biblio = {
 		"etAl": true,
 		"deliveredBy": "http://www.w3.org/WAI/PF/",
 	},
+	
+	"Watson-1": {
+		"title": "The Best ADHD iPhone &amp; Android Apps of the Year.",
+		"authors": "Watson, S.",
+		"publisher": "Healthline",
+		"href": "http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps",
+		"etAl": false,
+		"publishDate": "2014",
+		//"accessed": "18 September 2014",
+		},
+	
+	"Weiler-1": {
+		"title": "Information processing deficits in children with attention-deficit/hyperactivity disorder, inattentive type, and children with reading disability.",
+		"authors" : [
+			"Weiler, M. D.",
+			"Bernstein, J. H.",
+			"Bellinger, D.",
+			"Waber, D. P."
+                        ],
+		"publisher": "Journal of Learning Disabilities, Volume 35 Issue 5",
+		"etAl": false,
+		"publishDate": "2002",
+		//"pages": "447-461",
+		"href": "http://www.ncbi.nlm.nih.gov/pubmed/15490541",
+		},
+		
+	"Wikipedia-1": {
+		"title": "Attention deficit hyperactivity disorder",
+		"publisher": "Wikipedia",
+		"href": "http://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder",
+		"etAl": false,
+		"publishDate": "2014",
+		//"accessed": "11 September 2014",
+		},
+	"WHO-1": {
+		"title": "The ICD-10 Classification of Mental and Behavioural Disorders Clinical descriptions and diagnostic guidelines.",
+		"authors": "World Health Organisation",
+		"publisher": "s. l.",
+		"etAl": false,
+		"publishDate": "2014",
+		},
+		
+		
 	"Wilson-1":
                 {
 		"title": "Dyscalculia primer and resource guide",
@@ -390,5 +623,6 @@ var biblio = {
 		"publishDate": "2008",
 		"href": "http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm",
 		},
+		
 	
 };
