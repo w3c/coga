@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Adaptable Links and Buttons</title>
+	</head>
+	<body>
+		<p>Syntax for adaptable links and buttons (symbols, help and keyboard) </p>
+		<p>Sometimes users need extra support. This can include: </p>
+		<ul>
+			<li> Symbols and graphics that they are familiar with </li>
+			<li> Tool tips </li>
+			<li> Language they understand </li>
+			<li> Less features </li>
+			<li> Separating advertisements, so they do not confuse them with native content </li>
+			<li> Keyboard short cuts </li>
+		</ul>
+		<p>Further, having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. </p>
+		<p>Additionally, many users need LESS buttons and options. Therefore being able to cut the amount of buttons, features and links will be extremely useful. </p>
+		<p>For that we need to <b>standardize supportive syntax</b> and terms that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute or INDI UI. </p>
+		<p><b>For example</b>, if an Author gives to a button a role "send" then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltip that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
+		<p>In another usecase we would like to see interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. I was thinking that if we made an open set of symbol codes for these symbol sets, then they can be interoperable. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
+		<p>We therefor suggest the following syntax: </p><section>
+			<h2>Importance</h2>
+			<p>aria-importance: This could be an ARIA attribute with the following settings:1 (main task such as send for an email </p>
+			<ul>
+				<li> aria-importance= "1" this content is essential for the key function of the page (Example: The send button for an email draft) </li>
+				<li> aria-importance= "2" this content is used frequent (Example: The delete button for an email draft) </li>
+				<li> aria-importance= "3" typically not used (Example: The save and settings buttons for an email draft) </li>
+				<li> aria-importance= "4" rarely used or used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
+			</ul>
+		</section>
+		<section>
+			<h2>Explain and feedback</h2>
+			<p>Some users need additional help. This help can be rendered as a tool tip or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link, or what just happened. aria-feedback= "your email was sent" aria-explain= "this item costs more" </p>
+		</section>
+		<section>
+			<h2>Aria Buttons</h2>
+			<p>The following could be types of ARIA role button </p>
+			<p>Note, you should always have the default "button" eg role="button undo" </p>
+			<ul>
+				<li>compose(default importance = "1") </li>
+				<li>delete </li>
+				<li>next </li>
+				<li>previous </li>
+				<li>submit (default importance = "1") </li>
+				<li>undo </li>
+				<li>cancel </li>
+			</ul>
+			<ul>
+				<li>add label </li>
+				<li>move </li>
+				<li>view </li>
+				<li>save </li>
+				<li>send </li>
+				<li>received </li>
+				<li>sent </li>
+				<li>edit </li>
+				<li>reply </li>
+				<li>forward </li>
+				<li>my profile </li>
+				<li>upload </li>
+				<li>close </li>
+				<li>more </li>
+				<li>calendar </li>
+				<li>add entry </li>
+			</ul>
+			<ul>
+				<li>expand </li>
+				<li>unexpanded </li>
+				<li>Open </li>
+				<li>new </li>
+				<li>print </li>
+				<li>settings </li>
+			</ul>
+		</section>
+		<section>
+			<h2>ARIA link types</h2>
+			<ul>
+				<li>home </li>
+				<li>contact us </li>
+				<li>our phone </li>
+				<li>our email </li>
+				<li>site map </li>
+				<li>help </li>
+				<li>about us </li>
+				<li>terms </li>
+				<li>tools </li>
+				<li>comment </li>
+				<li>language (english) </li>
+				<li>sign in </li>
+				<li>sign up </li>
+				<li>product </li>
+				<li>services </li>
+				<li>social (provide label - such as facebook twitter) </li>
+				<li>post </li>
+				<li>contactus </li>
+			</ul>
+		</section>
+		<section>
+			<h2>Indi UI content types</h2>
+			<ul>
+				<li>Our phone </li>
+				<li>Our address </li>
+				<li>Our email </li>
+				<li>Chat help </li>
+				<li>Help (or in ARIA buttons) </li>
+			</ul>
+		</section>
+		<section>
+			<h2>Common form elements (text areas)</h2>
+			<ul>
+				<li>first name </li>
+				<li>family name </li>
+				<li>initial </li>
+				<li>phone </li>
+				<li>cell phone </li>
+				<li>address 1 </li>
+				<li>city </li>
+				<li>state </li>
+				<li>country </li>
+				<li>post code </li>
+				<li>phone </li>
+				<li>credit card </li>
+				<li>expiry </li>
+				<li>day, *month *year </li>
+				<li>credit card code </li>
+				<li>date start </li>
+				<li>date end </li>
+			</ul>
+		</section>
+		<section>
+			<h2>Concept codes</h2>
+			<p>aria-concept : The following could enable interoperable symbol set codes for Non verbal people. example aria-concept="http....(EA fill in an example)" </p>
+		</section>
+		<section>
+			<h2>Potential parts of a page</h2>
+			<p>The following could be extensions for aria landmarks or ARIA for ePub </p>
+			<ul>
+				<li>key points </li>
+				<li>example </li>
+				<li>note </li>
+				<li>warning </li>
+				<li>step </li>
+				<li>external - for external content, such as sponsored or advertising </li>
+				<li>offers - for special offers that are complementary to the main content or task </li>
+				<li>advertisement - advertisement or sponsored content </li>
+			</ul>
+		</section>
+		<section>
+			<h2>Confirm other features</h2>
+			<p>The following may not be necessary </p>
+			<ul>
+				<li>Views </li>
+				<li>ascending. descending </li>
+				<li>day, week month </li>
+				<li>this week </li>
+				<li>this month </li>
+				<li>today </li>
+			</ul>
+		</section>
+		<section>
+			<h2>TODO</h2>
+			<ul>
+				<li> Collect fuller set </li>
+				<li> Build sample user style sheet or xslt so it works.. </li>
+				<li> Build consensus and adjust proposals </li>
+				<li> Write associated terms, tool tip help for collection. </li>
+				<li> Add complementary types such as example, offer etc </li>
+				<li>missing items? -todo list , note, spelling </li>
+			</ul>
+		</section>   </body>
+</html>
