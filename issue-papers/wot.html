@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Web of Things</title>
+	</head>
+	<body>
+		<p>NOTE: The scope of this paper is larger than that of web accessibility, but it is still important.. </p>
+		<section>
+			<h3>Use Case</h3>
+			<p>A person wants to interact with the internet of things (IoT). Definitions of IoT are at: </p>
+			<p><a href="http://en.wikipedia.org/wiki/Internet_of_Things">http://en.wikipedia.org/wiki/Internet_of_Things</a>
+			</p>
+			<p>and at: </p>
+			<p><a href="http://whatis.techtarget.com/definition/Internet-of-Things">http://whatis.techtarget.com/definition/Internet-of-Things</a>
+			</p>
+			<p>The Internet of Things (IoT) is the interconnection of uniquely identifiable embedded computing devices within the existing Internet infrastructure. Typically, IoT is expected to offer advanced connectivity of devices, systems, and services that goes beyond machine-machine communications (M2M) and covers a variety of protocols, domains, and applications. The interconnection of these embedded devices (including smart objects), is expected to usher in automation in nearly all fields, while also enabling advanced applications like Smart Grid. Things, in the IoT, can refer to a wide variety of devices such as heart monitoring implants, biochip transponders on farm animals, automobiles with built-in sensors, or field operation devices that assist fire-fighters in search and rescue. Current market examples include smart thermostat systems and washer/dryers that utilize wifi for remote monitoring. </p>
+			<p>With the IoT, accessibility takes on a whole new meaning and has risk and security consequences. Accessibility, as an operational requirement, must be part of the IoT design process but not reasons usually associated with “accessibility” – for instance, accessibility for the elderly or those with disabilities. </p>
+		</section>
+		<section>
+			<h3>Introduction</h3>
+			<section>
+				<h4>General</h4>
+				<p>Accommodating technologies for users should definitely be part of the IoT (for example for IoT devices associated with health and aging (“smart health”). Features like larger control screens and buttons, auditory instructions in lieu of written instructions, multi-lingual capabilities (both written and verbal) will all play a role in making IoT devices widely accessible, which in turn may drive adaption rates up, efficiencies up, and aggregated costs down. </p>
+				<p>Another interesting form of accessibility will have to deal with environmental accessibility: for example, being able to read screens in the sun, or in the dark, in the rain, as noise levels change (as you move from your office to a train), or when you must move from visual/touch-screen controls to verbal controls because you start to drive a car). IoT devices will be everywhere and one should not assume that the environment will be clean, dry, and well lit for typical consumer usage. </p>
+				<p>Accessibility must also work across heterogeneous networks – one should not be limited according to the network that one has roamed onto; for instance, subtitles should not disappear from the video controls because one movew to a new network. </p>
+				<p>To maintain accessibility, IoT devices will need to have integrated sensors which detect the environment and communicate the conditions back to the application over the network. The various applications that manage the many devices in the IoT then make a decision about which form of command and control is best for the conditions and provide the necessary information (for example, how much backlight to use, subtitles in the appropriate language or subtitles “for dummies” vs. experts) back to the device back over the network. Otherwise the device must maintain all that information locally and keep it up to date. That type of capability – locally stored and managed accessibility features – would raise the cost of IoT devices and IoT service substantially, given the range of accessibility requirements emerging in the IoT. </p>
+				<p>Therefore, accessibility users/consumers, administrators, technicians, law enforcement, regulators, and the full range of potential stakeholders will be enabled by the networks which carry the critical instructions and information for different types of control and human-machine interface. </p>
+				<p>This is where security and risk come in. Poorly designed devices could have their critical control interfaces tampered with over the Internet if poorly secured. Similarly, poorly secured networks could be slowed or disabled such that IoT devices cannot update their user interfaces, resulting in (for instance) voice commands not being available when needed, or a screen that can no longer be read as one moves from a dark room to the car). </p>
+				<p>The risks could also be associated with critical infrastructure management, for instance, a novice technician when trying to reconfigure a device like a pump is sent a false command interface when asking to transition out of expert mode. Or, perhaps due to network availability (and security element), only the expert mode is available and a wrong command is issued out of inexperience. </p>
+			</section>
+			<section>
+				<h4>Cognitive-Specific</h4>
+				<p>While the use of computer technologies could be effective in helping individuals with cognitive disabilities deal with smart objects, the diversity of ability, conditions, and experience of users with cognitive disabilities can create problems in many interaction situations involving the IoT. The sheer number of different types of cognitive disabilities and effects that they can have on users also adds to an already complex issue. </p>
+				<p>Designing accessible machine-to-machine communications interaction for users with cognitive disabilities can present some interesting challenges. Certain individuals may have trouble processing language and numbers, deciphering auditory input, and with spatial orientation. To understand material regarding smart energy meters (for example), users must be able to identify information and integrate it into meaningful “pieces” or “components”. A person with a brain injury (or other cognitive impairments) may take longer to think and respond to online stimuli. In interface interaction for embedded devices, multiple windows, complex or cluttered displays can create distractions and processing problems, and sequential operations can be likewise distracting to those with memory deficit problems. For example, the use of right and left click buttons on a pointing device to monitor medical systems can create difficulties for users with memory, perception or reflex problems. </p>
+				<p>Individuals with lower literacy may have different reading patterns than high literacy readers when it comes to understanding displays for “smart objects”; while high literacy readers scan text, low literacy users may read the text “word for word”. This can creates a narrow field of view which may causes them to miss objects and information (essential for completing interaction with wifi for remote monitoring successfully, for instance) not directly in the flow of text that they are reading. </p>
+				<p>Too many options may add to the complexity of interacting with IoT devices. Additional options should be trivial to ignore and not require a lot of reading to understand that they are additional, as well as how to skip them </p>
+				<p>Sometimes IoT interfaces may aims to confuse the user, such as a default "reading" on a meter being set to "2" and not “1”. The user would then need to reset it to “1”. </p>
+				<p>Estimates for all costs associated with IoT interaction should be made clear at the beginning of a task. Scaffolding help may be important as well. </p>
+				<p>There may also be the need for bread crumbs, that also show what steps are coming (faded out), in interacting with IoT devices. It means that if a user is unable to complete all the steps they will not start a task, thus avoiding frustration . </p>
+				<p>The issues of unexpected behaviors on interface devices, such as opening a new window, or change of context, must also be explored in IoT interaction. A task operating on the IoT needs to follow the flow of the bread crumbs. </p>
+				<p>In IoT interaction, sessions data should not time out without a lot of warning (so the user can get a cup of tea without loss of data or flow, and information must be saved). </p>
+			</section>
+			<section>
+				<h4>Particular Effects</h4>
+				<p>Effect of Memory Impairments: Individuals with working memory issues and short term/long term memory issues can have difficulty with navigation and interacting with basic functionality of a smart meter monitor (forgetting information, and knowing where to go next, for example). </p>
+				<p>Effect of impaired executive function: Individuals with emotional control/self-monitoring issues, task flexibility limitations, and planning/organization/execution difficulties, and impaired judgment may find it hard to progress properly through a myriad of tasks in dealing with smart thermostat systems, and may become easily frustrated or give up). </p>
+				<p>Effect of impaired reasoning: Those having issues with fluid reasoning, mathematical intelligence limitations, seriation/behavioral/comprehension knowledge, and abstraction difficulties may find it hard to recognize patterns and compute numbers from automobiles with built-in sensors. </p>
+				<p>Effect of attention-related limitations: Persons with selective attention/divided attention issues may have difficulty separating out the important aspects from the irrelevant ones in interacting with biochip transponders, for example. Persons with a limit on sustained attention may not be able to successfully complete all the steps in programming a smart meter. </p>
+				<p>Effect of impaired language related functions: Individuals with speech perception or speech issues may not be able to recognize or respond intelligently to spoken commands in field operation devices. Those with literacy difficulties may not be able to properly read the instructions for smart thermostat systems, and thus not know what to do. </p>
+				<p>Effect of impaired literacy related functions: With difficulties in speech perception and/or visual perception, individuals may not be able to read or understand written or spoken commands regarding proper operation of transponders. Issues with phoneme processing may make it hard to properly process auditory cues, and cross-model association difficulties may hinder associations of symbols with meanings in remote monitoring systems. </p>
+				<p>Effect of perception-processing limitations: Visual perception (e.g., object recognition, pattern recognition) issues for certain persons may make it difficult to properly perceive the relative locations and meanings of symbols related to an interface screen connected to an IoT device. In addition, individuals with auditory/speech, motor, and/or tactile perception limitations may hinder use of IoT systems displayed via those modalities. </p>
+				<p>Effect of reduced knowledge: Those with limitations on grammar, metaphorical, and/or lexical knowledge could find it hard to interact correctly with the IoT using those capabilities to provide critical information for understanding. Issues in cultural knowledge and base language knowledge (including jargon, usage, idioms, icons, etc.) may also figure into effectively dealing with the IoT as intended. </p>
+				<p>Effect of impaired understanding of behaviors or consciousness: Improper understanding of behavioral norms, social cues, that may be important in successfully completing a task related to the IoT may introduce difficulties for certain persons. </p>
+			</section>
+		</section>
+		<section>
+			<h2>Proposed solutions</h2>
+			<p>It is important in any proposed solutions to make operational tasks (interacting with the IoT) as transparent as possible in order that users can focus their attentions on the functional aspects (relating to content). The following solutions support general usability of the IoT for everyone, in addition to assisting those with cognitive disabilities. </p>
+			<p>The task force discussed this paper on 0/03/2015 and felt that the following changes should be made to the content bellow: </p>
+			<ol>
+				<li>We want interfaces either to support adaptability, be compatible with supportive API's, or to provide an alternative simplified control. We can not expect only standard controls to be used </li>
+				<li>A lot of his will be covered by the API's such as URC <a href="http://www.openurc.org/">http://www.openurc.org/</a>
+				</li>
+				<li>We need to review that the API's provide the support we need such as less features </li>
+				<li>We need to ensure web interfaces have the needed semantics - such as via ARIA and indiUI. See <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Syntax_for_adaptable_links_and_buttons">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Syntax_for_adaptable_links_and_buttons</a>
+				</li>
+			</ol>
+			<section>
+				<h4>Navigation</h4>
+				<ul>
+					<li> Since improper or ambiguous navigation and labeling can create confusion, it is important to standardize controls, features, and navigation for all interfaces and devices connected to the IoT – consistency will greatly aid users with short-term memory difficulties. </li>
+					<li> It is important whenever possible to keep menus short and easy to understand, and to use clear labels and signs. </li>
+					<li> It is essential to provide ways to backtrack or start over in navigation. For example, the use of breadcrumbs can help to provide confirmation of navigation and reinforce objectives. </li>
+					<li> It is desirable to provide site-maps for accessing interfaces for larger IoT systems. </li>
+					<li> It is essential to provide prompts and feedback to let users know if they made the correct choice and to help them get back on track when they encounter an error. </li>
+					<li> It is desirable to increase the size of "clickable" areas to aid persons who have visual processing or mobility challenges. </li>
+					<li> In interacting with the IoT, it is important to limit the number of options to prevent cognitive overload, and to offer a shallow or narrow decision structure. </li>
+					<li> The interfaces to the IoT should be designed so as to avoid the need for simultaneous tasks. </li>
+				</ul>
+			</section>
+			<section>
+				<h4>Functionality</h4>
+				<p>It is desirable to allow the user control of as many aspects of the IoT as possible. For example, the use of CSS (Cascading Style Sheets) can be used to provide control of how information is presented. CSS can be used to change font and font size; change the line height or space between lines of text; increase the size of "clickable" areas; allow for mouse over highlighting of text for easier reading; change the background color of a visual interface; and invert colors and increase contrast on that interface. </p>
+				<ul>
+					<li> It is desirable to provide external lists for complex operations for those with memory problems. </li>
+					<li> It is important to identify pre-knowledge necessary for a user to successfully utilize the capabilities of the IoT. </li>
+					<li> It is desirable to provide definitions and explanations for unusual or technical terms presented in the IoT (for example, definitions pertaining to smart meters). </li>
+					<li> In the IoT, it should be ensured that alerts and feedback remain on a screen until a user explicitly removes them. </li>
+					<li> It is important to optimize search facilities, and to include tolerance for misspellings and typos. </li>
+					<li> It is essential to ensure that IoT system interfaces are compatible with screen readers and other assistive technologies. </li>
+					<li> In the IoT, it is important to include speaking text/narration for users with low-literacy or processing impairments </li>
+				</ul>
+			</section>
+			<section>
+				<h4>Content and Text</h4>
+				<p>Proposed solutions should address the three categories of human perception: active – conditioned by a person's knowledge and expectations; patterned – as the brain attempts to organize information into meaningful patterns; and selective – picking out the information that stands out to the learner. In particular, </p>
+				<ul>
+					<li> Since complex text can create difficulties for users with cognitive impairments, appropriate graphics should be used to help reduce cognitive load and enhance understanding. </li>
+					<li> It is important to use plain language in short, concise sentences (keep it simple) in designing the IoT. </li>
+					<li> It is desirable to reiterate information for users with memory problems. </li>
+					<li> A technique may be to use the “newspaper style of writing” – start with a summary then provide the material in an order from most important to least important. It is important to avoid lengthy text or audio, and to prioritize information to ensure that all critical material is at the top half of an IoT interface or "above the fold", as well as to avoid scrolling if possible. </li>
+					<li> It is desirable to "chunk" materials in IoT system displays – one idea per paragraph. </li>
+					<li> It is desirable to use bulleted lists whenever possible. </li>
+					<li> It is important to use meaningful headings. </li>
+					<li> In an IoT display, line length should ideally not exceed 70-80 characters. </li>
+					<li> It is useful to avoid "rivers of white" caused by full justification. </li>
+					<li> It is desirable to avoid or provide alternatives for non-literal text and colloquialisms in IoT interface content. </li>
+					<li> It is desirable to include plenty of white space on the page. </li>
+					<li> It is good to offer individuals a choice of "long" or "short" content so that they can determine the level of detail that they require when interacting with the IoT. </li>
+					<li> It may be good to design for working memory limitations (2; 1), and to reduce the standard 7 ± 2 maximum elements guideline for short-term memory to 4 ± 2. </li>
+					<li> A possible technique is to allow the use of unexpected events to possibly help a person retain information. </li>
+					<li> A possible technique is to investigate the use of readability tests, while not all-inclusive, can provide assistance in maintaining an appropriate level of simplicity for text. </li>
+				</ul>
+			</section>
+			<section>
+				<h4>Layout</h4>
+				<p>Making interaction with the IoT visually interesting and easy to read can make "listening" to that system difficult (due to the use of graphical spacers and tables, which can disrupt the reading order of related text). The use of database driven text and Cascading Style Sheets (CSS) can create IoT interfaces that satisfy the needs of both visual and aural users, while still making it easy to change information and textual data. Additionally, style sheets help to convey context, allow for graceful degradation, and make it available for a greater number of possible browsers to read the code properly. </p>
+				<ul>
+					<li> Consistency should be a design goal for the IoT as appropriate. All of the interfaces in the IoT should remain as consistent as possible. It is important to ensure that material is well organized on all interfaces to the IoT. </li>
+					<li> It is desirable to streamline display design in the IoT. </li>
+					<li> It is beneficial to highlight urgent or key information in IoT device displays; for example, the use of color and highlighting can be used to aid in selective perception. </li>
+					<li> In IoT design, it is good to avoid using menus or other text that appears and disappears when the mouse moves over it, and to avoid text that moves or changes. </li>
+					<li> It is extremely desirable to use high contrast between text and background. </li>
+					<li> Reducing clutter and extra material in IoT displays can improve usability/accessibility for those with visual and cognitive disabilities. </li>
+				</ul>
+			</section>
+			<section>
+				<h4>Multimedia</h4>
+				<p>Access techniques (where necessary) involving using multimedia for interacting with the IoT should include (at a minimum): captioning, audio description, subtitling, and dubbing. However, with the internet, a variety of new options for multimedia have presented themselves. </p>
+				<ul>
+					<li> It is desirable, since sound and vision may be "complementary modes of information", to use accompanying sounds to help cue a user as to what to do or to enhance a point. It is also desirable to use audio prompts to signal any change of state. </li>
+					<li> It is desirable to present IoT displays in multiple modes of input, such as including captions to audio and screen readers to enhance text; this can help increase comprehension. It is essential to provide alternate formats for material so that users can choose the format that best suits their needs </li>
+					<li> It may be important in IoT interfaces to use fully accessible graphics and recognizable icons as navigation aids. </li>
+					<li> The use of appropriate and clear graphics can help to enhance understanding of materials displayed by an IoT device. However, it is important to not overuse graphics and to avoid animated graphics, as they can be distracting and increase cognitive load. If animations or dynamic displays are being used, it is desirable to include controls that allow a user to adjust the speed and motion. </li>
+					<li> It is desirable to use familiar imagery to aid in memory retention, since there may be a lot of steps involved in progressing through interaction with a device connected to the IoT. </li>
+				</ul>
+			</section>
+		</section>
+		<section>
+			<h2>Case Studies</h2>
+			<section>
+				<h3>Case Study #1</h3>
+				<p>Interoperability between devices has always been a problem. A program that runs on your personal MacBook won’t run on your Windows PC at work, and suddenly you’re the unwitting participant of a corporate stare-down that you’d probably rather avoid. This is known as vendor lock-in, and for many situations it the norm. But could it be imagined if certain websites would only open for MacBook users? What if certain Internet service providers only let Playstation consoles connect to the Internet? People wouldn’t allow it, and there are organizations dedicated to keeping that from happening. As the Internet of Things is built out by bringing more and more devices, objects and pieces of infrastructure online, it’s important to hold developers and manufactures to these same expectations of open source access. For the web, an organization called the World Wide Web Consortium is dedicated to ensuring that certain standards for web development are maintained so that all sites and
+					services play well together. Now that the Internet of Things has become a reality, two similar organizations have been created. The Industrial Internet Consortium (IIC) and the AllSeen Alliance were both founded with the aim of bringing increased interoperability and standard development practices to the industry. These groups will include corporations, governments and members of academia who will collaborate on making the Internet of Things a global reality. In more developed areas of the world, technological and social innovations like these have no problems gaining momentum, but what about in rural places with little to no Internet access? How can the Internet of Things exist without the Internet? It can’t, but there are plenty of initiatives in place that hope to bridge that gap. Both Facebook and Google are currently working on projects to beam connectivity down from the sky. In the meantime, a Kenyan non-profit called Ushahidi has taken a ground-based approach.
+					Crowdfunded on Kickstarter, Ushahidi’s BRCK is a super-durable box that provides connectivity to multiple networks, serves as a local hub for devices, has 4GB of onboard storage, and it stores backup power for a quick charge or in case of a blackout. Even where there’s no established electrical grid, BRCK can be hooked up to any sort of generator so that you can plug in a GSM SIM card and get online. </p>
+			</section>
+			<section>
+				<h3>Case Study #2</h3>
+				<p>In the connected world of the IoT, digital brings accessibility where the physical world cannot; in the physical world, it is nearly impossible to make a fixed object accessible to everyone. Almost everything that comes into a house that is considered a “gadget” these days is part of the IoT. Everything is connected (my Withings Scale, Pebble watches, the FitBit, and even home utility devices like the Nest Thermostat and Nest Protect. A lot of these devices are not accessible to everyone. Take the Nest thermostat – unless it was already self-voicing, one would face quite a challenge operating it if one was blind. Or the Nest Protect – it has built-in redundancy for the alarm so that there’s a visual indicator complement the sounding of the alarm. Of course that measn that if one is Deaf or hard-of-hearing, one would need to be in visual range to be able to see the alternative. Hardly convenient, and not at all how the real world works. These kinds of physical devices just
+					aren’t accessible by default to everyone. They almost can’t be, by definition, because they are fixed and not flexible or malleable. What if the key to an Inclusive Internet of Things is about creating well-designed, well-programmed accessible companion applications? That means that people/companies wouldn’t need to invest an incredible amount of dollars and effort into making these connected devices natively accessible. They could instead focus on creating (relatively) inexpensive and accessible companion apps on multiple platforms. Take the Nest Thermostat or the Nest Protect. They’re already connected via wifi and “paired” with devices. The device settings and status can be accessed directly via the apps. And as long as those apps are accessible and include everyone, we’re making those devices that are part of the Internet of Things accessible too. Have trouble hearing the Nest protect alarm? Set the app for haptic feedback with a custom vibration pattern to signify the
+					type of emergency or the room it is in. Unable to see the small numbers on the Withings scale or your FitBit because you have lost some or maybe all vision? Check in on the app to track your weight and other stats. Difficult to see the Nest thermostat to set the temperature? Set it with the companion app. Trouble controlling the smaller controls and buttons in the app interface? Include a skin/theme with larger controls. Live with a son, daughter or even parent that struggles with complex interfaces? Why not have a custom view/screen that allows them to have a simplified interface; maybe just an up and down arrow for the temperature and settings that keep the temperature within a certain range on that device? In a wheelchair and have difficulty adjusting the thermostat because it’s mounted too high on the wall? Connect and control via the app – maybe even with voice recognition. There are hundreds, if not thousands, of ways that accessible apps (native or straight up web
+					apps) help create an inclusive Internet of Things. Connect something that IS accessible to something that isn’t, and all the accessibility you need is in the palm of your hand; that’s the pure beauty of digital. </p>
+			</section>
+		</section>
+		<section>
+			<h2>References</h2>
+			<ol>
+				<li> The Internet of Things – Paper Prepared for the First Berlin Symposium on Internet and Society – October 25-27, 2011 </li>
+				<li>
+					<a href="https://blogs.mcafee.com/business/accessibility-requirements-in-the-internet-of-things">https://blogs.mcafee.com/business/accessibility-requirements-in-the-internet-of-things</a>
+				</li>
+				<li>
+					<a href="http://simplyaccessible.com/article/things/">http://simplyaccessible.com/article/things/</a>
+				</li>
+				<li>
+					<a href="http://www.psfk.com/2014/09/access-will-define-internet-things.html">http://www.psfk.com/2014/09/access-will-define-internet-things.html</a>
+				</li>
+			</ol>
+		</section>
+	</body>
+</html>

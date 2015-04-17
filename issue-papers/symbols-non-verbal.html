@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Symbols for Non-Verbal</title>
+	</head>
+	<body>
+		<p>We would like to see interoperable symbol set codes for non verbal people. </p>
+		<p>Products for people who are non verbal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND are not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. If we enabled mapping to open sets of symbol codes that, in turn, map to open or propitery symbol sets, then they can be interoperable. At the user end , the user agent can load symbols that the user knows.That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. We therefor suggest the following: </p>
+		<p>The following could enable interoperable symbol mapping for products for Non verbal people. In the Web Content: Syntax: <code>aria-concept = "uri"</code></p>
+		<p>Example (Pseudocode): </p>
+		<p><code>&lt;img aria-concept="http://wordnet.org/somepage#girlnode" scr="girlwithbow.gif" /&gt; </code></p>
+		<p>or at a useragent symbol file end: </p>
+		<p><code>&lt;mysymbol scr="girlwithskirt.gif" aria-concept="http://wordnet.org/somepage#girlnode" lang="en" /&gt; </code></p>
+		<p>Note this is not about standardizing the symbols but a way of mapping them </p>
+		<section>
+			<h2>Issues</h2>
+			<p>Will these companies be willing to work with open standards? Some companies seem to want it (like Texthelp)and we are proposing a mapping standard not a symbol set. </p>
+			<p>This will not work consistently across languages. Concept nodes will often need to be localized. </p>
+			<p>Sometimes the nodes will be a phrase and sometimes a word. </p>
+			<p>User agent or cloud service will need to do the personalization of symbols </p>
+			<p>We would need to recommend or suggest concept nodes to link to </p>
+		</section>
+		<section>
+			<h2>links and resources</h2>
+			<p><a href="http://www.communicationmatters.org.uk/">http://www.communicationmatters.org.uk/</a> PCS State side and Widgit UK side plus Symbol Stix and Sclera and ARASAAC in Europe <a href="http://www.conceptcoding.org/">http://www.conceptcoding.org/</a>
+			</p>
+		</section>
+	</body>
+</html>
