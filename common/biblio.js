@@ -146,6 +146,30 @@ var biblio = {
 		"etAl": false,
 		"publishDate": "2014",
 		},
+		
+	"CDC-4": {
+		"title": "Autism Spectrum Disorder (ASD): Facts About ASD",
+		"authors": "United States Centers for Disease Control and Prevention",
+		"etAl": false,
+		"href": "http://www.cdc.gov/ncbddd/autism/facts.html",
+		},
+		
+	"CDC-5": {
+		"title": "Autism Spectrum Disorder (ASD): Data & Statistics",
+		"authors": "United States Centers for Disease Control and Prevention",
+		"etAl": false,
+		"href": "http://www.cdc.gov/ncbddd/autism/data.html",
+		},
+		
+	"CDC-6": {
+		"title": "Prevalence of Autism Spectrum Disorder Among Children Aged 8 Years — Autism and Developmental Disabilities Monitoring Network, 11 Sites, United States",
+		"authors": "National Center on Birth Defects and Developmental Disabilities, Centers for Disease Control and Prevention",
+		"editors": "Baio, J.",
+		"etAl": false,
+		"href": "http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w",
+		"publisher": "Surveillance Summaries, Vol 63 No. SS02",
+		//"pages": "1-21",
+		},
 							
 			"Cohen-Kadosh-1": {
 		"title": "Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing",
@@ -260,6 +284,17 @@ var biblio = {
 		"publishDate": "1996",
 	},
 	
+	"Fabian-1": {
+		"title": "The Evolution of Aging.",
+		"authors": [
+			"Fabian, D.",
+			"Flatt, T."
+                        ],
+		"etAl": false,
+		"publisher": "Nature Education Knowledge Volume 3 Issue 10",
+		"publishDate": "2011",
+		},
+	
 	"Faraone-1": {
 		"title": "The worldwide prevalence of ADHD: is it an American condition?",
 		"authors": [
@@ -372,6 +407,19 @@ var biblio = {
 		"publishDate": "1986",
 	},
 	
+	"Horton-1": {
+		"title": "Book Excerpt: A Web for Everyone.",
+		"authors": [
+			"Horton, S.",
+			"Quesenbery, W."
+                        ],
+		"etAl": false,
+		"href": "http://uxmag.com/articles/book-excerpt-a-web-for-everyone",
+		"publisher": "UX Magazine, No. 1216",
+		"publishDate": "2014",
+		},
+
+	
 	"Kadesjö-1": {
 		"title": "The Comorbidity of ADHD in the General Population of Swedish School-age Children.",
 		"authors": [
@@ -395,6 +443,20 @@ var biblio = {
 		"publishDate": "2006",
 		//"pages": "716-723",
 		},
+		
+	"Kim-1": {
+		"title": "Prevalence of autism spectrum disorders in a total population sample",
+		"authors": [
+			"Kim, Y.",
+			"Leventhal, B.",
+			"Koh, Y."
+                        ],
+                "etAl": true,
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/21558103",
+		"publisher": "American Journal of Psychiatry, Vol 170 Issue 6",
+		"publishDate": "2013",
+		},
+
 		
 	"Ladislav-1": {
 		"title": "Developmental Dyscalculia",
@@ -469,6 +531,15 @@ var biblio = {
 		"publisher": "Behavioral and Brain Functions, Volume 2 Issue 1",
 		"publishDate": "2006",
 		//"pages": "2-33",
+		},
+		
+	"Milliken-1": {
+		"title": "Autism Challenges and Avoidances, Interview of Anonymous User X.",
+		"authors": [
+			"Milliken, N.",
+			"Grainger J"
+                        ],
+		"publishDate": "2014",
 		},
 		
 	"Nigg-1": {
@@ -716,6 +787,33 @@ var biblio = {
 		"publishDate": "2014",
 		//"accessed": "18 September 2014",
 		},
+		
+	"WebAIM-1": {
+		"title": "Cognitive Disabilities.",
+		"authors": "WebAIM",
+		"etAl": false,
+		"publisher": "Center for Persons with DisabilitiesUtah State University",
+		"href": "http://webaim.org/articles/cognitive/",
+		"publishDate": "2013",
+		},
+		
+	"WebAIM-2": {
+		"title": "Cognitive Web Accessibility Checklist",
+		"authors": "WebAIM",
+		"etAl": false,
+		"href": "http://wave.webaim.org/cognitive",
+		"publisher": "Center for Persons with Disabilities, Utah State University",
+		"publishDate": "2009",
+		},
+		
+	"WebMD-1": {
+		"title": "Executive Function Skills and Disorders.",
+		"authors": "WebMD",
+		"etAl": false,
+		"publisher": "LLC",
+		"href": "http://www.webmd.com/add-adhd/guide/executive-function",
+		"publishDate": "2012",
+		},
 	
 	"Weiler-1": {
 		"title": "Information processing deficits in children with attention-deficit/hyperactivity disorder, inattentive type, and children with reading disability.",
@@ -766,6 +864,15 @@ var biblio = {
 		"publisher": "s. l.",
 		"etAl": false,
 		"publishDate": "2014",
+		},
+		
+	"WHO-2": {
+		"title": "Genes and human disease",
+		"authors": "World Health Organisation",
+		"etAl": false,
+		"href": "http://www.who.int/genomics/public/geneticdiseases/en/index1.html",
+		//"accessed": "13 April 2014",
+		"publishDate": "n. d.",
 		},
 		
 		
