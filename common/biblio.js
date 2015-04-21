@@ -2,7 +2,7 @@ var biblio = {
 
 	"APA-1": {
 		"title": "Diagnostic and statistical manual of mental disorders (DSM-5)",
-		"authors": "American Psychiatric Association",
+		"authors": ["American Psychiatric Association"],
 		"etAl": false,
 		"publisher": "Washington D.C.: American Psychiatric Association.",
 		"publishDate": "2013",
@@ -11,7 +11,7 @@ var biblio = {
 		
 	"Arcos-Burgos-1": {
 		"title": "A common variant of the latrophilin 3 gene, LPHN3, confers susceptibility to ADHD and predicts effectiveness of stimulant medication",
-		"authors": "Arcos-Burgos, M.",
+		"authors": ["Arcos-Burgos, M."],
 		"etAl": true,
 		"publisher": "Molecular Psychiatry, Vol 15 No. 11",
 		//"pages": "1053-1066",
@@ -20,7 +20,7 @@ var biblio = {
 		
 	"Banaschewski-1": {
 		"title": "Colour perception in ADHD",
-		"authors": "Banaschewski, T.",
+		"authors": ["Banaschewski, T."],
 		"etAl": true,
 		"publisher": "Journal of child psychology and psychiatry, and allied disciplines, Vol 47 Issue 6",
 		"publishDate": "2006",
@@ -30,7 +30,7 @@ var biblio = {
 	"Benson-1": {
 		"title": "The Neurology of Thinking",
 		"publisher": "Oxford Univ. Press",
-		"authors": "Benson, D. F.",
+		"authors": ["Benson, D. F."],
 		"etAl": false,
 		"publishDate": "1994",
 		},
@@ -63,7 +63,7 @@ var biblio = {
 			
 "Bruandet-1": {
 		"title": "A cognitive characterization of dyscalculia in Turner syndrome",
-		"authors":"Bruandet, M.",
+		"authors":["Bruandet, M."],
 		"publisher": "Neuropsychologia, Vol 42, Issue 3",
 		"etAl": true,
 		"publishDate": "2004",
@@ -73,7 +73,7 @@ var biblio = {
 		
 	"Bussing-1": {
 		"title": "Explanatory Models of ADHD Do They Differ by Ethnicity, Child Gender, or Treatment Status?",
-		"authors": "Bussing, R.",
+		"authors": ["Bussing, R."],
 		"etAl": true,
 		"publisher": "Journal of Emotional and Behavioral Disorders, Vol 6 Issue 4",
 		"publishDate": "1998",
@@ -84,7 +84,7 @@ var biblio = {
 			 {
 		"title": "The Mathematical Brain",
 		"publisher": "London: Macmillan",
-		"authors":"Butterworth, B.",
+		"authors":["Butterworth, B."],
 		"etAl": false,
 		
 		"publishDate": "1999",
@@ -122,7 +122,7 @@ var biblio = {
 
 	"CDC-1": {
 		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD) Symptoms and Diagnosis",
-		"authors": "Centers for Disease Control and Prevention",
+		"authors": ["Centers for Disease Control and Prevention"],
 		"href": "http://www.cdc.gov/ncbddd/adhd/diagnosis.html",
 		//"accessed": "10 September 2014",
 		"etAl": false,
@@ -131,7 +131,7 @@ var biblio = {
 		
 	"CDC-2": {
 		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD) Key Findings: Trends in the Parent-Report of Health Care Provider-Diagnosis and Medication Treatment for ADHD: United States, 2003-2011",
-		"authors": "Centers for Disease Control and Prevention",
+		"authors": ["Centers for Disease Control and Prevention"],
 		"href": "http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html",
 		//"accessed": "12 September 2014",
 		"etAl": false,
@@ -140,7 +140,7 @@ var biblio = {
 
 	"CDC-3": {
 		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD): Facts About ADHD",
-		"authors": "Centers for Disease Control and Prevention",
+		"authors": ["Centers for Disease Control and Prevention"],
 		"href": "http://www.cdc.gov/ncbddd/adhd/facts.html",
 		//"accessed": "11 September 2014",
 		"etAl": false,
@@ -149,21 +149,21 @@ var biblio = {
 		
 	"CDC-4": {
 		"title": "Autism Spectrum Disorder (ASD): Facts About ASD",
-		"authors": "United States Centers for Disease Control and Prevention",
+		"authors": ["United States Centers for Disease Control and Prevention"],
 		"etAl": false,
 		"href": "http://www.cdc.gov/ncbddd/autism/facts.html",
 		},
 		
 	"CDC-5": {
 		"title": "Autism Spectrum Disorder (ASD): Data & Statistics",
-		"authors": "United States Centers for Disease Control and Prevention",
+		"authors": ["United States Centers for Disease Control and Prevention"],
 		"etAl": false,
 		"href": "http://www.cdc.gov/ncbddd/autism/data.html",
 		},
 		
 	"CDC-6": {
 		"title": "Prevalence of Autism Spectrum Disorder Among Children Aged 8 Years — Autism and Developmental Disabilities Monitoring Network, 11 Sites, United States",
-		"authors": "National Center on Birth Defects and Developmental Disabilities, Centers for Disease Control and Prevention",
+		"authors": ["National Center on Birth Defects and Developmental Disabilities, Centers for Disease Control and Prevention"],
 		"editors": "Baio, J.",
 		"etAl": false,
 		"href": "http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w",
@@ -174,7 +174,7 @@ var biblio = {
 			"Cohen-Kadosh-1": {
 		"title": "Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing",
 		"publisher": "Current Biology, Vol 17, Issue 8",
-		"authors":"Cohen Kadosh, R.",
+		"authors":["Cohen Kadosh, R."],
 		"etAl": true,
 		//"pages": "689-93",
 		"publishDate": "2007",
@@ -183,7 +183,7 @@ var biblio = {
 
 	"Cummins-1": {
 		"title": "Tools To manage Your Adult ADHD - UPDATED",
-		"authors": "Cummins, M.",
+		"authors": ["Cummins, M."],
 
 		"href": "http://marlacummins.com/50-tools-to-manage-your-adult-adhd/",
 		"etAl": false,
@@ -194,7 +194,7 @@ var biblio = {
 		
 "Czamara-1": {
 		"title": "Children with ADHD symptoms have a higher risk for reading, spelling and math difficulties in the GINIplus and LISAplus cohort studies",
-		"authors": "Czamara, D.",
+		"authors": ["Czamara, D."],
 		"publisher": "PLOS One, Vol 8(5)",
 		"etAl": true,
 		"publishDate": "2013",
@@ -219,7 +219,7 @@ var biblio = {
 			"Dejerine-1": {
 				"title": "Sur un cas de cécité verbale avec agraphie, suivi d’autopsie",
 				"publisher": "C. R. Societe du Biologie 43",
-				"authors":"Dejerine, J.",
+				"authors":["Dejerine, J."],
 				"etAl": false,
 				//"pages": "197–201",
 				"publishDate": "1891",
@@ -258,7 +258,7 @@ var biblio = {
 		
 			"Duffy-1": {
 		"title": "The Write Tools for ADHD Students",
-		"authors": "Duffy, F.",
+		"authors": ["Duffy, F."],
 		"publisher": "ADDitude",
 		"href": "http://www.additudemag.com/adhd/article/9365.html",
 		"etAl": false,
@@ -311,7 +311,7 @@ var biblio = {
 		
 	"Franke-1": {
 		"title": "The genetics of attention deficit/hyperactivity disorder in adults, a review.",
-		"authors": "Franke, B.",
+		"authors": ["Franke, B."],
 		"etAl": true,
 		"publisher": "Molecular Psychiarty, Vol 17 No. 10",
 		//"pages": "960-987",
@@ -358,14 +358,14 @@ var biblio = {
 		"title": "Dyslexia and Development: Neurobiological Aspects of Extra-ordinary Brains, Part 998",
 
 		"publisher": "Harvard University Press",
-		"authors": "Galaburda, A. M.",
+		"authors": ["Galaburda, A. M."],
 		"etAl": false,	
 		"publishDate": "1993",
 	},
 	
 	"Geary-1": {
 		"title": "Mathematical disabilities: cognitive, neuropsychological, and genetic components",
-		"authors":"Geary, D.C.",
+		"authors":["Geary, D.C."],
 		"publisher": "Psychological Bulletin, Vol 114, Issue 2",
 		"etAl": false,
 		"publishDate": "1993",
@@ -390,7 +390,7 @@ var biblio = {
 	"Geschwind-1": {
 		"title": "Disconnexion syndromes in animals and man. I.",
 		"publisher": "Brain 88",
-		"authors": "Geschwind, N. ",
+		"authors": ["Geschwind, N. "],
 		"etAl": false,
 		//"pages": " 237–2949",
 		// "publishedBy": "Wiley Subscription Services, Inc., A Wiley Company",
@@ -400,7 +400,7 @@ var biblio = {
 		"Henderson-1": {
 		"title": "Anatomy of posterior pathways in reading: A reassessment",
 		"publisher": "Brain Lang. 29",
-		"authors": "Henderson, V. W.",
+		"authors": ["Henderson, V. W."],
 		"etAl": false,
 		//"pages": "119–133",
 		// "publishedBy": "Macmillan Publishers LTD",
@@ -437,7 +437,7 @@ var biblio = {
 		
 	"Kessler-1": {
 		"title": "The prevalence and correlates of adult ADHD in the United States: results from the National Comorbidity Survey Replication",
-		"authors": "Kessler, R. C.",
+		"authors": ["Kessler, R. C."],
 		"etAl": true,
 		"publisher": "The American Journal of Psychiatry, Vol 163 Issue 4",
 		"publishDate": "2006",
@@ -461,7 +461,7 @@ var biblio = {
 	"Ladislav-1": {
 		"title": "Developmental Dyscalculia",
 		"publisher": "Journal of Learning Disabilities.  vol. 7 no. 3",
-		"authors":"Ladislav, K.",
+		"authors":["Ladislav, K."],
 		"etAl": false,
 		//"pages": "164-177",
 		"publishDate": "1974",
@@ -514,7 +514,7 @@ var biblio = {
 
 	"Mayo-1": {
 		"title": "Attention-deficit/hyperactivity disorder (ADHD) in children Treatments and drugs",
-		"authors": "Mayo Clinic",
+		"authors": ["Mayo Clinic"],
 		"etAl": false,
 		"href": "http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647",
 		//"accessed": "22 September 2014",
@@ -544,7 +544,7 @@ var biblio = {
 		
 	"Nigg-1": {
 		"title": "Cognitive Impairments Found With Attention-Deficit/Hyperactivity Disorder",
-		"authors": "Nigg, J. T.",
+		"authors": ["Nigg, J. T."],
 		"etAl": false,
 		"publisher": "Psychiatric Times",
 		"publishDate": "2009",
@@ -554,7 +554,7 @@ var biblio = {
 		
 	"NRC-1": {
 		"title": "About ADHD Causes and Brain Chemistry",
-		"authors": "National Resource Center on ADHD",
+		"authors": ["National Resource Center on ADHD"],
 		"etAl": false,
 		"href": "http://www.help4adhd.org/en/about/causes",
 		//"accessed": "15 September 2014",
@@ -563,7 +563,7 @@ var biblio = {
 		
 	"Pauc-1": {
 		"title": "Comorbidity of dyslexia, dyspraxia, attention deficit disorder (ADD), attention deficit hyperactive disorder (ADHD), obsessive compulsive disorder (OCD) and Tourette's syndrome in children: A prospective epidemiological study",
-		"authors": "Pauc, R.",
+		"authors": ["Pauc, R."],
 		"publisher": "Clinical Chiropractic, Vol 8 Issue 4",
 		"etAl": false,
 		"publishDate": "2005",
@@ -608,7 +608,7 @@ var biblio = {
 	
 	"Polanczyk-1": {
 		"title": "The worldwide prevalence of ADHD: a systematic review and metaregression analysis",
-		"authors": "Polanczyk, G.",
+		"authors": ["Polanczyk, G."],
 		"etAl": true,
 		"publisher": "The American Journal of Psychiatry, Vol 164 Issue 6",
 		"publishDate": "2007",
@@ -618,7 +618,7 @@ var biblio = {
 	"Price-1": {
 		"title": "Impaired parietal magnitude processing in developmental dyscalculia",
 		"publisher": "Current Biology, Vol 17, Issue 24",
-		"authors":"Price, G.R.",
+		"authors":["Price, G.R."],
 		"etAl": true,
 		//"pages": "1042-43",
 		"publishDate": "2007",
@@ -664,7 +664,7 @@ var biblio = {
 	
 	"Semrud-Clikeman-1": {
 		"title": "Comorbidity between ADDH and Learning Disability: A Review and Report in a Clinically Referred Sample",
-		"authors": "Semrud-Clikeman, M.",
+		"authors": ["Semrud-Clikeman, M."],
 		"publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 31 Issue 3",
 		"etAl": true,
 		"publishDate": "2013",
@@ -688,7 +688,7 @@ var biblio = {
 		"title": "Temporal information processing in the nervous system: special reference to dyslexia and dysphasia",
 
 		"publisher": "Annals of the New York Academy of Sciences, Vol. 682",
-		"authors": "Tallal, P.",
+		"authors": ["Tallal, P."],
 		"etAl": true,	
 		"publishDate": "1993",
 	},
@@ -696,7 +696,7 @@ var biblio = {
 "Shalev-1":	{
 		"title": "Developmental Dyscalculia",
 		"publisher": "Journal of Child Neurology vol. 19 no. 10",
-		"authors":"Shalev, R.S.",
+		"authors":["Shalev, R.S."],
 		"etAl": false,
 		//"pages": "765—771",
 		"publishDate": "2004",
@@ -705,7 +705,7 @@ var biblio = {
 "Shalev-2": {
 		"title": "Developmental Dyscalculia Is a Familial Learning Disability",
 		"publisher": "Journal of learning disabilities,  vol. 34, no. 1",
-		"authors":"Shalev, R.S.",
+		"authors":["Shalev, R.S."],
 		"etAl": true,
 		//"pages": "1042-43",
 		"publishDate": "2001",
@@ -716,7 +716,7 @@ var biblio = {
 	"Shaywitz-1": {
 		"title": "Functional disruption in the organization of the brain for reading in dyslexia",
 		"publisher": "Proc. Natl. Acad. Sci. USA Vol. 95",
-		"authors":"Shaywitz S.",
+		"authors":["Shaywitz S."],
 		"etAl": true,
 		//"pages": "2636–2641",
 		// "publishedBy": "United States National Academy of Sciences",
@@ -725,7 +725,7 @@ var biblio = {
 		
 	"Sinfield-1": {
 		"title": "Colors and ADHD: How Color Coding Can Make Your Life Easier",
-		"authors": "Sinfield, J.",
+		"authors": ["Sinfield, J."],
 		"etAl": false,
 		"href": "http://untappedbrilliance.com/colors-adhd",
 		//"accessed": "22 September 2014",
@@ -748,14 +748,14 @@ var biblio = {
 		"title": "The magnocellular theory of developmental dyslexia",
 		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/11305228",
 		"publisher": "Dyslexia. 2001 Jan-Mar;7(1)",
-		"authors": "Stein J.",
+		"authors": ["Stein J."],
 		"etAl": false,
                 //"pages": "12-36",
 		},
 		
 	"Tartakovsky-1": {
 		"title": "15 ADHD-Friendly Tips to Fire Up Your Focus",
-		"authors": "Tartakovsky, M.",
+		"authors": ["Tartakovsky, M."],
 		"publisher": "Psych Central",
 		"href": "http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767",
 		"etAl": false,
@@ -780,7 +780,7 @@ var biblio = {
 	
 	"Watson-1": {
 		"title": "The Best ADHD iPhone &amp; Android Apps of the Year",
-		"authors": "Watson, S.",
+		"authors": ["Watson, S."],
 		"publisher": "Healthline",
 		"href": "http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps",
 		"etAl": false,
@@ -790,7 +790,7 @@ var biblio = {
 		
 	"WebAIM-1": {
 		"title": "Cognitive Disabilities",
-		"authors": "WebAIM",
+		"authors": ["WebAIM"],
 		"etAl": false,
 		"publisher": "Center for Persons with DisabilitiesUtah State University",
 		"href": "http://webaim.org/articles/cognitive/",
@@ -799,7 +799,7 @@ var biblio = {
 		
 	"WebAIM-2": {
 		"title": "Cognitive Web Accessibility Checklist",
-		"authors": "WebAIM",
+		"authors": ["WebAIM"],
 		"etAl": false,
 		"href": "http://wave.webaim.org/cognitive",
 		"publisher": "Center for Persons with Disabilities, Utah State University",
@@ -808,7 +808,7 @@ var biblio = {
 		
 	"WebMD-1": {
 		"title": "Executive Function Skills and Disorders",
-		"authors": "WebMD",
+		"authors": ["WebMD"],
 		"etAl": false,
 		"publisher": "LLC",
 		"href": "http://www.webmd.com/add-adhd/guide/executive-function",
@@ -860,7 +860,7 @@ var biblio = {
 		
 	"WHO-1": {
 		"title": "The ICD-10 Classification of Mental and Behavioural Disorders Clinical descriptions and diagnostic guidelines",
-		"authors": "World Health Organisation",
+		"authors": ["World Health Organisation"],
 		"publisher": "s. l.",
 		"etAl": false,
 		"publishDate": "2014",
@@ -868,7 +868,7 @@ var biblio = {
 		
 	"WHO-2": {
 		"title": "Genes and human disease",
-		"authors": "World Health Organisation",
+		"authors": ["World Health Organisation"],
 		"etAl": false,
 		"href": "http://www.who.int/genomics/public/geneticdiseases/en/index1.html",
 		//"accessed": "13 April 2014",
@@ -879,7 +879,7 @@ var biblio = {
 	"Wilson-1":
                 {
 		"title": "Dyscalculia primer and resource guide",
-		"authors":"Wilson, A.J.",
+		"authors":["Wilson, A.J."],
 		"etAl": false,
 		"publishDate": "2008",
 		"href": "http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm",
