@@ -1,7 +1,7 @@
 var biblio = {
 
 	"APA-1": {
-		"title": "Diagnostic and statistical manual of mental disorders (DSM-5).",
+		"title": "Diagnostic and statistical manual of mental disorders (DSM-5)",
 		"authors": "American Psychiatric Association",
 		"etAl": false,
 		"publisher": "Washington D.C.: American Psychiatric Association.",
@@ -10,7 +10,7 @@ var biblio = {
 		},
 		
 	"Arcos-Burgos-1": {
-		"title": "A common variant of the latrophilin 3 gene, LPHN3, confers susceptibility to ADHD and predicts effectiveness of stimulant medication.",
+		"title": "A common variant of the latrophilin 3 gene, LPHN3, confers susceptibility to ADHD and predicts effectiveness of stimulant medication",
 		"authors": "Arcos-Burgos, M.",
 		"etAl": true,
 		"publisher": "Molecular Psychiatry, Vol 15 No. 11",
@@ -19,7 +19,7 @@ var biblio = {
 		},
 		
 	"Banaschewski-1": {
-		"title": "Colour perception in ADHD.",
+		"title": "Colour perception in ADHD",
 		"authors": "Banaschewski, T.",
 		"etAl": true,
 		"publisher": "Journal of child psychology and psychiatry, and allied disciplines, Vol 47 Issue 6",
@@ -64,11 +64,11 @@ var biblio = {
 "Bruandet-1": {
 		"title": "A cognitive characterization of dyscalculia in Turner syndrome",
 		"authors":"Bruandet, M.",
-		"publisher": "Neuropsychologia, Volume 42, Issue 3",
+		"publisher": "Neuropsychologia, Vol 42, Issue 3",
 		"etAl": true,
 		"publishDate": "2004",
 		//"pages": "288-98",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/14670569",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/14670569",
 		},	
 		
 	"Bussing-1": {
@@ -93,7 +93,7 @@ var biblio = {
 			"Cao-1": {
 		"title": "Deficient orthographic and phonological representations in children with dyslexia revealed by brain activation patterns",
 		"href": "http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03",
-		"publisher": "Journal of Child Psychology and Psychiatry, Volume 47, Issue 10",
+		"publisher": "Journal of Child Psychology and Psychiatry, Vol 47, Issue 10",
 		"authors":
 		[
 			"Fan Cao",
@@ -106,22 +106,22 @@ var biblio = {
 		},
 		
 	"Castellanos-1": {
-		"title": "Characterizing cognition in ADHD: beyond executive dysfunction.",
+		"title": "Characterizing cognition in ADHD: beyond executive dysfunction",
 		"authors": [
 			"Castellanos, F. X.",
 			"Sonuga-Barke, J. S.",
 			"Milham, M. P.",
 			"Tannock, R."
                         ],
-		"publisher": "Trends in Cognitive Sciences, Volume 10 Issue 3",
+		"publisher": "Trends in Cognitive Sciences, Vol 10 Issue 3",
 		"etAl": false,
 		"publishDate": "2006",
 		//"pages": "117-123",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/16460990",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/16460990",
 		},
 
 	"CDC-1": {
-		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD) Symptoms and Diagnosis.",
+		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD) Symptoms and Diagnosis",
 		"authors": "Centers for Disease Control and Prevention",
 		"href": "http://www.cdc.gov/ncbddd/adhd/diagnosis.html",
 		//"accessed": "10 September 2014",
@@ -139,7 +139,7 @@ var biblio = {
 		},
 
 	"CDC-3": {
-		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD): Facts About ADHD.",
+		"title": "Attention-Deficit / Hyperactivity Disorder (ADHD): Facts About ADHD",
 		"authors": "Centers for Disease Control and Prevention",
 		"href": "http://www.cdc.gov/ncbddd/adhd/facts.html",
 		//"accessed": "11 September 2014",
@@ -173,7 +173,7 @@ var biblio = {
 							
 			"Cohen-Kadosh-1": {
 		"title": "Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing",
-		"publisher": "Current Biology, Volume 17, Issue 8",
+		"publisher": "Current Biology, Vol 17, Issue 8",
 		"authors":"Cohen Kadosh, R.",
 		"etAl": true,
 		//"pages": "689-93",
@@ -195,11 +195,11 @@ var biblio = {
 "Czamara-1": {
 		"title": "Children with ADHD symptoms have a higher risk for reading, spelling and math difficulties in the GINIplus and LISAplus cohort studies",
 		"authors": "Czamara, D.",
-		"publisher": "PLOS One, Volume 8(5)",
+		"publisher": "PLOS One, Vol 8(5)",
 		"etAl": true,
 		"publishDate": "2013",
 		//"pages": "447-461",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/23724008",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/23724008",
 		},
 
 
@@ -242,7 +242,7 @@ var biblio = {
 	},
 	
 	"Demurie-1": {
-		"title": "Common alterations in sensitivity to type but not amount of reward in ADHD and autism spectrum disorders.",
+		"title": "Common alterations in sensitivity to type but not amount of reward in ADHD and autism spectrum disorders",
 		"authors": [
 			"Demurie, E.",
 			"Roeyers, H.",
@@ -250,14 +250,14 @@ var biblio = {
 			"Sonuga-Barke, E."
                         ],
 		"publisher": "Journal of Child Psychology and Psychiatry, Vol 52 Issue 11",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/21223259",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/21223259",
 		"etAl": false,
 		"publishDate": "2011",
 		//"pages": "1164-1173",
 		},
 		
 			"Duffy-1": {
-		"title": "The Write Tools for ADHD Students.",
+		"title": "The Write Tools for ADHD Students",
 		"authors": "Duffy, F.",
 		"publisher": "ADDitude",
 		"href": "http://www.additudemag.com/adhd/article/9365.html",
@@ -268,7 +268,7 @@ var biblio = {
 
 		
 	"Eden-1": {
-		"title": "Abnormal processing of visual motion in dyslexia revealed by functional brain imaging.",
+		"title": "Abnormal processing of visual motion in dyslexia revealed by functional brain imaging",
 		"publisher": "Nature (London) 389",
 		"authors": [
 			"Eden, G. F",
@@ -285,13 +285,13 @@ var biblio = {
 	},
 	
 	"Fabian-1": {
-		"title": "The Evolution of Aging.",
+		"title": "The Evolution of Aging",
 		"authors": [
 			"Fabian, D.",
 			"Flatt, T."
                         ],
 		"etAl": false,
-		"publisher": "Nature Education Knowledge Volume 3 Issue 10",
+		"publisher": "Nature Education Knowledge, Vol 3 Issue 10",
 		"publishDate": "2011",
 		},
 	
@@ -338,7 +338,7 @@ var biblio = {
 	"Friston-1": {
 		"title": "Statistical parametric maps in functional imaging: a general linear approach",
 		
-		"publisher": "Human Brain Mapping, Volume 2, Issue 4",
+		"publisher": "Human Brain Mapping, Vol 2, Issue 4",
 		"authors": [
 			"Friston, K. J.",
 			"Ashburner, J.",
@@ -366,7 +366,7 @@ var biblio = {
 	"Geary-1": {
 		"title": "Mathematical disabilities: cognitive, neuropsychological, and genetic components",
 		"authors":"Geary, D.C.",
-		"publisher": "Psychological Bulletin, Volume 114, Issue 2",
+		"publisher": "Psychological Bulletin, Vol 114, Issue 2",
 		"etAl": false,
 		"publishDate": "1993",
 		//"pages": "345-362",
@@ -374,17 +374,17 @@ var biblio = {
 		},
 		
 	"Germanò-1": {
-		"title": "Comorbidity of ADHD and Dyslexia.",
+		"title": "Comorbidity of ADHD and Dyslexia",
 		"authors": [
 			"Germanò, E.",
 			"Gagliano, A.",
 			"Curatolo, P."
 		],
-		"publisher": "Developmental Neuropsychology, Volume 35 Issue 5",
+		"publisher": "Developmental Neuropsychology, Vol 35 Issue 5",
 		"etAl": false,
 		"publishDate": "2010",
 		//"pages": "475-493",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/20721770",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/20721770",
 		},
 		
 	"Geschwind-1": {
@@ -408,7 +408,7 @@ var biblio = {
 	},
 	
 	"Horton-1": {
-		"title": "Book Excerpt: A Web for Everyone.",
+		"title": "Book Excerpt: A Web for Everyone",
 		"authors": [
 			"Horton, S.",
 			"Quesenbery, W."
@@ -421,7 +421,7 @@ var biblio = {
 
 	
 	"Kadesjö-1": {
-		"title": "The Comorbidity of ADHD in the General Population of Swedish School-age Children.",
+		"title": "The Comorbidity of ADHD in the General Population of Swedish School-age Children",
 		"authors": [
 			"Kadesjö, B.",
 			"Gillberg, C.",
@@ -429,14 +429,14 @@ var biblio = {
 			"Sergeant , J. A."
                         ],
 		"publisher": "Journal of Child Psychology and Psychiatry, Vol 42 Issue 4",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/11383964",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/11383964",
 		"etAl": false,
 		"publishDate": "2001",
 		//"pages": "487-492",
 		},
 		
 	"Kessler-1": {
-		"title": "The prevalence and correlates of adult ADHD in the United States: results from the National Comorbidity Survey Replication.",
+		"title": "The prevalence and correlates of adult ADHD in the United States: results from the National Comorbidity Survey Replication",
 		"authors": "Kessler, R. C.",
 		"etAl": true,
 		"publisher": "The American Journal of Psychiatry, Vol 163 Issue 4",
@@ -469,7 +469,7 @@ var biblio = {
 		},
 
 	"Lindsay-1": {
-		"title": "Attentional function as measured by a Continuous Performance Task in children with dyscalculia.",
+		"title": "Attentional function as measured by a Continuous Performance Task in children with dyscalculia",
 		"authors": [
 			"Lindsay, R. L.",
 			"Tomazic, T.",
@@ -498,22 +498,22 @@ var biblio = {
 	},
 	
        "Martinussen-1": {
-		"title": "A Meta-Analysis of Working Memory Impairments in Children With Attention-Deficit/Hyperactivity Disorder.",
+		"title": "A Meta-Analysis of Working Memory Impairments in Children With Attention-Deficit/Hyperactivity Disorder",
 		"authors": [
 			"Martinussen, R.",
 			"Hayden, J.",
 			"Hogg-Johnson, S.",
 			"Tannock, R."
                         ],
-		"publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Volume 44 Issue 4",
+		"publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 44 Issue 4",
 		"etAl": false,
 		"publishDate": "2005",
 		//"pages": "337-384",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/15782085",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/15782085",
 		},
 
 	"Mayo-1": {
-		"title": "Attention-deficit/hyperactivity disorder (ADHD) in children Treatments and drugs.",
+		"title": "Attention-deficit/hyperactivity disorder (ADHD) in children Treatments and drugs",
 		"authors": "Mayo Clinic",
 		"etAl": false,
 		"href": "http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647",
@@ -522,19 +522,19 @@ var biblio = {
 		},
 		
 	"Meyer-1": {
-		"title": "Fine motor skills in South African children with symptoms of ADHD: influence of subtype, gender, age, and hand dominance.",
+		"title": "Fine motor skills in South African children with symptoms of ADHD: influence of subtype, gender, age, and hand dominance",
 		"authors": [
 			"Meyer, A.",
 			"Sagvolden, T."
                         ],
 		"etAl": false,
-		"publisher": "Behavioral and Brain Functions, Volume 2 Issue 1",
+		"publisher": "Behavioral and Brain Functions, Vol 2 Issue 1",
 		"publishDate": "2006",
 		//"pages": "2-33",
 		},
 		
 	"Milliken-1": {
-		"title": "Autism Challenges and Avoidances, Interview of Anonymous User X.",
+		"title": "Autism Challenges and Avoidances, Interview of Anonymous User X",
 		"authors": [
 			"Milliken, N.",
 			"Grainger J"
@@ -543,7 +543,7 @@ var biblio = {
 		},
 		
 	"Nigg-1": {
-		"title": "Cognitive Impairments Found With Attention-Deficit/Hyperactivity Disorder.",
+		"title": "Cognitive Impairments Found With Attention-Deficit/Hyperactivity Disorder",
 		"authors": "Nigg, J. T.",
 		"etAl": false,
 		"publisher": "Psychiatric Times",
@@ -553,7 +553,7 @@ var biblio = {
 		},
 		
 	"NRC-1": {
-		"title": "About ADHD Causes and Brain Chemistry..",
+		"title": "About ADHD Causes and Brain Chemistry",
 		"authors": "National Resource Center on ADHD",
 		"etAl": false,
 		"href": "http://www.help4adhd.org/en/about/causes",
@@ -562,9 +562,9 @@ var biblio = {
 		},
 		
 	"Pauc-1": {
-		"title": "Comorbidity of dyslexia, dyspraxia, attention deficit disorder (ADD), attention deficit hyperactive disorder (ADHD), obsessive compulsive disorder (OCD) and Tourette's syndrome in children: A prospective epidemiological study.",
+		"title": "Comorbidity of dyslexia, dyspraxia, attention deficit disorder (ADD), attention deficit hyperactive disorder (ADHD), obsessive compulsive disorder (OCD) and Tourette's syndrome in children: A prospective epidemiological study",
 		"authors": "Pauc, R.",
-		"publisher": "Clinical Chiropractic, Volume 8 Issue 4",
+		"publisher": "Clinical Chiropractic, Vol 8 Issue 4",
 		"etAl": false,
 		"publishDate": "2005",
 		//"pages": "189-198",
@@ -593,7 +593,7 @@ var biblio = {
 	"Petersen-1": {
 		"title": "Activation of extrastriate and frontal cortical areas by visual words and word-like stimuli",
 
-		"publisher": "Science, Volume 249, Issue 4972",
+		"publisher": "Science, Vol 249, Issue 4972",
 		"authors": [
 			"Petersen, S. E.",
 			"Fox, P. T.",
@@ -607,7 +607,7 @@ var biblio = {
 	},
 	
 	"Polanczyk-1": {
-		"title": "The worldwide prevalence of ADHD: a systematic review and metaregression analysis.",
+		"title": "The worldwide prevalence of ADHD: a systematic review and metaregression analysis",
 		"authors": "Polanczyk, G.",
 		"etAl": true,
 		"publisher": "The American Journal of Psychiatry, Vol 164 Issue 6",
@@ -617,7 +617,7 @@ var biblio = {
 	
 	"Price-1": {
 		"title": "Impaired parietal magnitude processing in developmental dyscalculia",
-		"publisher": "Current Biology, Volume 17, Issue 24",
+		"publisher": "Current Biology, Vol 17, Issue 24",
 		"authors":"Price, G.R.",
 		"etAl": true,
 		//"pages": "1042-43",
@@ -663,13 +663,13 @@ var biblio = {
 	},
 	
 	"Semrud-Clikeman-1": {
-		"title": "Comorbidity between ADDH and Learning Disability: A Review and Report in a Clinically Referred Sample.",
+		"title": "Comorbidity between ADDH and Learning Disability: A Review and Report in a Clinically Referred Sample",
 		"authors": "Semrud-Clikeman, M.",
-		"publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Volume 31 Issue 3",
+		"publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 31 Issue 3",
 		"etAl": true,
 		"publishDate": "2013",
 		//"pages": "438-448",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/1592775",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/1592775",
 		},	
 
 	
@@ -724,7 +724,7 @@ var biblio = {
 		},
 		
 	"Sinfield-1": {
-		"title": "Colors and ADHD: How Color Coding Can Make Your Life Easier.",
+		"title": "Colors and ADHD: How Color Coding Can Make Your Life Easier",
 		"authors": "Sinfield, J.",
 		"etAl": false,
 		"href": "http://untappedbrilliance.com/colors-adhd",
@@ -733,7 +733,7 @@ var biblio = {
 		},
 		
 	"Smith-1": {
-		"title": "Adult ADD / ADHD Self-Help.",
+		"title": "Adult ADD / ADHD Self-Help",
 		"authors": [
 			"Smith, M.",
 			"Segal, R."
@@ -746,7 +746,7 @@ var biblio = {
 
 "Stein-1": {
 		"title": "The magnocellular theory of developmental dyslexia",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/11305228",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/11305228",
 		"publisher": "Dyslexia. 2001 Jan-Mar;7(1)",
 		"authors": "Stein J.",
 		"etAl": false,
@@ -754,7 +754,7 @@ var biblio = {
 		},
 		
 	"Tartakovsky-1": {
-		"title": "15 ADHD-Friendly Tips to Fire Up Your Focus.",
+		"title": "15 ADHD-Friendly Tips to Fire Up Your Focus",
 		"authors": "Tartakovsky, M.",
 		"publisher": "Psych Central",
 		"href": "http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767",
@@ -779,7 +779,7 @@ var biblio = {
 	},
 	
 	"Watson-1": {
-		"title": "The Best ADHD iPhone &amp; Android Apps of the Year.",
+		"title": "The Best ADHD iPhone &amp; Android Apps of the Year",
 		"authors": "Watson, S.",
 		"publisher": "Healthline",
 		"href": "http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps",
@@ -789,7 +789,7 @@ var biblio = {
 		},
 		
 	"WebAIM-1": {
-		"title": "Cognitive Disabilities.",
+		"title": "Cognitive Disabilities",
 		"authors": "WebAIM",
 		"etAl": false,
 		"publisher": "Center for Persons with DisabilitiesUtah State University",
@@ -807,7 +807,7 @@ var biblio = {
 		},
 		
 	"WebMD-1": {
-		"title": "Executive Function Skills and Disorders.",
+		"title": "Executive Function Skills and Disorders",
 		"authors": "WebMD",
 		"etAl": false,
 		"publisher": "LLC",
@@ -816,18 +816,18 @@ var biblio = {
 		},
 	
 	"Weiler-1": {
-		"title": "Information processing deficits in children with attention-deficit/hyperactivity disorder, inattentive type, and children with reading disability.",
+		"title": "Information processing deficits in children with attention-deficit/hyperactivity disorder, inattentive type, and children with reading disability",
 		"authors" : [
 			"Weiler, M. D.",
 			"Bernstein, J. H.",
 			"Bellinger, D.",
 			"Waber, D. P."
                         ],
-		"publisher": "Journal of Learning Disabilities, Volume 35 Issue 5",
+		"publisher": "Journal of Learning Disabilities, Vol 35 Issue 5",
 		"etAl": false,
 		"publishDate": "2002",
 		//"pages": "447-461",
-		"href": "http://www.ncbi.nlm.nih.gov/pubmed/15490541",
+		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/15490541",
 		},
 		
 	"Wikipedia-1": {
@@ -851,7 +851,7 @@ var biblio = {
 			"T. Banaschewski",
 			" L. A. Rohde"
                         ],
-		"publisher": "Advances in Biological Psychiatry, volume 24: Recent Trends and Developments, Basel: Karger",
+		"publisher": "Advances in Biological Psychiatry, Vol 24: Recent Trends and Developments, Basel: Karger",
 		"etAl": false,
 		"publishDate": "2008",
 		//"pages": "195-226",
@@ -859,7 +859,7 @@ var biblio = {
 		},
 		
 	"WHO-1": {
-		"title": "The ICD-10 Classification of Mental and Behavioural Disorders Clinical descriptions and diagnostic guidelines.",
+		"title": "The ICD-10 Classification of Mental and Behavioural Disorders Clinical descriptions and diagnostic guidelines",
 		"authors": "World Health Organisation",
 		"publisher": "s. l.",
 		"etAl": false,
