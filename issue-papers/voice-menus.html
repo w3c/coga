@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Voice Menu Systems</title>
+	</head>
+	<body>
+		<section>
+			<h2>Introduction</h2>
+			<p>Voice menu systems and Voice XML enable voice dialogs systems and voice browsers. It is used for developing audio and voice response applications, such as telephone menu systems, banking systems and automated customer service portals. Users interact with voice browsers via the public switched telephone network (PSTN). These systems are very similar to other automated telephone menu systems and may issues overlap. </p>
+			<p> It is worth noting that many crucial systems are dependent on this technology such as emergency notification, healthcare or prescription refilling, and others. Therefor full accessibility needs to be supported.</p>
+			<p>See <a href="http://www.w3.org/TR/voicexml20/">http://www.w3.org/TR/voicexml20/</a></p>
+			<p>An example use case may be as follows:</p>
+			<ul>
+				<li>The user may be asked &quot;For sports press 1, For weather press 2, For Stargazer astrophysics press 3.&quot; The system then weights for a response.</li>
+				<li> Accessibility is discussed for the hard of hearing, and WCAG and WAI specification are cited as being relevant (see <a href="http://www.w3.org/TR/voicexml20/#dmlAAccessibility">http://www.w3.org/TR/voicexml20/#accessibility</a>) Beyond that, no examples or concerns are identified for cognitive accessibility.</li>
+			</ul>
+		</section>
+		<section>
+			<h2> Challenges for People with Cognitive Disabilities</h2>
+			<p>This technology can be very problematic for our user groups. </p>
+			<p>When useful you can bake issues up into the specific categories bellow: </p>
+			<section>
+				<h3> Effect of memory impairments </h3>
+				<p>A good working term memory is essential for using these systems. The user needs hold multiple pieces of transitory information in the mind such as the number that is being presented as an option , whilst processing the terms that follow.</p>
+				<p>A good short term memory (lasts seconds) is essential so that the user can remember the number or the term.</p>
+				<p>Without these functions the user will select the wrong number</p>
+			</section>
+			<section>
+				<h3> Executive function </h3>
+				<p>@@</p>
+			</section>
+			<section>
+				<h3> Effect of impaired reasoning </h3>
+				<p>The use needs may need to compare similar options such as &quot;billing&quot;, &quot;accounts&quot;, &quot;sales&quot; and decide which is the service that is best suited to solve the issue at hand. Without strong reasoning skills the user is likely to select the incorrect extension the user will select the extension.</p>
+				<p>Advertisements and additional, unrequested information also increase the amount of processing required.</p>
+			</section>
+			<section>
+				<h3>Effect of attention related limitations</h3> 
+				<p>The use needs to focus on the different options and select the correct one. A person with impaired attention may have difficulties maintaining the necessary focus for a long or multi level menu. Advertising and additional, unrequested information also make it harder to retain attention. </p>
+			</section>
+			<section>
+				<h3> Effect of impaired language and auditory perception related functions</h3>
+				<p>The user needs to interpret the correct terms and match them to their needs. This involves speech perception: sounds of language are heard, interpreted and understood , within a given time.</p>
+			</section>
+			<section>
+				<h3>Effect of reduced knowledge</h3> 
+				<p>The user needs to be failure with the terms used in the menu, even if they are not relating to the service options required.</p>
+			</section>
+		</section>
+		<section>
+			<h2>Proposed solutions </h2>
+			<ol>
+				<li> It must be easy to get though to a human. We suggest that the digit &quot;0&quot; be reserved, across all Voice ml systems, to get though to a human Some users need more time. </li>
+				<li>Extra time should be a user setting for both the speed of speech and ability for the user to define if they need a slower speech or more input time etc. </li>
+				<li>Pauses are important between phrases that allow processing time of language and options </li>
+				<li>Options in text should be given before the digit to select, or the instruction to select that option. This will mean you do not need to remember the digit or instruction whilst processing the term</li>
+				<li>The digit 0 (or other value) could be a reserved number for reaching a human operator. Setting 0 (assuming that is the reserved digit) to mean anything else will give an error. The digit 9 (or other value) could be a reserved number for going back to the last menu (error recovery). Setting 0 or 9 (assuming that they are the reserved digits) to mean anything else will give an error. </li>
+				<li>The user should be able to extend or disable time out as a system default on their device </li>
+				<li>Error recovery should be simple, and take you to a human operator. Error response should not though the user off the line or send them to a more complex menu. Preferably they should use a reserved digit. </li>
+				<li>Timed text should be adjustable (as with all accessible media).</li>
+				<li>Advertisement and other information should not be read as it can confuse the user and can make it harder to retain attention.</li>
+				<li>Terms used should be as simple as possible.</li>
+				<li>Examples and advice should be given on how to build a prompt that reduces the cognitive load <ol>
+						<li> Example1: Reducing cognitive load: The prompt &quot;<em>press 1 for the the secreter,&quot;</em> requires the user to remember the digit 1 while interpreting the term secretary. It is less good then the prompt &quot;<em>for the secretary (pause): press 1&quot;</em> or &quot; <em>for the secretary (pause) or for more help (pause): press 1</em>&quot;</li>
+						<li>Example 2: Setting a default for a human operator </li>
+					</ol>
+				</li>
+			</ol>
+			<p class="note">Note. The above proposed solutions have not been tested. They are not supported in the standards. </p>
+			<p>Currently Voice XML does not seem to be used to improve accessibility for people with cognitive disabilities and in may case seems to decrease it. No author strategies are defined to this improve this situation. Until this issue is addressed many critical functions such as emergency and medical support, will become less and less accessible to people with cognitive disabilities.</p>
+		</section>
+	</body>
+</html>
