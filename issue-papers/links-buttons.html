@@ -4,7 +4,7 @@
 		<title>Adaptable Links and Buttons</title>
 	</head>
 	<body>
-		<p>Syntax for adaptable links and buttons (symbols, help and keyboard) </p>
+		<h1>Syntax for adaptable links and buttons (symbols, help and keyboard) </h1>
 		<p>Sometimes users need extra support. This can include: </p>
 		<ul>
 			<li> Symbols and graphics that they are familiar with </li>
@@ -145,9 +145,28 @@
 				<li>offers - for special offers that are complementary to the main content or task </li>
 				<li>advertisement - advertisement or sponsored content </li>
 			</ul>
-		</section>
+		</section><section>
+        <h2>Number free</h2>
+<p>Not everyone can understand numbers. We therefor suggest aria-numberfree for alternative text for people who can not understand the main content.
+</p>
+<p>For example:
+</p>
+<p><span>&lt;span aria-numberfree=&quot;almost all&quot;&gt;9 out of 10</span> &lt;/span&gt;
+</p>
+<pre>&lt;span aria-numberfree=&quot;hat and coat weather&quot;&gt;The weather is <span>9 degrees&lt;/span&gt;</span>
+</pre></section><section>
+<h2>Non literal text and images</h2>
+<p>Not everyone can understand non-literal text and icons such as metaphors, idioms etc.
+The aria-literal tag  allows the author to explain non-literal text and images to users. 
+</p><p>For example:
+</p>
+<p>&lt;span aria-nonliteral=&quot;it is raining hard&quot;&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;
+</p>
+<p><br>
+User agents can render non-literal text in a different way so that users will know that this is non literal. They can then use a mouse over or other technique to receive the translation.
+</p></section>
 		<section>
-			<h2>Confirm other features</h2>
+		  <h2>Confirm other features</h2>
 			<p>The following may not be necessary </p>
 			<ul>
 				<li>Views </li>
