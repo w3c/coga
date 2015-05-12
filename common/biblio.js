@@ -61,6 +61,36 @@ var biblio = {
 			"publishDate": "1994",
 			},
 			
+		"Brandenburg-1":
+		{
+		"title": "Mobile computing technology and aphasia: An integrated review of accessibility and potential uses",
+		"authors": [
+			"Brandenburg, C.",
+			"Worrall, A.",
+			"Rodriguez, A. D.",
+			"Copland, D."
+		],
+		"etAl": false,
+		"publisher": "Aphasiology, Vol 27 Issue 4",
+		//"pages": "444-461",
+		"publishDate": "2013",
+		},
+		
+	 "Brennan-1":
+		{
+		"title": "The relationship between specific features of aphasia-friendly written material and comprehension of written material for people with aphasia: An exploratory study",
+		"authors": [
+			"Brennan, A.",
+			"Worrall, L.",
+			"McKenna, K."
+		],
+		"etAl": false,
+		"publisher": "Aphasiology, Vol 19 Issue 8",
+		//"pages": "693-711",
+		"publishDate": "2005",
+		"href": "http://www.tandfonline.com/doi/abs/10.1080/02687030444000958",
+		},
+			
 "Bruandet-1": {
 		"title": "A cognitive characterization of dyscalculia in Turner syndrome",
 		"authors":["Bruandet, M."],
@@ -180,6 +210,15 @@ var biblio = {
 		"publishDate": "2007",
 		"href": "http://www.sciencedirect.com/science/article/pii/S0960982207010652",
 		},
+		
+	 "Connect-1":
+		{
+		"title": "Aphasia questions and answers: How many people have aphasia?",
+		"authors": ["Connect - the communication disability network"],
+		"etAl": false,
+		"href": "http://www.ukconnect.org/aphasiaquestionsandanswers_302.aspx",
+		//"accessed": "19 April 2015",
+		},
 
 	"Cummins-1": {
 		"title": "Tools To manage Your Adult ADHD - UPDATED",
@@ -254,6 +293,22 @@ var biblio = {
 		"etAl": false,
 		"publishDate": "2011",
 		//"pages": "1164-1173",
+		},
+		
+	 "Dietz-1":
+		{
+		"title": "Reading comprehension by people with chronic aphasia: A comparison of three levels of visuographic contextual support",
+		"authors": [
+			"Dietz, A.",
+			"Hux, K.",
+			"McKelvey, M. L.",
+			"Beukelman, D. R.",
+			"Weissling, K."
+		],
+		"etAl": false,
+		"publisher": "Aphasiology, Vol 23 Issues 7-8",
+		//"pages": "1053-1064",
+		"publishDate": "2009",
 		},
 		
 			"Duffy-1": {
@@ -397,7 +452,23 @@ var biblio = {
 		"publishDate": "1965",
 		},
 		
-		"Henderson-1": {
+	"Ghidella-1":
+		{
+		"title": "Aphasia websites: An examination of their quality and communicative accessibility",
+		"authors": [
+			"Ghidella, C.",
+			"Murray, S.",
+			"Smart, M.",
+			"McKenna, K.",
+			"Worrall, L."
+		],
+		"etAl": false,
+		"publisher": "Aphasiology, Vol 19 Issue 12",
+		//"pages": "1134-1146",
+		"publishDate": "2005",
+		},
+		
+	"Henderson-1": {
 		"title": "Anatomy of posterior pathways in reading: A reassessment",
 		"publisher": "Brain Lang. 29",
 		"authors": ["Henderson, V. W."],
@@ -406,6 +477,21 @@ var biblio = {
 		// "publishedBy": "Macmillan Publishers LTD",
 		"publishDate": "1986",
 	},
+	
+	 "Herbert-1":
+		{
+		"title": "Accessible Information Guidelines",
+		"authors": [
+			"Herbert, R.",
+			"Haw, C.",
+			"Brown, C.",
+			"Gregory, E.",
+			"Brumfitt, S."
+		],
+		"etAl": false,
+		"publisher": "London: Stroke Association",
+		"publishDate": "2012",
+		},
 	
 	"Horton-1": {
 		"title": "Book Excerpt: A Web for Everyone",
@@ -455,6 +541,16 @@ var biblio = {
 		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/21558103",
 		"publisher": "American Journal of Psychiatry, Vol 170 Issue 6",
 		"publishDate": "2013",
+		},
+		
+	 "Kitching-1":
+		{
+		"title": "Patient information lea?ets: The state of the art",
+		"authors": ["Kitching, J."],
+		"etAl": false,
+		"publisher": "Journal of the Royal Society of Medicine , Vol 83 Issue 5",
+		//"pages": "298–300",
+		"publishDate": "1990",
 		},
 
 		
@@ -540,6 +636,15 @@ var biblio = {
 			"Grainger J"
                         ],
 		"publishDate": "2014",
+		},
+		
+	 "Mosby-1":
+		{
+		"title": "Mosby's Medical Dictionary, 8th edition",
+		"authors": ["Mosby"],
+		"etAl": false,
+		"publisher": "Elsevier",
+		"publishDate": "2009",
 		},
 		
 	"Nigg-1": {
@@ -642,6 +747,37 @@ var biblio = {
 		// "publishedBy": "Oxford University Press",
 		"publishDate": "1996",
 	},
+	
+	 "Rose-1":
+		{
+		"title": "Exploring the use of graphics in written health information for people with aphasia",
+		"authors": [
+			"Rose, T. A.",
+			"Worrall, L. E.",
+			"Hickson, L. M.",
+			"Hoffmann, T. C."
+		],
+		"etAl": false,
+		"publisher": "Aphasiology, Vol 25 Issue 12",
+		//"pages": "1579-1599",
+		"publishDate": "2011",
+		},
+
+	 "Rose-2":
+		{
+		"title": "Guiding principles for printed education materials: Design preferences of people with aphasia",
+		"authors": [
+			"Rose, T. A.",
+			"Worrall, L. E.",
+			"Hickson, L. M.",
+			"Hoffmann, T. C."
+		],
+		"etAl": false,
+		"publisher": "International Journal of Speech-Language Pathology, Vol14 Issue 1",
+		//"pages": "11-23",
+		"publishDate": "2012",
+		},
+
 
 	
 	"Rumsey-1": {
@@ -692,6 +828,21 @@ var biblio = {
 		"etAl": true,	
 		"publishDate": "1993",
 	},
+	
+	"Tarleton-1":
+		{
+		"title": "Finding the Right Help",
+		"authors": [
+			"Tarleton, B.",
+			"Marriott, A.",
+		],
+		"etAl": false,
+		"publisher": "University of Bristol",
+		"href": "http://www.bristol.ac.uk/sps/media/WTWPN_documents/finding-the-right-help-report.pdf",
+		//"accessed": "27 June 2014",
+		"publishDate": "2008",
+		},
+
 	
 "Shalev-1":	{
 		"title": "Developmental Dyscalculia",
