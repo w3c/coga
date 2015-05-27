@@ -21,22 +21,41 @@
 		<p>In another usecase we would like to see interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. I was thinking that if we made an open set of symbol codes for these symbol sets, then they can be interoperable. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
 		<p>We therefor suggest the following syntax: </p><section>
 			<h2>Importance</h2>
-			<p>aria-importance: This could be an ARIA attribute with the following settings:1 (main task such as send for an email </p>
+			<p>Requirement: We request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective. So critical features are used by 90% of users 90% of the time (or above). High would be above 60% use. Medium features would be 20% of users use it 20% of the time . Under 20% usage would be low.</p>
+			<p>User experience: </p>
+			<p>Proposed attribute: Add new attribute called aria-importance This could be an ARIA attribute with the following settings:1 (main task such as send for an email </p>
 			<ul>
-				<li> aria-importance= "1" this content is essential for the key function of the page (Example: The send button for an email draft) </li>
-				<li> aria-importance= "2" this content is used frequent (Example: The delete button for an email draft) </li>
-				<li> aria-importance= "3" typically not used (Example: The save and settings buttons for an email draft) </li>
-				<li> aria-importance= "4" rarely used or used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
+				<li> aria-importance= "critical" this content is essential for the key function of the page (Example: The send button for an email draft) </li>
+				<li> aria-importance= "high" this content is used frequent but still high(Example: The delete button for an email draft) </li>
+				<li> aria-importance= "med" typically not used (Example: The save and settings buttons for an email draft) </li>
+				<li> aria-importance= "low" rarely used or used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
 			</ul>
 		</section>
 		<section>
-			<h2>Explain and feedback</h2>
-			<p>Some users need additional help. This help can be rendered as a tool tip or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link, or what just happened. aria-feedback= "your email was sent" aria-explain= "this item costs more" </p>
+		  <h2>Explain and feedback</h2>
+			<p>Requirement: Some users need additional help. we request an attribute were the author can provide additional information. This help can be rendered as a tool tip or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link, or what just happened.</p>
+			<p>Proposed attribute:</p>
+			<p>aria-feedback and aria-explain</p>
+			<p>Examples:</p>
+			<p> aria-feedback= "your email was sent" </p>
+			<p>aria-explain= "this item costs more" </p>
 		</section>
 		<section>
-			<h2>Aria Buttons</h2>
-			<p>The following could be types of ARIA role button </p>
-			<p>Note, you should always have the default "button" eg role="button undo" </p>
+		  <h2>Buttons and Link Functions</h2>
+			<p>Requirement: </p>
+			<p>Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. We need enabling semantics so that symbols and text used can be ones that the user understands.  This can include: </p>
+            <ul>
+              <li> Symbols and graphics that they are familiar with </li>
+              <li> Tool tips </li>
+              <li> Language they understand </li>
+              <li> Keyboard short cuts </li>
+            </ul>
+            <p>&nbsp;</p>
+            <p>For that we need to <b>standardize supportive syntax</b> and terms that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute.</p>
+            <p><b>Example User experience:</b>, if an Author gives to a button a role "send" then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltip that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
+			<p><strong>Proposed attribute:</strong> aria-function</p>
+			<p>The following could be supported values of aria-function</p>
+			<p> aria-function value that would typically be on buttons</p>
 			<ul>
 				<li>compose(default importance = "1") </li>
 				<li>delete </li>
@@ -74,9 +93,9 @@
 			</ul>
 		</section>
 		<section>
-			<h2>ARIA link types</h2>
+          <p>aria-function value that would typically be on links</p>
 			<ul>
-				<li>home </li>
+			  <li>home </li>
 				<li>contact us </li>
 				<li>our phone </li>
 				<li>our email </li>
@@ -86,7 +105,7 @@
 				<li>terms </li>
 				<li>tools </li>
 				<li>comment </li>
-				<li>language (english) </li>
+				<li>language (English) </li>
 				<li>sign in </li>
 				<li>sign up </li>
 				<li>product </li>
@@ -97,9 +116,9 @@
 			</ul>
 		</section>
 		<section>
-			<h2>Indi UI content types</h2>
+			<p>aria-function value that would typically be on text</p>
 			<ul>
-				<li>Our phone </li>
+			  <li>Our phone </li>
 				<li>Our address </li>
 				<li>Our email </li>
 				<li>Chat help </li>
@@ -107,9 +126,10 @@
 			</ul>
 		</section>
 		<section>
-			<h2>Common form elements (text areas)</h2>
+			<p>aria-function value that would typically be on form controls and would have a user context - for example phone would relate to the user's phone</p>
+		  <p>Note they can be concatenated such as aria-function=&quot;birthdate month&quot;</p>
 			<ul>
-				<li>first name </li>
+			  <li>first name </li>
 				<li>family name </li>
 				<li>initial </li>
 				<li>phone </li>
@@ -122,7 +142,10 @@
 				<li>phone </li>
 				<li>credit card </li>
 				<li>expiry </li>
+				<li>birth date</li>
 				<li>day, *month *year </li>
+				<li>expiry date</li>
+				<li>todays date</li>
 				<li>credit card code </li>
 				<li>date start </li>
 				<li>date end </li>
@@ -130,11 +153,21 @@
 		</section>
 		<section>
 			<h2>Concept codes</h2>
-			<p>aria-concept : The following could enable interoperable symbol set codes for Non verbal people. example aria-concept="http....(EA fill in an example)" </p>
+			<p>We would like to enable interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. There are open set of symbol codes for these symbol sets, that could be referenced then they can be interoperable. alternatively wordnet nodes could be referenced. If the users symbols are mapped to the same nodes then users agents will be able to load the user understandable symbol. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
+            <p>User experience: AAC users will load symbols that they understand in different applications that are made by a different provider.</p>
+            <p>Proposed attribute: aria-concept</p>
+            <p>value=uri</p>
+            <p>Examples:</p>
+            <p>&lt;img aria-concept="http//wordnet.com/node/girl&quot; href=&quot;mygirlsy.bmp/&gt; </p>
 		</section>
 		<section>
-			<h2>Potential parts of a page</h2>
-			<p>The following could be extensions for aria landmarks or ARIA for ePub </p>
+		  <h2>Potential parts of a page</h2>
+			<p>Requirement: The following could be extensions for aria landmarks or ARIA for ePub </p>
+            <p>User experience: symbols and colors could be used consistently across different content. </p>
+            <p>Nav maps can be automatically generated for people learn via keypoints or examples.</p>
+            <p>&nbsp;</p>
+            <p>Examples:</p>
+            <p>&nbsp;</p>
 			<ul>
 				<li>key points </li>
 				<li>example </li>
@@ -147,8 +180,12 @@
 			</ul>
 		</section><section>
         <h2>Number free</h2>
-<p>Not everyone can understand numbers. We therefor suggest aria-numberfree for alternative text for people who can not understand the main content.
-</p>
+<p><strong>Requirement</strong>: Not everyone can understand numbers. We therefor suggest aria-numberfree for alternative text for people who can not understand the main content</p>
+<p><strong>User experience</strong></p>
+<p>A suggested user experience would be: Numerical concepts could be rendered by the user agent slightly different so that the user knows a number free explanation is available. The user can then mouse over the content and a tooltip would give the number free value</p>
+<p><strong>Proposed attribute:</strong>aria-numberfree </p>
+<p>value : string</p>
+<p>&nbsp;</p>
 <p>For example:
 </p>
 <p><span>&lt;span aria-numberfree=&quot;almost all&quot;&gt;9 out of 10</span> &lt;/span&gt;
@@ -156,10 +193,16 @@
 <pre>&lt;span aria-numberfree=&quot;hat and coat weather&quot;&gt;The weather is <span>9 degrees&lt;/span&gt;</span>
 </pre></section><section>
 <h2>Non literal text and images</h2>
-<p>Not everyone can understand non-literal text and icons such as metaphors, idioms etc.
-The aria-literal tag  allows the author to explain non-literal text and images to users. 
-</p><p>For example:
-</p>
+<p>Requirement: Not everyone can understand non-literal text and icons such as metaphors, idioms etc.
+  We need a tag that identifies text or images as non literal and   allows the author to explain non-literal text and images to users.</p>
+<p><strong>User experience:</strong></p>
+<p>A suggested user experience would be: Non literal content could be rendered by the user agent slightly differently so that the user knows that this content should not be taken literally and that a literal explanation is available. The user can then mouse over the content and a tooltip would give the literal value.</p>
+<p>&nbsp;</p>
+<p><strong>Proposed attribute:</strong></p>
+<p>aria-nonliteral </p>
+<p>Value= string</p>
+<p><strong>Examples:</strong></p>
+<p>&nbsp;</p>
 <p>&lt;span aria-nonliteral=&quot;it is raining hard&quot;&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;
 </p>
 <p><br>
@@ -181,7 +224,7 @@ User agents can render non-literal text in a different way so that users will kn
 			<h2>TODO</h2>
 			<ul>
 				<li> Collect fuller set </li>
-				<li> Build sample user style sheet or xslt so it works.. </li>
+				<li> Build sample JSON and scrips so it works.. </li>
 				<li> Build consensus and adjust proposals </li>
 				<li> Write associated terms, tool tip help for collection. </li>
 				<li> Add complementary types such as example, offer etc </li>
