@@ -47,21 +47,23 @@
             <ul>
               <li> Symbols and graphics that they are familiar with </li>
               <li> Tool tips </li>
-              <li> Language they understand </li>
+              <li> Language the use can understand </li>
               <li> Keyboard short cuts </li>
             </ul>
             <p>&nbsp;</p>
             <p>For that we need to <b>standardize supportive syntax</b> and terms that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute.</p>
-            <p><b>Example User experience:</b>, if an Author gives to a button a role "send" then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltip that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
+            <p><b>Example user experience:</b>, if an Author gives to a button a role "send" then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltip that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
 			<p><strong>Proposed attribute:</strong> aria-function</p>
-			<p>The following could be supported values of aria-function</p>
-			<p> aria-function value that would typically be on buttons</p>
+			<p>For example: &lt;button type="button" aria-function=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
+			<p>The user erxpernce may be simply replacing the text for the term &quot;undo&quot;.</p>
+			<p><strong>Supported Values: </strong></p>
+			<p>The following could be supported values of aria-function.  Aria-function values that would typically be on buttons are:</p>
 			<ul>
-				<li>compose(default importance = "1") </li>
+				<li>compose(default importance = "critical") </li>
 				<li>delete </li>
 				<li>next </li>
 				<li>previous </li>
-				<li>submit (default importance = "1") </li>
+				<li>submit (default importance = "critical") </li>
 				<li>undo </li>
 				<li>cancel </li>
 			</ul>
@@ -69,8 +71,8 @@
 				<li>add label </li>
 				<li>move </li>
 				<li>view </li>
-				<li>save </li>
-				<li>send </li>
+				<li>save (default importance = "critical") </li>
+				<li>send (default importance = "critical") </li>
 				<li>received </li>
 				<li>sent </li>
 				<li>edit </li>
@@ -93,7 +95,7 @@
 			</ul>
 		</section>
 		<section>
-          <p>aria-function value that would typically be on links</p>
+          <p>Aria-function values that would typically be on links:</p>
 			<ul>
 			  <li>home </li>
 				<li>contact us </li>
@@ -113,20 +115,20 @@
 				<li>social (provide label - such as facebook twitter) </li>
 				<li>post </li>
 				<li>contactus </li>
+				<li>Help  </li>
+				<li>Chat help </li>
 			</ul>
 		</section>
 		<section>
-			<p>aria-function value that would typically be on text</p>
+		  <p>Aria-function values that would typically be on text:</p>
 			<ul>
 			  <li>Our phone </li>
 				<li>Our address </li>
 				<li>Our email </li>
-				<li>Chat help </li>
-				<li>Help (or in ARIA buttons) </li>
 			</ul>
 		</section>
 		<section>
-			<p>aria-function value that would typically be on form controls and would have a user context - for example phone would relate to the user's phone</p>
+			<p>Aria-function values that would typically be on form controls and would have a user context - for example phone would relate to the user's phone</p>
 		  <p>Note they can be concatenated such as aria-function=&quot;birthdate month&quot;</p>
 			<ul>
 			  <li>first name </li>
@@ -155,18 +157,18 @@
 			<h2>Concept codes</h2>
 			<p>We would like to enable interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. There are open set of symbol codes for these symbol sets, that could be referenced then they can be interoperable. alternatively wordnet nodes could be referenced. If the users symbols are mapped to the same nodes then users agents will be able to load the user understandable symbol. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
             <p>User experience: AAC users will load symbols that they understand in different applications that are made by a different provider.</p>
-            <p>Proposed attribute: aria-concept</p>
-            <p>value=uri</p>
-            <p>Examples:</p>
+            <p><strong>Proposed attribute:</strong> aria-concept</p>
+            <p>value=URL</p>
+            <p><strong>Examples:</strong></p>
             <p>&lt;img aria-concept="http//wordnet.com/node/girl&quot; href=&quot;mygirlsy.bmp/&gt; </p>
 		</section>
 		<section>
 		  <h2>Potential parts of a page</h2>
-			<p>Requirement: The following could be extensions for aria landmarks or ARIA for ePub </p>
-            <p>User experience: symbols and colors could be used consistently across different content. </p>
+			<p><strong>Requirement:</strong> The following could be extensions for aria landmarks or ARIA for ePub </p>
+            <p><strong>User experience:</strong> symbols and colors could be used consistently across different content. </p>
             <p>Nav maps can be automatically generated for people learn via keypoints or examples.</p>
             <p>&nbsp;</p>
-            <p>Examples:</p>
+            <p><strong>Examples:</strong></p>
             <p>&nbsp;</p>
 			<ul>
 				<li>key points </li>
