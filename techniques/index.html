@@ -564,8 +564,8 @@ Lewis et al. (2012) </section>
 				</section>
 			</section>
 						<section>
-				<h4>Aviod Loss of data </h4>
-				<p>Data needs to be held, saved and available if webpages are refreshed by accident, closed or new tabs are opened. There needs to be the ability to return to forms partially filled and the ability to save content but security issues may prevent this on some websites. </p>
+				<h4>Avoid Loss of data </h4>
+				<p>Data needs to be held, saved and available if web pages are refreshed by accident, closed or new tabs are opened. There needs to be the ability to return to forms partially filled and the ability to save content but security issues may prevent this on some websites. </p>
 				<section>
 					<h5>Explanation and who it helps:</h5>
 					<p>This helps everyone. If these steps cannot be done because of security problems than provide alternatives means to get to the data. </p>
@@ -603,7 +603,7 @@ Lewis et al. (2012) </section>
 					<li>Users often forget about the scroll. Put any important features, such as save and send, above the scroll.</li>
 					<li>Never trick the user into buying or agreeing to something that they did not understand, or create a price structure that is unclear. For example, <ul>
 							<li>never increase the number of items (such as having a default of two) if the user may not notice</li>
-							<li>never have hidden charges that are only brought to the users attention after they have given their credit card information. All charges must be clear before the start of the transation task.</li>
+							<li>never have hidden charges that are only brought to the users attention after they have given their credit card information. All charges must be clear before the start of the transaction task.</li>
 						</ul>
 					</li>
 				</ul>
@@ -634,7 +634,7 @@ Lewis et al. (2012) </section>
 				<ul>
 					<li>Users should be able to go back steps to correct errors without losing their work. For example, breadcrumbs can be provided with previous steps clickable.</li>
 					<li>Avoid reset buttons which can be confusing and users can hit them accidentally, losing their work. </li>
-                    <li> Provide clickable breadcrumbs that alow users to see the previuse steps, go back, and change them.
+                    <li> Provide clickable breadcrumbs that allow users to see the previous steps, go back, and change them.
 					<li>Support should be provided if undo is not available.</li>
 					<li>Error text should say what the error is and tell the user how to correct it.</li>
 					<li>Error text should be simple, clear and friendly.</li>
@@ -656,7 +656,10 @@ Lewis et al. (2012) </section>
 			<h3>Provide Help</h3>
 			<section>
 				<h4>Provide context sensitive help</h4>
-				<p>Explanation and who it helps:</p>
+				<p>Explanation and who it helps: All users benefit from this.</p>
+			  <p>&nbsp;</p>
+				<p>Note that an alternative technique will be to use   aria attribute of aria-function. this allows the user agent to add help.</p>
+                <p>For example: &lt;button type="button" aria-function=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
 				
 				<section>
 					<h5>Sources/research:</h5>
@@ -667,10 +670,13 @@ Lewis et al. (2012) </section>
 				<h4>Include short tooltips on all icons, jargon</h4>
 				<h5>Explanation and who it helps:</h5>
 				<p>These is helpful to most persons with cognitive disabilities such as intellectual disabilities. Sometimes a persons with an intellectual disability can get confused and distracted. If tooltips are to be used they must precise and relate directly to the object</p>
-				<p>Some people, however, find tooltips distracting. When it existences provide a mechanisms to turn off tool tips. </p>
+				<p>Some people, however, find tooltips distracting. When it existences provide a mechanisms to turn off tool tips.</p>
+				<p>Note that an alternative technique will be to use   aria attribute of aria-function. this allows the user agent to add a tooltip.</p>
+				<p>For example: &lt;button type="button" aria-function=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
+				<p>&nbsp;</p>
 			
 				<section>
-					<h5>Sources/research:</h5>
+				  <h5>Sources/research:</h5>
 					<p>Neilson Norman Group article: Pop-ups and Adaptive Help Get a Refresh by Katie Sherwin on March 15, 2015 - http://www.nngroup.com/articles/pop-up-adaptive-help/. Present help content in a small modeless overlay window. Provide a link to more detailed information if available. Alow user to minimize, resize and move the window. What about small screens?</p>
 				</section>
 			</section>
@@ -701,7 +707,7 @@ Lewis et al. (2012) </section>
 			</section>
 		</section>
 		<section>
-			<h3>Attention </h3>
+		  <h3>Attention </h3>
 			<p>Attention is affected for most people with cognitive disabilities. Including: dementia ADHA and others</p>
 			<section>
 				<h4> Avoid distracting elements</h4>
@@ -771,11 +777,14 @@ Lewis et al. (2012) </section>
         <section>
         <h2>Techniques for specifc groups</h2>
         <section>
-				<h3>Limit features choices</h3>
-				<p>Do not provide many Features, choices and options. Limit to around 2 -5 key options. Put adional options under a "more options" submenu or enable them to be hidden.</p>
+				<h3>Limit the number of features and choices on the same screen.</h3>
+				<p>Do not provide many features, choices and options on the same screen. Limit to around 2 -5 key options. Put additional options under a "more options" submenu or enable them to be hidden.</p>
+				<p>One technique will be to use   aria attribute of aria-importance. This allows the user agent to remove unwanted features.</p>
+				<p>For example:  &lt;button aria-importance= "critical"&gt;send&lt;/button&gt;</p>
+				<p>This content is essential for the key function of the page. </p>
 				<section>
-					<h4>Explanation and who it helps:</h4>
-					<p>This is another way toreduce complexity. This supports those who have intelectual disabilities,  Dementia and/or acquire cognitive disabilities as they Age.</p>
+				  <h4>Explanation and who it helps:</h4>
+					<p>This is another way to reduce complexity. This supports those who have intellectual disabilities,  Dementia and/or acquire cognitive disabilities as they Age.</p>
 				</section>
 				 
 				 
@@ -789,12 +798,36 @@ Lewis et al. (2012) </section>
         
         </section>
 		<section>
-			<h2>Techniques under development</h2>
-			<section>
-				<h3>Use symbols on key content </h3>
-				<p>Use words that can map to C standard words Or add a mapping </p>
+			<h2>Techniques under development</h2><section>
+			  <h3>
+            Use  enable adaptability</h3>
+				<p>Use rich semantic tags to show what things are so that they can be adapted for the user.</p>
+				<p>This can be done in HTML</p>
+				<p>Example: </p>
+                <p>&lt;h2&gt; contact us&lt;/h2&gt;</p>
+                <p>You can also use   the aria attribute of aria-function. This allows the user agent to add symbols and extra help.</p>
+                <p>Example: &lt;button type="button" aria-function=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
+                <p>Use the   landmarks and aria ePub or coga roles, whenever they are appropriate.</p>
+                <p>Example:</p>
+                <p>&lt;section role=&quot;warning&quot;&gt;</p>
+                <p>&nbsp;</p>
 				<section>
 					<h4>Explanation and who it helps:</h4>
+				</section>
+				
+				
+			  <section>
+					<h4>Sources/research:</h4> How Individual Should Digital AT User Interfaces Be for People with Dementia. Peter Cudd, Philippa Greasley, Zoe Gallant, Emily Bolton and Gail Mountain. AAATE proceedings 3012.
+			  </section>
+                	</section>
+			<section>
+				<h3>Provide symbols on key content </h3>
+				<p>Add symbols to key content that help the user understand the meaning. </p>
+				<p>Note that an alternative technique will be to use   aria attribute of aria-function. This allows the user agent to add a symbol.</p>
+                <p>For example: &lt;button type="button" aria-function=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
+                <p>&nbsp;</p>
+				<section>
+				  <h4>Explanation and who it helps:</h4>
 					<p>see http://aac.unl.edu/vocabulary.html</p>
 				</section>
 				
@@ -802,8 +835,16 @@ Lewis et al. (2012) </section>
 					<h4>Sources/research:</h4>
 				</section>
 			</section><section>
-				<h3>Use semantics to reference symbols and extra help</h3>
-				<p>See issue paper : Syntax for adaptable symbols for links and buttons </p>
+				<h3>Use semantics to provide extra help</h3>
+				<p>One technique will be to use   aria attribute of aria-function. This allows the user agent to add symbols and extra help.</p>
+                <p>For example: &lt;button type="button" aria-function=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
+                <p>Other aria semantics can be used to provide direct help:</p>
+                <p>aria-feedback= "your email was sent" </p>
+                <p>aria-explain= "this item costs more"</p>
+                <p><span>&lt;span aria-numberfree=&quot;almost all&quot;&gt;9 out of 10</span> &lt;/span&gt; </p>
+                <p>Using standard HTML tags is also useful, such as </p>
+                <p>&lt;h2&gt; contact us&lt;/h2&gt; </p>
+                <p>&nbsp;</p>
 				<section>
 					<h4>Explanation and who it helps:</h4>
 				</section>
@@ -851,6 +892,6 @@ Lewis et al. (2012) </section>
 			</section>
 		</section>
 		-->
-		<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'>Acknowledgements placeholder</div>
+	<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'>Acknowledgments placeholder</div>
 	</body>
 </html>
