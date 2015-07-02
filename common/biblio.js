@@ -1,4 +1,13 @@
 var biblio = {
+	
+		 "Alton-1":
+		{
+		"title": "Short term auditory memory",
+		"authors": ["Alton, S."],
+		"publisher": "Down Syndrome NSW",
+		"etAl": false,
+        "publishDate": "2013",
+		},
 
 	"APA-1": {
 		"title": "Diagnostic and statistical manual of mental disorders (DSM-5)",
@@ -18,6 +27,34 @@ var biblio = {
 		"publishDate": "2010",
 		},
 		
+		 "ASHA-1":
+		{
+		"title": "Definitions of communication disorders and variations",
+		"authors": ["American Speech-Language-Hearing Association"],
+		"etAl": false,
+		"href": "http://www.asha.org/policy/RP1993-00208/",
+                      	"publishDate": "1993",
+		},
+
+	 "ASHA-2":
+		{
+		"title": "Augmentative and Alternative Communication (AAC)",
+		"authors": ["American Speech-Language-Hearing Association"],
+		"etAl": false,
+		"href": "http://www.asha.org/public/speech/disorders/AAC/",
+		},
+
+	 "ASHA-3":
+		{
+		"title": "Guidelines for meeting the communication needs of persons with severe disabilities",
+		"authors": ["the National Joint Committee for the Communicative Needs of Persons with Severe Disabilities"],
+		"etAl": false,
+		"href": "http://www.asha.org/policy/GL1992-00201/",
+		"publisher": "Asha, 34(Suppl. 7)",
+		//"pages": "2-3",
+		"publishDate": "1992",
+		},
+		
 	"Banaschewski-1": {
 		"title": "Colour perception in ADHD",
 		"authors": ["Banaschewski, T."],
@@ -26,6 +63,14 @@ var biblio = {
 		"publishDate": "2006",
 		//"pages": "568-572",
 		},
+		
+		 "BBC-1":
+		{
+		"title": "My web, my way. Making the web easier to use",
+		"authors": ["British Broadcasting Corporation (BBC)"],
+		"href": "http://www.bbc.co.uk/accessibility/guides/allguides_index.shtml",
+		"etAl": false,
+		},
 
 	"Benson-1": {
 		"title": "The Neurology of Thinking",
@@ -33,6 +78,14 @@ var biblio = {
 		"authors": ["Benson, D. F."],
 		"etAl": false,
 		"publishDate": "1994",
+		},
+		
+	 "Bercow-1":
+		{
+		"title": "The Bercow Report: A Review of Services for Children and Young People 0 to 19 with Speech, Language and Communication Needs",
+		"etAl": false,
+		"href": "http://dera.ioe.ac.uk/8405/1/7771-dcsf-bercow.pdf",
+		"publishDate": "2008",
 		},
 		
 		"Berninger-1": {
@@ -209,6 +262,16 @@ var biblio = {
 		//"pages": "689-93",
 		"publishDate": "2007",
 		"href": "http://www.sciencedirect.com/science/article/pii/S0960982207010652",
+		},
+		
+		 "communication-matters-1":
+		{
+		"title": "Shining a light on Augmentative and Alternative Communication",
+		"authors": ["Communication Matters"],
+		"publisher": "Communication Matters Conference 2011",
+		"href": "http://www.communicationmatters.org.uk/shining-a-light-on-aac",
+		"etAl": false,
+        "publishDate": "2013",
 		},
 		
 	 "Connect-1":
@@ -647,6 +710,16 @@ var biblio = {
 		"publishDate": "2009",
 		},
 		
+	 "NIDCD-1":
+		{
+		"title": "Quick Statistics",
+		"authors": ["National Institute on Deafness and Other Communication Disorders (NIDCD)"],
+		"etAl": false,
+		"href": "http://www.nidcd.nih.gov/health/statistics/vsl/Pages/stats.aspx",
+		//"publisher": "National Institutes of Health (NIH), U.S. Department of Health and Human Services",
+		"publishDate": "07 June 2010",
+		},
+		
 	"Nigg-1": {
 		"title": "Cognitive Impairments Found With Attention-Deficit/Hyperactivity Disorder",
 		"authors": ["Nigg, J. T."],
@@ -695,6 +768,18 @@ var biblio = {
 		"publishDate": "1996",
 	},
 	
+		 "PECS-1":
+		{
+		"title": "What is PECS?",
+		"authors": ["Picture Exchange Communication System USA"],
+		"etAl": false,
+		"href": "http://www.pecsusa.com/pecs.php",
+		"publisher": "Pyramid Educational Consultants",
+		},
+
+
+
+	
 	"Petersen-1": {
 		"title": "Activation of extrastriate and frontal cortical areas by visual words and word-like stimuli",
 
@@ -710,6 +795,15 @@ var biblio = {
 		// "publishedBy": "American Association for the Advancement of Science",
 		"publishDate": "1990",
 	},
+	
+		 "Pistorius-1":
+		{
+		"title": "Communication: An AAC User's Perspective",
+		"authors": ["Pistorius, M."],
+		"publisher": "Communication Matters Conference 2011",
+		"etAl": false,
+        "publishDate": "2011",
+		},
 	
 	"Polanczyk-1": {
 		"title": "The worldwide prevalence of ADHD: a systematic review and metaregression analysis",
@@ -747,6 +841,17 @@ var biblio = {
 		// "publishedBy": "Oxford University Press",
 		"publishDate": "1996",
 	},
+	
+		 "RDWG-1":
+		{
+		"title": "Research Report on Easy to Read on the Web",
+		"etAl": false,
+		"publisher": "W3C",
+		"href": "http://www.w3.org/WAI/RD/2012/easy-to-read/note/ED-E2R-20140123",
+        "deliveredBy": "http://www.w3.org/WAI/RD/",
+        "status": "ED",
+		"publishDate": "2014",
+		},
 	
 	 "Rose-1":
 		{
@@ -807,6 +912,20 @@ var biblio = {
 		//"pages": "438-448",
 		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/1592775",
 		},	
+		
+	 "Snowling-1":
+		{
+		"title": "The development of literacy skills in children with Down syndrome: Implications for intervention",
+		"authors": [
+			"Snowling, M.",
+			"Nash, H.",
+			"Henderson, L."
+		],
+		//"publisher": "© 2008 The Author. Journal Compilation © The Down Syndrome Educational Trust. Down Syndrome Research and Practice "
+		"etAl": false,
+                      	"publishDate": "2008",
+		},
+
 
 	
 	"Talairach-1": {
@@ -912,6 +1031,16 @@ var biblio = {
 		"etAl": false,
 		"publishDate": "2013",
 		//"accessed": "10 September 2014",
+		},
+		
+		 "UN-1":
+		{
+		"title": "Emerging issues and trends",
+		"publisher": "United Nations Expert Meeting on Building Inclusive Societies and Development through Promotion of Accessible Information and Communication Technologies (ICTs);  Tokyo, Japan",
+		"etAl": false,
+		"href": "http://www.un.org/disabilities/default.asp?id=1596",
+
+		"publishDate": "2012",
 		},
 
 	"WAI-ARIA": {
