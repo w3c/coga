@@ -33,23 +33,10 @@
 				<li> aria-importance= "low" rarely used or used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
 			</ul>
 		</section>
-		<section>
-		 <h2>Explain and feedback</h2>
-			<p>Requirement: Some users need additional help. we request an attribute where the author can provide additional information.or what just happened.</p>
-			<h3>Proposed attribute:</h3>
-			<h4><strong>aria-feedback</strong> </h4>
- This attribute provides immediate feedback that can be shown or spoken
-			<p> User experience: This be rendered as text or read immediately. Most users will not want this text rendered or spoken. Other users however will need it to know what has just happened. </p>
-			<h4><strong>aria-explain</strong> </h4>
-This attribute explains the element's role.
-			<p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
-			<h3>Examples:</h3>
-			<p> aria-feedback= "your email was sent" </p>
-			<p>aria-explain= "this item costs more" </p>
-		</section>
+		
 		<section>
 		 <h2>Adding Context </h2>
-			<p>Requirement: </p>
+			<h3>Requirement </h3>
 			<p>Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. If a user agent or script knows the context of links, buttons and other page elements then symbols and text used can be ones that the user understands. This can include: </p>
       <ul>
        <li> Symbols and graphics that they are familiar with </li>
@@ -108,30 +95,29 @@ This attribute explains the element's role.
      <p>The user experience may be simply replacing the text for the term &quot;home&quot; and adding an icon.</p>
      <p>It may also position this button to a location on the screen where the user is expecting the home page link.</p>
      <p><strong>Supported Values: </strong></p>
-     <p>The following could be supported values of Aria-destination. </p>
-     <p>&nbsp;</p>
-			<ul>
-			 <li>home </li>
-				<li>contact us </li>
-				<li>our phone </li>
-				<li>our email </li>
-				<li>site map </li>
-				<li>help </li>
-				<li>about us </li>
-				<li>terms </li>
-				<li>tools </li>
-				<li>comment </li>
-				<li>language (English) </li>
-				<li>sign in </li>
-				<li>sign up </li>
-				<li>product </li>
-				<li>services </li>
-				<li>social (provide label - such as facebook twitter) </li>
-				<li>post </li>
-				<li>contactus </li>
-				<li>Help </li>
-				<li>Chat help </li>
-			</ul>
+     <p>The following could be supported values of Aria-destination.		  </p>
+     <ul>
+	   <li>home </li>
+		 <li>contact us </li>
+		 <li>our phone </li>
+		 <li>our email </li>
+		 <li>site map </li>
+		 <li>help </li>
+		 <li>about us </li>
+		 <li>terms </li>
+		 <li>tools </li>
+		 <li>comment </li>
+		 <li>language (English) </li>
+		 <li>sign in </li>
+		 <li>sign up </li>
+		 <li>product </li>
+		 <li>services </li>
+		 <li>social (provide label - such as facebook twitter) </li>
+		 <li>post </li>
+		 <li>contactus </li>
+		 <li>Help </li>
+		 <li>Chat help </li>
+	   </ul>
 		</section>
 		
 		<section>
@@ -184,20 +170,18 @@ This attribute explains the element's role.
 		 <h2>Potential parts of a page</h2>
 			<p><strong>Requirement:</strong> The following could be extensions for aria landmarks or ARIA for ePub </p>
       <p><strong>User experience:</strong> symbols and colors could be used consistently across different content. </p>
-      <p>Nav maps can be automatically generated for people learn via keypoints or examples.</p>
-      <p>&nbsp;</p>
-      <p><strong>Examples:</strong></p>
-      <p>&nbsp;</p>
-			<ul>
-				<li>key points </li>
-				<li>example </li>
-				<li>note </li>
-				<li>warning </li>
-				<li>step </li>
-				<li>external - for external content, such as sponsored or advertising </li>
-				<li>offers - for special offers that are complementary to the main content or task </li>
-				<li>advertisement - advertisement or sponsored content </li>
-			</ul>
+      <p>Links (such as ePub nav maps) can be automatically generated for people learn via keypoints or examples.</p>
+      <p><strong>Examples:</strong>		  </p>
+      <ul>
+		  <li>key points </li>
+		  <li>example </li>
+		  <li>note </li>
+		  <li>warning </li>
+		  <li>step </li>
+		  <li>external - for external content, such as sponsored or advertising </li>
+		  <li>offers - for special offers that are complementary to the main content or task </li>
+		  <li>advertisement - advertisement or sponsored content </li>
+		</ul>
 		</section><section>
     <h2>Number free</h2>
 <p><strong>Requirement</strong>: Not everyone can understand numbers. We therefor suggest aria-numberfree for alternative text for people who can not understand the main content</p>
@@ -205,9 +189,7 @@ This attribute explains the element's role.
 <p>A suggested user experience would be: Numerical concepts could be rendered by the user agent slightly different so that the user knows a number free explanation is available. The user can then mouse over the content and a tooltips would give the number free value</p>
 <p><strong>Proposed attribute:</strong>aria-numberfree </p>
 <p>value : string</p>
-<p>&nbsp;</p>
-<p>For example:
-</p>
+<p><strong>For example:</strong></p>
 <p><span>&lt;span aria-numberfree=&quot;almost all&quot;&gt;9 out of 10</span> &lt;/span&gt;
 </p>
 <pre>&lt;span aria-numberfree=&quot;hat and coat weather&quot;&gt;The weather is <span>9 degrees&lt;/span&gt;</span>
@@ -217,17 +199,40 @@ This attribute explains the element's role.
  We need a tag that identifies text or images as non literal and  allows the author to explain non-literal text and images to users.</p>
 <p><strong>User experience:</strong></p>
 <p>A suggested user experience would be: Non literal content could be rendered by the user agent slightly differently so that the user knows that this content should not be taken literally and that a literal explanation is available. The user can then mouse over the content and a tooltips would give the literal value.</p>
-<p>&nbsp;</p>
 <p><strong>Proposed attribute:</strong></p>
 <p>aria-nonliteral </p>
 <p>Value= string</p>
 <p><strong>Examples:</strong></p>
-<p>&nbsp;</p>
-<p>&lt;span aria-nonliteral=&quot;it is raining hard&quot;&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;
-</p>
-<p><br>
-User agents can render non-literal text in a different way so that users will know that this is non literal. They can then use a mouse over or other technique to receive the translation.
+<p>&lt;span aria-nonliteral=&quot;it is raining hard&quot;&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;</p>
+<p> User agents can render non-literal text in a different way so that users will know that this is non literal. They can then use a mouse over or other technique to receive the translation.
 </p></section>
+<section>
+		 <h2>Explain and feedback</h2>
+			<p>Requirement: Some users need additional help. we request an attribute where the author can provide additional information.or what just happened.</p>
+			<h3>Proposed attribute:</h3>
+			<h4><strong>aria-feedback</strong> </h4>
+ This attribute provides immediate feedback that can be shown or spoken
+			<p> User experience: This be rendered as text or read immediately. Most users will not want this text rendered or spoken. Other users however will need it to know what has just happened. </p>
+			<h4><strong>aria-explain</strong> </h4>
+This attribute explains the element's role.
+			<p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
+			<h3>Examples:</h3>
+			<p> aria-feedback= "your email was sent" </p>
+			<p>aria-explain= "this item costs more" </p>
+	</section>
+        <section>
+<h3><strong>More Help</strong></h3>
+<p><strong>Proposed attribute</strong>:  aria-moreinfo and aria-extrahelp</p>
+<p> aria-moreinfo - supported values: URL</p>
+<p>aria-extrahelp - supported values: tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
+<p><strong>example</strong></p>
+<blockquote>
+  <p>&lt;button type="button" aria-moreinfo=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</p>
+</blockquote>
+<p>URI 2 may read: </p>
+<p> &lt;div id=&quot;uri2&quot; aria-extrahelp=&quot;morehelp&quot; aria-hidden=&quot;true&quot;&gt; pressing the undo button will erase all your work on this page. Use this button with care. If you press it by mistake, press control and y at the same time and your answers will come back. &lt;/div&gt;</p>
+<p> &lt;a href=&quot;functiongethelp()&quot; aria-extrahelp=&quot;humanhelp&quot; aria-hidden=&quot;true&quot;&gt;I want a person to help me&lt;/a&gt;</p>
+<p>&lt;div id=&quot;uri3&quot; aria-extrahelp=&quot;glossary&quot; aria-hidden=&quot;true&quot;&gt;</p></section>
 		<section>
 		 <h2>Note</h2>
 			<p>The following may not be necessary </p>
@@ -261,13 +266,10 @@ User agents can render non-literal text in a different way so that users will kn
       <li>contactus</li>
       <li>aboutus</li>
      </ul>
-     <br>
-      <pre>&nbsp;</pre>
-			<p>&nbsp;</p>
+     <p>&nbsp;</p>
 </section>  
 <section>
 <h2><strong>Language type support </strong></h2>
-<p>&nbsp;</p>
 <p><strong>Proposed attributes</strong>: aria-hasAlt and aria-alttype.</p>
 <p>Sometimes you may want to provide a simplified version of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users.</p>
 <p><strong>aria-hasAlt</strong> would provide the id of an easier to read text as an alternative to more detailed or difficult to understand content. </p>
@@ -277,9 +279,8 @@ User agents can render non-literal text in a different way so that users will kn
  <li>Images: symbolic , realistic</li>
  <li> p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt=&quot;&quot;, P2 are extra illustration that most people will not mind such as at the start of a paragraph or option. p3 are for disability centric illustrations that can disturb other people and may be mid sentence. </li>
 </ul>
-<br>
- 
-<p>Example syntax in a web page</p>
+
+ <strong>Examples </strong>
 <p> Option 1</p>
 <p>&lt;span aria-hasAlt=&quot;uri1&quot; &gt; some convoluted obtuse text&lt;/span&gt;</p>
 <p>Uri can be RDF by third party, or a hidden text elsewhere</p>
@@ -291,26 +292,12 @@ User agents can render non-literal text in a different way so that users will kn
 <p>Example 3 - <u>Images in the content</u></p>
 <p>&lt;img aria-hasAlt=&quot;uri1&quot; scr=&quot;img1.gif&quot; aria-alttype=&quot;iconic p1&quot; /&gt;</p>
 <p>&lt;img id=&quot;uri1&quot; scr=&quot;img2.gif&quot; aria-alttype=&quot;realistic p1&quot; /&gt;</p>
-<p></p>
-<p>&nbsp;</p>
 <p> <strong>Proposed attribute</strong>: aria-easylang </p>
 <p>aria-easylang will contain a version of the content that is easier to read and understand. Note that this only works on small sections of text as the easylang attribute does not support full HTML, such as lists and sections.</p>
 <p><strong>Supported values:</strong> any text string</p>
 <p>&lt;span aria-easylang=&quot; some text that is easy to read&quot;&gt; some convoluted obtuse text&lt;/span&gt;</p>
 <p>Where aria-easylang should use as simple well-known words as possible, and active voicing, literal text, small simple sentences. Acronyms and abbreviations should be avoided, unless they are the common way to refer to an item.</p>
-<p></p>
 <p>&nbsp;</p></section><section>
-<h3><strong>More Help</strong></h3>
-<p><strong>Proposed attribute</strong>:  aria-moreinfo and aria-extrahelp</p>
-<p> aria-moreinfo - supported values: URL</p>
-<p>aria-extrahelp - supported values: tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
-<p><strong>example</strong></p>
-<p>&lt;button type="button" aria-moreinfo=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</p>
-<p>URI 2 may read: </p>
-<p> &lt;div id=&quot;uri2&quot; aria-extrahelp=&quot;morehelp&quot; aria-hidden=&quot;true&quot;&gt; pressing the undo button will erase all your work on this page. Use this button with care. If you press it by mistake, press control and y at the same time and your answers will come back. &lt;/div&gt;</p>
-<p> </p>
-<p>&lt;a href=&quot;functiongethelp()&quot; aria-extrahelp=&quot;humanhelp&quot; aria-hidden=&quot;true&quot;&gt;I want a person to help me&lt;/a&gt;</p>
-<p>&lt;div id=&quot;uri3&quot; aria-extrahelp=&quot;glossary&quot; aria-hidden=&quot;true&quot;&gt;</p></section><section>
 <h3><br>
  <strong>Reminders</strong></h3>
 <p>Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users. This attribute enables different users to experience different amount of reminders based on personal preferences.</p>
@@ -327,7 +314,7 @@ User agents can render non-literal text in a different way so that users will kn
 <p><strong>Proposed attribute</strong>: <strong> aria-distraction</strong></p>
 <p>This attribute should be used on non essential, detracting content, so that people who have problems keeping focus can turn them off. An example user experiences would be to hide all distraction content.</p>
 <p>Example: Aria-distraction=&quot;blinking, ad&quot;</p>
-<p>Supported values: animations, auto-starting, changing, blinking, ad</p>
+<p>Supported values: animations, auto-starting, changing, blinking, ad, message, chat</p>
 
 </section>
 
