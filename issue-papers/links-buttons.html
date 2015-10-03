@@ -5,12 +5,12 @@
 	</head>
 	<body>
 		<h1>Proposal for WAI-ARIA COGA Extension</h1>
-		<p>Syntax for adaptable content such as:  links, buttons, symbols, help and keyboard</p>
+		<p>Syntax for adaptable content such as: links, buttons, symbols, help and keyboard</p>
 		<h2>Introduction </h2>
 		<p>Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. </p>
 	<p>Further, some users need extra support. This can include: </p>
 		<ul>
-		  <li> Symbols and graphics that they are familiar with </li>
+		 <li> Symbols and graphics that they are familiar with </li>
 			<li> Tool tips </li>
 			<li> Language they understand </li>
 			<li> Less features </li>
@@ -18,7 +18,7 @@
 			<li> Keyboard short cuts		</li>
 		</ul>
 		<p>Additionally, many users need LESS buttons and options. Therefore being able to cut the amount of buttons, features and links will be extremely useful. </p>
-		<p>For this we need  standardized  terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute and personal preferences. </p>
+		<p>For this we need standardized terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute and personal preferences. </p>
 		<p>For example, if an author makes it programanticaly known that a button is used to "send" an email, then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
 		<p>In another use-case we would like to see interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. I was thinking that if we made an open set of symbol codes for these symbol sets, then they can be interoperable. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
 		<p>We therefor suggest the following syntax: </p><section>
@@ -34,7 +34,7 @@
 			</ul>
 		</section>
 		<section>
-		  <h2>Explain and feedback</h2>
+		 <h2>Explain and feedback</h2>
 			<p>Requirement: Some users need additional help. we request an attribute where the author can provide additional information.or what just happened.</p>
 			<h3>Proposed attribute:</h3>
 			<h4><strong>aria-feedback</strong> </h4>
@@ -48,23 +48,23 @@ This attribute explains the element's role.
 			<p>aria-explain= "this item costs more" </p>
 		</section>
 		<section>
-		  <h2>Adding Context </h2>
+		 <h2>Adding Context </h2>
 			<p>Requirement: </p>
-			<p>Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. If a user agent or script knows the context of links, buttons and other page elements then symbols and text used can be ones that the user understands.  This can include: </p>
-            <ul>
-              <li> Symbols and graphics that they are familiar with </li>
-              <li> Tool tips </li>
-              <li> Language the use can understand </li>
-              <li> Keyboard short cuts </li>
-            </ul>
-            <p>&nbsp;</p>
-            <p>For that we need to <b>standardize supportive syntax</b> and terms that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute.</p>
-            <p><b>Example user experience:</b>, if an Author gives to a button a role "send" then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
+			<p>Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. If a user agent or script knows the context of links, buttons and other page elements then symbols and text used can be ones that the user understands. This can include: </p>
+      <ul>
+       <li> Symbols and graphics that they are familiar with </li>
+       <li> Tool tips </li>
+       <li> Language the use can understand </li>
+       <li> Keyboard short cuts </li>
+      </ul>
+      <p>&nbsp;</p>
+      <p>For that we need to <b>standardize supportive syntax</b> and terms that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute.</p>
+      <p><b>Example user experience:</b>, if an Author gives to a button a role "send" then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
 			<p><strong>Proposed attribute:</strong> aria-action</p>
 			<p>For example: &lt;button type="button" aria-action=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
 			<p>The user experience may be simply replacing the text for the term &quot;undo&quot;.</p>
 			<p><strong>Supported Values: </strong></p>
-			<p>The following could be supported values of aria-action.  Aria-action values that would typically be on buttons are:</p>
+			<p>The following could be supported values of aria-action. Aria-action values that would typically be on buttons are:</p>
 			<ul>
 				<li>compose(default importance = "critical") </li>
 				<li>delete </li>
@@ -102,16 +102,16 @@ This attribute explains the element's role.
 			</ul>
 	</section>
 		<section>
-          <p><strong>Proposed attribute:</strong>Aria-destination</p>
-          <p>Aria-destination, give the context of a link. It should be used on a link element or element with role of link.</p>
-          <p>For example: &lt;a href=&quot;home.html&quot; Aria-destination=&quot;home&quot; &gt;our main page&lt;/a&gt;</p>
-          <p>The user experience may be simply replacing the text for the term &quot;home&quot; and adding an icon.</p>
-          <p>It may also position this button to a location on the screen where the user is expecting the home page link.</p>
-          <p><strong>Supported Values: </strong></p>
-          <p>The following could be supported values of Aria-destination.  </p>
-          <p>&nbsp;</p>
+     <p><strong>Proposed attribute:</strong>Aria-destination</p>
+     <p>Aria-destination, give the context of a link. It should be used on a link element or element with role of link.</p>
+     <p>For example: &lt;a href=&quot;home.html&quot; Aria-destination=&quot;home&quot; &gt;our main page&lt;/a&gt;</p>
+     <p>The user experience may be simply replacing the text for the term &quot;home&quot; and adding an icon.</p>
+     <p>It may also position this button to a location on the screen where the user is expecting the home page link.</p>
+     <p><strong>Supported Values: </strong></p>
+     <p>The following could be supported values of Aria-destination. </p>
+     <p>&nbsp;</p>
 			<ul>
-			  <li>home </li>
+			 <li>home </li>
 				<li>contact us </li>
 				<li>our phone </li>
 				<li>our email </li>
@@ -129,20 +129,20 @@ This attribute explains the element's role.
 				<li>social (provide label - such as facebook twitter) </li>
 				<li>post </li>
 				<li>contactus </li>
-				<li>Help  </li>
+				<li>Help </li>
 				<li>Chat help </li>
 			</ul>
 		</section>
 		
 		<section>
 			<p><strong>Proposed attribute:</strong>Aria-field</p>
-            <p>Aria-field, give the context of a field such as a text box. It should be used on an input, text a responding role.</p>
-            <p>For example: &lt;input type="text" name="fname" Aria-field=&quot;phone&quot;/&gt;</p>
-            <p>The user experience may include filling in the field and adding an icon.</p>
-            <p>Aria-field values that would typically be on form controls and would have a user context - for example phone would relate to the user's phone</p>
-		  <p>Note they can be concatenated such as aria-field=&quot;birthdate month&quot;</p>
+      <p>Aria-field, give the context of a field such as a text box. It should be used on an input, text a responding role.</p>
+      <p>For example: &lt;input type="text" name="fname" Aria-field=&quot;phone&quot;/&gt;</p>
+      <p>The user experience may include filling in the field and adding an icon.</p>
+      <p>Aria-field values that would typically be on form controls and would have a user context - for example phone would relate to the user's phone</p>
+		 <p>Note they can be concatenated such as aria-field=&quot;birthdate month&quot;</p>
 			<ul>
-			  <li>first name </li>
+			 <li>first name </li>
 				<li>family name </li>
 				<li>initial </li>
 				<li>phone (corresponds to user phone number)</li>
@@ -164,30 +164,30 @@ This attribute explains the element's role.
 				<li>date end</li>
 			</ul>
 			<p>Aria-field can also give the context for text elements.</p>
-            <p>Aria-field values on text are:</p>
-            <ul>
-              <li>our-phone </li>
-              <li>our-address </li>
-              <li>our-email </li>
-            </ul>
+      <p>Aria-field values on text are:</p>
+      <ul>
+       <li>our-phone </li>
+       <li>our-address </li>
+       <li>our-email </li>
+      </ul>
 		</section>
 		<section>
-		  <h2>Concept codes</h2>
+		 <h2>Concept codes</h2>
 			<p>We would like to enable interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. There are open set of symbol codes for these symbol sets, that could be referenced then they can be interoperable. alternatively wordnet nodes could be referenced. If the users symbols are mapped to the same nodes then users agents will be able to load the user understandable symbol. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
-            <p>User experience: AAC users will load symbols that they understand in different applications that are made by a different provider.</p>
-            <p><strong>Proposed attribute:</strong> aria-concept</p>
-            <p>value=URL</p>
-            <p><strong>Examples:</strong></p>
-            <p>&lt;img aria-concept="http//wordnet.com/node/girl&quot; href=&quot;mygirlsy.bmp/&gt; </p>
+      <p>User experience: AAC users will load symbols that they understand in different applications that are made by a different provider.</p>
+      <p><strong>Proposed attribute:</strong> aria-concept</p>
+      <p>value=URL</p>
+      <p><strong>Examples:</strong></p>
+      <p>&lt;img aria-concept="http//wordnet.com/node/girl&quot; href=&quot;mygirlsy.bmp/&gt; </p>
 	</section>
 		<section>
-		  <h2>Potential parts of a page</h2>
+		 <h2>Potential parts of a page</h2>
 			<p><strong>Requirement:</strong> The following could be extensions for aria landmarks or ARIA for ePub </p>
-            <p><strong>User experience:</strong> symbols and colors could be used consistently across different content. </p>
-            <p>Nav maps can be automatically generated for people learn via keypoints or examples.</p>
-            <p>&nbsp;</p>
-            <p><strong>Examples:</strong></p>
-            <p>&nbsp;</p>
+      <p><strong>User experience:</strong> symbols and colors could be used consistently across different content. </p>
+      <p>Nav maps can be automatically generated for people learn via keypoints or examples.</p>
+      <p>&nbsp;</p>
+      <p><strong>Examples:</strong></p>
+      <p>&nbsp;</p>
 			<ul>
 				<li>key points </li>
 				<li>example </li>
@@ -199,7 +199,7 @@ This attribute explains the element's role.
 				<li>advertisement - advertisement or sponsored content </li>
 			</ul>
 		</section><section>
-        <h2>Number free</h2>
+    <h2>Number free</h2>
 <p><strong>Requirement</strong>: Not everyone can understand numbers. We therefor suggest aria-numberfree for alternative text for people who can not understand the main content</p>
 <p><strong>User experience</strong></p>
 <p>A suggested user experience would be: Numerical concepts could be rendered by the user agent slightly different so that the user knows a number free explanation is available. The user can then mouse over the content and a tooltips would give the number free value</p>
@@ -214,7 +214,7 @@ This attribute explains the element's role.
 </pre></section><section>
 <h2>Non literal text and images</h2>
 <p>Requirement: Not everyone can understand non-literal text and icons such as metaphors, idioms etc.
-  We need a tag that identifies text or images as non literal and   allows the author to explain non-literal text and images to users.</p>
+ We need a tag that identifies text or images as non literal and  allows the author to explain non-literal text and images to users.</p>
 <p><strong>User experience:</strong></p>
 <p>A suggested user experience would be: Non literal content could be rendered by the user agent slightly differently so that the user knows that this content should not be taken literally and that a literal explanation is available. The user can then mouse over the content and a tooltips would give the literal value.</p>
 <p>&nbsp;</p>
@@ -229,7 +229,7 @@ This attribute explains the element's role.
 User agents can render non-literal text in a different way so that users will know that this is non literal. They can then use a mouse over or other technique to receive the translation.
 </p></section>
 		<section>
-		  <h2>Note</h2>
+		 <h2>Note</h2>
 			<p>The following may not be necessary </p>
 			<ul>
 				<li>Views </li>
@@ -242,94 +242,94 @@ User agents can render non-literal text in a different way so that users will kn
 		</section>
 		<section>
 			<h2>Additional roles</h2>
-          <p>We may want to add roles for sections a a page such as:  contact us - for a contact us form  </p>
-          <p><strong>User experience: </strong>symbols and colors could be used consistently across different content.</p>
-          <p>Nav maps can be automatically generated for people learn via key-points or examples.</p>
-          <p> Further these sections could be hidden in the normal rendering of a page or rendered the top of page depending on user preferences. The location of these sections can also be changed, based on the user preference, enabling the user to find them easily.</p>
-          <p>Values:</p>
-          <p> </p>
-          <ul>
-            <li>summary</li>
-            <li>keypoints</li>
-            <li>example</li>
-            <li>note</li>
-            <li>warning</li>
-            <li>step</li>
-            <li>external - for external content, such as sponsored or advertising</li>
-            <li>offers - for special offers that are complementary to the main content or task</li>
-            <li>advertisement - advertisement or sponsored content</li>
-            <li>contactus</li>
-            <li>aboutus</li>
-          </ul>
-          <br>
-            <pre>&nbsp;</pre>
+     <p>We may want to add roles for sections a a page such as: contact us - for a contact us form  </p>
+     <p><strong>User experience: </strong>symbols and colors could be used consistently across different content.</p>
+     <p>Nav maps can be automatically generated for people learn via key-points or examples.</p>
+     <p> Further these sections could be hidden in the normal rendering of a page or rendered the top of page depending on user preferences. The location of these sections can also be changed, based on the user preference, enabling the user to find them easily.</p>
+     <p>Values:</p>
+     <p></p>
+     <ul>
+      <li>summary</li>
+      <li>keypoints</li>
+      <li>example</li>
+      <li>note</li>
+      <li>warning</li>
+      <li>step</li>
+      <li>external - for external content, such as sponsored or advertising</li>
+      <li>offers - for special offers that are complementary to the main content or task</li>
+      <li>advertisement - advertisement or sponsored content</li>
+      <li>contactus</li>
+      <li>aboutus</li>
+     </ul>
+     <br>
+      <pre>&nbsp;</pre>
 			<p>&nbsp;</p>
-</section>   
+</section>  
 <section>
 <h2><strong>Language type support </strong></h2>
 <p>&nbsp;</p>
 <p><strong>Proposed attributes</strong>: aria-hasAlt and aria-alttype.</p>
 <p>Sometimes you may want to provide a simplified version of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users.</p>
 <p><strong>aria-hasAlt</strong> would provide the id of an easier to read text as an alternative to more detailed or difficult to understand content. </p>
-<p><strong> aria-alttype</strong> supported  values:</p>
+<p><strong> aria-alttype</strong> supported values:</p>
 <ul type="disc">
-  <li>On text:  vocab500, vocab1000, vocab2000, active, literal, numberfree, smallsentences, chunks, General: lessoptions. Whitespace, largefont </li>
-  <li>Images: symbolic , realistic</li>
-  <li> p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt=&rdquo;&rdquo;, P2 are extra illustration that most people will not mind such as at the start of a paragraph or option.  p3 are for disability centric illustrations that can disturb other people and may be mid sentence. </li>
+ <li>On text: vocab500, vocab1000, vocab2000, active, literal, numberfree, smallsentences, chunks, General: lessoptions. Whitespace, largefont </li>
+ <li>Images: symbolic , realistic</li>
+ <li> p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt=&quot;&quot;, P2 are extra illustration that most people will not mind such as at the start of a paragraph or option. p3 are for disability centric illustrations that can disturb other people and may be mid sentence. </li>
 </ul>
 <br>
  
 <p>Example syntax in a web page</p>
 <p> Option 1</p>
-<p>&lt;span aria-hasAlt=&rdquo;uri1&rdquo; &gt; some convoluted obtuse text&lt;/span&gt;</p>
+<p>&lt;span aria-hasAlt=&quot;uri1&quot; &gt; some convoluted obtuse text&lt;/span&gt;</p>
 <p>Uri can be RDF by third party, or a hidden text elsewhere</p>
 <p>Such as:</p>
 <p>Example 1 </p>
-<p>&lt;span is=&rdquo;uri1&rdquo; aria-alttype=&rdquo;vocab500 active&rdquo;&gt; text that is hard to read&lt;/span&gt;  </p>
+<p>&lt;span is=&quot;uri1&quot; aria-alttype=&quot;vocab500 active&quot;&gt; text that is hard to read&lt;/span&gt; </p>
 <p>Example 2</p>
-<p> &lt;span is=&rdquo;uri2&rdquo; aria-alttype=&rdquo;vocab1000 active literal&rdquo;&gt;press the submit button when you are </p>
+<p> &lt;span is=&quot;uri2&quot; aria-alttype=&quot;vocab1000 active literal&quot;&gt;press the submit button when you are </p>
 <p>Example 3 - <u>Images in the content</u></p>
-<p>&lt;img aria-hasAlt=&rdquo;uri1&rdquo;  scr=&rdquo;img1.gif&rdquo; aria-alttype=&rdquo;iconic p1&rdquo;  /&gt;</p>
-<p>&lt;img id=&rdquo;uri1&rdquo;  scr=&rdquo;img2.gif&rdquo; aria-alttype=&rdquo;realistic p1&rdquo;  /&gt;</p>
-<p> </p>
+<p>&lt;img aria-hasAlt=&quot;uri1&quot; scr=&quot;img1.gif&quot; aria-alttype=&quot;iconic p1&quot; /&gt;</p>
+<p>&lt;img id=&quot;uri1&quot; scr=&quot;img2.gif&quot; aria-alttype=&quot;realistic p1&quot; /&gt;</p>
+<p></p>
 <p>&nbsp;</p>
 <p> <strong>Proposed attribute</strong>: aria-easylang </p>
-<p>aria-easylang will contain  a version of the content that is easier to read and understand. Note that this only works on small sections of text as the easylang attribute does not support full HTML, such as lists and sections.</p>
+<p>aria-easylang will contain a version of the content that is easier to read and understand. Note that this only works on small sections of text as the easylang attribute does not support full HTML, such as lists and sections.</p>
 <p><strong>Supported values:</strong> any text string</p>
-<p>&lt;span aria-easylang=&rdquo; some text that is easy to read&rdquo;&gt; some convoluted obtuse text&lt;/span&gt;</p>
+<p>&lt;span aria-easylang=&quot; some text that is easy to read&quot;&gt; some convoluted obtuse text&lt;/span&gt;</p>
 <p>Where aria-easylang should use as simple well-known words as possible, and active voicing, literal text, small simple sentences. Acronyms and abbreviations should be avoided, unless they are the common way to refer to an item.</p>
-<p> </p>
+<p></p>
 <p>&nbsp;</p></section><section>
 <h3><strong>More Help</strong></h3>
-<p><strong>Proposed attribute</strong>:  aria-moreinfo  and aria-extrahelp </p>
+<p><strong>Proposed attribute</strong>:  aria-moreinfo and aria-extrahelp</p>
 <p> aria-moreinfo - supported values: URL</p>
 <p>aria-extrahelp - supported values: tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
 <p><strong>example</strong></p>
-<p>&lt;button type="button" aria-moreinfo=&rdquo;uri2 uri3&rdquo; &gt;undo&lt;/button&gt;</p>
-<p>URI 2 may read  </p>
-<p> &lt;div id=&rdquo;uri2&rdquo; aria-extrahelp=&rdquo;morehelp&rdquo; aria-hidden=&rdquo;true&rdquo;&gt; pressing the undo button will erase all your work on this page. Use this button with care. If you press it by mistake, press control and y at the same time and your answers will come back. &lt;/div&gt; </p>
-<p>  </p>
-<p>&lt;a  href=&rdquo;functiongethelp()&rdquo; aria-extrahelp=&rdquo;humanhelp&rdquo; aria-hidden=&rdquo;true&rdquo;&gt;I want a person to help me&lt;/a&gt; </p>
-<p>&lt;div id=&rdquo;uri3&rdquo; aria-extrahelp=&rdquo;glossary&rdquo; aria-hidden=&rdquo;true&rdquo;&gt;</p></section><section>
+<p>&lt;button type="button" aria-moreinfo=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</p>
+<p>URI 2 may read: </p>
+<p> &lt;div id=&quot;uri2&quot; aria-extrahelp=&quot;morehelp&quot; aria-hidden=&quot;true&quot;&gt; pressing the undo button will erase all your work on this page. Use this button with care. If you press it by mistake, press control and y at the same time and your answers will come back. &lt;/div&gt;</p>
+<p> </p>
+<p>&lt;a href=&quot;functiongethelp()&quot; aria-extrahelp=&quot;humanhelp&quot; aria-hidden=&quot;true&quot;&gt;I want a person to help me&lt;/a&gt;</p>
+<p>&lt;div id=&quot;uri3&quot; aria-extrahelp=&quot;glossary&quot; aria-hidden=&quot;true&quot;&gt;</p></section><section>
 <h3><br>
-  <strong>Reminders</strong></h3>
+ <strong>Reminders</strong></h3>
 <p>Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users. This attribute enables different users to experience different amount of reminders based on personal preferences.</p>
-<p><strong>Proposed attribute</strong>:  aria-reminder</p>
+<p><strong>Proposed attribute</strong>: aria-reminder</p>
 <p>aria-reminder supported values are:</p>
-<p><strong>basic: </strong>reminders  that over 90% of users would want,</p>
-<p><strong>more: </strong>More  would be used by over 20% of the population,</p>
+<p><strong>basic: </strong>Reminders that over 90% of users would want,</p>
+<p><strong>more: </strong>More would be used by over 20% of the population.</p>
 <p><strong>extra: </strong>Extra would be used by over 5% of the population, and</p>
 <p><strong>maximum</strong>: Maximum would be helpful for 5% of the population or less.</p>
 <p>Example</p>
-<p>&lt;div role=&rdquo;alert&rdquo;  aria-reminder=&rdquo;basic&rdquo;&gt; It is your daughter&rsquo;s birthday&lt;/div&gt; </p>
+<p>&lt;div role=&quot;alert&quot; aria-reminder=&quot;basic&quot;&gt; It is your daughter&rsquo;s birthday&lt;/div&gt;</p>
 </section><section>
 <h3><strong>Distraction</strong>s</h3>
 <p><strong>Proposed attribute</strong>: <strong> aria-distraction</strong></p>
 <p>This attribute should be used on non essential, detracting content, so that people who have problems keeping focus can turn them off. An example user experiences would be to hide all distraction content.</p>
-<p>Example: Aria-distraction=&rdquo;blinking, ad&rdquo; </p>
+<p>Example: Aria-distraction=&quot;blinking, ad&quot;</p>
 <p>Supported values: animations, auto-starting, changing, blinking, ad</p>
-<p>&nbsp;</p>
+
 </section>
-<p> </p>
+
 </body>
 </html>
