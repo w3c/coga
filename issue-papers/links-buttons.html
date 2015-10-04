@@ -20,8 +20,19 @@
 		<p>Additionally, many users need LESS buttons and options. Therefore being able to cut the amount of buttons, features and links will be extremely useful. </p>
 		<p>For this we need standardized terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute and personal preferences. </p>
 		<p>For example, if an author makes it programanticaly known that a button is used to "send" an email, then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
+		<p>Working examples of how this could be used in practice with user preferences are available at https://github.com/ayelet-seeman/coga.personalisation . </p>
+		<p>This is a project to help personalization for any use - including   people with learning and memory issues. It is described more at: <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization</a></p>
+        <p>It is made of 4 parts:</p>
+    <ol>
+          <li>Json files for user setting: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script">https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script</a></li>
+      <li>Aria proposal for new syntax: <a href="https://github.com/w3c/coga/blob/master/issue-papers/links-buttons.html">(This document)</a> <br>
+        </li>
+          <li>An HTML page that uses some of the new aria syntax: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/">https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/</a></li>
+          <li>Scripts that a web author can use or include that read the user   settings in the JSON files and adapt the page for  the user needs: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options">https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options</a></li>
+        </ol>
+		<p>This is only one example way to use the semantics. Others may follow. It is also worth noting that the GPII project is working on making user preferences portable which would also enhance this work.</p>
 		<p>In another use-case we would like to see interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. I was thinking that if we made an open set of symbol codes for these symbol sets, then they can be interoperable. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
-		<p>We therefor suggest the following syntax: </p><section>
+		<p>We therefor suggest the following: </p><section>
 			<h2>Importance</h2>
 			<p>Requirement: We request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective. So critical features are used by 90% of users 90% of the time (or above). High would be above 60% use. Medium features would be 20% of users use it 20% of the time . Under 20% usage would be low.</p>
 			<p>User experience: </p>
