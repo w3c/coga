@@ -21,7 +21,7 @@
 		<p>For this we need standardized terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use via an aria attribute and personal preferences. </p>
 		<p>For example, if an author makes it programanticaly known that a button is used to "send" an email, then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
 		<p>Working examples of how this could be used in practice with user preferences are available at https://github.com/ayelet-seeman/coga.personalisation . </p>
-		<p>This is a project to help personalization for any use - including   people with learning and memory issues. It is described more at: <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization</a></p>
+		<p>This is a project to help personalization for any use - including   people with learning and memory issues. It is described more at: <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization</a>. </p>
         <p>It is made of 4 parts:</p>
     <ol>
           <li>Json files for user setting: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script">https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script</a></li>
@@ -35,7 +35,7 @@
 		<p>We therefor suggest the following: </p><section>
 			<h2>Importance</h2>
 			<p>Requirement: We request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective. So critical features are used by 90% of users 90% of the time (or above). High would be above 60% use. Medium features would be 20% of users use it 20% of the time . Under 20% usage would be low.</p>
-			<p>User experience: </p>
+			<p>User experience: Based on personalization setting the user can see less options. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
 			<p>Proposed attribute: Add new attribute called aria-importance This could be an ARIA attribute with the following settings:1 (main task such as send for an email </p>
 			<ul>
 				<li> aria-importance= "critical" this content is essential for the key function of the page (Example: The send button for an email draft) </li>
@@ -103,7 +103,7 @@
      <p><strong>Proposed attribute:</strong>Aria-destination</p>
      <p>Aria-destination, give the context of a link. It should be used on a link element or element with role of link.</p>
      <p>For example: &lt;a href=&quot;home.html&quot; Aria-destination=&quot;home&quot; &gt;our main page&lt;/a&gt;</p>
-     <p>The user experience may be simply replacing the text for the term &quot;home&quot; and adding an icon.</p>
+     <p>The user experience may be simply replacing the text for the term &quot;home&quot; and adding an icon.  Based on personalization setting the user can see diffrent icons. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
      <p>It may also position this button to a location on the screen where the user is expecting the home page link.</p>
      <p><strong>Supported Values: </strong></p>
      <p>The following could be supported values of Aria-destination.		  </p>
