@@ -39,7 +39,7 @@ We need personalization  because:&nbsp; </p>
           <li>Scripts that a web author can use or include that read the user   settings in the JSON files and adapt the page for  the user needs: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options">https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options</a></li>
         </ol>
 		<p>This is only one example way to use the semantics. Others may follow. It is also worth noting that the GPII project is working on making user preferences portable which would also enhance this work.</p>
-		<p>In another use-case we would like to see interoperable symbol set codes for non-verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write and are not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. An open set of references for symbol codes for these symbol sets however, could be interoperable. That means the end use could use  an open source symbol set or buy the symbols and use them across different devices or applications. Symbols could still be proprietary but they would also be interoperable. </p>
+		<p>In another use-case we would like to see interoperable symbol set codes for non-verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write and are not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. An open set of references for symbol codes for these symbol sets however, could be interoperable. That means the end user could use  an open source symbol set or buy the symbols and use them across different devices or applications. Symbols could still be proprietary but they would also be interoperable. </p>
 		<h3>Contextual  personalization </h3>
     <p>One important factor in optimizing the personalization of a product or  service is to ensure that the personalization is appropriate for the current  context of use. For example, settings that will suit the user of a mobile phone  in their office or home will not be well suited to that user when they are  driving a car. In their home or office a typical user would probably prefer to  send and receive text messages using the keyboard and screen of the mobile  phone. However, in the car, voice input and text to speech output would be the  most appropriate. In this car context, the profile settings of a typical user  might be very similar to those that a blind user would use in all contexts.</p>
         <p>&nbsp;</p><section>
@@ -134,7 +134,7 @@ We need personalization  because:&nbsp; </p>
 		 <li>sign up </li>
 		 <li>product </li>
 		 <li>services </li>
-		 <li>social (provide label - such as facebook twitter) </li>
+		 <li>social (provide label ) </li>
 		 <li>post </li>
 		 <li>contactus </li>
 		 <li>Help </li>
@@ -233,8 +233,8 @@ We need personalization  because:&nbsp; </p>
 			<p>Requirement: Some users need additional help. we request an attribute where the author can provide additional information.or what just happened.</p>
 			<h3>Proposed attribute:</h3>
 			<h4><strong>aria-feedback</strong> </h4>
- This attribute provides immediate feedback that can be shown or spoken
-			<p> User experience: This be rendered as text or read immediately. Most users will not want this text rendered or spoken. Other users however will need it to know what has just happened. </p>
+ This attribute provides immediate feedback that can be shown or spoken when any event is triggered on a control. 
+			<p> User experience: This can be rendered as text at the top of the page and read immediately. Most users will not want this text rendered and spoken. Other users however will need it to know what has just happened. </p>
 			<h4><strong>aria-explain</strong> </h4>
 This attribute explains the element's role.
 			<p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
@@ -335,7 +335,7 @@ This attribute explains the element's role.
 <h3><strong>Distraction</strong>s</h3>
 <p><strong>Proposed attribute</strong>: <strong> aria-distraction</strong></p>
 <p>This attribute should be used on non essential, detracting content, so that people who have problems keeping focus can turn them off. An example user experiences would be to hide all distraction content.</p>
-<p>Example: Aria-distraction=&quot;blinking, ad&quot;</p>
+<p>Example: Aria-distraction=&quot;blinking ad&quot;</p>
 <p>Supported values: animations, auto-starting, changing, blinking, ad, message, chat</p>
 
 </section>
