@@ -43,17 +43,37 @@ We need personalization  because:&nbsp; </p>
 		<h3>Contextual  personalization </h3>
     <p>One important factor in optimizing the personalization of a product or  service is to ensure that the personalization is appropriate for the current  context of use. For example, settings that will suit the user of a mobile phone  in their office or home will not be well suited to that user when they are  driving a car. In their home or office a typical user would probably prefer to  send and receive text messages using the keyboard and screen of the mobile  phone. However, in the car, voice input and text to speech output would be the  most appropriate. In this car context, the profile settings of a typical user  might be very similar to those that a blind user would use in all contexts.</p>
         <p>&nbsp;</p><section>
-			<h2>Importance</h2>
-			<p>Requirement: We request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective. So critical features are used by 90% of users 90% of the time (or above). High would be above 60% use. Medium features would be 20% of users use it 20% of the time . Under 20% usage would be low.</p>
+			<h2>Simplification </h2>
+			<p>Requirement: We request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective. Typicaly, critical features may be used by many or most users, 90% of the time or more. High would be above 60% use. Medium features would be 20% of users use it 20% of the time . Under 20% usage would be low.</p>
 			<p>User experience: Based on personalization setting the user can see less options. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
-			<p>Proposed attribute: Add new attribute called aria-importance This could be an ARIA attribute with the following settings:1 (main task such as send for an email </p>
+			<p>Proposed attribute: Add new attribute called aria-simplification (Note, this was called aria-importance) This could be an ARIA attribute with the following settings:1 (main task such as send for an email </p>
 			<ul>
-				<li> aria-importance= "critical" this content is essential for the key function of the page (Example: The send button for an email draft) </li>
-				<li> aria-importance= "high" this content is used frequent but still high(Example: The delete button for an email draft) </li>
-				<li> aria-importance= "med" typically not used (Example: The save and settings buttons for an email draft) </li>
-				<li> aria-importance= "low" rarely used or used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
+				<li>				   aria-simplification= &quot;simplest&quot;. This  setting should be used on:				  
+				  <ul>
+				    <li> Elements that are essential for the key  function (from the user perspective) of the page (Example: The send button for  an email draft) or</li>
+				    <li>				    Elements  that are sometimes critical to a user being able to use the site, such as  &quot;save my work&quot; or &quot;emergency instructions&quot; or</li>
+				    <li>				      Elements  that are used by over 90% of a user group (such as parents or teachers) use  this element most times they use the content<br>
+			        </li>
+			      </ul>
+				</li>
 			</ul>
-		</section>
+			<blockquote>
+			  <p>Typically  3 links or buttons would be considered &quot;simplest&quot;</p>
+		  </blockquote>
+			<ul>
+			  <li> aria-simplification= &quot;high&quot;. This  setting should be used on:
+                <ul>
+                  <li> Elements that are used frequent  (Example: The delete button for an email draft)  or</li>
+                  <li> Elements  that are sometimes important to a user being able to use the site, such as  settings or</li>
+                  <li> Elements  that are used by frequently (over 60%) by a user group (such as parents or teachers) use  this element most times they use the content</li>
+                </ul>
+			  </li>
+			  <li> aria-simplification= "med". This  setting should be used on elements that are not typically used.</li>
+			  <li> aria-simplification= "low". This  setting should be used on elements that are rarely used or only used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
+		  </ul>
+			<pre>Note that these semantics aid simplification. But what content is most useful to a user varies from user to user. For example, men may be more interested in mens clothing, and may not be interested in the more frequently use womens clothing option. For that reason we may add context for elements that will help the personalization agent select the most useful content for a given user. This is also necessary for reminders (see bellow). RDFa may be the best way forward for this aspect.</pre>
+		  <pre> It is worth mentioning that a lot of this information is known for personalization of advertisements and content optimization. </pre>
+        </section>
 		
 		<section>
 		 <h2>Adding Context </h2>
@@ -137,8 +157,8 @@ We need personalization  because:&nbsp; </p>
 		 <li>social (provide label ) </li>
 		 <li>post </li>
 		 <li>contactus </li>
-		 <li>Help </li>
-		 <li>Chat help </li>
+		 <li>help </li>
+		 <li>chat help </li>
 	   </ul>
 		</section>
 		
@@ -222,10 +242,10 @@ We need personalization  because:&nbsp; </p>
 <p><strong>User experience:</strong></p>
 <p>A suggested user experience would be: Non literal content could be rendered by the user agent slightly differently so that the user knows that this content should not be taken literally and that a literal explanation is available. The user can then mouse over the content and a tooltips would give the literal value.</p>
 <p><strong>Proposed attribute:</strong></p>
-<p>aria-nonliteral </p>
+<p>aria-literal </p>
 <p>Value= string</p>
 <p><strong>Examples:</strong></p>
-<p>&lt;span aria-nonliteral=&quot;it is raining hard&quot;&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;</p>
+<p>&lt;span aria-literal=&quot;it is raining hard&quot;&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;</p>
 <p> User agents can render non-literal text in a different way so that users will know that this is non literal. They can then use a mouse over or other technique to receive the translation.
 </p></section>
 <section>
@@ -292,29 +312,24 @@ This attribute explains the element's role.
 </section>  
 <section>
 <h2><strong>Language type support </strong></h2>
-<p><strong>Proposed attributes</strong>: aria-hasAlt and aria-alttype.</p>
-<p>Sometimes you may want to provide a simplified version of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users.</p>
-<p><strong>aria-hasAlt</strong> would provide the id of an easier to read text as an alternative to more detailed or difficult to understand content. </p>
-<p><strong> aria-alttype</strong> supported values:</p>
+<p><strong>Proposed attributes</strong>: aria-alternative</p>
+<p>Sometimes you may want to provide a simplified version of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users. These alternative versions may not be identical in content but maintain the gist of the original content.</p>
+<p><strong>aria-alternative </strong>would be used on an alternitive content as an alternative to more detailed or difficult to understand content. aria-alternative can be used on a span, div, link or image that servers as alternitive content to it's direct parent element.</p>
+<p><strong>aria-alternative</strong> supported values:</p>
 <ul type="disc">
- <li>On text: vocab500, vocab1000, vocab2000, active, literal, numberfree, smallsentences, chunks, General: lessoptions. Whitespace, largefont </li>
+ <li>On text: easylang, explain, more, vocab500, vocab1000, vocab2000, active, literal, numberfree, smallsentences, chunks, General: lessoptions. Whitespace, largefont </li>
  <li>Images: symbolic , realistic</li>
  <li> p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt=&quot;&quot;, P2 are extra illustration that most people will not mind such as at the start of a paragraph or option. p3 are for disability centric illustrations that can disturb other people and may be mid sentence. </li>
 </ul>
 
- <strong>Examples </strong>
-<p> Option 1</p>
-<p>&lt;span aria-hasAlt=&quot;uri1&quot; &gt; some convoluted obtuse text&lt;/span&gt;</p>
-<p>Uri can be RDF by third party, or a hidden text elsewhere</p>
-<p>Such as:</p>
-<p>Example 1 </p>
-<p>&lt;span is=&quot;uri1&quot; aria-alttype=&quot;vocab500 active&quot;&gt; text that is hard to read&lt;/span&gt; </p>
-<p>Example 2</p>
-<p> &lt;span is=&quot;uri2&quot; aria-alttype=&quot;vocab1000 active literal&quot;&gt;press the submit button when you are </p>
-<p>Example 3 - <u>Images in the content</u></p>
-<p>&lt;img aria-hasAlt=&quot;uri1&quot; scr=&quot;img1.gif&quot; aria-alttype=&quot;iconic p1&quot; /&gt;</p>
-<p>&lt;img id=&quot;uri1&quot; scr=&quot;img2.gif&quot; aria-alttype=&quot;realistic p1&quot; /&gt;</p>
-<p> <strong>Proposed attribute</strong>: aria-easylang </p>
+ <strong>Example</strong> 
+<div><em>&lt;div&gt;</em></div>
+<div><em>&lt;span  </em><em> aria-</em><em>alternative</em><em>="easylang numberfree vocab1000"  class="hidden"&gt;</em><em>most people prefer simple text</em><em>&lt;/span&gt;</em></div>
+<div><em>In studies it was found that only 30% of users prefer long convoluted text with obtuse words and lots of numbers, with 56% claiming there preferred the simplified text , with the remainder unsure or stated it depends on the context </em></div>
+<div><em><br>
+</em></div>
+<div><em>&lt;/div&gt;</em></div>
+</section><section><p> <strong>Proposed attribute</strong>: aria-easylang </p>
 <p>aria-easylang will contain a version of the content that is easier to read and understand. Note that this only works on small sections of text as the easylang attribute does not support full HTML, such as lists and sections.</p>
 <p><strong>Supported values:</strong> any text string</p>
 <p>&lt;span aria-easylang=&quot; some text that is easy to read&quot;&gt; some convoluted obtuse text&lt;/span&gt;</p>
