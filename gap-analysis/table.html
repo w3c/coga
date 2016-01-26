@@ -130,7 +130,7 @@ Table 1: Authentication </h2>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
 </tr></tbody></table>
-    <h2>Table 3: Entering data</h2>
+    <h2>Table 3: Entering data, error prevention &amp; recovery </h2>
     <p>About the user: </p>
     <p>This lead to following user stories:</p>
 <table border="1" cellpadding="5" cellspacing="5" width="200">
@@ -233,8 +233,7 @@ Table 1: Authentication </h2>
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <th scope="row"><h4 resource="#provide-speech-support" id="provide-speech-support"><span property="xhv:role" resource="xhv:heading"> I need   speech support</span></h4> 
-        with synchronized highlighting so I can follow as I go</th>
+      <th scope="row"><h4 resource="#provide-speech-support" id="provide-speech-support"><span property="xhv:role" resource="xhv:heading"> I need   speech support</span> with synchronized highlighting so I can follow as I go</h4></th>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
@@ -258,197 +257,11 @@ Table 1: Authentication </h2>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
-<p> </p>
-</tr></table>
-<h3>Table 5: Familiar interface</h3>
-<p>About the user: Many people can not learn easily new design metaphors or remember things that they learned (such as people with MCI or   dementia. Without these skills it can be much harder or impossible to: </p>
-<ul>
-  <li>locate a desired items to interact with and </li>
-  <li> know what interaction may do</li>
-</ul>
-<p>Using a familiar design, terms and symbols is key to being able to use   the web for people who can not remember new symbols (such as some people   with memory related impairments like dementia).Therefore the user needs things to be familiar including</p>
-<ul>
-  <li>location of elements</li>
-  <li>symbols </li>
-  <li>text used</li>
-  <li>how to get help</li>
-</ul>
-<p> However what is   familiar for one user may be new for another. So the interface needs to be familiar to the individual user</p>
-<p>This lead to following user stories:</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>Discussions</p>
-<ul>
-  <li> User Preferences <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/preferences.html">https://rawgit.com/w3c/coga/master/issue-papers/preferences.html</a></li>
-  <li> Adaptable Links and Buttons <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></li>
-  <li> Symbols for Non-Verbal <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html">https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html</a></li>
-  <li> Personalization <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/personalization.html">https://rawgit.com/w3c/coga/master/issue-papers/personalization.html</a></li>
-  <li> Providing graded help <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Providing_graded_help">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Providing_graded_help</a></li>
-  <li> Interoperable preference <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Interoperable_preference">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Interoperable_preference</a></li>
-  <li> (meta data support - to be added <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support</a>) </li>
-</ul>
-<table  border="1" class = "summary">
-  <tbody>
-    <tr>
-      <th scope="col">User Needs</th>
-      <th scope="col">Content and HTML</th>
-      <th scope="col">WCAG</th>
-      <th scope="col">New Semantics</th>
-      <th scope="col">Personalization</th>
-      <th scope="col">Operating System/Other</th>
-      <th scope="col">Discussions</th>
-    </tr>
-    <tr>
-      <th scope="row">I need to symbols  that I understand.</th>
-      <td><p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
-      <p>For example an open-source script could be included that would read user settings and import the correct symbol</p>
-      <p>such as used at http://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html</p></td>
-      <td> The current proposal is to add a success criteria as follows: 
-        <h4><span id="Use_semantics_and_standardized_techniques_and_that_enable_the_content_to_be_adapted_to_the_user_scenario_and_enable_additional_support">Use   semantics and standardized techniques and that enable the content to be   adapted to the user scenario and enable additional support</span></h4>
-      <p>see https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG</p>
-      <p>Techniques would   and using the correct semantics and importing a script that adapts the page</p></td>
-      <td><p>In adding a semantic for  the context (what the thing is for) such as </p>
-      <p>coga-action="undo" </p>
-      <p>or </p>
-      <p>coga-destination="home"</p>
-      <p>and additional landmarks or region such as </p>
-      <p>role=&quot;warning&quot; </p></td>
-      <td><p>User setting will need to address how to handle different contexts such as coga-action="undo" , for example, which symbol to load for this setting. </p>
-      <p>A mechanism is needed to read the user setting and adapt the page. open source script is available/ being worked on at http://rawgit.com/ayelet-seeman/coga.personalisation/</p></td>
-      <td><p>taxonomy will be needed of support end values</p>
-        <p>Taxonomy is needed for use preferences</p>
-      <p>GPII and ETSI and other standards will need to allow these preferences to be portable.</p></td>
-      <td><p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability</a></p>
-        <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></p>
-        <p> </p></td>
-    </tr>
-    <tr>
-      <th scope="row">I need to  know the menu terms so that I know where to find things</th>
-      <td><p>The author can use simple and well understood terms.</p>
-        <p>OR </p>
-        <p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
+      <td><p>&nbsp;</p>
       <p>&nbsp;</p></td>
-      <td>&nbsp;</td>
-      <td>To be filled in</td>
-      <td>To be filled in</td>
-      <td>To be filled in</td>
-      <td>To be filled in</td>
     </tr>
     <tr>
-      <th class="summary" scope="row">I know what are the controls and how they function - without learning</th>
-      <td class="summary"> 
-      <p>clear affordances </p>
-      <p>Or use of the proper roles with adaptions according to standardized user preference</p></td>
-      <td class="summary"><p>New SC required</p>
-        <strong>Interactive controls are visually clear or visually clear controls are easily available</strong>
-        <p>https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Interactive_controls_are_visually_clear_or_visually_clear_controls_are_easily_available:</p></td>
-      <td class="summary"> new semantics are not needed but use of roles or native html are needed if presentational are used to meet this user need</td>
-      <td class="summary"> 
-        <p>Json easy personalization needs to allow for clear affordances- either setting individual styles for links buttons and other controls Or a universal setting for clear affordances</p></td>
-      <td class="summary"> clear affordances and settings in the need to be read and interpreted either as at a website, or by the platform. If the platform is not supporting this option then the author needs to supply the option of clear affordances either in the content or as an automatic (reading the JSON for example) or easy to use setting.</td>
-      <td><p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html</a></p>
-        <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability</a></p>
-        <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></p></td>
-    </tr>
-    <tr>
-      <th scope="row">I am familiar with the UI and I know how to work it</th>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-      <td>&nbsp;</td>
-      <td> </td>
-      <td><p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability</a></p>
-        <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></p>
-        <p> </p></td>
-    </tr>
-    <tr>
-      <th scope="row"><p>The content delivered in an easy-to-understand mode </p>
-        <p>&nbsp;</p></th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">Simple content with few options and text</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row"> customizable WOT interfaces (navigation, controls, features, text, help)</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">   consistent, easy-to-use, online payment systems</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">preferences can be set</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">preferences are set for my current needs and context</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">setting preferences for online interactions is fast easy or not noticed</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">   links and buttons that are context sensitive and localized</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">     deployment of familiar symbol sets</th>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-      <td>&nbsp;</td>
-    </tr>
-    <tr>
-      <th scope="row">  capability to personalize websites (content, features, elements)</th>
+      <th scope="row">I do not want too many reminders as they I will be distracted </th>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
@@ -467,18 +280,15 @@ Table 1: Authentication </h2>
     </tr>
   </tbody>
 </table>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<h3>Table 6: Clear  interface</h3>
-<p>About the user: Many people can not learn easily new design metaphors (most coga   groups) or remember things that they learned (such as people with MCI or   dementia. Without these skills it can be much harder or impossible to: </p>
+<p> </p>
+<h3>Table 6: Simple and clear interface
+</h3>
+<p>About the user: Many people can not learn easily new design metaphors or remember things that they learned (such as people with MCI or   dementia. Without these skills it can be much harder or impossible to: </p>
 <ul>
-  <li> locate a desired items to interact with and </li>
-  <li> know what interaction may do </li>
+  <li>locate a desired items to interact with and </li>
+  <li> know what interaction may do</li>
 </ul>
 <p>This lead to following user stories:</p>
-<p>1.As a user who has trouble learning I want to know strate away  what are the controls and how they function - without learning</p>
-<p>2. As a user who has memory impairments and often forget what i learn I want to know strate away  what are the controls and how they function - without learning</p>
-<p>&nbsp;</p>
 <table  border="1" class = "summary">
   <tbody>
     <tr>
@@ -491,26 +301,87 @@ Table 1: Authentication </h2>
       <th scope="col">Discussions</th>
     </tr>
     <tr>
-      <th scope="row">To know what are the controls and how they function - without learning</th>
-      <td> clear affordances </td>
-      <td><p>New SC required</p>
+      <th scope="row">I need  symbols  that I understand strait away.</th>
+      <td><p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
+        <p>For example an open-source script could be included that would read user settings and import the correct symbol</p>
+        <p>such as used at http://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html</p></td>
+      <td> The current proposal is to add a success criteria as follows:
+        <h4><span id="Use_semantics_and_standardized_techniques_and_that_enable_the_content_to_be_adapted_to_the_user_scenario_and_enable_additional_support2">Use   semantics and standardized techniques and that enable the content to be   adapted to the user scenario and enable additional support</span></h4>
+        <p>see https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG</p>
+        <p>Techniques would   and using the correct semantics and importing a script that adapts the page</p></td>
+      <td><p>In adding a semantic for  the context (what the thing is for) such as </p>
+        <p>coga-action="undo" </p>
+        <p>or </p>
+        <p>coga-destination="home"</p>
+        <p>and additional landmarks or region such as </p>
+        <p>role=&quot;warning&quot; </p></td>
+      <td><p>User setting will need to address how to handle different contexts such as coga-action="undo" , for example, which symbol to load for this setting. </p>
+        <p>A mechanism is needed to read the user setting and adapt the page. open source script is available/ being worked on at http://rawgit.com/ayelet-seeman/coga.personalisation/</p></td>
+      <td><p>taxonomy will be needed of support end values</p>
+        <p>Taxonomy is needed for use preferences</p>
+        <p>GPII and ETSI and other standards will need to allow these preferences to be portable.</p></td>
+      <td><p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability</a></p>
+        <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></p>
+        <p> </p></td>
+    </tr>
+    <tr>
+      <th scope="row">I need to  understand the menu terms so that I know where to find things</th>
+      <td><p>The author can use simple and well understood terms.</p>
+        <p>OR </p>
+        <p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
+        <p>&nbsp;</p></td>
+      <td>&nbsp;</td>
+      <td>To be filled in</td>
+      <td>To be filled in</td>
+      <td>To be filled in</td>
+      <td>To be filled in</td>
+    </tr>
+    <tr>
+      <th class="summary" scope="row">I can find the controls that I need</th>
+      <td class="summary"><p>Do not rely on people rembering the scroll</p>
+        <p>&nbsp;</p></td>
+      <td class="summary">&nbsp;</td>
+      <td class="summary">&nbsp;</td>
+      <td class="summary">&nbsp;</td>
+      <td class="summary">&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th class="summary" scope="row"><p>I know what are  controls </p>
+        <p>&nbsp;</p></th>
+      <td class="summary"><p>Use of clear affordances </p>
+        <p>Or use of the proper roles with adaptions according to standardized user preference</p></td>
+      <td class="summary"><p>New SC required</p>
         <strong>Interactive controls are visually clear or visually clear controls are easily available</strong>
         <p>https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Interactive_controls_are_visually_clear_or_visually_clear_controls_are_easily_available:</p></td>
-      <td> new semantics are not needed but use of roles or native html are needed if presentational are used to meet this user need</td>
-      <td> 
+      <td class="summary"> new semantics are not needed but use of roles or native html are needed if presentational are used to meet this user need</td>
+      <td class="summary"> 
         <p>Json easy personalization needs to allow for clear affordances- either setting individual styles for links buttons and other controls Or a universal setting for clear affordances</p></td>
-      <td> clear affordances and settings in the need to be read and interpreted either as at a website, or by the platform. If the platform is not supporting this option then the author needs to supply the option of clear affordances either in the content or as an automatic (reading the JSON for example) or easy to use setting.</td>
+      <td class="summary"> clear affordances and settings in the need to be read and interpreted either as at a website, or by the platform. If the platform is not supporting this option then the author needs to supply the option of clear affordances either in the content or as an automatic (reading the JSON for example) or easy to use setting.</td>
       <td><p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html</a></p>
         <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability</a></p>
         <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></p></td>
     </tr>
-  
     <tr>
-      <th scope="row">Familiar UI that I know how to work</th>
-      <td colspan="5">    Discussed in table 1 above</td>
+      <th scope="row">I am familiar with the UI and I know how to work it and what will happen when I work it</th>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>&nbsp;</td>
+      <td> </td>
       <td><p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability</a></p>
         <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></p>
         <p> </p></td>
+    </tr>
+    <tr>
+      <th scope="row"><p>The content delivered in an easy-to-understand mode </p>
+        <p>&nbsp;</p></th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
     </tr>
     <tr>
       <th scope="row">Simple content with few options and text</th>
@@ -603,7 +474,7 @@ Table 1: Authentication </h2>
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <th scope="row">I am confident that I can manage my task</th>
+      <th height="135" scope="row">&nbsp;</th>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
@@ -611,9 +482,186 @@ Table 1: Authentication </h2>
       <td>&nbsp;</td>
       <td>&nbsp;</td>
     </tr>
-  </tbody></table>
-    
-
+  </tbody>
+</table>
+<h3>&nbsp;</h3>
+<h3>Table 7: Familiar  interface</h3>
+<p>About the user: Many people can not learn easily new design metaphors or remember things that they learned (such as people with MCI or   dementia. Without these skills it can be much harder or impossible to: </p>
+<ul>
+  <li>locate a desired items to interact with and </li>
+  <li> know what interaction may do</li>
+</ul>
+<p>Using a familiar design, terms and symbols is key to being able to use   the web for people who can not remember new symbols (such as some people   with memory related impairments like dementia).Therefore the user needs things to be familiar including</p>
+<ul>
+  <li>location of elements</li>
+  <li>symbols </li>
+  <li>text used</li>
+  <li>how to get help</li>
+</ul>
+<p> However what is   familiar for one user may be new for another. So the interface needs to be familiar to the individual user</p>
+<p>This lead to following user stories:</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>Discussions</p>
+<ul>
+  <li> User Preferences <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/preferences.html">https://rawgit.com/w3c/coga/master/issue-papers/preferences.html</a></li>
+  <li> Adaptable Links and Buttons <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></li>
+  <li> Symbols for Non-Verbal <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html">https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html</a></li>
+  <li> Personalization <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/personalization.html">https://rawgit.com/w3c/coga/master/issue-papers/personalization.html</a></li>
+  <li> Providing graded help <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Providing_graded_help">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Providing_graded_help</a></li>
+  <li> Interoperable preference <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Interoperable_preference">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Interoperable_preference</a></li>
+  <li> (meta data support - to be added <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support</a>) </li>
+</ul>
+<table  border="1" class = "summary">
+  <tbody>
+    <tr>
+      <th scope="col">User Needs</th>
+      <th scope="col">Content and HTML</th>
+      <th scope="col">WCAG</th>
+      <th scope="col">New Semantics</th>
+      <th scope="col">Personalization</th>
+      <th scope="col">Operating System/Other</th>
+      <th scope="col">Discussions</th>
+    </tr>
+    <tr>
+      <th scope="row">I need  symbols  that are familur.</th>
+      <td><p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
+      <p>For example an open-source script could be included that would read user settings and import the correct symbol</p>
+      <p>such as used at http://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html</p></td>
+      <td> The current proposal is to add a success criteria as follows: 
+        <h4><span id="Use_semantics_and_standardized_techniques_and_that_enable_the_content_to_be_adapted_to_the_user_scenario_and_enable_additional_support">Use   semantics and standardized techniques and that enable the content to be   adapted to the user scenario and enable additional support</span></h4>
+      <p>see https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG</p>
+      <p>Techniques would   and using the correct semantics and importing a script that adapts the page</p></td>
+      <td><p>In adding a semantic for  the context (what the thing is for) such as </p>
+      <p>coga-action="undo" </p>
+      <p>or </p>
+      <p>coga-destination="home"</p>
+      <p>and additional landmarks or region such as </p>
+      <p>role=&quot;warning&quot; </p></td>
+      <td><p>User setting will need to address how to handle different contexts such as coga-action="undo" , for example, which symbol to load for this setting. </p>
+      <p>A mechanism is needed to read the user setting and adapt the page. open source script is available/ being worked on at http://rawgit.com/ayelet-seeman/coga.personalisation/</p></td>
+      <td><p>taxonomy will be needed of support end values</p>
+        <p>Taxonomy is needed for use preferences</p>
+      <p>GPII and ETSI and other standards will need to allow these preferences to be portable.</p></td>
+      <td><p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability</a></p>
+        <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></p>
+        <p> </p></td>
+    </tr>
+    <tr>
+      <th scope="row">I am familiar with the UI and I know how to work it and what will happen when I work it</th>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td>&nbsp;</td>
+      <td> </td>
+      <td><p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability" target="_blank">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Enable_adaptability</a></p>
+        <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html" target="_blank">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></p>
+        <p> </p></td>
+    </tr>
+    <tr>
+      <th scope="row"><p>The content delivered in an easy-to-understand mode </p>
+        <p>&nbsp;</p></th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">Simple content with few options and text</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row"> customizable WOT interfaces (navigation, controls, features, text, help)</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">   consistent, easy-to-use, online payment systems on diffrent sites</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">preferences can be set</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">preferences are set for my current needs and context</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">setting preferences for online interactions is fast easy or not noticed</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">   links and buttons that are context sensitive and localized</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">     deployment of familiar symbol sets</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">  capability to personalize websites (content, features, elements)</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <th scope="row">&nbsp;</th>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 <h3>Table 7: Clear and understandable text</h3>
 <p>About the user: </p>
 <p>This leads to following user stories:</p>
