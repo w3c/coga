@@ -10,6 +10,10 @@
 	font-weight:    bold;
 
 }
+section {
+	border: thin solid black;
+	padding: .5em;
+}
 </style>
 	
 		<title>Cognitive Accessibility Roadmap and Gap Analysis </title>
@@ -111,7 +115,6 @@
 		localBiblio: biblio,
 	};
 		</script>
-        <link href="https://www.w3.org/StyleSheets/TR/W3C-ED" rel="stylesheet">
 	</head>
 	<body>
     <h1>Roadmap and Gap Analysis for  The Cognitive and Learning  Disabilities Accessibility Task Force</h1>
@@ -127,14 +130,14 @@
 		<section id="toc"></section>
 		<section class="informative" id="introduction">
 			<h2>Introduction</h2>
-			<p>The Cognitive and Learning  Disabilities Accessibility Task Force&rsquo;s aim is to improve web accessibility for  people with cognitive and learning disabilities. This is being done as part of  the Web Content Accessibility Guidelines (WCAG) and Accessible Platform  Architecture Working Group (APA WG), part of the Web Accessibility Initiative  (WAI) of the W3C.&nbsp; Challenges facing this work include: </p>
+			<p>The Cognitive and Learning  Disabilities Accessibility Task Force’s aim is to improve web accessibility for  people with cognitive and learning disabilities. This is being done as part of  the Web Content Accessibility Guidelines (WCAG) and Accessible Platform  Architecture Working Group (APA WG), part of the Web Accessibility Initiative  (WAI) of the W3C. Challenges facing this work include: </p>
             <ul type="disc">
-              <li>Lack of       availability of open research: Research on this topic tends to be behind a       &ldquo;paywall&rdquo; which means that developers and policy makers may be unable find       out what techniques are proven to work to address the needs of people with       disabilities</li>
+              <li>Lack of       availability of open research: Research on this topic tends to be behind a       “paywall” which means that developers and policy makers may be unable find       out what techniques are proven to work to address the needs of people with       disabilities</li>
               <li>There       is a wide range of cognitive disabilities; each type of impairment is       different, with diverse symptoms and particular digital accessibility requirements.       This adds to the complexity of knowing how to address user needs.</li>
               <li>The advice       given in the research and available guidance is often vague and is not testable.       So, even if developers read the research they would not know exactly what       to do or when they have reached an acceptable level of accessibility.</li>
               <li>Some of       the issues facing people using web technology is not simply about coding       practices or code, but can include wider contexts, such as security       concerns and personalization.</li>
               <li>Another       major challenge is capturing difficulties that many cognitive disabilities       are undeclared. Often people with cognitive disabilities are embarrassed       of their disabilities and are less likely to request accommodation. They       may be afraid of discrimination, especially in the work place. Others are       not aware of their disability or of the impact it has on their functioning.</li>
-              <li>Attitudes       and misinformation can also become a barrier to inclusion for people with       cognitive disabilities. For example, developers that may feel people with       cognitive disabilities are not in their &ldquo;target audience&rdquo; and so have no       interest in their inclusion. Also, studies of usability often over-sample       college students. Thus the results work less well for groups who are not       well represented among sub-groups of college students (such the aging       population).</li>
+              <li>Attitudes       and misinformation can also become a barrier to inclusion for people with       cognitive disabilities. For example, developers that may feel people with       cognitive disabilities are not in their “target audience” and so have no       interest in their inclusion. Also, studies of usability often over-sample       college students. Thus the results work less well for groups who are not       well represented among sub-groups of college students (such the aging       population).</li>
               <li>Accessibility       has typically been based upon the assumption that any website can be       designed to be usable by people with disabilities. However, when making a       website usable for people with cognitive disabilities, the content itself       may need to be changed (e.g., simplified), or support adaptability (e.g.,       multi-modal delivery).</li>
             </ul>
             <p>Addressing  these issues requires us to make a broader view of solutions for accessibility,  such as a content focused approach and to explore personalization solutions  that incorporate inclusive design. To  address these issues we have adopted the following strategies:</p>
@@ -161,10 +164,8 @@
               <li>Draft       for a semantics for adaptive interfaces (that may become a WAI-ARIA       extension) and personalization syntax to enable adaptable interfaces. See <a href="https://w3c.github.io/coga/issue-papers/links-buttons.html">https://w3c.github.io/coga/issue-papers/links-buttons.html</a></li>
             </ul>
             <p>The diagrams show how these need to be integrated to enable  accessibility for people with cognitive disabilities</p>
-            <p>&nbsp;</p>
-            <p><img width="386" height="411" src="index_clip_image002.jpg" alt="what we are doing as hexigons"> </p>
-          <p>&nbsp;</p>
-            <p>A roadmap must enable the integration of all the pieces that  can make accessibility for people with cognitive disabilities workable. A  roadmap must also address the author needs and issues that will help make this  work practical. For example: Best practice documents and how to ensure that  personalization is practical and testable.<br>
+            <p><img width="386" height="411" src="index_clip_image002.jpg" alt="what we are doing as hexigons" /> </p>
+            <p>A roadmap must enable the integration of all the pieces that  can make accessibility for people with cognitive disabilities workable. A  roadmap must also address the author needs and issues that will help make this  work practical. For example: Best practice documents and how to ensure that  personalization is practical and testable.<br />
               <img width="865" height="363" src="index_clip_image003.png" alt="Roadmap"/>
               <caption>Figure 1 Anticipated Roadmap </caption>
               </p>
@@ -236,12 +237,10 @@ That means more and more people are dependent on others for things that they cou
 	<section>
     <h2>Summary of issues and techniques </h2>
       
-    <section>
-    <div >
           <p>As discussed above, the task force reviewed different disabilities to identify techniques that supported their using the web. The task force also reviewed  issues that went beyond standard Web content, but affected the use of the Web for people with cognitive and learning disabilities.</p>
           <p>This section is a summary of these findings. The full reports can be found at:</p>
           <p><a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a> and <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-papers/</a></p>
-      </div></section><section><section>
+      <section>
         <h3><span id="Overview_of_techniques">Overview of techniques</span></h3>
         <p>Most designers want people to be able to use their site. However   designs that might be difficult for some people to use can actually bar   people with cognitive and learning disabilities from using the content   at all. Typically this happens because content providers may not be   familiar with the needs of users having these impairments. We have   reviewed multiple user groups as a first phase to identify user needs   and challenges that are not fully included in WCAG. (See <a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">https://w3c.github.io/wcag/coga/user-research.html</a>.)   From this research we have identified techniques and themes though the   techniques that authors need to be aware of (and are not full addressed   in WCAG 2.0)  The key themes are: </p>
         <ol>
@@ -262,7 +261,9 @@ That means more and more people are dependent on others for things that they cou
           <li> Minimize the cognitive skills required to use the content and   avoid barriers that stop people with cognitive disabilities from using   content, such as hard to use security mechanisms. </li>
         </ul>
         <p>A full list of the  authoring  techniques identified are at: <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a></p>
-        <h3><span id="Summary_of_solutions">Summary of technique solutions </span></h3>
+      </section>
+<section>
+	<h3><span id="Summary_of_solutions">Summary of technique solutions </span></h3>
         <p>To help bridge the gap we propose the following strategies: </p>
         <p>1. Construct a full list of techniques: See <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a></p>
         <p>2. Support an extension to WCAG that supports the techniques. This will include: </p>
@@ -289,8 +290,7 @@ That means more and more people are dependent on others for things that they cou
           <li> Enables author creativity. Ideally an author could create any   interface that they wish, but by enabling API's and personalization, our   user groups can receive an adapted interface that is suitable for their   needs. </li>
           <li> Better accessibility and inclusion. Sometimes, especially with our   user groups, user needs can conflict. With adaptability and   personalization the interface is personalized to the individuals user   needs. </li>
         </ol>
-        <p>See the discussion on personalization below. </p></section>
-      <section><section>
+        <p>See the discussion on personalization below. </p></section><section>
         <h3><span id="Summary_of_Issues">Summary of Issues Papers</span></h3>
         The following sections provide a summary of the issues and solutions discussed at <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-paper</a></section>
         <section>
@@ -425,16 +425,16 @@ That means more and more people are dependent on others for things that they cou
           <li> Not being aware of possible solutions </li>
         </ol>
         <p>Inferring Preferences is one solution but the technology is not yet mature. Another issue is <strong>multiple devices and applications</strong>. </p>
-        <p><br>
+        <p><br />
           <strong>Interoperable personalization schemes</strong>. Interoperable   personalization schemes are where users want or need products and   services to be personalized, they would prefer or need this to happen   across the widest possible range of products or services.   Personalization schemes that delivers this ideal will only succeed if   they are standardized and if that standard is adopted by the widest   range of product and service providers. However there are many critical   issues for any personalization scheme to resolve such as funding and   adoptions. </p>
         <p>Current works in progress are GPII (<a rel="nofollow" href="http://gpii.net/">http://gpii.net/</a> which is compatible with ISO/IEC 24751,) and ETSI (see <a rel="nofollow" href="http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf">http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf</a> , <a rel="nofollow" href="http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf">http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf</a> and <a rel="nofollow" href="http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf">http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf</a> ) </p>
-        <p><br>
+        <p><br />
           Another issues is <strong>Contextual personalization</strong> which includes   optimizing the personalization of a product or service is to ensure that   the personalization is appropriate for the current context of use. For   example, settings that will suit the user of a mobile phone in their   office or home will not be well suited to that user when they are   driving a car. </p>
         <p>Metadata is another related topic. Metadata allows the user to   find content that they can use and suites their personal needs and   preferences. A lot of work has been done for enabling metadata that   helps people with physical disabilities find versions of content that   they can use. However the semantics and terms do not support the   specific requirements of people with different cognitive disabilities. </p></section><section>
         <h5><span id="Summary_of_solutions_for_personalization">Summary of solutions for personalization</span></h5>
         <h5><span id="Strategies">Strategies</span></h5>
         <ol>
-          <li>Promote and support advancements in technologies in these area. For   example, our recommending for WCAG will be along the lines of &ldquo;Use   semantics and standardized techniques and that enable the content to be   adapted to the user scenario and enable additional support &ldquo; </li>
+          <li>Promote and support advancements in technologies in these area. For   example, our recommending for WCAG will be along the lines of “Use   semantics and standardized techniques and that enable the content to be   adapted to the user scenario and enable additional support “ </li>
           <li>Enable  compatibility with standards such as  GPII but do not depend on them. </li>
           <li>Develop the semantics and terms to support the specific requirements of people with different cognitive disabilities. </li>
           <li>Enable simple solutions that  are extendable - encouraging more   complex solutions in the future, such as having preferences being easily   cascaded to allow for contextual personalization and for portability in   the future. </li>
@@ -591,8 +591,7 @@ That means more and more people are dependent on others for things that they cou
 	  </section></section>
     
 		  
-		   		      </section>
-	</section>
+		   		      
 			
 		<section>
 		 
@@ -620,7 +619,6 @@ That means more and more people are dependent on others for things that they cou
             <li>As a user who has memory impairments and often forget passwords I need to be able to use a site without remembering or coping passwords and user names so that I can use this service.</li>
             <li>As a user who has weak executive function I need the process to login to be simple and not multi step so that I can use it</li>
           </ol>
-          <p>&nbsp;</p>
           <table border="1" cellpadding="5" cellspacing="5" width="200">
             <tbody>
               <tr>
@@ -663,22 +661,22 @@ That means more and more people are dependent on others for things that they cou
           <p>This leads to following user stories: To do  - fill in user stories</p>
           <p><strong>User needs</strong></p>
           <ul>
-            <li>I need to&nbsp;consume content or complete a task without unnecessary  distraction </li>
+            <li>I need to consume content or complete a task without unnecessary  distraction </li>
             <li>I need to turn off distractions )to be a default and 2) a  trivial option in real time</li>
             <li>I need to know the context, were I am, and what I just did,  or what happened to me</li>
             <li>I need to restore the context when I forget where I am or  get distracted</li>
             <li>I need to restore the context in multi media- I need to go  back to that bit I just missed, or re-orientate myself if i lost the context</li>
           </ul>
-         <p>&nbsp;</p>
+         
          <p><strong>To do: Create table mapping user needs to solutions</strong></p>
     </section><section>
           <h3>Table 3: Entering data, error prevention &amp; recovery </h3>
           <p>About the user: Filling out forms and similar tasks can be overwhelming for most people with cognitive and learning disabilities. This includes relatively minor learning disabilities such as dyslexia or attention related disabilities. Many people (most COGA groups) have memory issues that can make copying   text,  difficult or impossible. Other   contributing issues include impaired executive function. </p>
           <p>Many people learning disability can not remember numbers such as their post code, Social Security or Credit Card numbers. Many people even need their to check phone number. This makes entering information slow, and they may need to leave their desk or take a brake.</p>
           <p>Many users find it very difficult to copy information, due to low visual memory or impaired executive function.</p>
-          <p>&nbsp;</p>
+          
           <p>This lead to following user stories:</p>
-          <p>&nbsp;</p>
+          
           <ul>
             <li>As a user who needs to look up my post code I do not want the session to time out while I try and find the information needed.</li>
             <li>As a user who needs to take brakes during tasks like filling in a form I want to be sure all my work is saved automatically if my computer crashes so that i do not have to start over again, (which can create a cycle and each time I reenter my data i am more tiered and more likely to make mistakes)</li>
@@ -714,10 +712,10 @@ That means more and more people are dependent on others for things that they cou
           <h3>Table 6: Simple and clear interface </h3>
           <p><strong>About the user:</strong> Many people can not learn easily new design metaphors or remember things that they learned (such as people with Mild Cognitive Impairment (MCI) or   dementia. Without these skills it can be much harder or impossible to locate a desired items to interact with and  know what interaction may do. The user can feel lost or overwhelmed. </p>
           <p>Many users can be overwhelmed by too many options, or too much information. If reading is slow then two much information mixed together will make it difficult or impossible to find the information you need.</p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
+          
+          
           <p>This lead to following user stories: To be filled in</p>
-          <p>&nbsp;</p>
+          
           <table  border="1" class = "summary">
             <tbody>
               <tr>
@@ -758,8 +756,8 @@ That means more and more people are dependent on others for things that they cou
                 <td><p>The author can use simple and well understood terms.</p>
                   <p>OR </p>
                   <p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
-                  <p>&nbsp;</p></td>
-                <td>&nbsp;</td>
+                  </td>
+                <td></td>
                 <td>To be filled in</td>
                 <td>To be filled in</td>
                 <td>To be filled in</td>
@@ -768,16 +766,16 @@ That means more and more people are dependent on others for things that they cou
               <tr>
                 <th class="summary" scope="row">I can find the controls that I need</th>
                 <td class="summary"><p>Do not rely on people remembering the scroll</p>
-                  <p>&nbsp;</p></td>
-                <td class="summary">&nbsp;</td>
-                <td class="summary">&nbsp;</td>
-                <td class="summary">&nbsp;</td>
-                <td class="summary">&nbsp;</td>
-                <td>&nbsp;</td>
+                  </td>
+                <td class="summary"></td>
+                <td class="summary"></td>
+                <td class="summary"></td>
+                <td class="summary"></td>
+                <td></td>
               </tr>
               <tr>
                 <th class="summary" scope="row"><p>I know what are  controls </p>
-                  <p>&nbsp;</p></th>
+                  </th>
                 <td class="summary"><p>Use of clear affordances </p>
                   <p>Or use of the proper roles with adaptations according to standardized user preference</p></td>
                 <td class="summary"><p>New success criteria required</p>
@@ -873,7 +871,7 @@ That means more and more people are dependent on others for things that they cou
               </tr>
             </tbody>
           </table>
-          <p>&nbsp;</p>
+          
           <p><strong>To do: Clarify the following user needed and add them to the above table</strong></p>
           <ul>
             <li>I am familiar with the UI and I know how to work it and what will happen when I work it </li>
@@ -911,7 +909,7 @@ That means more and more people are dependent on others for things that they cou
             <li>As a user who has weak executive function I need the process to get help to be simple and not multi step so that I can use it</li>
             <li>A user can have trouble identifying the right words to say in a voice menu</li>
           </ol>
-          <p>&nbsp;</p>
+          
           <table border="1" cellpadding="5" cellspacing="5" width="200">
             <tbody>
               <tr>
@@ -947,12 +945,12 @@ That means more and more people are dependent on others for things that they cou
               </tr>
               <tr>
                 <th scope="row">I need  simple-to-navigate menu systems </th>
-                <td>&nbsp;</td>
+                <td></td>
                 <td>needs further investigation</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
               <tr>
                 <th scope="row">I need  simple-to-navigate voice-menu systems </th>
@@ -962,21 +960,21 @@ That means more and more people are dependent on others for things that they cou
                   <p><span id="When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_cognitive_function_an_alternative_is_provided_that_does_not_require_additional_cognitive_function4">When   there is a barrier between the content and the user that requires   additional cognitive function  an alternative is provided that does not   require additional cognitive function</span></p>
                   <p>See https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_cognitive_function_an_alternative_is_provided_that_does_not_require_additional_cognitive_function</p>
                   <p>alternatives for non vocal </p></td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td></td>
+                <td></td>
                 <td><p>Use of standard 0 to reach a human</p>
                   <p>understanding of different speech patterns</p>
-                  <p>&nbsp;</p></td>
+                  </td>
                 <td><p><a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html">https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html</a></p>
-                  <p>&nbsp;</p>
-                  <p>&nbsp;</p></td>
+                  
+                  </td>
               </tr>
             </tbody>
           </table>
-          <h2></h2>
     </section>
         
-
+		</section>
+		
 		
 		<!--
 		<section class="appendix" id="changelog">
