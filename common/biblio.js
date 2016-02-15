@@ -792,7 +792,7 @@ var biblio = {
 		"etAl": "false",
 		"publisher": "Advanced Technologies and Societal Change, pages 167-176",
 		"publishDate": "2012"
-		}
+		},
 		
 	"Henderson-1": {
 		"title": "Anatomy of posterior pathways in reading: A reassessment",
@@ -1532,7 +1532,7 @@ var biblio = {
 		"etAl": "false",
 		"publisher": "Journal of Applied Gerontology Volume 28, Number 1, pages 5-37",
 		"publishDate": "February 2009"
-		}
+		},
 		
 		 "UN-1":
 		{
