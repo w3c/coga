@@ -5,38 +5,60 @@
 	</head>
 	<body>
 		<section>
-			<h2>Use Case</h2>
-			<p>A person wants to make a payment online. </p>
-			<p>Basically, on-line payment systems are e-commerce businesses allowing money transfers to be made only through the Internet. They function as a fast and secure electronic alternative to traditional methods as checks and money orders. The systems perform payment processing not only for online vendors, auction sites, and other corporate users but between their customers. </p>
-			<p>Online bill pay is an electronic payment service that allows one to set up a secure online account to make one time or recurring bill payments. The source of funds for the payments is usually a checking account, but some bill pay services also work with credit cards. All bills and transactions are accessed on the bill pay website. </p>
-			<p>NOTE: “Online payment” and “web payment” are treated synonymously in this paper, but are they in fact the same?? Online payment systems are considered to be “web-based”. </p>
-			<p>Challenges for people with cognitive disabilities in online payments: </p>
+			<h2>Introduction</h2>
+			<p>This document is an issue paper looking into the challenges and issues faced by people with learning disabilities and cognitive disabilities when using online payment interfaces. </p>
+			<p>This is part of a series of issue papers written by The Cognitive and Learning Disabilities Accessibility Task Force (COGA). COGA is a joint Task Force of the
+			<a href="http://www.w3.org/WAI/APA/"> Accessible Platform Architectures (APA) Working Group</a>
+			and the
+			<a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group (WCAG WG)</a>. </p>
+			<p>This work will be used as a base document for other work including a road-map for improving accessibility for people with learning disabilities and cognitive disabilities. </p>
+			<p>Online payment systems collect information necessary to enable electronic money movements used for but not limited to the purposes of e-commerce purchases, bill payments, person-to-person payments, transferring funds between account holder accounts, and wire transfers. The typical source of funds includes demand deposit accounts (also known as debit accounts) such as a checking or savings account, or a credit account such as a credit card or home equity line of credit. These systems function as a fast and secure electronic alternative to traditional money movement or payment methods such as checks and money orders. </p>
+			<p>Providers of online payment systems include financial institutions, e-commerce vendors, billers such as utility companies, government agencies, and online payment companies like PayPal, Official Payments, or Visa. A secure online account may or may not be required to use these systems. In addition to functionality, online payment systems provide access to transactions, and in some cases bills as well. </p>
+			<p>The terms "online payments", "web payments", "online bill payments", and "online transfers" all involve use of a web-based or mobile app interface for the purpose of consumer to business, person to person, or account to account money movements. Although some differences exist, the learning and cognitive disability challenges presented by all of these payment systems are very similar. Therefor, the terms are used synonymously in this paper.</p>
+			<p>Online payments provide opportunities for people with disabilities to live more independently, however interfaces poorly designed or not designed at all for learning and cognitive disabilities can lead to errant payments and the possibility of significant personal financial hardships. Full accessibility is a necessary part of the solution to prevent unintended, potentially financially burdensome consequences associated with using online payments.</p>
+		</section>
+		<section>
+			<h2>Use Cases</h2>
+			<h3>A person wants to pay for an online purchase during check-out </h3>
+			<p>This use case assumes the person understands the 'shopping cart' concept and has successfully navigated to the payment starting point. The vendor payment system was developed with HTML.</p>
+			<p>Challenges for people with cognitive disabilities in online e-commerce payments: 
+			<ul>
+				<li>Distractions cause by ancillary content designed to grab attention which pulls the persons attention away from the elements for providing payment information.</li>
+				<li>Confusion due to complicated layout for address information, making it difficult to comprehend which fields are related to the payment and which are for the shipping address</li>
+				<li>Loss of task focus caused by requests for optional information unrelated to the payment, such as presenting user name and password fields for establishing an account with the merchant, field for a promotional code, or checkboxes for opting in to email announcements along with fields for gathering payment information.</li>
+				<li>Confirming the credit card number due to a design which does not group the account numbers the same way they are grouped on the credit card.</li>
+				<li>Difficulty associating credit card expiration month numbers with correct word or acronym for months in a select list.</li>
+				<li>Comprehending acronyms used for labeling security code field and options in a select list for months of the year.</li>
+				<li>Uncontrollable session timeouts preventing ability to read and comprehend instructions.</li>
+				<li>Perceiving required fields located outside the primary flow of text and form elements for payment information.</li>
+				<li>Comprehending the need to reenter previously correctly supplied information such as a credit card number, as well as errant information when a page redisplays with an error.</li>
+			</ul></p>
 		</section>
 		<section>
 			<h2>Summary</h2>
-			<p>While the use of computer technologies could be effective in helping individuals with cognitive disabilities make online payments, the diversity of ability, conditions, and experience of users with cognitive disabilities can create problems in many online payment situations. The sheer number of different types of cognitive disabilities and effects that they can have on users also adds to an already complex issue. </p>
-			<p>Designing accessible web payment systems for users with cognitive disabilities can present some interesting challenges. Certain individuals may have trouble processing language and numbers, deciphering auditory input, and with spatial orientation. To understand material regarding web payments, users must be able to identify information and integrate it into meaningful “pieces” or “components”. A person with a brain injury (or other cognitive impairments) may take longer to think and respond to online stimuli. In a web payment system, multiple windows, complex or cluttered displays can create distractions and processing problems, and sequential operations can be likewise distracting to those with memory deficit problems. The use of right and left click buttons on a mouse can create difficulties for users with memory, perception or reflex problems. </p>
-			<p>Individuals with lower literacy may have different reading patterns than high literacy readers when it comes to understanding web payment material; while high literacy readers scan text, low literacy users may read the text “word for word”. This can creates a narrow field of view which may causes them to miss objects and information (essential for completing online payments successfully) not directly in the flow of text that they are reading. </p>
-			<p>Effect of Memory Impairments: Individuals with working memory issues and short term/long term memory issues can have difficulty with navigation and interacting with basic functionality of an online payment system (forgetting information, and knowing where to go next, for example). </p>
-			<p>Effect of impaired executive function: Individuals with emotional control/self-monitoring issues, task flexibility limitations, and planning/organization/execution difficulties, and impaired judgment may find it hard to progress properly through a myriad of tasks in web payments, and may become easily frustrated or give up). </p>
+			<p>While the use of computer technologies could be effective in helping individuals with cognitive disabilities make online payments, the diversity of ability, conditions, and experience of users with cognitive disabilities can create problems in many online payment situations. The sheer number of different types of cognitive disabilities and effects that they can have on users adds to an already complex issue. </p>
+			<p>Designing accessible web payment systems for users with cognitive disabilities can present some interesting challenges. Certain individuals may have trouble processing language and numbers, deciphering auditory input, and with comprehending spatial orientation. To understand material regarding web payments, a person must be able to identify information and integrate it into meaningful “pieces” or “components”. A person with a brain injury (or other cognitive impairments) may take longer to think and respond to online stimuli. In a web payment system, multiple windows as well as complex or cluttered displays can create distractions and cognitive processing problems. Extended sequential operations can be likewise distracting to those with memory deficit problems. The use of right and left click buttons on a mouse can create difficulties for users with memory, perception or reflex problems. </p>
+			<p>Individuals with lower literacy may have different reading patterns than high literacy readers when it comes to understanding web payment material; while high literacy readers scan text, people with low literacy may read the text “word for word”. This reading style can create a narrow field of view. Objects and information essential for successfully completing online payments may be missed when they are not directly in the flow of text a person is reading.</p>
+			<p>Effect of Memory Impairments: Individuals with working memory issues and short term/long term memory issues can have difficulty with navigation and interacting with the basic functionality of an online payment system. They may have trouble remembering information such as a street address or Zip Code, forget to enter required information, or not know where to go next. </p>
+			<p>Effect of impaired executive function: Individuals with emotional control/self-monitoring issues, task flexibility limitations, planning/organization/execution difficulties, and impaired judgment may find it hard to progress properly through a myriad of tasks in web payments. They may become easily frustrated or give up. </p>
 			<p>Effect of impaired reasoning: Those having issues with fluid reasoning, mathematical intelligence limitations, seriation/behavioral/comprehension knowledge, and abstraction difficulties may find it hard to recognize patterns and compute numbers in web payment systems. </p>
-			<p>Effect of attention-related limitations: Persons with selective attention/divided attention issues may have difficulty separating out the important aspects from the irrelevant ones in a web payment transaction. Persons with a limit on sustained attention may not be able to successfully complete all the steps in a web payment transaction. </p>
+			<p>Effect of attention-related limitations: Persons with selective attention/divided attention issues may have difficulty separating out the important aspects from the irrelevant ones in a web payment transaction. Persons with a limit on sustained attention may not be able to successfully complete all the steps in an online payment transaction. </p>
 			<p>Effect of impaired language related functions: Individuals with speech perception or speech issues may not be able to recognize or respond intelligently to spoken commands in a web payments system. Those with literacy difficulties may not be able to properly read the instructions for a web payments system, and thus not know what to do. </p>
 			<p>Effect of impaired literacy related functions: With difficulties in speech perception and/or visual perception, individuals may not be able to read or understand written or spoken commands regarding web payment information. Issues with phoneme processing may make it hard to properly process auditory cues, and cross-model association difficulties may hinder associations of symbols with meanings in a web payment transaction. </p>
-			<p>Effect of perception-processing limitations: Visual perception (e.g., object recognition, pattern recognition) issues for certain persons may make it difficult to properly perceive the relative locations and meanings of symbols related to web payment. In addition, individuals with auditory/speech, motor, and/or tactile perception limitations may hinder use of web payment system displayed via those modalities. </p>
-			<p>Effect of reduced knowledge: Those with limitations on grammar, metaphorical, and/or lexical knowledge could find it hard to interact correctly with web payment systems using those capabilities to provide critical information for understanding. Issues in cultural knowledge and base language knowledge (including jargon, usage, idioms, icons, etc.) may also figure into making a web payment properly as intended. </p>
+			<p>Effect of perception-processing limitations: Visual perception (e.g., object recognition, pattern recognition) issues for certain persons may make it difficult to properly perceive the relative locations and meanings of symbols related to web payment. In addition, auditory/speech, motor, and/or tactile perception limitations may hinder use of web payment systems displayed via those modalities. </p>
+			<p>Effect of reduced knowledge: People with grammar, metaphorical, and/or lexical knowledge limitations could find it hard to interact correctly with web payment systems using those capabilities to provide critical information for understanding the process. Issues in cultural knowledge and base language knowledge (including the use of jargon, idioms, icons, etc.) may also figure into making a web payment properly as intended. </p>
 			<p>Effect of impaired understanding of behaviors or consciousness: Improper understanding of behavioral norms, social cues, that may be important in successfully completing a web payment may introduce difficulties for certain persons. </p>
 		</section>
 		<section>
-			<h2>Proposed solutions</h2>
-			<p>It is important in any proposed solutions to make operational tasks (interacting with a web payment system) as transparent as possible in order that users can focus their attentions on the functional aspects (relating to content). The following solutions support general usability of a web payment system for everyone, in addition to assisting those with cognitive disabilities. </p>
+			<h2>Proposed Solutions</h2>
+			<p>It is important in any proposed solutions to make operational tasks (interacting with a web payment system) as transparent as possible in order for people to focus their attention on the content related functional aspects of the process. The following solutions support general usability of online payment systems for everyone, in addition to assisting those with cognitive disabilities. </p>
 			<section>
 				<h3>Navigation</h3>
 				<ul>
-					<li> Since improper or ambiguous navigation and labeling can create confusion, it is important to standardize controls, features, and navigation within a web payment system – consistency will greatly aid users with short-term memory difficulties. </li>
+					<li> Since improper, vague, or ambiguous navigation and labeling can create confusion, it is important to standardize controls, features, and navigation within a web payment system – consistency will greatly aid users with short-term memory difficulties. </li>
 					<li> It is important whenever possible to keep menus short and easy to understand, and to use clear labels and signs. </li>
 					<li> It is essential to provide ways to backtrack or start over in navigation. For example, the use of breadcrumbs can help to provide confirmation of navigation and reinforce objectives. </li>
-					<li> It is desirable to provide site-maps for larger online payment web-based systems. </li>
+					<li> It is desirable to provide site-maps for larger online payment systems, such as those used for bill payments. </li>
 					<li> It is essential to provide prompts and feedback to let users know if they made the correct choice and to help them get back on track when they encounter an error. </li>
 					<li> It is desirable to increase the size of "clickable" areas to aid persons who have visual processing or mobility challenges. </li>
 					<li> In a web payment system, it is important to limit the number of options to prevent cognitive overload, and to offer a shallow or narrow decision structure. </li>
@@ -45,7 +67,7 @@
 			</section>
 			<section>
 				<h3>Functionality</h3>
-				<p>It is desirable to allow the user control of as many aspects of the web payment system as possible. For example, the use of CSS (Cascading Style Sheets) can be used to provide control of how information is presented. CSS can be used to change font and font size; change the line height or space between lines of text; increase the size of"clickable" areas; allow for mouse over highlighting of text for easier reading; change the background color of a page; and invert colors and increase contrast on the page. </p>
+				<p>It is desirable to allow a person to have control of as many aspects of the web payment system as possible. For example, CSS (Cascading Style Sheets) can be used to provide control of how information is presented. A user interface component can be used to change the CSS definitions for font and font size; change the line height or space between lines of text; increase the size of "clickable" areas; allow for mouse over highlighting of text for easier reading; change the background color of a page; and invert colors and increase contrast on the page. This approach can allow a designer to maintain higher level control over design families while allowing a person to control the presentation to suit their individual needs. </p>
 				<ul>
 					<li> It is desirable to provide external lists for complex operations for those with memory problems. </li>
 					<li> It is important to identify pre-knowledge necessary for a user to successfully utilize a web payment system. </li>
@@ -58,43 +80,51 @@
 			</section>
 			<section>
 				<h3>Content and Text</h3>
-				<p>Proposed solutions should address the three categories of human perception: active – conditioned by a person's knowledge and expectations; patterned – as the brain attempts to organize information into meaningful patterns; and selective – picking out the information that stands out to the learner. In particular, </p>
+				<p>Proposed solutions should address the three categories of human perception: 
+<dl>
+<dt>Active</dt>
+<dd>Conditioned by a person's knowledge and expectations</dd>
+<dt>Patterned</dt>
+<dd>As the brain attempts to organize information into meaningful patterns</dd>
+<dt>Selective</dt>
+<dd>Picking out the information that stands out to the learner</dd>
+</dl>
+In particular, </p>
 				<ul>
-					<li> Since complex text can create difficulties for users with cognitive impairments, appropriate graphics should be used to help reduce cognitive load and enhance understanding. </li>
+					<li> Since complex text can create difficulties for people with cognitive impairments, appropriate graphics should be used to help reduce cognitive load and enhance understanding. </li>
 					<li> It is important to use plain language in short, concise sentences (keep it simple) in a web payment system. </li>
-					<li> It is desirable to reiterate information for users with memory problems. </li>
-					<li> A technique may be to use the “newspaper style of writing” – start with a summary then provide the material in an order from most important to least important. It is important to avoid lengthy text or audio, and to prioritize information to ensure that all critical material is at the top half of the page or"above the fold", as well as to avoid scrolling if possible. </li>
-					<li> It is desirable to "chunk" materials in a web payment system – one idea per paragraph. </li>
+					<li> It is desirable to reiterate information for people with memory problems. </li>
+					<li> A technique may be to use the “newspaper style of writing” – start with a summary then provide the material in an order from most important to least important. It is important to avoid lengthy text or audio, and to prioritize information to ensure that all critical material is at the top half of the page or "above the fold", as well as to avoid the need for scrolling to complete the payment task(s) on a screen, if possible. </li>
+					<li> It is desirable to "chunk" materials in a web payment system – one idea per paragraph or logical section. </li>
 					<li> It is desirable to use bulleted lists whenever possible. </li>
 					<li> It is important to use meaningful headings. </li>
 					<li> In a web payment system, line length should ideally not exceed 70-80 characters. </li>
-					<li> It is useful to avoid "rivers of white" caused by full justification. </li>
 					<li> It is desirable to avoid or provide alternatives for non-literal text and colloquialisms in a web payment system. </li>
-					<li> It is desirable to include plenty of white space on the page. </li>
-					<li> It is good to offer individuals a choice of "long" or"short" content so that they can determine the level of detail that they require when interacting with a web payment system. </li>
+					<li> It is desirable to include plenty of white space on the page while not creating "rivers of white" caused by full justification. </li>
+					<li> It is good to offer individuals a choice of "long" or "short" content so they can determine and control the level of detail they require when interacting with a web payment system. </li>
 					<li> It may be good to design for working memory limitations (2; 1), and to reduce the standard 7 ± 2 maximum elements guideline for short-term memory to 4 ± 2. </li>
 					<li> A possible technique is to allow the use of unexpected events to possibly help a person retain information. </li>
-					<li> A possible technique is to investigate the use of readability tests, while not all-inclusive, can provide assistance in maintaining an appropriate level of simplicity for text. </li>
+					<li> A possible technique is to investigate the use of readability tests. While not all-inclusive, readability tests can provide assistance in maintaining an appropriate level of simplicity for text. </li>
 				</ul>
 			</section>
 			<section>
 				<h3>Layout</h3>
-				<p>Making a web payment system visually interesting and easy to read can make "listening" to that system difficult (due to the use of graphical spacers and tables, which can disrupt the reading order of related text). The use of database driven text and Cascading Style Sheets (CSS) can create web payment systems that satisfy the needs of both visual and aural users, while still making it easy to change information and textual data. Additionally, style sheets help to convey context, allow for graceful degradation, and make it available for a greater number of possible browsers to read the code properly. </p>
+				<p>Making a web payment system visually interesting and easy to read can make "listening" to that system difficult (due to the use of graphical spacers and tables, which can disrupt the reading order of related text). The use of database driven text and Cascading Style Sheets (CSS) can create web payment systems that satisfy the needs of both visual and aural users, while still making it easy to change information and textual data. Additionally, style sheets help to convey context, allow for graceful degradation, and make the content available for a greater number of browsers to read the code properly. </p>
 				<ul>
 					<li> Consistency is a design goal for most web payment systems. All of the pages in a web payment system should remain as consistent as possible. It is important to ensure that material is well organized on all pages of a web payment system. </li>
 					<li> It is desirable to streamline page design in a web payment system. </li>
-					<li> It is beneficial to highlight urgent or key information in a web payment system; for example, the use of color and highlighting can be used to aid in selective perception . </li>
-					<li> In web payment system design, it is good to avoid using menus or other text that appears and disappears when the mouse moves over it, and to avoid text that moves or changes. </li>
-					<li> It is extremely desirable to use high contrast between text and background. </li>
-					<li> Reducing clutter and extra material in a web payment system can improve usability/accessibility for those with visual and cognitive disabilities. </li>
+					<li> It is beneficial to highlight urgent or key information in a web payment system. For example, color, highlighting, and HTML or ARIA semantics can be used to aid in selective perception. </li>
+					<li> In web payment system design, it is good to avoid using menus or other text that appears and disappears when the mouse moves over it, and to avoid the use of text that moves or changes. </li>
+					<li> It is extremely desirable to use high contrast between text and background. Allowing a person to control contrast between text and background through the use of a simple user interface component is even more desirable.</li>
+					<li> Reducing clutter and extra material in a web payment system can improve usability and accessibility for those with visual and cognitive disabilities. </li>
 				</ul>
 			</section>
 			<section>
 				<h3>Multimedia</h3>
-				<p>Access techniques (where necessary) involving using multimedia for interacting with web payment systems should include (at a minimum): captioning, audio description, subtitling, and dubbing. However, with the internet, a variety of new options for multimedia have presented themselves. </p>
+				<p>Access techniques (where necessary) involving the use of multimedia for interacting with web payment systems should include (at a minimum): captioning, audio description, subtitling, and dubbing. However, a variety of new options for multimedia on the internet have presented themselves. </p>
 				<ul>
 					<li> It is desirable, since sound and vision may be "complementary modes of information", to use accompanying sounds to help cue a user as to what to do or to enhance a point. It is also desirable to use audio prompts to signal any change of state. </li>
-					<li> It is desirable to present online payment materials in multiple modes of input, such as including captions to audio and screen readers to enhance text; this can help increase comprehension. It is essential to provide alternate formats for material so that users can choose the format that best suits their needs </li>
+					<li> It is desirable to present online payment materials in multiple modes, such as including captions to audio and screen readers to enhance text; this can help increase comprehension. It is essential to provide alternate formats for material so that users can choose the format that best suits their needs </li>
 					<li> It may be important in a web payments systems to use fully accessible graphics and recognizable icons as navigation aids. </li>
 					<li> The use of appropriate and clear graphics can help to enhance understanding of materials on a web payments site. However, it is important to not overuse graphics and to avoid animated graphics, as they can be distracting and increase cognitive load. If animations or dynamic displays are being used, it is desirable to include controls that allow a user to adjust the speed and motion. </li>
 					<li> It is desirable to use familiar imagery to aid in memory retention, since there may be a lot of steps involved in progressing through a web payments system. </li>
@@ -104,17 +134,17 @@
 		<section>
 			<h2>Reference Used:</h2>
 			<p>
-				<a href="http://ncdae.org/resources/articles/cognitive/">http://ncdae.org/resources/articles/cognitive/</a>
+				<a href="http://ncdae.org/resources/articles/cognitive/">Cognitive Disabilities and the Web: Where Accessibility and Usability Meet?</a> by The National Center on Disability and Access to Education
 			</p>
 			<p>Definitions of online payments are at: </p>
 			<ul>
 				<li>
-					<a href="http://on-linepayments.blogspot.com/2007/10/definition-of-online-payment-systems.html">http://on-linepayments.blogspot.com/2007/10/definition-of-online-payment-systems.html</a>, </li>
+					<a href="http://on-linepayments.blogspot.com/2007/10/definition-of-online-payment-systems.html">Definition of Online Payment Systems</a> by OnlinePayments.Blogspot.com </li>
 				<li>
-					<a href="http://financialsoft.about.com/od/glossaryindexo/f/What-Is-Online-Bill-Pay.htm">http://financialsoft.about.com/od/glossaryindexo/f/What-Is-Online-Bill-Pay.htm</a>
+					<a href="http://financialsoft.about.com/od/glossaryindexo/f/What-Is-Online-Bill-Pay.htm">What is Online Bill Pay</a> by About.com
 				</li>
 				<li>
-					<a href="http://encyclopedia2.thefreedictionary.com/online+payments">http://encyclopedia2.thefreedictionary.com/online+payments</a>. </li>
+					<a href="http://encyclopedia2.thefreedictionary.com/online+payments">Web Payments Service</a> by TheFreeDictionary.com </li>
 			</ul>
 		</section>
 	</body>
