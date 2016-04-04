@@ -14,22 +14,17 @@ table {border:thin; border-style:groove;}
 <p>&nbsp;</p>
 <h1>Gap Analysis - Tables of User Needs </h1>
 <p>This section is work in progress for  tables format for the coga roadmap. It identifies user needs that are not currently fully addressed by accessibility.</p>
-<p>Each  table addresses a group of user needs represented by   a few related user stories of the form of "As a <em>&lt;role&gt;,</em> I want <em>&lt;goal/desire&gt;</em> so that <em>&lt;benefit&gt;</em>".</p>
+<a id="userneeds" ></a><strong>User needs:</strong>Each  table addresses a group of user needs represented by   a few related user stories of the form of "As a <em>&lt;role&gt;,</em> I want <em>&lt;goal/desire&gt;</em> so that <em>&lt;benefit&gt;</em>".
 <p>The tables show how  related user needs can be met though:</p>
 <ul>
-  <li>Authoring techniques for content using HTML,</li>
-  <li>How this can be addressed in WCAG </li>
-  <li>New semantics that may be required to address this user need, such as extra aria attributes</li>
-  <li>Any personalization requirements</li>
-  <li>Operating System support or other support that may be required to meet this user need</li>
+  <li><a id="wcagex" ></a>How this can be addressed in a WCAG extention for cognative. See  current at  <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG">WCAG 2.0 COGA extension</a></li>
+  <li><a id="authoring" ></a>Authoring techniques for content using HTML, see  <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">Coga authoring techniques document.</a></li>
+  <li><a id="semantics" ></a>New semantics that may be required to address this user need, such as extra aria attributes. See the draft for a <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">semantics for adaptive interfaces</a> (that may become a WAI-ARIA [[wai-aria]] extension) and personalization syntax to enable adaptable interfaces. </li>
+  <li><a id="personalization" ></a>Any personalization requirements. Please see the discussion on Why we need personalization. (todo add link)</li>
+  <li><a id="operating" ></a>Operating System support or other support that may be required to meet this user need</li>
 </ul>
 <p>Note we also have the summary at https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Gap_Analysis_Summary#Summary_of_Issues</p>
-<p>&nbsp;</p>
-<p>The diffrent columbs</p>
-<p>about the wcag extention</p>
-<p>why we need sematics - smetincs to drive intelegnet use interface</p>
-<p>why need personlization</p>
-<p>operinting sytemg and other</p>
+<h3>&nbsp;</h3>
 <p><strong>Please note that this table is incomplete and is a work in progress. (We are publishing it early to solicit early feedback.</strong>) For a later version see ....</p>
 <p>&nbsp;</p>
 <section>
@@ -370,25 +365,31 @@ table {border:thin; border-style:groove;}
                   
                   <li> Understandable       use of images and multi-media</li>
                 </ul>
-              <p><strong>Order A</strong></p>
+              <p>&nbsp;</p>
               <table  border="1" >
                 <tbody>
                   <tr>
-                    <th width="208" scope="col">User Needs *</th>
-                    <th width="324" scope="col"><p>WCAG Extention for Cognative </p>
-                      <p> Success Criteria (SC) **</p></th>
-                    <th width="107" scope="col">Guidance for Content ***</th>
-                    <th width="107" scope="col"><p>Proposed New Semantics ****</p>
+                    <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+                    <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+                      <p> Proposed Success Criteria  <a href="#wcagex" >*</a></p></th>
+                    <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+                    <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
                     <p>&nbsp;</p></th>
-                    <th width="158" scope="col">Personalization*****</th>
-                    <th width="150" scope="col">Operating System/Other ******</th>
+                    <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+                    <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
                   </tr>
                   <tr>
                     <th scope="row"><p>Understandable  use of vocabulary, syntax and other aspects of language.</p>
                       <p>Clear language</p>
                       <p> <a href="#Disccusion7">more</a> </p></th>
                     <td><p> 1.4.3 Instructions, labels, navigation and important information are provided with a clear writing style that includes: </p>
-                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§</a> expand)</p></td>
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§</a> expand)</p>
+                      <p>Level A</p>
+                      <p>--------</p>
+                      <p><strong>To add</strong></p>
+                      <p>Content conforms to a clear writing style that includes: </p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="">§</a> expand)</p>
+                      <p>Level AAA</p></td>
                     <td><p><span property="xhv:role" resource="xhv:heading">2.3 Writing style</span></p>
                       <p>Use a clear Writing style</p>
                       <p>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style" class="expand">§</a> expand)</p>
@@ -397,7 +398,7 @@ table {border:thin; border-style:groove;}
                     <td><p><strong>coga-alternative</strong></p>
                       <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§</a> specification)                      </p>
                       <p><strong>coga-easylang</strong></p>
-                      <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§</a>supported values)</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§ </a>supported values)</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
                       <p><strong>Alternative is to use of EMMA</strong></p>
                       <p> (<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
@@ -519,157 +520,7 @@ table {border:thin; border-style:groove;}
                 </tbody>
               </table>
               <p>&nbsp;</p>
-              <p><strong>Order B</strong></p>
-                
-                         <table  border="1" >
-                           <tbody>
-                             <tr>
-                               <th width="208" scope="col">User Needs</th>
-                               <th width="314" scope="col">Guidance for Content</th>
-                               <th width="324" scope="col"><p>WCAG </p>
-                               <p>proposed Success Criteria (SC) and other</p></th>
-                               <th width="107" scope="col">Proposed New Semantics</th>
-                               <th width="158" scope="col">Personalization</th>
-                               <th width="150" scope="col">Operating System/Other</th>
-                             </tr>
-                             <tr>
-                               <th scope="row"><p>Understandable  use of vocabulary, syntax and other aspects of language.</p>
-                               <p>Clear language</p>
-                               <p> <a href="#Disccusion7">more</a> </p></th>
-                               <td><p><span property="xhv:role" resource="xhv:heading">2.3 Writing style</span></p>
-                                 <p>Use a clear Writing style</p>
-                                 <p>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style" class="expand">§</a> expand)</p>
-                                 <p><span property="xhv:role" resource="xhv:heading">2.3.1 Be clear and to the point</span></p>
-                               <p>(<a  title="Permalink for 2.3.1 Be clear and to the point" aria-label="expand 2.3.1 Be clear and to the point" href="https://rawgit.com/w3c/coga/master/techniques/index.html#be-clear-and-to-the-point">§</a> expand)</p></td>
-                               <td><p> 1.4.3 Instructions, labels, navigation and important information are provided with a clear writing style that includes:
-                                 </p>
-                               <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§</a> expand)</p></td>
-                               <td><p><strong>coga-alternative</strong></p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§</a> supported values)</p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
-                                 <p><strong>coga-easylang</strong></p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§</a>supported values)</p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
-<p><strong>Alternative is to use of EMMA</strong></p>
-<p> (<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
-<p>however we still need to standards the terms to for such as complexity</p>
-<p><strong>coga-literal</strong></p>
-<p>(<a  title="expand" class="expand" aria-label="expand values" href="">§</a> supported values)</p>
-                               <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
-                               <p><strong>Emotional ML</strong> can also be used to identify emotions in content (also for multimedia).</p>
-                               <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
-                               <p>Question: Do we need another way of adding the emotions or sarcasm into content</p></td>
-                               <td><p>We need  user settings for:</p>
-                                 <p> 1. What type of coga alternative text , e.g. <em>easylang numberfree vocab1000</em></p>
-                                 <p>2. Type of coga alternative non-text</p>
-                                 <p>This will match the terms in the HTML (with extra semantics) or in EMMA so a user agent or website know which one to render.</p>
-                                 <p>&nbsp;</p>
-                               <p>We need  user settings for: </p>
-                               <p>1, Who prefers literal text, and</p>
-                               <p>2,  Who wants less implicit information</p></td>
-                               <td><p>Authoring tools can be created to check if content is in need of alternatives. </p>
-                               <p>Taxonomy is needed for use preferences</p>
-                               <p>[[GPII]] and [[ETSI]] and other standards will need to allow these preferences to be portable.</p>
-                               <p>Tools can build the literal text values or Emotional ml languages</p>
-                               <p>User agents or cloud services to display clarifying information</p></td>
-                             </tr>
-                             <tr>
-                               <th scope="row"><p>Clarify implied information and provide un-ambigues information</p>
-                               <p> <a href="#Disccusion7">more</a> </p></th>
-                               <td><p>Use a clear Writing style</p>
-                                 <p>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style" class="expand">§</a> expand)</p>
-                                 <p><span property="xhv:role" resource="xhv:heading">2.3.1 Be clear and to the point</span></p>
-                                 <p>(<a property="url" title="Permalink for 2.3.1 Be clear and to the point" aria-label="Permalink for 2.3.1 Be clear and to the point" href="https://rawgit.com/w3c/coga/master/techniques/index.html#be-clear-and-to-the-point">§</a> expand)</p>
-                                 <h4 resource="#h-be-clear-and-to-the-point" id="h-be-clear-and-to-the-point">&nbsp;</h4>
-                                 2.3.2 Give instructions clearly<span typeof="bookmark"><a property="url" title="Permalink for 2.3.2 Give instructions clearly" aria-label="Permalink for 2.3.2 Give instructions clearly" href="https://rawgit.com/w3c/coga/master/techniques/index.html#give-instructions-clearly"><span content="2.3.2 Give instructions clearly" property="title"></span></a></span></span></h4>
-                               <p>(<a property="url" title="Permalink for 2.3.2 Give instructions clearly" aria-label="Permalink for 2.3.2 Give instructions clearly" href="https://rawgit.com/w3c/coga/master/techniques/index.html#give-instructions-clearly">§</a> expand)</p></td>
-                               <td><span id="Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">Instructions, labels, navigation and important information are provided with a clear writing style that includes:</span>                                 
-                                 <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§</a> expand) </p>
-                               <p>Use   semantics and safe standardized techniques that enable the content to   be adapted to the user scenario including enabling additional support   and personalization.</p>
-                               <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Use_semantics_and_safe_standardized_techniques_that_enable_the_content_to_be_adapted_to_the_user_scenario_including_enabling_additional_support_and_personalization.">§</a> expand) </p></td>
-                               <td><p><strong>coga-literal </strong></p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§ </a>supported vaues)</p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
-                               <p><strong>Emotional ML</strong> can also be used to identify emotions in content (also for multimedia).</p>
-                               <p>question: Do we need another way of adding the emotions or sarcasm into content</p>
-                               <p>[[EMMA]] can also be used in content</p></td>
-                               <td>User setting must be available to identify when a user prefers content with literal content and without implicit content</td>
-                               <td>&nbsp;</td>
-                             </tr>
-                             <tr>
-                               <th scope="row"><p>Reduction of dependence of understanding of math concepts</p>
-                                 <ul>
-                                   <li> To       use the content without understanding of math concepts</li>
-                                   <li>Representation  of math by words instead of number
-                                     
-                                 </ul>
-                                 <p>&nbsp;</p>
-                                 <p>(representation of math by words instead of number)</p>
-                                 <p> <a href="#Disccusion7">more</a> </p></th>
-                               <td><p>Ability to have mathematical notation read out with text to speech to aid understanding.</p>
-                                 <p>Use of synchronized highlighting, of complex graphics and formula with speech§ </p>
-                                 <p>Associate maths, sections of math and sections of complex items with explanations</p>
-                                 <h5 resource="#h-relative-values" id="h-relative-values"><span property="xhv:role" resource="xhv:heading">2.6.3.5 Relative values</span></h5>
-                                 <p>Note: This is not clear.</p>
-                                 <p>(<a property="url" title="Permalink for 2.6.3.5 Relative values" aria-label="Permalink for 2.6.3.5 Relative values" href="https://rawgit.com/w3c/coga/master/techniques/index.html#relative-values">§ </a>expand) </p>
-                                 <p><span property="xhv:role" resource="xhv:heading">Use semantics to provide extra help</span></p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand " href="">§</a> expand) </p>
-                                 <p>&nbsp;</p>
-                                 <p>ADD: Explain mathematical concepts with non mathematical language For example &quot;change 90% agree&quot;, to &quot;most people (90-%) agree&quot;.</p></td>
-                               <td><p><span id="Support_is_provided_that_help_users_understand_the_content.2C_that_includes:2">Support is provided that help users understand the content, that  includes:</span></p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Support_is_provided_that_help_users_understand_the_content.2C_that_includes:">§</a> expand) </p>
-Use   semantics and safe standardized techniques that enable the content to   be adapted to the user scenario including enabling additional support   and personalization.
-                                 <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Use_semantics_and_safe_standardized_techniques_that_enable_the_content_to_be_adapted_to_the_user_scenario_including_enabling_additional_support_and_personalization.">§</a> expand) </p>
-                                 <p>Do we need to add more?</p>
-                                 <p>&nbsp;</p></td>
-                               <td><p>coga-numberfree</p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p></td>
-                               <td><p>User setting must be available to identify:</p>
-                                 <p>1.  when a user prefers content with less numerical content and prefers words</p>
-                                 <p>2. when a user prefers content without dependence on math concepts</p>
-                                 <p>3. Users who prefer mathematical content</p>
-                                 <p>&nbsp;</p>
-                                 <p>&nbsp;</p></td>
-                               <td>&nbsp;</td>
-                             </tr>
-                             <tr>
-                               <th scope="row">Support for slow readers</th>
-                               <td><p>Use a clear <a href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style">Writing style</a>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style" class="expand">§</a> expand)</p>
-                                 <p>use a<strong> clear  structure </strong></p>
-                               <p>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Provide_a_clear_structure_that_includes:">§</a> expand)</p>
-                               <p>2.5 Help meaning</p>
-                               <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#help-meaning">§</a> expand)</p></td>
-                               <td><p>1.4.1 Provide a clear structure that includes:</p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand " href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Provide_a_clear_structure_that_includes:">§</a> expand)</p>
-                                 <p>1.4.3 Instructions, labels, navigation and important information are provided with a clear writing style that includes:</p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand " href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§</a> expand)</p>
-                                 <p>1.4.4 When   there is a barrier between the content and the user that requires   additional cognitive function  an alternative is provided that does not   require additional cognitive function</p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand " href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_cognitive_function_an_alternative_is_provided_that_does_not_require_additional_cognitive_function">§</a> expand)</p>
-                                 <p>1.6.2 Support is provided that help users understand the content, that  includes:</p>
-                                 <p>(<a  title="expand" class="expand" aria-label="expand " href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Support_is_provided_that_help_users_understand_the_content.2C_that_includes:">§</a> expand)</p>
-                               <p>Use   semantics and safe standardized techniques that enable the content to   be adapted to the user scenario including enabling additional support   and personalization.</p>
-                               <p>(<a  title="expand" class="expand" aria-label="expand " href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Use_semantics_and_safe_standardized_techniques_that_enable_the_content_to_be_adapted_to_the_user_scenario_including_enabling_additional_support_and_personalization.">§</a> expand)</p></td>
-                               <td><p>As above</p>
-                                 <p>Also having less content is helpful for slow readers</p>
-                               <p>coga-simplification= "simplest"</p>
-                               <p>(example)</p>
-                               <p>Enabling API's is also important</p>
-                               <p>(example)</p></td>
-                               <td><p>User setting should enable saying:</p>
-                                 <p> what levels of symbols, graphics and support the user needs. (see table 4)</p>
-                               <p>synchronized highlighting</p>
-                               <p>simplification level</p>
-                               <p>&nbsp;</p>
-                               <p>what API's do they need? </p>
-                               <p>&nbsp;</p></td>
-                               <td><p>User agent or cloud based software to adapt the content, allow the use to jump to the keyword </p>
-                               <p>&nbsp;</p>
-                               <p>tools to add extra semantics </p>
-                               <p>tools to identify when extra semantics are missing</p></td>
-                             </tr>
-                           </tbody>
-              </table>
-                         <h4><a id="Disccusion7"></a>Discussions</h4>
+              <h4><a id="Disccusion7"></a>Discussions</h4>
                          <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Feb/0046.html">Emotional ml</a></p>
                          <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Mar/0001.html">EMMA examples</a>
                            
