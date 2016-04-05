@@ -1,152 +1,143 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>Symbol users with Speech, Language and Literacy Difficulties</title>
-	</head>
-	<body>
-	<h1>Issue Paper – Symbol users with Speech, Language and  Literacy Difficulties. </h1>
-    <h2>Description of the Technologies</h2>
-    <p>Voice Output Communication Aids (VOCAs) are  devices that have been developed to allow pictures, symbols or words to be used  with speech synthesis. The devices may be specialist items with built in systems  carrying the symbols.  They may also be a  generic computer, tablet or mobile with specialist software or apps.   The symbols are activated by single or  multiple touches, eyes dwelling on a chosen image or manual use of a keyboard  or switches.  An external input device usually  allows for step by step scanning up and down rows and columns of symbols on a  grid. Symbols and word choices are personalised to suit the user, representing known  objects, actions and happenings.  </p>
-    <h2>Users</h2>
-    <p>The users of Alternative and Augmentative Communication  (AAC) based on images or pictographs as symbols tends to be those who have no  speech or very unintelligible speech, difficulties expressing themselves and/or  individuals who may need reading support.  Individuals may also have severe mobility and  dexterity disabilities and/or cognitive impairments.  Depending on the skills of the user, the  environment and task in hand, symbols may be used to represent a phrase or whole  sentence of speech or be made up of individual parts of speech to aid sentence  making. </p>
-    <h2>Issues</h2>
-    <ul>
-      <li>There is a  need to adapt AAC resources to be more context sensitive.  The technologies already available tend to  use word for word translation where one word may be seen with different symbol  options e.g. without context or text to speech to help with meaning, the word "bow" can be the front of a ship, a weapon shooting arrows, the action of  lowering the top half of the body when meeting an important person or an attractively  tied knot. </li>
-      <li>Translations  of text to symbols and symbols to text tend to have approximations of the  correctly written language – often condensed to a simplistic form.</li>
-      <li>No  universal text to symbol /symbol to text conversions are available </li>
-      <li>No systems  are available that cope with colloquially spoken language which may be very  different from the written language (as in Arabic) so using text to speech for  a symbol may not help understanding</li>
-      <li>Localisation  and cultural nuances of symbol requirements have not been widely researched and  westernised symbols tend to be used. </li>
-    </ul>
-    <h2>Challenges for those with speech, language literacy difficulties  as symbol users. </h2>
-    <p>A symbol user using one  set of symbols may have difficulties communicating with another symbol user.  Just as with different languages, barriers  exist due to the different types of images, grammar and meaning. </p>
-    <ul>
-      <li>In-put – 
-      <ul>
-        <li>Users cannot communicate online with those using different        symbol sets </li>
-        <li>Users cannot interact with forms, messaging or social media </li>
-        <li>Users may use one symbol that represents a phrase not just one        word so translation may be difficult</li>
-        <li>Users may select symbols that contract sentences failing to        provide the appropriate grammatical order for easy text translation</li>
-        <li>Individualised symbols personal to the user need additional        metadata (Information) if used online.</li>
-      </ul>
-      </li>
-      <li>Output- 
-      <ul>
-        <li>Users cannot easily take text from web pages to convert to        symbols that would help understanding </li>
-        <li>Word for symbol translation fails to support poor readers due        to high level of ambiguity.  </li>
-        <li>Personalised symbols require additional metadata (further        information to be understood)</li>
-      </ul>
-      </li>
-    </ul>
-    <h3>Present situation</h3>
-    <ul>
-      <li>Some websites carry symbols as a way to support reading – these       are based on word for word translation and may not fit the context or be       recognised by users of other symbol sets just as a foreign language or       hieroglyphics  may not be       recognised. </li>
-      <li>Universally symbol users are unable to fill in forms or write messages       using their symbol sets</li>
-      <li>There is limited language support using two symbol sets for       mapping "symbols to text / text to symbols" using concept coding. <a href="http://www.conceptcoding.org/AAATE_2013_Inclusive_AAC-MMLS4All.pdf">http://www.conceptcoding.org/AAATE_2013_Inclusive_AAC-MMLS4All.pdf</a></li>
-    </ul>
-    <h3>Effect of memory impairments</h3>
-    <p>Symbol users:</p>
-    <ul>
-      <li>may be unable to cope with large amounts of online material       depending on ability and this may limit the degree to which they can cope       with content that is text based. </li>
-    </ul>
-    <h3>Effect of impaired executive function</h3>
-    <p>Symbol users:</p>
-    <ul>
-      <li>may find it hard to plan a route through web pages unless       navigation is clear </li>
-      <li>may have co-occurring difficulties that impact on successful       online interactions</li>
-      <li>may be overwhelmed by the amount of interactions required to       complete tasks.</li>
-    </ul>
-    <h3>Effect of attention-related limitations</h3>
-    <p>Symbol users:</p>
-    <ul>
-      <li>may find symbol based content helps draw attention to content. </li>
-    </ul>
-    <h3>Effect of impaired language-related functions</h3>
-    <p>Symbol users:</p>
-    <ul>
-      <li>may find dense text based content incomprehensible or harder to       cope with compared to symbol based content.</li>
-    </ul>
-    <h3>Effect of impaired literacy-related functions</h3>
-    <p>Symbol users:</p>
-    <ul>
-      <li>may not comprehend the meaning of text based content </li>
-      <li>may fail to act correctly when warnings or other interactive       items appear on the web.</li>
-    </ul>
-    <h3>Effect of reduced knowledge</h3>
-    <p>Symbol users:</p>
-    <ul>
-      <li>may fail to recognize images, such as symbols or icons that are       not in their known set</li>
-      <li>may lack the ability to use the web as it has been intended,       fail to find information and fail to interact with operational elements.  </li>
-    </ul>
-    <h2>Proposed Solutions</h2>
-    <p>The strategy of mapping symbol sets to a  common vocabulary may allow developers to incorporate helpful symbols knowing  these can be automatically presented to the user in their own symbol  language.  This schema would also allow  symbol users to use their own symbols in an edit box or form knowing it can be  recognised by other symbol users with the automatic translation. <br />
-      The primary solutions for the mapping  symbols for symbol users could be divided into three different user scenarios:</p>
-    <ul>
-      <li>Adaptive Symbols  in the Web Content</li>
-      <li>Adaptive Symbols  in the User Agent</li>
-      <li>Adaptive  Symbols in the Web Authoring Tools</li>
-    </ul>
-    <p>For all these scenarios, the symbols  presented to the symbol users could be alternative and adaptive based on the  users" preference.<br />
-      One option for interoperable symbol mapping  uses the proposed syntax: aria-concept = &quot;uri&quot; to reference target concept URI. For example:<br />
-  &lt;img  aria-concept=&quot;http://wordnet.org/somepage#girlnode&quot;  scr=&quot;girlwithbow.gif&quot; /&gt;<br />
-      This aria-concept syntax could take advantage of the Concept Coding Framework (CCF).  Due to the lack of standardised encoding schemes and common practises, it is  difficult to reference to and exchange symbols as an alternative or complement  to character based texts. Therefore, the CCF provides a common framework to  link and map these symbols (currently Blissymbolics and ARASAAC symbols, and  eventually other alternative representations) based on the concept coding. For  example, the presentation of cat symbol (concept coding: cc-cat-1001) in this  scenario would be as follows:<br />
-      For the Cat concept: cc-cat-1001, there are  different symbols to represent this concept across different symbols providers.<br />
-      If user prefer ARASSC symbols:<br />
-  &lt;img aria-concept=&quot; http://www.conceptcoding.org/ontologies/2011/09/01/ConcetpDefinitions#cc-cat-1001&quot;  scr=&quot; http://www.catedu.es/arasaac/repositorio/thumbs/10/200/9/9881.png&quot;/&gt;<br />
-      If user prefer Bliss symbols:<br />
-  &lt;img aria-concept=&quot;  http://www.conceptcoding.org/ontologies/2011/09/01/ConcetpDefinitions#cc-cat-1001&quot;  scr=&quot; http://www.symbolforwindows.eu/images/Bls_cat.gif&quot;/&gt;<br />
-      or other symbols.<br />
-      In order to map the symbols from different  dictionaries, one of the approaches could be the use of an ontology and  Semantic Web technologies to enable interoperability of symbols datasets. <br />
-      An ontology is a formal specification of a  shared conceptualization (see refs). In Semantic Web, a vocabulary can be  considered as a special form of (usually light-weight) ontology, or sometimes  also merely as a collection of <a href="http://semanticweb.org/wiki/URI" title="URI">URIs</a> with a (usually informally) described meaning. <br />
-      Linked Data is a term used to describe a  recommended best practice for exposing, sharing, and connecting pieces of data,  information, and knowledge on the Semantic Web using URIs and RDF (The Resource  Description Framework, W3C recommend metadata data model). <br />
-      The Concept Encoding Framework Workout  Group (see refs) provides the multilingual and multi-modal lexical ontology  resources of the CCF to be made available in a Linked Open Data (LOD) format. It  also allows users to search symbols based on different concepts and metadata,  such as language, symbol datasets, localization. <br />
-      The following example demonstrates using  the RDFa to represent the mapping between symbols based on concept coding.<br />
-      The ARASAAC monitor symbol.<br />
-  &lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot;  prefix=&quot;rdf: http://www.w3.org/1999/02/22­rdf­syntax­ns# ccf:  http://www.conceptcoding.org/Ontologies/2014/07/ccf­owl­ns# rdfs:  http://www.w3.org/2000/01/rdf­schema#&quot;&gt;<br />
-  &lt;div typeof=&quot;ccf:RepresentationItem&quot;  about=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ArasAssistiveOntologgy#ARAS­27452­1001&quot;&gt; <br />
-  &lt;div property=&quot;ccf:example&quot;  content=&quot;&quot;&gt;&lt;/div&gt;&lt;div rel=&quot;ccf:concept&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ArasAssistiveOntologgy#ARAS­110478960­1000&quot;&gt;&lt;/div&gt;<br />
-  &lt;div  property=&quot;ccf:representationData&quot;   content=&quot;file:representations/aras/monitor_(2).png&quot;&gt;&lt;/div&gt;<br />
-  &lt;div rel=&quot;ccf:representationType&quot;  resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ArasAssistiveOntologgy#aras&quot;&gt;&lt;/div&gt;<br />
-  &lt;/div&gt;&lt;/div&gt;<br />
-      The concept monitor presented in CCF Linked  Data:<br />
-  &lt;div  xmlns=&quot;http://www.w3.org/1999/xhtml&quot; prefix=&quot;<br />
-      rdf:  http://www.w3.org/1999/02/22-rdf-syntax-ns#<br />
-      ccf:  http://www.conceptcoding.org/Ontologies/2014/07/ccf-owl-ns#<br />
-      rdfs:  http://www.w3.org/2000/01/rdf-schema#&quot;&gt;<br />
-      &lt;div  typeof=&quot;ccf:ConceptCode&quot;  about=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ConceptCodeDefinitions#cc-monitor-1001&quot;&gt;<br />
-      &lt;div  property=&quot;ccf:lemma&quot; content=&quot;monitor&quot;&gt;&lt;/div&gt;<br />
-      &lt;/div&gt;<br />
-  &lt;/div&gt;<br />
-      Base Concept:  <br />
-  &lt;div  xmlns=&quot;http://www.w3.org/1999/xhtml&quot; prefix=&quot;<br />
-      rdf:  http://www.w3.org/1999/02/22-rdf-syntax-ns#<br />
-      ccf:  http://www.conceptcoding.org/Ontologies/2014/07/ccf-owl-ns#<br />
-      rdfs:  http://www.w3.org/2000/01/rdf-schema#&quot;&gt;<br />
-  &lt;div typeof=&quot;ccf:RepresentationItem&quot;  about=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/BaseReferenceOntology#EN-3721-1001&quot;&gt;<br />
-      &lt;div  property=&quot;ccf:example&quot; content=&quot;&quot;&gt;&lt;/div&gt;<br />
-      &lt;div  rel=&quot;ccf:representationType&quot;  resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/BaseReferenceOntology#en&quot;&gt;&lt;/div&gt;<br />
-      &lt;div  rel=&quot;ccf:concept&quot;  resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/BaseReferenceOntology#BRO-110478960-1000&quot;&gt;&lt;/div&gt;<br />
-      &lt;div  property=&quot;ccf:representationData&quot; content=&quot;monitor,  monitors&quot;&gt;&lt;/div&gt;<br />
-      &lt;/div&gt;<br />
-  &lt;/div&gt;<br />
-      Mapping (BRO-114078960-1000 and  ARAS-110478960-1000 based on concept cc-monitor-1001)<br />
-  &lt;div  xmlns=&quot;http://www.w3.org/1999/xhtml&quot;<br />
-      prefix=&quot;<br />
-      rdf:  http://www.w3.org/1999/02/22-rdf-syntax-ns#<br />
-      ccf:  http://www.conceptcoding.org/Ontologies/2014/07/ccf-owl-ns#<br />
-      rdfs:  http://www.w3.org/2000/01/rdf-schema#&quot;<br />
-      &gt;<br />
-      &lt;div  typeof=&quot;ccf:Mapping&quot;  about=&quot;http://www.conceptcoding.org/Ontologies/2011/09/01/StandardBridge#9900145925429353419727587434&quot;&gt;<br />
-      &lt;div  rel=&quot;ccf:relatesConcept&quot;  resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/BaseReferenceOntology#BRO-110478960-1000&quot;&gt;&lt;/div&gt;<br />
-      &lt;div  rel=&quot;ccf:relatesConceptCode&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ConceptCodeDefinitions#cc-monitor-1001&quot;&gt;&lt;/div&gt;<br />
-      &lt;div  rel=&quot;ccf:relatesConcept&quot;  resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ArasAssistiveOntologgy#ARAS-110478960-1000&quot;&gt;&lt;/div&gt;<br />
-      &lt;/div&gt;<br />
-  &lt;/div&gt;</p>
-    <p>This approach  mainly requires the symbol dataset providers to publish the symbols and their  concepts as "Linked Open Data". As one of four principles in Linked Data, the  URI naming for the concepts could provide the target concept link described in  the first solution. It could also provide the alternative same concept symbols  based on preferred properties, such as localization, language and colour etc.</p>
-    <h2>References</h2>
-    <p>Lundalv,  M. &amp; Derbring. S. (2012). AAC vocabu­lary standardisation and harmonisation.<em> Lecture Notes in Computer Science. 7383,</em> 303-310. doi:  10.1007/978-3-642-31534-3_46.<br />
-      <a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46">http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46</a> (Accessed 11 June, 2015)<br />
-      lemon - The  Lexicon Model for Ontologies <a href="http://lemon-model.net/index.php">http://lemon-model.net/index.php</a> (Accessed 6th July, 2015)<br />
-      Lundalv, M., Derbring.  S., Brännström, A., Farre, B. &amp; Nordberg, L.  (2013) Inclusive AAC Multi-modal and  Multilingual Language Support for All <a href="http://www.conceptcoding.org/AAATE_2013_Inclusive_AAC-MMLS4All.pdf">http://www.conceptcoding.org/AAATE_2013_Inclusive_AAC-MMLS4All.pdf</a> (Accessed 6th July, 2015)<br />
-      Gruber, T. (2009)  Ontology definition (updated) http://tomgruber.org/writing/ontology-definition-2007.htm   (Accessed 6th July, 2015)</p>
-    </body>
+
+<head>
+    <title>Symbol users with Speech, Language and Literacy Difficulties</title>
+</head>
+
+<body>
+    <section>
+        <h2>Introduction</h2>
+        <p>This document is an issue paper looking into the challenges and issues faced by users with learning disabilities and cognitive disabilities when using Voice Output Communication Aids (VOCAs)with symbols due to Speech, Language and Literacy Difficulties.</p>
+        <p>This is part of a series of issue papers written by The Cognitive and Learning Disabilities Accessibility Task Force (COGA). COGA is a joint Task Force of the<a href="http://www.w3.org/WAI/APA/"> Accessible Platform Architectures (APA) Working Group</a> and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group (WCAG WG)</a>.
+        </p>
+        <p>This work will be used as a base document for other work including a road-map for improving accessibility for people with learning disabilities and cognitive disabilities. </p>
+        <p>Voice Output Communication Aids (VOCAs) are devices that have been developed to allow pictures, symbols or words to be used with speech synthesis. The devices may be specialist items with built in systems carrying the symbols. They may also be a generic computer, tablet or mobile with specialist software or apps. The symbols are activated by single or multiple touches, eyes dwelling on a chosen image or manual use of a keyboard or switches. An external input device usually allows for step by step scanning up and down rows and columns of symbols on a grid. Symbols and word choices are personalised to suit the user, representing known objects, actions and happenings.</p>
+    </section>
+    <section>
+        <h2> Challenges for People with Cognitive Disabilities using Symbols</h2>
+        <p>The users of Alternative and Augmentative Communication (AAC) based on images or pictographs as symbols tend to have no speech or language, very unintelligible speech or difficulties expressing themselves and/or may need reading support. Individuals may also have severe mobility and dexterity disabilities and/or cognitive impairments. Depending on the skills of the user, the environment and task in hand, symbols may be used to represent a phrase or whole sentence of speech or be made up of individual parts of speech to aid sentence making. Where literacy skills are a challenge the use of online communication becomes an issue due to the lack of accurate symbol to text or text to symbol sets that can be used/translate across all symbol systems.</p>
+        <section>
+            <h3>Effect of memory impairments</h3>
+            <p>Symbol users may be unable to cope with large amounts of online material. This depends on their ability but may limit the degree to which they can cope with content that is text based.</p>
+        </section>
+        <section>
+            <h3>Effect of impaired reasoning and executive function</h3>
+            <p>Symbol users may find it hard to plan a route through web pages unless navigation is clear</p>
+            <p> They may have other physical and cognitive impairments affecting their understanding and use of navigation controls </p>
+            <p>AAC users may also be overwhelmed by the amount of interactions required to complete tasks.</p>
+        </section>
+        <section>
+            <h3>Effect of attention-related limitations</h3>
+            <p>Symbol users may find large amounts of text reduces attention but symbol based content helps concentration. </p>
+        </section>
+        <section>
+            <h3>Effect of impaired language and auditory perception related functions</h3>
+            <p>Symbol users may find dense text based content with audio output confusing whereas audio with symbols may be helpful.</p>
+        </section>
+        <section>
+            <h3>Effect of impaired literacy-related functions</h3>
+            <p>Symbol users may not comprehend the meaning of text based content and may fail to act correctly when warnings or other interactive items appear on the web.</p>
+        </section>
+        <section>
+            <h3>Effect of reduced knowledge</h3>
+            <p>Symbol users may fail to recognize images, such as symbols or icons that are not in their known set and may lack the ability to use the web as it has been intended, failing to find understandable icons or imagery that provides easy to use navigation or content.</p>
+        </section>
+        <section>
+            <section>
+                <h2>Proposed Solutions</h2>
+                <p>The strategy of mapping symbol sets to a common vocabulary may allow developers to incorporate helpful symbols knowing these can be automatically presented to the user in their own symbol language. This schema would also allow symbol users to use their own symbols in an edit box or form knowing it can be recognised by other symbol users with the automatic translation. The primary solutions for the mapping symbols for symbol users could be divided into three different user scenarios. For all these scenarios, the symbols presented to the symbol users could be alternative and adaptive based on the users' preference.</p>
+                <ul>
+                    <li>Adaptive Symbols in the Web Content</li>
+                    <li>Adaptive Symbols in the User Agent</li>
+                    <li>Adaptive Symbols in the Web Authoring Tools</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Using proposed syntax</h3>
+                <p> One option for interoperable symbol mapping uses the proposed syntax: aria-concept = &quot;uri&quot; to reference target concept URI. For example:
+                    <pre>
+                        &lt;img aria-concept=&quot;http://wordnet.org/somepage#girlnode&quot; src=&quot;girlwithbow.gif&quot;/&gt;
+                    </pre>
+                    <p>
+                        This aria-concept syntax could take advantage of the Concept Coding Framework (CCF). Due to the lack of standardised encoding schemes and common practises, it is difficult to reference to and exchange symbols as an alternative or complement to character based texts. Therefore, the CCF provides a common framework to link and map these symbols (currently Blissymbolics and ARASAAC symbols, and eventually other alternative representations) based on the concept coding. For example, the presentation of cat symbol (concept coding: cc-cat-1001) in this scenario would be as follows:
+                    </p>
+                    <p> For the Cat concept: cc-cat-1001, there are different symbols to represent this concept across different symbols providers.
+                        <ul>
+                            <li>If user prefer ARASSC symbols:
+                                <pre> &lt;img aria-concept=&quot; http://www.conceptcoding.org/ontologies/2011/09/01/ConcetpDefinitions#cc-cat-1001&quot; src=&quot; http://www.catedu.es/arasaac/repositorio/thumbs/10/200/9/9881.png&quot;/&gt;
+                              </pre>
+                            </li>
+                            <li>If user prefer Bliss symbols:
+                                <pre>&lt;img aria-concept=&quot; http://www.conceptcoding.org/ontologies/2011/09/01/ConcetpDefinitions#cc-cat-1001&quot; src=&quot; http://www.symbolforwindows.eu/images/Bls_cat.gif&quot;/&gt;
+                                </pre>
+                            </li>
+                            <li>or other symbols</li>
+                        </ul>
+                    </p>
+            </section>
+            <section>
+                <h3>Mapping symbols</h3>
+                <p>
+                    In order to map the symbols from different dictionaries, one of the approaches could be the use of an ontology and Semantic Web technologies to enable interoperability of symbols datasets.</p>
+                <p> An ontology is a formal specification of a shared conceptualization (see refs). In Semantic Web, a vocabulary can be considered as a special form of (usually light-weight) ontology, or sometimes also merely as a collection of <a href="http://semanticweb.org/wiki/URI" title="URI">URIs</a> with a (usually informally) described meaning. Linked Data is a term used to describe a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using URIs and RDF (The Resource Description Framework, W3C recommend metadata data model). The Concept Encoding Framework Workout Group (see refs) provides the multilingual and multi-modal lexical ontology resources of the CCF to be made available in a Linked Open Data (LOD) format. It also allows users to search symbols based on different concepts and metadata, such as language, symbol datasets, localization. The following example demonstrates using the RDFa to represent the mapping between symbols based on concept coding.
+                </p>
+                <ul>
+                    <li> The ARASAAC monitor symbol:
+                        <pre>&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot; prefix=&quot; rdf:http://www.w3.org/1999/02/22-rdf-syntax-ns# ccf: http://www.conceptcoding.org/Ontologies/2014/07/ccf-owl-ns# rdfs: http://www.w3.org/2000/01/rdf-schema#&quot;&gt;
+                            <br /> &lt;div typeof=&quot;ccf:RepresentationItem&quot; about=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ArasAssistiveOntologgy#ARAS274521001&quot;&gt;
+                            <br /> &lt;div property=&quot;ccf:example&quot; content=&quot;&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;div rel=&quot;ccf:concept&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ArasAssistiveOntologgy#ARAS1104789601000&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;div property=&quot;ccf:representationData&quot; content=&quot;file:representations/aras/monitor_(2).png&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;div rel=&quot;ccf:representationType&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ArasAssistiveOntologgy#aras&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;/div&gt;
+                            <br />&lt;/div&gt;
+                        </pre>
+                    </li>
+                    <li>The concept monitor presented in CCF Linked Data:
+                        <pre>&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot; prefix=&quot; df: http://www.w3.org/1999/02/22-rdf-syntax-ns# ccf: http://www.conceptcoding.org/Ontologies/2014/07/ccf-owl-ns# rdfs: http://www.w3.org/2000/01/rdf-schema#&quot;&gt;
+                            <br /> &lt;div typeof=&quot;ccf:ConceptCode&quot; about=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ConceptCodeDefinitions#cc-monitor-1001&quot;&gt;
+                            <br /> &lt;div property=&quot;ccf:lemma&quot; content=&quot;monitor&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;/div&gt;
+                            <br /> &lt;/div&gt;
+                        </pre>
+                    </li>
+                    <li>Base Concept:
+                        <pre>&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot; prefix=&quot; rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# ccf: http://www.conceptcoding.org/Ontologies/2014/07/ccf-owl-ns# rdfs: http://www.w3.org/2000/01/rdf-schema#&quot;&gt;
+                            <br /> &lt;div typeof=&quot;ccf:RepresentationItem&quot; about=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/BaseReferenceOntology#EN-3721-1001&quot;&gt;
+                            <br /> &lt;div property=&quot;ccf:example&quot; content=&quot;&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;div rel=&quot;ccf:representationType&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/BaseReferenceOntology#en&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;div rel=&quot;ccf:concept&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/BaseReferenceOntology#BRO-110478960-1000&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;div property=&quot;ccf:representationData&quot; content=&quot;monitor, monitors&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;/div&gt;
+                            <br /> &lt;/div&gt;
+                        </pre>
+                    </li>
+                    <li> Mapping (BRO-114078960-1000 and ARAS-110478960-1000 based on concept cc-monitor-1001)
+                        <pre>&lt;div xmlns=&quot;http://www.w3.org/1999/xhtml&quot; prefix=&quot;rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns# ccf: http://www.conceptcoding.org/Ontologies/2014/07/ccf-owl-ns# rdfs: http://www.w3.org/2000/01/rdf-schema#&quot; &gt;
+                            <br /> &lt;div typeof=&quot;ccf:Mapping&quot; about=&quot;http://www.conceptcoding.org/Ontologies/2011/09/01/StandardBridge#9900145925429353419727587434&quot;&gt;
+                            <br /> &lt;div rel=&quot;ccf:relatesConcept&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/BaseReferenceOntology#BRO-110478960-1000&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;div rel=&quot;ccf:relatesConceptCode&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ConceptCodeDefinitions#cc-monitor-1001&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;div rel=&quot;ccf:relatesConcept&quot; resource=&quot;http://www.conceptcoding.org/ontologies/2011/09/01/ArasAssistiveOntologgy#ARAS-110478960-1000&quot;&gt;&lt;/div&gt;
+                            <br /> &lt;/div&gt;
+                            <br /> &lt;/div&gt;
+                        </pre>
+                    </li>
+                </ul>
+            </section>
+            <p>This approach mainly requires the symbol dataseat providers to publish the symbols and their concepts as "Linked Open Data". As one of four principles in Linked Data, the URI naming for the concepts could provide the target concept link described in the first solution. It could also provide the alternative same concept symbols based on preferred properties, such as localization, language and colour etc.</p>
+        </section>
+    </section>
+    <section>
+        <h2>References</h2>
+        <p>Lundalv, M. &amp; Derbring. S. (2012). AAC vocabulary standardisation and harmonisation.<em> Lecture Notes in Computer Science. 7383,</em> 303-310. doi: 10.1007/978-3-642-31534-3_46.
+            <br />
+            <a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46">http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46</a> (Accessed 11 June, 2015)
+            <br /> lemon - The Lexicon Model for Ontologies <a href="http://lemon-model.net/index.php">http://lemon-model.net/index.php</a> (Accessed 6th July, 2015)
+            <br /> Lundalv, M., Derbring. S., Brännström, A., Farre, B. &amp; Nordberg, L. (2013) Inclusive AAC Multi-modal and Multilingual Language Support for All <a href="http://www.conceptcoding.org/AAATE_2013_Inclusive_AAC-MMLS4All.pdf">http://www.conceptcoding.org/AAATE_2013_Inclusive_AAC-MMLS4All.pdf</a> (Accessed 6th July, 2015)
+            <br /> Gruber, T. (2009) Ontology definition (updated) http://tomgruber.org/writing/ontology-definition-2007.htm (Accessed 6th July, 2015)</p>
+    </section>
+    <section>
+</body>
+
 </html>
