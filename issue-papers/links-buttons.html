@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Issue Paper: Adaptable Links and Buttons </title>
+		<title>Proposal: COGA Semantics to Enable Personalization</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
 		<script src="../common/biblio.js" class="remove"></script>
 		<script class="remove">
@@ -107,7 +107,8 @@
 		<section>
 			<h2>Introduction</h2>
 <p>Personalization involves tailoring aspects of the user experience to  meet the preferences or needs of the user. For example, having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be new for another requiring them to learn new symbols. Personalization could include loading a set of symbols that is appropriate for the specific user, ensuring that all users find the icons simple and familiar.<br />
-Technology holds the  promise of being extremely flexible and the design of many systems includes the  expectation that users will be able to optimise their interaction experience  according to their personal preferences or accessibility  requirements (needs).  <br />
+Technology holds the  promise of being extremely flexible and the design of many systems includes the  expectation that users will be able to optimise their interaction experience  according to their personal preferences or accessibility  requirements (needs).  
+<p></p>
 We need personalization  because:  </p>
     <ul>
       <li>Different user needs can conflict  </li>
@@ -129,9 +130,9 @@ We need personalization  because:  </p>
                 </ul>
                 <p>For this we need standardized terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use via an attribute and personal preferences. </p>
                 <p>For example, assume  an author can make it programanticaly known that a button is used to send an email. At at the user end, the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
-                <p>Working examples of how this could be used in practice with user preferences are available at <a href="https://github.com/ayelet-seeman/coga.personalisation">https://github.com/ayelet-seeman/coga.personalisation</a>. This is a project to help personalization for any use - including   people with learning and memory issues. It is described more at: <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization</a>. </p>
+                <p>Working examples of how this could be used in practice, with user preferences, are available at <a href="https://github.com/ayelet-seeman/coga.personalisation">https://github.com/ayelet-seeman/coga.personalisation</a>. This is a project to help personalization for any use - including   people with learning and memory issues. It is described more at: <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization</a>. </p>
 	<p></p>
-        <p>It is made of 4 parts:</p>
+        <p>This project consists of 4 parts:</p>
     <ol>
           <li>JSON files for user setting: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script">https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script</a></li>
       <li>Proposal for new syntax: (This document) <br/>
@@ -139,52 +140,49 @@ We need personalization  because:  </p>
           <li>An HTML page that uses some of the new  syntax: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/">https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/</a></li>
           <li>Scripts that a web author can use or include that read the user   settings in the JSON files and adapt the page for  the user needs: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options">https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options</a></li>
         </ol>
-                <p>This is only one example way to use the semantics. Others may follow. It is also worth noting that the GPII project is working on making user preferences portable which would also enhance this work.</p>
-                <p>In another use-case we would like to see interoperable symbol set codes for non-verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write and are not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. An open set of references for symbol codes for these symbol sets however, could be interoperable. That means the end user could use  an open source symbol set or buy the symbols and use them across different devices or applications. Symbols could still be proprietary but they would also be interoperable. </p>
-		</section>
-		<section>
-			<h3>Contextual Personalization</h3>
-    <p>One important factor in optimizing the personalization of a product or  service is to ensure that the personalization is appropriate for the current  context of use. For example, settings that will suit the user of a mobile phone  in their office or home will not be well suited to that user when they are  driving a car. In their home or office a typical user would probably prefer to  send and receive text messages using the keyboard and screen of the mobile  phone. However, in the car, voice input and text to speech output would be the  most appropriate. In this car context, the profile settings of a typical user  might be very similar to those that a blind user would use in all contexts.</p>
-			</ul>
+                <p>This is one example of personalization based on semantics. Others may follow. It is also worth noting that the GPII project is working on making user preferences portable which would also enhance this work.</p>
+                <p>In another use-case we would like to see interoperable symbol set codes for non-verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write and are not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. An open set of references for symbol codes for these symbol sets however, could be interoperable. That means the end user could use an open source symbol set or buy the symbols and use them across different devices or applications. Symbols could still be proprietary but they would also be interoperable. </p>
+                <section>
+                        <h3>Contextual Personalization</h3>
+    			<p>One important factor in optimizing the personalization of a product or  service is to ensure that the personalization is appropriate for the current  context of use. For example, settings that will suit the user of a mobile phone  in their office or home will not be well suited to that user when they are  driving a car. In a home or office, the typical user would probably prefer to send and receive text messages using the keyboard and screen of the mobile phone. However, in the car, voice input and text to speech output would be the most appropriate. In this car context, the profile settings of a typical user  might be very similar to those that a blind user would use in all contexts.</p>
+                </section>
+
 		</section>
 		<section>
 			<h2>Simplification</h2>
-                        <p>Requirement: We request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective. Typicaly, critical features may be used by many or most users, 90% of the time or more. High would be above 60% use. Medium features would be 20% of users use it 20% of the time . Under 20% usage would be low.</p>
-                        <p>User experience: Based on personalization setting the user can see less options. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
-                        <p>Proposed attribute: Add new attribute called coga-simplification (Note, this was called coga-importance) This could be an ARIA attribute with the following settings:1 (main task such as send for an email </p>
+                        <p><strong>Requirement</strong>: The user must be able to request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective in the content. Typically, critical features may be used by many or most users, 90% of the time or more. High important features would be above 60% use. Medium important features would be 20% of users use it 20% of the time . Under 20% usage would be of low importance.</p>
+                        <p><strong>User experience</strong>: Based on personalization setting the user can see less options. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
+                        <p><strong>Proposed attribute</strong>: coga-simplification (formerly coga-importance). Having the following values: (main task such as send for an email) </p>
                         <ul>
-                                <li>                               coga-simplification= &quot;simplest&quot;. This  setting should be used on:
+                                <li><code>coga-simplification="simplest"</code>. This  setting should be used on:
                                   <ul>
                                     <li> Elements that are essential for the key  function (from the user perspective) of the page (Example: The send button for  an email draft) or</li>
-                                    <li>                                    Elements  that are sometimes critical to a user being able to use the site, such as  &quot;save my work&quot; or &quot;emergency instructions&quot; or</li>
-                                    <li>                                      Elements  that are used by over 90% of a u
-ser group (such as parents or teachers) use  this element most times they use the content<br />
+                                    <li> Elements  that are sometimes critical to a user being able to use the site, such as  &quot;save my work&quot; or &quot;emergency instructions&quot; or</li>
+                                    <li> Elements  that are used by over 90% of a user group (such as parents or teachers) use  this element most times they use the content<br />
                                 </li>
                               </ul>
                                 </li>
                         </ul>
-                        <blockquote>
-                          <p>Typically  3 links or buttons would be considered &quot;simplest&quot;</p>
-                  </blockquote>
+                        <p>Typically  3 links or buttons would be considered &quot;simplest&quot;</p>
                         <ul>
-                          <li> coga-simplification= &quot;high&quot;. This  setting should be used on:
+                          <li> <code>coga-simplification="high"</code>. This setting should be used on:
                 <ul>
                   <li> Elements that are used frequent  (Example: The delete button for an email draft)  or</li>
                   <li> Elements  that are sometimes important to a user being able to use the site, such as  settings or</li>
                   <li> Elements  that are used by frequently (over 60%) by a user group (such as parents or teachers) use  this element most times they use the content</li>
                 </ul>
                           </li>
-                          <li> coga-simplification= "med". This  setting should be used on elements that are not typically used.</li>
-                          <li> coga-simplification= "low". This  setting should be used on elements that are rarely used or only used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
+                          <li> <code>coga-simplification= "med"</code>. This  setting should be used on elements that are not typically used.</li>
+                          <li> <code>coga-simplification="low"</code>. This  setting should be used on elements that are rarely used or only used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
                   </ul>
-                        <pre>Note that these semantics aid simplification. But what content is most useful to a user varies from user to user. For example, men may be more interested in mens clothing, and may not be interested in the more frequently use womens clothing option. For that reason we may add context for elements that will help the personalization agent select the most useful content for a given user. This is also necessary for reminders (see bellow). RDFa may be the best way forward for this aspect.</pre>
-                  <pre> It is worth mentioning that a lot of this information is known for personalization of advertisements and content optimization. </pre>
-
+			<div class="note">
+                        <p>These semantics aid simplification. But what content is most useful to a user varies from user to user. For example, men may be more interested in mens clothing, and may not be interested in the more frequently use womens clothing option. For that reason we may add context for elements that will help the personalization agent select the most useful content for a given user. This is also necessary for reminders (see bellow). RDFa may be the best way forward for this aspect.</p>
+                  <p> It is worth mentioning that a lot of this information is known for personalization of advertisements and content optimization. </p>
+			</div>
 		</section>
                 <section>
                  <h2>Adding Context </h2>
-                        <h3>Requirement </h3>
-                        <p>Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. If a user agent or script knows the context of links, buttons and other page elements then symbols and text used can be ones that the user understands. This can include: </p>
+                        <p><strong>Requirement:</strong> Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. If a user agent or script knows the context of links, buttons, and other page elements then symbols and text used can be ones that the user understands. This can include: </p>
       <ul>
        <li> Symbols and graphics that they are familiar with </li>
        <li> Tool tips </li>
@@ -192,15 +190,15 @@ ser group (such as parents or teachers) use  this element most times they use th
        <li> Keyboard short cuts </li>
       </ul>
       <p> </p>
-      <p>For that we need to <b>standardize supportive syntax</b> and terms that can be linked to associated symbols, terms, translations and explanations for the individual use via an  attribute.</p>
+      <p>For that we need to standardize supportive syntax and terms that can be linked to associated symbols, terms, translations and explanations, for the individual, via an attribute.</p>
       <p> </p>
-      <p><b>Example user experience:</b>, if an Author gives to a button a role "send" then, without any work for the author, at the user end the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
-                        <p><strong>Proposed attribute:</strong> coga-action</p>
-                        <p>For example: &lt;button type="button" coga-action=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
+      <p><strong>Example user experience:</strong>, if an author gives to a button a role "send" then, without any work by the author, the button could be automatically rendered with a symbol, term, and/or tooltips that is understandable by a particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
+                        <p><strong>Proposed attribute:</strong> <code>coga-action</code></p>
+                        <p>For example: &lt;button coga-action=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
                         <p>The user experience may be simply replacing the text for the term &quot;undo&quot;.</p>
                         <p><strong>Supported Values: </strong></p>
-                        <p>The following could be supported values of coga-action. coga-action values that would typically be on buttons are:</p>
-                       <ul>
+                        <p>The following could be supported values of <code>coga-action</code> for buttons:</p>
+			<ul>
                                 <li>compose(default importance = "critical") </li>
                                 <li>delete </li>
                                 <li>next </li>
@@ -209,9 +207,7 @@ ser group (such as parents or teachers) use  this element most times they use th
                                 <li>undo </li>
                                 <li>cancel </li>
                                 <li>buy</li>
-                        </ul>
-                        <ul>
-                          <li>add label </li>
+                                <li>add label </li>
                                 <li>move </li>
                                 <li>view </li>
                                 <li>save (default importance = "critical") </li>
@@ -227,24 +223,22 @@ ser group (such as parents or teachers) use  this element most times they use th
                                 <li>more </li>
                                 <li>calendar </li>
                                 <li>add entry </li>
-                        </ul>
-                        <ul>
                                 <li>expand </li>
                                 <li>unexpanded </li>
-                                <li>Open </li>
+                                <li>open </li>
                                 <li>new </li>
                                 <li>print </li>
                                 <li>settings </li>
                         </ul>
 		</section>
 		<section>
-     			<p><strong>Proposed attribute:</strong>coga-destination</p>
-     			<p>coga-destination, give the context of a link. It should be used on a link element or element with role of link.</p>
-     			<p>For example: &lt;a href=&quot;home.html&quot; coga-destination=&quot;home&quot; &gt;our main page&lt;/a&gt;</p>
+     			<p><strong>Proposed attribute:</strong><code>coga-destination</code></p>
+     			<p>The <code>coga-destination</code> attribute provides the context of a link. It should be used on a link element or element with role="link".</p>
+     			<p>For example: &lt;a href=&quot;home.html&quot; coga-destination=&quot;home&quot; &gt;our main page&lt;/a&gt;</p>
      			<p>The user experience may be simply replacing the text for the term &quot;home&quot; and adding an icon.  Based on personalization setting the user can see diffrent icons. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
      			<p>It may also position this button to a location on the screen where the user is expecting the home page link.</p>
      			<p><strong>Supported Values: </strong></p>
-     			<p>The following could be supported values of coga-destination.              </p>
+     			<p>The following could be supported values of <code>coga-destination</code>.              </p>
      			<ul>
         	   		<li>home </li>
 	        	        <li>contact us </li>
@@ -269,8 +263,8 @@ ser group (such as parents or teachers) use  this element most times they use th
            		</ul>
 		</section>
                 <section>
-                        <p><strong>Proposed attribute:</strong>coga-field</p>
-      			<p>coga-field, give the context of a field such as a text box. It should be used on an input, text a responding role.</p>
+                        <p><strong>Proposed attribute:</strong><code>coga-field</code></p>
+      			<p><code>coga-field</code> provides the context of a text input field such as a text box. It should be used on an input, text a responding role.</p>
       			<p>For example: &lt;input type="text" name="fname" coga-field=&quot;phone&quot;/&gt;</p>
       			<p>The user experience may include filling in the field and adding an icon.</p>
       			<p>coga-field values that would typically be on form controls and would have a user context - for example phone would relate to the user's phone</p>
@@ -279,7 +273,7 @@ ser group (such as parents or teachers) use  this element most times they use th
                          	<li>first name </li>
                                 <li>family name </li>
                                 <li>initial </li>
-                                <li>phone (corresponds to user phone number)</li>
+                                <li>phone (corresponds to a user phone number)</li>
                                 <li>cell phone </li>
                                 <li>address 1 </li>
                                 <li>city </li>
