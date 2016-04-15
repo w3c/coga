@@ -134,7 +134,7 @@ We need personalization  because:  </p>
 	<p></p>
         <p>This project consists of 4 parts:</p>
     <ol>
-          <li>JSON files for user setting: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script">https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script</a></li>
+          <li><a href="https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script">JSON files for user setting</a></li>
       <li>Proposal for new syntax: (This document) <br/>
         </li>
           <li>An HTML page that uses some of the new  syntax: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/">https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/</a></li>
@@ -263,7 +263,7 @@ We need personalization  because:  </p>
            		</ul>
 		</section>
                 <section>
-                        <p><strong>Proposed attribute:</strong><code>coga-field</code></p>
+                        <p><strong>Proposed attribute: </strong><code>coga-field</code></p>
       			<p><code>coga-field</code> provides the context of a text input field such as a text box. It should be used on an input, text a responding role.</p>
       			<p>For example: &lt;input type="text" name="fname" coga-field=&quot;phone&quot;/&gt;</p>
       			<p>The user experience may include filling in the field and adding an icon.</p>
@@ -301,38 +301,54 @@ We need personalization  because:  </p>
                 </section>
          	<section>
            		<h2>General context</h2>
-           		<p> One important factor in optimizing the personalization of a product or   service is to ensure that the personalization is appropriate for the   current context of use as well as what is relevant for the user. For example a female user with a cognitive disability may need less options, and options that are for men are less likely to be relevant for her and may be demoted to bellow the scroll or placed under a &quot;more option&quot; button.</p>
+           		<p><strong>Requirement: </strong> One important factor in optimizing the personalization of a product or   service is to ensure that the personalization is appropriate for the   current context of use as well as what is relevant for the user. For example a female user with a cognitive disability may need less options, and options that are for men are less likely to be relevant for her and may be demoted to bellow the scroll or placed under a &quot;more option&quot; button.</p>
            		<p><strong>Proposed attribute:</strong>coga-context</p>
            		Coga-context would let the author give additional contextual information about the content.
            		<p> Coga-context accepts the values of a URI or shortened URI.</p>
            		<pre>&lt;a href=&quot;women.html&quot; coga-context=&quot;openref:gender#femail&quot;&gt;women&lt;/a&gt; </pre>
            		<p>To make this work without an RDF parser we recommend maintaining a list of recommended ontologies. </p>
+			<section>
+                        	<h3>Should we be using RDFa?</h3>
+                        	<p>The context based properties should be convertible to RDFa. (see <a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa Primer</a>) and the task force should create this mapping.</p>
+                        	<p>Note that a lot of this can be done using RDFa.  However it is easy to change the meaning with RDFa and a very basic parser will misinterpret the result. The coga work needs to be usable by as many authors as possible, and not only thoughs who can implement  RDF logic.</p>
+                        	<p>Further , personalization setting need to be limited, and RDF can give an unlimited  number of potential options which will make the system unusable. (This is unless we create restrictions and controls on an ontology uses - such as mapping to know ontologies.)</p>
+                        	<p>For example, in the code below the property homepage does not refer to the home page of the site but of the person being references.  Beyond declaring the type of data we are dealing with, each typeof                              creates a new blank node with its own distinct properties. </p>
+                        	<pre>
+&lt;div vocab="http://xmlns.com/foaf/0.1/"&gt;
+&lt;ul&gt;        
+	&lt;li typeof="Person"&gt;          
+	&lt;a property="homepage" href="http://example.com/bob/"&gt;Bob&lt;/a&gt;        
+	&lt;/li&gt;        
+	&lt;li typeof="Person"&gt;          
+	&lt;a property="homepage" href="http://example.com/eve/"&gt;Eve&lt;/a&gt;        
+	&lt;/li&gt;        
+	&lt;li typeof="Person"&gt;         
+		&lt;a property="homepage" href="http://example.com/manu/"&gt;Manu&lt;/a&gt;        
+	&lt;/li&gt;     
+&lt;/ul&gt;
+				</pre>
+                        <p> </p>
+                        <p>We may recommend adding RDFA that describe the role of the item (see <a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa Primer</a>):</p>
+                        <pre>
+&lt;div resource="/alice/posts/jos_barbecue"&gt;
+	&lt;h2 property="title"&gt;Jo's Barbecue&lt;/h2&gt;
+	&lt;p&gt;Date: &lt;span property="created"&gt;2011-09-14&lt;/span&gt;&lt;/p&gt;
+	&lt;h3 property="creator"&gt;Eve&lt;/h3&gt;        
+	...     
+&lt;/div&gt;
+			</pre>
+                        <p> </p>
+                	</section>
+
          	</section>
-		<section>
-         		<h3>Should we be using RDFa?</h3>
-           		<p>The context based properties should be convertible to RDFa. (see https://www.w3.org/TR/xhtml-rdfa-primer/) and the task force should create this mapping.</p>
-           		<p>Note that a lot of this can be done using RDFa.  However it is easy to change the meaning with RDFa and a very basic parser will misinterpret the result. The coga work needs to be usable by as many authors as possible, and not only thoughs who can implement  RDF logic.</p>
-           		<p>Further , personalization setting need to be limited, and RDF can give an unlimited  number of potential options which will make the system unusable. (This is unless we create restrictions and controls on an ontology uses - such as mapping to know ontologies.)</p>
-           		<p>For example, in the code below the property homepage does not refer to the home page of the site but of the person being references.  Beyond declaring the type of data we are dealing with, each typeof                              creates a new blank node with its own distinct properties. </p>
-           		<div>
-             		<div></div>
-             		<pre>&lt;div vocab="http://xmlns.com/foaf/0.1/"&gt;
-&lt;ul&gt;        &lt;li typeof="Person"&gt;          &lt;a property="homepage" href="http://example.com/bob/"&gt;Bob&lt;/a&gt;        &lt;/li&gt;        &lt;li typeof="Person"&gt;          &lt;a property="homepage" href="http://example.com/eve/"&gt;Eve&lt;/a&gt;        &lt;/li&gt;        &lt;li typeof="Person"&gt;          &lt;a property="homepage" href="http://example.com/manu/"&gt;Manu&lt;/a&gt;        &lt;/li&gt;     &lt;/ul&gt;</pre>
-           		</div>
-           		<p> </p>
-           		<p>We may recommend adding RDFA that describe the role of the item (see <a href="http://www.w3.org/TR/rdfa-primer/">http://www.w3.org/TR/rdfa-primer/</a>)</p>
-           		<pre>&lt;div resource="/alice/posts/jos_barbecue"&gt;
- &lt;h2 property="title"&gt;Jo's Barbecue&lt;/h2&gt;
-&lt;p&gt;Date: &lt;span property="created"&gt;2011-09-14&lt;/span&gt;&lt;/p&gt;
-&lt;h3 property="creator"&gt;Eve&lt;/h3&gt;        ...     &lt;/div&gt;</pre>
-           		<p> </p>
-    		</section>
          	<section>
                  	<h2>Concept codes</h2>
-                        <p>We would like to enable interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. There are open set of symbol codes for these symbol sets, that could be referenced then they can be interoperable. alternatively wordnet nodes could be referenced. If the users symbols are mapped to the same nodes then users agents will be able to load the user understandable symbol. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
+                        <p><strong>Requirement: </strong>We would like to enable interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. There are open set of symbol codes for these symbol sets, that could be referenced then they can be interoperable. alternatively wordnet nodes could be referenced. If the users symbols are mapped to the same nodes then users agents will be able to load the user understandable symbol. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
       			<p>User experience: AAC users will load symbols that they understand in different applications that are made by a different provider.</p>
-      			<p><strong>Proposed attribute:</strong> coga-concept</p>
-      			<p>value=URL</p>
+      			<p><strong>Proposed attribute:</strong> <code>coga-concept</code></p>
+      			<p><strong>Supported Values:</strong> 
+				URL
+			</p>
       			<p><strong>Examples:</strong></p>
       			<p>&lt;img coga-concept="http//wordnet.com/node/girl&quot; href=&quot;mygirlsy.bmp/&gt; </p>
       			<p> </p>
@@ -368,8 +384,8 @@ We need personalization  because:  </p>
 			</pre>
 		</section>
 		<section>
-			<h2>Non literal text and images</h2>
-			<p>Requirement: Not everyone can understand non-literal text and icons such as metaphors, idioms etc.
+			<h2>Non-literal text and images</h2>
+			<p><strong>Requirement: </strong>Not everyone can understand non-literal text and icons such as metaphors, idioms etc.
  We need a tag that identifies text or images as non literal and  allows the author to explain non-literal text and images to users.</p>
 			<p><strong>User experience:</strong></p>
 			<p>A suggested user experience would be: Non literal content could be rendered by the user agent slightly differently so that the user knows that this content should not be taken literally and that a literal explanation is available. The user can then mouse over the content and a tooltips would give the literal value.</p>
@@ -383,33 +399,40 @@ We need personalization  because:  </p>
 		</section>
 		<section>
                  	<h2>Explain and feedback</h2>
-                        <p>Requirement: Some users need additional help. we request an attribute where the author can provide additional information.or what just happened.</p>
-                        <h3>Proposed attribute:</h3>
-                        <h4><strong>coga-feedback</strong> </h4>
+                        <p><strong>Requirement: </strong>Some users need additional help. We request an attribute where the author can provide additional information.or what just happened.</p>
+                        <strong>Proposed attribute: </strong><code>coga-feedback</code>
  This attribute provides immediate feedback that can be shown or spoken when any event is triggered on a control.
-                        <p> User experience: This can be rendered as text at the top of the page and read immediately. Most users will not want this text rendered and spoken. Other users however will need it to know what has just happened. </p>
-                        <h4><strong>coga-explain</strong> </h4>
+                        <p><strong>User experience: </strong>This can be rendered as text at the top of the page and read immediately. Most users will not want this text rendered and spoken. Other users however will need it to know what has just happened. </p>
+                        <strong>Proposed attribute: </strong><code>coga-explain</code> 
 This attribute explains the element's role.
-                        <p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
-                        <h3>Examples:</h3>
-                        <p> coga-feedback= "your email was sent" </p>
-                        <p>coga-explain= "this item costs more" </p>
-        	</section>
-       <section>
-<h3><strong>More Help</strong></h3>
-<p><strong>Proposed attribute</strong>:  coga-moreinfo and coga-extrahelp</p>
-<p> coga-moreinfo - supported values: URL</p>
-<p>coga-extrahelp - supported values: tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
-<p><strong>example</strong></p>
-<blockquote>
-  <p>&lt;button type="button" coga-moreinfo=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</p>
-</blockquote>
+		<p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
+		<h3>Examples:</h3>
+		<p> coga-feedback= "your email was sent" </p>
+		<p>coga-explain= "this item costs more" </p>
+	</section>
+<section>
+<h3>More Help</h3>
+<p><strong>Requirement: </strong>Some users may need additional information or specifically additional help inforamtion. We request additonal attributes so that an author can indicate the existence of this additional information.</p>
+<p><strong>Proposed attribute: </strong>:<code>coga-moreinfo</code></p>
+<p><strong>Supported values: </strong>URL</p>
+<p><strong>Proposed attribute: </strong><code>coga-extrahelp</code></p>
+<p><strong>Supported values: </strong>  tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
+<p><strong>Example:</strong></p>
+<p>&lt;button type="button" coga-moreinfo=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</p>
 <p>URI 2 may read: </p>
-<p> &lt;div id=&quot;uri2&quot; coga-extrahelp=&quot;morehelp&quot; coga-hidden=&quot;true&quot;&gt; pressing the undo button will erase all your work on this page. Use this button with care. If you press it by mistake, press control and y at the same time and your answers will come back. &lt;/div&gt;</p>
-<p> &lt;a href=&quot;functiongethelp()&quot; coga-extrahelp=&quot;humanhelp&quot; coga-hidden=&quot;true&quot;&gt;I want a person to help me&lt;/a&gt;</p>
-<p>&lt;div id=&quot;uri3&quot; coga-extrahelp=&quot;glossary&quot; coga-hidden=&quot;true&quot;&gt;</p></section>
+<pre>
+&lt;div id=&quot;uri2&quot; coga-extrahelp=&quot;morehelp&quot; coga-hidden=&quot;true&quot;&gt;
+pressing the undo button will erase all your work on this page. Use this button with care. 
+If you press it by mistake, press control and y at the same time and your answers will come back. 
+&lt;/div&gt;
+
+&lt;a href=&quot;functiongethelp()&quot; coga-extrahelp=&quot;humanhelp&quot; coga-hidden=&quot;true&quot;&gt;
+I want a person to help me
+&lt;/a&gt;
+&lt;div id=&quot;uri3&quot; coga-extrahelp=&quot;glossary&quot; coga-hidden=&quot;true&quot;&gt;</p></section>
+</pre>
                 <section>
-                 <h2>Note</h2>
+                 <h2>Potential Features</h2>
                         <p>The following may not be necessary </p>
                         <ul>
                                 <li>Views </li>
@@ -420,77 +443,79 @@ This attribute explains the element's role.
                                 <li>today </li>
                         </ul>
                 </section>
-                <section>
-                        <h2>Additional roles</h2>
-     			<p>We may want to add roles for sections a a page such as: contact us - for a contact us form  </p>
-     			<p><strong>User experience: </strong>symbols and colors could be used consistently across different content.</p>
-     			<p>Nav maps can be automatically generated for people learn via key-points or examples.</p>
-     			<p> Further these sections could be hidden in the normal rendering of a page or rendered the top of page depending on user preferences. The location of these sections can also be changed, based on the user preference, enabling the user to find them easily.</p>
-     			<p>Values:</p>
-     			<p></p>
-     			<ul>
-      				<li>summary</li>
-      				<li>keypoints</li>
-      				<li>example</li>
-      				<li>note</li>
-      				<li>warning</li>
-      				<li>step</li>
-      				<li>external - for external content, such as sponsored or advertising</li>
-      				<li>offers - for special offers that are complementary to the main content or task</li>
-      				<li>advertisement - advertisement or sponsored content</li>
-      				<li>contactus</li>
-      				<li>aboutus</li>
-     			</ul>
-     			<p> </p>
-		</section>
 		<section>
-			<h2><strong>Language type support </strong></h2>
-			<p><strong>Proposed attributes</strong>: coga-alternative</p>
-			<p>Sometimes you may want to provide a simplified version of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users. These alternative versions may not be identical in content but maintain the gist of the original content.</p>
-			<p><strong>coga-alternative </strong>would be used on an alternitive content as an alternative to more detailed or difficult to understand content. coga-alternative can be used on a span, div, link or image that servers as alternitive content to it's direct parent element.</p>
-			<p><strong>coga-alternative</strong> supported values:</p>
+			<h2>Language type support</h2>
+			<p><strong>Requirement: </strong>Sometimes you may want to provide a simplified version of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users. These alternative versions may not be identical in content but maintain the gist of the original content.</p>
+			<p><strong>Proposed attribute: </strong><code>coga-alternative</code> Would be used on an alternitive content as an alternative to more detailed or difficult to understand content. coga-alternative can be used on a span, div, link or image that servers as alternitive content to it's direct parent element.</p>
+
+			<p><strong>Supported values:</strong> </p>
 			<ul>
  				<li>On text: easylang, explain, more, vocab500, vocab1000, vocab2000, active, literal, numberfree, smallsentences, chunks, General: lessoptions. Whitespace, largefont </li>
  				<li>Images: symbolic , realistic</li>
- 				<li> p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt=&quot;&quot;, P2 are extra illustration that most people will not mind such as at the start of a paragraph or option. p3 are for disability centric illustrations that can disturb other people and may be mid sentence. </li>
+ 				<li>p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt=&quot;&quot;, P2 are extra illustration that most people will not mind such as at the start of a paragraph or option. p3 are for disability centric illustrations that can disturb other people and may be mid sentence. </li>
 				</ul>
 
- 			<strong>Example</strong> 
+			<strong>Example:</strong>
 			<div><em>&lt;div&gt;</em></div>
-			<div><em>&lt;span  </em><em> coga-</em><em>alternative</em><em>="easylang numberfree vocab1000"  class="hidden"&gt;</em><em>most people prefer simple text</em><em>&lt;/span&gt;</em></div>
-			<div><em>In studies it was found that only 30% of users prefer long convoluted text with obtuse words and lots of numbers, with 56% claiming there preferred the simplified text , with the remainder unsure or stated it depends on the context </em></div>
+			<div><em>&lt;span</em> <em>coga-alternative="easylang numberfree vocab1000" class="hidden"&gt;>most people prefer simple text</em><em>&lt;/span&gt;</em></div>
+			<div><em>In studies it was found that only 30% of users prefer long convoluted text with obtuse words and lots of numbers, with 56% claiming there preferred the simplified text , with the remainder unsure or stated it depends on the context.</em></div>
 			<div><em><br />
 			</em></div>
 			<div><em>&lt;/div&gt;</em></div>
 		</section>
 		<section>
-			<p> <strong>Proposed attribute</strong>: coga-easylang </p>
-			<p>coga-easylang will contain a version of the content that is easier to read and understand. Note that this only works on small sections of text as the easylang attribute does not support full HTML, such as lists and sections.</p>
-			<p><strong>Supported values:</strong> any text string</p>
+			<p> <strong>Proposed attribute: </strong><code>coga-easylang</code> </p>
+			<p><code>coga-easylang</code> will contain a version of the content that is easier to read and understand. Note that this only works on small sections of text as the easylang attribute does not support full HTML, such as lists and sections.</p>
+
+			<p><strong>Supported values:</strong> String</p>
 			<p>&lt;span coga-easylang=&quot; some text that is easy to read&quot;&gt; some convoluted obtuse text&lt;/span&gt;</p>
 			<p>Where coga-easylang should use as simple well-known words as possible, and active voicing, literal text, small simple sentences. Acronyms and abbreviations should be avoided, unless they are the common way to refer to an item.</p>
 			<p> </p>
 		</section>
 		<section>
-			<h3><br />
- 			<strong>Reminders</strong></h3>
-			<p>Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users. This attribute enables different users to experience different amount of reminders based on personal preferences.</p>
-			<p><strong>Proposed attribute</strong>: coga-reminder</p>
-			<p>coga-reminder supported values are:</p>
-			<p><strong>basic: </strong>Reminders that over 90% of users would want,</p>
+			<h3>Reminders</h3>
+			<p><strong>Requirement: </strong>We require an attribute that enables different users to experience different amount of reminders based on personal preferences. Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users.</p>
+			<p><strong>Proposed attribute: </strong><code>coga-reminder</code></p>
+			<p><strong>Supported values: </strong></p>
+			<p><strong>basic: </strong>Reminders that over 90% of users would want,</p>
 			<p><strong>more: </strong>More would be used by over 20% of the population.</p>
-			<p><strong>extra: </strong>Extra would be used by over 5% of the population, and</p>
-			<p><strong>maximum</strong>: Maximum would be helpful for 5% of the population or less.</p>
-			<p>Example</p>
+			<p><strong>extra: </strong>Extra would be used by over 5% of the population, and</p>
+			<p><strong>maximum</strong>: Maximum would be helpful for 5% of the population or less.</p>
+			<p><strong>Example:</strong></p>
 			<p>&lt;div role=&quot;alert&quot; coga-reminder=&quot;basic&quot;&gt; It is your daughter's birthday&lt;/div&gt;</p>
 		</section>
 		<section>
-			<h3><strong>Distraction</strong>s</h3>
-			<p><strong>Proposed attribute</strong>: <strong> coga-distraction</strong></p>
+			<h2>Distractions</h2>
+			<p><strong>Requirement: </strong> We require an attribute that indicates a distraction so that
+some users may be able to remove them from content.</p> 
+			<p><strong>Proposed attribute: </strong><code> coga-distraction</code></p>
 			<p>This attribute should be used on non essential, detracting content, so that people who have problems keeping focus can turn them off. An example user experiences would be to hide all distraction content.</p>
-			<p>Example: coga-distraction=&quot;blinking ad&quot;</p>
+			<p><strong>Example: </strong> coga-distraction=&quot;blinking ad&quot;</p>
 			<p>Supported values: animations, auto-starting, changing, blinking, ad, message, chat</p>
 		</section>
+                <section>
+                        <h2>Additional WAI-ARIA roles</h2>
+                        <p><strong>Requirement: </strong> We may want to add roles for sections a page such as: contact us - for a contact us form  </p>
+                        <p><strong>User experience: </strong>symbols and colors could be used consistently across different content.</p>
+                        <p>Nav maps can be automatically generated for people learn via key-points or examples.</p>
+                        <p>Further these sections could be hidden in the normal rendering of a page or rendered the top of page depending on user preferences. The location of these sections can also be changed, based on the user preference, enabling the user to find them easily.</p>
+                        <p>Values:</p>
+                        <p></p>
+                        <ul>
+                                <li>summary</li>
+                                <li>keypoints</li>
+                                <li>example</li>
+                                <li>note</li>
+                                <li>warning</li>
+                                <li>step</li>
+                                <li>external - for external content, such as sponsored or advertising</li>
+                                <li>offers - for special offers that are complementary to the main content or task</li>
+                                <li>advertisement - advertisement or sponsored content</li>
+                                <li>contactus</li>
+                                <li>aboutus</li>
+                        </ul>
+                        <p> </p>
+                </section>
 		<!--
 		<section class="appendix" id="changelog">
 			<h2>Change Log</h2>
