@@ -291,8 +291,8 @@ We need personalization  because:  </p>
                                 <li>date start </li>
                                 <li>date end</li>
                         </ul>
-                        <p>coga-field can also give the context for text elements.</p>
-      			<p>coga-field values on text are:</p>
+                        <p><code>coga-field</code> can also give the context for text elements.</p>
+      			<p><code>coga-field</code> values on text are:</p>
       			<ul>
        				<li>our-phone </li>
        				<li>our-address </li>
@@ -316,15 +316,15 @@ We need personalization  because:  </p>
                         	<pre>
 &lt;div vocab="http://xmlns.com/foaf/0.1/"&gt;
 &lt;ul&gt;        
-	&lt;li typeof="Person"&gt;          
-	&lt;a property="homepage" href="http://example.com/bob/"&gt;Bob&lt;/a&gt;        
-	&lt;/li&gt;        
-	&lt;li typeof="Person"&gt;          
-	&lt;a property="homepage" href="http://example.com/eve/"&gt;Eve&lt;/a&gt;        
-	&lt;/li&gt;        
-	&lt;li typeof="Person"&gt;         
-		&lt;a property="homepage" href="http://example.com/manu/"&gt;Manu&lt;/a&gt;        
-	&lt;/li&gt;     
+   &lt;li typeof="Person"&gt;          
+      &lt;a property="homepage" href="http://example.com/bob/"&gt;Bob&lt;/a&gt;        
+   &lt;/li&gt;        
+   &lt;li typeof="Person"&gt;          
+      &lt;a property="homepage" href="http://example.com/eve/"&gt;Eve&lt;/a&gt;        
+   &lt;/li&gt;        
+   &lt;li typeof="Person"&gt;         
+      &lt;a property="homepage" href="http://example.com/manu/"&gt;Manu&lt;/a&gt;        
+   &lt;/li&gt;     
 &lt;/ul&gt;
 				</pre>
                         <p> </p>
@@ -373,10 +373,10 @@ We need personalization  because:  </p>
 		<section>
     			<h2>Number free</h2>
 			<p><strong>Requirement</strong>: Not everyone can understand numbers. We therefor suggest coga-numberfree for alternative text for people who can not understand the main content</p>
-			<p><strong>User experience</strong></p>
+			<p><strong>User experience:</strong></p>
 			<p>A suggested user experience would be: Numerical concepts could be rendered by the user agent slightly different so that the user knows a number free explanation is available. The user can then mouse over the content and a tooltips would give the number free value</p>
-			<p><strong>Proposed attribute:</strong>coga-numberfree </p>
-			<p>value : string</p>
+			<p><strong>Proposed attribute:</strong><code>coga-numberfree</code> </p>
+			<p><strong>Supported value : </strong> String</p>
 			<p><strong>For example:</strong></p>
 			<p><span>&lt;span coga-numberfree=&quot;almost all&quot;&gt;9 out of 10</span> &lt;/span&gt;
 			</p>
@@ -385,13 +385,11 @@ We need personalization  because:  </p>
 		</section>
 		<section>
 			<h2>Non-literal text and images</h2>
-			<p><strong>Requirement: </strong>Not everyone can understand non-literal text and icons such as metaphors, idioms etc.
- We need a tag that identifies text or images as non literal and  allows the author to explain non-literal text and images to users.</p>
+			<p><strong>Requirement: </strong>Not everyone can understand non-literal text and icons such as metaphors, idioms etc. We need a tag that identifies text or images as non literal and  allows the author to explain non-literal text and images to users.</p>
 			<p><strong>User experience:</strong></p>
 			<p>A suggested user experience would be: Non literal content could be rendered by the user agent slightly differently so that the user knows that this content should not be taken literally and that a literal explanation is available. The user can then mouse over the content and a tooltips would give the literal value.</p>
-			<p><strong>Proposed attribute:</strong></p>
-			<p>coga-literal </p>
-			<p>Value= string</p>
+			<p><strong>Proposed attribute: </strong><code>coga-literal</code> </p>
+			<p><strong>Supported value: </strong>String</p>
 			<p><strong>Examples:</strong></p>
 			<p>&lt;span coga-literal=&quot;it is raining hard&quot;&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;</p>
 			<p> User agents can render non-literal text in a different way so that users will know that this is non literal. They can then use a mouse over or other technique to receive the translation.
@@ -399,12 +397,15 @@ We need personalization  because:  </p>
 		</section>
 		<section>
                  	<h2>Explain and feedback</h2>
-                        <p><strong>Requirement: </strong>Some users need additional help. We request an attribute where the author can provide additional information.or what just happened.</p>
+                        <p><strong>Requirement: </strong></p>
+<p>Some users need additional help. We request an attribute where the author can provide additional information.or what just happened.</p>
                         <strong>Proposed attribute: </strong><code>coga-feedback</code>
- This attribute provides immediate feedback that can be shown or spoken when any event is triggered on a control.
+<p>This attribute provides immediate feedback that can be shown or spoken when any event is triggered on a control.</p>
                         <p><strong>User experience: </strong>This can be rendered as text at the top of the page and read immediately. Most users will not want this text rendered and spoken. Other users however will need it to know what has just happened. </p>
-                        <strong>Proposed attribute: </strong><code>coga-explain</code> 
+                        <strong>Proposed attribute: </strong><code>coga-explain</code>
+<p> 
 This attribute explains the element's role.
+</p>
 		<p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
 		<h3>Examples:</h3>
 		<p> coga-feedback= "your email was sent" </p>
@@ -413,7 +414,7 @@ This attribute explains the element's role.
 <section>
 <h3>More Help</h3>
 <p><strong>Requirement: </strong>Some users may need additional information or specifically additional help inforamtion. We request additonal attributes so that an author can indicate the existence of this additional information.</p>
-<p><strong>Proposed attribute: </strong>:<code>coga-moreinfo</code></p>
+<p><strong>Proposed attribute: </strong><code>coga-moreinfo</code></p>
 <p><strong>Supported values: </strong>URL</p>
 <p><strong>Proposed attribute: </strong><code>coga-extrahelp</code></p>
 <p><strong>Supported values: </strong>  tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
