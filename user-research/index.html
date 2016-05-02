@@ -1,0 +1,1008 @@
+<!--?xml version='1.0' encoding='UTF-8'?-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+	<head>
+		<title>Cognitive Accessibility User Research</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<script src="../common/biblio.js" class="remove"></script>
+		<!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
+		<script class="remove">
+	var respecConfig = {
+		// embed RDFa data in the output
+		trace:  true,
+		doRDFa: '1.1',
+		includePermalinks: true,
+		permalinkEdge:     true,
+		permalinkHide:     false,
+		tocIntroductory: true,
+		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+		specStatus:           "ED",
+		noRecTrack: true,
+		//crEnd:                "2012-04-30",
+		//perEnd:               "2013-07-23",
+		//publishDate:          "2013-08-22",
+		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+		
+		// the specifications short name, as in http://www.w3.org/TR/short-name/
+		shortName:            "coga-user-research",
+		
+
+		// if you wish the publication date to be other than today, set this
+		// publishDate:  "2009-08-06",
+		copyrightStart:  "2014",
+
+		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+		// and its maturity status
+		//previousPublishDate:  "",
+		//previousMaturity:  "",
+		//prevRecURI: "",
+		//previousDiffURI: "",
+
+		// if there a publicly available Editors Draft, this is the link
+		edDraftURI: "https://w3c.github.io/coga/user-research/",
+
+		// if this is a LCWD, uncomment and set the end of its review period
+		// lcEnd: "2012-02-21",
+
+		// editors, add as many as you like
+		// only "name" is required
+		editors: [
+			{
+				name: "Lisa Seeman",
+				url: 'http://athena-ict.com',
+				mailto: "lisa.seeman@zoho.com"
+			},
+			{
+				name: "Michael Cooper",
+				url: 'http://www.w3.org',
+				mailto: "cooper@w3.org",
+				company: "W3C",
+				companyURI: "http://www.w3.org"
+			}
+		],
+
+		// authors, add as many as you like. 
+		// This is optional, uncomment if you have authors as well as editors.
+		// only "name" is required. Same format as editors.
+
+		//authors:  [
+		//    { name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],
+
+		/*
+		alternateFormats: [
+			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.pdf', label: "PDF version" }
+		],
+		*/
+		
+		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+		
+		// name of the WG
+		wg:           ["Cognitive and Learning Disabilities Accessibility Task Force", "Protocols and Formats Working Group", "Web Content Accessibility Guidelines Working Group"],
+		
+		// URI of the public WG page
+		wgURI:        ["http://www.w3.org/WAI/PF/cognitive-a11y-tf/", "http://www.w3.org/WAI/PF/", "http://www.w3.org/WAI/GL/"],
+		
+		// name (with the @w3c.org) of the public mailing to which comments are due
+		wgPublicList: "public-coga-comments",
+		
+		// URI of the patent status for this WG, for Rec-track documents
+		// !!!! IMPORTANT !!!!
+		// This is important for Rec-track documents, do not copy a patent URI from a random
+		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+		// Team Contact.
+		wgPatentURI:  ["", "http://www.w3.org/2004/01/pp-impl/35422/status", "http://www.w3.org/2004/01/pp-impl/32212/status"],
+		maxTocLevel: 2,
+		
+		localBiblio: biblio,
+	};
+		</script>
+	</head>
+	<body>
+		<section id="abstract">
+			<p>Cognitive Accessibility User Research describes the challenges of using web technologies for people with learning disabilities or cognitive disabilities. The research describes challenges in the areas of attention, <!--behavior, --><!--consciousness, -->executive function, knowledge, language<!-- and figurative language-->, literacy, memory, perception, and reasoning. It is organized by user groups of the following disabilities: Aging-Related Cognitive Decline, Aphasia, Attention Deficit Hyperactivity Disorder, Autism, Intellectual Disability, Dyscalculia, Dyslexia, and Non-Verbal. Additional user groups may be added to future versions. This document provides a basis for subsequent work to identify gaps in current technologies, suggest strategies to improve accessibility for these user groups, and develop guidance and techniques for web authors.</p>
+			<!-- Todo: the commented out items above need to be messaged in a different way, they are not comprehensively covered even though listed -->
+		</section>
+		<section id="sotd"></section>
+		<section class="informative" id="introduction">
+			<h2>Introduction</h2>
+			<p>This document provides background research on user groups with learning disabilities and cognitive disabilities; and  challenges they face when using Web technologies. We aim to identify and describe the current situation so  subsequent publications can contrast it to what we want to happen.</p>
+			  <p>This document will be used as a base document to enable the task force to perform a gap analysis; suggest techniques; and create a road-map for improving accessibility for people with learning disabilities and cognitive disabilities.</p>
+			  <p>It is currently at its first draft. We are asking for comments. Please let us know if you are aware of omissions.</p>
+			
+			<section>
+				<h3>Importance of This Document</h3>
+				<p>This document is important because enabling people with learning and cognitive disabilities to use the Web and Web technologies is of critical importance to both individuals and society.</p>
+				<p>More and more, the Internet and the Web have become the main way people stay informed and current on news and health information; keep in touch with friends and family; and  provide independence such as convenient shopping etc. People who cannot use these interfaces will have an increased feeling of having a disability and of being alienated from society. </p>
+				<p>Further, with the advent of the Web of Things, everyday physical objects are connected to the Internet and have Web interfaces. Being able to use these interfaces now is an essential component of allowing people to maintain their independence, stay in the work force for longer, and stay safe.  </p>
+				<p>Consider that the population is aging. By 2050, it is projected there will be 115 million people with dementia worldwide. It is essential to the economy and society that people with mild and moderate levels of dementia stay as active as possible, and participate in society for as long as possible. However, at the moment, even people with only a mild cognitive decline may find standard applications impossible to use. That means more and more people are dependent on care givers for things that they could do themselves, increasing the crippling cost of care and reducing human dignity.</p>
+				<p>We therefore invite you to review this draft; and comment and consider how your technologies and work may be affected by these issues.</p>
+			</section>
+			<section>
+				<h3>Assumptions</h3>
+				<p>There is a huge number of cognitive disabilities and variations of them. If we attempt an analysis of all the possibilities, the job will be too big, and nothing will be achieved. Therefore, we are adopting a phased approach, selecting in phase one a limited scope of eight diverse disabilities, and hope to achieve something useful within that scope. Also note that helping users improve skills, and emotional disabilities, are out of scope for phase one. We anticipate this analysis will continue to a second or third phase where more user groups are analyzed, and the existing analyses are updated with new research and with new technologies and scenarios. </p>
+			</section>
+		  <section> 
+				<h2>Comments</h2>
+				<p>This is an early and incomplete draft for review; and to help us get comments and early feedback. We are particularly interested in:</p>
+			<ul>
+					<li>omitted challenges, use cases, and issues;</li>
+					<li>issues involving your technologies/work and people with learning and cognitive disabilities; and</li>
+					<li>other omitted research.</li>
+			  </ul>
+			  <p>We welcome comments and suggestions. Please send comments to pubic-coga-comments@w3.org. All comments will be reviewed and discussed by the task force. Although we cannot commit to formally responding to all comments on this draft, the discussions can be tracked in the task force minutes.</p>
+			</section>
+		</section>
+		<section>
+			<h2>Summary of User Groups and Cognitive Function</h2>
+			<p>Different people with cognitive disabilities may have problems in the following areas:</p>
+              <ul>
+                <li><strong>Memory</strong> -
+                  Including: Working Memory, Short-Term Memory, Long-Term Memory, Visual Memory, Visuo-spatial Memory, Auditory Memory (memory for sound patterns and others).</li>
+                <li><strong>Executive Functions</strong> - Including: Emotional Control and Self-Monitoring; Planning/Organization and Execution; and Judgment.</li>
+                <li><strong>Reasoning</strong> - Including: Fluid Reasoning (logical reasoning), Mathematical Intelligence, Seriation, Crystallized Intelligence, and Abstraction.</li>
+                <li><strong>Attention</strong> - Including: Selective Attention, and  Sustained Attention.</li>
+                <li><strong>Language</strong> - Including: Speech Perception, Auditory Discrimination,  Naming Skills, and Morphosyntax.</li>
+                <li><strong>Understanding Figurative  Language</strong> -  Including: similes, personification, oxymorons, idioms, and puns.</li>
+                <li><strong>Literacy</strong> - Depends upon functions including: Speech Perception, Visual Perception, Phoneme Processing, and Cross-Modal Association (association of sign and concept).</li>
+                <li><strong>Other Perception</strong> - Including: Motor Perception, Psychomotor Perception.</li>
+                <li><strong>Knowledge</strong> - Including: Cultural Knowledge, Jargon (subject matter); Web Jargon and Technology; Metaphors and Idioms; Symbols Knowledge (such as icons); and Mathematical Knowledge. </li>
+                <li><strong>Behavioral</strong> - Including: Understanding Social Cues.</li>
+              </ul>
+              <p>For more information, please see section 5.</p>
+              <p>It is important to note that people may have limitations in one area and not in other areas. For example, a person with dyslexia may have above-average reasoning, but impaired visual memory and literacy skills. A person with Intellectual Disability may have an above-average visual memory, but impaired judgment.    
+            </p><p>
+            </p><table>
+            	<caption>Cognitive Function Table and Tags</caption>
+                <tbody><tr>
+                  <th scope="col">Cognitive Function Category </th>
+                  <th scope="col"><p>Cognitive Function Subcategories and Tags</p></th>
+                  <th scope="col"><p>Dyslexia</p></th>
+                  <th scope="col"><p>Aphasia</p></th>
+                  <th scope="col"><p>Non-Verbal</p></th>
+                  <th scope="col"><p>Intellectual Disability</p></th>
+                  <th scope="col"><p>Autism</p></th>
+                  <th scope="col"><p>Dyscalculia</p></th>
+                  <th scope="col"><p>Aging-Related Cognitive Decline</p></th>
+                  <th scope="col"><p>Attention Deficit Disorder (ADD/ ADHD)</p></th>
+                </tr>
+                <tr>
+                  <th scope="row">Memory</th>
+                  <td><p>Duration Based</p>
+                    <ul>
+                      <li><em>Working Memory</em> </li>
+                      <li><em>Short-Term Memory</em> -typically lasts seconds</li>
+                      <li><em>Long-Term Memory</em> - (includes recall and writing - the ability to learn, such as learn a new symbol and use it the next day.)</li>
+                    </ul>
+                    <p>Context Based</p>
+                    <ul>
+                      <li><em>Episodic Memory</em>(autobiographical – time, self)</li>
+
+                      <li><em>Semantic Memory</em> (factual)</li>
+                      <li><em>Visual</em> <em>Memory</em></li>
+                      <li><em>Visuo-Spatial Memory</em> </li>
+                      <li><em>Auditory Memory</em>: memory for sound patterns (um)</li>
+                      <li><em>Procedural Memory</em> </li>
+                      <li><em>Musical Memory</em> </li>
+                      <li><em>Prospective Memory</em> - remembering to do things in the future, such as keep appointments, return a book to the library, or pay bills on time</li>
+                      <li><em>Emotional Memory</em> </li>
+                    </ul>
+                    <p>Awareness based</p>
+                    <ul>
+                      <li><em>Implicit memory</em>: (non-declarative memory)</li>
+                      <li><em>Explicit Memory</em>: (declarative memory, intentional use of memory)</li>
+                    </ul>
+                    <p>Also memories can be stored and recalled as</p>
+                    <ul>
+                      <li><em>Associative Memory</em> (MA)</li>
+                      <li><em>Meaningful Memory</em> (MM)</li>
+                      <li><em>Free-recall Memory</em>(M6)</li>
+                    </ul></td>
+                  <td><p>May have impaired:</p>
+                    <ul>
+                      <li>Short-Term Memory</li>
+                      <li>Visual Memory</li>
+                      <li>Visuo-spatial Memory</li>
+                      <li>Auditory Memory</li>
+                      <li>Procedural Memory</li>
+                      <li>Prospective Memory</li>
+                    </ul></td>
+                  <td><p>Receptive and Expressive Aphasia may result in impaired short term   memory which can impact on re-learning language as can the impairment of   auditory memory for relearning correct articulation and visual memory   that affects reading and writing.  Visuo-spatial Memory maybe an issue   with the inability to remember how to get to places and recall   locations, not helped if procedural memory is also involved where the   order of doing things is affected. This is usually automatic but actions   may have to be relearnt and there can be involvement of prospective   memory that involves being aware of when certain activities have to be   performed. </p></td>
+                  <td>Cognitive impairments may result in impaired short term memory which can   impact on learning how to use any symbolic representations of speech   such as pictograms and other photographic symbols. This may result in a   very reduced number of symbols being used on a daily basis. Lack of   Auditory memory affects the ability to gain skills in phonemic awareness   that aids literacy skills.  Difficulties with visuo-spatial memory   impact on the speed withwhich symbols may be found on a communication   board or located on a screen and with physical difficulties this can   further slow communication. Procedural memory difficulties result in   poor automaticity in terms of Language Acquisition through Motor   Planning (LAMP) which is one of the ways individuals can speed their AAC   output. </td>
+                  <td><p>Impaired    auditory (verbal) short-term memory, and explicit long-term memory. However, visuospatial short-term memory, associative learning, and implicit long-term memory functions are preserved.</p>
+                    <p>Short-term auditory memory, which can affect writing to long-term auditory memory. </p>
+                    <p>Visual memory is often far-stronger.</p>
+                  <p>Difficulty remembering    information.</p></td>
+                  <td><p>There may be problems with memory, and integration of Episodic    Memory (past experience) with present action.</p></td>
+                  <td><p>Memory may be affected: Mainly Visuo-Spatial and Procedural Memory for layout, schedules, or sequences; and Prospective Memory for things such as financial planning.</p></td>
+                  <td><p>Affected in dementia: Primarily new memories and working memory. Long-term memory becomes affected as dementia progresses.
+                    Age related cognitive decline may result in slight forgetfulness.</p></td>
+                  <td><p>Working memory may be affected.</p></td>
+                </tr>
+                <tr>
+                  <th>Executive Functions</th>
+                  <td><p><em>Executive Functions</em> </p>
+                    <ul>
+                      <li><em>Emotional Control and</em> <em>Self-Monitoring</em></li>
+                      <li><em>Shift</em> (also called task flexibility)</li>
+                      <li><em>Initiation</em> </li>
+                      <li><em>Planning/Organization</em> and</li>
+                      <li><em>Execution</em></li>
+                      <li><em>Judgment</em></li>
+                    </ul></td>
+                  <td><p>Sometimes affected:
+                    Planning/Organization</p></td>
+                  <td><p>Those with    Aphasia may have executive-functional difficulties especially if emotional lability is an issue. Cognitive impairment can affect cause and effect; and therefore planning and organization; as well as execution.</p></td>
+                  <td>&#160;</td>
+                  <td><p>Problems with executive function, including:</p>
+                    <ul>
+                    	<li>Difficulty with organizing and planning;</li>
+                    <li>difficulty working within time limits;</li>
+                    <li>sequences;</li>
+                    	<li>emotional control and self monitoring; and judgment.</li>
+                    </ul>
+</td>
+                  <td><p>Sometimes    affected:</p>
+                    <ul>
+                    	<li>problem-solving;</li>
+                    <li>time management;</li>
+                    <li>planning and organization;</li>
+                    <li>emotional control and self monitoring; and inappropriate speech or behavior.</li>
+                    </ul>
+                    <p>Shift can be strongly    affected.</p></td>
+                  <td><p>Sometimes affected when involving numbers or time such as getting the right bus/train at the right time and on the correct platform.</p></td>
+                  <td><p>All Executive Functions are affected in dementia. Sometimes Executive Function is affected in age-related cognitive decline, such as Shift and judgment (less often).</p></td>
+                  <td><p>Executive function may be affected. </p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Reasoning</th>
+                  <td><p>&#160;</p>
+                    <ul>
+                      <li><em>Fluid Reasoning</em> (logical reasoning).</li>
+                      <li><em>Mathematical Intelligence</em></li>
+                      <li><em>Seriation</em> - reasoning via seriation including organization<em>. Conservation and</em> <em>Classification</em></li>
+                      <li><em>Behavioral</em> -(or         cognitive) component involving memory, such as long-term autobiographical memory.</li>
+                     <li><em>Crystallized Intelligence</em> (sometimes called comprehension- knowledge) is the ability to use skills, knowledge, and experience.</li>
+                      <li><em>Abstraction</em> </li>
+                    </ul></td>
+                  <td><p>Typically not affected</p></td>
+                  <td><p>Where intellectual capacity is affected there may be issues with reasoning, learning and thus remembering plus abstraction.</p></td>
+                  <td>Where intellectual capacity is affected there may be issues with reasoning, learning and thus remembering plus abstraction.</td>
+                  <td><p>Typically affected.</p>
+                  <ul>	
+                    <li>Slow speed of information processing, such as a 'penny dropping' delay between hearing or reading something, and understanding and responding to it.</li>
+                    <li>Difficulty with Seriation, such as sequencing of events; strings of numbers and letters; time.</li>
+                  </ul>
+                  </td>
+                  <td><p>Typically affected: </p>
+                  	<ul>
+                    <li>Behavioral intelligence, and understanding or relating to feelings;</li>
+                    <li>Interested in people, but not know how to talk, play, or relate to them;</li>
+                    <li>Difficulty dealing with change.</li>
+                   </ul>
+                  	<p>Mathematical intelligence is also often affected.</p></td>
+                  <td><p>Typically    affected:</p>
+                  <ul>	
+                    <li>Mathematical Intelligence;</li>
+                    <li>Seriation (such as estimating how much food to buy); and</li>
+                  	<li>Abstraction.</li>
+                    </ul></td>
+                  <td><ul><li>Often affected in dementia including Behavioral.</li> 
+                    <li>Crystallized Intelligence may be the strongest form of reasoning.</li>
+                   <li> Age-related cognitive decline can also lightly affect 
+                    	problem solving and    reasoning.</li></ul>
+                  </td>
+                  <td><p>Typically not affected other than
+                    planning, time estimates, and short-term recall, which is part of executive function.</p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Attention</th>
+                  <td><p> </p>
+                    <ul>
+                      <li><em>Selective Attention</em> -the ability to attend to some stimuli while disregarding others that are irrelevant to the task at hand.</li>
+                      <li><em>Divided Attention</em></li>
+                      <li><em>Sustained Attention</em></li>
+                    </ul></td>
+                  <td><p>Selective Attention    may be affected.</p></td>
+                  <td><p>Shortened-attention span    can occur with Aphasia.</p></td>
+                  <td>Shortened attention span can occur alongside distractability when other cognitive impairments are present.</td>
+                  <td><p>Difficulties    with sustained attention.</p></td>
+                  <td><p>Typically    affected.</p></td>
+                  <td><p> </p></td>
+                  <td><p>Affected in    dementia.</p></td>
+                  <td><p>Affected</p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Language</th>
+                  <td><p> </p>
+                    <ul>
+                      <li><em>Speech Perception</em> </li>
+                      <li><em>Speech</em> </li>
+                      <li><em>Literacy</em> </li>
+                    </ul>
+                    <p>See below for more    details.</p></td>
+                  <td><p> </p></td>
+                  <td><p>Aphasia can cause difficulties with word finding, the meanings of words   and sentences, grammar and comprehension affecting the ability to   communicate. </p></td>
+                  <td>Young AAC users may have difficulty developing good sentence   construction for written language in particular if reading skills are   poor </td>
+                  <td><p> </p></td>
+                  <td><p>Typically    affected.</p></td>
+                  <td><p> </p></td>
+                  <td><p> </p></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Speech Perception</th>
+                  <td><p><em>Speech Perception</em> depends upon:</p>
+                    <ul>
+                      <li><em>Auditory Discrimination</em> (Note: not loss of hearing, butidentification and differentiation of sounds, also called general-sound discrimination (u3),</li>
+                      <li><em>Temporal Tracking</em> (uk)</li>
+                      <li><em>Listening Ability</em> (ls)</li>
+                      <li><em>Naming Skills</em> (n)</li>
+                      <li><em>Morphosyntax</em>The   system of the internal structure of words (morphology) and the way in which words are put together to form phrases and sentences (syntax).</li>
+                    </ul>
+                    <p>Note: There is also related memory, such as working memory, auditory memory - see above.
+                    There is also knowledge required (see below), such as:</p>
+                    <ul>
+                      <li>Grammar</li>
+                      <li>Metaphors</li>
+                      <li>Lexical</li>
+                    </ul></td>
+                	<td><p>Often affected:</p>
+                    <ul><li>Auditory<ul><li>Discrimination</li>
+                    <li>Temporal tracking</li>
+                    <li>Naming skills</li></ul></li>
+                    <li>Morphosyntax</li>
+                      <li>related memory</li>
+                    </ul>
+                    
+                  </td>
+                  <td><p>&#160;Individuals may have difficulties coping with the sounds that make up   speech being unable to interpret their meaning which affects   understanding and speech output.</p></td>
+                  <td>Cognitive impairments can affect speech perception</td>
+                  <td><ul><li>Problems with morphosyntax.</li>
+                    <li>Problems with short-term auditory memory, affecting writing to long term auditory memory</li> 
+                    <li>weaker-expressive language, and grammatical skills</li>
+                    <li>overall delayed language and speech development</li></ul></td>
+                  <td></td>
+                  <td></td>
+                  <td><p>Affected in    dementia and, to a much-lesser degree, by age-related cognitive decline (temporal tracking).</p></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">Understanding Figural Language</th>
+                  <td><p>Understanding   figural language, such as: a simile, onomatopoeia, personification, an oxymoron, a paradox, an allusion, an idiom, and a pun. This is the ability to understand   figural language, and does not include knowledge of metaphors.</p></td>
+                  <td><p>Not affected</p></td>
+                  <td><p>Idioms, metaphors, similes and other representations of language that   contain abstract notions can cause issues for those with aphasia.</p></td>
+                  <td>Idioms, metaphors, similes and other representations of language that contain abstract notions can cause issues for AAC users</td>
+                  <td><p> </p></td>
+                  <td><p> </p></td>
+                  <td><p> </p></td>
+                  <td><p>Sometimes affected by dementia.</p></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Literacy</th>
+                  <td><p>
+                  Depends upon Speech    Perception and visual perception. Also depends upon:</p>
+                    <ul>
+                      <li><em>Phoneme Processing</em>   phonetic coding (PC)</li>
+                      <li><em>Cross-Modal Association</em> (association of sign and concept)</li>
+                    </ul></td>
+                  <td><p>Affected</p></td>
+                  <td><p>
+                  Aquired dyslexia can be an issue with individuals having to relearn how to read, sound out words and remember how to spell.</p></td>
+                  <td>Aquired dyslexia can be an issue with individuals having to relearn how to read, sound out words and remember how to spell.</td>
+                  <td><ul><li>Problems with speech perceptions as above,</li>
+                    <li>spelling and grammar.</li>
+                    <li>Poor auditory-processing skills.</li></ul></td>
+                  <td><p>Typically    affected.</p></td>
+                  <td><p> </p></td>
+                  <td><p>Phoneme Processing and Cross-Modal Association are affected in dementia.</p></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Visual Perception <strong>(visual recognition)</strong></th>
+                  <td><p>
+                      The visual system automatically groups elements into patterns: <em>Proximity</em>, <em>Similarity</em>, <em>Closure</em>, <em>Symmetry</em>, <em>Common Fate</em> (i.e. common motion), and <em>Continuity</em>. (Gestalt    psychology)</p>
+                  	<p>Functions include:</p>
+                    <ul>
+                      <li><em>Object Recognition</em> </li>
+                      <li><em>Face Recognition</em> (seems to be a different process from object         recognition [Face and object recognition (Alex Huk. (1999) "Object and Face Recognition: Lecture Notes." pp. 5]</li>
+                      <li><em>Visual-Pattern Recognition</em> </li>
+                    </ul></td>
+                  <td><p>All can be affected.    May also have visual stress.</p></td>
+                  <td><p>
+                  Not recognising letters and words impact on reading and even object recognition can be affected.</p></td>
+                  <td>Not recognising letters and words impact on reading and even object recognition can be affected</td>
+                  <td><p>Strong visual memory but possible visual-processing difficulties</p>
+                    <p>May have visual stress</p></td>
+                  <td><p>Visual    comprehension is often affected.</p></td>
+                  <td><p>Face Recognition, Object Recognition, and Visual-Pattern Recognition</p></td>
+                  <td><p>Can be affected in dementia.</p></td>
+                  <td><p>Diminished visual processing speeds</p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Other Perception</th>
+                  <td><ul>
+                    <li><em>Auditory Perception</em> (see Speech Perception above for further classifications),</li>
+                      <li><em>Motor Perception</em> </li>
+                      <li><em>Tactile Perception</em> </li>
+                      <li><em>Smell Perception</em> </li>
+                      <li><em>Psychomotor Perception</em> </li>
+                      <li><em>Kinesthetic Perception</em> (body position, weight, or movement)</li>
+                      <li><em>Olfactory Perception</em> and</li>
+                      <li><em>Sensory Perception</em></li>
+                  </ul></td>
+                  <td><p>Auditory Perception    affected</p>
+                    <p>Psychomotor may be affected</p></td>
+                  <td><p>Auditory perceptual difficulties affect the relearning of speech and recognition of sounds and words impacting on understanding.</p></td>
+                  <td>Auditory perceptual difficulties can affect phonemic awareness and any possible speech output</td>
+                	<td><p>Psychomotor Perception seems affected. </p><ul><li>Difficulty with finding the way to places or navigating</li>
+                    <li>sensitivity to noise and visual stimuli.</li>
+                    <li>Impaired ability to screen out background noise / movement.</li>
+                    <li>Sensations of mental overload</li>
+                    <li>Tendency to "switch off".</li></ul></td>
+                  <td><p>Have unusual   reactions to sensory-, olfactory-, smell-, tactile-, and auditory-perception</p>
+                    <ul><li>sensory integration</li>
+                    <li>sensitivity to physical contact</li>
+                    <li>sensitivity to loud noises</li></ul></td>
+                  <td><ul><li>Psychomotor Perception</li>
+                    <li>spatial orientation</li></ul></td>
+                  <td><p>Affected in    dementia and, to a lesser degree, by age-related cognitive decline (such as Psychomotor Perception -Spatial/Temporal Understanding)</p></td>
+                  <td><p>Developmental coordination disorder / motor clumsiness.</p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Knowledge</th>
+                  <td><p>
+                  Types of knowledge that might be required for use of the Web include:</p>
+                    <ul>
+                      <li><em>Cultural Knowledge</em> </li>
+                      <li>base<em> Language Knowledge including</em>:
+                      <ul>
+                        <li><em>Lexical</em> (UL)</li>
+                        <li><em>Jargon</em> (subject    matter)</li>
+                        <li><em>Web Jargon</em> and technology</li>
+                        <li><em>Web</em> and <em>Technology Usages</em> and <em>Risks</em></li>
+                        <li><em>Metaphors</em> and idioms</li>
+                      </ul></li>
+                      <li><em>Symbols </em> Knowledge (such as icons)</li>
+                      <li><em>Mathematical Knowledge</em> </li>
+                      <li><em>Mechanical Knowledge</em> (MK)</li>
+                      <li><em>Knowledge of behaviors</em> </li>
+                      <li><em>Design-Metaphor Knowledge</em> </li>
+                      <li><em>Design-Functions Knowledge</em> </li>
+                    </ul></td>
+                  <td><p>Typically not    affected.</p></td>
+                  <td><p>Aphasia does not necessarily impact on intelligence but knowledge will   be trapped within the brain if the individual cannot express their   thoughts.</p></td>
+                  <td>An AAC user does not necessarily have intellectual difficulties but   knowledge can be trapped within the brain if the individual cannot   express their thoughts. </td>
+                  <td><p>Affected</p></td>
+                  <td><p>Partial Knowledge of Behaviors</p></td>
+                  <td><p>Mathematical    Knowledge
+                    And Mechanical Knowledge are affected.</p></td>
+                  <td><p>Affected in acquisition of new knowledge. Affected strongly in dementia</p></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Behavioral</th>
+                  <td><p>
+                  Behavioral Abstractions and social –</p>
+                    <ul>
+                      <li><em>Norms</em> etc</li>
+                      <li><em>Social Cues</em> </li>
+                      <li>other Behavioral</li>
+                    </ul></td>
+                  <td><p>Slightly affected:    Norms and Social Cues</p></td>
+                  <td><p>
+                  Behaviour can be affected by lability where there can be unnatural   emotions including depression. Tiredness can impact on the ability to   cope with day to day activities. </p></td>
+                  <td><p>Behaviour can be affected by the inability to communicate with   considerable frustration occurring at times.  Individuals may also   become depressed and irritable, however these individuals can also show   amazing resilience and understanding when issues arise. </p></td>
+                  <td><p>Affected</p></td>
+                  <td><p>Strongly    affected (primary symptom)</p></td>
+                  <td><p>Not affected</p></td>
+                  <td><p>Affected in    dementia</p></td>
+                  <td><p> </p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Consciousness</th>
+                  <td><p>Delusions, Hallucinations</p></td>
+                  <td><p>Typically not    affected.</p></td>
+                  <td><p>Consciousness in those who have deep Aphasia with no communication can be difficult to assess. </p></td>
+                  <td>Consciousness in those who have no communication skillscan be difficult to assess</td>
+                  <td><p> </p></td>
+                  <td><p> </p></td>
+                  <td><p>Not affected</p></td>
+                  <td><p>Affected in dementia, such as delusions, and, to a lesser degree, by age-related cognitive decline, such as irritation and withdrawal.</p></td>
+                  <td><p>&#160;</p></td>
+                </tr>
+                </tbody>
+              </table>
+              <p>
+          <strong>Notes on the Cognitive Function Table:</strong> </p>
+              <ul>
+                <li>Terms that will be used  for tags are italicized and capitalized. Alternative terms are in brackets. Alternative terms will <strong>not</strong> be used as tags.</li>
+                <li>Discussions on the  different functions can be found in section 4 below.</li>
+                <li><strong>Speed</strong>: Processing speed affects all functions above. A related concept is <strong>fluency</strong>.</li>
+              </ul>
+    </section>
+		
+		
+		<section>
+			<h2>Research on User Groups</h2>
+			<p>This section describes the state of the art in classification of cognitive function.</p>
+			<p>User group research modules follow. This is Phase 1. The group hopes to add more groups such as effects of Post-Traumatic Stress Disorder (PTSD) on cognitive function.</p>
+			<div data-include='dyslexia.html' data-include-replace='true'>Dyslexia include</div>
+			<div data-include='aphasia.html' data-include-replace='true'>Aphasia include</div> 
+			<div data-include='non-verbal.html' data-include-replace='true'>Non-verbal</div>
+			<div data-include='aging.html' data-include-replace='true'>Aging include</div>
+			<div data-include='id.html' data-include-replace='true'>ID include</div>
+			<div data-include='add.html' data-include-replace='true'>ADD include</div>
+			<div data-include='autism.html' data-include-replace='true'>Autism include</div>
+			<div data-include='dyscalculia.html' data-include-replace='true'>Dyscalculia include</div>
+
+		</section>
+        
+        		<section>
+	<h2>Research on Cognitive Function</h2>
+	This section aims to provide:
+<ul>
+    <li>a basis for consistent use of terms within our documents;</li>
+                  <li>a basis / background for making  tags that can be used in meta data or functional-accessibility approach</li>
+                  <li>a useful resource</li>
+              </ul>
+                <p>Note: We have taken terms and concepts from across the work we are doing on disability and cognitive function. Where more than one term exists for what seems to be a very similar function, we have chosen one term, but brought others for reference. We have also reviewed the <a href="http://iapsych.com/articles/mcgrew2009.pdf">Caroll taxonomy</a>, but it was focused on educational assessment, and psychometric-based models for human intelligence, and was therefore not fully-relevant (for  example: knowledge categories). When  quoting a Caroll category, we have tried to put the mnemonic after the  term such as (RG) or (I). </p>
+                <p>
+                  Here are the cognitive functions that we have identified so far. They are not complete, and not yet in a taxonomy form.</p>
+               <section > <h3>Reasoning and Executive Functions</h3>
+                <p><strong>Executive functions</strong> (also known as cognitive control and supervisory-attentional system) is an umbrella term for the   management of cognitive processes such as reasoning and  problem solving (goal-focused reasoning) as described below. Executive function also includes:</p>
+                <ul>
+                  <li>emotional control and self-monitoring</li>
+                  <li>shift ( also called task flexibility)</li>
+                  <li>initiation</li>
+                  <li>planning/organization</li>
+                  <li>execution</li>
+                </ul>
+Executive function also relies upon or includes:  working memory, other memory (short, long), attention, abstraction, associations, as described below.
+<p>In making a decision or conclusion, we <em>may</em> use:</p>
+<ul>
+  <li><strong>Fluid</strong> (logical) reasoning;</li>
+  <li>Attitudes and experience from or guiding <strong>Crystallized intelligence</strong>;</li>
+  <li>An <strong>Affective component</strong> involving a person’s emotions (such as fear) and identity (sense of self).</li>
+  <li><strong>Behavioral</strong> (or cognitive) component involving memory, such as long-term  autobiographical memory.</li>
+</ul><section >
+<h4>Reasoning</h4>
+<p><strong>Fluid reasoning</strong> is the capacity to think logically and solve problems in novel  situations, independent of acquired knowledge [<a href="http://en.wikipedia.org/wiki/Fluid_and_crystallized_intelligence">Fluid_and_crystallized_intelligence</a>]  Fluid intelligence may involve both the dorsolateral prefrontal cortex and the  anterior cingulate cortex. </p>
+  <p>Types of fluid reasoning are:</p>
+<ol>
+  <li><strong>Deductive Reasoning</strong> (RG) (sometimes called General or Sequential or hypothetico-deductive reasoning). It is the ability to start with stated assertions (rules, premises, or conditions), and engage in one or   more steps leading to a solution.</li>
+  <li><strong>Inductive Reasoning</strong> (Induction (I) Reasoning from specific cases or observations to general rules or to broad generalizations. Often requires the  ability to combine separate pieces of information in the formation of inferences, rules, hypotheses, or conclusions.</li>
+  <li><strong>Mathematical Intelligence</strong>  (also  called Quantitative Reasoning (RQ) depends upon ability to inductively (I) and/or deductively (RG) reason with concepts involving mathematical relations and properties.</li>
+  <li><strong>Piagetian Reasoning</strong> (PR): reasoning via <em>seriation</em> (organizing material into an orderly series that facilitates understanding of relationships between events), <em>conservation</em> (awareness that physical quantities do not change in amount when altered in appearance), and <em>classification</em>.</li>
+</ol>
+<p>A related idea is Speed of Reasoning (RE): Speed  or fluency in performing reasoning tasks [http://www-personal.umich.edu/~itm/688/wk6/CHC%20Definitions.pdf]</p>
+<p><strong>Crystallized Intelligence</strong> (sometimes  called Comprehension Knowledge), is the ability to use skills, knowledge, and experience. It does not equate to memory, but it does rely on accessing information from  long-term memory. Crystallized intelligence is one’s lifetime of intellectual  achievement, as demonstrated largely through one's   vocabulary and general  knowledge.  [<a href="http://en.wikipedia.org/wiki/Fluid_and_crystallized_intelligence">http://en.wikipedia.org/wiki/Fluid_and_crystallized_intelligence&lt;/cite</a>&gt; Crystallized Intelligence involves storage and usage of long-term memories, such as by the hippocampus.</p>
+  <p>We have included the dependent aspects in the sections on memory and language  [  http://www-personal.umich.edu/~itm/688/wk6/CHC%20Definitions.pdf] </p></section><section id="attention">
+<h4 id="h4_attention" role="heading">Attention</h4>
+<p>Reasoning and executive functions require attention. Types of attention are the following.</p>
+<ul>
+  <li><strong>Selective attention</strong> refers to the ability to attend to some stimuli while disregarding  others irrelevant to the task at hand.   [http://www.ncbi.nlm.nih.gov/books/NBK3885/]</li>
+  <li><strong>Divided attention</strong> tasks require the processing of two or more sources of information,  or the performance of two or more tasks at the same time. (Divided attention has usually been associated with significant age-related declines in performance,    particularly when tasks are complex.) [<a href="http://www.ncbi.nlm.nih.gov/books/NBK3885/#ch1.r5">5</a>]. The cost of dividing attention is assessed by comparing performance under dual-task conditions to performance when the tasks are performed   separately.   [http://www.ncbi.nlm.nih.gov/books/NBK3885/]</li>
+  <li> <strong>Sustained attention</strong> refers to the ability to maintain concentration on a task over an  extended period.  [http://www.ncbi.nlm.nih.gov/books/NBK3885/]</li>
+</ul> </section><section >
+<h4>Abstraction</h4>
+Types of abstraction include:
+<ul>
+  <li>essentialism</li>
+  <li>object recognition - Abstraction is part of visual comprehension </li>
+  <li>face recognition (seems to be separate from object recognition)</li>
+  <li>facial patterns (such as an angry face)</li>
+  <li>linguistical abstractions (such as relations between syntax, semantics, and pragmatics.)</li>
+  <li>quantities</li>
+  <li>numerical concepts</li>
+  <li>abstract context of time</li>
+  <li>spatial orientation, directions, layout of things.</li>
+  <li>mechanical abstractions</li>
+  <li>musical abstractions</li>
+  <li>behavioral and social abstractions –
+    <ul>
+      <li>norms, etc</li>
+      <li>social cues</li>
+      <li>other behavioral: 
+</li>
+    </ul>
+  </li>
+</ul></section> </section> <section >
+<h3>Memory</h3>
+<p>People talk about types of memories are often talking about different categories of types of memory. Any memory-based events can be described in all these categories. For example: an event may cause a sensory experience to go into long-term memory implicitly. Here are the types we have identified:</p>
+<ul><li><strong>durationbased:</strong> working, long term, short term, and possibly intermediary</li>
+  <li><strong>context based:</strong> emotional, procedural, sensory (tactile, smell, psychomotor, kinesthetic, olfactory, auditory, visual, visuo-spatial, spatial, musical, and prospective memory.</li>
+ <li> <strong>awareness level</strong>: implicit and  explicit</li>
+</ul><section >
+<h4>Duration Based</h4>
+<ul>
+  <li><strong>Working memory</strong> involves mentally manipulating  — is the system that actively holds multiple pieces of transitory information in the mind, where they can be manipulated. <a href="http://en.wikipedia.org/wiki/Working_memory#cite_note-Cowan-1">[1]</a> Baddeley and Hitch feel it is executive and attention control of short-term memory, but others point out that long term memory can also be  involved in working memory.</li>
+  <li><strong>Short-term memory</strong> (also called active or primary memory) typically lasts seconds, such as remembering the phone number while you find a pen and  write it down. Subtypes are Verbal, Visual, and Spatial. Four different units in short-term memory are probably average. Capacity of short-term memory is often  called memory span.</li>
+  <li><strong>Long-term memory</strong> (also called reference memory, long-term storage and retrieval  (Glr),TSR, Glm), the ability to store and consolidate new information in memory and later fluently retrieve stored information. Broad retrieval ability (G) is a related idea.</li>
+</ul></section><section >
+<h4 >Context Based</h4>
+<ul>
+  <li><strong>Episodic memory</strong> (autobiographical – time, self)</li>
+  <li><strong>Semantic</strong> memory (factual)</li>
+  <li><strong>Visual memory</strong></li>
+  <li><strong>Visuo-spatial memory</strong></li>
+  <li><strong>Spatial memory</strong></li>
+  <li><strong>Musical memory</strong></li>
+  <li><strong>Auditory memory:</strong> Memory for sound patterns (UM)</li>
+  <li><strong>Procedural memory:</strong> Memory for  performance of particular types of action such as walking.</li>
+  <li><strong>Prospective memory</strong>: Much of what we have to remember in everyday life involves prospective memory — remembering to do things in the future, such as keep appointments, return a book to   the library, or pay bills on time.   [http://www.ncbi.nlm.nih.gov/books/NBK3885/]</li>
+  <li><strong>Emotional memories:</strong> can be both declarative- and procedural-memory processes. </li></ul></section><section >
+    <h4 >Awareness Based</h4>
+  
+  <ul><li><strong>Implicit memory</strong>: (Can be called non-declarative memory) is built or used without conscious awareness. In contrast with... </li>
+  <li><strong>Explicit memory</strong>: (Can be called declarative memory) the intentional use of memory such as remembering the time of an appointment or studying for an exam.</li></ul> </section>
+
+<p>Also, memories can be stored and recalled as<strong> Associative Memory</strong> (AM), <strong>Meaningful memory</strong>(MM), <strong>Free-recall memory</strong> (M6),</p></section><section >
+<h3>Language</h3>
+<p>Speak, write, read, or understand speech and/or language.</p>
+<section >
+<h4>Spoken Languages</h4>
+The basic skills for spoken languages seem to be <strong>speech perception</strong>. 
+Speech perception is when sounds of language are heard, interpreted, and understood. This depends upon:
+<ul>
+  <li>Auditory Discrimination (Note: not loss of hearing, but identification and differentiation of sounds, also called General sound discrimination (U3) </li>
+  <li>Temporal Tracking (UK)</li>
+  <li>Listening Ability (LS)</li>
+  <li>Naming skills (N)</li>
+  <li>Related memory such as Working Memory, auditory memory - (Memory for sound patterns)</li>
+  <li>Morphosyntax: The system of the internal structure of words (morphology) and the way in which words are put together to form phrases and sentences (syntax).</li>
+  <li>Understanding figural language, including a simile (a comparison of two things, such as “His cheeks were  like roses”; a metaphor; onomatopoeia (a word designed to be an imitation of a sound such as “Bark! Bark!”); personification (attribution of a personal nature to inanimate objects); an oxymoron (opposite  or contradictory terms are used together for emphasis, such as “organized chaos”); a paradox;a hyperbole (an  extreme exaggeration, such as “I was so upset I nearly died”); allusion; or idiom, such as "You should keep your eye out for   him"); and puns.</li>
+    </ul>
+	<p class="note">Spoken language also requires an ability to produce voice </p>
+</section><section >
+<h4 >Sign Language</h4>
+<p>Sign language, without spoken language, probably requires a slightly-different set of skills, such as:</p>
+<ul>
+  <li>Visual Recognition Skills</li>
+  <li>Non-vocal Naming - Association of sign and concept</li>
+  <li>Phoneme Processing and Phonetic coding (PC)</li>
+  <li>Related memory, such as Working Memory, Visual memory, Memory for patterns</li>
+  <li>Morphosyntax: The system of the internal structure of words (morphology) and the way in which words are put  together to form phrases and sentences (syntax).</li>
+  <li>Understanding figural language.</li>
+</ul> </section> <section>
+<h4 >Literacy</h4>
+<p>Beyond basic language, literacy typically requires:</p>
+<ul>
+  <li>Visual Recognition (see below)</li>
+  <li>Visual memory (not affected in Intellectual Disability)</li>
+  <li>Phoneme Processing and Phonetic coding (PC)</li>
+  <li>Cross-modal Association of sign and concept</li>
+</ul>
+<p>Note that many people with dyslexia achieve literacy without many of these functions, or with impaired functioning.</p>
+<p> </p></section></section> <section >
+<h3>Perception</h3>
+<section >
+<h4>Visual Recognition (Also called visual perception)</h4>
+<p>The visual system automatically groups elements into patterns: Proximity, Similarity, Closure, Symmetry, Common Fate (i.e., common motion), and  Continuity (Gestalt psychology).</p>
+<p>Functions include:</p>
+<ul>
+  <li>object recognition </li>
+  <li>face recognition (seems to be a  different process from object recognition  [Face and object  recognition ((Alex Huk. (1999) "Object and Face Recognition: Lecture  Notes." pp. 5]</li>
+  <li>Pattern Recognition</li>
+</ul></section><section >
+<h4>Other Perception</h4>
+<p>Auditory perception (see Speech perception above for further classifications), Motor, Tactile, Psychomotor, Kinesthetic (body position, weight, or movement), Olfactory and sensory perception.</p>
+</section></section><section >
+<h3 >Speed</h3>
+<p>Processing speed affect all functions above. See  Caroll.
+  A related concept is <strong>fluency</strong> </p> </section><section>
+<h3 >Knowledge</h3>
+Types of knowledge that might be required for use of Web content include:
+<ul>
+  <li>knowledge of culture</li>
+  <li>base Language knowledge, including:</li>
+  <li>lexical (UL)</li>
+  <li>jargon (subject matter)</li>
+  <li>Web jargon and technology</li>
+  <li>Web and technology usages and risks</li>
+  <li>metaphors and idioms</li>
+  <li>icons and symbols</li>
+  <li>mathematical knowledge</li>
+  <li>mechanical Knowledge (MK)</li>
+  <li>knowledge of behaviors</li>
+  <li>design metaphor – look</li>
+  <li>design functions</li>
+</ul>
+<p> </p></section><section >
+<h3>Not (Yet) Fully Addressed:</h3>
+<ul>
+  <li>consciousness</li>
+  <li>identity</li>
+  <li>emotions (such as fear), moods, and motivations </li>
+  <li>libido and sexual function</li>
+  <li>creative thought </li>
+  <li>personality</li>
+  <li>judgment and self-monitoring</li>
+  <li>initiative </li>
+  <li>inhibition </li>
+</ul>
+<p> </p>
+<p>Note that these are in our mandate. For example: Dementia with Lewy bodies affects the cerebrum, where small round lumps of proteins build up and can cause fluctuations of consciousness, as well as   hallucinations, delusions  (firmly held beliefs in things that are not real), and false ideas (such as  with paranoia).
+</p></section><section >
+<h3>Areas of the Brain</h3>
+<p>This section summaries functions of different areas of the brain. See  <a href="http://www.md-health.com/Parts-Of-The-Brain-And-Function.html">http://www.md-health.com/Parts-Of-The-Brain-And-Function.html</a> and http://www.enchantedlearning.com/subjects/anatomy/brain/Structure.shtml.</p>
+
+<p><strong>Frontal Lobe</strong></p>
+<ul>
+  <li>reasoning and problem solving</li>
+  <li>initiative, inhibition, and behavior</li>
+  <li>abstractions</li>
+  <li>attention </li>
+  <li>creative thought</li>
+  <li>some emotion</li>
+  <li>reflection</li>
+  <li>judgment</li>
+  <li>coordination of movements</li>
+  <li>generalized and mass movements</li>
+  <li>skilled movements and some motor skills</li>
+  <li>libido (sexual urges)</li>
+</ul>
+<p><strong>Occipital Lobe</strong></p>
+<ul>
+  <li>vision</li>
+  <li><strong>Broca's Area</strong> controls facial neurons as well as understanding of speech and       language.</li>
+</ul>
+<p><strong>Parietal Lobe</strong></p>
+<ul>
+  <li>tactile sensation </li>
+  <li>appreciation of form through touch       (stereognosis) </li>
+  <li>response to internal stimuli       (proprioception) </li>
+  <li>sensory combination and comprehension </li>
+  <li>some language and reading functions </li>
+  <li>some visual functions </li>
+</ul>
+<p><strong>Temporal Lobe</strong></p>
+<ul>
+  <li>some hearing </li>
+  <li>memory, including auditory memories and visual memories</li>
+  <li>music </li>
+  <li>some behavior and emotions, such as fear </li>
+  <li>sense of identity </li>
+  <li><strong>Wernicke's Area</strong>- This portion of the temporal lobe is formed around the auditory cortex. Formulate or understand speech.</li>
+</ul>
+<p><strong>Limbic System</strong></p>
+<p>The limbic system contains glands, which help  relay emotions. </p>
+<ul>
+  <li><strong>Amygdala:</strong> The amygdala helps the body respond  to emotions, memories and fear.</li>
+  <li><strong>Hippocampus</strong>: Used  for explicit memory,   specifically converting temporary memories into permanent  memories,   which can be stored within the brain. The hippocampus also helps  people   analyze and remember spatial relationships, enabling accurate    movements. </li>
+  <li><strong>Hypothalamus</strong>: mood, thirst, hunger, and temperature. </li>
+  <li><strong>Thalamus</strong>: attention span, sensing pain, and tracking of sensations the  body is feeling.</li>
+</ul>
+<p><strong>Corpus Callosum</strong></p>
+<ul>
+  <li>communication between the left and the right       sides of the brain </li>
+</ul>
+<p><strong>Cerebellum</strong></p>
+<ul>
+  <li>balance and posture </li>
+  <li>cardiac, respiratory, and vasomotor       centers </li>
+</ul>
+<p><strong>Brain Stem</strong></p>
+<ul>
+  <li>Motor and sensory pathway to body and face </li>
+  <li>Vital centers: cardiac, respiratory,       vasomotor </li>
+</ul>
+<p><strong>Pituitary Gland </strong></p>
+<ul>
+  <li>hormonal body processes </li>
+  <li>physical maturation </li>
+  <li>growth (height and form) </li>
+  <li>sexual maturation </li>
+  <li>sexual functioning </li>
+</ul>
+</section><section id="sources-on-cognitive-functions">
+  <h3 id="h3_sources-on-cognitive-functions" role="heading">Sources on Cognitive Functions</h3>
+  <div id="ftn1">
+    <p>1.  Educational taxonomies, such as Carol for Cyristalised resing, includes:</p>
+<ul>
+<li>Language Development</li>
+<li>Lexical Knowledge (VL)</li>
+<li>Listening Ability(LS)</li>
+<li>General  (verbal)   Information (K0)</li>
+<li>Range of  general stored knowledge (primarily   verbal)</li>
+<li>Information about Culture (K2)</li>
+<li>Range of stored general cultural knowledge (e.g., music, art)</li>
+<li>Communication Ability (CM)</li>
+<li>Oral   Production and Fluency (OP)</li>
+<li>Grammatical Sensitivity (MY)</li>
+<li>Morphology and sentences (syntax)</li>
+<li>Foreign Language Proficiency (KL)</li> <li>Foreign Language  Aptitude (LA)</li>
+</ul>
+  </div>
+  <div id="ftn2">
+    <p> 2. Inappropriate  behavior is common with Frontotemporal dementia - impaired social interaction.</p>
+</div>
+<div id="ftn3">
+ <p> Affected  in: Alzheimer’s disease, Aphasias, Advanced age, dyslexia, emotional  disabilities such as Schizophrenia and PTSD</p>
+  </div>
+<div id="ftn4">
+    <p>4. Expressive aphasia left inferior frontal cortex. These people are   described  with having severe syntactical deficits, which means they have extreme  difficulty in forming sentences correctly. Hessler,   Dorte; Jonkers,  Bastiaanse (December 2010). "The influence of phonetic   dimensions on aphasic  speech perception". Clinical Linguistics and   Phonetics. 12 24: 980–996.</p>
+</div>
+<div id="ftn4a">
+      <p>5. Receptive aphasia - left temproparietal lobe.  People with Receptive Aphasic mostly suffer from lexical-semantic difficulties,  but also   have difficulties in comprehension tasks. The effect of receptive    aphasia on understanding is much more severe. Hessler, Dorte; Jonkers, Bastiaanse (December 2010).  "The   influence of phonetic dimensions on aphasic speech perception".    Clinical Linguistics and Phonetics. 12 24: 980–996.</p>
+
+      <p>Anarthria: Loss of the motor ability that enables  speech.   Complete loss of the ability to vocalize words as a result of an injury    to the part of the brain responsible for controlling the larynx.</p>
+  </div>
+<div id="ftn5">
+  <p>Aphonia: The inability to produce voice.</p>
+<p>Alalia: A delay in the development or use of the  mechanisms that produce speech.</p>
+<p>Dyslalia: Difficulties in talking due to structural  defects in speech organs.</p>
+<p>Developmental verbal dyspraxia: Motor speech disorder  involving impairments in the motor control of speech production.</p>
+  </div>
+  <div id="ftn6">
+    <p> 6. Carol  tends to have abilites as the main category with memory and sensitivity, such as tactile  sensitivity 
+      (other than psychomotor abilities, which have subcategories of   static  strength (P3), multi-limb coordination (P6), finger dexterity   (P2), manual  dexterity (P1), arm-hand steadiness (P7), sontrol precision   (P8), aiming (A1),  gross-body equilibrium (P4)</p>
+  </div>
+  <div id="ftn7">
+    <p> 7. Carol  brings Processing speed (Gs), such as cognitive processing   speed (Gs), broad-cognitive speediness (Gs), perceptual speed (P),   rate-of-test-taking (R9), number  facility (N), speed of reasoning (RE),   reading speed (RS), writing speed (WS), reaction and decision Speed (Gt),   correct decision speed (CDS), processing speed,  (RT) decision speed (such as simple-reaction time) (R1), choice reaction time (R2), semantic   processing speed (R4),  mental-comparison speed (R7), inspection time   (IT)</p>
+  </div>
+  <div id="ftn8">
+    <p> 8. Carol  brings Ideational Fluency (FI), Associational Fluency (FA),   Expressional Fluency (FE), Word  Fluency (FW), Figural Fluency (FF), Figural Flexibility (FX), Sensitivity to Problems  (SP), Originality/Creativity Fluency (FO), Learning Abilities (L1), Naming Facility (N)</p>
+		
+  </div></section>
+</section>
+        
+    <section> 
+			<h2>Methodology in User Research</h2>
+			<p>In making user scenarios and user group research, we took a multilevel approach including: </p>
+			<section>
+				<h3>Asking Users</h3>
+				<ol>
+					<li>What do they have trouble with? </li>
+					<li>What tasks do they need help with? </li>
+					<li>What tasks they avoid?</li>
+					<li>What tasks often lead to mistakes?</li>
+				</ol>
+			</section>
+			<section>
+				<h3>Addressing Specific Topics</h3>
+				<p>In the user group research section of the gap analysis, we aim to identify abstract principles for accessibility for people with cognitive and learning disabilities; core challenges for each user group; as well as practical techniques. </p>
+				<p>However, when trying to identify abstract principles, it is often helpful to look at concrete-user scenarios and challenges that different user groups face. For that purpose, we have identified practical and diverse user scenarios that should be considered in user-group research. These include: </p>
+				<section>
+					<h4>Communication</h4>
+					<p>Making sure users can communicate with people and be part of society. Tasks to investigate:</p>
+					<ol>
+						<li>use email and chat effectively </li>
+						<li>be aware of a change </li>
+						<li>share pictures and information </li>
+						<li>play </li>
+						<li>request information </li>
+					</ol>
+				</section>
+				<section>
+					<h4>Applications</h4>
+					<ol>
+						<li>Apps to enable work, such as document authoring </li>
+						<li>Critical <abbr title="Dynamic Hypertext Markup Language">DHTML</abbr> content and applications such as: enroll and manage healthcare; make an appointment; enroll and manage banking; shop online. </li>
+						<li>sign-up / register and manage account profile on a site; book and manage travel </li>
+						<li>enroll in and participate in online education </li>
+						<li>apps such as mobile apps </li>
+						<li>directions / locations </li>
+					</ol>
+				</section>
+				<section>
+					<h4>Web of Things and Web  Systems</h4>
+					<ol>
+					  <li>Use Web of Things applications, such as temperature control, entertainment systems </li>
+						<li>phone-menu systems </li>
+						<li>other menu systems </li>
+					</ol>
+				</section>
+				<section>
+					<h4>Research and Education</h4>
+					<ol>
+						<li>Understand content and learning material. </li>
+						<li>Search, research, and find information. </li>
+						<li>Enroll in and participate in online education. </li>
+					</ol>
+				</section>
+				<section>
+					<h4>Access to Critical Information</h4>
+					<ol>
+						<li>Read and share news. </li>
+						<li>Find weather alerts. </li>
+						<li>Find and read emergency information. </li>
+						<li>Find out rights and social-service information. </li>
+					</ol>
+				</section>
+			</section>
+			<section>
+				<h3>Cross-Cutting Concerns</h3>
+				<p>Using content should be: </p>
+				<ol>
+					<li>safe </li>
+					<li>effective </li>
+					<li>minimally-frustrating </li>
+				</ol>
+			</section>
+		</section>
+    <section>
+			<h2>Potential for Inclusion</h2>
+			<section>
+				<h3>Proposed Directions</h3>
+			<p>The aim of the Cognitive and Learning Disabilities Accessibility Task Force (COGA) is to improve Web accessibility for people with cognitive and learning disabilities. </p>
+			<p>This is a background-research document. However, it may be worth concluding with an overview of  what could be done for accessibility for people with cognitive and learning disabilities. It is intended to help us (COGA) identify what needs to be done to get there.</p>
+			<p class="note">Note that some of the ideas below  may be out of scope for our mandate and role as a <abbr title="World Wide Web Consortium">W3C</abbr> task force.</p>
+			<section>
+				<h3>What is Needed</h3>
+				<p><img alt="The pieces of what needs to happen next (described in the text below)" src="img/vision.png" /></p>
+			</section>
+			<section>
+				<h3>Techniques for Everyone</h3>
+				<p>A substantial amount of techniques are helpful  for over 90% of people with cognitive disabilities. These techniques need to be gathered in one place.</p>
+				<p>For example, most people with any cognitive disability may be disturbed when form data is lost when a session times out. Almost all user groups may need help or  need to double check data entered into a form. Timing out so they need to start again may make a form unusable.</p>
+				<p> See <a href="http://w3c.github.io/coga/templates/technique-template.html">sample technique format</a> to help us gather techniques as we come across them, so that they do not get forgotten or are hard to find later when we are finished the gap analysis.</p>
+			</section>
+			<section>
+				<h3>Techniques for User Groups</h3>
+				<p>We also need to document techniques good for some user groups and not for others (depends upon cognitive function and localization). For example, text under symbols may be useful for many people with dementia, but unhelpful for many people with severe language disabilities.</p>
+				<p>In a localization example using left-hand-side text, alignment is helpful for  English sites, but right-hand-side text alignment is  helpful for sites in Arabic or Hebrew.</p>
+				<p> See <a href="http://accessibility.athena-ict.com/TechniquesCOGA.html">sample page structure and more examples</a>.</p>
+			</section>
+			<section>
+				<h3>Grouping Techniques</h3>
+				<p>Once we have a comprehensive set of techniques,  we may want to group techniques  into “enhancements”. For example, we may make a group of techniques as “simple text” enhancements for easier reference. </p>
+				<p>We may also want to identify how different enhancements benefit people with different limitations of cognitive functions. </p>
+				<p>To achieve this, we may need to label groups of cognitive functions, so that we can simplify linking enhancements to cognitive functions. See <a href="http://accessibility.athena-ict.com/cognativefunction.shtml">an initial page of cognitive function</a>. </p>
+				<p>Once we have a set of enhancements, we can enable standards, such as <abbr title="Evaluation and Report Language">EARL</abbr>, to identify  which documents support which enhancements. Other supported standards and systems include <abbr title="International Organization for Standardization">ISO</abbr>, <abbr title="Global Public Inclusive Infrastructure">GPII</abbr> including subprojects Prosperity4All and Cloud4all, and possibly FLUID.</p>
+				<p>Once we have a comprehensive set of techniques, we can also explore what is needed to make a website adaptable to different groups of users.  We may be able to identify semantics that enable adaptation for specific learning and cognitive disabilities; and to conflicting needs of different users. </p>
+				<p> This could include:</p>
+				<ul>
+					<li>adaptive text: This would enable text to become simpler or more literal or adapt to the user needs.</li>
+					<li>adaptive components: There are many ways to make the same widget. Because different web sites implement the same functions differently, the user needs to learn how to interact and use them with specific-page widgets. Adaptive components would enable the user to use one interface, which they know how to use, across many different sites.</li>
+					<li>adaptive pages: This would enable changing or adapting the page layout, cutting out extra features or confusing aspects of the page. This would add semantics to enable adaptive interfaces and AT. This would enable adaptive interfaces to allow users to use complex interfaces via an independent and familiar interface tailored to their scenarios and strengths. As this interface is designed for the user/user group, all features are familiar, and the same buttons and metaphors will be used across all conformant applications.</li>
+					<li>adaptive media</li>
+					<li>adaptive forms and billing: This may result in suggestions to ARIA 2.0  and PF for additional semantics to enable AT to provide techniques.  </li>
+				</ul>
+				<p>(See <a href="http://accessibility.athena-ict.com/cognitive/adaptable1.html">more information about making adaptable content for people with cognitive disabilities</a>)</p>
+				<p>This may result in suggestions  to PF group for the ARIA 2.0 specification.</p>
+			</section>
+			<section>
+				<h3>Special Projects</h3>
+				<p>There may be other accommodations needed that are outside the handshaking approach or adaptable pages.</p>
+				<ul>
+					<li>Accessible -menu systems for people with  cognitive disabilities: This will look at what measures or techniques  could make phone menu systems usable by for people with  cognitive disabilities, such as enabling people to reach an operator.  (Relevant specification: voice Ml)</li>
+					<li>Interoperable AAC symbols AND </li>
+					<li>Lexicon and symbols that support low literacy.</li>
+					<li>Labels for cognitive function: See <a href="http://accessibility.athena-ict.com/cognativefunction.shtml"> an early draft</a>.</li>
+				</ul>
+				<p>Also see <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Section_3">more ideas</a>.</p>
+			</section>
+			</section>
+			
+		</section>
+        
+
+		
+		<!--
+		<section class="appendix" id="changelog">
+			<h2>Change Log</h2>
+			<section>
+				<h2>Substantive changes since the <a href="@@">last public working draft</a></h2>
+				<ul>
+					<li>@@</li>
+					<!- EdNote: After each WD publish, move contents of this list into the next one below. ->
+				</ul>
+			</section>
+			<section>
+				<h2>Other substantive changes since the <a href="@@">First Public Working Draft</a></h2>
+				<ul>
+					<li>@@</li>
+					<!- EdNote: After each WD publish, move previous list into this one. ->
+				</ul>
+			</section>
+		</section>
+		-->
+		<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'>Acknowledgements placeholder</div>
+	</body>
+</html>
