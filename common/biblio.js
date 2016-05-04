@@ -1810,7 +1810,13 @@ var biblio = {
 		"publishDate": "2015",
 		"href": "http://www.who.int/mediacentre/factsheets/fs362/en/"
 		},
-		
+	
+		"Widgit-1": {
+		"title": "Widgit Symbols",
+		"authors": ["Widgit"],
+		"etAl": "false",
+		"href": "http://www.widgit.com/symbols/widgit_symbols.htm"
+		},	
 		
 	"Wilson-1":
                 {
@@ -1831,7 +1837,7 @@ var biblio = {
 		"etAl": "true",
 		"publisher": "ASSETS '12 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 25-32",
 		"publishDate": "2012"
-		},
+		}
 		
 	
 };
