@@ -36,57 +36,72 @@ table {border:thin; border-style:groove;}
 					<li>As a user who has memory impairments and often forget passwords I need to be able to use a site without remembering or copying  passwords and user names so that I can use this service.</li>
 					<li>As a user who has weak executive function I need the   login process to be simple and not multi step so that I can use it.</li>
 				</ol>
-				<table border="1">
-					<thead>
-						<tr>
-							<th scope="col">User Needs</th>
-							<th scope="col"><p>Content and HTML</p>
-						    <p>techniques</p></th>
-							<th scope="col">WCAG proposed Success Cryteria </th>
-							<th scope="col">New Semantics</th>
-							<th scope="col">Personalization</th>
-							<th scope="col">Operating System/Other</th>
-							<th scope="col">Discussions</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">
-								<p>I need a method of secure website authentication that I find easy to use. </p>
-							</th>
-							<td><h5 resource="#minimize-the-cognitive-skills-required-to-use-the-content-when-there-is-a-known-alternative" id="minimize-the-cognitive-skills-required-to-use-the-content-when-there-is-a-known-alternative"><a href="file:///C:/Users/lseeman/Documents/GitHub/coga/techniques/index.html#minimize-the-cognitive-skills-required-to-use-the-content-when-there-is-a-known-alternative">Minimize the cognitive skills required to use the content</a></h5>
-					        <p>(See: Examples in security )</p></td>
-							<td> When there is a barrier between the content and the user that requires additional cognitive function an alternative is provided that does not require additional cognitive function
-								<p>See https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_cognitive_function_an_alternative_is_provided_that_does_not_require_additional_cognitive_function</p>
-								<p>Techniques should include how to have security that does use passwords or copying such as biometrics and tokens</p></td>
-							<td> NA</td>
-							<td> We need to capture the type of security that this user can use
-						    <p>and (maybe) if they require the use of an api (such as password storage</p></td>
-							<td> Hardware and operating systems could provide the authentication to websites and application - (needs further investigation and risk analysis)</td>
-							<td> <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html</a></td>
-						</tr>
-						<tr>
-							<th scope="row">
-								<p> I need a safe ways to interact online  </p>
-							</th>
-							<td> <span property="xhv:role" resource="xhv:heading">Keep the user safe </span></td>
-							<td> As above
-						    <p>and</p>
-						    <ul>
-						      <li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Do_not_expose_user_information_in_a_way_that_can_be_exploited_without_informed_consent">1.3.1 Do not expose user information in a way that can be exploited without informed consent</a></li>
-						      <li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Do_not_add_mechanisms_that_are_likely_to_confuse_the_user_in_a_way_that_may_do_them_harm">1.3.2 Do not add mechanisms that are likely to confuse the user in a way that may do them harm</a></li>
-						      </ul>
-						    <p>&nbsp;</p></td>
-							<td> NA?</td>
-							<td> We need to ensure users is not put at risk due to personalization, and storing data. Proposals include use of  functional requirements and making personalization on the user device</td>
-							<td> </td>
-							<td> <a href="https://rawgit.com/w3c/coga/master/issue-papers/safety.html">Online Safety</a></td>
-						</tr>
-					</tbody>
-				</table>
+                
+                <table  border="1" >
+  <tbody>
+    <tr>
+      <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+      <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+        <p> Proposed Success Criteria <a href="#wcagex" >*</a></p></th>
+      <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+      <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+        <p>&nbsp;</p></th>
+      <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+      <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+    </tr>
+    <tr>
+      <th scope="row"><p>&nbsp;</p>
+      <p>I need a method of secure website authentication that I find easy to use.  </p>
+      <p><a href="#Disccusion1">more</a> </p></th>
+      <td><p>When there is a barrier between the content and the user that requires additional cognitive function an alternative is provided that does not require additional cognitive function </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_cognitive_function_an_alternative_is_provided_that_does_not_require_additional_cognitive_function">§ expand</a>)</p>
+        <p>Level A</p>
+        <p>--------</p>
+        <p><strong>To add</strong></p>
+        <p>&nbsp;</p></td>
+      <td><p>Minimize the cognitive skills required to use the content - the examples in security</p>
+        <p>(<a  title="expand" class="expand" aria-label="expand example" href="/techniques/index.html#minimize-the-cognitive-skills-required-to-use-the-content-when-there-is-a-known-alternative"">§ expand</a>)</p>
+        <p>Techniques should include how to have security that does use passwords or copying such as biometrics and tokens</p></td>
+      <td>(<a  title="expand" class="expand" aria-label="expand example" href="">§ expand</a>)</td>
+      <td> We need to capture the type of security that this user can use
+        <p>and (maybe) if they require the use of an api (such as password storage</p></td>
+      <td> Hardware and operating systems could provide the authentication to websites and application - (needs further investigation and risk analysis)</td>
+      </tr>
+    <tr>
+      <th scope="row"> 
+        <p>I need a safe ways to interact online </p>
+        <p><a href="#Disccusion1">more</a>  </p></th>
+      <td><p>As above </p>
+        <p>and</p>
+        <p><a >1.3.1 Do not expose user information in a way that can be exploited without informed consent</a></p>
+        <p> (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Do_not_expose_user_information_in_a_way_that_can_be_exploited_without_informed_consent">§ expand</a>)</p>
+        <p>1.3.2 Do not add mechanisms that are likely to confuse the user in a way that may do them harm <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Do_not_add_mechanisms_that_are_likely_to_confuse_the_user_in_a_way_that_may_do_them_harm" title="expand" class="expand" aria-label="expand 1.4.3"> (§ expand</a>)</p>
+        <p>&nbsp;</p>
+        <p>Level A</p>
+        <p>--------</p>
+        <p><strong>To add</strong></p></td>
+      <td>Keep the user safe</td>
+      <td>&nbsp;</td>
+      <td> We need to ensure users is not put at risk due to personalization, and storing data. Proposals include use of  functional requirements and making personalization on the user device</td>
+      <td> </td>
+      </tr>
+    
+  </tbody>
+</table>
+				<h4 id="Disccusion1">Disccusion</h4>
+                <p><a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">Privacy and security issue paper</a><a href="https://rawgit.com/w3c/coga/master/issue-papers/security.html"></a>                </p>
+                <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/safety.html">Online safety issue paper</a></p>
+                <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and
+                <p><a href="https://github.com/ayelet-seeman/coga.personalisation">Example for personalization</a></p>
+                <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">Semantics</a>
+                <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG ">Proposal for WCAG </a></p>
+                <p><a href="https://rawgit.com/w3c/coga/master/techniques/index.html ">Techniques</a></p>
+  <p>&nbsp;</p>
 </section>
 			<section>
-				<h3 id="table2">Table 2: Context and distractions</h3>
+			  <h3 id="table2">Table 2: Context and distractions</h3>
 				<p><strong>About the user:</strong> Distractions can cause people with cognitive disabilities to lose focus on the current action being performed or draw attention away from the primary content and can be difficult for some users to know how to understand, avoid and/or stop them. </p>
 				<p>Once people have become distracted it can be difficult for them to remember what they were doing. This is especially problematic for people with both low attention and impaired memory such as people with dementia.</p>
 				<p>This leads to following user stories: To do - fill in user stories</p>
@@ -100,7 +115,7 @@ table {border:thin; border-style:groove;}
                   <li>I need to restore the context in       multi media . I       need to go back to that bit I just missed, or re-orientate myself if  I lost       the context.</li>
 				</ul>
 				<p><strong>To do: Create table mapping user needs to solutions</strong></p>
-			</section>
+</section>
 			<section>
 				<h3 id="table3">Table 3: Entering data, error prevention &amp; recovery </h3>
 				<p>About the user: Filling out forms and similar tasks can be overwhelming for most people with cognitive and learning disabilities. This includes relatively minor learning disabilities such as dyslexia or attention related disabilities. Many people (most COGA groups) have memory issues that can make copying text, difficult or impossible. Other contributing issues include impaired executive function. </p>
@@ -344,7 +359,7 @@ table {border:thin; border-style:groove;}
 					<li>Deployment of familiar symbol sets capability to personalize websites (content, features, elements). </li>
 				</ul>
 				<p><strong>To do: Add the above user needs to the table mapping user needs to solutions</strong></p>
-			</section>
+</section>
 			<section>
 				<h3 id="table7">Table 7: Clear and understandable content and text</h3>
 				<p>About the user: To be filled in</p>
@@ -364,7 +379,7 @@ table {border:thin; border-style:groove;}
                   <li> Understandable       use of (familiar) symbols </li>
                   
                   <li> Understandable       use of images and multi-media</li>
-                </ul>
+              </ul>
               <p>&nbsp;</p>
               <table  border="1" >
                 <tbody>
