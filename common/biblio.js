@@ -978,13 +978,6 @@ var biblio = {
 		//"pages": "287-92"
 		},
 	
-	 "Lemon-1":
-		{
-		"publisher": "Lemon",
-		"etAl": "false",
-		"href": "http://lemon-model.net//"
-		},
-		
 	"Lyon-1": {
 		"title": "Neuroimaging a window to the neurological foundations of learning and behavior in children",
 
