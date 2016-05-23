@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Cognitive and Learning Disabilities and WCAG 2.0</title>
+		<title>Cognitive and Learning Disabilities and WCAG</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
 		<script src="../common/biblio.js" class="remove"></script>
 		<!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
@@ -102,14 +102,14 @@
 	</head>
 	<body>
 		<section id="abstract">
-			<p>This is a draft extension to WCAG 2.0 to address the needs of users with cognitive and learning disabilities.</p>
+			<p>This is a draft of additions for WCAG 2.0 to address the needs of users with cognitive and learning disabilities.</p>
 		</section>
 		<section id="sotd"></section>
 		<section>
 			<h2>Introduction</h2>
 			<p>The following is for a first draft for adding the needs for   people with cognitive and learning disabilities into WCAG. It is based on the user research at <a href="https://w3c.github.io/wcag/coga/user-research.html">https://w3c.github.io/wcag/coga/user-research.html</a> and the issue papers available at <a href="https://rawgit.com/w3c/coga/master/issue-papers/index.html">https://rawgit.com/w3c/coga/master/issue-papers/index.html</a>. </p>
 			<p>The supporting techniques and further descriptions of the success criteria, as well as information on who it helps and why, are described in more detail in <a href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a>. </p>
-			<p>Detailed descriptions of users and the challenges, persona, and research sources are given in the user research document above This proposal for the WCAG extension includes changes in the levels of WCAG 2.0 success criteria, new success criteria and new supportive techniques. </p>
+			<p>Detailed descriptions of users and the challenges, persona, and research sources are given in the user research document above This proposal for the WCAG  includes changes in the levels of WCAG 2.0 success criteria, new success criteria and new supportive techniques. </p>
 			<p>We have identified the following themes: </p>
 			<ol>
 				<li><strong>Help as many users as possible understand the site and know how to use it</strong>. This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patterns. Personalization and good use of semantics can help make the symbols and design as familiar to the user as possible. </li>
@@ -142,7 +142,7 @@
 					<ul>
 						<li> can be set one time with as a wide a scope as possible (such as using the standards of the OS, ETSI or GPII when available) and </li>
 						<li> with the option to save or change the setting, were available interoprabliy but also for a scope of the set of web pages and </li>
-						<li> is reachable from each screen where it may be needed, and the path and control conforms to all of this extension. </li>
+						<li> is reachable from each screen where it may be needed, and the path and control conforms to all of this document. </li>
 					</ul>
 				</dd>
 
@@ -598,8 +598,8 @@
 					<p>This includes: </p>
 					<ol>
 						<li>Use <a>known techniques</a> that remind the user of the context, including: <ol>
-								<li>Pointers to remind the user of the current task. Pointers should not distract the user when they choice to change tasks without the users concent. </li>
-								<li>In the scope of a task, reminders of broader context. For a non-complicated task, such as reading a home page, clearly identifying the site and it's aim is sufficient. </li>
+								<li>Signposts to remind the user of the current task and subtask. Signposts should not distract the user when they choice to change tasks without the users concent. </li>
+								<li>In the scope of a task, provide a signposts of broader context. For a non-complicated task, such as reading a home page, clearly identifying the site and it's aim is sufficient. </li>
 							</ol>
 						</li>
 						<li>Where a site may generate interruptions, a clearly labeled mechanism is provide to enable the user to control them,(COGA Techniques 2.11.1) such that: <ol>
@@ -609,13 +609,14 @@
 								<li>Media events can be easily controlled and turned off. </li>
 								<li>Chat can be easily turned off and on again. </li>
 								<li>Non-critical messages can easily be turned off and on again </li>
-								<li>Where a standard mechanism exists for the above it should be used. </li>
+								<li>Where a standard techniques exists for the above it should be used. </li>
 							</ol>
 						</li>
 					</ol>
 					<p>See (No Interruptions COGA Techniques 2.11.2, - Help The User Focus COGA Techniques 2.11.3, and Help the user find information COGA Techniques 2.11.4) </p>
 					<p>Techniques to include</p>
 					<ul>
+						<li>A standard techniques for closing overlays such as a high contast large font close button. (above the scroll) Overlays are only used when content firsts loads and are clearly labled to give context . (Overlays should be avioded , this is a last resort)</li>
 						<li>Headings and titles are provided that provide context </li>
 						<li>In multi step process both the process and the step are identified (technique = For Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.) </li>
 						<li>Any choices made by the user in a process are easy to review in one clearly labeled action and the user can get back to the place they were at, in one clearly labeled action.</li>
