@@ -1,0 +1,1180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>COGA gap analysis, tables of user needs </title>
+<style>
+table td  { vertical-align: top; } 
+table th  { vertical-align: top; } 
+table {border:thin; border-style:groove;}
+</style>
+</head>
+
+<body>
+<p>&nbsp;</p>
+<h1>Gap Analysis - Tables of User Needs </h1>
+<p>This section is work in progress for  tables format for the coga roadmap. It identifies user needs that are not currently fully addressed by accessibility.</p>
+<a id="userneeds" ></a><strong>User needs:</strong>Each  table addresses a group of user needs represented by   a few related user stories of the form of "As a <em>&lt;role&gt;,</em> I want <em>&lt;goal/desire&gt;</em> so that <em>&lt;benefit&gt;</em>".
+<p>The tables show how  related user needs can be met though:</p>
+<ul>
+  <li><a id="wcagex" ></a>How this can be addressed in a WCAG extention for cognative. See  current at  <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG">WCAG 2.0 COGA extension</a></li>
+  <li><a id="authoring" ></a>Authoring techniques for content using HTML, see  <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">Coga authoring techniques document.</a></li>
+  <li><a id="semantics" ></a>New semantics that may be required to address this user need, such as extra aria attributes. See the draft for a <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">semantics for adaptive interfaces</a> (that may become a WAI-ARIA [[wai-aria]] extension) and personalization syntax to enable adaptable interfaces. </li>
+  <li><a id="personalization" ></a>Any personalization requirements. Please see the discussion on Why we need personalization. (todo add link)</li>
+  <li><a id="operating" ></a>Operating System support or other support that may be required to meet this user need</li>
+</ul>
+<p>Note we also have the summary at https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Gap_Analysis_Summary#Summary_of_Issues</p>
+<h3>&nbsp;</h3>
+<p><strong>Please note that this table is incomplete and is a work in progress. (We are publishing it early to solicit early feedback.</strong>) For a later version see ....</p>
+<p>&nbsp;</p>
+<section>
+				<h3 id="table1"> Table 1: Authentication and Safety</h3>
+				<p><strong>About the user:</strong> Many people (most COGA groups) have memory issues that can make copying text, or remembering passwords, difficult or impossible. Other contributing issues include impaired executive function. </p>
+				<p>Sometimes security and authentication put a barrier between the user and the task that they are doing so that the user can not use the content or service.  For example, difficult security mechanisms that require coping or remembering passwords often bar people with cognitive disabilities from accessing content or using a service at all. </p>
+				<p>This leads to following user stories:</p>
+				<ol>
+					<li>As a user who has memory impairments and often forget passwords I need to be able to use a site without remembering or copying  passwords and user names so that I can use this service.</li>
+					<li>As a user who has  impairments  I need to be able to use a site without being required to copy items in the correct sequence</li>
+					<li>As a user who has weak executive function I need the   login process to be simple and not multi step so that I can use it.</li>
+					<li>As a symbol user I  need the   login process I can use</li>
+				</ol>
+                
+                <table  border="1" >
+  <tbody>
+    <tr>
+      <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+      <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+        <p> Proposed Success Criteria <a href="#wcagex" >*</a></p></th>
+      <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+      <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+        <p>&nbsp;</p></th>
+      <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+      <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+    </tr>
+    <tr>
+      <th scope="row"><p>&nbsp;</p>
+      <p>I need a method of secure website authentication that I find easy to use</p>
+      <p>(Assume I have cognitive and memory impairments) </p>
+      <p><a href="#Disccusion1">more</a> </p></th>
+      <td><p>When there is a barrier between the content and the user that requires additional cognitive function an alternative is provided that does not require additional cognitive function </p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_cognitive_function_an_alternative_is_provided_that_does_not_require_additional_cognitive_function">§ expand</a>)</p>
+        <p>Level A</p>
+        <p>--------</p>
+        <p><strong>To add</strong></p>
+        <p>Does this support symbol users</p>
+        <p>&nbsp;</p></td>
+      <td><p>Minimize the cognitive skills required to use the content - the examples in security</p>
+        <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/techniques/index.html#minimize-the-cognitive-skills-required-to-use-the-content-when-there-is-a-known-alternative">§ expand</a>)</p>
+        <p>Techniques should include how to have security that does use passwords or copying such as biometrics and tokens</p></td>
+      <td>None</td>
+      <td> We need to capture the type of security that this user can use
+        <p>and (maybe) if they require the use of an api (such as password storage</p></td>
+      <td> Hardware and operating systems could provide the authentication to websites and application - (needs further investigation and risk analysis)</td>
+      </tr>
+    <tr>
+      <th scope="row"> 
+        <p>I need a safe ways to interact online </p>
+        <p>(Assume I do not have the cognative function to identify all the risk)</p>
+        <p><a href="#Disccusion1">more</a>  </p></th>
+      <td><p>As above </p>
+        <p>and</p>
+        <p><a >1.3.1 Do not expose user information in a way that can be exploited without informed consent</a></p>
+        <p> (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Do_not_expose_user_information_in_a_way_that_can_be_exploited_without_informed_consent">§ expand</a>)</p>
+        <p>1.3.2 Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe <a href="https://rawgit.com/w3c/coga/master/extension/index.html#Do_not_add_mechanisms_that_are_likely_to_confuse_the_user_in_a_way_that_may_do_them_harm" title="expand" class="expand" aria-label="expand 1.4.3"> (§ expand</a>)</p>
+        <p>&nbsp;</p>
+        <p>Level A</p>
+        <p>--------</p>
+        <p><strong>To add</strong></p></td>
+      <td><p>Keep the user safe</p>
+        <p>(<a  title="expand" class="expand" aria-label="expand" href="https://rawgit.com/w3c/coga/master/techniques/index.html#keep-the-user-safe">§ expand</a>)</p>
+        <p>&nbsp;</p>
+        <p>Add: notify the user when they are leaving the site if it may cause them harm</p>
+        <p>Give positives and negative examples</p></td>
+      <td>&nbsp;</td>
+      <td> We need to ensure users is not put at risk due to personalization, and storing data. Proposals include use of  functional requirements and making personalization on the user device</td>
+      <td> Tools for user to warn them when a post or activity may expose them or be considered inappropriate</td>
+      </tr>
+    
+  </tbody>
+</table>
+				<h4 id="Disccusion1">Disccusion</h4>
+                <p><a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">Privacy and security issue paper</a><a href="https://rawgit.com/w3c/coga/master/issue-papers/security.html"></a>                </p>
+                <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/safety.html">Online safety issue paper</a></p>
+                <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and
+                <p><a href="https://github.com/ayelet-seeman/coga.personalisation">Example for personalization</a></p>
+                <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">Semantics</a>
+                <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG ">Proposal for WCAG </a></p>
+                <p><a href="https://rawgit.com/w3c/coga/master/techniques/index.html ">Techniques</a></p>
+  <p>&nbsp;</p>
+</section>
+<section>
+  <h3 id="table2">Table 2: Context and distractions</h3>
+				<p><strong>About the user:</strong> Distractions can cause people with cognitive disabilities to lose focus on the current action being performed or draw attention away from the primary content and can be difficult for some users to know how to understand, avoid and/or stop them. </p>
+				<p>Once people have become distracted it can be difficult for them to remember what they were doing. This is especially problematic for people with both low attention and impaired memory such as people with dementia.</p>
+				<p>This leads to following user stories: To do - fill in user stories</p>
+				<p><strong>User needs</strong></p>
+				<table  border="1" >
+				  <tbody>
+				    <tr>
+				      <th width="215" scope="col">User Needs <a href="#userneeds" >*</a></th>
+				      <th width="247" scope="col"><p>WCAG Extension for Cognitive </p>
+				        <p> Proposed Success Criteria <a href="#wcagex" >*</a></p></th>
+				      <th width="241" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+				      <th width="126" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+				        <p>&nbsp;</p></th>
+				      <th width="211" scope="col">Personalization<a href="#personalization" >*</a></th>
+				      <th width="386" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I need to consume content or complete a task without unnecessary distractions. </p>
+				        <p>(Assume I have an attention related disability)</p>
+				        <p>&nbsp;</p>
+				        <p> <a href="#Disccusion2">more</a> </p></th>
+				      <td><p>Provide mechanisms that help the user focus and maintain or restore context if the context is lost</p>
+				        <p>(<span property="xhv:role" resource="xhv:heading"><span typeof="bookmark"><a property="url" title="Permalink for 3.4.5 Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost." aria-label="Permalink for 3.4.5 Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost." href="file:///C:/Users/lseeman/Documents/coga/extension/index.html#provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x">§ expand)</a></span></span></p>
+                        <p>(Remove uncertainty and help the user maintain context) </p>
+				        <p>Level A</p>
+				        <p>--------</p>
+				        <p><strong>To add</strong></p>
+				        <p> avoid distractions ?</p>
+			          <p>&nbsp;</p></td>
+				      <td><p><span property="xhv:role" resource="xhv:heading">Attention and focus</span></p>
+			          <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#attention-and-focus">§ expand</a>)</p></td>
+				      <td><p>&nbsp;</p>
+				        <p><strong>Proposed attribute: </strong> coga-distraction</p>
+				        <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#distractions">§ expand</a>)</p>
+				        <p><strong>Proposed attribute: </strong>coga-reminder</p>
+				        <p>Enable the user to turn off let helpful reminders</p>
+			          <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#reminders">§ expand</a>)</p></td>
+				      <td>We need the formal user setting to enble the diffrent responces to the semantics</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I need to know the context, were I am, and what I just did, or what happened to me.</p>
+				        <p> (Assume I have an attention disability and/or an impaired short term memory)</p>
+			          <p>&nbsp;</p>
+			          <p>&nbsp;</p></th>
+				      <td><p>as above</p>
+			          <p>and</p>
+<span property="xhv:role" resource="xhv:heading">3.4.1 Provide a clear structure that includes:</span>
+			          <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#provide-a-clear-structure-that-includes">§ expand</a>)</p>
+			          <p>&nbsp;</p>
+			          <p>Also see</p>
+			          3.6.2 Support is provided that help users understand the content, that includes:
+			          <p resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes">(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-understand-the-content-that-includes">§ expand</a>)</p>
+			          <p>&nbsp;</p>
+			          <p>&nbsp;</p></td>
+				      <td><p>As above and WCAG extention techniques to  include  :
+                      </p>
+				        <p>Headings and titles are provided that provide context                      </p>
+				        <p>In multi step process both the process and the  step are identified  </p>
+				        <p> For Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. </p>
+				        <p>(Making breadcrumbs clickable can also help the user undo mistakes.)                     </p>
+				        <p>Any choices made by the user in a process are easy to review in one clearly labeled action and the user can get back to the place they were at, in one clearly labeled action.			          </p>
+			          <p>for a non complicated task the site is identified (broader scope)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I need to restore the context when I forget where I am or get distracted.</p>
+			          <p>(Assume I have an impaired short term memory)</p></th>
+				      <td><p>as above</p>
+			          <p>(See: A clear navigational path is provided to all content that: )</p></td>
+				      <td><p>as above</p>
+			            <h6 resource="#help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost" id="help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost2"><span property="xhv:role" resource="xhv:heading">Help the user  orientate themselves, and  regain focus when it is lost</span></h6>
+		              <p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I need to restore the context in       multi media . I       need to go back to that bit I just missed, or re-orientate myself if  I lost       the context.</p>
+			          <p>(Assume I have an attention disability and/or an impaired short term memory)</p></th>
+				      <td>as above</td>
+				      <td><h6 resource="#help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost" id="help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost3"><span property="xhv:role" resource="xhv:heading">Help the user  orientate themselves, and  regain focus when it is lost</span></h6></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I need reminders of important information</p>
+			          <p>(Assume I have an attention disability and/or an impaired short term memory)</p></th>
+				      <td><span property="xhv:role" resource="xhv:heading">Support is provided that help users complete and check their task, that includes</span>:
+                      
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes">§ expand</a>)</p></td>
+				      <td><p>as above and</p>
+			          <p>if you have a calendar/mail program you should provide a feature that could notify the user of an impending meeting or to dos (broader scope) </p></td>
+				      <td>&nbsp;</td>
+				      <td><p><strong>Proposed attribute: </strong>coga-reminder</p>
+                        <p>Enable the user to turn off less helpful reminders</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#reminders">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I need to turn off distractions 1) to       be a default and 2) to be a trivial option in real       time.</p>
+			          <p>(Assume I have an attention disability and/or an impaired short term memory and/or impaired executive function)</p></th>
+				      <td><p>as above</p>
+			          <p>and </p>
+			          <p>Use semantics and safe standardized techniques that enable the content to be adapted to the user scenario including enabling additional support and personalization.</p>
+			          <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x">§ expand</a>) </p>
+			          <p>&nbsp;</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Alow the user to determine levels of interruptions, as easily as possible.</span>
+			          <p resource="#alow-the-user-to-determine-levels-of-interruptions-as-easily-as-possible.x">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#alow-the-user-to-determine-levels-of-interruptions-as-easily-as-possible.xProvide_mechanisms_that_help_the_user_focus_and_restore_context_if_attention_is_lost">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>user settings for distractions need to be interoprable</td>
+				      <td><p>Operating stem tool</p>
+			          <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/issue-papers/distractions.html#">§ expand</a>) </p>
+			          <p>see Intergrated solution</p>
+			          <p> It is based on a matrix for distractions at the operating system ,   browser or cloud level. Currently people can turn off  distractions such   as skype,  and facebook, across different devices, and then may forget   to turn them back on. This idea manages all distractions by forming a   cross application and cross device distraction matrix that manages all   distractions in one setting.</p></td>
+			        </tr>
+			      </tbody>
+			  </table>
+  <h4 id="Disccusion3">Disccusion</h4>
+    <p><a  href="https://rawgit.com/w3c/coga/master/issue-papers/distractions.html">Distractions issue paper</a></p>
+    <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and
+    <p><a href="https://github.com/ayelet-seeman/coga.personalisation">Example for personalization</a></p>
+    <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">Semantics</a>
+    <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG ">Proposal for WCAG </a></p>
+    <p><a href="https://rawgit.com/w3c/coga/master/techniques/index.html ">Techniques</a></p>
+    <p>&nbsp;</p>
+</section>
+			<section>
+			  <h3 id="table3">Table 3: Entering data, error prevention &amp; recovery </h3>
+				<p>About the user: Filling out forms and similar tasks can be overwhelming for most people with cognitive and learning disabilities. This includes relatively minor learning disabilities such as dyslexia or attention related disabilities. Many people (most COGA groups) have memory issues that can make copying text, difficult or impossible. Other contributing issues include impaired executive function. </p>
+				<p>Many  people learning disability can not  remember numbers such as their post code, Social Security or Credit Card  numbers. Many people even need  to  check their phone number. This makes  entering information slow, and they may need to leave their desk or take a  break.</p>
+				<p>Many users find it very difficult to copy information, due to low visual memory or impaired executive function.</p>
+				<p>This  leads to the following  user stories:</p>
+                <ul type="disc">
+                  <li>As a user who needs to look up my       postal code I do not want the session       to time out while I try  to find the information needed.</li>
+                  <li>As a user who needs to take  breaks during       tasks like filling in a form,       I want to be sure all my work is saved automatically if my computer       crashes so that  I do       not have to start over again, (which can create a cycle and each time I       reenter my data  I am       more ti red and more likely to make       mistakes).</li>
+                  <li>As a user with difficulty typing       numbers in the right order,       I want an interface that makes mistakes less likely.</li>
+                  <li>As a user who finds entering       information stressful, I want to enter as little       information as I can so that it is manageable.</li>
+                </ul>
+<p><strong>User Needs</strong></p>
+			  <ul>
+					<li>I need help avoiding mistakes and minimize the mistakes I might make. </li>
+					<li>I need to know what mistake I made and how to correct a mistake. It does not scare me I need to make the correction easily. </li>
+					<li>I need enough time, and  not lose my work. </li>
+					<li>I want to use applications or API's that remember a lot of my information so I do not need to enter it again. </li>
+					<li>I want to know where I am in a process. </li>
+					<li>I want to be able to check my work and go back without losing the work I have just done. </li>
+				</ul>
+				<p><strong>To do: Create table mapping user needs to solutions</strong></p>
+				<table  border="1" >
+				  <tbody>
+				    <tr>
+				      <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+				      <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+				        <p> Proposed Success Criteria <a href="#wcagex" >*</a></p></th>
+				      <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+				      <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+				        <p>&nbsp;</p></th>
+				      <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+				      <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I need help avoiding mistakes and minimize the mistakes I might make. </p>
+			          <p> <a href="#Disccusion3">more</a> </p></th>
+				      <td><span id="">Support is provided that help users complete and check their task, that includes</span>:
+				        <p>1: Use known techniques to minimize errors that are relevant to the content  ...</p>
+				        <p>&nbsp;</p>
+				        <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Support_is_provided_that_help_users_complete_and_check_their_task.2C_that_includes">§ expand</a>)</p>
+				        <p>Level A</p>
+				        <p>&nbsp;</p>
+<span property="xhv:role" resource="xhv:heading">3.6.2 Support is provided that help users understand the content, that includes:</span>
+				        <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes5"><span property="xhv:role" resource="xhv:heading"><span typeof="bookmark"><a property="url" title="Permalink for 3.6.2 Support is provided that help users understand the content, that includes:" aria-label="Permalink for 3.6.2 Support is provided that help users understand the content, that includes:" href="https://rawgit.com/w3c/coga/master/extension/index.html#support-is-provided-that-help-users-understand-the-content-that-includes"><span content="3.6.2 Support is provided that help users understand the content, that includes:" property="title">§ expand</span></a></span></span></h4>
+                        <p>&nbsp;</p>
+                        <p>&nbsp;</p>
+				        <p>--------</p>
+				        <p><strong>To add</strong></p>
+			          <p>&nbsp;</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Prevent errors</span>
+			          <p resource="#prevent-errors">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#prevent-errors">§ expand</a>)</p>
+			          <p resource="#prevent-errors">&nbsp;</p>
+<span property="xhv:role" resource="xhv:heading">Provide Help</span>
+			          <p resource="#provide-help">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#provide-help">§ expand</a>)</p>
+			          <p resource="#provide-help">&nbsp;</p>
+			          <p resource="#prevent-errors"> COGA Techniques 2.7 ) </p></td>
+				      <td> Explain and feedback
+				        <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-explain-and-feedback" >§ expand</a>)</p>
+<span property="xhv:role" resource="xhv:heading">Adding Context </span>
+		              <p>standardize supportive syntax and terms that can be linked to associated   symbols, terms, translations and explanations, for the individual, </p>
+		              <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need to know what mistake I made and how to correct a mistake. It does not scare me I need to make the correction easily. </th>
+				      <td><span id="">The   success or failure of every action should be clearly indicated to the   user and visual rapid feedback should be available. Spoken feedback   should be a user selectable option.</span>
+			          <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#The_success_or_failure_of_every_action_should_be_clearly_indicated_to_the_user_and_visual_rapid_feedback_should_be_available._Spoken_feedback_should_be_a_user_selectable_option.">§ expand</a>)</p>
+			          <p><span id="span">Support is provided that help users complete and check their task, that includes</span>: </p>
+			          <p>.....A simple mechanism is provided to allow the user to undo mistakes. The   user can repair information via clearly labeled action and get back to   the place they were at, in one clearly labeled action with unwanted loss   of data. </p>
+			          <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Support_is_provided_that_help_users_complete_and_check_their_task.2C_that_includes">§ expand</a>)</p>
+			          <p>Also covered in WCAG in <strong>3.3.1</strong></p>
+			          <p>note making error message text understandable is covered in the extention in</p>
+<span id=""><em>Instructions, labels, navigation and important information are provided with a clear writing style that includes:</em></span>
+			          <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§ expand</a>)</p>
+			          <p>&nbsp;</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Make it easy to undo mistakes</span>
+			          <p resource="#make-it-easy-to-undo-mistakes">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#make-it-easy-to-undo-mistakes">§ expand</a>)</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">9. Explain and feedback</span>
+                        <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-explain-and-feedback2">§ expand</a>)</p>
+                        <p>&nbsp;</p>
+                      <p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need enough time, and  not lose my work. </th>
+				      <td><span property="xhv:role" resource="xhv:heading">3.2.1 Timed event are not used except for the situations listed below.</span>
+			          <p >(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-timed-event-are-not-used-except-for-the-situations-listed-below.x">§ expand</a>)</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Help users complete and check their work</span>				        
+				        <p resource="#provide-help">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#help-users-complete-and-check-their-work">§ expand</a>)</p>
+<span property="xhv:role" resource="xhv:heading">Enough Time</span>
+                      <p resource="#enough-time">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#enough-time">§ expand</a>)</p>
+<span property="xhv:role" resource="xhv:heading">Avoid Loss of data </span>
+                      <p resource="#avoid-loss-of-data">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#avoid-loss-of-data">§ expand</a>)</p>
+                      <p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I want to use applications or API's that remember a lot of my information so I do not need to enter it again. </th>
+				      <td><p><span property="xhv:role" resource="xhv:heading">Support is provided that help users understand the content, that includes:</span></p>
+                      <p> (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-understand-the-content-that-includes2">§ expand</a>) </p>                        <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes">&nbsp;</h4></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>allow the user to specify api support?</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I want to know where I am in a process. </th>
+				      <td><p>Provide mechanisms that help the user focus and restore context if attention is lost.</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Provide_mechanisms_that_help_the_user_focus_and_restore_context_if_attention_is_lost">§ expand</a>)</p>
+                      <p><span property="xhv:role" resource="xhv:heading">3.4.1 Provide a clear structure that includes:</span> </p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#provide-a-clear-structure-that-includes">§ expand</a>)</p>
+                      <p>&nbsp;</p>
+                      <p>Also see</p>
+3.6.2 Support is provided that help users understand the content, that includes:
+<p >(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-understand-the-content-that-includes">§ expand</a>)</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Help the user  orientate themselves, and  regain focus when it is lost</span>
+				        <p resource="#help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost">§ expand</a>)</p>
+			          <p resource="#help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost">&nbsp;</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I want to be able to check my work and go back without losing the work I have just done. </th>
+				      <td><p><span property="xhv:role" resource="xhv:heading">3.6.3 Support is provided that help users complete and check their task, that includes</span>                      </p>
+				        <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes2">§ expand</a>)
+			            </p>
+				        <p>&nbsp;</p>
+			          <p>(see</p>
+			          <ul>
+			            <li>A simple mechanism is provided to allow the user to undo mistakes.   The user can repair information via clearly labeled action and get back   to the place they were at, in one clearly labeled action with unwanted   loss of data. </li>
+			            </ul>
+                      <ul>
+                        <li>A user can go a step back in a process via one clearly labeled action (exceptions may be required) </li>
+                      </ul>
+                      )
+                      <p>&nbsp;</p></td>
+				      <td><p><span property="xhv:role" resource="xhv:heading">Make it easy to undo mistakes</span>			         </p>
+			          <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#make-it-easy-to-undo-mistakes">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">&nbsp;</th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+			      </tbody>
+			  </table>
+				<h4 id="Disccusion3">Disccusion</h4>
+                <p>&nbsp;</p>
+                <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and
+                <p><a href="https://github.com/ayelet-seeman/coga.personalisation">Example for personalization</a></p>
+                <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">Semantics</a>
+                <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG ">Proposal for WCAG </a></p>
+                <p><a href="https://rawgit.com/w3c/coga/master/techniques/index.html ">Techniques</a></p>
+                <p>&nbsp;</p>
+</section>
+			<section>
+			  <h3 id="table4">Table 4: Help and support</h3>
+				<p><strong>About the user: </strong>To be filled in</p>
+				<p>This leads to following user stories: To be filled in</p>
+				<p><strong>User needs:</strong></p>
+			  <ul>
+					<li>I know how to find out more such as context sensitive help or tooltips.</li>
+					<li>I need to easily get human help. </li>
+					<li>I need symbols that help me understand. </li>
+					<li>I need graphs and pictures supplement text so that I can understand the point without a lot of reading. </li>
+					<li>I need speech support with synchronized highlighting so I can follow as I go I need rapid feedback. </li>
+					<li>I need more space between words, sentences, and clauses in the sentence.</li>
+					<li>I need reminders or I will forget appointments and when I was meant to do things. </li>
+					<li>I do not want too many reminders as they I will be distracted. </li>
+					<li>I want to be confident that I can manage my task. </li>
+				</ul>
+				<p><strong>To do: Create table mapping user needs to solutions</strong></p>
+				<table  border="1" >
+				  <tbody>
+				    <tr>
+				      <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+				      <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+				        <p> Proposed Success Criteria <a href="#wcagex" >*</a></p></th>
+				      <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+				      <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+				        <p>&nbsp;</p></th>
+				      <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+				      <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I need more explinations</p>
+				        <p>and short tips</p>
+			          <p> <a href="#Disccusion7">more</a> </p></th>
+				      <td><p>&nbsp;</p>
+				        <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§ expand</a>)</p>
+				        <p>Level A</p>
+				        <p>--------</p>
+				        <p><strong>To add</strong></p>
+				        <p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+				      <td><span property="xhv:role" resource="xhv:heading">More Help</span>
+                        <p resource="#h-more-help">(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-more-help">§ expand</a>)</p>
+                      )</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need to easily get human help. </th>
+				      <td>3.6.3 Support is provided that help users complete and check their task, that includes
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes">§ expand</a>)</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Provide human help</span>
+			          <p resource="#Providehumanhelp">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#Providehumanhelp">§ expand</a>)</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">More Help</span>
+                      <p resource="#h-more-help">(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-more-help">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need symbols that help me understand the content. </th>
+				      <td>as above</td>
+				      <td><span property="xhv:role" resource="xhv:heading">2.5.3 Use symbols and images to show meaning</span>
+				        <p resource="#h-use-symbols-and-images-to-show-meaning">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#h-use-symbols-and-images-to-show-meaning">§ expand</a>)</p>
+				        <p>&nbsp;</p>
+				        <p>&nbsp;</p>
+				        <p>Add technique to enable interoperable symbol mapping for products for Non verbal people.
+			            </p>
+				        <p>In the Web Content: Syntax: aria-concept = "uri". Example (Pseudocode): &lt;img aria-concept=http://wordnet.org/somepage#girlnode" scr="girlwithbow.gif" /&gt;</p>			            <ul>
+				        <li>Add technique at a useragent symbol file end:
+				          <p>&lt;mysymbol scr="girlwithskirt.gif" aria-concept="http://wordnet.or g/somepage#girlnode" lang="en" /&gt; Note this is not about standardizing the symbols but a way of mapping them </p>
+			            </li>
+			          </ul></td>
+				      <td><p resource="#h-more-help">&nbsp;</p>
+			          <p resource="#h-more-help"><span property="xhv:role" resource="xhv:heading">Adding Context </span> </p>
+			          <p>&nbsp;</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td><p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need graphs and pictures supplement text so that I can understand the point without a lot of reading. </th>
+				      <td><p><span property="xhv:role" resource="xhv:heading">Support is provided that help users understand the content, that includes:</span></p>
+				        <p>                      (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-understand-the-content-that-includes2">§ expand</a>)
+		              </p>				        <p resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes">&nbsp;</p></td>
+				      <td><p><span property="xhv:role" resource="xhv:heading">2.5 Help meaning</span></p>
+				        <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#h-help-meaning">§ expand</a>)
+			            </p>
+<span property="xhv:role" resource="xhv:heading">2.5.3 Use symbols and images to show meaning</span>
+			          <p resource="#h-use-symbols-and-images-to-show-meaning">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#h-use-symbols-and-images-to-show-meaning">§ expand</a>)</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+                        <p>&nbsp;</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td><p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need speech support with synchronized highlighting so I can follow as I go I need rapid feedback. </th>
+				      <td><p><span property="xhv:role" resource="xhv:heading">Support is provided that help users understand the content, that includes:</span></p>
+                      <p> (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-understand-the-content-that-includes2">§ expand</a>) </p>                        <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes3">&nbsp;</h4></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Provide speech support</span>
+			          <p resource="#provide-speech-support">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#provide-speech-support">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need more space between words, sentences, and clauses in the sentence.</th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need reminders or I will forget appointments and when I was meant to do things. </th>
+				      <td><span property="xhv:role" resource="xhv:heading">3.6.3 Support is provided that help users complete and check their task, that includes:</span>
+                      
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes">§ expand</a>)</p></td>
+				      <td>if you have a calendar/mail program you should provide a feature that could notify the user of an impending meeting or to dos (broader scope) </td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I do not want too many reminders as they I will be distracted</th>
+				      <td>3.6.3 - Reminders should be set only at the users request. </td>
+				      <td><span property="xhv:role" resource="xhv:heading">Attention and focus</span>
+			          <p resource="#attention-and-focus">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#attention-and-focus">§ expand</a>)</p></td>
+				      <td><p><strong>Proposed attribute: </strong>coga-reminder</p>
+                        <p>Enable the user to turn off let helpful reminders</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#reminders">§ expand</a>)</p></td>
+				      <td><p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I want to be confident that I can manage my tasks. </th>
+				      <td>To Add and look at as issue</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">&nbsp;</th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+			      </tbody>
+			  </table>
+				<p>&nbsp;</p>
+</section>
+			<section>
+				<h3 id="table5">Table 5: Simple and clear interface </h3>
+				<p><strong>About the user:</strong> Many people can not learn easily new design metaphors or remember things that they learned (such as people with Mild Cognitive Impairment (MCI) or dementia. Without these skills it can be much harder or impossible to locate a desired items to interact with and know what interaction may do. The user can feel lost or overwhelmed. </p>
+			  <p>Many users can be overwhelmed by too many options, or too much information. If reading is slow then two much information mixed together will make it difficult or impossible to find the information you need.</p>
+				<p>This leads to  the following user stories: To be filled in</p>
+				<table  border="1" >
+				  <tbody>
+				    <tr>
+				      <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+				      <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+				        <p> Proposed Success Criteria <a href="#wcagex" >*</a></p></th>
+				      <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+				      <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+				        <p>&nbsp;</p></th>
+				      <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+				      <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>Controls are clear.  </p>
+				        <p> <a href="#Disccusion7">more</a> </p></th>
+				      <td>Interactive controls are visually clear or visually clear controls are easily available that conform to the following:
+				        <p>&nbsp;</p>
+				        <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Interactive_controls_are_visually_clear_or_visually_clear_controls_are_easily_available_that_conform_to_the_following:">§ expand</a>)</p>
+				        <p>Level A</p>
+				        <p>--------</p>
+				        <p><strong>To add</strong></p>
+			          <p>&nbsp;</p></td>
+				      <td><h4 resource="#h-use-clear-visual-affordances.x" id="h-use-clear-visual-affordances.x2"><span property="xhv:role" resource="xhv:heading">2.6.1 Use clear visual affordances.</span></h4>
+				        <p>&nbsp;</p>
+			          <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#">§ expand</a>)</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+                        <p>&nbsp;</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td><p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">&nbsp;</th>
+				      <td><p>A predictable design is used within a set of pages that includes:</p>
+			          <p> (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#"A_predictable_design_is_used_within_a_set_of_pages_that_includes:">§ expand</a>)</p></td>
+				      <td><p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th class="summary" scope="row">I need to understand the menu terms so that I know where to find things</th>
+				      <td class="summary"><span property="xhv:role" resource="xhv:heading">Instructions, labels, navigation and important information are provided with a clear writing style that includes:</span>				        <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes">§ expand</a>)</p></td>
+				      <td><p>The author can use simple and well understood terms.</p>
+                        <p>OR </p>
+                      <p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+                        <p>&nbsp;</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th class="summary" scope="row">I can find the controls that I need</th>
+				      <td class="summary"><span property="xhv:role" resource="xhv:heading">3.6.3 Support is provided that help users complete and check their task, that includes</span>				      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes">§ expand</a>) See &quot;Critical features can be without use of a scroll bar&quot;</p>
+			            <h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><span property="xhv:role" resource="xhv:heading">3.4.2 Interactive controls are visually clear or visually clear controls are <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-easily-available-mode-or-setting">easily available</a> that conform to the following:</span></h4>
+		                <h4 resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x" id="use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x"><span property="xhv:role" resource="xhv:heading">Use <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-semantics">semantics</a> and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-safe-standardized-techniques">safe standardized techniques</a> that enable the content to be adapted to the user scenario including <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-enabling-additional-support">enabling additional support</a> and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-personalization">personalization</a>.</span></h4>
+		                <p>&nbsp;</p>
+	                  <p>&nbsp;</p></td>
+				      <td><h4 resource="#h-use-clear-visual-affordances.x" id="h-use-clear-visual-affordances.x">&nbsp;</h4></td>
+				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+                        <p>&nbsp;</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need a structure that is easy follow. </th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I can easily find the content I       need.</th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need signposts so that  I can       find the information I need. </th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">Multi media- understandable       structure- I find it easy to find the content needed. </th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I can easily separate what I need       and do not need and find what I need. </th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td><span property="xhv:role" resource="xhv:heading">Simplification</span>
+				        <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-simplification">§ expand</a>)</p>
+				        <p>&nbsp;</p>
+				        <p><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+			            </p>
+				        <p>&nbsp;</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p>
+                      <p>&nbsp;</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I know what is an advert or from a       different site. </th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td><p><strong>Proposed attribute: </strong> coga-distraction</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#distractions">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I know where to find things on a       page. </th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td><p><span property="xhv:role" resource="xhv:heading">Adding Context </span> </p>
+                        <p>&nbsp;</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I know the design patterns. </th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">Jargon or other unambiguous       affordances - I know what things are and what they do. </th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td><span property="xhv:role" resource="xhv:heading">Language type support</span>
+			          <p resource="#h-language-type-support">(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-language-type-support">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td><p>&nbsp;</p>
+			          <p>&nbsp;</p></td>
+			        </tr>
+				    <tr>
+				      <th scope="row">&nbsp;</th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">&nbsp;</th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+			      </tbody>
+			  </table>
+				<p>&nbsp;</p>
+			</section>
+<section>
+  <h3 id="table6">Table 6: Familiar interface</h3>
+				<p><strong>About the user:</strong> Many people cannot learn easily new design metaphors or remember things that they learned (such as people with Mild Cognitive Impairment (MCI) or dementia. Without these skills it can be much harder or impossible to: </p>
+				<ul>
+					<li>locate desired items to interact with and </li>
+					<li> know what the interaction may do</li>
+				</ul>
+				<p>Using a familiar design, terms and symbols is key to being able to use the web for people who cannot remember new symbols (such as some people with memory related impairments like dementia). Therefore the user needs things to be familiar including:</p>
+				<ul>
+					<li>location of elements</li>
+					<li>symbols </li>
+					<li>text used</li>
+					<li>how to get help</li>
+				</ul>
+  <p> However what is familiar for one user may be new for another. So the interface needs to be familiar to the individual user.</p>
+				<p>This  leads to the following  user stories: </p>
+				<ul>
+				  <li>I am familiar with the UI and I       know how to work it and what will happen when I work it. </li>
+				  <li>The content delivered in an       easy-to-understand mode. </li>
+				  <li>Simple content with few options       and text consistent. </li>
+				  <li>I find the content Easy-to-use. </li>
+  </ul>
+				<p>To be filled in</p>
+				<table  border="1" >
+				  <tbody>
+				    <tr>
+				      <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+				      <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+				        <p> Proposed Success Criteria <a href="#wcagex" >*</a></p></th>
+				      <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+				      <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+				        <p>&nbsp;</p></th>
+				      <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+				      <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I am familiar with the UI and I know how to work it and what will happen when I work it. </p>
+				        <p> <a href="#Disccusion7">more</a> </p></th>
+				      <td><p>(<a  title="expand" class="expand" aria-label="expand example" href="">§ expand</a>)</p><span property="xhv:role" resource="xhv:heading">Use semantics and safe standardized techniques that enable the content to be adapted to the user scenario including enabling additional support and personalization.</span>				        (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x2">§ expand</a>)
+				        <p>Level A</p>
+				        <p>--------</p>
+				        <p><strong>To add</strong></p>
+				        <p>&nbsp;</p></td>
+				      <td class="summary"><p>&nbsp;</p></td>
+				      <td class="summary"><p>Adding Context</p>
+				        <p>In adding a semantic for the context (what the thing is for) such as </p>
+                        <p>coga-action="undo" </p>
+                        <p>or </p>
+                        <p>coga-destination="home"</p>
+                        <p>and additional landmarks or region such as </p>
+                      <p>role=&quot;warning&quot;</p>
+                      <p>&nbsp;</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td class="summary"><p>User setting will need to address how to handle different contexts such as coga-action="undo" , for example, which symbol to load for this setting. </p>
+                      <p>A mechanism is needed to read the user setting and adapt the page. open source script is available/ being worked on at http://rawgit.com/ayelet-seeman/coga.personalisation</p></td>
+				      <td class="summary"><p>taxonomy will be needed of support end values</p>
+                        <p>Taxonomy is needed for use preferences</p>
+                      <p>GPII and ETSI and other standards will need to allow these preferences to be portable.</p></td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need symbols that I understand strait away</th>
+				      <td>The current proposal is to add a success criteria as follows:
+				        <p>Use semantics and standardized techniques and that enable the content to be adapted to the user scenario and enable additional support</p>
+				        <p>&nbsp;</p>
+				        <p>&nbsp;</p></td>
+				      <td>Techniques would and using the correct semantics and importing a script that adapts the page</td>
+				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td><p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
+				        <p>For example an open-source script could be included that would read user settings and import the correct symbol</p>
+				        <p>See:  http://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html</p></td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need diffrent types of messages to be consitently in diffrent parts of the screen.</th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need controls  to be consitently possitioned of the screen.</th>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+				      <td>&nbsp;</td>
+				      <td>&nbsp;</td>
+			        </tr>
+			      </tbody>
+  </table>
+				<p>&nbsp;</p>
+<p>Discussions</p>
+				<ul>
+					<li> User Preferences <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/preferences.html">https://rawgit.com/w3c/coga/master/issue-papers/preferences.html</a></li>
+					<li> Adaptable Links and Buttons <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a></li>
+					<li> Symbols for Non-Verbal <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html">https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html</a></li>
+					<li> Personalization <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/personalization.html">https://rawgit.com/w3c/coga/master/issue-papers/personalization.html</a></li>
+					<li> Providing graded help <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Providing_graded_help">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Providing_graded_help</a></li>
+					<li> Interoperable preference <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Interoperable_preference">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Interoperable_preference</a></li>
+					<li> (meta data support - to be added <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support</a>) </li>
+				</ul>
+				<p><strong>To do: Clarify the following user needed and add them to the above table</strong></p>
+				<ul>
+					<li>The content delivered in an easy-to-understand mode. </li>
+					<li>Simple content with few options and text customizable. </li>
+					<li>Web Of Things interfaces (navigation, controls, features, text, help) are consistent.</li>
+					<li> I need  easy-to-use online payment systems on different sites. </li>
+					<li>Preferences can be set. </li>
+					<li>Preferences are set for my current needs and context. </li>
+					<li>Setting preferences for online interactions is fast easy or not noticed.</li>
+					<li>Links and buttons that are context sensitive and localized. </li>
+					<li>Deployment of familiar symbol sets capability to personalize websites (content, features, elements). </li>
+				</ul>
+				<p><strong>To do: Add the above user needs to the table mapping user needs to solutions</strong></p>
+</section>
+			<section>
+			  <h3 id="table7">Table 7: Clear and understandable content and text</h3>
+				<p>About the user: To be filled in</p>
+				<p>This leads to following user stories: To be filled in</p>
+				<p>User needs for understandable text:</p>
+				<ul>
+				    <li> Understandable       use of text</li>
+				    <li>Easily understandable text that it is understood the first time I read it</li>
+                       <li> Clear, unambiguous language</li>
+                       <li> To       use the content without understanding of math concepts</li>
+                       <li>Representation  of math by words instead of number
+                         
+                       <li>Support for slow readers                      
+</ul>
+			  <p> See also user needs for understandable content  addressed in table 4:</p>
+              <ul>
+                  <li> Understandable       use of (familiar) symbols </li>
+                  
+                  <li> Understandable       use of images and multi-media</li>
+              </ul>
+              <p>&nbsp;</p>
+              <table  border="1" >
+                <tbody>
+                  <tr>
+                    <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+                    <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+                      <p> Proposed Success Criteria  <a href="#wcagex" >*</a></p></th>
+                    <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+                    <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+                    <p>&nbsp;</p></th>
+                    <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+                    <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+                  </tr>
+                  <tr>
+                    <th scope="row"><p>Understandable  use of vocabulary, syntax and other aspects of language.</p>
+                      <p>Clear language</p>
+                      <p> <a href="#Disccusion7">more</a> </p></th>
+                    <td><p> 1.4.3 Instructions, labels, navigation and important information are provided with a clear writing style that includes: </p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§ expand</a>)</p>
+                      <p>Level A</p>
+                      <p>--------</p>
+                      <p><strong>To add</strong></p>
+                      <p>Content conforms to a clear writing style that includes: </p>
+                      <p>&nbsp;</p>
+                      <p>Level AAA</p></td>
+                    <td><p><span property="xhv:role" resource="xhv:heading">2.3 Writing style</span></p>
+                      <p>Use a clear Writing style</p>
+                      <p>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style" class="expand">§ expand</a>)</p>
+                      <p><span property="xhv:role" resource="xhv:heading">2.3.1 Be clear and to the point</span></p>
+                      <p>(<a  title="Permalink for 2.3.1 Be clear and to the point" aria-label="expand 2.3.1 Be clear and to the point" href="https://rawgit.com/w3c/coga/master/techniques/index.html#be-clear-and-to-the-point">§ expand</a>)</p></td>
+                    <td><p><strong>coga-alternative</strong></p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§ expand</a>)                      </p>
+                      <p><strong>coga-easylang</strong></p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§  expand</a></p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
+                      <p><strong>Alternative is to use of EMMA</strong></p>
+                      <p> (<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
+                      <p>however we still need to standards the terms to for such as complexity</p>
+                      <p><strong>coga-literal</strong></p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§ expand</a>)</p>
+                      <p><strong>Emotional ML</strong> can also be used to identify emotions in content (also for multimedia).</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§ expand</a>
+                      )<p>Question: Do we need another way of adding the emotions or sarcasm into content</p></td>
+                    <td><p>We need  user settings for:</p>
+                      <p> 1. What type of coga alternative text , e.g. <em>easylang numberfree vocab1000</em></p>
+                      <p>2. Type of coga alternative non-text</p>
+                      <p>This will match the terms in the HTML (with extra semantics) or in EMMA so a user agent or website know which one to render.</p>
+                      <p>&nbsp;</p>
+                      <p>We need  user settings for: </p>
+                      <p>1, Who prefers literal text, and</p>
+                      <p>2,  Who wants less implicit information</p></td>
+                    <td><p>Authoring tools can be created to check if content is in need of alternatives. </p>
+                      <p>Taxonomy is needed for use preferences</p>
+                      <p>[[GPII]] and [[ETSI]] and other standards will need to allow these preferences to be portable.</p>
+                      <p>Tools can build the literal text values or Emotional ml languages</p>
+                      <p>User agents or cloud services to display clarifying information</p></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><p>Clarify implied information and provide un-ambigues information</p>
+                      <p> <a href="#Disccusion7">more</a> </p></th>
+                    <td><span id="Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:2">Instructions, labels, navigation and important information are provided with a clear writing style that includes:</span>
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§ expand</a>) </p>
+                      <p>Use   semantics and safe standardized techniques that enable the content to   be adapted to the user scenario including enabling additional support   and personalization.</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Use_semantics_and_safe_standardized_techniques_that_enable_the_content_to_be_adapted_to_the_user_scenario_including_enabling_additional_support_and_personalization.">§</a> expand) </p></td>
+                    <td><p>Use a clear Writing style</p>
+                      <p>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style" class="expand">§ expand</a>)</p>
+                      <p><span property="xhv:role" resource="xhv:heading">2.3.1 Be clear and to the point</span></p>
+                      <p>(<a property="url" title="Permalink for 2.3.1 Be clear and to the point" aria-label="Permalink for 2.3.1 Be clear and to the point" href="https://rawgit.com/w3c/coga/master/techniques/index.html#be-clear-and-to-the-point">§ expand</a>)</p>
+                      <h4 resource="#h-be-clear-and-to-the-point" id="h-be-clear-and-to-the-point2">&nbsp;</h4>
+                      2.3.2 Give instructions clearly<span typeof="bookmark"><a property="url" title="Permalink for 2.3.2 Give instructions clearly" aria-label="Permalink for 2.3.2 Give instructions clearly" href="https://rawgit.com/w3c/coga/master/techniques/index.html#give-instructions-clearly"><span content="2.3.2 Give instructions clearly" property="title"></span></a></span>
+                      <p>(<a property="url" title="Permalink for 2.3.2 Give instructions clearly" aria-label="Permalink for 2.3.2 Give instructions clearly" href="https://rawgit.com/w3c/coga/master/techniques/index.html#give-instructions-clearly">§ expand</a>)</p></td>
+                    <td><p><strong>coga-literal </strong></p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§  expand</a>)</p>
+                      <p><strong>Emotional ML</strong> can also be used to identify emotions in content (also for multimedia).</p>
+                      <p>question: Do we need another way of adding the emotions or sarcasm into content</p>
+                      <p>[[EMMA]] can also be used in content</p></td>
+                    <td>User setting must be available to identify when a user prefers content with literal content and without implicit content</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><p>Reduction of dependence of understanding of math concepts</p>
+                      <ul>
+                        <li> To       use the content without understanding of math concepts</li>
+                        <li>Representation  of math by words instead of number
+                          
+                      </ul>
+                      <p>&nbsp;</p>
+                      <p>(representation of math by words instead of number)</p>
+                      <p> <a href="#Disccusion7">more</a> </p></th>
+                    <td><p><span id="Support_is_provided_that_help_users_understand_the_content.2C_that_includes:">Support is provided that help users understand the content, that  includes:</span></p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Support_is_provided_that_help_users_understand_the_content.2C_that_includes:">§ expand</a>) </p>
+                      Use   semantics and safe standardized techniques that enable the content to   be adapted to the user scenario including enabling additional support   and personalization.
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/extension/index.html#Use_semantics_and_safe_standardized_techniques_that_enable_the_content_to_be_adapted_to_the_user_scenario_including_enabling_additional_support_and_personalization.">§ expand</a>) </p>
+                      <p>Do we need to add more?</p>
+                      <p>&nbsp;</p></td>
+                    <td><p>Ability to have mathematical notation read out with text to speech to aid understanding.</p>
+                      <p>Use of synchronized highlighting, of complex graphics and formula with speech§ </p>
+                      <p>Associate maths, sections of math and sections of complex items with explanations</p>
+                      <h5 resource="#h-relative-values" id="h-relative-values2"><span property="xhv:role" resource="xhv:heading">2.6.3.5 Relative values</span></h5>
+                      <p>Note: This is not clear.</p>
+                      <p>(<a property="url" title="Permalink for 2.6.3.5 Relative values" aria-label="Permalink for 2.6.3.5 Relative values" href="https://rawgit.com/w3c/coga/master/techniques/index.html#relative-values">§  expand</a> )</p>
+                      <p><span property="xhv:role" resource="xhv:heading">Use semantics to provide extra help</span></p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand " href="">§ expand</a>) </p>
+                      <p>&nbsp;</p>
+                      <p>ADD: Explain mathematical concepts with non mathematical language For example &quot;change 90% agree&quot;, to &quot;most people (90-%) agree&quot;.</p></td>
+                    <td><p>coga-numberfree</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§ expand</a></p></td>
+                    <td><p>User setting must be available to identify:</p>
+                      <p>1.  when a user prefers content with less numerical content and prefers words</p>
+                      <p>2. when a user prefers content without dependence on math concepts</p>
+                      <p>3. Users who prefer mathematical content</p>
+                      <p>&nbsp;</p>
+                      <p>&nbsp;</p></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Support for slow readers</th>
+                    <td><p>1.4.1 Provide a clear structure that includes:</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/extension/index.html#Provide_a_clear_structure_that_includes:">§ expand</a>)</p>
+                      <p>1.4.3 Instructions, labels, navigation and important information are provided with a clear writing style that includes:</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/extension/index.html#Instructions.2C_labels.2C_navigation_and_important_information_are_provided_with_a_clear_writing_style_that_includes:">§ expand</a>)</p>
+                      <p>1.4.4 When   there is a barrier between the content and the user that requires   additional cognitive function  an alternative is provided that does not   require additional cognitive function</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/extension/index.html#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_cognitive_function_an_alternative_is_provided_that_does_not_require_additional_cognitive_function">§ expand</a>)</p>
+                      <p>1.6.2 Support is provided that help users understand the content, that  includes:</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/extension/index.html#Support_is_provided_that_help_users_understand_the_content.2C_that_includes:">§ expand</a>)</p>
+                      <p>Use   semantics and safe standardized techniques that enable the content to   be adapted to the user scenario including enabling additional support   and personalization.</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/extension/index.html#Use_semantics_and_safe_standardized_techniques_that_enable_the_content_to_be_adapted_to_the_user_scenario_including_enabling_additional_support_and_personalization.">§ expand</a>)</p></td>
+                    <td><p>Use a clear <a href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style">Writing style</a>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/coga/master/techniques/index.html#writing-style" class="expand">§ expand</a>)</p>
+                      <p>use a<strong> clear  structure </strong></p>
+                      <p>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/coga/master/extension/index.html#Provide_a_clear_structure_that_includes:">§ expand</a>)</p>
+                      <p>2.5 Help meaning</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#help-meaning">§ expand</a>)</p></td>
+                    <td><p>As above</p>
+                      <p>Also having less content is helpful for slow readers</p>
+                      <p>coga-simplification= "simplest"</p>
+                      <p>()</p>
+                      <p>Enabling API's is also important</p>
+                      <p>()</p></td>
+                    <td><p>User setting should enable saying:</p>
+                      <p> what levels of symbols, graphics and support the user needs. (see table 4)</p>
+                      <p>synchronized highlighting</p>
+                      <p>simplification level</p>
+                      <p>&nbsp;</p>
+                      <p>what API's do they need? </p>
+                      <p>&nbsp;</p></td>
+                    <td><p>User agent or cloud based software to adapt the content, allow the use to jump to the keyword </p>
+                      <p>&nbsp;</p>
+                      <p>tools to add extra semantics </p>
+                      <p>tools to identify when extra semantics are missing</p></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">I need to understand (familiar) symbols</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">I need to understand images and multi-media</th>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>&nbsp;</p>
+              <h4><a id="Disccusion7"></a>Discussions</h4>
+                         <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Feb/0046.html">Emotional ml</a></p>
+                         <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Mar/0001.html">EMMA examples</a>
+                           
+              </p>
+                         <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a>
+                           
+                           
+                           
+                           and
+              <p><a href="https://github.com/ayelet-seeman/coga.personalisation">Example for personalization</a>
+              </p>
+                         <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">Semantics</a>
+                         <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG ">Proposal for WCAG </a>
+                           
+              </p>
+                         <p><a href="https://rawgit.com/w3c/coga/master/techniques/index.html ">Techniques</a>
+                           
+              </p>
+</section>
+            <section>
+              <h3 id="table8">Table 8: Navigating the system</h3>
+              <p>About  the user: Many people (most COGA groups) have memory issues  and/or  language issues that can make remembering numbers while  processing  words, difficult or impossible. Other contributing issues include  impaired executive function. </p>
+              <p>Sometimes developers put a barrier between the user and the task that they are doing so that the user can not use the content or service.</p>
+              <ul>
+                <li>Voice XML enable  voice dialogs systems and voice browsers. Sometimes the user needs to hold  multiple pieces of transitory information in their  mind, such as the number that is being  presented as an option,  whilst processing the terms that follow.</li>
+              </ul>
+              <p>This leads to following user stories:</p>
+              <ol>
+                <li>As a user who has memory impairments and weak language processing skills I want to be able to get help without going though a voiceML menu system so that I can set an appointment or find out some information</li>
+                <li>As a user who has weak executive       function. I need the process to get help       to be simple and not multi step so that I can use it.</li>
+                <li>A user can have trouble identifying the right words to say in a voice menu.</li>
+              </ol>
+              <p>Note: Intergrated the  issue paper on Voice ML</p>
+              <table  border="1" >
+                <tbody>
+                  <tr>
+                    <th width="208" scope="col">User Needs <a href="#userneeds" >*</a></th>
+                    <th width="324" scope="col"><p>WCAG Extension for Cognitive </p>
+                      <p> Proposed Success Criteria <a href="#wcagex" >*</a></p></th>
+                    <th width="107" scope="col">Guidance for Content <a href="#authoring" >*</a></th>
+                    <th width="107" scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+                      <p>&nbsp;</p></th>
+                    <th width="158" scope="col">Personalization<a href="#personalization" >*</a></th>
+                    <th width="150" scope="col">Operating System/Other <a href="#operating" >*</a></th>
+                  </tr>
+                  
+                  <tr>
+                    <th scope="row"> <p>I need to find the information I need without deciphering a lot of text or symbols</p>
+                      <p> <a href="#Disccusion8">more</a> </p>
+                      <p>&nbsp;</p>
+                    </th>
+                    <td><p>1.4.4 When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</p>
+                    <p><a href="https://rawgit.com/w3c/coga/master/extension/index.html#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_abilities_an_alternative_is_provided_that_does_not_require_additional_abilities.">(§ expand</a>)</p></td>
+                    <td> </td>
+                    <td><span property="xhv:role" resource="xhv:heading">Simplification</span>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-simplification">§ expand</a>)</p>
+                       
+                      <p><span property="xhv:role" resource="xhv:heading">Adding Context </span>
+                      </p>
+                    <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
+                    <td> </td>
+                    <td> </td>
+                  </tr>
+                  <tr>
+                    <th scope="row"> <p>I need to identify the option I need quickly</p></th>
+                    <td> To be filled in</td>
+                    <td> To be filled in</td>
+                    <td><span property="xhv:role" resource="xhv:heading">Simplification</span>
+                    <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-simplification">§ expand</a>)</p></td>
+                    <td> To be filled in</td>
+                    <td> To be filled in</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><p>I need simple-to-navigate menu systems </p>
+                      <p>&nbsp;</p></th>
+                    <td><span property="xhv:role" resource="xhv:heading">3.4.3 Instructions, labels, navigation and important information are provided with a clear writing style that includes:</span>
+                      <p resource="#h-instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes">(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes">§ expand</a>)</p>
+                      <p>(See: In menus with sub menus: </p>
+                      <ol>
+                        <li>the text of each main menu item is easy to understand. </li>
+                        <li>each sub menu item is clearly associated with the main menu   item under which it falls (This can be due being an industry or platform   default) </li>
+                      </ol>
+                      <p>) </p>
+                      <p><span property="xhv:role" resource="xhv:heading">Support is provided that help users understand the content, that includes:</span></p>
+                      <p> (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-understand-the-content-that-includes2">§ expand</a>) </p>
+                      <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes4">&nbsp;</h4>
+                      <p>&nbsp;</p>
+                    <p>Further work?</p></td>
+                    <td>Needs further investigation</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><p>I need simple-to-navigate voice-menu systems</p>
+                      <p><a href="#Disccusion8">more</a></p></th>
+                    <td><p>1.4.4 When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</p>
+                      <p><a href="https://rawgit.com/w3c/coga/master/extension/index.html#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_abilities_an_alternative_is_provided_that_does_not_require_additional_abilities.">(§ expand</a>)</p>
+                    <p>To Do: add use best practices?</p>
+                    <p>&nbsp;</p></td>
+                    <td><p>Human help should be one click away. Such as....Use available standards to get human help such as using the 0 digit on voice menu systems</p>
+                      <p><a href="https://rawgit.com/w3c/coga/master/techniques/index.html#Providehumanhelp">(§ expand)</a></p>
+                      <p>Can we add method to repeat last option?</p>
+                      <p>&nbsp;</p>
+                      <p>Minimize the cognitive skills required to use the content when there is a known alternative</p>
+                      <p><a href="https://rawgit.com/w3c/coga/master/techniques/index.html#Minimizethecognitiveskills">(§ expand)</a></p>
+                      <p>&nbsp;</p>
+                      <p>P</p></td>
+                    <td>Can semantics help? where human operator, and standard functions, such as main menu , undo, back  and repeat last options are standardized </td>
+                    <td>Can a standard functions be mapped be available for users that enable specific short cuts to be standardized (such as 0 for a human, x for back etc)</td>
+                    <td><p>Integration with standards, (which are relavent?)</p>
+                      <p>Best practices in Voice ML need to consider cognitive disabilities</p>
+                    <p>Also added to open issues how difficulty with speech could effect voice systems.</p>
+                    <p>&nbsp;</p></td>
+                  </tr>
+                </tbody>
+              </table>
+</section>
+            </section>
+            </section>
+            </section>
+<h4 id="Disccusion8">Disccusion</h4>
+            <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html">Voice ML Issue Paper</a></p>
+            <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Mar/0001.html">EMMA examples</a> </p>
+            <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and
+<p><a href="https://github.com/ayelet-seeman/coga.personalisation">Example for personalization</a> </p>
+              <p><a href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">Semantics</a>
+              <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG ">Proposal for WCAG </a> </p>
+<p><a href="https://rawgit.com/w3c/coga/master/techniques/index.html ">Techniques</a></p>
+            <p>
+              <section></section>
+            </p>
+</body>
+</html>
