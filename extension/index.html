@@ -2,7 +2,7 @@
 		<h1>Cognitive and Learning Disabilities and WCAG</h1>
 		<section>
 			<h2>Introduction</h2>
-			<p>The following is for a first draft for adding the needs for   people with cognitive and learning disabilities into the Web Content Accessibility Guidelines (WCAG) [[WCAG20]]. It is based on the user research [[coga-user-research]]<a href="https://w3c.github.io/wcag/coga/user-research.html"></a> and the issue papers available at [[coga-issue-papers]]<a href="https://rawgit.com/w3c/coga/master/issue-papers/index.html"></a>. </p>
+			<p>The following is for a first draft for adding  needs for   people with cognitive and learning disabilities into the Web Content Accessibility Guidelines (WCAG) [[WCAG20]]. It is based on the user research [[coga-user-research]]<a href="https://w3c.github.io/wcag/coga/user-research.html"></a> and the issue papers available at [[coga-issue-papers]]<a href="https://rawgit.com/w3c/coga/master/issue-papers/index.html"></a>. </p>
 			<p>The supporting techniques  as well as information on who it helps and why, are described in more detail in the techniques document available from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.  </p>
 			<p>Detailed descriptions of users and the challenges, persona, and research sources are given in the user research document above This proposal for the WCAG  includes changes in the levels of WCAG 2.0 [[WCAG20]] success criteria, new success criteria and new supportive techniques. </p>
 			<p>We have identified the following themes: </p>
@@ -214,6 +214,7 @@
 						<li> Information is provided in manageable chunks, that include: <ul>
 								<li>One idea per paragraph. (One sentence is enough for a paragraph.) </li>
 								<li>Have one point per sentence. Long sentences can often be broken up into short sentences or lists. If a sentence can use more than two clauses, it typically can be broken up. </li>
+								<li>Media that is over five minuets is divided into programmatically determinable  and logical sections. Each section must be shorter then five minutes.								</li>
 							</ul>
 						</li>
 					</ul>
@@ -225,7 +226,7 @@
 							</ul>
 						</li>
 					</ul>
-					<p class="technique">Techniques will include: using size, emphasis , colour, symbols, white space and positioning </p>
+					<p class="technique">Techniques will include: using size, emphasis , colour, symbols, white space and positioning. For multi media  chunks may include: steps in a process,  slide changes, topic changes.   </p>
 					<p>Exception: If a specific structure is an essential part of the main function of the site. </p>
 				</section>
 				<section>
@@ -347,6 +348,8 @@
                         <ol>
                           <li>Signposts to remind the user of the current task and subtask. Signposts should not distract the user when they choice to change tasks without the users concent. </li>
                           <li>In the scope of a task, provide a signposts of broader context. For a non-complicated task, such as reading a home page, clearly identifying the site and it's aim is sufficient. </li>
+                          <li>For multi media,  provide a unique 
+label for each section such that the labels can  provide an outline of the content.                          </li>
                         </ol>
                       </li>
                       <li>Where a site may generate interruptions, a clearly labeled mechanism is provide to enable the user to control them,(COGA Techniques 2.11.1) such that:
@@ -367,6 +370,7 @@
                       <ul>
                         <li>A standard techniques for closing overlays such as a high contast large font close button. (above the scroll) Overlays are only used when content firsts loads and are clearly labled to give context . (Overlays should be avioded , this is a last resort)</li>
                         <li>Headings and titles are provided that provide context </li>
+                        <li>Or multi media  labels for section may include:  steps in a process,  slide headings, topic  changes.                        </li>
                         <li>In multi step process both the process and the step are identified (technique = For Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.) </li>
                         <li>Any choices made by the user in a process are easy to review in one clearly labeled action and the user can get back to the place they were at, in one clearly labeled action.</li>
                         <li>if you have a calendar/mail program you should provide a feature that could notify the user of an impending meeting or to dos (broader scope)</li>
@@ -435,6 +439,7 @@
 									</ul>
 								</li>
 								<li>Help and support page or function should be reachable with one click. When human help is available the correct contact information or mechanism should be reachable within two clicks. </li>
+								<li>For multi media, the user can directly navigate to each section of the content.							</li>
 							</ul>
 						</li>
 						<li>Provide a search box. Exception is provided were adding a search box is a significant expense for the site </li>
