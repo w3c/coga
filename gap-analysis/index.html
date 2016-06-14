@@ -51,7 +51,7 @@
 			{
 				name: "Lisa Seeman",
 				url: 'http://athena-ict.com',
-				mailto: "lisa.seeman@zoho.com"
+				mailto: " lseeman@us.ibm.com",
 			},
 			{
 				name: "Michael Cooper",
@@ -101,15 +101,20 @@
 		localBiblio: biblio,
 	};
 		</script>
+        <style> table td  { vertical-align: top; } 
+table th  { vertical-align: top; } 
+
+table {border:thin; border-style:groove;} 
+		.technique {border:dashed}</style>
 	</head>
-	<body>
+<body>
 		<section id="abstract">
 			
 			<p>This document is a gap analysis and roadmap for the state of accessibility for   people with learning  and cognitive disabilities when using   the Web and information technologies. It is written by The Cognitive and Learning Disabilities Accessibility Task Force (COGA). COGA is a joint Task Force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures (APA) Working Group</a> and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group (WCAG WG)</a>.This document  identifies and describes   the current situation and contrast it to what we want to happen.  This document is not a specification (non-normative). </p>
 			<p>This document is divided into sections. The first section is an introduction and defines the problem. The second section analyses the current situation, in   terms of user groups, and discusses many issues. Subsequent   sections (the roadmap)  identifies gaps and unmet user needs and suggest ways to meet these needs. </p>
 			<!-- Todo: the commented out items above need to be messaged in a different way, they are not comprehensively covered even though listed -->
 		</section>
-		<section id="sotd">
+<section id="sotd">
 		  <p>This is an early  draft for review to help us get comments and early feedback. We are particularly interested in </p>
 			<ul>
 				<li>omitted challenges, </li>
@@ -118,7 +123,7 @@
 			</ul>
 			<p>We welcome comments and suggestions. Please send comments to pubic-coga-comments@w3.org. All comments will be reviewed and discussed by the task force. Although we cannot commit to formally responding to all comments on this draft, the discussions can be tracked in the task force minutes.</p>
 		</section>
-	<section class="informative" id="introduction">
+<section class="informative" id="introduction">
 			<h2>Introduction</h2>
 			<p>The Cognitive and Learning Disabilities Accessibility Task Force's aim is to improve web accessibility for people with cognitive and learning disabilities. This is being done as part of the Web Content Accessibility Guidelines (WCAG) and Accessible Platform Architecture Working Group (APA WG), part of the Web Accessibility Initiative (WAI) of the W3C. Challenges facing this work include: </p>
 			<ul>
@@ -136,23 +141,26 @@
 				<li>Select a <strong>phased approach</strong>. In our first phase we looked at eight different disabilities or categories that cut across types of cognitive impairment in terms of severity and brain function. Although some user needs might not have been identified in this phase, this approach made the work involved practical and it is likely that most key needs will have been identified. Other cognitive disabilities and emotional disabilities may be included in  phase 2 and the current user groups may be re-examined.</li>
 				<li>Compile <strong>user research</strong> and literature reviews on the selected disability groups. These literature reviews mean that key findings are in the public domain and are easily available.</li>
 				<li>Compile a list of <strong>authoring techniques</strong> that include the most useful strategies from all the different user group research  </li>
-				<li>Create testable and widely adoptable sets of <strong>success criteria</strong> that let authors know exactly what they need to do and when they have completed the task. (This will then become the basis for the extension to WCAG for cognitive disabilities)</li>
-				<li>Author a series of <strong>issue papers</strong> that explore topics beyond simple content such as security or personalization.</li>
+				<li>Create testable and widely adoptable sets of <strong>success criteria</strong> that let authors know exactly what they need to do and when they have completed the task. (This might then be added to WCAG [[WCAG20]] for cognitive disabilities)</li>
+				<li>Author a series of <strong>issue papers</strong>  [[coga-issue-papers]] that explore topics beyond simple content such as security or personalization.</li>
 				<li>Review the techniques and issue papers to <strong>identify the gaps</strong> between what is currently supported in accessibility guidelines and in the web architecture and what is needed to enable accessibility for people with cognitive disabilities</li>
 				<li><strong>Create a roadmap</strong> to show how we can fill these gaps.</li>
 			</ol>
 			<p>In addition to this gap analysis we have first drafts of the following accompanying documents: (Note they are works in progress and may change.)</p>
 			<ul>
-				<li>Background research document. <!-- See <a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">https://w3c.github.io/wcag/coga/user-research.html</a>--></li>
-				<li>Issue papers on topics such as security, safety and how they are affected by cognitive disabilities. <!-- See <a href="https://w3c.github.io/coga/issue-papers/links-buttons.html">https://rawgit.com/w3c/coga/master/issue-papers/index.html</a>-->
-				</li>
+				<li>Background research document. <!-- See <a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">https://w3c.github.io/wcag/coga/user-research.html</a>-->(See
+                  <!-- See <a href="https://w3c.github.io/coga/issue-papers/links-buttons.html">https://rawgit.com/w3c/coga/master/issue-papers/index.html</a>-->
+[[coga-user-research]].)</li>
+				<li>Issue papers on topics such as security, safety and how they are affected by cognitive disabilities. (See <!-- See <a href="https://w3c.github.io/coga/issue-papers/links-buttons.html">https://rawgit.com/w3c/coga/master/issue-papers/index.html</a>-->
+			    [[coga-issue-papers]].)</li>
 				<li>An authoring techniques document, including <ul>
 						<li>techniques that help all users and </li>
-						<li>techniques that help specific user groups. <!-- See <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a>--></li>
+						<li>techniques that help specific user groups.</li>
+						<li>More details can be found in thetechniques document available from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. <!-- See <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a>--></li>
 					</ul>
 				</li>
-				<li>The techniques will also lead to a proposal for a WCAG 2.0 extension. <!-- See <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG</a>--></li>
-				<li>Draft for a semantics for adaptive interfaces (that may become a WAI-ARIA extension) and personalization syntax to enable adaptable interfaces. <!-- See <a href="https://w3c.github.io/coga/issue-papers/links-buttons.html">https://w3c.github.io/coga/issue-papers/links-buttons.html</a>--></li>
+				<li>The techniques will also lead to a proposal for a WCAG 2.1  <!-- See <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG</a>-->(see appendix two).</li>
+				<li>Draft for a semantics for adaptive interfaces (that may become a WAI-ARIA [[wai-aria]] extension) and personalization syntax to enable adaptable interfaces <!-- See <a href="https://w3c.github.io/coga/issue-papers/links-buttons.html">https://w3c.github.io/coga/issue-papers/links-buttons.html</a>-->(see appendix one for details).</li>
 			</ul>
 			<p>The diagram shows how these need to be integrated to enable accessibility for people with cognitive disabilities</p>
 			<figure>
@@ -163,12 +171,12 @@
 <figure>
 	  <img width="865" height="363" src="img/roadmap.png" alt="Roadmap" />
 	  <figcaption>Figure 2 Anticipated Roadmap </figcaption>
-	</figure>
+  </figure>
 			<p>The diagram shows what we are anticipating moving towards a roadmap. (Note that this work has yet to be completed.)</p>
 			<ul>
 				<li>User research (phase 1)</li>
 				<li>Gap analysis</li>
-				<li>Author techniques and W3C standards integration (such as WCAG and VOICE ML or ARIA)</li>
+				<li>Author techniques and W3C standards integration (such as WCAG [[WCAG20]] and VOICE ML or ARIA [[wai-aria]])</li>
 				<li>Support and possible standardization of preference (user settings) and metadata so that terms and setting are interoperable and user needs can be met across different Web applications. (Integration with other standards). </li>
 				<li>Web semantics that enable personalization of content such that web authors can employ mechanisms that adapt Web content to meet the needs of the user according to the user preferences.</li>
 				<li>Author support providing examples and supporting materials such as best practices and techniques. Test cases for personalization. </li>
@@ -208,7 +216,7 @@
 				<p>The first and   second sections of this document are  an introduction  that analyses the current situation and discusses many issues. Although we are expecting more work to be done on these sections,  we consider them to be a    mature. </p>
 				<p> Subsequent   sections (the roadmap)  identifies  unmet user needs and proposes way to solve these needs. These sections are not  mature and are often incomplete. We are publishing them early to solicit early   feedback on the format and the identification of user needs. You can follow our work on this section and see the latest draft  from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. </p>
 			</section>
-		</section>
+</section>
 		<section>
 	<h2>Summary of issues and techniques </h2>
 			<p>As discussed above, the task force reviewed different disabilities to identify techniques that supported their using the web. The task force also reviewed issues that went beyond standard Web content, but affected the use of the Web for people with cognitive and learning disabilities.</p>
@@ -242,19 +250,22 @@
 				<h3>Summary of technique solutions </h3>
 				<p>To help bridge the gap we propose the following strategies: </p>
 				<p>1. Construct a full list of techniques.<!--: See <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a>--></p>
-				<p>2. Support an extension to WCAG that supports the techniques. This will include: </p>
+				<p>2. Support an extension to [[WCAG]] that supports the techniques. This will include: </p>
 				<ol>
-					<li> Writing new WCAG Success criteria and techniques </li>
+					<li> Writing new WCAG Success criteria and techniques. </li>
 					<li> Suggesting changes to existing success criteria such as changing the text or the conformance level </li>
 					<li> Proposing new success criteria when necessary. </li>
 				</ol>
+				(See appendix two for details of the new WCAG Success criteria and techniques.)
 				<p>As part of this effort it is important to make this guidance as clear and prescriptive as possible, so that author knows what they need to do and when they have met the requirements. <!--See <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Proposal_for_WCAG</a>--></p>
 				<p>3. Create a new semantics specification  to define the associated semantics required for content adaptation. </p>
 				<ol>
 					<li>This could be done via a  WAI- ARIA module or a new Cognitive semantics specification </li>
 					<li>The techniques for adaptation MUST use these semantics </li>
 					<li>Specify concrete user settings to represent user preferences that can be used to direct a web application on how to modify the content </li>
+					
 				</ol>
+				(See appendix one for details on the proposed semantics.)
 				<p>4. Define testing criteria to ensure the authors know when they are done. </p>
 				<ol>
 					<li>This may include new rule sets </li>
@@ -285,11 +296,9 @@
 					</ul>
 					<h5>Summary of solutions for flat design</h5>
 					<ol>
-						<li> In the authoring techniques and in proposal for WCAG we are recommending that content provide clear visual affordances </li>
-					</ol>
-					<ol>
+						<li> In the authoring techniques and in proposal for WCAG we are recommending that content provide clear visual affordances (See appendix two for details on the proposed semantics.)</li>
 						<li> In personalization we are adding settings to allow buttons and controls to have clear affordances </li>
-						<li>In aria or in the native semantics all roles should be identified </li>
+						<li>In aria or in the native semantics all roles should be identified. (See appendix one for details on the proposed semantics.)</li>
 					</ol>
 				</section>
 				<section>
@@ -477,9 +486,9 @@
 				<section>
 					<h5>Strategies</h5>
 					<ol>
-						<li>Promote and support advancements in technologies in these area. For example, our recommending for WCAG will be along the lines of “Use semantics and standardized techniques and that enable the content to be adapted to the user scenario and enable additional support “ </li>
+						<li>Promote and support advancements in technologies in these area. For example, our recommending for WCAG will be along the lines of &quot;Use semantics and standardized techniques and that enable the content to be adapted to the user scenario and enable additional support &quot; (See appendix two for details.)</li>
 						<li>Enable compatibility with standards such as GPII but do not depend on them. </li>
-						<li>Develop the semantics and terms to support the specific requirements of people with different cognitive disabilities. </li>
+						<li>Develop the semantics and terms to support the specific requirements of people with different cognitive disabilities. (See appendix one for details on the proposed semantics.)</li>
 						<li>Enable simple solutions that are extendable - encouraging more complex solutions in the future, such as having preferences be easily cascaded to allow for contextual personalization and for portability in the future. </li>
 					</ol>
 				</section>
@@ -665,8 +674,8 @@
 			<p>The tables show how related user needs can be met though:</p>
 			<ul>
 				<li>Authoring techniques for content using HTML.</li>
-				<li>How this can be addressed in WCAG. </li>
-				<li>New semantics that may be required to address this user need, such as extra aria attributes</li>
+				<li>How this can be addressed in WCAG. (See appendix two for details.)</li>
+				<li>New semantics that may be required to address this user need, such as extra aria attributes. (See appendix one for details on the proposed semantics.)</li>
 				<li>Any personalization requirements.</li>
 				<li>Operating System support or other support that may be required to meet this user need.</li>
 			</ul>
@@ -1092,9 +1101,10 @@
 	</section>
 		</section>
 		<div data-include="semantics.html" data-oninclude="fixIncludes" data-include-replace="true">Semantics</div>
-		<div data-include="../extension/index.html" data-oninclude="fixIncludes" data-include-replace="true">Extension</div>
+<div data-include="../extension/index.html" data-oninclude="fixIncludes" data-include-replace="true">Extension</div>
 
-			<!--
+		<p>
+    	<!--
 		<section class="appendix" id="changelog">
 			<h2>Change Log</h2>
 			<section>
@@ -1112,7 +1122,115 @@
 				</ul>
 			</section>
 		</section>
-		-->
-	<div data-include="../common/acknowledgements.html" data-oninclude="fixIncludes" data-include-replace="true">Acknowledgements placeholder (will change)</div>
+		
+	<div data-include="../common/acknowledgements.html" data-oninclude="fixIncludes" data-include-replace="true">Acknowledgements placeholder (will change)</div>	-->
+    	<section class ="acknowledgements">
+    	<h2>Significant contributors to this document</h2>
+		</p>
+		<dl>
+		  <dt>Boland, Tim</dt> <dd>(National Institute of Standards and Technology (NIST))</dd>
+</dl>
+<dl>
+		  <dt>Cambron, Thaddeus</dt>
+		  
+		  <dd> Invited expert</dd>
+</dl>
+		<dl>
+		  <dt>Cooper, Michael</dt>
+		  <dd><strong>staff contact</strong>- W3C Staff</dd>
+</dl>
+		<dl>
+		  <dt>Dahl, Deborah</dt>
+		   
+		   
+		  <dd>W3C Invited Experts</dd>
+</dl>
+		<dl>
+		  <dt>Ding, Chaohai</dt>
+		   
+		   
+		  <dd>University of Southampton</dd>
+</dl>
+		<dl>
+		  <dt>Doran, Anthony</dt>
+		   
+		  <dd>Texthelp</dd>
+</dl>
+<dl>
+		  <dt>Draffan, E.A.</dt>
+		   
+		  <dd>University of Southampton</dd>
+</dl>
+
+<dl>
+		  <dt>Katie Haritos-Shea</dt><dd>Deque Systems, Inc.</dd>
+</dl>
+		<dl>
+		  <dt>Knight, Jamie </dt><dd> Invited expert</dd>
+</dl>
+		<dl>
+		  <dt>Kirkwood, John</dt>
+		   
+		   
+		  <dd>Invited expert</dd>
+</dl>
+		<dl>
+		  <dt>Lee, Steve</dt>
+		   
+		   
+		  <dd>Invited expert</dd>
+</dl>
+		<dl>
+		  <dt>Mattes, Kurt</dt>
+		   
+		   
+		  <dd>Deque Systems, Inc.</dd>
+</dl>
+		<dl>
+		  <dt>Milliken, Neil</dt>
+		   
+		  <dd>British Broadcasting Corporation</dd>
+</dl>
+<dl>
+		  <dt>Mueller, Mary Jo</dt>
+		   
+		  <dd>IBM Corporation</dd>
+</dl>
+		<dl>
+		  <dt>Pluke, Mike</dt>
+
+		
+		   
+		  <dd>Invited expert</dd></dl>
+
+		<dl>
+		  <dt>Rochford, John</dt>
+		   
+		  <dd>Invited expert</dd>
+</dl>
+		<dl>
+		  <dt>Sajka, Janina</dt>
+		   
+		   
+		  <dd>W3C Invited Experts</dd>
+</dl>
+		<dl>
+		  <dt>Schwerdtfeger, Richard</dt>
+		   
+		   
+		  <dd>IBM Corporation</dd>
+</dl>
+		<dl>
+		  <dt>Seeman, Ayelet</dt>
+		   
+		  <dd>Invited expert</dd>
+</dl>
+		<dl>
+		  <dt>Seeman, Lisa</dt>
+		   
+		   
+		  <dd>Invited expert</dd>
+</dl>
+		<p>&nbsp;</p>
 	</body>
 </html>
