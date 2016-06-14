@@ -1,0 +1,439 @@
+	<section class="appendix">
+		<h1>Proposal: COGA Semantics to Enable Personalization</h1>
+		<section>
+			<h2>Introduction</h2>
+<p>Personalization involves tailoring aspects of the user experience to  meet the preferences or needs of the user. For example, having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be new for another requiring them to learn new symbols. Personalization could include loading a set of symbols that is appropriate for the specific user, ensuring that all users find the icons simple and familiar.<br />
+Technology holds the  promise of being extremely flexible and the design of many systems includes the  expectation that users will be able to optimise their interaction experience  according to their personal preferences or accessibility  requirements (needs).  
+<p></p>
+We need personalization  because:  </p>
+    <ul>
+      <li>Different user needs can conflict  </li>
+      <li>Learning new design patterns (and widgets) can  be confusing - we want to allow users to stick with what works for them  </li>
+      <li>Extra support can be annoying to people who do  not need it  </li>
+      <li>Making content predictable is necessary for  accessibility but can often be considered boring design  </li>
+      <li>Ability to change levels of complexity (increase  or decrease) - As people skills improve or decrease over time or context.  </li>
+      <li>Enable us to really meet the user needs  </li>
+    </ul>
+	<p></p>
+    	<p>Some users need extra support. This can include: </p>
+                <ul>
+                 <li> Symbols and graphics that they are familiar with </li>
+                        <li> Tool tips </li>
+                        <li> Language they understand </li>
+                        <li> Less features </li>
+                        <li> Separating advertisements, so they do not confuse them with native content </li>
+                        <li> Keyboard short cuts                </li>
+                </ul>
+                <p>For this we need standardized terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use via an attribute and personal preferences. </p>
+                <p>For example, assume  an author can make it programanticaly known that a button is used to send an email. At at the user end, the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
+                <p>Working examples of how this could be used in practice, with user preferences, are available at <a href="https://github.com/ayelet-seeman/coga.personalisation">https://github.com/ayelet-seeman/coga.personalisation</a>. This is a project to help personalization for any use - including   people with learning and memory issues. It is described more at: <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization</a>. </p>
+	<p></p>
+        <p>This project consists of 4 parts:</p>
+    <ol>
+          <li><a href="https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script">JSON files for user setting</a></li>
+      <li>Proposal for new syntax: (This document) <br/>
+        </li>
+          <li>An HTML page that uses some of the new  syntax: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/">https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/</a></li>
+          <li>Scripts that a web author can use or include that read the user   settings in the JSON files and adapt the page for  the user needs: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options">https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options</a></li>
+        </ol>
+                <p>This is one example of personalization based on semantics. Others may follow. It is also worth noting that the GPII project is working on making user preferences portable which would also enhance this work.</p>
+                <p>In another use-case we would like to see interoperable symbol set codes for non-verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write and are not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. An open set of references for symbol codes for these symbol sets however, could be interoperable. That means the end user could use an open source symbol set or buy the symbols and use them across different devices or applications. Symbols could still be proprietary but they would also be interoperable. </p>
+                <section>
+                        <h3>Contextual Personalization</h3>
+    			<p>One important factor in optimizing the personalization of a product or  service is to ensure that the personalization is appropriate for the current  context of use. For example, settings that will suit the user of a mobile phone  in their office or home will not be well suited to that user when they are  driving a car. In a home or office, the typical user would probably prefer to send and receive text messages using the keyboard and screen of the mobile phone. However, in the car, voice input and text to speech output would be the most appropriate. In this car context, the profile settings of a typical user  might be very similar to those that a blind user would use in all contexts.</p>
+                </section>
+
+		</section>
+		<section>
+			<h2>Simplification</h2>
+                        <p><strong>Requirement</strong>: The user must be able to request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective in the content. Typically, critical features may be used by many or most users, 90% of the time or more. High important features would be above 60% use. Medium important features would be 20% of users use it 20% of the time . Under 20% usage would be of low importance.</p>
+                        <p><strong>User experience</strong>: Based on personalization setting the user can see less options. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
+                        <p><strong>Proposed attribute</strong>: coga-simplification (formerly coga-importance). Having the following values: (main task such as send for an email) </p>
+                        <ul>
+                                <li><code>coga-simplification="simplest"</code>. This  setting should be used on:
+                                  <ul>
+                                    <li> Elements that are essential for the key  function (from the user perspective) of the page (Example: The send button for  an email draft) or</li>
+                                    <li> Elements  that are sometimes critical to a user being able to use the site, such as  &quot;save my work&quot; or &quot;emergency instructions&quot; or</li>
+                                    <li> Elements  that are used by over 90% of a user group (such as parents or teachers) use  this element most times they use the content<br />
+                                </li>
+                              </ul>
+                                </li>
+                        </ul>
+                        <p>Typically  3 links or buttons would be considered &quot;simplest&quot;</p>
+                        <ul>
+                          <li> <code>coga-simplification="high"</code>. This setting should be used on:
+                <ul>
+                  <li> Elements that are used frequent  (Example: The delete button for an email draft)  or</li>
+                  <li> Elements  that are sometimes important to a user being able to use the site, such as  settings or</li>
+                  <li> Elements  that are used by frequently (over 60%) by a user group (such as parents or teachers) use  this element most times they use the content</li>
+                </ul>
+                          </li>
+                          <li> <code>coga-simplification= "med"</code>. This  setting should be used on elements that are not typically used.</li>
+                          <li> <code>coga-simplification="low"</code>. This  setting should be used on elements that are rarely used or only used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
+                  </ul>
+			<div class="note">
+                        <p>These semantics aid simplification. But what content is most useful to a user varies from user to user. For example, men may be more interested in mens clothing, and may not be interested in the more frequently use womens clothing option. For that reason we may add context for elements that will help the personalization agent select the most useful content for a given user. This is also necessary for reminders (see bellow). RDFa may be the best way forward for this aspect.</p>
+                  <p> It is worth mentioning that a lot of this information is known for personalization of advertisements and content optimization. </p>
+			</div>
+		</section>
+                <section>
+                 <h2>Adding Context </h2>
+                        <p><strong>Requirement:</strong> Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. If a user agent or script knows the context of links, buttons, and other page elements then symbols and text used can be ones that the user understands. This can include: </p>
+      <ul>
+       <li> Symbols and graphics that they are familiar with </li>
+       <li> Tool tips </li>
+       <li> Language the use can understand </li>
+       <li> Keyboard short cuts </li>
+      </ul>
+      <p> </p>
+      <p>For that we need to standardize supportive syntax and terms that can be linked to associated symbols, terms, translations and explanations, for the individual, via an attribute.</p>
+      <p> </p>
+      <p><strong>Example user experience:</strong>, if an author gives to a button a role "send" then, without any work by the author, the button could be automatically rendered with a symbol, term, and/or tooltips that is understandable by a particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
+                        <p><strong>Proposed attribute:</strong> <code>coga-action</code></p>
+                        <p>For example: &lt;button coga-action=&quot;undo&quot; &gt;default&lt;/button&gt;</p>
+                        <p>The user experience may be simply replacing the text for the term &quot;undo&quot;.</p>
+                        <p><strong>Supported Values: </strong></p>
+                        <p>The following could be supported values of <code>coga-action</code> for buttons:</p>
+			<ul>
+                                <li>compose(default importance = "critical") </li>
+                                <li>delete </li>
+                                <li>next </li>
+                                <li>previous </li>
+                                <li>submit (default importance = "critical") </li>
+                                <li>undo </li>
+                                <li>cancel </li>
+                                <li>buy</li>
+                                <li>add label </li>
+                                <li>move </li>
+                                <li>view </li>
+                                <li>save (default importance = "critical") </li>
+                                <li>send (default importance = "critical") </li>
+                                <li>received </li>
+                                <li>sent </li>
+                                <li>edit </li>
+                                <li>reply </li>
+                                <li>forward </li>
+                                <li>my profile </li>
+                                <li>upload </li>
+                                <li>close </li>
+                                <li>more </li>
+                                <li>calendar </li>
+                                <li>add entry </li>
+                                <li>expand </li>
+                                <li>unexpanded </li>
+                                <li>open </li>
+                                <li>new </li>
+                                <li>print </li>
+                                <li>settings </li>
+                        </ul>
+		</section>
+		<section>
+     			<p><strong>Proposed attribute:</strong><code>coga-destination</code></p>
+     			<p>The <code>coga-destination</code> attribute provides the context of a link. It should be used on a link element or element with role="link".</p>
+     			<p>For example: &lt;a href=&quot;home.html&quot; coga-destination=&quot;home&quot; &gt;our main page&lt;/a&gt;</p>
+     			<p>The user experience may be simply replacing the text for the term &quot;home&quot; and adding an icon.  Based on personalization setting the user can see diffrent icons. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
+     			<p>It may also position this button to a location on the screen where the user is expecting the home page link.</p>
+     			<p><strong>Supported Values: </strong></p>
+     			<p>The following could be supported values of <code>coga-destination</code>.              </p>
+     			<ul>
+        	   		<li>home </li>
+	        	        <li>contact us </li>
+                 		<li>our phone </li>
+                 		<li>our email </li>
+                 		<li>site map </li>
+                 		<li>help </li>
+                 		<li>about us </li>
+                 		<li>terms </li>
+                 		<li>tools </li>
+                 		<li>comment </li>
+                 		<li>language (English) </li>
+                 		<li>sign in </li>
+                 		<li>sign up </li>
+                 		<li>product </li>
+                 		<li>services </li>
+                 		<li>social (provide label ) </li>
+                 		<li>post </li>
+                 		<li>contactus </li>
+                 		<li>help </li>
+                 		<li>chat help </li>
+           		</ul>
+		</section>
+                <section>
+                        <p><strong>Proposed attribute: </strong><code>coga-field</code></p>
+      			<p><code>coga-field</code> provides the context of a text input field such as a text box. It should be used on an input, text a responding role.</p>
+      			<p>For example: &lt;input type="text" name="fname" coga-field=&quot;phone&quot;/&gt;</p>
+      			<p>The user experience may include filling in the field and adding an icon.</p>
+      			<p>coga-field values that would typically be on form controls and would have a user context - for example phone would relate to the user's phone</p>
+                 	<p>Note they can be concatenated such as coga-field=&quot;birthdate month&quot;</p>
+                        <ul>
+                         	<li>first name </li>
+                                <li>family name </li>
+                                <li>initial </li>
+                                <li>phone (corresponds to a user phone number)</li>
+                                <li>cell phone </li>
+                                <li>address 1 </li>
+                                <li>city </li>
+                                <li>state </li>
+                                <li>country </li>
+                                <li>post code </li>
+                                <li>phone </li>
+                                <li>credit card </li>
+                                <li>expiry </li>
+                                <li>birth date</li>
+                                <li>day, *month *year </li>
+                                <li>expiry date</li>
+                                <li>todays date</li>
+                                <li>credit card code </li>
+                                <li>date start </li>
+                                <li>date end</li>
+                        </ul>
+                        <p><code>coga-field</code> can also give the context for text elements.</p>
+      			<p><code>coga-field</code> values on text are:</p>
+      			<ul>
+       				<li>our-phone </li>
+       				<li>our-address </li>
+       				<li>our-email </li>
+      			</ul>
+                </section>
+         	<section>
+           		<h2>General context</h2>
+           		<p><strong>Requirement: </strong> One important factor in optimizing the personalization of a product or   service is to ensure that the personalization is appropriate for the   current context of use as well as what is relevant for the user. For example a female user with a cognitive disability may need less options, and options that are for men are less likely to be relevant for her and may be demoted to bellow the scroll or placed under a &quot;more option&quot; button.</p>
+           		<p><strong>Proposed attribute:</strong>coga-context</p>
+           		Coga-context would let the author give additional contextual information about the content.
+           		<p> Coga-context accepts the values of a URI or shortened URI.</p>
+           		<pre>&lt;a href=&quot;women.html&quot; coga-context=&quot;openref:gender#femail&quot;&gt;women&lt;/a&gt; </pre>
+           		<p>To make this work without an RDF parser we recommend maintaining a list of recommended ontologies. </p>
+			<section>
+                        	<h3>Should we be using RDFa?</h3>
+                        	<p>The context based properties should be convertible to RDFa. (see <a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa Primer</a>) and the task force should create this mapping.</p>
+                        	<p>Note that a lot of this can be done using RDFa.  However it is easy to change the meaning with RDFa and a very basic parser will misinterpret the result. The coga work needs to be usable by as many authors as possible, and not only thoughs who can implement  RDF logic.</p>
+                        	<p>Further , personalization setting need to be limited, and RDF can give an unlimited  number of potential options which will make the system unusable. (This is unless we create restrictions and controls on an ontology uses - such as mapping to know ontologies.)</p>
+                        	<p>For example, in the code below the property homepage does not refer to the home page of the site but of the person being references.  Beyond declaring the type of data we are dealing with, each typeof                              creates a new blank node with its own distinct properties. </p>
+                        	<pre>
+&lt;div vocab="http://xmlns.com/foaf/0.1/"&gt;
+&lt;ul&gt;        
+   &lt;li typeof="Person"&gt;          
+      &lt;a property="homepage" href="http://example.com/bob/"&gt;Bob&lt;/a&gt;        
+   &lt;/li&gt;        
+   &lt;li typeof="Person"&gt;          
+      &lt;a property="homepage" href="http://example.com/eve/"&gt;Eve&lt;/a&gt;        
+   &lt;/li&gt;        
+   &lt;li typeof="Person"&gt;         
+      &lt;a property="homepage" href="http://example.com/manu/"&gt;Manu&lt;/a&gt;        
+   &lt;/li&gt;     
+&lt;/ul&gt;
+				</pre>
+                        <p> </p>
+                        <p>We may recommend adding RDFA that describe the role of the item (see <a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa Primer</a>):</p>
+                        <pre>
+&lt;div resource="/alice/posts/jos_barbecue"&gt;
+	&lt;h2 property="title"&gt;Jo's Barbecue&lt;/h2&gt;
+	&lt;p&gt;Date: &lt;span property="created"&gt;2011-09-14&lt;/span&gt;&lt;/p&gt;
+	&lt;h3 property="creator"&gt;Eve&lt;/h3&gt;        
+	...     
+&lt;/div&gt;
+			</pre>
+                        <p> </p>
+                	</section>
+
+         	</section>
+         	<section>
+                 	<h2>Concept codes</h2>
+                        <p><strong>Requirement: </strong>We would like to enable interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. There are open set of symbol codes for these symbol sets, that could be referenced then they can be interoperable. alternatively wordnet nodes could be referenced. If the users symbols are mapped to the same nodes then users agents will be able to load the user understandable symbol. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
+      			<p>User experience: AAC users will load symbols that they understand in different applications that are made by a different provider.</p>
+      			<p><strong>Proposed attribute:</strong> <code>coga-concept</code></p>
+      			<p><strong>Supported Values:</strong> 
+				URL
+			</p>
+      			<p><strong>Examples:</strong></p>
+      			<p>&lt;img coga-concept="http//wordnet.com/node/girl&quot; href=&quot;mygirlsy.bmp/&gt; </p>
+      			<p> </p>
+    		</section>
+       		<section>
+                 	<h2>Potential parts of a page</h2>
+                        <p><strong>Requirement:</strong> The following could be extensions for aria landmarks or  ePub </p>
+      			<p><strong>User experience:</strong> symbols and colors could be used consistently across different content. </p>
+      			<p>Links (such as ePub nav maps) can be automatically generated for people learn via keypoints or examples.</p>
+      			<p><strong>Examples:</strong>               </p>
+      			<ul>
+                  		<li>key points </li>
+                  		<li>example </li>
+                  		<li>note </li>
+                  		<li>warning </li>
+                  		<li>step </li>
+                  		<li>external - for external content, such as sponsored or advertising </li>
+                  		<li>offers - for special offers that are complementary to the main content or task </li>
+                  		<li>advertisement - advertisement or sponsored content </li>
+                	</ul>
+                </section>
+		<section>
+    			<h2>Number free</h2>
+			<p><strong>Requirement</strong>: Not everyone can understand numbers. We therefor suggest coga-numberfree for alternative text for people who can not understand the main content</p>
+			<p><strong>User experience:</strong></p>
+			<p>A suggested user experience would be: Numerical concepts could be rendered by the user agent slightly different so that the user knows a number free explanation is available. The user can then mouse over the content and a tooltips would give the number free value</p>
+			<p><strong>Proposed attribute:</strong><code>coga-numberfree</code> </p>
+			<p><strong>Supported value : </strong> String</p>
+			<p><strong>For example:</strong></p>
+			<p><span>&lt;span coga-numberfree=&quot;almost all&quot;&gt;9 out of 10</span> &lt;/span&gt;
+			</p>
+			<pre>&lt;span coga-numberfree=&quot;hat and coat weather&quot;&gt;The weather is <span>9 degrees&lt;/span&gt;</span>
+			</pre>
+		</section>
+		<section>
+			<h2>Non-literal text and images</h2>
+			<p><strong>Requirement: </strong>Not everyone can understand non-literal text and icons such as metaphors, idioms etc. We need a tag that identifies text or images as non literal and  allows the author to explain non-literal text and images to users.</p>
+			<p><strong>User experience:</strong></p>
+			<p>A suggested user experience would be: Non literal content could be rendered by the user agent slightly differently so that the user knows that this content should not be taken literally and that a literal explanation is available. The user can then mouse over the content and a tooltips would give the literal value.</p>
+			<p><strong>Proposed attribute: </strong><code>coga-literal</code> </p>
+			<p><strong>Supported value: </strong>String</p>
+			<p><strong>Examples:</strong></p>
+			<p>&lt;span coga-literal=&quot;it is raining hard&quot;&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;</p>
+			<p> User agents can render non-literal text in a different way so that users will know that this is non literal. They can then use a mouse over or other technique to receive the translation.
+			</p>
+		</section>
+		<section>
+                 	<h2>Explain and feedback</h2>
+                        <p><strong>Requirement: </strong></p>
+<p>Some users need additional help. We request an attribute where the author can provide additional information.or what just happened.</p>
+                        <strong>Proposed attribute: </strong><code>coga-feedback</code>
+<p>This attribute provides immediate feedback that can be shown or spoken when any event is triggered on a control.</p>
+                        <p><strong>User experience: </strong>This can be rendered as text at the top of the page and read immediately. Most users will not want this text rendered and spoken. Other users however will need it to know what has just happened. </p>
+                        <strong>Proposed attribute: </strong><code>coga-explain</code>
+<p> 
+This attribute explains the element's role.
+</p>
+		<p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
+		<h3>Examples:</h3>
+		<p> coga-feedback= "your email was sent" </p>
+		<p>coga-explain= "this item costs more" </p>
+	</section>
+<section>
+<h3>More Help</h3>
+<p><strong>Requirement: </strong>Some users may need additional information or specifically additional help inforamtion. We request additonal attributes so that an author can indicate the existence of this additional information.</p>
+<p><strong>Proposed attribute: </strong><code>coga-moreinfo</code></p>
+<p><strong>Supported values: </strong>URL</p>
+<p><strong>Proposed attribute: </strong><code>coga-extrahelp</code></p>
+<p><strong>Supported values: </strong>  tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
+<p><strong>Example:</strong></p>
+<p>&lt;button type="button" coga-moreinfo=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</p>
+<p>URI 2 may read: </p>
+<pre>
+&lt;div id=&quot;uri2&quot; coga-extrahelp=&quot;morehelp&quot; coga-hidden=&quot;true&quot;&gt;
+pressing the undo button will erase all your work on this page. Use this button with care. 
+If you press it by mistake, press control and y at the same time and your answers will come back. 
+&lt;/div&gt;
+
+&lt;a href=&quot;functiongethelp()&quot; coga-extrahelp=&quot;humanhelp&quot; coga-hidden=&quot;true&quot;&gt;
+I want a person to help me
+&lt;/a&gt;
+&lt;div id=&quot;uri3&quot; coga-extrahelp=&quot;glossary&quot; coga-hidden=&quot;true&quot;&gt;</p></section>
+</pre>
+                <section>
+                 <h2>Potential Features</h2>
+                        <p>The following may not be necessary </p>
+                        <ul>
+                                <li>Views </li>
+                                <li>ascending. descending </li>
+                                <li>day, week month </li>
+                                <li>this week </li>
+                                <li>this month </li>
+                                <li>today </li>
+                        </ul>
+                </section>
+		<section>
+			<h2>Language type support</h2>
+			<p><strong>Requirement: </strong>Sometimes you may want to provide a simplified version of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users. These alternative versions may not be identical in content but maintain the gist of the original content.</p>
+			<p><strong>Proposed attribute: </strong><code>coga-alternative</code> Would be used on an alternitive content as an alternative to more detailed or difficult to understand content. coga-alternative can be used on a span, div, link or image that servers as alternitive content to it's direct parent element.</p>
+
+			<p><strong>Supported values:</strong> </p>
+			<ul>
+ 				<li>On text: easylang, explain, more, vocab500, vocab1000, vocab2000, active, literal, numberfree, smallsentences, chunks, General: lessoptions. Whitespace, largefont </li>
+ 				<li>Images: symbolic , realistic</li>
+ 				<li>p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt=&quot;&quot;, P2 are extra illustration that most people will not mind such as at the start of a paragraph or option. p3 are for disability centric illustrations that can disturb other people and may be mid sentence. </li>
+				</ul>
+
+			<strong>Example:</strong>
+			<div><em>&lt;div&gt;</em></div>
+			<div><em>&lt;span</em> <em>coga-alternative="easylang numberfree vocab1000" class="hidden"&gt;>most people prefer simple text</em><em>&lt;/span&gt;</em></div>
+			<div><em>In studies it was found that only 30% of users prefer long convoluted text with obtuse words and lots of numbers, with 56% claiming there preferred the simplified text , with the remainder unsure or stated it depends on the context.</em></div>
+			<div><em><br />
+			</em></div>
+			<div><em>&lt;/div&gt;</em></div>
+		</section>
+		<section>
+			<p> <strong>Proposed attribute: </strong><code>coga-easylang</code> </p>
+			<p><code>coga-easylang</code> will contain a version of the content that is easier to read and understand. Note that this only works on small sections of text as the easylang attribute does not support full HTML, such as lists and sections.</p>
+
+			<p><strong>Supported values:</strong> String</p>
+			<p>&lt;span coga-easylang=&quot; some text that is easy to read&quot;&gt; some convoluted obtuse text&lt;/span&gt;</p>
+			<p>Where coga-easylang should use as simple well-known words as possible, and active voicing, literal text, small simple sentences. Acronyms and abbreviations should be avoided, unless they are the common way to refer to an item.</p>
+			<p> </p>
+		</section>
+		<section>
+			<h3>Reminders</h3>
+			<p><strong>Requirement: </strong>We require an attribute that enables different users to experience different amount of reminders based on personal preferences. Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users.</p>
+			<p><strong>Proposed attribute: </strong><code>coga-reminder</code></p>
+			<p><strong>Supported values: </strong></p>
+			<p><strong>basic: </strong>Reminders that over 90% of users would want,</p>
+			<p><strong>more: </strong>More would be used by over 20% of the population.</p>
+			<p><strong>extra: </strong>Extra would be used by over 5% of the population, and</p>
+			<p><strong>maximum</strong>: Maximum would be helpful for 5% of the population or less.</p>
+			<p><strong>Example:</strong></p>
+			<p>&lt;div role=&quot;alert&quot; coga-reminder=&quot;basic&quot;&gt; It is your daughter's birthday&lt;/div&gt;</p>
+		</section>
+		<section>
+			<h2>Distractions</h2>
+			<p><strong>Requirement: </strong> We require an attribute that indicates a distraction so that
+some users may be able to remove them from content.</p> 
+			<p><strong>Proposed attribute: </strong><code> coga-distraction</code></p>
+			<p>This attribute should be used on non essential, detracting content, so that people who have problems keeping focus can turn them off. An example user experiences would be to hide all distraction content.</p>
+			<p><strong>Example: </strong> coga-distraction=&quot;moving ad&quot;</p>
+			<p>Supported values: animations, auto-starting,  moving, ad, message, chat , overlay, popup<br>
+			  Auto-changing (logs) third-party,  offer
+		    ( includes suggestions).</p>
+			<p>Note that elements with the coga-distraction attribute should also have a lable or  accessible name.</p>
+</section>
+                <section>
+                  <h2>Additional WAI-ARIA roles</h2>
+                        <p><strong>Requirement: </strong> We may want to add roles for sections a page such as: contact us - for a contact us form  </p>
+                        <p><strong>User experience: </strong>symbols and colors could be used consistently across different content.</p>
+                        <p>Nav maps can be automatically generated for people learn via key-points or examples.</p>
+                        <p>Further these sections could be hidden in the normal rendering of a page or rendered the top of page depending on user preferences. The location of these sections can also be changed, based on the user preference, enabling the user to find them easily.</p>
+                        <p>Values:</p>
+                        <p></p>
+                        <ul>
+                                <li>summary</li>
+                                <li>keypoints</li>
+                                <li>example</li>
+                                <li>note</li>
+                                <li>warning</li>
+                                <li>step</li>
+                                <li>external - for external content, such as sponsored or advertising</li>
+                                <li>offers - for special offers that are complementary to the main content or task</li>
+                                <li>advertisement - advertisement or sponsored content</li>
+                                <li>contactus</li>
+                                <li>aboutus</li>
+                        </ul>
+                        <p> </p>
+                </section>
+		<!--
+		<section class="appendix" id="changelog">
+			<h2>Change Log</h2>
+			<section>
+				<h2>Substantive changes since the <a href="@@">last public working draft</a></h2>
+				<ul>
+					<li>@@</li>
+					<!- EdNote: After each WD publish, move contents of this list into the next one below. ->
+				</ul>
+			</section>
+			<section>
+				<h2>Other substantive changes since the <a href="@@">First Public Working Draft</a></h2>
+				<ul>
+					<li>@@</li>
+					<!- EdNote: After each WD publish, move previous list into this one. ->
+				</ul>
+			</section>
+		</section>
+		-->
+	</section>
+    
