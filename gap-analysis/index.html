@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta lang="" property="dc:language" content="en">
-
   <style>
     /*
 
@@ -18,98 +17,74 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       padding: 0.5em;
       color: #333;
       background: #f8f8f8;
-      -webkit-text-size-adjust: none;
     }
     
     .hljs-comment,
-    .diff .hljs-header {
+    .hljs-quote {
       color: #998;
       font-style: italic;
     }
     
     .hljs-keyword,
-    .css .rule .hljs-keyword,
-    .hljs-winutils,
-    .nginx .hljs-title,
-    .hljs-subst,
-    .hljs-request,
-    .hljs-status {
+    .hljs-selector-tag,
+    .hljs-subst {
       color: #333;
       font-weight: bold;
     }
     
     .hljs-number,
-    .hljs-hexcolor,
-    .ruby .hljs-constant {
+    .hljs-literal,
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-tag .hljs-attr {
       color: #008080;
     }
     
     .hljs-string,
-    .hljs-tag .hljs-value,
-    .hljs-doctag,
-    .tex .hljs-formula {
+    .hljs-doctag {
       color: #d14;
     }
     
     .hljs-title,
-    .hljs-id,
-    .scss .hljs-preprocessor {
+    .hljs-section,
+    .hljs-selector-id {
       color: #900;
       font-weight: bold;
     }
     
-    .hljs-list .hljs-keyword,
     .hljs-subst {
       font-weight: normal;
     }
     
-    .hljs-class .hljs-title,
     .hljs-type,
-    .vhdl .hljs-literal,
-    .tex .hljs-command {
+    .hljs-class .hljs-title {
       color: #458;
       font-weight: bold;
     }
     
     .hljs-tag,
-    .hljs-tag .hljs-title,
-    .hljs-rule .hljs-property,
-    .django .hljs-tag .hljs-keyword {
+    .hljs-name,
+    .hljs-attribute {
       color: #000080;
       font-weight: normal;
     }
     
-    .hljs-attribute,
-    .hljs-variable,
-    .lisp .hljs-body,
-    .hljs-name {
-      color: #008080;
-    }
-    
-    .hljs-regexp {
+    .hljs-regexp,
+    .hljs-link {
       color: #009926;
     }
     
     .hljs-symbol,
-    .ruby .hljs-symbol .hljs-string,
-    .lisp .hljs-keyword,
-    .clojure .hljs-keyword,
-    .scheme .hljs-keyword,
-    .tex .hljs-special,
-    .hljs-prompt {
+    .hljs-bullet {
       color: #990073;
     }
     
-    .hljs-built_in {
+    .hljs-built_in,
+    .hljs-builtin-name {
       color: #0086b3;
     }
     
-    .hljs-preprocessor,
-    .hljs-pragma,
-    .hljs-pi,
-    .hljs-doctype,
-    .hljs-shebang,
-    .hljs-cdata {
+    .hljs-meta {
       color: #999;
       font-weight: bold;
     }
@@ -122,14 +97,156 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       background: #dfd;
     }
     
-    .diff .hljs-change {
-      background: #0086b3;
+    .hljs-emphasis {
+      font-style: italic;
     }
     
-    .hljs-chunk {
-      color: #aaa;
+    .hljs-strong {
+      font-weight: bold;
     }
   </style>
+  <style>
+    /* --- ISSUES/NOTES --- */
+    
+    div.issue-title,
+    div.note-title,
+    div.ednote-title,
+    div.warning-title {
+      padding-right: 1em;
+      min-width: 7.5em;
+      color: #b9ab2d;
+    }
+    
+    div.issue-title {
+      color: #e05252;
+    }
+    
+    div.note-title,
+    div.ednote-title {
+      color: #2b2;
+    }
+    
+    div.warning-title {
+      color: #f22;
+    }
+    
+    div.issue-title span,
+    div.note-title span,
+    div.ednote-title span,
+    div.warning-title span {
+      text-transform: uppercase;
+    }
+    
+    div.note,
+    div.issue,
+    div.ednote,
+    div.warning {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    
+    .note> p:first-child,
+    .ednote> p:first-child,
+    .issue> p:first-child,
+    .warning> p:first-child {
+      margin-top: 0
+    }
+    
+    .issue,
+    .note,
+    .ednote,
+    .warning {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+    }
+    
+    div.issue,
+    div.note,
+    div.ednote,
+    div.warning {
+      padding: 1em 1.2em 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+    }
+    
+    span.note,
+    span.ednote,
+    span.issue,
+    span.warning {
+      padding: .1em .5em .15em;
+    }
+    
+    .issue {
+      border-color: #e05252;
+      background: #fbe9e9;
+    }
+    
+    .note,
+    .ednote {
+      border-color: #52e052;
+      background: #e9fbe9;
+    }
+    
+    .warning {
+      border-color: #f11;
+      border-width: .2em;
+      border-style: solid;
+      background: #fbe9e9;
+    }
+    
+    .warning-title:before {
+      content: "⚠";
+      /*U+26A0 WARNING SIGN*/
+      font-size: 3em;
+      float: left;
+      height: 100%;
+      padding-right: .3em;
+      vertical-align: top;
+      margin-top: -0.5em;
+    }
+    
+    li.task-list-item {
+      list-style: none;
+    }
+    
+    input.task-list-item-checkbox {
+      margin: 0 0.35em 0.25em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+    /* --- PERMALINKS --- */
+    
+    .permalink {
+      width: 1px;
+      height: 1px;
+      overflow: visible;
+      font-size: 10pt;
+      font-style: normal;
+      vertical-align: middle;
+      margin-left: 4px;
+      float: right;
+    }
+    
+    .permalink a,
+    .permalink a:link,
+    .permalink a:visited,
+    .permalink a:hover,
+    .permalink a:focus,
+    .permalink a:active {
+      background: transparent !important;
+      text-decoration: none;
+      font-weight: bold;
+      color: #666 !important;
+    }
+    
+    .permalink abbr {
+      border: 0;
+    }
+  </style>
+
   <style id="respec-mainstyle">
     /*****************************************************************
  * ReSpec 3 CSS
@@ -293,147 +410,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     
     .technique {
       border: dashed
-    }
-  </style>
-  <style>
-    /* --- ISSUES/NOTES --- */
-    
-    div.issue-title,
-    div.note-title,
-    div.ednote-title,
-    div.warning-title {
-      padding-right: 1em;
-      min-width: 7.5em;
-      color: #b9ab2d;
-    }
-    
-    div.issue-title {
-      color: #e05252;
-    }
-    
-    div.note-title,
-    div.ednote-title {
-      color: #2b2;
-    }
-    
-    div.warning-title {
-      color: #f22;
-    }
-    
-    div.issue-title span,
-    div.note-title span,
-    div.ednote-title span,
-    div.warning-title span {
-      text-transform: uppercase;
-    }
-    
-    div.note,
-    div.issue,
-    div.ednote,
-    div.warning {
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
-    
-    .note> p:first-child,
-    .ednote> p:first-child,
-    .issue> p:first-child,
-    .warning> p:first-child {
-      margin-top: 0
-    }
-    
-    .issue,
-    .note,
-    .ednote,
-    .warning {
-      padding: .5em;
-      border-left-width: .5em;
-      border-left-style: solid;
-    }
-    
-    div.issue,
-    div.note,
-    div.ednote,
-    div.warning {
-      padding: 1em 1.2em 0.5em;
-      margin: 1em 0;
-      position: relative;
-      clear: both;
-    }
-    
-    span.note,
-    span.ednote,
-    span.issue,
-    span.warning {
-      padding: .1em .5em .15em;
-    }
-    
-    .issue {
-      border-color: #e05252;
-      background: #fbe9e9;
-    }
-    
-    .note,
-    .ednote {
-      border-color: #52e052;
-      background: #e9fbe9;
-    }
-    
-    .warning {
-      border-color: #f11;
-      border-width: .2em;
-      border-style: solid;
-      background: #fbe9e9;
-    }
-    
-    .warning-title:before {
-      content: "⚠";
-      /*U+26A0 WARNING SIGN*/
-      font-size: 3em;
-      float: left;
-      height: 100%;
-      padding-right: .3em;
-      vertical-align: top;
-      margin-top: -0.5em;
-    }
-    
-    li.task-list-item {
-      list-style: none;
-    }
-    
-    input.task-list-item-checkbox {
-      margin: 0 0.35em 0.25em -1.6em;
-      vertical-align: middle;
-    }
-  </style>
-  <style>
-    /* --- PERMALINKS --- */
-    
-    .permalink {
-      width: 1px;
-      height: 1px;
-      overflow: visible;
-      font-size: 10pt;
-      font-style: normal;
-      vertical-align: middle;
-      margin-left: 4px;
-      float: right;
-    }
-    
-    .permalink a,
-    .permalink a:link,
-    .permalink a:visited,
-    .permalink a:hover,
-    .permalink a:focus,
-    .permalink a:active {
-      background: transparent !important;
-      text-decoration: none;
-      font-weight: bold;
-      color: #666 !important;
-    }
-    
-    .permalink abbr {
-      border: 0;
     }
   </style>
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED">
@@ -2258,7 +2234,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a class="logo" href="http://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Cognitive Accessibility Roadmap and Gap Analysis</h1>
-    <h2 id="w3c-editor-s-draft-21-june-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-06-21">21 June 2016</time></h2>
+    <h2 id="w3c-editor-s-draft-04-july-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-07-04">04 July 2016</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd>
@@ -3767,7 +3743,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <p><strong>Proposed attribute:</strong>coga-context</p>
       Coga-context would let the author give additional contextual information about the content.
       <p> Coga-context accepts the values of a URI or shortened URI.</p>
-      <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"women.html"</span> <span class="hljs-attribute">coga-context</span>=<span class="hljs-value">"openref:gender#femail"</span>&gt;</span>women<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> </pre>
+      <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"women.html"</span> <span class="hljs-attr">coga-context</span>=<span class="hljs-string">"openref:gender#femail"</span>&gt;</span>women<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> </pre>
       <p>To make this work without an RDF parser we recommend maintaining a list of recommended ontologies. </p>
 
       <section id="should-we-be-using-rdfa" typeof="bibo:Chapter" resource="#should-we-be-using-rdfa" property="bibo:hasPart">
@@ -3776,27 +3752,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p>Note that a lot of this can be done using RDFa. However it is easy to change the meaning with RDFa and a very basic parser will misinterpret the result. The coga work needs to be usable by as many authors as possible, and not only thoughs who can implement RDF logic.</p>
         <p>Further , personalization setting need to be limited, and RDF can give an unlimited number of potential options which will make the system unusable. (This is unless we create restrictions and controls on an ontology uses - such as mapping to know ontologies.)</p>
         <p>For example, in the code below the property homepage does not refer to the home page of the site but of the person being references. Beyond declaring the type of data we are dealing with, each typeof creates a new blank node with its own distinct properties. </p>
-        <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">vocab</span>=<span class="hljs-value">"http://xmlns.com/foaf/0.1/"</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-title">ul</span>&gt;</span>        
-   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">typeof</span>=<span class="hljs-value">"Person"</span>&gt;</span>          
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"homepage"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://example.com/bob/"</span>&gt;</span>Bob<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>        
-   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>        
-   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">typeof</span>=<span class="hljs-value">"Person"</span>&gt;</span>          
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"homepage"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://example.com/eve/"</span>&gt;</span>Eve<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>        
-   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>        
-   <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">typeof</span>=<span class="hljs-value">"Person"</span>&gt;</span>         
-      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"homepage"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"http://example.com/manu/"</span>&gt;</span>Manu<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>        
-   <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>     
-<span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+        <pre class="hljs javascript">&lt;div vocab=<span class="hljs-string">"http://xmlns.com/foaf/0.1/"</span>&gt;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>        
+   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Person"</span>&gt;</span>          
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"homepage"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://example.com/bob/"</span>&gt;</span>Bob<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>        
+   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>        
+   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Person"</span>&gt;</span>          
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"homepage"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://example.com/eve/"</span>&gt;</span>Eve<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>        
+   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>        
+   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Person"</span>&gt;</span>         
+      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"homepage"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://example.com/manu/"</span>&gt;</span>Manu<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>        
+   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>     
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
         </pre>
         <p> </p>
         <p>We may recommend adding RDFA that describe the role of the item (see <a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa Primer</a>):</p>
-        <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">resource</span>=<span class="hljs-value">"/alice/posts/jos_barbecue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h2</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"title"</span>&gt;</span>Jo's Barbecue<span class="hljs-tag">&lt;/<span class="hljs-title">h2</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span>Date: <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"created"</span>&gt;</span>2011-09-14<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-title">h3</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"creator"</span>&gt;</span>Eve<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>        
+        <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">"/alice/posts/jos_barbecue"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"title"</span>&gt;</span>Jo's Barbecue<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Date: <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"created"</span>&gt;</span>2011-09-14<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"creator"</span>&gt;</span>Eve<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>        
   ...     
-<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
       </pre>
         <p> </p>
       </section>
@@ -3843,7 +3819,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <p><strong>For example:</strong></p>
       <p><span>&lt;span coga-numberfree="almost all"&gt;9 out of 10</span> &lt;/span&gt;
       </p>
-      <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">coga-numberfree</span>=<span class="hljs-value">"hat and coat weather"</span>&gt;</span>The weather is <span>9 degrees<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span></span>
+      <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">coga-numberfree</span>=<span class="hljs-string">"hat and coat weather"</span>&gt;</span>The weather is <span>9 degrees<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
       </pre>
     </section>
 
@@ -3887,15 +3863,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <p><strong>Example:</strong></p>
       <p>&lt;button type="button" coga-moreinfo="uri2 uri3" &gt;undo&lt;/button&gt;</p>
       <p>URI 2 may read: </p>
-      <pre class="hljs applescript">&lt;<span class="hljs-keyword">div</span> <span class="hljs-property">id</span>=<span class="hljs-string">"uri2"</span> coga-extrahelp=<span class="hljs-string">"morehelp"</span> coga-hidden=<span class="hljs-string">"true"</span>&gt;
-pressing <span class="hljs-keyword">the</span> undo button will erase all your work <span class="hljs-function_start"><span class="hljs-keyword">on</span></span> this page. Use this button <span class="hljs-keyword">with</span> care. 
-If you press <span class="hljs-keyword">it</span> <span class="hljs-keyword">by</span> mistake, press control <span class="hljs-keyword">and</span> y <span class="hljs-keyword">at</span> <span class="hljs-keyword">the</span> same <span class="hljs-property">time</span> <span class="hljs-keyword">and</span> your answers will come <span class="hljs-keyword">back</span>. 
-&lt;/<span class="hljs-keyword">div</span>&gt;
+      <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"uri2"</span> <span class="hljs-attr">coga-extrahelp</span>=<span class="hljs-string">"morehelp"</span> <span class="hljs-attr">coga-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+pressing the undo button will erase all your work on this page. Use this button with care. 
+If you press it by mistake, press control and y at the same time and your answers will come back. 
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
 
-&lt;a href=<span class="hljs-string">"functiongethelp()"</span> coga-extrahelp=<span class="hljs-string">"humanhelp"</span> coga-hidden=<span class="hljs-string">"true"</span>&gt;
-I want a person <span class="hljs-keyword">to</span> help <span class="hljs-keyword">me</span>
-&lt;/a&gt;
-&lt;<span class="hljs-keyword">div</span> <span class="hljs-property">id</span>=<span class="hljs-string">"uri3"</span> coga-extrahelp=<span class="hljs-string">"glossary"</span> coga-hidden=<span class="hljs-string">"true"</span>&gt;<p></p></pre></section>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"functiongethelp()"</span> <span class="hljs-attr">coga-extrahelp</span>=<span class="hljs-string">"humanhelp"</span> <span class="hljs-attr">coga-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
+I want a person to help me
+<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"uri3"</span> <span class="hljs-attr">coga-extrahelp</span>=<span class="hljs-string">"glossary"</span> <span class="hljs-attr">coga-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><p></p></pre></section>
 
     <section id="potential-features" typeof="bibo:Chapter" resource="#potential-features" property="bibo:hasPart">
       <h3 id="h-potential-features" resource="#h-potential-features"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.11 </span>Potential Features<span class="permalink" typeof="bookmark"><a href="#potential-features" aria-label="Permalink for A.11 Potential Features" title="Permalink for A.11 Potential Features" property="url"><span property="title" content="A.11 Potential Features">§</span></a></span></span></h3>
@@ -4179,6 +4155,6 @@ I want a person <span class="hljs-keyword">to</span> help <span class="hljs-keyw
     </section>
   </section>
   <p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
-  <script async="" defer="" src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
+  <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
 </body>
 </html>

@@ -17,98 +17,74 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       padding: 0.5em;
       color: #333;
       background: #f8f8f8;
-      -webkit-text-size-adjust: none;
     }
     
     .hljs-comment,
-    .diff .hljs-header {
+    .hljs-quote {
       color: #998;
       font-style: italic;
     }
     
     .hljs-keyword,
-    .css .rule .hljs-keyword,
-    .hljs-winutils,
-    .nginx .hljs-title,
-    .hljs-subst,
-    .hljs-request,
-    .hljs-status {
+    .hljs-selector-tag,
+    .hljs-subst {
       color: #333;
       font-weight: bold;
     }
     
     .hljs-number,
-    .hljs-hexcolor,
-    .ruby .hljs-constant {
+    .hljs-literal,
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-tag .hljs-attr {
       color: #008080;
     }
     
     .hljs-string,
-    .hljs-tag .hljs-value,
-    .hljs-doctag,
-    .tex .hljs-formula {
+    .hljs-doctag {
       color: #d14;
     }
     
     .hljs-title,
-    .hljs-id,
-    .scss .hljs-preprocessor {
+    .hljs-section,
+    .hljs-selector-id {
       color: #900;
       font-weight: bold;
     }
     
-    .hljs-list .hljs-keyword,
     .hljs-subst {
       font-weight: normal;
     }
     
-    .hljs-class .hljs-title,
     .hljs-type,
-    .vhdl .hljs-literal,
-    .tex .hljs-command {
+    .hljs-class .hljs-title {
       color: #458;
       font-weight: bold;
     }
     
     .hljs-tag,
-    .hljs-tag .hljs-title,
-    .hljs-rule .hljs-property,
-    .django .hljs-tag .hljs-keyword {
+    .hljs-name,
+    .hljs-attribute {
       color: #000080;
       font-weight: normal;
     }
     
-    .hljs-attribute,
-    .hljs-variable,
-    .lisp .hljs-body,
-    .hljs-name {
-      color: #008080;
-    }
-    
-    .hljs-regexp {
+    .hljs-regexp,
+    .hljs-link {
       color: #009926;
     }
     
     .hljs-symbol,
-    .ruby .hljs-symbol .hljs-string,
-    .lisp .hljs-keyword,
-    .clojure .hljs-keyword,
-    .scheme .hljs-keyword,
-    .tex .hljs-special,
-    .hljs-prompt {
+    .hljs-bullet {
       color: #990073;
     }
     
-    .hljs-built_in {
+    .hljs-built_in,
+    .hljs-builtin-name {
       color: #0086b3;
     }
     
-    .hljs-preprocessor,
-    .hljs-pragma,
-    .hljs-pi,
-    .hljs-doctype,
-    .hljs-shebang,
-    .hljs-cdata {
+    .hljs-meta {
       color: #999;
       font-weight: bold;
     }
@@ -121,12 +97,153 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       background: #dfd;
     }
     
-    .diff .hljs-change {
-      background: #0086b3;
+    .hljs-emphasis {
+      font-style: italic;
     }
     
-    .hljs-chunk {
-      color: #aaa;
+    .hljs-strong {
+      font-weight: bold;
+    }
+  </style>
+  <style>
+    /* --- ISSUES/NOTES --- */
+    
+    div.issue-title,
+    div.note-title,
+    div.ednote-title,
+    div.warning-title {
+      padding-right: 1em;
+      min-width: 7.5em;
+      color: #b9ab2d;
+    }
+    
+    div.issue-title {
+      color: #e05252;
+    }
+    
+    div.note-title,
+    div.ednote-title {
+      color: #2b2;
+    }
+    
+    div.warning-title {
+      color: #f22;
+    }
+    
+    div.issue-title span,
+    div.note-title span,
+    div.ednote-title span,
+    div.warning-title span {
+      text-transform: uppercase;
+    }
+    
+    div.note,
+    div.issue,
+    div.ednote,
+    div.warning {
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+    
+    .note> p:first-child,
+    .ednote> p:first-child,
+    .issue> p:first-child,
+    .warning> p:first-child {
+      margin-top: 0
+    }
+    
+    .issue,
+    .note,
+    .ednote,
+    .warning {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+    }
+    
+    div.issue,
+    div.note,
+    div.ednote,
+    div.warning {
+      padding: 1em 1.2em 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+    }
+    
+    span.note,
+    span.ednote,
+    span.issue,
+    span.warning {
+      padding: .1em .5em .15em;
+    }
+    
+    .issue {
+      border-color: #e05252;
+      background: #fbe9e9;
+    }
+    
+    .note,
+    .ednote {
+      border-color: #52e052;
+      background: #e9fbe9;
+    }
+    
+    .warning {
+      border-color: #f11;
+      border-width: .2em;
+      border-style: solid;
+      background: #fbe9e9;
+    }
+    
+    .warning-title:before {
+      content: "⚠";
+      /*U+26A0 WARNING SIGN*/
+      font-size: 3em;
+      float: left;
+      height: 100%;
+      padding-right: .3em;
+      vertical-align: top;
+      margin-top: -0.5em;
+    }
+    
+    li.task-list-item {
+      list-style: none;
+    }
+    
+    input.task-list-item-checkbox {
+      margin: 0 0.35em 0.25em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+    /* --- PERMALINKS --- */
+    
+    .permalink {
+      width: 1px;
+      height: 1px;
+      overflow: visible;
+      font-size: 10pt;
+      font-style: normal;
+      vertical-align: middle;
+      margin-left: 4px;
+      float: right;
+    }
+    
+    .permalink a,
+    .permalink a:link,
+    .permalink a:visited,
+    .permalink a:hover,
+    .permalink a:focus,
+    .permalink a:active {
+      background: transparent !important;
+      text-decoration: none;
+      font-weight: bold;
+      color: #666 !important;
+    }
+    
+    .permalink abbr {
+      border: 0;
     }
   </style>
   <style id="respec-mainstyle">
@@ -275,147 +392,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 
 
-  <style>
-    /* --- ISSUES/NOTES --- */
-    
-    div.issue-title,
-    div.note-title,
-    div.ednote-title,
-    div.warning-title {
-      padding-right: 1em;
-      min-width: 7.5em;
-      color: #b9ab2d;
-    }
-    
-    div.issue-title {
-      color: #e05252;
-    }
-    
-    div.note-title,
-    div.ednote-title {
-      color: #2b2;
-    }
-    
-    div.warning-title {
-      color: #f22;
-    }
-    
-    div.issue-title span,
-    div.note-title span,
-    div.ednote-title span,
-    div.warning-title span {
-      text-transform: uppercase;
-    }
-    
-    div.note,
-    div.issue,
-    div.ednote,
-    div.warning {
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
-    
-    .note> p:first-child,
-    .ednote> p:first-child,
-    .issue> p:first-child,
-    .warning> p:first-child {
-      margin-top: 0
-    }
-    
-    .issue,
-    .note,
-    .ednote,
-    .warning {
-      padding: .5em;
-      border-left-width: .5em;
-      border-left-style: solid;
-    }
-    
-    div.issue,
-    div.note,
-    div.ednote,
-    div.warning {
-      padding: 1em 1.2em 0.5em;
-      margin: 1em 0;
-      position: relative;
-      clear: both;
-    }
-    
-    span.note,
-    span.ednote,
-    span.issue,
-    span.warning {
-      padding: .1em .5em .15em;
-    }
-    
-    .issue {
-      border-color: #e05252;
-      background: #fbe9e9;
-    }
-    
-    .note,
-    .ednote {
-      border-color: #52e052;
-      background: #e9fbe9;
-    }
-    
-    .warning {
-      border-color: #f11;
-      border-width: .2em;
-      border-style: solid;
-      background: #fbe9e9;
-    }
-    
-    .warning-title:before {
-      content: "⚠";
-      /*U+26A0 WARNING SIGN*/
-      font-size: 3em;
-      float: left;
-      height: 100%;
-      padding-right: .3em;
-      vertical-align: top;
-      margin-top: -0.5em;
-    }
-    
-    li.task-list-item {
-      list-style: none;
-    }
-    
-    input.task-list-item-checkbox {
-      margin: 0 0.35em 0.25em -1.6em;
-      vertical-align: middle;
-    }
-  </style>
-  <style>
-    /* --- PERMALINKS --- */
-    
-    .permalink {
-      width: 1px;
-      height: 1px;
-      overflow: visible;
-      font-size: 10pt;
-      font-style: normal;
-      vertical-align: middle;
-      margin-left: 4px;
-      float: right;
-    }
-    
-    .permalink a,
-    .permalink a:link,
-    .permalink a:visited,
-    .permalink a:hover,
-    .permalink a:focus,
-    .permalink a:active {
-      background: transparent !important;
-      text-decoration: none;
-      font-weight: bold;
-      color: #666 !important;
-    }
-    
-    .permalink abbr {
-      border: 0;
-    }
-  </style>
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED">
   <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
   <script id="initialUserConfig" type="application/json">
@@ -2238,7 +2214,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a class="logo" href="http://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</h1>
-    <h2 id="w3c-editor-s-draft-21-june-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-06-21">21 June 2016</time></h2>
+    <h2 id="w3c-editor-s-draft-04-july-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-07-04">04 July 2016</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a></dd>
@@ -3716,10 +3692,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             <p>Techneques can be used in any media such as dividing your content into sections, and using a clear heading for each section. For multi media check that it is easy for the user to go back to each section using techniques such as indexing and bookmarks. </p>
             <h6 id="failure-example">Failure example </h6>
             <p>The following breadcrumbs do not help adequately the user know what they are doing</p>
-            <pre class="hljs autoit"><span class="hljs-keyword">step</span> <span class="hljs-number">1</span> &gt;&gt;  <span class="hljs-keyword">step</span> <span class="hljs-number">2</span> &gt;&gt; <strong><span class="hljs-keyword">step</span> <span class="hljs-number">3</span></strong></pre>
+            <pre class="hljs">step 1 &gt;&gt;  step 2 &gt;&gt; <strong>step 3</strong></pre>
             <h4 id="pass-example">Pass example </h4>
             <p>The following breadcrumbs reminds the user what they are doing</p>
-            <pre class="hljs cpp">step <span class="hljs-number">1</span> - ordered <span class="hljs-number">15</span> products &gt;&gt;  step <span class="hljs-number">2</span> -  payment information &gt;&gt; <strong>step <span class="hljs-number">3</span></strong> <strong>- shipping information</strong></pre>
+            <pre class="hljs">step 1 - ordered 15 products &gt;&gt;  step 2 -  payment information &gt;&gt; <strong>step 3</strong> <strong>- shipping information</strong></pre>
 
             <p>Make the breadcrumbs clickable so the user can click on them to find out more, such as what products were bought. Also this should allow the user to undo any errors and check their work. (See techniques on preventing errors.) The user must then be able to jump back to the current page without having to redo additional steps.</p>
             <p>&nbsp;</p>
@@ -4023,6 +3999,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 
   <p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
-  <script async="" defer="" src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
+  <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
 </body>
 </html>
