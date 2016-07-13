@@ -2433,7 +2433,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <li class="tocline"><a href="#more-help" class="tocxref"><span class="secno">A.10 </span>More Help</a></li>
           <li class="tocline"><a href="#potential-features" class="tocxref"><span class="secno">A.11 </span>Potential Features</a></li>
           <li class="tocline"><a href="#language-type-support" class="tocxref"><span class="secno">A.12 </span>Language type support</a></li>
-          <li class="tocline"><a href="#reminders" class="tocxref"><span class="secno">A.13 </span>Reminders</a></li>
+          <li class="tocline"><a href="#reminders-and-messages" class="tocxref"><span class="secno">A.13 </span>Reminders and messages</a></li>
           <li class="tocline"><a href="#distractions" class="tocxref"><span class="secno">A.14 </span>Distractions</a></li>
           <li class="tocline"><a href="#additional-wai-aria-roles" class="tocxref"><span class="secno">A.15 </span>Additional WAI-ARIA roles</a></li>
         </ul>
@@ -3916,17 +3916,23 @@ I want a person to help me
       <p> </p>
     </section>
 
-    <section id="reminders" typeof="bibo:Chapter" resource="#reminders" property="bibo:hasPart">
-      <h3 id="h-reminders" resource="#h-reminders"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.13 </span>Reminders<span class="permalink" typeof="bookmark"><a href="#reminders" aria-label="Permalink for A.13 Reminders" title="Permalink for A.13 Reminders" property="url"><span property="title" content="A.13 Reminders">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong>We require an attribute that enables different users to experience different amount of reminders based on personal preferences. Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users.</p>
-      <p><strong>Proposed attribute: </strong><code>coga-reminder</code></p>
+    <section id="reminders-and-messages" typeof="bibo:Chapter" resource="#reminders-and-messages" property="bibo:hasPart">
+      <h3 id="h-reminders-and-messages" resource="#h-reminders-and-messages"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.13 </span>Reminders and messages<span class="permalink" typeof="bookmark"><a href="#reminders-and-messages" aria-label="Permalink for A.13 Reminders and messages" title="Permalink for A.13 Reminders and messages" property="url"><span property="title" content="A.13 Reminders and messages">§</span></a></span></span></h3>
+      <p><strong>Requirement: </strong>We require an attribute that enables different users to experience different amount of reminders and messages based on personal preferences. Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users. Currently people can turn off distractions such as skype, and facebook, across different devices, and then may forget to turn them back on.</p>
+      <p>These semantics allow for different solutions so that users are able to focus without missing important messages. Users need to manage all distractions by forming a cross application and cross device distraction matrix that manages all distractions in one setting. It is based on a matrix for distractions at the operating system , browser or cloud level. People and users can be clustered in terms of importance or groups. For example, the CEO and your child's care giver could both be considered critical contacts. So even if they do not feel the message is urgent they can sometimes disrupt the user anyway. Some family members and important colleagues can be in another group, friends and extended family in a third group, system messages from the compliance system can be a different group again. </p>
+      <p><strong>Proposed attribute: </strong>coga-messageimportance</p>
       <p><strong>Supported values: </strong></p>
-      <p><strong>basic: </strong>Reminders that over 90% of users would want,</p>
-      <p><strong>more: </strong>More would be used by over 20% of the population.</p>
-      <p><strong>extra: </strong>Extra would be used by over 5% of the population, and</p>
-      <p><strong>maximum</strong>: Maximum would be helpful for 5% of the population or less.</p>
+      <p><strong>critical: </strong>Urgent reminders that the user may need to know urgently. For example, a system may send a message that it is going to reboot in one Minuit to install updates</p>
+      <p><strong>medium: </strong>A message that needs the user's attention at their convenience. For example, a relatively important chat message.</p>
+      <p><strong>low</strong>: A message that does not need time sensitive attention. For example, a typical chat message</p>
       <p><strong>Example:</strong></p>
-      <p>&lt;div role="alert" coga-reminder="basic"&gt; It is your daughter's birthday&lt;/div&gt;</p>
+      <p>&lt;div role="alert" coga-messageimportance="medium"&gt; It is your daughter's birthday&lt;/div&gt;</p>
+      <p>&nbsp;</p>
+      <p><strong>Proposed attribute: </strong>coga-messagefrom</p>
+      <p><strong>Supported values: </strong>a string value that identifies the sender of the message. If multiple names are used they can be separated by a coma.</p>
+      <p><strong>Example:</strong></p>
+      <p>&lt;div role="alert" coga-messageimportance="low" coga-messagefrom="lisa seeman, lseeman"&gt;I posted a new version on github for you to review&lt;/div&gt;</p>
+      <p>&nbsp;</p>
     </section>
 
     <section id="distractions" typeof="bibo:Chapter" resource="#distractions" property="bibo:hasPart">

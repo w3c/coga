@@ -174,7 +174,13 @@ table {border:thin; border-style:groove;}
 				        <p>(Making breadcrumbs clickable can also help the user undo mistakes.)                     </p>
 				        <p>Any choices made by the user in a process are easy to review in one clearly labeled action and the user can get back to the place they were at, in one clearly labeled action.			          </p>
 			          <p>for a non complicated task the site is identified (broader scope)</p></td>
-				      <td>Should we enable a programmable way of identifying what are normal hidden variables of steps in the process, key selections and URL to repair</td>
+				      <td><p>Should we enable a programmable way of identifying what are normal hidden variables of </p>
+			            <ul>
+			              <li>label for steps in the process</li>
+			              <li>current step</li>
+			              <li> key selections and </li>
+			              <li>URL to repair. </li>
+	                  </ul></td>
 				      <td>Allow the user to identify what orientations tools they prefer for the presentation of the steps in the process such as breadcrumbs. For example identity the adaptable widget to interpret the crumbs</td>
 				      <td>adaptable widgets for context</td>
 			        </tr>
@@ -213,7 +219,9 @@ table {border:thin; border-style:groove;}
                       <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes">§ expand</a>)</p></td>
 				      <td><p>as above and</p>
 			          <p>if you have a calendar/mail program you should provide a feature that could notify the user of an impending meeting or to dos (broader scope) </p></td>
-				      <td><p><strong>Proposed attribute: </strong>coga-reminder</p>
+				      <td><p><strong>Proposed attributes:</strong></p>
+				        <p>coga-messageimportance</p>
+                        <p>coga-messagefrom</p>
                         <p>Enable the user to turn off less helpful reminders</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#reminders">§ expand</a>)</p></td>
 				      <td><p>User settings for how reminders are handled including preferred modality of different levels. Examples are: email, sms, call, popup</p>
@@ -237,7 +245,11 @@ table {border:thin; border-style:groove;}
 			          <p>&nbsp;</p></td>
 				      <td><span property="xhv:role" resource="xhv:heading">Allow the user to determine levels of interruptions, as easily as possible.</span>
 			            <p resource="#alow-the-user-to-determine-levels-of-interruptions-as-easily-as-possible.x">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#alow-the-user-to-determine-levels-of-interruptions-as-easily-as-possible.xProvide_mechanisms_that_help_the_user_focus_and_restore_context_if_attention_is_lost">§ expand</a>)</p></td>
-				      <td>&nbsp;</td>
+				      <td><p>coga-messageimportance</p>
+				        <p>coga-messagefrom</p>
+				        <p>&nbsp;</p>
+				        <p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;low&quot; coga-messagefrom=&quot;lisa seeman, lseeman&quot;&gt;I posted a new version on github for you to review&lt;/div&gt;</p>
+                      <p></p></td>
 				      <td>user settings for distractions need to be interoperable</td>
 				      <td><p>Operating system tool</p>
 			          <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/issue-papers/distractions.html#">§ expand</a>) </p>
