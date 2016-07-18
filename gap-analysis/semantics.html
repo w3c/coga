@@ -375,16 +375,27 @@ I want a person to help me
 			<p>These semantics allow for different solutions so that users are  able to focus without missing important messages. Users need to manage all distractions by forming a   cross application and cross device distraction matrix that manages all   distractions in one setting. It is based on a matrix for distractions at the operating system ,   browser or cloud level. People and users can be clustered in terms of importance or groups. For   example, the CEO and your child's care giver could both be considered   critical contacts. So even if they do not feel the message is urgent   they can sometimes disrupt the user anyway. Some family members and   important colleagues can be in another group, friends and extended   family in a third group, system messages from the compliance system can   be a different group again. </p>
 			<p><strong>Proposed attribute: </strong>coga-messageimportance</p>
 <p><strong>Supported values: </strong></p>
-			<p><strong>critical: </strong>Urgent reminders that the user may need to know urgently. For example, a system may send a message that it is going to reboot in one Minuit to install updates</p>
-			<p><strong>medium: </strong>A message that  needs the user's attention at their convenience. For example, a relatively important  chat message.</p>
+			<p><strong>critical: </strong>To be critical a message needs to be both urgent and content that the user is very likely to consider important.  For example, a system may send a message that it is going to reboot in one miunet to install updates. </p>
+			<p><strong>medium: </strong>Important messages that  needs the user's attention at their convenience. For example, a relatively important  chat message.</p>
 			<p><strong>low</strong>: A message that does not need time sensitive attention. For example, a typical chat message</p>
 			<p><strong>Example:</strong></p>
-			<p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;medium&quot;&gt; It is your daughter's birthday&lt;/div&gt;</p>
+			<p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;medium&quot;&gt; It is your daughter's birthday tomorow&lt;/div&gt;</p>
 			<p>&nbsp;</p>
 			<p><strong>Proposed attribute: </strong>coga-messagefrom</p>
             <p><strong>Supported values: </strong>a string value that identifies the sender of the message. If multiple names are used they can be separated by a coma.</p>
             <p><strong>Example:</strong></p>
             <p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;low&quot; coga-messagefrom=&quot;lisa seeman, lseeman&quot;&gt;I posted a new version on github for you to review&lt;/div&gt;</p>
+            <p>&nbsp;</p>
+            <p><strong>Proposed attribute: </strong>coga-messagecontext</p>
+            <p><strong>Supported values: </strong><strong> </strong>a string value that identifies the locaction that makes this message relevent. Typical values are &quot;home&quot; nd &quot;work&quot;. If multiple locations are relivent they can be separated by a coma.</p>
+            <p><strong>Example:</strong></p>
+            <p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;low&quot; coga-messagefrom=&quot;lisa seeman, lseeman&quot; coga-messagecontext=&quot;work&quot;&gt;I posted a new version on github for you to review&lt;/div&gt;</p>
+            <p>&nbsp;</p>
+            <p><strong>Proposed attribute: </strong>coga-messagetime</p>
+            <p><strong>Supported values: </strong><strong> </strong>24 hour date time format. DD.MM.YEAR.HOUR.MM - DD.MM.YEAR.HOUR.MM where the second date is an optional exclusive expiry date.</p>
+            <p><strong>Example:</strong></p>
+            <p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;medium&quot; coga-messagefrom=&quot;my calender&quot; coga-messagecontext=&quot;work&quot; coga-messagetime=&quot;10.02.2017.00.00-16.02.2017.00.00&quot;&gt;Renew your driving license this week&lt;/div&gt;</p>
+            <p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;critical&quot; coga-messagefrom=&quot;my calender&quot; coga-messagecontext=&quot;work&quot; coga-messagetime=&quot;16.02.2017.00.00&quot;&gt;Renew your driving license ASAP&lt;/div&gt;</p>
 			<p>&nbsp;</p>
 		</section>
 		<section>
