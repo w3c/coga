@@ -2233,7 +2233,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a class="logo" href="http://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Cognitive Accessibility Roadmap and Gap Analysis</h1>
-    <h2 id="w3c-editor-s-draft-18-july-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-07-18">18 July 2016</time></h2>
+    <h2 id="w3c-editor-s-draft-19-july-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-07-19">19 July 2016</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd>
@@ -3844,12 +3844,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <p><strong>User experience: </strong>This can be rendered as text at the top of the page and read immediately. Most users will not want this text rendered and spoken. Other users however will need it to know what has just happened. </p>
       <strong>Proposed attribute: </strong><code>coga-explain</code>
       <p>
-        This attribute explains the element's role.
-      </p>
+        This attribute provides any information that helps the user anticipate the functionality, such as letting the user know what behavior will trigger an event. This is most important if the mechanism is not standard. </p>
+      <p>&nbsp;</p>
       <p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
       <h3 id="examples">Examples:<span class="permalink" typeof="bookmark"><a href="#explain-and-feedback" aria-label="Permalink for Examples:" title="Permalink for Examples:" property="url"><span property="title" content="Examples:">§</span></a></span></h3>
-      <p> coga-feedback= "your email was sent" </p>
-      <p>coga-explain= "this item costs more" </p>
+      <p> coga-explain= "press enter to send the email" </p>
+      <p>coga-feedback= "your email on birthdays was sent" </p>
+      <p>These values will change when the email is sent.</p>
+      <p>&nbsp;</p>
     </section>
 
     <section id="more-help" typeof="bibo:Chapter" resource="#more-help" property="bibo:hasPart">
