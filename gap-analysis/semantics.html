@@ -301,14 +301,15 @@ We need personalization  because:  </p>
                         <strong>Proposed attribute: </strong><code>coga-explain</code>
 <p> 
 This attribute provides  any information that helps the user anticipate the  functionality, such as letting the user know what behavior will trigger an  event. This is most important if the mechanism is not standard. </p>
-<p>&nbsp;</p>
-		<p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, Other users however will need it to understand the button, link or element.</p>
+<p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, but other users however will need it to understand the behavior of the  element.</p>
 		<h3>Examples:</h3>
 		<p> coga-explain= "press enter to send the email" </p>
 		<p>coga-feedback= "your email on birthdays was sent" </p>
 		<p>These values will change when the email is sent.</p>
 		<p>&nbsp;</p>
 	</section>
+    
+    
 <section>
 <h3>More Help</h3>
 <p><strong>Requirement: </strong>Some users may need additional information or specifically additional help inforamtion. We request additonal attributes so that an author can indicate the existence of this additional information.</p>
@@ -371,6 +372,25 @@ I want a person to help me
 			<p>Where coga-easylang should use as simple well-known words as possible, and active voicing, literal text, small simple sentences. Acronyms and abbreviations should be avoided, unless they are the common way to refer to an item.</p>
 			<p> </p>
 		</section>
+  <section>
+        <h3 id="logs">Logs</h3>
+        </section>
+        <div> This proposal is to track the tasks that a user has done, so that they can be reminded of them, and return to or fix  a task. The  suggested syntax should allow the author to transform some of the information into breadcrumbs via CSS, and  the user system can read and present more or less information to the user as per their preferences.
+          <p>Preferably this should be in the header so that the user agent can build a cross application log of user tasks.</p>
+          <p>Notes: </p>
+          <p>This is just a proposed syntax. Other syntax may be better.</p>
+          <p>For protection of privacy ,it must be easy for the user to delete the log, and prevent the log from being stored.        </p>
+          <p>&nbsp;</p>
+        </div>
+        <pre>&lt;log name=&quot;booking trip&quot;&gt; &lt;step&gt; &lt;name&gt;buy ticket&lt;/name&gt;&lt;actiontaken&gt;bought ticket to NY return&lt;/actiontaken&gt;&lt;view changepossible="yes"&gt;url &lt;/view&gt;&lt;step&gt;</pre>
+        <pre>&lt;step&gt; &lt;name&gt;hotel&lt;/name&gt;&lt;actiontaken&gt;booked Sheraton single room&lt;/actiontaken&gt;&lt;view changepossible="yes"&gt;url &lt;/view&gt;&lt;/step&gt;</pre>
+        <pre>
+&lt;step&gt; &lt;name&gt;car rental&lt;/name&gt;&lt;view current changepossible="yes"/&gt; &lt;/step&gt;       </pre>
+        <pre>&lt;/log&gt;</pre>
+        <pre>An alternative syntax could be</pre>
+        <pre>&lt;div role="log" aria-label=&quot;booking trip&quot; aria-hidden="true"/&gt;
+</pre>
+        <p>Open questions: Should the application name be in the log?</p>
 		<section>
 			<h3>Reminders and messages</h3>
 			<p><strong>Requirement: </strong>We require an attribute that enables different users to experience different amount of reminders and messages based on personal preferences. Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users. Currently people can turn off  distractions such   as skype,  and facebook, across different devices, and then may forget   to turn them back on.</p>
