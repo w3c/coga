@@ -382,11 +382,13 @@ I want a person to help me
           <p>For protection of privacy ,it must be easy for the user to delete the log, and prevent the log from being stored.        </p>
           <p>&nbsp;</p>
         </div>
-        <pre>&lt;log name=&quot;booking trip&quot;&gt; &lt;step&gt; &lt;name&gt;buy ticket&lt;/name&gt;&lt;actiontaken&gt;bought ticket to NY return&lt;/actiontaken&gt;&lt;view changepossible="yes"&gt;url &lt;/view&gt;&lt;step&gt;</pre>
-        <pre>&lt;step&gt; &lt;name&gt;hotel&lt;/name&gt;&lt;actiontaken&gt;booked Sheraton single room&lt;/actiontaken&gt;&lt;view changepossible="yes"&gt;url &lt;/view&gt;&lt;/step&gt;</pre>
+        <pre>&lt;log name=&quot;booking trip&quot;&gt; &lt;step status =&quot;done&quot;&gt; &lt;name&gt;buy ticket&lt;/name&gt;&lt;actiontaken&gt;bought ticket to NY return&lt;/actiontaken&gt;&lt;view changepossible="yes"&gt;url &lt;/view&gt;&lt;step&gt;</pre>
+        <pre>&lt;step  status =&quot;done&quot;&gt; &lt;name&gt;hotel&lt;/name&gt;&lt;actiontaken&gt;booked Sheraton single room&lt;/actiontaken&gt;&lt;view changepossible="yes"&gt;url &lt;/view&gt;&lt;/step&gt;</pre>
         <pre>
-&lt;step&gt; &lt;name&gt;car rental&lt;/name&gt;&lt;view current changepossible="yes"/&gt; &lt;/step&gt;       </pre>
-        <pre>&lt;/log&gt;</pre>
+&lt;step  status =&quot;current&quot;&gt; &lt;name&gt;car rental&lt;/name&gt;&lt;view current changepossible="yes"/&gt; &lt;/step&gt;       </pre>
+        <pre>&lt;/log&gt;
+
+Note that status can have values of :  done, pending , current. Where pending is a step that has not yet been completed but is not the current step.</pre>
         <pre>An alternative syntax could be</pre>
         <pre>&lt;div role="log" aria-label=&quot;booking trip&quot; aria-hidden="true"/&gt;
 </pre>
@@ -401,7 +403,7 @@ I want a person to help me
 			<p><strong>medium: </strong>Important messages that  needs the user's attention at their convenience. For example, a relatively important  chat message.</p>
 			<p><strong>low</strong>: A message that does not need time sensitive attention. For example, a typical chat message</p>
 			<p><strong>Example:</strong></p>
-			<p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;medium&quot;&gt; It is your daughter's birthday tomorow&lt;/div&gt;</p>
+			<p>&lt;div role=&quot;alert&quot; coga-messageimportance=&quot;medium&quot;&gt; It is your daughter's birthday tomorrow&lt;/div&gt;</p>
 			<p>&nbsp;</p>
 			<p><strong>Proposed attribute: </strong>coga-messagefrom</p>
             <p><strong>Supported values: </strong>a string value that identifies the sender of the message. If multiple names are used they can be separated by a coma.</p>
