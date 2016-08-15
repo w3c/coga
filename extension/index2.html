@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Cognitive and Learning Disabilities and WCAG</title>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<script src="../common/biblio.js" class="remove"></script>
+		<style > 
+			.technique {border:dotted;}
+			
+			</style>
+		<!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
+		<script class="remove">
+	var respecConfig = {
+		// embed RDFa data in the output
+		trace:  true,
+		doRDFa: '1.1',
+		includePermalinks: true,
+		permalinkEdge:     true,
+		permalinkHide:     false,
+		tocIntroductory: true,
+		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+		specStatus:           "ED",
+		noRecTrack: true,
+		//crEnd:                "2012-04-30",
+		//perEnd:               "2013-07-23",
+		//publishDate:          "2013-08-22",
+		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+		
+		// the specifications short name, as in http://www.w3.org/TR/short-name/
+		shortName:            "coga-extension",
+		
+
+		// if you wish the publication date to be other than today, set this
+		// publishDate:  "2009-08-06",
+		copyrightStart:  "2016",
+
+		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+		// and its maturity status
+		//previousPublishDate:  "",
+		//previousMaturity:  "",
+		//prevRecURI: "",
+		//previousDiffURI: "",
+
+		// if there a publicly available Editors Draft, this is the link
+		edDraftURI: "https://w3c.github.io/coga/extension/",
+
+		// if this is a LCWD, uncomment and set the end of its review period
+		// lcEnd: "2012-02-21",
+
+		// editors, add as many as you like
+		// only "name" is required
+		editors: [
+			{
+				name: "Lisa Seeman",
+				url: 'http://athena-ict.com',
+				mailto: "lisa.seeman@zoho.com"
+			},
+			{
+				name: "Michael Cooper",
+				url: 'http://www.w3.org',
+				mailto: "cooper@w3.org",
+				company: "W3C",
+				companyURI: "http://www.w3.org"
+			}
+		],
+
+		// authors, add as many as you like. 
+		// This is optional, uncomment if you have authors as well as editors.
+		// only "name" is required. Same format as editors.
+
+		//authors:  [
+		//    { name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],
+
+		/*
+		alternateFormats: [
+			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.pdf', label: "PDF version" }
+		],
+		*/
+		
+		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+		
+		// name of the WG
+		wg:           ["Cognitive and Learning Disabilities Accessibility Task Force", "Accessible Platform Architectures Working Group", "Web Content Accessibility Guidelines Working Group"],
+		
+		// URI of the public WG page
+		wgURI:        ["http://www.w3.org/WAI/PF/cognitive-a11y-tf/", "http://www.w3.org/WAI/APA/", "http://www.w3.org/WAI/GL/"],
+		
+		// name (with the @w3c.org) of the public mailing to which comments are due
+		wgPublicList: "public-coga-comments",
+		
+		// URI of the patent status for this WG, for Rec-track documents
+		// !!!! IMPORTANT !!!!
+		// This is important for Rec-track documents, do not copy a patent URI from a random
+		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+		// Team Contact.
+		wgPatentURI:  ["", "http://www.w3.org/2004/01/pp-impl/83907/status", "http://www.w3.org/2004/01/pp-impl/32212/status"],
+		//maxTocLevel: 2,
+		
+		localBiblio: biblio,
+	};
+		</script>
+	</head>
+	<body>
+		<section id="abstract">
+			<p>This is a draft of additions for WCAG 2.0 to address the needs of users with cognitive and learning disabilities.</p>
+		</section>
+		<section id="sotd"></section>
+		<h1>Cognitive and Learning Disabilities and WCAG</h1>
+		<section>
+			<h2>Introduction</h2>
+			<p>The following is for a first draft for adding  needs for   people with cognitive and learning disabilities into the Web Content Accessibility Guidelines (WCAG) [[WCAG20]]. It is based on the user research [[coga-user-research]]<a href="https://w3c.github.io/wcag/coga/user-research.html"></a> and the issue papers available at [[coga-issue-papers]]<a href="https://rawgit.com/w3c/coga/master/issue-papers/index.html"></a>. </p>
+			<p>The supporting techniques  as well as information on who it helps and why, are described in more detail in the techniques document available from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.  </p>
+			<p>Detailed descriptions of users and the challenges, persona, and research sources are given in the user research document above This proposal for the WCAG  includes changes in the levels of WCAG 2.0 [[WCAG20]] success criteria, new success criteria and new supportive techniques. </p>
+			<p>We have identified the following themes: </p>
+			<ol>
+				<li><strong>Help as many users as possible understand the site and know how to use it</strong>. This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patterns. Personalization and good use of semantics can help make the symbols and design as familiar to the user as possible. </li>
+				<li><strong>Prevent the user from making mistakes and make it easy to correct mistakes when they do occur.</strong> A good design and use of scripts will make errors less likely, but when they do occur the user should know how to correct them, without having to render other data or start from the beginning. </li>
+				<li><strong>Help the user focus and restore context if attention is lost</strong>. Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.) </li>
+				<li><strong>Minimize the cognitive skills required to use the content</strong> and avoid barriers that stop people with cognitive disabilities from using content, such as hard to use security mechanisms. When possible, provide more accessible options. </li>
+			</ol>
+			<p>Note this is a first draft. We anticipate some additions such as techniques for multi-media. However most techniques can be applied to any media, such as dividing your content into sections and using a clear heading for each section. For multi-media it should be easy to go back to each section using techniques such as indexing and bookmarks. Also note that  references to the coga techniques  may change. </p>
+		</section>
+		<section>
+		  <h2>Terms</h2>
+			<dl class="termlist">
+				<dt><dfn data-lt="clearly indicated">clearly indicated success or failure</dfn></dt>
+				<dd>confirm that after a user action the user known that the action was successful or not. Applications should also let the user know what just happened and where they are in a process. </dd>
+
+				<dt><dfn data-lt="cognitive functions">cognitive function</dfn></dt>
+				<dd>definition</dd>
+
+				<dt><dfn>common input errors</dfn></dt>
+				<dd>as identified in a techniques</dd>
+
+				<dt><dfn>complex information</dfn></dt>
+				<dd>definition</dd>
+
+				<dt><dfn>concrete wording</dfn></dt>
+				<dd>information that a user might need or have searched to find out </dd>
+
+				<dt><dfn data-lt="easily available">easily available mode or setting</dfn></dt>
+				<dd>
+					<ul>
+						<li> can be set one time with as a wide a scope as possible (such as using the standards of the OS, ETSI or GPII when available) and </li>
+						<li> with the option to save or change the setting, were available interoprabliy but also for a scope of the set of web pages and </li>
+						<li> is reachable from each screen where it may be needed, and the path and control conforms to all of this document. </li>
+					</ul>
+				</dd>
+
+				<dt><dfn>easily-recognizable</dfn></dt>
+				<dd>such as 99% of the intended audience will recognize this as feedback for the action of the action, such as a tick or a green traffic lite to green with a word such as "correct" </dd>
+
+				<dt><dfn>enabling additional support</dfn></dt>
+				<dd>definition</dd>
+
+				<dt><dfn>essential information</dfn></dt>
+				<dd>information that is required by the application to complete the task requested by the used. Clear visual indicator is one that 99% of your <a>target audience</a> understand) </dd>
+
+				<dt><dfn>important information</dfn></dt>
+				<dd>
+					<ol>
+						<li>information the user may need to complete any action or task including an offline task. </li>
+						<li>information the user may need to know related to safety, risks, privacy, health or opportunities. </li>
+					</ol>
+					<p>(COGA Techniques 2.5) </p>
+				</dd>
+
+				<dt><dfn>jargon</dfn></dt>
+				<dd>a type of language that is used in a particular context and may not be well understood outside of it </dd>
+
+				<dt><dfn>keywords that aid comprehension</dfn></dt>
+				<dd>definition</dd>
+
+				<dt><dfn>known techniques</dfn></dt>
+				<dd>any wcag techniques or platform official documentation for any technologies used </dd>
+
+				<dt><dfn data-lt="minimum is known for a type of charge">minimum known for a type of charge</dfn></dt>
+				<dd>when this is a charge that is incurred 90% or more of the time with this traction. Charges that you almost always you have to pay such as airport tax. or any seat on an airplane not just a preferred seat). User request is a selection by the user that 99% of the target audience understand the implication. </dd>
+
+				<dt><dfn>most commonly used 3000 words</dfn></dt>
+				<dd>any credible word list may be used and audience may be taken into account in conducting the word list. So , for example, if the audience is young, blog will be in the 3000 words. You may however have a site for retirees the word list may be different. If it is not included in the techniques the author should publish what word list was used. </dd>
+
+				<dt><dfn>non-literal text</dfn></dt>
+				<dd>definition</dd>
+
+				<dt><dfn>non-trivial information</dfn></dt>
+				<dd>Information the user may find important or need to know , such as infromation that the user may have searched to find. <span class="ednote">- coment - may be to vage. information can be non trivial but noone NEEDS to know it </span></dd>
+
+				<dt><dfn>personalization</dfn></dt>
+				<dd>user-defined. <span class="ednote">maybe change the word to individualization</span></dd>
+
+				<dt><dfn>rapid feedback</dfn></dt>
+				<dd>less then 200 ms (from etsi) </dd>
+
+				<dt><dfn data-lt="standardized techniques">safe standardized techniques</dfn></dt>
+				<dd>standardized by wcag, other w3c groups, or by the platform, browser or operating system where user vulnerabilities are not exposed without informed consent <span class="ednote">this will be a discussion and is not yet finalized</span>
+				</dd>
+
+				<dt><dfn>same type of information</dfn></dt>
+				<dd>information with the same role, such as warnings, key points, errors, news items headings of the same importance, etc.</dd>
+
+				<dt><dfn>semantics</dfn></dt>
+				<dd>definition</dd>
+
+				<dt><dfn>sensitive information</dfn></dt>
+				<dd>information that can put people at risk or information the user wishes to protect <span class="ednote">To do - add examples including the user sets the time out</span></dd>
+
+				<dt><dfn>spoken feedback</dfn></dt>
+				<dd>Spoken feedback is often more effective then written feedback. However having both spoken feedback and longer lasting written and visual feedback helps the user know where they are and restores the context if attention is lost. Spoken feedback can annoy and distract some people so spoken feedback should be available as an option and in response to a user preference setting when available. </dd>
+
+				<dt><dfn>standard layout design</dfn></dt>
+				<dd>
+					<ol>
+						<li>recommended in a wcag technique (techniques can be submitted by any other standard and just approved by wcag) or </li>
+						<li>by the user platform </li>
+						<li>or in a W3C note </li>
+					</ol>
+				</dd>
+
+				<dt><dfn>standardized APIs</dfn></dt>
+				<dd>identified in the platform's documentation or in a WCAG technique or W3C publication</dd>
+
+				<dt><dfn>target audience</dfn></dt>
+				<dd>people use this content </dd>
+
+				<dt><dfn>web related modality</dfn></dt>
+				<dd>such as email, VOIP phone, chat - but excluding snail mail and not if support is not provided to the public. (COGA Techniques 2.10.2 ) </dd>
+
+			</dl>
+		</section>
+		<section>
+			<h2>New success criteria</h2>
+			<p class="ednote">We will be adding a simple language equivalent for this page when we have agreed on the content </p>
+			<section>
+				<p>We suggest adding the following as success criteria: </p><section>
+				<h3>Under WCAG 1.3 - Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</h3>
+				<section>
+					<h4>Use <a>semantics</a> and <a>safe standardized techniques</a> that enable the content to be adapted to the user scenario including <a>enabling additional support</a> and <a>personalization</a>.</h4>
+						<div class="technique">Techniques include:
+					<ul>
+						<li>Use semantics and standardized techniques to provide extra help (COGA Techniques 4.1)</li>
+						<li>Provide symbols on key content (COGA Techniques 4.2)</li>
+						<li>Include features that support the user preferences</li>
+						<li>Enable user agents to find the version of the content that best fits their needs</li>
+					</ul></div>
+					<p><a href="https://rawgit.com/w3c/coga/master/issue-papers/multi-modal.html">See also: Multi-Modal Content Delivery</a> (was:Semantics and standardized techniques that enable adaptivity are used when available) </p>
+				</section>
+				<section>
+					<h4>Use <a>semantics</a> and <a>safe standardized techniques</a> that enable the content to be adapted to the user scenario including <a>enabling additional support</a> and <a>personalization</a>.</h4>
+					<div  class="technique"> Techniques to include:
+					<ul>
+						<li>Use semantics and standardized techniques to provide extra help (COGA Techniques 4.1)</li>
+						<li>Provide symbols on key content (COGA Techniques 4.2)</li>
+						<li>Include features that support the user preferences</li>
+						<li>Enable user agents to find the version of the content that best fits their needs</li>
+					</ul></div>
+					<p><a href="https://rawgit.com/w3c/coga/master/issue-papers/multi-modal.html">See also: Multi-Modal Content Delivery</a> (was:Semantics and standardized techniques that enable adaptivity are used when available) </p>
+				</section>
+			</section>
+			
+			</section>
+			<section>
+				<h3>Under WCAG 2.2 Provide users enough time to read and use content.</h3>
+				<p>We suggest adding the following as success criteria: </p>
+				<section>
+					<h4>Timed event are not used except for the situations listed below.</h4>
+					<p>(See COGA Techniques 2.9.1 ) </p>
+					<ol>
+						<li>Sessions time out after 20 hours have elapsed </li>
+						<li>Where security may be at risk a session can time out after half an hour of disuse. Where financial or <a>sensitive information</a> is at risk the time out can be shorter </li>
+						<li>Timing is essential to the function of the content - such as some tests. </li>
+					</ol>
+					<p>Where there is an exception, the content must conform to WCAG 2.2.1 Timing Adjustable, so long as </p>
+					<ol>
+						<li>The function to turn off, adjust or extend the timing are controlled by simple action and labeled with simple text. </li>
+						<li>A user or administrator settable time minimum must be provided to complete any controlling action. Note that all user setting must be easy to set and use <a>standardized techniques</a> when available.</li>
+						<li>The user can be made aware of the time out limits, including the length of the warning - this condition may be deleted </li>
+						<li>The user can easily return to the same point in a task, without data loss. <ol>
+								<li>as the default </li>
+								<li>standardized system setting (example the user can set that the data is not stored) </li>
+								<li>option to set user preference that has a conformant interface and is directly available at each stage of the task. </li>
+							</ol>
+						</li>
+					</ol>
+						<p class="technique">Techniques include: Techniques with examples are needed such as a dialog on opening the app that seas do you want your old stuff </p>
+					<p>(Compare to WCAG 2.2.1 Timing Adjustable: For each time limit that is set by the content, at least one of the following is true: (Level A) however the options is not useful for COGA- Extend: The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, "press the space bar"), and the user is allowed to extend the time limit at least ten times; etc. </p>
+				</section>
+			</section>
+			<section>
+				<h3>Under WCAG 2.3</h3>
+				<p>Guideline 2.3 "Do not design content in a way that is known to cause seizures" should be changed to: Guideline 2.3 "Do not create mechanisms that are know to potentially harm the user." </p>
+				<p>Exclusion: Mechanisms that are know to potentially harm do not include selling products know to be harmful. </p>
+				<p>We suggest adding the following as success criteria: </p>
+				<section>
+					<h4>Do not expose user information in a way that can be exploited without informed consent</h4>
+					<p class="technique">Techniques to include: using functional requirements for personlzation that do not suggest that the majority of users are disabled. Failure technique to be added of identifying a user to a code that is used mainly for people with dyscalculia. </p>
+				</section>
+				<section>
+					<h4>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.</h4>
+					<p class="technique">Techniques to include: not adding automatically incrementing the number of items selected without warning the use . </p>
+					<p class="technique">Techniques to include: Where leaving  the site or task is likely to cause harm, ensure that the user is aware of the  change and risks. For example, in a health care site when looking for one drug,  and an advert takes the user to by a different drug</p>
+				</section>
+			</section>
+			<section>
+				<h3>Under WCAG 3.1</h3>
+				<section>
+	<p>We suggest adding the following a new guidline</p>
+				
+				<h3 id="Providea clearstructureandlayout"><strong>Provide a clear structure and layout</strong></h3>
+			  <p>(See COGA Techniques 2.1) </p>
+				<p>Exception: If a specific structure is an essential part of the main function of the site. </p>
+				<p>&nbsp;</p>
+                <p class="technique">see COGA Techniques 2.1</p>
+                <p class="technique">Techniques will include: using size, emphasis , colour, symbols, white space and positioning. For multi media  chunks may include: steps in a process,  slide changes, topic changes. </p>
+                <p>&nbsp;</p>
+				<p>This guideline will have the follwing Success cryteria</p>
+				<p>&nbsp;</p>
+			  <section>
+					<h4><a name="chunks"></a>Information is provided in manageable chunks,  that include: </strong></p>
+                    </h4>
+					<ol>
+                      <li>One idea per paragraph. (One sentence is enough for a paragraph.) </li>
+                      <li>Have one point per sentence. Long sentences can often be broken up into short sentences or lists. If a sentence can use more than two clauses, it typically can be broken up.</li>
+                      <li>Lists are used appropriately (COGA Techniques 2.1.1) </li>
+                    </ol>
+                <p>For audio or visual media </p>
+                    <p>Media that is over five minuets is divided into programmatically determinable  and logical sections. Each section must be navigable to and provided with a unique label that describes the section. (removed For multi media, the user can directly navigate to each  section of the content. )</p>
+                    <p>Exception: If a specific structure is an essential part of the main function of the site. </p>
+                    <p>&nbsp;</p>
+                    <p class="technique">Techniques will include:  For multi media  chunks may include: steps in a process,  slide changes, topic changes. </p>
+                    <p></p>
+                    <p>&nbsp;</p></section><section>
+                    <h4 id="3.2.4"><strong>Add to WCAG 3.2.4 </strong></h4>
+                    <ul>
+                      <li>Consistent styles are used for the <a>same type of information</a> and control (COGA Techniques 2.1.1). (see COGA Techniques 2.4) </li>
+                      <li>(removed - 
+                        Provide a consistent design within a set of pages that includes:
+                        <ul>
+                          <li>A consistent layout of common elements such as navigational elements, search and controls</li>
+                          <li>Consistent use of icons and controls such that the same icons and buttons serve the same function. Interactive controls with the same role are consistently presented across a set of web pages </li>
+                        </ul></li></ul>
+                        ) 
+                        <p>Exception: If a specific structure is an essential part of the main function of the site. </p>
+                        <p>&nbsp;</p>
+                        <p class="technique">see COGA Techniques 2.1</p>
+                        <p class="technique">Techniques will include: using size, emphasis , colour, symbols, white space and positioning. </p>
+                        <p></p>
+                    </section><section>
+                    <h4 id="obvious" ><strong>The main purpose of each page and section of content is <em>obvious </em>. </strong> Extraneous information that is not relevant to the  main purpose of each page is separated in the modality of the user and pragmatically determinable.
+                </h4>
+                  
+                    <p>(Techniques Headings  are provided that describe the topic or purpose of each section and are <em>easy to find</em>. </p>
+                    <p>also see COGA2.1.2) and wcag </p>
+                    <p>&nbsp;</p>
+               </section><section>
+                    <h4 id="layout"><strong>Provide a clear and understandable layout  that includes:</strong></h4>
+                    <ul>
+                      <li>Structure and relationships are  obvious such that over 95% of users can immediately identity the structure and relationships (COGA Techniques 2.1.1) </li>
+                      <li>Paragraphs are clearly separated  (white space in text or by a pause in speech content)</li>
+                      <li> Check use of appropriate punctuation between numbers when providing times as these may be read inappropriately by text to speech engines. (Example time)</li>
+                      <li>Provide a clear font or voice. A clear font or voice is one that is:
+                        <ul>
+                          <li>backed up by user research where coga users are part of the user testing or, </li>
+                          <li>identified in a known WCAG technique or, </li>
+                          <li>identified by the user preferences (preferred). </li></ul>
+                            <p>Exception: If a specific structure is an essential part of the main function of the site. </p>
+                            <p>&nbsp;</p>
+                            <p class="technique">see COGA Techniques 2.1</p>
+                            <p class="technique">Techniques will include: using size, emphasis , colour, symbols, white space and positioning. For multi media  chunks may include: steps in a process,  slide changes, topic changes. </p>
+                            <p></p>
+                      </li>
+                </ul>
+                      </li>
+                </ul>
+				  <p>&nbsp;</p>
+			  </section>
+				<section>
+					<h4 id="controls">Interactive controls are visually clear or visually clear controls are <a>easily available</a> that conform to the following:</h4>
+					<p>(See COGA Techniques 2.3) </p>
+					<ol>
+						<li>Interactive controls are persivable in the modality of the user</li>
+                        <li>Interactive controls including links are visually discriminable and their boundaries are  clear in the modality of the user. Boundaries on interactive controls and boundaries of icons should have a sufficient color contrast of 1.5 (visual only). </li>
+                        <li>The qualities or properties of the control define its possible uses. It is clear how it can or should be used and what action it will trigger. Actions and actionable items that can be interacted with should have a clear visual style that indicates how to interact with them e.g. buttons that look like buttons. Visually clear controls can be made easily available though easy to use personlization (when available)</li>
+					</ol>
+						<div class="technique">
+						  <p>Techniques include: additional controls are under a sub menu item such as a button that reads "show toolbar" Technique will include: </p>
+						  <ol>
+						    <li> Using techniques like 'flat design' with great care as they have reduced affordances. </li>
+						    <li> the web author needs to define buttons and the OS has a setting called show clear buttons, </li>
+						    <li> failure when a scroll bard is embedded in another scrollabel region and it is unclear what scroll to use. failure when scrolls are low contrast. </li>
+					      </ol>
+					    </div>
+		       </section><section>
+	<h4 id="familiar"><strong>A familiar   design, layout and common icons are easily available</strong>. </h4>
+				<p>A familiar design can be  the user platform standard design or  the design of a previous versions of this product that the user is familiar with and has successfully used. </p>
+				<p>
+				  <section></section>
+				</p>
+				<section>
+				  <p  class="technique"> Techniques to include: Making common components and icons programmatic determinable enables their positions to be standardized via <a>personalization</a>. </p>
+                  <div  class="technique"> Techniques to include: Example of coga-wcag technique In 2015 in English sites standard layout for web sites includes:
+                    <ul>
+                      <li>the search box is in the right hand corner</li>
+                      <li>a link to home page in the left hand corner</li>
+                      <li>site map in the footer, etc.</li>
+                      <li>main menus are at the top of the page under the log and search or on the left hand side.</li>
+                    </ul>
+                  </div>
+                  <div  class="technique"> Techniques to include: Common icons include:
+                    <ul>
+                      <li>icons used in a standard or common operating system.</li>
+                      <li>a question mark for help</li>
+                      <li>an exclamation mark for warnings</li>
+                    </ul>
+                  </div>
+        </section>
+        <section>
+<h4 id="critical"><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> </h4>
+                
+                <ol>
+                  <li><em>Critical features</em> and <em>important information </em>can be used without use of a scroll bar. (Example -above the scroll or a clear link to it is above the scroll )</li>
+                  <li><em>Critical features</em> and important information to the user are visually differentiated and accentuated or  appear before the other main content </li>
+                  <li>A clear navigational path is provided to all content such that:
+                    <ol>
+                      <li>Clear headings, menu names and categories are available that signpost information. It should be clear how content correlates to each signpost in its navigation path. </li>
+                      <li>Each page can be reached though any high level page that it logically could belong. </li>
+                    </ol>
+                  </li>
+                  <li>Help and support page or function should be reachable with one user interaction. When human help is available the correct contact information or mechanism should be reachable within two user interactions. (Removed: Where human help is provided, it is available via one clearly labeled action for each <a>web related modality</a> for which the help is available.)</li>
+                  <li>Provide a search box. Exception is provided were adding a search box is a significant expense for the site </li>
+                </ol>
+                <p>define: <strong><em>content most likely to be important to the user</em></strong></p>     
+                </section><section>
+                <h4 id="allinformation"><strong>All information is easy to find (AAA )</strong></h4>
+    <ol>
+                  <li>Where there are more then five links directly under any one navigation heading or subheading it is examined to see if adding additional category would be helpful. (AAA) </li>
+                  <li>There are no more then no more than three clicks to get to information from a landing page or portal. (AAA) </li>
+                </ol>
+                
+			  </section>
+				<section>
+				  <h4 id="Instructions">Instructions, labels, navigation and <a>important information</a> are provided with a clear writing style that includes:</h4>
+					<p>(simple text version: Use a clear writing style) </p>
+					<p>For all wording (other then exceptions): </p>
+                    <ol>
+                      <li> An easy to understand tense and voice. Please refer to the exemptions for changes for a defined scope such as a different location or language. </li>
+                      <li> Use short clear sentences with a maximum of one conjunction and two commas. </li>
+                      <li>Choose words that are in general use for the context. Use words or phrases that are used more frequently unless this will result in a loss of meaning. There is an exception if this is found in user tests to make the content harder to understand. </li>
+                      <li> Avoid hyphenated words and acronyms unless they are the common form to refer to the concept. -<a href="http://www.fltr.ucl.ac.be/fltr/germ/etan/bibs/vocab/cup.html">http://www.fltr.ucl.ac.be/fltr/germ/etan/bibs/vocab/cup.html</a></li>
+                      <li>Double negatives are not used </li>
+                      <li> Reduce ambiguities by:
+                        <ol>
+                          <li> metaphors and <a>non-literal text</a> are not used or can be automatically replaced via an easy to set user setting and standardized technique. All meaning must be retained when <a>non-literal text</a> are replaced. </li>
+                          <li> the meaning of each word should be clear from the word's context, or programmatically determinable. </li>
+                        </ol>
+                      </li>
+                    </ol>
+On controls, links and buttons use words that identify their function. Function can be
+<ol>
+  <li>The default term used for the function on the user platform or </li>
+  <li>The function of the button or link (such as "search" in place of "go") or </li>
+  <li>The destination of a link (such as "home" or "contact us") </li>
+</ol>
+In menus :
+<ol>
+  <li>The text of each main menu item is easy to understand. </li>
+  <li>Each sub menu item is clearly associated with the main menu item under which it falls (This can be due being an industry or platform default) </li>
+</ol>
+<p>In instructions</p>
+<ol>
+  <li>Identifying each step in instructions, </li>
+  <li>Using specific and <a>concrete wording</a> in instructions, </li>
+</ol>
+<p></p>
+					<p>Exemptions:</p>
+					<ol>
+						<li>There are times when passive voicing or other tense can be clearer. Other voicing may be used when it has been shown via user test to be easier to understand, more friendly or appropriate. </li>
+						<li>The present tense is not required when describing or discussing past or future events. </li>
+						<li>If the writing style is an essential part of the main function of the site, such as a literary work. </li>
+						<li>Where less common words are found in user testing to be easier to understand for the audience <span class="ednote">(user testing should included people with cognitive disabilities that could e in the target audience - need further definition ) </span></li>
+						<li>The writing style items may be replaced for a location or type of content were user testing has shown a more effective writing style to aid comprehension for people with cognitive disabilities. Such as for content written in a specific language. </li>
+						<li>The content will be penalized for not conforming to a given writing style (such as a dissertation or PHD proposal) </li>
+					</ol>
+					<div class="technique">Techniques include: 
+					<ul>
+						<li>show words that are common but not the correct context or unclear meaning as a failure</li>
+						<li>Key points are bold and in a document </li>
+						<li>Important information is in a call out box with the right semantics</li>
+						<li>will be a using an active voicing in English and the present tense.</li>
+						<li>when one sentence comes from a reliable scientific source and the next sentence of "fact" come from a marking department without reliable scientific study, it should be signposted that latter is an opinion. A second technique sponsored content is clearly marked as coming from other sources.</li>
+					</ul></div>
+				</section>
+				<section>
+				  <h4 id="barrier">When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</h4>
+					<p>Additional abilities include <a>cognitive functions</a> that are required, but are not necessary to achieve the main task for which the content was designed. Such as: </p>
+					<ul>
+						<li> Capture or security mechanisms that require copying, spelling or memory skills, </li>
+						<li> Interactive communication systems, voice menu systems such as Voice XML automated customer service portals, which require the user to have a good working (transitory) memory. The user needs hold pieces of transitory information in the mind such as the number that is being presented as an option, whilst processing the terms that follow. </li>
+						<li> Hiding of critical features under categories that are hard to understand. Such as a Web Of Things interfaces, that requires the user to understand the word "mode" to get to easy to understand options. </li>
+					</ul>
+					<p>Exception: There is an exception when there is a not a known alternative that provides the same main function and does not rely on additional abilities. A known alternative can be a WCAG technique, W3C note, or in the documentation of the platform. </p>
+					<p><b>Technique examples </b>
+					</p>
+					<p><b>Examples in security:</b> Web security and privacy technologies, for example, intentionally require users to perceive more and to do more to complete tasks. Three examples of these technologies are passwords, CAPTCHA, and 2-Factor Authentication. Such techniques require that the user has a good working memory or short term memory required to copy a code or remember complex passwords. </p>
+					<p>Alternatives exists that can allow more people to use content securely. These alternatives include using Web tokens, signing in via email account or other account, or biometrics are all alternatives to the above. For more details on this issue and on alternatives are available <a href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html</a>
+					</p>
+					<p><b> In voice systems this may include,</b></p>
+					<ul>
+						<li>Requiring the user to understand categories,</li>
+						<li>Requiring the user to remember numbers</li>
+
+					</ul>
+					<p>Can all be used as a barrier to getting human help. It is avoidable by having 0 as a reserved digit to access a human operator and by using best practices. For more details on this issue and on alternatives are available <a href="https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html">https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html</a>
+					</p>
+					<p><b> In the Web of things this may include:</b>
+					</p>
+					<ul>
+						<li>remembering what symbols mean</li>
+						<li>remembering sequences to run certain tasks</li>
+					</ul>
+	<p>This is avoidable by having simple text with symbols and clear discoverability of how o complete each task and recoverability from errors. Most user interfaces are designed to help users complete tasks. However, sometimes they can introduce barriers that are not necessary for using the content. When an author makes design choices that mean people who could have used their content now can not, that content is not accessible. </p></section><section>
+					
+	  <h4 id="focus">Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.</h4>
+                    <p>(Remove uncertainty and help the user maintain context) </p>
+                    <p>This includes: </p>
+                    <ol>
+                      <li>Use <a>known techniques</a> that remind the user of the context, including:
+                        <ol>
+                          <li>Signposts to remind the user of the current task and subtask. Signposts should not distract the user when they choice to change tasks without the users concent. </li>
+                          <li>In the scope of a task, provide a signposts of broader context. For a non-complicated task, such as reading a home page, clearly identifying the site and it's aim is sufficient. </li>
+                          <li>For multi media,  provide a unique 
+label for each section such that the labels can  provide an outline of the content.                          </li>
+                        </ol>
+                      </li>
+                      <li>Where a site may generate interruptions, a clearly labeled mechanism is provide to enable the user to control them,(COGA Techniques 2.11.1) such that:
+                        <ol>
+                          <li>Interruptions can be easily controlled and turned off </li>
+                          <li>Secondary content (such as special offers or complementary material) can be easily identified, controlled and turned off. </li>
+                          <li>No sudden changes occur on the site. </li>
+                          <li>Media events can be easily controlled and turned off. </li>
+                          <li>Chat can be easily turned off and on again. </li>
+                          <li>Non-critical messages can easily be turned off and on again </li>
+                          <li>Where a standard techniques exists for the above it should be used. </li>
+                        </ol>
+                      </li>
+                    </ol>
+                    <p>See (No Interruptions COGA Techniques 2.11.2, - Help The User Focus COGA Techniques 2.11.3, and Help the user find information COGA Techniques 2.11.4) </p>
+                    <div class="technique">
+                      <p>Techniques to include: </p>
+                      <ul>
+                        <li>A standard techniques for closing overlays such as a high contast large font close button. (above the scroll) Overlays are only used when content firsts loads and are clearly labled to give context . (Overlays should be avioded , this is a last resort)</li>
+                        <li>Headings and titles are provided that provide context </li>
+                        <li>Or multi media  labels for section may include:  steps in a process,  slide headings, topic  changes.                        </li>
+                        <li>In multi step process both the process and the step are identified (technique = For Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.) </li>
+                        <li>Any choices made by the user in a process are easy to review in one clearly labeled action and the user can get back to the place they were at, in one clearly labeled action.</li>
+                        <li>if you have a calendar/mail program you should provide a feature that could notify the user of an impending meeting or to dos (broader scope)</li>
+                        <li>for a non complicated task the site is identified (broader scope)</li>
+                      </ul>
+                    </div>
+				</section>
+                
+                
+	</section>
+			
+			<section>
+				<h3>Under WCAG 3.3 Help users avoid and correct mistakes.</h3>
+				<p>We suggest adding the following success criteria: </p>
+				<section>
+					<h4>The success or failure of every action should be <a>clearly indicated</a> to the user and visual <a>rapid feedback</a> should be available. <a>Spoken feedback</a> should be a user selectable option.</h4>
+					<p>(COGA Techniques 2.6 ) </p>
+					<p class="technique">Technique: an email is sent, It does not just disappear but the user can be told "your email was sent".</p>
+				</section>
+				<section>
+					<p >WAS Support is provided that help users understand the content, that includes:</p>
+					<p>(See COGA Techniques 2.7 ) </p>
+					    <section>
+						  <h4><strong>Known <a>standardized APIs</a> for tools that help the user understand and use the content are supported. (s)</strong>. This includes:</h4>
+                          <ul>
+                            <li> <a>Standardized techniques</a> to support interoperable symbol sets are used when available. </li>
+                            <li>Allow reading of long form of acronyms</li>
+                            <li>Support for synchronized speech highlighting, password management tools, and conent simplification </li>
+                  </ul>     </section><section>
+                  <h4>&nbsp;</h4>
+                          <h4><strong>Provided content and information that help users understand the content</strong></h4>
+                          <p>(See COGA Techniques 2.7 ) </p>
+                          <p>For icons and jargon</p>
+                          <ul>
+                            <li> All icons and <a>jargon</a> have a short explanation available Where a standard mechanism exists for the platform or technologies it should be used.(COGA Techniques 2.7. )(removed to techneque: Short tooltips on all icons and <a>jargon</a> that clarify the meaning are provided..  )</li>
+                          </ul>
+                          <p>For content relating to numbers and complex information</p>
+                          <ul>
+                            <li> Charts or graphics are provided where they aid the comprehension of <a>complex information</a> (COGA Techniques 2.7.3 ) </li>
+                            <li> Tables are provided where they aid the comprehension of information </li>
+                            <li>Where an understanding of math is not a primary requirement for using this content. Reinforce numbers with non-numerical values, e.g., Very Cold, Cold, Cool, Mild, Warm, Hot, Very Hot. </li>
+                          </ul>
+                          <p>For content with more then 200 words </p>
+                          <ol>
+                            <li>Provide a summary. For pieces of content with less then 200 words the heading may act as a summary. </li>
+                            <li>The content owner identifies <a>keywords that aid comprehension</a> for the user and any keywords are programmatic determinable and visually emphasized. </li>
+                          </ol>
+                          <p>For  key content and call out boxes</p>
+                          <ul>
+                            <li> Symbols are provided to help the user identify key content including: types of contact information, main functions, warnings, key points. Where a standard mechanism exists for the platform or technologies it should be used. </li>
+                          </ul>
+                          <p>For events</p>
+                          <ul>
+                            <li>Enable the user to set a reminder for date and time sensitive events. Reminders should be set only at the users request and the user should be able to personalize the reminder method. Where a standard mechanism exists for the platform or technologies it should be used</li>
+                          </ul>
+                          <p>Where a standard mechanism exists for the platform or technologies exist for context sensitive help it should be used. (see <strong>WCAG 3.3.5</strong>)</p>
+						</li>
+					</ul>
+					<p class="technique">Techniques include: a small site without access to their servers and can n install a free site search</p>
+					<p class="technique">Techniques include: indexing and bookmarks in a video. </p>
+					<div class="technique">Techniques include:
+					<ul>
+						<li>Temperature <ul>
+								<li>Use the default temperature format of locale and allow for change of format</li>
+								<li>Allow reading of long form temperature.</li>
+								<li>techniques include using a acronym attribute on a C that reads "centergrade"</li>
+								<li>Reinforce with non-numerical values, e.g., Very Cold, Cold, Cool, Mild, Warm, Hot, Very Hot.</li>
+							</ul>
+						</li>
+						<li>Calculations - Ability to have mathematical notation read out with text to speech to aid understanding.</li>
+						<li> Currency - Consider placement of currency symbols related to locale and offer acronym with explanation or full text</li>
+						<li> Buying &amp; Selling Online (Quantities &amp; Size) -Do not rely on numbers alone when describing goods. Provide a hint or additional information to aid users</li>
+						<li> Do not rely on numbers alone when describing goods. Provide a hint or additional information to aid users.</li>
+
+					</ul></div>
+					<div  class="technique"> Techniques to include:Technique to include: personalization used to remove extraneous information and reduce the clicks.</div>
+					<div  class="technique"> Techniques to include: 1,use testing to find what helps, 2, identifying any words that may make the user realize this is relevant content, 3, identifying that there are no <a>keywords that aid comprehension</a> for example, when all keywords short sections are used under clear headings.</div>
+					<p class="technique">Techniques include: using see also to alow a user to reach related content that is not in this path. A link to a site map which has all the content in it can also be sufficient</p>
+					<div class="ednote">
+						<p>To define: (MC: this does not make sense as a candidate term)</p>
+						<ul>
+							<li> api's that help the user: api's ,must be included as a technique and include E-Wallets &amp; password management, text to speak with synchronized highlighting - Use of synchronized highlighting, of complex graphics and formula with speech (COGA Techniques 2.7.3 ) </li>
+						</ul>
+					</div>
+					<p class="ednote">Note WCAG/COGA will develop clear guidelines for acceptance criteria, such as backed up by research - similar to the COGA criteria for research. </p>
+				</section>
+				<section>
+					<p><strong>Prevent the user from making errors</strong></p>
+					<p>Was: Support is provided that help users complete and check their task, that includes</p>
+					<p>(may be provided via a standard personalization mechanism) (COGA Techniques 2.9 ) </p>
+					<h4>&nbsp;</h4>
+                    <p>In forms</p>
+                    <ol>
+                      <li>Use <a>known techniques</a> to prevent errors that are relevant to the content. All standard ways of representing information are accepted as input formats, such as different ways of writing a phone number and date formats. </li>
+                      <li>Documented <a>common input errors</a> can be corrected automatically. (example spelling mistakes)</li>
+                      <li>Enable and identify the default format and standards of locale and allow for change of format on labels and user input (removed use the default format and standards of locale and allow for change of format)</li>
+                      <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a>essential information</a>. </li>
+                      <li>Instructions are provided if there is not a label  that fully describe the control or if it is not clear were to get the required information. Instructions that explains purpose and usage of the control  (Graphics with a text alternative may be sufficient) ( A clear instruction or information is on where 99% of your target audience understand immediately what to do) </li>
+                    </ol>
+                    <p>For legal and finacial transactions</p>
+                    <ol>
+                      <li>Options that may disadvantage the user are only selected at the users specific request. </li>
+                      <li>All types of charges must be clear at the start of a transaction task. </li>
+                      <li>When a <a>minimum is known for a type of charge</a> it must be be made clear at the start of the transaction task. (from support the user)</li>
+                    </ol>
+                    <p>For all content</p>
+                  <ol>
+                      <li>Non native content and sponsored content are clearly marked and visually differentiated by standardized techniques </li>
+                      <li> Clearly differentiate between facts and less substantiated opinions. <span class="ednote">Was rewritten from "Clearly differentiate between opinions and facts "</span></li>
+                    </ol>
+                    <h4>&nbsp;</h4>
+                    <p></p>
+                    <p>&nbsp;</p>
+					<p class="technique">Techniques to include: common controls includes just adding a attribute such as coga-action="undo" to enable extra support automatically</p>
+					<p class="technique">Techniques to include: javascript that enables common forms of phone numbers to morph a single notation</p>
+					<p class="technique">Techniques to include: the post code being written in the text field with the city or state information</p>
+					<p class="technique">Techniques to include: advertisements in a box clearly marked as "advertisement"</p>
+					<p class="technique">Techniques to include: increasing the number of items (such as having a default of two) if the user may not notice. Increasing have hidden charges that are only brought to the users attention after they have given their credit card information. Failure is any attempt to r trick the user into buying or agreeing to something that they did not understand, or create a price structure that is unclear. note our users deferentially worse effected by these things.</p>
+					<p class="technique">Techniques to include: use coga/aria extension for standard elements Note that using this sematics all content can easily conform</p>
+	<p class="technique">Techniques to include: tooltips and coga extention) (COGA Techniques 2.10.2 )</p><div  class="technique">Techniques to include:
+					<ul>
+						<li>Buying &amp; Selling Online (Payments) <ul>
+								<li>Do not ask users to enter credit card details unless needed for a specific purchase.</li>
+								<li>Allow pasting of password and payment details into form fields. (Editors note- an exception may be required) See also avoiding additional layers of password authentication (e.g., verified by Visa or time sensitive random security numbers).<a href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">See also: Web Security and Privacy Technologies</a></li>
+							</ul>
+						</li>
+						<li>Format <ul>
+								<li>Break up card input forms to match credit cards, e.g., 4x4 numbers.</li>
+								<li>Different cards have different patterns of numbers eg Amex may have more numbers than Standard Cards. Payment forms usually ask the user for the type of card. The card input form should reflect the payment card type.</li>
+								<li>includes: (COGA Techniques 2.9.3 )</li>
+							</ul>
+						</li>
+						<li>Calendars and dates <ul>
+								<li>Calendars should default to the first relevant day. Work calendars should default to first working day of a user's locale. </li>
+								<li>The user can not enter invalid dates. If the user tries to select an invalid date it must be clear why a date can not be selected such as with a short clear and friendly error message (for example "sorry that date has passed). This avoids abandonment of the process.</li>
+								<li>Calendar based booking systems must avoid ability to book return date before departure date.</li>
+								<li>Terms are used that describe the present past and future days rather than just using numbers or dates. By using terminology such as today, tomorrow or travel now in the appropriate language for the locale, the user has a clear understanding of the timeliness of the event, booking or occasion.</li>
+								<li>Display long form of dates with punctuation, e.g., June 1st, 2015 or 1st June, 2015. This offers a clear understanding of the date. Punctuation helps the text to speech API read the date in a way that is easier to follow.</li>
+								<li>When using numbers for time - check use of appropriate punctuation between numbers when providing times as these may be read inappropriately by text to speech engines.</li>
+							</ul>
+						</li>
+						<li>Temperature <ul>
+								<li>Use the default temperature format of the locale. The requirement to convert between Centigrade and Fahrenheit and vice versa is burdensome so defaulting to the format of the locale removes one layer of complexity.</li>
+								<li>Allow reading of long form temperature. Reading the values long form rather than using figures is helpful in for the same reasons outlined in the dates and calendar section.</li>
+								<li>Reinforce with non-numerical values, e.g., Very Cold, Cold, Cool, Mild, Warm, Hot, Very Hot. These are subjective values and may not always be helpful especially when dealing with weather and ambient temperature (due to reasons such as variances in regional average temperature - what is considered hot in UK is considered cool in India or Thailand). It may be possible to use look up tables and JSON to query relative average temperature based upon locale and adjust temperature ranges accordingly.</li>
+							</ul>
+						</li>
+	</ul></div>
+				</section>
+              <section>
+                  <h4><strong>Support is provided that help users check their task and repair their work</strong></h4>
+                  <ol>
+                    <li>A simple mechanism is provided to allow the user to undo mistakes. The user can repair information via clearly labeled action and get back to the place they were at, in one clearly labeled action with unwanted loss of data. </li>
+                    <li>A user can go a step back in a process via one clearly labeled action (exceptions may be required) </li>
+                    <li>A summary is provided before submitting important information. (already in wcag as an option, but this is the best option for coga) -note we could lose this builet point and change WCAG <strong>3.3.4 </strong>to be for important information AND just summary</li>
+                  </ol>
+                <p class="technique">Techniques to include: use coga/aria extension for steps in a process</p>
+                <p>&nbsp;</p>
+                  <p class="technique">Techniques to include: clickable breadcrumbs</p>
+                  <p></p>
+                  <p>&nbsp;</p>
+                </section>
+				<section>
+					<h4>Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.</h4>
+					<p>(Remove uncertainty and help the user maintain context) </p>
+					<p>This includes: </p>
+					<ol>
+						<li>Use <a>known techniques</a> that remind the user of the context, including: <ol>
+								<li>Signposts to remind the user of the current task and subtask. Signposts should not distract the user when they choice to change tasks without the users concent. </li>
+								<li>In the scope of a task, provide a signposts of broader context including steps completed, current step and steps pending. For a non-complicated task, such as reading a home page, clearly identifying the site and it's aim is sufficient. </li>
+							</ol>
+						</li>
+						<li>Where a site may generate interruptions, a clearly labeled mechanism is provide to enable the user to control them,(COGA Techniques 2.11.1) such that: <ol>
+								<li>Interruptions can be easily controlled and turned off </li>
+								<li>Secondary content (such as special offers or complementary material) can be easily identified, controlled and turned off. </li>
+								<li>No sudden changes occur on the site. </li>
+								<li>Media events can be easily controlled and turned off. </li>
+								<li>Chat can be easily turned off and on again. </li>
+								<li>Non-critical messages can easily be turned off and on again </li>
+								<li>Where a standard techniques exists for the above it should be used. </li>
+							</ol>
+						</li>
+					</ol>
+	<p>See (No Interruptions COGA Techniques 2.11.2, - Help The User Focus COGA Techniques 2.11.3, and Help the user find information COGA Techniques 2.11.4) </p>
+					<div class="technique">
+					<p>Techniques to include:					</p>
+					<ul>
+					  <li>A standard techniques for closing overlays such as a high contast large font close button. (above the scroll) Overlays are only used when content firsts loads and are clearly labled to give context . (Overlays should be avioded , this is a last resort)</li>
+						<li>Headings and titles are provided that provide context </li>
+						<li>In multi step process both the process and the step are identified (technique = For Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.) </li>
+						<li>Any choices made by the user in a process are easy to review in one clearly labeled action and the user can get back to the place they were at, in one clearly labeled action.</li>
+						<li>if you have a calendar/mail program you should provide a feature that could notify the user of an impending meeting or to dos (broader scope)</li>
+						<li>for a non complicated task the site is identified (broader scope)</li>
+	</ul></div>
+				</section>
+			</section>
+		</section>
+		<section>
+		  <h2>Items where new techniques are WCAG 2.0 required</h2>
+			<p>1.3.1 Info and Relationships: Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A) </p>
+			<p>The following are <b>techniques under development</b>. We can not recommend their use until they have been proven to work reliably. </p>
+			<ul>
+				<li>Add technique to enable interoperable symbol mapping for products for Non verbal people. <p>In the Web Content: Syntax: aria-concept = "uri". Example (Pseudocode): <code>&lt;img aria-concept=http://wordnet.org/somepage#girlnode" scr="girlwithbow.gif" /&gt;</code></p>
+				</li>
+				<li>Add technique at a useragent symbol file end: <p><code>&lt;mysymbol scr="girlwithskirt.gif" aria-concept="http://wordnet.or g/somepage#girlnode" lang="en" /&gt;</code> Note this is not about standardizing the symbols but a way of mapping them </p>
+				</li>
+			</ul>
+	</section>
+		<section>
+			<h2>Items where WCAG 2.0 SC levels should be changed</h2>
+			<p>We recommend the following level AAA are considered more important for COGA </p>
+			<ul>
+				<li>1.4.7 Low or No Background Audio No Background: The audio does not contain background sounds or Turn Off: The background sounds can be turned off. </li>
+				<li>We would need to change it as well to - Turn Off: The background sounds can EASILY be turned off. </li>
+				<li>1.4.8 Visual Presentation: For the visual presentation of blocks of text, a mechanism is available to achieve the following: (Level AAA) <ol>
+						<li>Foreground and background colors can be selected by the user. </li>
+						<li>Width is no more than 80 characters or glyphs (40 if CJK). </li>
+						<li>Text is not justified (aligned to both the left and the right margins). </li>
+						<li>Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing. </li>
+						<li>Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window. </li>
+					</ol>
+				</li>
+				<li>Note 2.4.8, 3.3.5, 2.2.3 No Timing and 2.2.5 Re-authenticating has been addressed above </li>
+				<li>2.4.9 Link Purpose (Link Only): A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general. (Level AAA) <p>We would want to lose the text "except where the purpose of the link would be ambiguous to users in general" </p>
+				</li>
+				<li>2.4.10 Section Headings: Section headings are used to organize the content. (Level AAA) Note 1: "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content. </li>
+				<li>3.1.3 Unusual Words: A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and <a>jargon</a>. (Level AAA) </li>
+				<li>3.1.4 Abbreviations: A mechanism for identifying the expanded form or meaning of abbreviations is available. (Level AAA) </li>
+				<li>3.1.5 Reading Level: When text requires reading ability more advanced than the lower secondary education level after removal of proper names and titles, supplemental content, or a version that does not require reading ability more advanced than the lower secondary education level, is available. (Level AAA) </li>
+				<li>Note that this may need exceptions but most exceptions would still require a summary at an easier reading level. </li>
+				<li>3.2.5 Change on Request: Changes of context are initiated only by user request or a mechanism is available to turn off such changes. (Level AAA) </li>
+				<li>3.3.6 Error Prevention (All): For Web pages that require the user to submit information, at least one of the following is true: (Level AAA) Reversible: Submissions are reversible. Checked: Data entered by the user is checked for input errors and the user is provided an opportunity to correct them. Confirmed: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission. <p>We would want a change that ALL are required. </p>
+				</li>
+			</ul>
+		</section>
+		<section>
+			<h2>Edits to WCAG</h2>
+			<p>Contrast The visual presentation of text and images of text AND ICONS have a contrast ratio of at least </p>
+			<p class="ednote"> Add dyscalculia examples!!!</p>
+		</section>
+        <section>
+        <h2>Additional notes</h2>
+        <p>
+User preferences can be transfered to a carer where the carer has guardianship or simpler position.</p></section>
+<section>
+  <h2>Significant contributors this section </h2> <dl><dt>Milliken, Neil</dt>
+            <dd>British Broadcasting Corporation</dd>
+            <dt>Pluke, Mike</dt>
+            <dd>Invited expert</dd>
+         <dt>Seeman, Lisa</dt>
+       <dd>Invited expert</dd>
+  </dl>
+</section>
+	</body>
+</html>
