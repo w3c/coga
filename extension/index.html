@@ -586,12 +586,16 @@ In menus :
 					<p >WAS Support is provided that help users understand the content, that includes:</p>
 					<p>(See COGA Techniques 2.7 ) </p>
 					    <section>
-						  <h4 id="api"><strong>Known <a>standardized APIs</a> for tools that help the user understand and use the content are supported. (s)</strong>. This includes:</h4>
+						  <h4 id="api"><strong>Support known <a>standardized APIs</a> for tools that help the user understand and use the content. </strong> This includes:</h4>
                           <ul>
                             <li> <a>Standardized techniques</a> to support interoperable symbol sets are used when available. </li>
                             <li>Allow reading of long form of acronyms</li>
-                            <li>Support for synchronized speech highlighting, password management tools, and conent simplification </li>
-                  </ul>     </section><section>
+                            <li>Support for  text to speech with synchronized highlighting of the phrase being read,  and conent simplification </li>
+                            <li>Support for retaining content that has already been entered and password management</li>
+                          </ul>
+                          <p>Exception: when there is a security or safety requirement to disable these apis for a specific field - such as credit card numbers</p>
+                          <p>Failure technique: use of form autocomplete="off"</p>     
+                  </section><section>
                   <h4 id="provided content"><strong>Provided content and information that help users understand the content</strong></h4>
                           <p>(See COGA Techniques 2.7 ) </p>
                           <p>For icons and jargon</p>
@@ -712,9 +716,9 @@ In menus :
               <section>
                   <h4 id="support"><strong>Support is provided that help users check their task and repair their work</strong></h4>
                   <ol>
-                    <li>A simple mechanism is provided to allow the user to undo mistakes. The user can repair information via clearly labeled action and get back to the place they were at, in one clearly labeled action with unwanted loss of data. </li>
+                    <li>A simple mechanism is provided to allow the user to undo mistakes. The user can repair information via a clearly labeled action and get back to the place they were at, in one clearly labeled action with unwanted loss of data. </li>
                     <li>A user can go a step back in a process via one clearly labeled action (exceptions may be required) </li>
-                    <li>A summary is provided before submitting important information. (already in wcag as an option, but this is the best option for coga) -note we could lose this builet point and change WCAG <strong>3.3.4 </strong>to be for important information AND just summary</li>
+                    <li>A summary is provided before submitting important information and the user is notified that they are about to submit the final information. (already in wcag as an option, but this is the best option for coga) -note we could lose this builet point and change WCAG <strong>3.3.4 </strong>to be for important information AND just summary</li>
                   </ol>
                 <p class="technique">Techniques to include: use coga/aria extension for steps in a process</p>
                 <p>&nbsp;</p>
