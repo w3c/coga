@@ -375,19 +375,24 @@ table {border:thin; border-style:groove;}
 				        <p>show name  </p>
 				        <p>show action </p>
 				        <p>show clicable</p>
+				        <p>use script(uri)</p>
+				        <p>location</p>
 			          <p><strong>Help    panel</strong></p>
 			          <p>Options:</p>
 			          <p>When I    click an icon/text<br>
 Never<br>
 Always    open</p>
-			          <p>&nbsp;</p>
+			          <p>location</p>
 			          <p><strong>tooltips</strong></p>
 			          <p>on/off</p>
 			          <p>&nbsp;</p>
 			          <p><strong>chat support</strong></p>
 			          <p>When I click an icon/text<br>
 			            Never</p>
+			          <p>Always open</p>
+			          <p>location</p>
 			          <p>Settings for how Explain and feedback are handled</p>
+			          <p>&nbsp;</p>
 			          <p><strong>modality </strong></p>
 			          <p>text</p>
 			          <p>text and speech</p>
@@ -666,7 +671,7 @@ Always    open</p>
 				      <td>&nbsp;</td>
 			        </tr>
 				    <tr>
-				      <th scope="row"><p>I nknow how to get more information</p>
+				      <th scope="row"><p>I know how to get more information</p>
 			          <p> <a href="#Disccusion7">more</a> </p></th>
 				      <td><p><span property="xhv:role" resource="xhv:heading">3.6.2 Support is provided that help users understand the content, that includes:</span> </p>
 				        <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes2"><span property="xhv:role" resource="xhv:heading"><span typeof="bookmark"><a property="url" title="Permalink for 3.6.2 Support is provided that help users understand the content, that includes:" aria-label="Permalink for 3.6.2 Support is provided that help users understand the content, that includes:" href="https://rawgit.com/w3c/coga/master/extension/index.html#support-is-provided-that-help-users-understand-the-content-that-includes"><span content="3.6.2 Support is provided that help users understand the content, that includes:" property="title">§ expand</span></a></span></span></h4>
@@ -697,7 +702,8 @@ Always    open</p>
 			        </tr>
 				    <tr>
 				      <th scope="row">I need symbols that help me understand the content. </th>
-				      <td>as above</td>
+				      <td><p><strong>Provided content and information that help users understand the content</strong></p>
+			          <p>&nbsp;</p></td>
 				      <td><span property="xhv:role" resource="xhv:heading">2.5.3 Use symbols and images to show meaning</span>
 				        <p resource="#h-use-symbols-and-images-to-show-meaning">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#h-use-symbols-and-images-to-show-meaning">§ expand</a>)</p>
 				        <p>&nbsp;</p>
@@ -1067,8 +1073,10 @@ Always    open</p>
 				      <td><p>(<a  title="expand" class="expand" aria-label="expand example" href="">§ expand</a>)</p><span property="xhv:role" resource="xhv:heading">Use semantics and safe standardized techniques that enable the content to be adapted to the user scenario including enabling additional support and personalization.</span>				        (<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x2">§ expand</a>)
 				        <p>Level A</p>
 				        <p>--------</p>
-				        <p><strong>To add</strong></p>
-				        <p>&nbsp;</p></td>
+				        <h4 id="familiar2"><strong>A familiar   design, layout and common icons are easily available</strong>. </h4>
+				        <p>A familiar design can be  the user platform standard design or  the   design of a previous versions of this product that the user is familiar   with and has successfully used. </p>
+				        <p>&nbsp;</p>
+			          <p>&nbsp;</p></td>
 				      <td class="summary"><p>&nbsp;</p></td>
 				      <td class="summary"><p>Adding Context</p>
 				        <p>In adding a semantic for the context (what the thing is for) such as </p>
@@ -1080,7 +1088,51 @@ Always    open</p>
                       <p>&nbsp;</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
 				      <td class="summary"><p>User setting will need to address how to handle different contexts such as coga-action="undo" , for example, which symbol to load for this setting. </p>
-                      <p>A mechanism is needed to read the user setting and adapt the page. open source script is available/ being worked on at http://rawgit.com/ayelet-seeman/coga.personalisation</p></td>
+                      <p>A mechanism is needed to read the user setting and adapt the page. open source script is available/ being worked on at http://rawgit.com/ayelet-seeman/coga.personalisation</p>
+                      <p>&nbsp;</p>
+                      <p>user setting for each contextual element include:</p>
+                      <p>text</p>
+                      <p>tooltip</p>
+                      <p>Longdesc (extrahelp)</p>
+                      <p>symbol<br>
+                      </p>
+                      <p>shortcut</p>
+                      <p> @aria-hidden</p>
+                      <p>(and any other attribute) </p>
+                      <p>to add : location)</p>
+                      <p>&nbsp;</p>
+                      <p><strong>Also add for other coga attributes</strong></p>
+                      <p>&quot;@coga-simplification&quot;: [{         &quot;critical&quot;: {             &quot;settings&quot;: [{                 &quot;@aria-hidden&quot;: &quot;false&quot;,                 &quot;css&quot;: &quot;visibility:visible;&quot;             }]         }</p>
+                      <p><strong>designs that are familur</strong></p>
+                      <p>we will need a vocabulary of design elements</p>
+                      <p>such as hamberger menues, popup etc, help swipe right, setting swipe left etc</p>
+                      <p>for each one</p>
+                      <p><strong>familuer options</strong></p>
+                      <p>fluent</p>
+                      <p>familuer</p>
+                      <p>unknown</p>
+                      <p><strong>symbol</strong> (URL)</p>
+                      <p><strong>Text</strong> =&quot;&quot;</p>
+                      <p><strong>locations</strong></p>
+                      <ul>
+                        <li>any </li>
+                        <li>top</li>
+                        <li>top of main</li>
+                        <li>botem of main</li>
+                        <li>bottom page </li>
+                        <li>Left /right /center</li>
+                      </ul>
+                      <p>&nbsp;</p>
+                      <p>Also we need a user setting - how to handle when the personlisation and context information is availible</p>
+                      <p><strong>Personlization options</strong></p>
+                      <p>Auto</p>
+                      <p>Auto with defalt button (URI)</p>
+                      <p>None</p>
+                      <p>Personlization Option button (URI)</p>
+                      <p>Toolbar button (URI)</p>
+                      <p>Menu button(URI)                      </p>
+                      <p>&nbsp;</p>
+                      <p>compbobox with aditional options {defualt, json1 usr, json2uri, etc}</p></td>
 				      <td class="summary"><p>taxonomy will be needed of support end values</p>
                         <p>Taxonomy is needed for use preferences</p>
                       <p>GPII and ETSI and other standards will need to allow these preferences to be portable.</p></td>
@@ -1093,8 +1145,11 @@ Always    open</p>
 				        <p>&nbsp;</p></td>
 				      <td>Techniques would and using the correct semantics and importing a script that adapts the page</td>
 				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
-                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
-				      <td><p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
+                      <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p>
+                      <p>&nbsp;</p>
+                      <p>And adding context nodes</p></td>
+				      <td><p>See above</p>
+				        <p>The author will need to make sure the content adapts to user personalization settings to meet this need.</p>
 				        <p>For example an open-source script could be included that would read user settings and import the correct symbol</p>
 				        <p>See:  http://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html</p></td>
 				      <td>&nbsp;</td>
@@ -1104,7 +1159,8 @@ Always    open</p>
 				      <td>&nbsp;</td>
 				      <td>&nbsp;</td>
 				      <td>&nbsp;</td>
-				      <td>&nbsp;</td>
+				      <td><p>use of location as above with any element role, or context or type</p>
+			          <p>see help pa</p></td>
 				      <td>&nbsp;</td>
 			        </tr>
 				    <tr>
@@ -1113,7 +1169,7 @@ Always    open</p>
 				      <td>&nbsp;</td>
 				      <td><span property="xhv:role" resource="xhv:heading">Adding Context </span>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ expand</a>)</p></td>
-				      <td>&nbsp;</td>
+				      <td>use of location as above with any element role, or context or type</td>
 				      <td>&nbsp;</td>
 			        </tr>
 			      </tbody>
@@ -1252,12 +1308,19 @@ Always    open</p>
                       <p>&nbsp;</p>
                       <p>(representation of math by words instead of number)</p>
                       <p> <a href="#Disccusion7">more</a> </p></th>
-                    <td><p><span id="Support_is_provided_that_help_users_understand_the_content.2C_that_includes:">Support is provided that help users understand the content, that  includes:</span></p>
-                      <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Support_is_provided_that_help_users_understand_the_content.2C_that_includes:">§ expand</a>) </p>
+                    <td><p><span id="Support_is_provided_that_help_users_understand_the_content.2C_that_includes:"><strong>Provided content and information that help users understand the content</strong></span></p>
+                      <p>&nbsp;</p>
+                      <p>For content relating to numbers and complex information</p>
+                      <ul>
+                        <li> Charts or graphics are provided where they aid the comprehension of <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-complex-information">complex information</a> (COGA Techniques 2.7.3 ) </li>
+                        <li> Tables are provided where they aid the comprehension of information </li>
+                        <li>Where an understanding of math is not a   primary requirement for using this content. Reinforce numbers with   non-numerical values, e.g., Very Cold, Cold, Cool, Mild, Warm, Hot, Very   Hot. </li>
+                      </ul>
                       Use   semantics and safe standardized techniques that enable the content to   be adapted to the user scenario including enabling additional support   and personalization.
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/extension/index.html#Use_semantics_and_safe_standardized_techniques_that_enable_the_content_to_be_adapted_to_the_user_scenario_including_enabling_additional_support_and_personalization.">§ expand</a>) </p>
-                      <p>Do we need to add more?</p>
-                      <p>&nbsp;</p></td>
+                      <h5 id="provided content2">&nbsp;</h5>
+                      <p>&nbsp;</p>
+                    <p>&nbsp;</p></td>
                     <td><p>Ability to have mathematical notation read out with text to speech to aid understanding.</p>
                       <p>Use of synchronized highlighting, of complex graphics and formula with speech§ </p>
                       <p>Associate maths, sections of math and sections of complex items with explanations</p>
@@ -1287,6 +1350,28 @@ Always    open</p>
                       <p>1.4.4 When   there is a barrier between the content and the user that requires   additional cognitive function  an alternative is provided that does not   require additional cognitive function</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/extension/index.html#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_cognitive_function_an_alternative_is_provided_that_does_not_require_additional_cognitive_function">§ expand</a>)</p>
                       <p>1.6.2 Support is provided that help users understand the content, that  includes:</p>
+                      <p>For icons and jargon</p>
+                      <ul>
+                        <li> All icons and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-jargon">jargon</a> have a short explanation available Where a standard mechanism exists   for the platform or technologies it should be used.(COGA Techniques 2.7.   )(removed to techneque: Short tooltips on all icons and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-jargon">jargon</a> that clarify the meaning are provided..  )</li>
+                      </ul>
+                      <p>For content with more then 200 words </p>
+                      <ol>
+                        <li>Provide a summary. For pieces of content with less then 200 words the heading may act as a summary. </li>
+                        <li>The content owner identifies at least two <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-keywords-that-aid-comprehension">keywords that aid comprehension</a> for the user and  keywords are programmatic determinable and  emphasized in the modality of the user. </li>
+                      </ol>
+                      <p>For  key content and call out boxes</p>
+                      <ul>
+                        <li> Symbols are provided to help the user   identify key content including: types of contact information, main   functions, warnings, key points. Where a standard mechanism exists for   the platform or technologies it should be used. </li>
+                      </ul>
+                      <p>For events</p>
+                      <ul>
+                        <li>Enable the user to set a reminder for   date and time sensitive events. Reminders should be set only at the   users request and the user should be able to personalize the reminder   method. Where a standard mechanism exists for the platform or   technologies it should be used</li>
+                      </ul>
+                      <p>For  forms and non standard controls</p>
+                      <ol>
+                        <li>Where a standard mechanism  for the   platform or technologies exist for context sensitive help it should be   used. (Simple search forms are excluded.)</li>
+                        <li>Instructions should be available for non standard controls </li>
+                      </ol>
                       <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/extension/index.html#Support_is_provided_that_help_users_understand_the_content.2C_that_includes:">§ expand</a>)</p>
                       <p>Use   semantics and safe standardized techniques that enable the content to   be adapted to the user scenario including enabling additional support   and personalization.</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/extension/index.html#Use_semantics_and_safe_standardized_techniques_that_enable_the_content_to_be_adapted_to_the_user_scenario_including_enabling_additional_support_and_personalization.">§ expand</a>)</p></td>
@@ -1385,7 +1470,19 @@ Always    open</p>
                       <p>&nbsp;</p>
                     </th>
                     <td><p>1.4.4 When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</p>
-                    <p><a href="https://rawgit.com/w3c/coga/master/extension/index.html#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_abilities_an_alternative_is_provided_that_does_not_require_additional_abilities.">(§ expand</a>)</p></td>
+                    <p><a href="https://rawgit.com/w3c/coga/master/extension/index.html#When_there_is_a_barrier_between_the_content_and_the_user_that_requires_additional_abilities_an_alternative_is_provided_that_does_not_require_additional_abilities.">(§ expand</a>)</p>
+                    <h4 id="instructions">Instructions, labels, navigation and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-important-information">important information</a> are provided with a clear writing style that includes:</h4>
+                    <h4 id="chunks">Information is provided in manageable chunks,  that include: </h4>
+                    <h4 id="layout"><strong>Provide a clear and understandable layout  that includes:</strong></h4>
+                    <h4 id="familiar"><strong>A familiar   design, layout and common icons are easily available</strong>. </h4>
+                    <h5 id="critical"><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong></h5>
+                    <p>&nbsp;</p>
+                    <h5 id="semantics2">Use <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-semantics">semantics</a> and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-safe-standardized-techniques">safe standardized techniques</a> that enable the content to be adapted to the user scenario including <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-enabling-additional-support">enabling additional support</a> and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-personalization">personalization</a>.</h5>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p></td>
                     <td> </td>
                     <td><span property="xhv:role" resource="xhv:heading">Simplification</span>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-simplification">§ expand</a>)</p>
