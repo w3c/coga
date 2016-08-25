@@ -342,8 +342,29 @@
           <td><p>The success or failure of every action should be <a href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-clearly-indicated-success-or-failure">clearly indicated</a> to the user and visual <a href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-rapid-feedback">rapid feedback</a> should be available. <a href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-spoken-feedback">Spoken feedback</a> should be a user selectable option.</p>
             <p> </p></td>
           <td><p>AA</p></td>
-          <td><p> </p></td>
-          <td>pending</td>
+          <td><p> Proposed wording</p>
+            <blockquote>
+              <div>The success or failure of every user initiated action is <a href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-clearly-indicated-success-or-failure" target="_blank" rel="noreferrer">clearly indicated</a> to the user by visual, programmatically determinable, <a href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-rapid-feedback" target="_blank" rel="noreferrer">rapid feedback</a>. <a href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-spoken-feedback" target="_blank" rel="noreferrer">Audio feedback</a> should be a user selectable option.</div>
+              <div><br>
+              </div>
+            </blockquote>
+            Notes:  
+            <div>
+              <ul>
+                <li>"user initiated" was added to avoid including events like a pop-under window successfully or unsuccessfully opening or a non-UI impacting script to run or an embedded third party add from loading. I am not certain my proposed wording is the right way to go about addressing the 'feedback following an action the user took' intent of this success criteria. If the Task Force intends to have this Success Criteria include system initiated events, then "user initiated" is not needed. <br>
+                </li>
+                <li>Replaced first "should be" in first sentence with "is" to make the statement definitive and testable. Removed "should be available" at the end of the sentence for the same reason.<br>
+                </li>
+                <li>"programmatically determinable" added to clarify the need for feedback to be exposed to assistive technologies. <br>
+                </li>
+                <li>"audio" for "spoken" since a tone or chime would provide the necessary feedback <br>
+                </li>
+                <ul>
+                  <li>"spoken feedback" is a defined term and would need to change to "audio feedback", I have not considered the potential need for rewording the definition due to this change.</li>
+                </ul>
+              </ul>
+          </div></td>
+          <td>Done -ish</td>
         </tr>
         <tr>
           <td><p>Support known <a href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-standardized-apis">standardized APIs</a> for tools that help the user understand and use the content. This includes:</p>
