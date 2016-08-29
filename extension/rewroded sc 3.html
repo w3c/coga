@@ -52,10 +52,33 @@
         <tr>
           <td><p>Timed event are not used except for the situations listed below.</p></td>
           <td><p>A</p></td>
-          <td><p>Keep as is</p>
-            <p>But should a change from 2.2.1</p>
-            <p> </p></td>
-          <td>NA</td>
+          <td><p>merge with change from 2.2.1</p>
+            <p>&nbsp;</p>
+            <h4 id="timed">Timed event are not used except for the situations listed below.</h4>
+            <p>(See COGA Techniques 2.9.1 ) </p>
+            <ol>
+              <li><strong>Security Exception:</strong>Where security may be at risk a session can time out after half an hour of disuse. Where financial or <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-sensitive-information">sensitive information</a> is at risk the time out can be shorter </li>
+              <li><strong>Real-time Exception: </strong>The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or              </li>
+              <li><strong>Essential Exception: </strong>The time limit is <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-required-behaviors.html#essentialdef">essential</a> and extending it would invalidate the activity; or              </li>
+              <li><strong>20 Hour Exception: </strong>The time limit is longer than 20 hours of disuse.</li>
+            </ol>
+            <p>Where there is a <strong>Security Exception </strong>or <strong>20 Hour Exception</strong> the content must also conform to all of the bellow:</p><ol>
+              <li> <strong>No loss of data: </strong>The  user can easily return to the same point in a task, without data loss for a period of at least a week:
+                <ol>
+                  <li>as the default </li>
+                  <li>via standardized system setting (example the user can set that the data is not stored) </li>
+                  <li>option to set user preference that has a conformant interface and is directly available at each stage of the task.            </li>
+                </ol>
+              </li>
+              
+              <li><strong>Timing adjustable</strong> The function to turn off, adjust or extend the timing are controlled by simple action and labeled with simple text. A user or administrator settable time minimum must be provided   to complete any controlling action or the user must be given at least 120 seconds to extend the time limit. The the user is allowed to extend the time limit at least ten times. Note that all user setting must be   easy to set and use <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-safe-standardized-techniques">standardized techniques</a> when available. </li>
+              <li><strong>Awear:</strong> The user should be informed  of the time out limits, including the length of the warning </li>
+            </ol>
+            <p>&nbsp;</p>
+            <p>Techniques include: Techniques with examples   are needed such as a dialog on opening the app that seas do you want   your old stuff </p>
+            <p>&nbsp;</p>
+          <p> </p></td>
+          <td>Done</td>
         </tr>
         <tr>
           <td><p>Guideline 2.3 "Do not design content in a way that is known to cause seizures" should be changed to:</p>
