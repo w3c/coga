@@ -11,8 +11,8 @@
         <blockquote>
           <div id="sc2">
             <p><strong> Enable <a href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-personalization">personalization</a></strong>:  Contextual information and author settable properties of regions and elements  are programatically determinable so that <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-personalization">personalization</a> is avalible. </p>
-            <p>Contextual information includes: context of elements; concept and role; relevance and information for simplification; position in a process. </p>
-            <p>Author settable properties includes: type of distraction, type of help, type of transaction and type of reminder, instructions and status of an element.</p>
+            <p><em>[Contextual information</em> includes: context of elements; concept and role; relevance and information for simplification; position in a process. </p>
+            <p><em>Author settable properties</em> includes: type of distraction, type of help, type of transaction and type of reminder, instructions and status of an element.] - <em>note this could be in the main text or in the definition </em></p>
             <p>Exception: Information does not need to be exposed when there is not a standardized way of  exposing it in the technology or the platform.</p>
             <p> </p>
             <p>&nbsp;</p>
@@ -23,32 +23,28 @@
 (A)
         <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
         <dl>
-          <dt>safe standardized techniques</dt>
+          <dt>&nbsp;</dt>
+          <dd>&nbsp;</dd>
+          <dt>&nbsp;</dt>
         </dl>
         <dl>
-          <dd>standardized by wcag, other w3c groups, or by the platform,   browser or operating system where user vulnerabilities are not exposed   without informed consent </dd>
-          <dt>semantics</dt>
+          <dt><em>Contextual information</em></dt>
+</dl>
+        <dl>
+          <dd>Defined terms and tags that give meaning to the content such as context of elements; concept and role; relevance and information for simplification; position in a process</dd>
         </dl>
         <dl>
-          <dd>Defined terms and tags that give meaning to the content </dd>
+          <dt><em>Personalization</em></dt>
         </dl>
         <dl>
-          <dt>personalization</dt>
+          <dd>User interface that is driven by the individual user's prefrences.</dd>
         </dl>
         <dl>
-          <dd>user-defined. maybe change the word to individualization</dd>
-        </dl>
-        <dl>
-          <dt>enabling additional support</dt>
+          <dt><em>Author settable properties</em></dt>
         </dl>
 <dl>
-          <dd><em>enabling additional tools and mechanisms that help the user understand or use the content</em>. <br/>
-            Examples include:
-            <ol>
-              <li>enabling text to speach with synchronized highlighting</li>
-              <li>allowing a browser plugin to auto fill forms.</li>
-            </ol>
-          </dd>
+          <dd>Properties that can be set by the author or by a script, such as: type of distraction, type of help, type of transaction and type of reminder, instructions and status of an element.
+          Typical they set the type of the role or element at a second level taxonomy</dd>
         </dl>
         <p>&nbsp;</p>
         <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
@@ -88,13 +84,14 @@ Technology holds the  promise of being extremely flexible and the design   of ma
               <li>Disabilities that effects  executive function and decision making </li>
             </ul>
             <p>Togther this can effect 11% of school age people and over half of people over 60 years old - including mild cognative imparment an Age-Associate Memory Impairment (<em>AAMI</em>).</p>
-            <p>Research on these benefits can be found at  [<cite><a href="#bib-cudd-1" class="bibref">cudd-1</a></cite>] and the task forces <a href="https://rawgit.com/w3c/coga/master/issue-papers/personalization-preferences.html">Issue-papers on personalization and preferences</a>.</p>
+            <p>Research on these benefits can be found at  [<cite><a href="#bib-cudd-1" class="bibref">cudd-1</a></cite>] and the task forces <a href="https://rawgit.com/w3c/coga/master/issue-papers/personalization-preferences.html">issue-papers on personalization and preferences</a>. Also see the <a rel="nofollow" href="https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/">example of an adaptive page</a>.</p>
             
 <div>
       <h3 id="resources">Related Resources</h3>
 		  <p>Resources are for information purposes only, no endorsement implied.</p>
           <ul>
-            <li> <a href="https://rawgit.com/w3c/coga/master/issue-papers/personalization-preferences.html">Issue-papers on personalization and preferences</a></li>
+            <li> Open source project of  <a rel="nofollow" href="https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options">example script</a> that a web author can use or include that read the user settings   in the JSON files and adapt the page for the user needs example script and <a rel="nofollow" href="https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/">example of adaptive page</a></li>
+            <li><a href="https://rawgit.com/w3c/coga/master/issue-papers/personalization-preferences.html">Issue-papers on personalization and preferences</a></li>
             <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/#table-7-clear-and-understandable-content-and-text">Gap analysis Table 7 - Clear and understandable content and text </a></li>
             <li> <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html/#table-6-familiar-interface">User needs Table 6 (less polished but more up-to date version)</a></li>
             <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a></li>
@@ -107,13 +104,11 @@ Technology holds the  promise of being extremely flexible and the design   of ma
         <p>.</p>
         <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
         <p><strong>General test</strong></p>
-        <p>Step 1. Identify the relavent standard specifications such as:</p>
-        <ol>
-          <li>The specification for the intended platform(s)</li>
-          <li>ARIA</li>
-          <li>COGA</li>
-        </ol>
-        <p>Step 2. Ensure content conforms to those standards where they can be used for personlisation or additional support.</p>
+        <p>For HTML and Web Content</p>
+        <p>Step 1. Identify the role of elements</p>
+        <p>Step 2. Identify the context of  regions and controls </p>
+        <p>Step 3. Check that the context and role is clear from the markup - if not add the role and context from native HTML, ARIA and COGA (where it is supported)</p>
+        <p>Step 4. Ensure content conforms to those standards where they can be used for personlisation or additional support.and set the applicable auther settable properties</p>
         <p></p>
         <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
         <p>&nbsp;</p>
@@ -121,9 +116,10 @@ Technology holds the  promise of being extremely flexible and the design   of ma
         <ul>
           <li>Use semantics and standardized techniques to provide extra help (<a href="https://rawgit.com/w3c/coga/master/techniques/index.html">COGA Techniques</a> 4.1).</li>
           <li>Provide semantics that symbols on key content (<a href="https://rawgit.com/w3c/coga/master/techniques/index.html">COGA Techniques</a> 4.2)</li>
-          <li>Include features that support the user preferences.</li>
           <li>Enable user agents to find the version of the content that best fits their needs.</li>
           <li>Use of aria-invalid and aria-required</li>
+          <li>Use of aria epub on document content</li>
+          <li>Use of aria landmarks - but with coga context where supported </li>
         </ul>
         <div>
           <h3 id="Failures">Common Failures for Success Criterion</h3>
@@ -146,7 +142,12 @@ Technology holds the  promise of being extremely flexible and the design   of ma
   <p><em>(May be added after December 1st)</em></p>
   <ul>
 		    <li>
-		      <p><strong>Example 1. A Web page with ....</strong></p>
+		      <p>Example 1. An app for the heating system that has terms and icons on that the user does not understand, and has many options that makes it overwelming </p>
+		      <p>Also see the example page at http://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html</p>
+		      <p>&nbsp;</p>
+		      <p>&nbsp;</p>
+		      <p>&nbsp;</p>
+		      <p>&nbsp;</p>
 		      <p>&nbsp; </p>
     </li>
   </ul>
