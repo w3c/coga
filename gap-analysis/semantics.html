@@ -314,19 +314,23 @@ This attribute provides  any information that helps the user anticipate the  fun
 <h3>More Help</h3>
 <p><strong>Requirement: </strong>Some users may need additional information or specifically additional help inforamtion. We request additonal attributes so that an author can indicate the existence of this additional information.</p>
 <p><strong>Proposed attribute: </strong><code>coga-moreinfo</code></p>
-<p><strong>Supported values: </strong>URL</p>
+<p><strong>Supported values: </strong>URI</p>
 <p><strong>Proposed attribute: </strong><code>coga-extrahelp</code></p>
-<p><strong>Supported values: </strong>  tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
+<p><strong>Supported values: </strong>URI</p>
+<p></p>
+<p><strong>Proposed attribute: </strong><code>coga-helptype</code></p>
+<p><strong>Supported values: </strong>  tooltips/humanhelp/morehelp/topicsearch/automated/faqs/helpform/simplified/glossary/dictionary/thesaurus</p>
+<p>&nbsp;</p>
 <p><strong>Example:</strong></p>
-<p>&lt;button type="button" coga-moreinfo=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</p>
+<p>&lt;button type="button" coga-extrahelp=&quot;uri2 uri3&quot; &gt;undo&lt;/button&gt;</p>
 <p>URI 2 may read: </p>
 <pre>
-&lt;div id=&quot;uri2&quot; coga-extrahelp=&quot;morehelp&quot; coga-hidden=&quot;true&quot;&gt;
+&lt;div id=&quot;uri2&quot; coga-helptype<code></code>=&quot;morehelp&quot; coga-hidden=&quot;true&quot;&gt;
 pressing the undo button will erase all your work on this page. Use this button with care. 
 If you press it by mistake, press control and y at the same time and your answers will come back. 
 &lt;/div&gt;
 
-&lt;a href=&quot;functiongethelp()&quot; coga-extrahelp=&quot;humanhelp&quot; coga-hidden=&quot;true&quot;&gt;
+&lt;a href=&quot;functiongethelp()&quot; coga-helptype=&quot;humanhelp&quot; coga-hidden=&quot;true&quot;&gt;
 I want a person to help me
 &lt;/a&gt;
 &lt;div id=&quot;uri3&quot; coga-extrahelp=&quot;glossary&quot; coga-hidden=&quot;true&quot;&gt;</p></section>
