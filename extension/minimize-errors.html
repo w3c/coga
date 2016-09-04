@@ -1,0 +1,121 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Minimize User Errors</title>
+		
+	</head>
+
+<body>
+		<h2>Minimize User Errors</h2>
+        <blockquote>
+          <div id="sc2">
+              <p><strong>3.3.3 Minimize user errors</strong>:  Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. If an <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">input error</a> is detected an automatic correction is made where reilable and possible. Otherwise if suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</p>
+          </div>
+</blockquote>
+        <h3><a id="user-content-suggestion-for-priority-level-aaaaaa" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-hidden="true"></a>Suggestion for Priority Level </h3>
+(A)
+        <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
+        <dl class="termlist">
+          <dt id="dt-common-input-error">common input error</dt>
+          <dd>errors that have been reported or documented more then one time, or have been documented in the understanding of the Success Criteria section or have supportive techniques</dd>
+        </dl>
+        
+        <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
+        <p>Principle 3 Understandable - Guideline 3.3: Help users avoid and correct mistakes.</p>
+        <p>This is an update to 3.3.3 Error Suggestion</p>
+        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
+        <p>The intent of this success criteria is to minimize the likelihood of a user generated error prior to an error taking place, thus minimizing instances of both errors and error notifications. Success Criterion 3.3.1 provides for notification of errors. However, persons with cognitive limitations may find it difficult to understand how to correct the errors. @@Additionaly such notifications maybe distracting for users with cognative disabilites, taking focus away from tasks and task completion@@. People with visual disabilities may not be able to figure out exactly how to correct the error. In the case of an unsuccessful form submission, users may abandon the form because they may be unsure of how to correct the error even though they are aware that it has occurred.</p>
+        <p>If automatic correction is reilable and possible if should be implemented. For example, if an input field for a phone number is part of an online form and the required format is xxx-xxx-xxxx, the system should automatically insert the necessary dashes even if the user does not enter them. If automatic correction is not possible the content author, the user agent or supported APIs should provide a description of the error along with suggestions for along with suggestions for fixing the error except when to do so would jeopardize the security or purpose of the content. For example, a user has misspelled a word in the comments section of a contact form. The missspelled word is identified to the user and suggestions for corectly spelled words are listed.</p>
+        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
+        <div>
+          <div>
+            <p>This Success Criterion helps users who need help preventing errors. This can include: </p>
+            <ul>
+              <li> Automatic correction required formats for input fields</li>
+              <li> Spelling and grammar checks </li>
+            </ul>
+            <p>We need to mimize errors because: </p>
+            <ul>
+            <li>Correcting errors before they occur will minimize the number of actions needed to complete a task or process</li>
+              <li>Error notifications can be confusing</li>
+              <li>Error notifications can distract a user from tasks and task completion  </li>
+            </ul>
+            <p>This helps people with many diffrent cognitive disabilities including people with: </p>
+            <ul>
+              <li>Language related disabilities </li>
+              <li>Memory related disabilities </li>
+              <li>Focus and attention related disabilities </li>
+              <li>Disabilities that effects executive function and decision making </li>
+            </ul>
+            
+<div>
+      <h3 id="resources">Related Resources</h3>
+		  <p>Resources are for information purposes only, no endorsement implied.</p>
+          <ul>
+            <li>TODO</li>
+          </ul>
+              <p>&nbsp;</p>
+</div>
+          </div>
+        </div>
+        <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
+        <p><strong>TODO</strong></p>
+        <p>&nbsp;</p>
+
+        <p></p>
+        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
+    <p>Because this is an existing SC are the original associated Techniques used?</p>
+        <div>
+          <h3 id="Failures">Common Failures for Success Criterion</h3>
+            <p>Because this is an existing SC are the original associated Failures used?</p>
+        </div>
+<p>&nbsp;</p>
+<blockquote>
+  <div id="sc"></div>
+</blockquote>
+<div>
+  <div>
+		  </div>
+</div>
+<div>
+  <h2 id="examples">Examples of Success Criterion 3.3.3</h2>
+  <p><em>(May be added after December 1st)</em></p>
+  <ul>
+		    <li>
+		      <p>Example 1. TODO </p>
+    </li>
+  </ul>
+</div>
+		
+        
+		<section>
+        <div>
+<h2> Working groups notes</h2>
+        <p>Original wording:</p>
+        <blockquote>
+          <div id="sc2">
+            <p><strong>Prevent the user from making errors</strong>:</p>
+            <p><strong>In forms:</strong></p>
+              <ul>
+                  <li>Use <a>known techniques</a> to prevent errors that are relevant to the content.</li>
+                  <li>Documented <a>common input errors</a> can be corrected automatically. (example spelling mistakes)</li>
+                  <li>Enable and identify the default format and standards of locale and allow for change of format on labels and user input (removed use the default format and standards of locale and allow for change of format)</li>
+                  <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a>essential information.</a></li>
+                  <li>Instructions are provided if there is not a label that fully describe the control or if it is not clear were to get the required information. Instructions should explain the purpose and usage of the control. (Graphics with a text alternative may be sufficient)@@( A clear instruction or information is on where 99 of your target audience understand immediately what to do)@@</li>
+              </ul>
+              <p><strong>For legal and financial transactions:</strong></p>
+              <ul>
+                <li>Options that may disadvantage the user are only selected at the users specific request.</li>
+                <li>All types of charges must be clear at the start of a transaction task.</li>
+                <li>When a <a>minimum is known for a type of charge</a> it must be be made clear at the start of the transaction task. (from support the user)</li>
+              </ul>
+              <p><strong>For all content:</strong></p>
+              <ul>
+                  <li>Non native content and sponsored content are clearly marked and visually differentiated by standardized techniques</li>
+                  <li>Clearly differentiate between facts and less substantiated opinions</li>
+              </ul>
+</div>
+</blockquote>
+        </div>
+        </section>
+</body>
+</html>
