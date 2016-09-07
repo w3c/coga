@@ -850,7 +850,11 @@ Use this button with care.   If you press it by mistake, press control and y at 
 				      <th scope="row">highlight secton of image , chart or math while the papproriate text is read</th>
 				      <td><p>all reliationships</p>
 			          <p>use</p>
-			          <p>aria details</p>
+			          <p>aria-details</p>
+			          <p>Note <strong><a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#content-structure-separation-programmatic">1.3.1</a> Info and Relationships:</strong> iInformation, <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html#structuredef">structure</a>,                    and <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html#relationshipsdef">relationships</a> conveyed through <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html#presentationdef">presentation</a> can be <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html#programmaticallydetermineddef">programmatically determined</a> or are available in text.   					</p>
+			          <p>This is not inclucive aa it is not visualy presented</p>
+			          <p><strong>TODO</strong></p>
+			          <p>We need relationshipsm to be <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html#programmaticallydetermineddef">programmatically determined</a></p>
 			          <p>&nbsp;</p></td>
 				      <td>&nbsp;</td>
 				      <td>&nbsp;</td>
@@ -860,8 +864,7 @@ Use this button with care.   If you press it by mistake, press control and y at 
 				    <tr>
 				      <th scope="row"><p>I need more space between words, sentences, and clauses in the sentence.</p>
 			          <p>I need even word spacing or x justification</p></th>
-				      <td><p>&nbsp;</p>
-			          <p>TO DO, check if we have justified text. </p>
+				      <td><p>TO DO, check if we have justified text. </p>
 			          <p>&nbsp;</p>
 			          <p>XXXXXXX</p>
 			          <p>has justifcation been included</p></td>
@@ -883,10 +886,7 @@ Use this button with care.   If you press it by mistake, press control and y at 
 			        </tr>
 				    <tr>
 				      <th scope="row">I need reminders or I will forget appointments and when I was meant to do things. </th>
-				      <td><h5 id="provided content6"><strong>Provided content and information that help users understand the content</strong></h5>				        <p>For events</p>
-                        <ul>
-                          <li>Enable the user to set a reminder for   date and time sensitive events. Reminders should be set only at the   users request and the user should be able to personalize the reminder   method. Where a standard mechanism exists for the platform or   technologies it should be used</li>
-                      </ul>                        <p>&nbsp;</p></td>
+				      <td><h5 id="provided content6"><strong>pEnable the user to set a reminder for date and time sensitive events.   Reminders should be set only at the users request and the user should be   able to personalize the reminder method. Where a standard mechanism   exists for the platform or technologies it should be used</strong></h5>                        <p>&nbsp;</p></td>
 				      <td>if you have a calendar/mail program you should provide a feature that could notify the user of an impending meeting or to dos (broader scope) </td>
 				      <td>&nbsp;</td>
 				      <td><p>setting to personalize the reminder method such as </p>
@@ -896,7 +896,7 @@ Use this button with care.   If you press it by mistake, press control and y at 
 			        </tr>
 				    <tr>
 				      <th scope="row">I do not want too many reminders as they I will be distracted</th>
-				      <td>3.6.3 - Reminders should be set only at the users request. </td>
+				      <td>Enable the user to set a reminder for date and time sensitive events.   Reminders should be set only at the users request and the user should be   able to personalize the reminder method. Where a standard mechanism   exists for the platform or technologies it should be used</td>
 				      <td><span property="xhv:role" resource="xhv:heading">Attention and focus</span>
 			          <p resource="#attention-and-focus">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/coga/master/techniques/index.html#attention-and-focus">§ link</a>)</p></td>
 				      <td><p><strong>Proposed attribute: </strong>coga-reminder</p>
@@ -948,8 +948,7 @@ Use this button with care.   If you press it by mistake, press control and y at 
 				    <tr>
 				      <th scope="row"><p>Controls are clear.  </p>
 				        <p> <a href="#Disccusion7">more</a> </p></th>
-				      <td>Interactive controls are visually clear or visually clear controls are easily available that conform to the following:
-				        <p>&nbsp;</p>
+				      <td> clear controls 
 				        <p>(<a  title="expand" class="expand" aria-label="expand 1.4.3" href="https://rawgit.com/w3c/coga/master/extension/index.html#Interactive_controls_are_visually_clear_or_visually_clear_controls_are_easily_available_that_conform_to_the_following:">§ link</a>)</p>
 				        <p>Level A</p>
 				        <p>--------</p>
@@ -962,7 +961,9 @@ Use this button with care.   If you press it by mistake, press control and y at 
                         <p>&nbsp;</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ link</a>)</p></td>
 				      <td><p>Identify how to present diffrent roles, elements and context eleemtns</p>
-			          <p>See table 6</p></td>
+			          <p>See table 6</p>
+			          <p>&nbsp;</p>
+			          <p>show borders , white space etc</p></td>
 				      <td>&nbsp;</td>
 			        </tr>
 				    <tr>
@@ -990,27 +991,43 @@ Use this button with care.   If you press it by mistake, press control and y at 
 			        </tr>
 				    <tr>
 				      <th class="summary" scope="row">I can find the controls that I need</th>
-				      <td class="summary"><h4 id="familiar3"><strong>A familiar   design, layout and common icons are easily available</strong>. </h4>
-				        <p><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong></p>
-                        <ol>
-                          <li><em>Critical features</em> and <em>important information </em>can be used without use of a scroll bar. (Example -above the scroll or a clear link to it is above the scroll )</li>
-                          <li><em>Critical features</em> and important information to the user are visually differentiated and accentuated or  appear before the other main content </li>
-                          <li>A clear navigational path is provided to all content such that:
-                            <ol>
-                              <li>Clear headings, menu names and categories are   available that signpost information. It should be clear how content   correlates to each signpost in its navigation path. </li>
-                              <li>Each page can be reached though any high level page that it logically could belong. </li>
-                            </ol>
-                          </li>
-                          <li>Help and support page or function should be reachable   with one user interaction. When human help is available the correct   contact information or mechanism should be reachable within two user   interactions. (Removed: Where human help is provided, it is available   via one clearly labeled action for each <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-web-related-modality">web related modality</a> for which the help is available.)</li>
-                          <li>Provide a search box. Exception is provided were adding a search box is a significant expense for the site </li>
-                        </ol>
+				      <td class="summary"><table dir="ltr" cellpadding="0" cellspacing="0" border="1">
+				        <tbody>
+				          <tr>
+				            <td></td>
+				            <td><p>:</p></td>
+			              </tr>
+			            </tbody>
+				        </table>
+				        <h4 id="familiar3">Familiar layout</h4>
+				        <p><strong><em>Critical features and important information </em> f</strong></p>
+				        <p>Clear headings, </p>
+				        <p>&nbsp;</p>
                         <h5 id="support">Also see</h5>
 				        <h5><strong>Support is provided that help users check their task and repair their work</strong></h5>
 				        <p>&nbsp;</p>
 				        <p>&nbsp;</p>
 				        <p>See also</p>
-			            <h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><span property="xhv:role" resource="xhv:heading">3.4.2 Interactive controls are visually clear or visually clear controls are <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-easily-available-mode-or-setting">easily available</a> that conform to the following:</span></h4>
-		                <h4 resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x" id="use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x"><span property="xhv:role" resource="xhv:heading">Use <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-semantics">semantics</a> and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-safe-standardized-techniques">safe standardized techniques</a> that enable the content to be adapted to the user scenario including <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-enabling-additional-support">enabling additional support</a> and <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-personalization">personalization</a>.</span></h4>
+			            <h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><span property="xhv:role" resource="xhv:heading"> clear controls </span></h4>
+		                <h4 resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x" id="use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x"><span property="xhv:role" resource="xhv:heading">support  <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-personalization">personalization</a>.</span></h4>
+		                <p resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x">changes to 3.2.4 ect</p>
+		                <table>
+		                  <tbody>
+		                    <tr>
+		                      <td width="330px">3.2.4 Consistent Identification:   Components that have the same functionality within a set of Web pages   are identified consistently. (Level AA) </td>
+		                      <td> </td>
+	                        </tr>
+		                    <tr>
+		                      <td width="330px">3.2.3 Consistent Navigation:   Navigational mechanisms that are repeated on multiple Web pages within a   set of Web pages occur in the same relative order each time they are   repeated, unless a change is initiated by the user. (Level AA)</td>
+		                      <td nowrap="nowrap" width="100px"> </td>
+	                        </tr>
+	                      </tbody>
+	                    </table>
+                        <p>. 3.2.4 Consistent Identification: Components that have   the same functionality within a set of Web pages are identified   consistently. Component that have same type of information and controls   with same functions are styled consistently within a set of web pages in   the modality of the user.</p>
+                        <p>Exception: If a changing style is an essential part of the main function of the site</p>
+                        <p> </p>
+                        <p>3.2.3 Consistent Navigation: Navigational mechanisms that   are repeated on multiple Web pages within a set of Web pages occur in   the same relative order each time they are repeated, unless a change is   initiated by the user. Common elements such as navigation, search and   controls are have a consistent layout and position within a set of web   pages in the modality of the user.</p>
+                        <p resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x">&nbsp;</p>
 		                <p>&nbsp;</p>
 	                  <p>&nbsp;</p></td>
 				      <td><h4 resource="#h-use-clear-visual-affordances.x" id="h-use-clear-visual-affordances.x">&nbsp;</h4></td>
@@ -1025,15 +1042,15 @@ Use this button with care.   If you press it by mistake, press control and y at 
 			        </tr>
 				    <tr>
 				      <th scope="row">I need a structure that is easy follow. </th>
-				      <td><h4 id="chunks3">Information is provided in manageable chunks,  that include: </h4>				        <h4 id="layout3"><strong>Provide a clear and understandable layout  that includes:</strong></h4>
+				      <td><h4 id="chunks3"> manageable chunks,</h4>				        <h4 id="layout3"><strong>understandable layout  </strong></h4>
+			            <p>clear  layout</p>
+			            <h4 id="controls"> clear controls </h4>
 			            <p>&nbsp;</p>
-			            <h4 id="controls">Interactive controls are visually clear or visually clear controls are <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-easily-available-mode-or-setting">easily available</a> that conform to the following:</h4>
-			            <p>&nbsp;</p>
-			            <h4 id="familiar4"><strong>A familiar   design, layout and common icons are easily available</strong>. </h4>
+			            <h4 id="familiar4"><strong>A familiar layout and common icons are easily available</strong>. </h4>
 			            <p>&nbsp;</p>
 		                <h5 id="critical4"><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong></h5>
 	                  <p>&nbsp;</p>				        <h4 resource="#h-provide-a-clear-structure-that-includes" id="h-provide-a-clear-structure-that-includes">&nbsp;</h4></td>
-				      <td>&nbsp;</td>
+				      <td>TO DO Add a techneuq on how to mark up a site map so it is adapatble</td>
 				      <td><p>Log</p>
 			          <p><strong>to add:</strong></p>
 			          <p>semantics for a site map page</p>
@@ -1058,17 +1075,12 @@ Use this button with care.   If you press it by mistake, press control and y at 
 			        </tr>
 				    <tr>
 				      <th scope="row">I need signposts so that  I can       find the information I need. </th>
-				      <td><h5 id="critical3"><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong></h5>
-				        <h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x2">&nbsp;</h4>
-				        <h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x"><span property="xhv:role" resource="xhv:heading">3.3.5 Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.<span typeof="bookmark"><a property="url" title="Permalink for 3.3.5 Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost." aria-label="Permalink for 3.3.5 Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost." href="https://rawgit.com/w3c/coga/master/extension/index.html#provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x"><span content="3.3.5 Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost." property="title">§</span></a></span></span></h4>
-                        <p>(Remove uncertainty and help the user maintain context) </p>
-                        <p>This includes: </p>
-                        <ol>
-                          <li>Use <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-known-techniques">known techniques</a> that remind the user of the context, including: </li>
-                      </ol>
-                        <ol>
-                          <li>Signposts to remind the user of the   current task and subtask. Signposts should not distract the user when   they choice to change tasks without the users consent. </li>
-                        </ol>
+				      <td><h5 id="critical3">&nbsp;</h5>
+				        <h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x">Provide signposts</h4>
+				        <p resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x">See also</p>
+				        <h5 id="critical8"><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong></h5>
+                        <h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x2">3.3.5 Help: (AA)</h4>
+                        <p resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x">sufient tecques for long documetns includes keywords</p>
                       <p>&nbsp;</p></td>
 				      <td>use of headings </td>
 				      <td><p>adding part of the page to landmarks roles</p>
@@ -1091,42 +1103,54 @@ Use this button with care.   If you press it by mistake, press control and y at 
                         </ul>
                         <p>&nbsp;</p>
 			          <p>&nbsp;</p></td>
-				      <td><p>How should the parts of the page , landmarkes epub and coga roles be handled</p>
-				        <p>&nbsp;</p>
-				        <p>Via call out box, with symbol etc</p>
-				        <p>&nbsp;</p>
-				        <p>Nav lists</p>
+				      <td><p>setting needed for:</p>
+				        <p>How should the parts of the page , landmarkes epub and coga roles be handled</p>
+				        <p>options</p>
+				        <p> call out box, (css refrence)</p>
+				        <p>symbol</p>
+				        <p>gerate Nav lists</p>
 				        <p>Other</p>
+				        <p>&nbsp;</p>
+				        <p>&nbsp;</p>
+			          <p>keyword format: css options</p>
+			          <p>keyword navlist options :on/off</p>
 			          <p>&nbsp;</p></td>
 				      <td>&nbsp;</td>
 			        </tr>
 				    <tr>
 				      <th scope="row">Multi media- understandable       structure- I find it easy to find the content needed. </th>
-				      <td><p>1. In Success criteria above <a property="url" title="Permalink for 3.3.5 Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost." aria-label="Permalink for 3.3.5 Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost." href="https://rawgit.com/w3c/coga/master/extension/index.html#provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x">§</a> there is a bullet point:</p>
-			          <p>For multi media,  provide a unique   label for each section such that the labels can  provide an outline of the content.</p>
+				      <td><p> Manageable blocks of information</p>
+			          <p>support personlization </p>
+			          <p>(or the links can become a distraction) </p>
+			          <p><strong>TODO </strong></p>
+			          <p>Clear headings includes multi media</p>
 			          <p>&nbsp;</p>
-			          <p>Also</p>
-			          <h4 resource="#h-provide-a-clear-structure-that-includes" id="h-provide-a-clear-structure-that-includes2"><span property="xhv:role" resource="xhv:heading">2. </span></h4>
-			          <h4 resource="#h-provide-a-clear-structure-that-includes"><span property="xhv:role" resource="xhv:heading">3.3.1 Provide a clear structure that includes:</span></h4>
-			          <p resource="#h-provide-a-clear-structure-that-includes">Media that is over five minuets is divided into programmatically determinable  and logical sections. </p>
 			          <p>&nbsp; </p></td>
-				      <td><p>Add toc in the summary</p>
+				      <td><p>Add toc in the summary with a toc tag</p>
 				        <p>&nbsp;</p>
 				        <p>Use of SMIL</p>
 			          <p>&nbsp;</p></td>
-				      <td>&nbsp;</td>
-				      <td>how should a TOC or nav list be presented</td>
+				      <td><p>TOC as an aria type</p>
+			          <p>&nbsp;</p></td>
+				      <td><p>user settings for how should a TOC or nav list be presented</p>
+			          <p>In the description of a video</p>
+			          <p>under an icon </p>
+			          <p>under text lable</p>
+			          <p>icon and text</p>
+			          <p>possition of icon toc etc</p></td>
 				      <td>&nbsp;</td>
 			        </tr>
 				    <tr>
 				      <th scope="row">I can easily separate what I need       and do not need and find what I need. </th>
-				      <td><h5 id="critical5"><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong></h5>
+				      <td><h5 id="critical5">personlisation</h5>
 				        <p>&nbsp;</p>
-				        <h4 id="layout4"><strong>Provide a clear and understandable layout  that includes:</strong></h4>
+				        <h5><strong><em>Critical features and important information </em></strong></h5>
+				        <p>&nbsp;</p>
+				        <h4 id="layout4"><strong>clear and understandable layout  </strong></h4>
 				        <p>&nbsp;</p>
 				        <h5 id="prevent"><strong>Prevent the user from making errors</strong></h5>
-				        <p>&nbsp;</p>
-				        <p>For all content</p>
+				        <p>Consistent cues are provided that identify  different content types and   the status of element and regions that help the user understand it's   role or state.</p>
+				        <p>make technequ for </p>
                         <ol>
                           <li>Non native content and sponsored content are clearly marked and visually differentiated by standardized techniques </li>
                           <li> Clearly differentiate between facts and less substantiated opinions. Was rewritten from "Clearly differentiate between opinions and facts "</li>
@@ -1141,8 +1165,7 @@ Use this button with care.   If you press it by mistake, press control and y at 
 				        <p>&nbsp;</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ link</a>)</p>
                       <p>&nbsp;</p>
-                      <h2>Potential parts of a page</h2>
-                      <p>&nbsp;</p>
+Potential parts of a page
                       <p>&nbsp;</p>
                       <p>To add : Opinion</p></td>
 				      <td>&nbsp;</td>
@@ -1150,8 +1173,8 @@ Use this button with care.   If you press it by mistake, press control and y at 
 			        </tr>
 				    <tr>
 				      <th scope="row">I know what is an advert or from a       different site. </th>
-				      <td><h5 id="prevent2"><strong>Prevent the user from making errors</strong></h5>
-                        <p>&nbsp;</p>
+				      <td><h5 id="prevent2">Consistent cues</h5>
+                        <p>suffient technequ for third party content</p>
                         <p>For all content</p>
                         <ol>
                           <li>Non native content and sponsored content are clearly marked and visually differentiated by standardized techniques </li>
@@ -1159,10 +1182,10 @@ Use this button with care.   If you press it by mistake, press control and y at 
 				      <td>&nbsp;</td>
 				      <td><p><strong>Proposed attribute: </strong> coga-distraction</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#distractions">§ link</a>)</p>
-                      <h2>Potential parts of a page</h2>
+                      <p><strong>Potential parts of a page</strong></p>
                       <p><strong>Examples:</strong></p>
                       <ul>
-                        <li>external - for external content, such as sponsored or advertising </li>
+                        <li>external - for external content, such as sponsored or advertising (not sign in that is external)</li>
                         <li>offers - for special offers that are complementary to the main content or task </li>
                         <li>advertisement - advertisement or sponsored conten</li>
                       </ul>
@@ -1175,13 +1198,16 @@ Use this button with care.   If you press it by mistake, press control and y at 
 			        </tr>
 				    <tr>
 				      <th scope="row">I know where to find things on a       page. </th>
-				      <td><h4 resource="#h-a-predictable-design-is-used-within-a-set-of-pages-that-includes" id="h-a-predictable-design-is-used-within-a-set-of-pages-that-includes"><span property="xhv:role" resource="xhv:heading">3.4.1 A predictable design is used within a set of pages that includes:<span typeof="bookmark"><a property="url" title="Permalink for 3.4.1 A predictable design is used within a set of pages that includes:" aria-label="Permalink for 3.4.1 A predictable design is used within a set of pages that includes:" href="https://rawgit.com/w3c/coga/master/extension/index.html#a-predictable-design-is-used-within-a-set-of-pages-that-includes"><span content="3.4.1 A predictable design is used within a set of pages that includes:" property="title">§</span></a></span></span></h4>
+				      <td><h4 resource="#h-a-predictable-design-is-used-within-a-set-of-pages-that-includes" id="h-a-predictable-design-is-used-within-a-set-of-pages-that-includes"><span property="xhv:role" resource="xhv:heading">understandable layout <span typeof="bookmark"><a property="url" title="Permalink for 3.4.1 A predictable design is used within a set of pages that includes:" aria-label="Permalink for 3.4.1 A predictable design is used within a set of pages that includes:" href="https://rawgit.com/w3c/coga/master/extension/index.html#a-predictable-design-is-used-within-a-set-of-pages-that-includes"><span content="3.4.1 A predictable design is used within a set of pages that includes:" property="title">§</span></a></span></span></h4>
                         <p>(see COGA Techniques 2.4) </p>
+                        <p>suffient techneqes</p>
                         <ul>
                           <li>A consistent layout of common elements </li>
                           <li>Consistent use of icons and controls such that the same icons and buttons serve the same function </li>
                           <li>The standard layout design and common icons are easily available. </li>
-                      </ul></td>
+                      </ul>
+                      <p>&nbsp;</p>
+                      <p>and changes too 3.2.2 - 3.2.4</p></td>
 				      <td><p>echniques to include: Making common components and   icons programmatic determinable enables their positions to be   standardized via <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-personalization">personalization</a>. </p>
                         <div> Techniques to include: Example of coga-wcag technique In 2015 in English sites standard layout for web sites includes:
                           <ul>
@@ -1194,12 +1220,12 @@ Use this button with care.   If you press it by mistake, press control and y at 
 				      <td><p><span property="xhv:role" resource="xhv:heading">Adding Context </span> </p>
                         <p>&nbsp;</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/coga/master/gap-analysis/semantics.html#h-adding-context">§ link</a>)</p></td>
-				      <td>&nbsp;</td>
+				      <td>seting for possitioning of elements (see above)</td>
 				      <td>&nbsp;</td>
 			        </tr>
 				    <tr>
 				      <th scope="row">I know the design patterns. </th>
-				      <td><h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following2"><span property="xhv:role" resource="xhv:heading">3.3.2 Interactive controls are visually clear or visually clear controls are <a data-link-type="dfn" href="https://rawgit.com/w3c/coga/master/extension/index.html#dfn-easily-available-mode-or-setting">easily available</a> that conform to the following:<span typeof="bookmark"><a property="url" title="Permalink for 3.3.2 Interactive controls are visually clear or visually clear controls are easily available that conform to the following:" aria-label="Permalink for 3.3.2 Interactive controls are visually clear or visually clear controls are easily available that conform to the following:" href="https://rawgit.com/w3c/coga/master/extension/index.html#interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><span content="3.3.2 Interactive controls are visually clear or visually clear controls are easily available that conform to the following:" property="title">§</span></a></span></span></h4>
+				      <td><h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following2"><span property="xhv:role" resource="xhv:heading">  clear controls <span typeof="bookmark"><a property="url" title="Permalink for 3.3.2 Interactive controls are visually clear or visually clear controls are easily available that conform to the following:" aria-label="Permalink for 3.3.2 Interactive controls are visually clear or visually clear controls are easily available that conform to the following:" href="https://rawgit.com/w3c/coga/master/extension/index.html#interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><span content="3.3.2 Interactive controls are visually clear or visually clear controls are easily available that conform to the following:" property="title">§</span></a></span></span></h4>
                         <p>(See COGA Techniques 2.3) </p>
                         <ol>
                           <li>Interactive controls are visible </li>
