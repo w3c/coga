@@ -100,12 +100,31 @@
 		  <div>
 		    <div id="wiki-body">
 		      <div><h2><a id="user-content-sc-text" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#sc-text" aria-hidden="true"></a>Timed Events</h2>
+                   <h3><a id="user-content-current" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#current" aria-hidden="true"></a>Current:</h3>
                   <blockquote class="scquote"><div>
-<p class="sctxt"><strong class="sc-handle"><a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#time-limits-required-behaviors">2.2.1</a> Timed Events:</strong> Timed event are not used except for the situations listed below:
+<p class="sctxt"><strong class="sc-handle"><a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#time-limits-required-behaviors">2.2.1</a> Timing Adjustable:</strong> For each time limit that is 
+                set by the content, at least one of the following is true:
+               
+					(Level A)
+				</p><ul><li><p>
+                    <strong class="sc-handle">Turn off: </strong>The user is allowed to turn off the time limit
+                    before encountering it; or
+                    
+                  </p></li><li><p>
+                    <strong class="sc-handle">Adjust: </strong>The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or</p></li><li><p>
+                    <strong class="sc-handle">Extend: </strong>The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, "press the space bar"), and the user is allowed to extend the time limit at least ten times; or</p></li><li><p>
+                    <strong class="sc-handle">Real-time Exception: </strong>The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or</p></li><li><p>
+                    <strong class="sc-handle">Essential Exception: </strong>The time limit is <a href="#dt-essential" class="termref">essential</a> and extending it would invalidate the activity; or
+                  </p></li><li><p>
+                    <strong class="sc-handle">20 Hour Exception: </strong>The time limit is longer than 20 hours.
+                  </p></li></ul><div class="note"><p class="prefix"><em>Note: </em>This success criterion helps ensure that users can complete tasks without unexpected changes in content or context that are a result of a time limit. This success criterion should be considered in conjunction with <a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#consistent-behavior-receive-focus" class="gl-ref">Success Criterion 3.2.1</a>, which puts limits on changes of content or context as a result of user action.</p></div></div></blockquote>
+                  <h3><a id="user-content-proposed" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#proposed" aria-hidden="true"></a>Proposed:</h3>
+                  <blockquote class="scquote"><div>
+<p class="sctxt"><strong class="sc-handle"><a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#time-limits-required-behaviors">2.2.1</a> @@Timed Events:</strong> Timed event are not used except for the situations listed below:@@
 				</p>
                       <ul>
                         <li>
-                        <p><strong class="sc-handle">Security Exception: </strong>Where security may be at risk a session can timeout after half an hour of inactivity. Where financial or <a href="#dt-sensitive-information" class="internalDFN" data-link-type="dt">sensitive information</a> is at risk the time out can be shorter.</p>
+                        <p><strong class="sc-handle">@@Security Exception: </strong>Where security may be at risk a session can timeout after half an hour of inactivity. Where financial or <a href="#dt-sensitive-information" class="internalDFN" data-link-type="dt">sensitive information</a> is at risk the time out can be shorter.@@</p>
                         </li>
                         <li><p>
                         <strong class="sc-handle">Real-time Exception: </strong>The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or</p>
@@ -114,25 +133,25 @@
                               <strong class="sc-handle">Essential Exception: </strong> The time limit is <a href="#dt-essential" class="internalDFN" data-link-type="dt">essential</a> and extending it would invalidate the activity; or</p>
                         </li>
                         <li><p>
-                            <strong class="sc-handle">20 Hour Exception: </strong>The time limit is longer than 20 hours of inactivity.</p>
+                            <strong class="sc-handle">20 Hour Exception: </strong>The time limit is longer than 20 hours @@of inactivity.@@</p>
                         </li>
                       </ul>
-                      <p>Where there is a <strong>Security Exception</strong> or <strong>20 Hour Exception</strong> the content must also conform to all of the below:</p>
+                      <p>@@Where there is a <strong>Security Exception</strong> or <strong>20 Hour Exception</strong> the content must also conform to all of the below:@@</p>
                       
                       <ul>
                         <li>
-                        <p><strong class="sc-handle">No loss of data: </strong>The user can easily return to the same point in a task, without data loss, for a period of at least a week:</p>
+                        <p><strong class="sc-handle">@@No loss of data: </strong>The user can easily return to the same point in a task, without data loss, for a period of at least a week:</p>
                             <ol>
                                 <li>as the default</li>
                                 <li>via a standardized system setting (for example, the user can choose an option that disables the storage of data)</li>
-                                <li>option to set a user preference that has a conformant interface and is directly available at each stage of the task.</li>
+                                <li>option to set a user preference that has a conformant interface and is directly available at each stage of the task.@@</li>
                             </ol>
                         </li>
                         <li>
-                            <p><strong class="sc-handle">Timing adjustable: </strong>The function to turn off, adjust or extend the timing are controlled by simple action and labeled with simple text. A user or administrator settable time minimum must be provided to complete any controlling action or the user must be given at least 120 seconds to extend the time limit. The the user is allowed to extend the time limit at least ten times. Note that all user setting must be easy to set and use <a href="#dt-safe-standardized-techniques" class="internalDFN" data-link-type="dt">safe standardized techniques</a> when available.</p>
+                            <p><strong class="sc-handle">@@Timing adjustable: </strong>The function to turn off, adjust or extend the timing are controlled by simple action and labeled with simple text. A user or administrator settable time minimum must be provided to complete any controlling action or the user must be given at least 120 seconds to extend the time limit. The the user is allowed to extend the time limit at least ten times. Note that all user setting must be easy to set and use <a href="#dt-safe-standardized-techniques" class="internalDFN" data-link-type="dt">standardized techniques</a> when available.@@</p>
                           </li>
                           <li><p>
-                        <strong class="sc-handle">Aware: </strong>The user should be informed of the timeout limits, including the length of the warning.</p></li>
+                        <strong class="sc-handle">@@Aware: </strong>The user should be informed of the timeout limits, including the length of the warning.@@</p></li>
                       </ul>
                       
                       <div class="note"><p class="prefix"><em>Note: </em>This success criterion helps ensure that users can complete tasks without unexpected changes in content or context that are a result of a time limit. This success criterion should be considered in conjunction with <a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#consistent-behavior-receive-focus" class="gl-ref">Success Criterion 3.2.1</a>, which puts limits on changes of content or context as a result of user action.</p></div></div></blockquote>
@@ -141,7 +160,7 @@
 		        <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
 		        <dl class="termlist">
                     <dt id="dt-sensitive-information">sensitive information</dt>
-                    <dd>Information that can put people at risk or information the user wishes to protect To do - add examples including the user sets the time out</dd>
+                    <dd>Information that can put people at risk or information the user wishes to protect.</dd>
                     <dt id="dt-essential">essential</dt>
                     <dd>if removed, would fundamentally change the information or functionality of the content, and information <strong>and</strong> functionality cannot be achieved in another way that would conform</dd>
                     <dt id="dt-safe-standardized-techniques">safe standardized techniques</dt>
@@ -152,7 +171,10 @@
 		        <p>Principle 2, Guideline 2.2</p>
                 <p>This is an update to SC 2.2.1</p>
 		        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
-                  <p>The use of timed events can present significant barriers for users with cognitive disabilites as these users may require more time to read content or to perform functions such as filling out an online form. For situations where the absence of a timed event would significantly change the intended functionality of an application (for example, for an auction or other real-time event) it is important to ensure that users with disabilities are properly notified of timed events along with an indication of the duration of the time given as well mechanisms which are clearly labeled to adjust, extend or stop the time duration of such an event in order to allow them to fully engage and interact with the Web content and functionality. For example, if the checkout process in an an e-commerce Web site is automatically disabled to provide secure credit card transations, the user is notified of the timeout and is given at least 120 seconds for the ability to extend the time. </p>
+                  <p>The use of timed events can present significant barriers for users with cognitive disabilites as these users may require more time to read content or to perform functions such as filling out an online form. For situations where the absence of a timed event would significantly change the intended functionality of an application (for example, for an auction or other real-time event) it is important to ensure that users with disabilities are properly notified of timed events along with an indication of the duration of the time given as well mechanisms which are clearly labeled to adjust, extend or stop the time duration of such an event in order to allow them to fully engage and interact with the Web content and functionality. For example, if the checkout process in an an e-commerce Web site is automatically disabled to provide secure credit card transations, the user is notified of the timeout and is given at least 120 seconds for the ability to extend the time.</p>
+                  <p>During the completion of an online process for reserving and purchasing a ticket for a hotel and flight on a travel Web site, a user with a congnitive impairment may become overwhelmed with the amount of instruction and data input required to complete the process. The user may not be able to complete the process in one sitting and may need to take a break. The user should be able to leave the process without losing their current place in the process and without losing data that has already been entered.</p>
+                  <p>While making a purchase on an e-commerce Web site a user with a congnitive disability may not remember required information that may seem easy to remember for users without a cognitive impariment, for example, a phone number or zip code. These users may need additional time to look up the required information needed to complete a transaction without losing their place in the process and without losing data that has already been entered.</p>
+                  <p>These experiences have been reported by members of the task force who have have various cognitive impairments.</p>
 		        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
 		        <p>This Success Criterion helps users who need additional time performing tasks or reading content. This can include:</p>
                   <ul>
@@ -185,9 +207,19 @@
 </div>
                   
 		        <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
-                  <h3>Procedure</h3>
+                  <h3>Procedure 1</h3>
 <ol>
-    <li>Engage in a timed event</li>
+    <li>Navigate to a page</li>
+    <li>Page does not timeout before the required time limit of 20 hours accept for the situations listed in the success criteria above</li>
+</ol>
+    <h3>Expected Results</h3>
+        <ul>
+            <li>#2 is true.</li>
+         </ul>
+
+    <h3>Procedure 2</h3>
+<ol>
+    <li>Engage in a valid timed event as listed in the success criteria above</li>
     <li>Confirm that a notification of a timed event is present</li>
     <li>Confirm that the time duration is indicated to the user</li>
     <li>Confirm that a mechanism for adjusting, extending or stoping the timing is available</li>
@@ -200,67 +232,23 @@
     <li>#3 is true.</li>
     <li>#4 is true.</li>
     <li>#5 is true.</li>
+    <li>#6 is true.</li>
  </ul>
 		        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
-               <p>The following are the Techniques and Failures for the existing SC 2.2.1 - Timing Adjustable - I would image these would need to be reviewed to verify if they apply to the updated SC</p>
+                <ul>
+                  <li>Do not use session timeouts unless except for situations listed in the sucess criteria</li>
+                    <li>If a situation exists where a timeout is appropriate, use a mechanism to prevent data loss. For example:</li>
+                    <ul>
+                        <li>A button that is controlled by simple action and is clearly labeled with simple text that saves data that has been entered prior to a given point in the process.</li>            
+                    </ul>
+                       <li>If a situation exists where a timeout is appropriate, implement a mechanism to turn off, adjust or extend the time. For example:</li>
+                    <ul>
+                        <li>An input field that is clearly labeled with simple text and extends the length of time until a timeout will occur.</li>
+                    </ul>
+            
+                </ul>
                   
-                  <h2 id="time-limits-required-behaviors-techniques-head" class="section">
-				Techniques and Failures for Success Criterion 2.2.1 - Timing Adjustable</h2><p>Each numbered item in this section represents a technique or combination of techniques that the <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> Working Group deems sufficient for meeting this Success Criterion. However, it is not necessary to use these particular techniques. For information on using other techniques, see <a href="http://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20160317/understanding-techniques.html">Understanding Techniques for WCAG Success Criteria</a>, particularly the "Other Techniques" section.</p><div class="boxed"><h3 id="time-limits-required-behaviors-115-head" class="div3head">
-				Sufficient Techniques  
-			</h3><p class="instructions"><strong>Instructions:</strong> Select the situation below that matches your content. Each situation includes techniques or combinations of techniques that are known and documented to be sufficient for that situation. 
-</p><div><h4><a name="time-limits-required-behaviors-situation-37-head" id="time-limits-required-behaviors-situation-37-head"> </a>Situation A: If there are session time limits:</h4>
-<ol class="enumar"><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/G133" class="tech-ref">G133: Providing a checkbox on the first page of a multipart form that allows users to ask for longer session time limit or no session time limit</a>
-									         </p></li><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/G198" class="tech-ref">G198: Providing a way for the user to turn the time limit off</a>
-									         </p></li></ol></div><div><h4><a name="time-limits-required-behaviors-situation-38-head" id="time-limits-required-behaviors-situation-38-head"> </a>Situation B: If a time limit is controlled by a script on the page:</h4>
-<ol class="enumar"><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/G198" class="tech-ref">G198: Providing a way for the user to turn the time limit off</a>
-									         </p></li><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/G180" class="tech-ref">G180: Providing the user with a means to set the time limit to 10 times the default time limit</a>
-									         </p></li><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/SCR16" class="tech-ref">SCR16: Providing a script that warns the user a time limit is about to expire</a>  (Scripting)
-			
-										           <strong>AND</strong>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/SCR1" class="tech-ref">SCR1: Allowing the user to extend the default time limit
-        </a>  (Scripting)
-			
-									         </p></li><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/FLASH19" class="tech-ref">FLASH19: Providing a script that warns the user a time limit is about to expire and provides a way to extend it</a> (Flash)
-    	
-									         </p></li><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/FLASH24" class="tech-ref">FLASH24: Allowing the user to extend the default time limit</a> (Flash)
-    	
-									         </p></li><li><p>
-                     <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/SL21" class="tech-ref">SL21: Replacing A Silverlight Timed Animation With a Nonanimated Element</a> (Silverlight)
-    	
-                  </p></li></ol></div><div><h4><a name="time-limits-required-behaviors-situation-39-head" id="time-limits-required-behaviors-situation-39-head"> </a>Situation C: If there are time limits on reading:</h4>
-<ol class="enumar"><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/G4" class="tech-ref">G4: Allowing the content to be paused and restarted from where it was paused</a>
-									         </p></li><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/G198" class="tech-ref">G198: Providing a way for the user to turn the time limit off</a>
-									         </p></li><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/SCR33" class="tech-ref">SCR33: Using script to scroll content, and providing a mechanism to pause it</a>  (Scripting)
-			
-									         </p></li><li><p>
-										           <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/SCR36" class="tech-ref">SCR36: Providing a mechanism to allow users to display moving, scrolling, or auto-updating text in a static window or area</a>  (Scripting)
-			
-									         </p></li></ol></div></div><div class="boxed"><h3 id="time-limits-required-behaviors-116-head" class="div3head">
-				 Additional Techniques (Advisory) for 2.2.1</h3><p>Although not required for conformance, the following additional techniques should be considered in order to make content more accessible. Not all techniques can be used or would be effective in all situations.</p><ul><li><p>
-        Using a script to poll the server and notify a user if a time limit is present (future link) (Scripting)
-    </p></li><li><p>Using sounds to focus user's attention (future link)</p></li></ul></div><div class="boxed"><h3 id="time-limits-required-behaviors-117-head" class="div3head">
-				 Common Failures for <abbr title="Success Criterion">SC</abbr> 2.2.1</h3><p>The following are common mistakes that are considered failures of Success Criterion 2.2.1 by the <acronym title="Web Content Accessibility Guidelines">WCAG</acronym> Working Group.</p><ul><li><p>
-									         <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/F40" class="tech-ref">F40: Failure of Success Criterion 2.2.1 and 2.2.4 due to using meta redirect with a time limit
-        </a>
-								       </p></li><li><p>
-									         <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/F41" class="tech-ref">F41: Failure of Success Criterion 2.2.1, 2.2.4, and 3.2.5 due to using meta refresh to reload the page</a>
-								       </p></li><li><p>
-									         <a href="http://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20160317/F58" class="tech-ref">F58: Failure of Success Criterion 2.2.1 due to using server-side techniques to automatically
-                    redirect pages after a time-out</a>
-								       </p></li></ul></div></div>
-                  
-                  
-	          </div>
+                 
 	        </div>
 	      </div>
 
