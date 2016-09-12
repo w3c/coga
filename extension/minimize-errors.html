@@ -1,121 +1,211 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<title>Minimize User Errors</title>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<script src="../common/biblio.js" class="remove"></script>
+		<style > 
+			.technique {border:dotted;}
+			
+			</style>
+		<!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
+		<script class="remove">
+	var respecConfig = {
+		// embed RDFa data in the output
+		trace:  true,
+		doRDFa: '1.1',
+		includePermalinks: true,
+		permalinkEdge:     true,
+		permalinkHide:     false,
+		tocIntroductory: true,
+		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+		specStatus:           "ED",
+		noRecTrack: true,
+		//crEnd:                "2012-04-30",
+		//perEnd:               "2013-07-23",
+		//publishDate:          "2013-08-22",
+		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 		
+		// the specifications short name, as in http://www.w3.org/TR/short-name/
+		shortName:            "Minimize User Errors",
+		
+
+		// if you wish the publication date to be other than today, set this
+		// publishDate:  "2009-08-06",
+		copyrightStart:  "2016",
+
+		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+		// and its maturity status
+		//previousPublishDate:  "",
+		//previousMaturity:  "",
+		//prevRecURI: "",
+		//previousDiffURI: "",
+
+		// if there a publicly available Editors Draft, this is the link
+		//edDraftURI: "https://w3c.github.io/coga/extension/",
+
+		// if this is a LCWD, uncomment and set the end of its review period
+		// lcEnd: "2012-02-21",
+
+		// editors, add as many as you like
+		// only "name" is required
+		//editors: [			{
+			//{ name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],							
+		
+
+		// authors, add as many as you like. 
+		// This is optional, uncomment if you have authors as well as editors.
+		// only "name" is required. Same format as editors.
+
+		//authors:  [
+		//    { name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],
+
+		/*
+		alternateFormats: [
+			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.pdf', label: "PDF version" }
+		],
+		*/
+		
+		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+		
+		// name of the WG
+		wg:           ["Cognitive and Learning Disabilities Accessibility Task Force", "Accessible Platform Architectures Working Group", "Web Content Accessibility Guidelines Working Group"],
+		
+		// URI of the public WG page
+		wgURI:        ["http://www.w3.org/WAI/PF/cognitive-a11y-tf/", "http://www.w3.org/WAI/APA/", "http://www.w3.org/WAI/GL/"],
+		
+		// name (with the @w3c.org) of the public mailing to which comments are due
+		wgPublicList: "public-coga-comments",
+		
+		// URI of the patent status for this WG, for Rec-track documents
+		// !!!! IMPORTANT !!!!
+		// This is important for Rec-track documents, do not copy a patent URI from a random
+		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+		// Team Contact.
+		wgPatentURI:  ["", "http://www.w3.org/2004/01/pp-impl/83907/status", "http://www.w3.org/2004/01/pp-impl/32212/status"],
+		//maxTocLevel: 2,
+		
+		localBiblio: biblio,
+	};
+		</script>
 	</head>
 
 <body>
-		<h2>Minimize User Errors</h2>
-        <blockquote>
-          <div id="sc2">
-              <p><strong>3.3.3 Minimize user errors</strong>:  Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. If an <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">input error</a> is detected an automatic correction is made where reilable and possible. Otherwise if suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</p>
-          </div>
-</blockquote>
-        <h3><a id="user-content-suggestion-for-priority-level-aaaaaa" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-hidden="true"></a>Suggestion for Priority Level </h3>
-(A)
-        <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
-        <dl class="termlist">
-          <dt id="dt-common-input-error">common input error</dt>
-          <dd>errors that have been reported or documented more then one time, or have been documented in the understanding of the Success Criteria section or have supportive techniques</dd>
-        </dl>
-        
-        <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
-        <p>Principle 3 Understandable - Guideline 3.3: Help users avoid and correct mistakes.</p>
-        <p>This is an update to 3.3.3 Error Suggestion</p>
-        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
-        <p>The intent of this success criteria is to minimize the likelihood of a user generated error prior to an error taking place, thus minimizing instances of both errors and error notifications. Success Criterion 3.3.1 provides for notification of errors. However, persons with cognitive limitations may find it difficult to understand how to correct the errors. @@Additionaly such notifications maybe distracting for users with cognative disabilites, taking focus away from tasks and task completion@@. People with visual disabilities may not be able to figure out exactly how to correct the error. In the case of an unsuccessful form submission, users may abandon the form because they may be unsure of how to correct the error even though they are aware that it has occurred.</p>
-        <p>If automatic correction is reilable and possible if should be implemented. For example, if an input field for a phone number is part of an online form and the required format is xxx-xxx-xxxx, the system should automatically insert the necessary dashes even if the user does not enter them. If automatic correction is not possible the content author, the user agent or supported APIs should provide a description of the error along with suggestions for along with suggestions for fixing the error except when to do so would jeopardize the security or purpose of the content. For example, a user has misspelled a word in the comments section of a contact form. The missspelled word is identified to the user and suggestions for corectly spelled words are listed.</p>
-        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
-        <div>
-          <div>
-            <p>This Success Criterion helps users who need help preventing errors. This can include: </p>
-            <ul>
-              <li> Automatic correction required formats for input fields</li>
-              <li> Spelling and grammar checks </li>
-            </ul>
-            <p>We need to mimize errors because: </p>
-            <ul>
-            <li>Correcting errors before they occur will minimize the number of actions needed to complete a task or process</li>
-              <li>Error notifications can be confusing</li>
-              <li>Error notifications can distract a user from tasks and task completion  </li>
-            </ul>
-            <p>This helps people with many diffrent cognitive disabilities including people with: </p>
+		<div id="wiki-content">
+		  <div>
+		    <div id="wiki-body">
+		      <div><h2><a id="user-content-sc-text" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#sc-text" aria-hidden="true"></a>Minimize User Errors</h2>
+                   <h3><a id="user-content-current" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#current" aria-hidden="true"></a>Current:</h3>
+                  <blockquote class="scquote"><div>
+<p class="sctxt"><strong class="sc-handle"><a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#minimize-error-suggestions">3.3.3</a> Error Suggestion:</strong> If an <a href="#input-errordef" class="termref">input error</a> is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content. 
+					(Level AA)
+				</p></div></blockquote>
+                  <h3><a id="user-content-proposed" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#proposed" aria-hidden="true"></a>Proposed:</h3>
+                                    <blockquote class="scquote"><div><p class="sctxt">@@<strong>3.3.3 Minimize user errors</strong>:  Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. If an <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">input error</a> is detected an automatic correction is made where reliable and possible. Otherwise if suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.@@</p>
+				</div></blockquote>
+		        <h2><a id="user-content-suggestion-for-priority-level-aaaaaa" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-hidden="true"></a>Suggestion for Priority Level</h2>
+                <p>(A)</p>
+		        <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
+                <dl class="termlist">
+                  <dt id="dt-common-input-error">common input error</dt>
+                  <dd>errors that have been reported or documented more then one time, or have been documented in the understanding of the Success Criteria section or have supportive techniques</dd>
+                </dl>
+		        <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
+		        <p>Principle 3 Understandable - Guideline 3.3: Help users avoid and correct mistakes.</p>
+                <p>This is an update to 3.3.3 Error Suggestion</p>
+		        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
+                  <p>The intent of this Success Criteria is to minimize the likelihood of a user generated error prior to an error taking place, thus minimizing instances of both errors and error notifications. Success Criterion 3.3.1 provides for notification of errors. However, persons with cognitive limitations may find it difficult to understand how to correct the errors. @@Additionaly such notifications maybe distracting for users with cognative disabilites, taking focus away from tasks and task completion@@. People with @@both cognative and@@visual disabilities may not be able to figure out exactly how to correct the error. In the case of an unsuccessful form submission, @@these groups of users@@ may abandon the form because they may be unsure of how to correct the error even though they are aware that it has occurred.</p>
+
+<p>If automatic correction is reilable and possible it should be implemented. If automatic correction is not possible the content author, the user agent or supported APIs should provide a description of the error along with suggestions for fixing the error except when to do so would jeopardize the security or purpose of the content.</p>
+                  <p>While registering for an online banking account a form requires the input of the user's birthdate. The required input format is xx/xx/xxxx with a leading zero for single digits. If a single input field with no input correction is presented a user with a cognitive disability may enter 1/3/1996 thus triggering an error notification. It may not be clear to the user that the required format is 01/03/1996 even if an example for instance, xx/xx/xxxx, is shown below the input field. To alleviate any confusion for the user the application should insert a leading zero if a single digit is entered into the month or day along with the required forwardslash characters which act as a delimeter between the month, day and year.</p>
+		        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
+                <p>The task force has good evidence from usability studies which show that people give up when they receive too many errors, and the user  believes they can not complete the task</p>
+		        <p>This Success Criterion helps users who need help preventing errors. This can include:</p>
+                  <ul>
+                    <li>Automatic correction of required formats for input fields</li>
+                  </ul>
+                  <p>We need to minimize errors because:</p>
+                    <ul>
+                      <li>Correcting errors before they occur will minimize the number of actions needed to complete a task or process</li>
+                        <li>Error notifications may be confusing for users with cognitive disabilities</li>
+                        <li>Error notifications can distract a user from tasks and task completion</li>
+                    </ul>
+                <p>This Success Criterion helps people with many different cognitive disabilities including people with: </p>
             <ul>
               <li>Language related disabilities </li>
               <li>Memory related disabilities </li>
               <li>Focus and attention related disabilities </li>
               <li>Disabilities that effects executive function and decision making </li>
             </ul>
-            
-<div>
+                  <div>
       <h3 id="resources">Related Resources</h3>
 		  <p>Resources are for information purposes only, no endorsement implied.</p>
           <ul>
-            <li>TODO</li>
-          </ul>
-              <p>&nbsp;</p>
-</div>
-          </div>
-        </div>
-        <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
-        <p><strong>TODO</strong></p>
-        <p>&nbsp;</p>
+            <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a></li>
+            <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html">User Needs Table 3: Entering data, error prevention &amp; recovery</a></li>
 
-        <p></p>
-        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
-    <p>Because this is an existing SC are the original associated Techniques used?</p>
-        <div>
-          <h3 id="Failures">Common Failures for Success Criterion</h3>
-            <p>Because this is an existing SC are the original associated Failures used?</p>
-        </div>
-<p>&nbsp;</p>
-<blockquote>
-  <div id="sc"></div>
-</blockquote>
-<div>
-  <div>
-		  </div>
+                      </ul>
 </div>
-<div>
-  <h2 id="examples">Examples of Success Criterion 3.3.3</h2>
-  <p><em>(May be added after December 1st)</em></p>
-  <ul>
-		    <li>
-		      <p>Example 1. TODO </p>
-    </li>
-  </ul>
-</div>
-		
-        
-		<section>
-        <div>
-<h2> Working groups notes</h2>
-        <p>Original wording:</p>
-        <blockquote>
-          <div id="sc2">
-            <p><strong>Prevent the user from making errors</strong>:</p>
-            <p><strong>In forms:</strong></p>
-              <ul>
-                  <li>Use <a>known techniques</a> to prevent errors that are relevant to the content.</li>
-                  <li>Documented <a>common input errors</a> can be corrected automatically. (example spelling mistakes)</li>
-                  <li>Enable and identify the default format and standards of locale and allow for change of format on labels and user input (removed use the default format and standards of locale and allow for change of format)</li>
-                  <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a>essential information.</a></li>
-                  <li>Instructions are provided if there is not a label that fully describe the control or if it is not clear were to get the required information. Instructions should explain the purpose and usage of the control. (Graphics with a text alternative may be sufficient)@@( A clear instruction or information is on where 99 of your target audience understand immediately what to do)@@</li>
-              </ul>
-              <p><strong>For legal and financial transactions:</strong></p>
-              <ul>
-                <li>Options that may disadvantage the user are only selected at the users specific request.</li>
-                <li>All types of charges must be clear at the start of a transaction task.</li>
-                <li>When a <a>minimum is known for a type of charge</a> it must be be made clear at the start of the transaction task. (from support the user)</li>
-              </ul>
-              <p><strong>For all content:</strong></p>
-              <ul>
-                  <li>Non native content and sponsored content are clearly marked and visually differentiated by standardized techniques</li>
-                  <li>Clearly differentiate between facts and less substantiated opinions</li>
-              </ul>
-</div>
-</blockquote>
-        </div>
-        </section>
+                  <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
+        <p><strong>General test</strong></p>
+        <p>For Web Content</p>
+        <p>Step 1. Input common formats for a field which has a data format requirement</p>
+        <p>Step 2. Confirm that all common formats for writing the information are accepted </p>
+		        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
+                  <ul>
+					<li>Accept as many formats as possible, such as different ways of writing a phone number and date formats</li>
+					<li>Correct errors in the back-end, such as the post code being written in the text field with the city or state information</li>
+				  <li>Calendars and dates</li>
+                            <ul>
+                              <li>Calendars should default to the first relevant day. Work calendars should default to first working day of a user's locale. </li>
+                              <li>Calendar based booking systems must avoid ability to book return date before departure date. </li>
+                            </ul>
+                            <li>Temperature</li>
+                            <ul>
+                              <li>Use the default temperature format of locale. The requirement to convert between Centigrade and Fahrenheit and vice versa is burdensome so defaulting to the format of the locale removes one layer of complexity.</li>
+                            </ul>
+                  </ul>
+	        </div>
+	      </div>
+
+
+<h2>Working group notes</h2>
+It was decided that the original COGA Success Criteria below should be broken into three separate Success Criteria - Minimize User Errors (outlined above), Labels or Instructions, and Identify Charges.
+              <section>
+                  
+                  			<section>
+					<h4 id="prevent"><strong>Prevent the user from making errors</strong></h4>
+					<p>Was: Support is provided that help users complete and check their task, that includes</p>
+					<p>(may be provided via a standard personalization mechanism) (COGA Techniques 2.9 ) </p>
+					
+                    <p>In forms</p>
+                    <ol>
+                      <li>Use <a>known techniques</a> to prevent errors that are relevant to the content. All standard ways of representing information are accepted as input formats, such as different ways of writing a phone number and date formats. </li>
+                      <li>Documented <a>common input errors</a> can be corrected automatically. (example spelling mistakes)</li>
+                      <li>Enable and identify the default format and standards of locale and allow for change of format on labels and user input (removed use the default format and standards of locale and allow for change of format)</li>
+                      <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a>essential information</a>. </li>
+                      <li>Instructions are provided if there is not a label  that fully describe the control or if it is not clear were to get the required information. Instructions should explain the purpose and usage of the control. (Graphics with a text alternative may be sufficient) ( A clear instruction or information is on where 99% of your target audience understand immediately what to do) </li>
+                    </ol>
+                    <p>For legal and finacial transactions</p>
+                    <ol>
+                      <li>Options that may disadvantage the user are only selected at the users specific request. </li>
+                      <li>All types of charges must be clear at the start of a transaction task. </li>
+                      <li>When a <a>minimum is known for a type of charge</a> it must be be made clear at the start of the transaction task. (from support the user)</li>
+                    </ol>
+                    <p>For all content</p>
+                  <ol>
+                      <li>Non native content and sponsored content are clearly marked and visually differentiated by standardized techniques </li>
+                      <li> Clearly differentiate between facts and less substantiated opinions. <span class="ednote">Was rewritten from "Clearly differentiate between opinions and facts "</span></li>
+                  </ol>
+              
+              </section>
+              
+              
+
 </body>
 </html>
