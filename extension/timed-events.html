@@ -171,9 +171,9 @@
 		        <p>Principle 2, Guideline 2.2</p>
                 <p>This is an update to SC 2.2.1</p>
 		        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
-                  <p>The use of timed events can present significant barriers for users with cognitive disabilites as these users may require more time to read content or to perform functions such as filling out an online form. For situations where the absence of a timed event would significantly change the intended functionality of an application (for example, for an auction or other real-time event) it is important to ensure that users with disabilities are properly notified of timed events along with an indication of the duration of the time given as well mechanisms which are clearly labeled to adjust, extend or stop the time duration of such an event in order to allow them to fully engage and interact with the Web content and functionality. For example, if the checkout process in an an e-commerce Web site is automatically disabled to provide secure credit card transations, the user is notified of the timeout and is given at least 120 seconds for the ability to extend the time.</p>
-                  <p>During the completion of an online process for reserving and purchasing a ticket for a hotel and flight on a travel Web site, a user with a congnitive impairment may become overwhelmed with the amount of instruction and data input required to complete the process. The user may not be able to complete the process in one sitting and may need to take a break. The user should be able to leave the process without losing their current place in the process and without losing data that has already been entered.</p>
-                  <p>While making a purchase on an e-commerce Web site a user with a congnitive disability may not remember required information that may seem easy to remember for users without a cognitive impariment, for example, a phone number or zip code. These users may need additional time to look up the required information needed to complete a transaction without losing their place in the process and without losing data that has already been entered.</p>
+                  <p>The use of timed events can present significant barriers for users with cognitive disabilites as these users may require more time to read content or to perform functions such as filling out an online form. For situations where the absence of a timed event would significantly change the intended functionality of an application (for example, an auction or other real-time event) it is important to ensure that users with disabilities are properly notified of timed events along with an indication of the duration of the time given as well mechanisms which are clearly labeled to adjust, extend or stop the time duration of such an event in order to allow them to fully engage and interact with Web content and functionality. For example, if the checkout process in an an e-commerce Web site is automatically disabled to provide secure credit card transations, the user is notified of the timeout and is given at least 120 seconds for the ability to extend the time.</p>
+                  <p>During the completion of an online process for reserving and purchasing a ticket for a hotel and flight  on a travel Web site, a user with a congnitive impairment may become overwhelmed with the amount of instruction and data input required to complete the process. The user may not be able to complete the process in one sitting and may need to take a break. The user should be able to leave the process without losing their current place in the process and without losing data that has already been entered.</p>
+                  <p>While making a purchase on an e-commerce Web site a user with a congnitive disability may not remember required information that may seem easy to remember for users without a cognitive impariment, for example, a phone number or zip code. These users may need additional time to look up the information required to complete a transaction without losing their place in the process and without losing data that has already been entered.</p>
                   <p>These experiences have been reported by members of the task force who have have various cognitive impairments.</p>
 		        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
 		        <p>This Success Criterion helps users who need additional time performing tasks or reading content. This can include:</p>
@@ -205,50 +205,11 @@
             <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a></li>
                       </ul>
 </div>
-                  
-		        <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
-                  <h3>Procedure 1</h3>
-<ol>
-    <li>Navigate to a page</li>
-    <li>Page does not timeout before the required time limit of 20 hours accept for the situations listed in the success criteria above</li>
-</ol>
-    <h3>Expected Results</h3>
-        <ul>
-            <li>#2 is true.</li>
-         </ul>
-
-    <h3>Procedure 2</h3>
-<ol>
-    <li>Engage in a valid timed event as listed in the success criteria above</li>
-    <li>Confirm that a notification of a timed event is present</li>
-    <li>Confirm that the time duration is indicated to the user</li>
-    <li>Confirm that a mechanism for adjusting, extending or stoping the timing is available</li>
-    <li>Confirm that the user is given at least 120 seconds to adjust, extend or stop the time limit</li>
-    <li>Confirm that the user is allowed to adjust, extend or stop the time limit at least ten times</li>
-</ol>
-<h3>Expected Results</h3>
-<ul>
-    <li>#2 is true.</li>
-    <li>#3 is true.</li>
-    <li>#4 is true.</li>
-    <li>#5 is true.</li>
-    <li>#6 is true.</li>
- </ul>
 		        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
                 <ul>
-                  <li>Do not use session timeouts unless except for situations listed in the sucess criteria</li>
-                    <li>If a situation exists where a timeout is appropriate, use a mechanism to prevent data loss. For example:</li>
-                    <ul>
-                        <li>A button that is controlled by simple action and is clearly labeled with simple text that saves data that has been entered prior to a given point in the process.</li>            
-                    </ul>
-                       <li>If a situation exists where a timeout is appropriate, implement a mechanism to turn off, adjust or extend the time. For example:</li>
-                    <ul>
-                        <li>An input field that is clearly labeled with simple text and extends the length of time until a timeout will occur.</li>
-                    </ul>
-            
+                  <li>Do not use session timeouts unless there has been a week of inactivity.</li>
+                    <li>If a situation exists where a timeout is appropriate, use a mechanism to prevent data loss <strong>and</strong> a <strong>conforment</strong> mechanism to turn off, adjust or extending the time with a warning.</li>
                 </ul>
-                  
-                 
 	        </div>
 	      </div>
 
