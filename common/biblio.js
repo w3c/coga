@@ -401,6 +401,19 @@ var biblio = {
 		"etAl": "false",
 		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
 		},
+	
+	"coga-issue-papers": {
+		"title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
+		"href": "https://w3c.github.io/coga/issue-papers/",
+		"publisher": "W3C",
+		"editors":
+		[
+			"Lisa Seeman",
+			"Michael Cooper"
+		],
+		"etAl": "false",
+		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+	},
 							
 			"Cohen-Kadosh-1": {
 		"title": "Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing",
