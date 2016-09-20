@@ -106,117 +106,6 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     }
   </style>
   <style>
-    /* --- ISSUES/NOTES --- */
-    
-    div.issue-title,
-    div.note-title,
-    div.ednote-title,
-    div.warning-title {
-      padding-right: 1em;
-      min-width: 7.5em;
-      color: #b9ab2d;
-    }
-    
-    div.issue-title {
-      color: #e05252;
-    }
-    
-    div.note-title,
-    div.ednote-title {
-      color: #2b2;
-    }
-    
-    div.warning-title {
-      color: #f22;
-    }
-    
-    div.issue-title span,
-    div.note-title span,
-    div.ednote-title span,
-    div.warning-title span {
-      text-transform: uppercase;
-    }
-    
-    div.note,
-    div.issue,
-    div.ednote,
-    div.warning {
-      margin-top: 1em;
-      margin-bottom: 1em;
-    }
-    
-    .note> p:first-child,
-    .ednote> p:first-child,
-    .issue> p:first-child,
-    .warning> p:first-child {
-      margin-top: 0
-    }
-    
-    .issue,
-    .note,
-    .ednote,
-    .warning {
-      padding: .5em;
-      border-left-width: .5em;
-      border-left-style: solid;
-    }
-    
-    div.issue,
-    div.note,
-    div.ednote,
-    div.warning {
-      padding: 1em 1.2em 0.5em;
-      margin: 1em 0;
-      position: relative;
-      clear: both;
-    }
-    
-    span.note,
-    span.ednote,
-    span.issue,
-    span.warning {
-      padding: .1em .5em .15em;
-    }
-    
-    .issue {
-      border-color: #e05252;
-      background: #fbe9e9;
-    }
-    
-    .note,
-    .ednote {
-      border-color: #52e052;
-      background: #e9fbe9;
-    }
-    
-    .warning {
-      border-color: #f11;
-      border-width: .2em;
-      border-style: solid;
-      background: #fbe9e9;
-    }
-    
-    .warning-title:before {
-      content: "⚠";
-      /*U+26A0 WARNING SIGN*/
-      font-size: 3em;
-      float: left;
-      height: 100%;
-      padding-right: .3em;
-      vertical-align: top;
-      margin-top: -0.5em;
-    }
-    
-    li.task-list-item {
-      list-style: none;
-    }
-    
-    input.task-list-item-checkbox {
-      margin: 0 0.35em 0.25em -1.6em;
-      vertical-align: middle;
-    }
-  </style>
-  <style>
     /* --- PERMALINKS --- */
     
     .permalink {
@@ -366,11 +255,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     }
     /* --- DL --- */
     
-    .section dd> p:first-child {
+    .section dd>p:first-child {
       margin-top: 0;
     }
     
-    .section dd> p:last-child {
+    .section dd>p:last-child {
       margin-bottom: 0;
     }
     
@@ -418,7 +307,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </style>
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED">
   <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
-  <meta name="generator" content="ReSpec 4.4.5">
+  <meta name="generator" content="ReSpec 5.0.3">
   <script id="initialUserConfig" type="application/json">
     {
       "trace": true,
@@ -854,6 +743,18 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         {
           "title": "Cognitive Accessibility User Research; Aging and Dementia",
           "href": "https://www.w3.org/TR/coga-user-research/#aging-and-dementia",
+          "publisher": "W3C",
+          "editors": [
+            "Lisa Seeman",
+            "Michael Cooper"
+          ],
+          "etAl": "false",
+          "deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+        },
+        "coga-issue-papers":
+        {
+          "title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
+          "href": "https://w3c.github.io/coga/issue-papers/",
           "publisher": "W3C",
           "editors": [
             "Lisa Seeman",
@@ -2238,7 +2139,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Cognitive Accessibility Roadmap and Gap Analysis</h1>
-    <h2 id="w3c-editor-s-draft-16-august-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-08-16">16 August 2016</time></h2>
+    <h2 id="w3c-editor-s-draft-20-september-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-09-20">20 September 2016</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd>
@@ -2416,38 +2317,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </li>
         </ol>
       </li>
-      <li class="tocline"><a href="#proposal-coga-semantics-to-enable-personalization" class="tocxref"><span class="secno">A. </span>Proposal: COGA Semantics to Enable Personalization</a>
+      <li class="tocline"><a href="#personalization-semantics" class="tocxref"><span class="secno">3. </span>Personalization semantics</a></li>
+      <li class="tocline"><a href="#significant-contributors-to-this-document" class="tocxref"><span class="secno">4. </span>Significant contributors to this document</a></li>
+      <li class="tocline"><a href="#references" class="tocxref"><span class="secno">A. </span>References</a>
         <ol class="toc">
-          <li class="tocline"><a href="#introduction-1" class="tocxref"><span class="secno">A.1 </span>Introduction</a>
-            <ol class="toc">
-              <li class="tocline"><a href="#contextual-personalization" class="tocxref"><span class="secno">A.1.1 </span>Contextual Personalization</a></li>
-            </ol>
-          </li>
-          <li class="tocline"><a href="#simplification" class="tocxref"><span class="secno">A.2 </span>Simplification</a></li>
-          <li class="tocline"><a href="#adding-context" class="tocxref"><span class="secno">A.3 </span>Adding Context </a></li>
-          <li class="tocline"><a href="#general-context" class="tocxref"><span class="secno">A.4 </span>General context</a>
-            <ol class="toc">
-              <li class="tocline"><a href="#should-we-be-using-rdfa" class="tocxref"><span class="secno">A.4.1 </span>Should we be using RDFa?</a></li>
-            </ol>
-          </li>
-          <li class="tocline"><a href="#concept-codes" class="tocxref"><span class="secno">A.5 </span>Concept codes</a></li>
-          <li class="tocline"><a href="#potential-parts-of-a-page" class="tocxref"><span class="secno">A.6 </span>Potential parts of a page</a></li>
-          <li class="tocline"><a href="#number-free" class="tocxref"><span class="secno">A.7 </span>Number free</a></li>
-          <li class="tocline"><a href="#non-literal-text-and-images" class="tocxref"><span class="secno">A.8 </span>Non-literal text and images</a></li>
-          <li class="tocline"><a href="#explain-and-feedback" class="tocxref"><span class="secno">A.9 </span>Explain and feedback</a></li>
-          <li class="tocline"><a href="#more-help" class="tocxref"><span class="secno">A.10 </span>More Help</a></li>
-          <li class="tocline"><a href="#potential-features" class="tocxref"><span class="secno">A.11 </span>Potential Features</a></li>
-          <li class="tocline"><a href="#language-type-support" class="tocxref"><span class="secno">A.12 </span>Language type support</a></li>
-          <li class="tocline"><a href="#logs" class="tocxref"><span class="secno">A.13 </span>Logs</a></li>
-          <li class="tocline"><a href="#reminders-and-messages" class="tocxref"><span class="secno">A.14 </span>Reminders and messages</a></li>
-          <li class="tocline"><a href="#distractions" class="tocxref"><span class="secno">A.15 </span>Distractions</a></li>
-          <li class="tocline"><a href="#additional-wai-aria-roles" class="tocxref"><span class="secno">A.16 </span>Additional WAI-ARIA roles</a></li>
-        </ol>
-      </li>
-      <li class="tocline"><a href="#significant-contributors-to-this-document" class="tocxref"><span class="secno">B. </span>Significant contributors to this document</a></li>
-      <li class="tocline"><a href="#references" class="tocxref"><span class="secno">C. </span>References</a>
-        <ol class="toc">
-          <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">C.1 </span>Informative references</a></li>
+          <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">A.1 </span>Informative references</a></li>
         </ol>
       </li>
     </ol>
@@ -2455,7 +2329,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   <section class="informative" id="introduction" typeof="bibo:Chapter" resource="#introduction" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-introduction" resource="#h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction<span class="permalink" typeof="bookmark"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction" property="url"><span property="title" content="1. Introduction">§</span></a></span></span></h2>
+    <h2 id="h-introduction" resource="#h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction<span class="permalink" typeof="bookmark"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction" property="url"><span property="title" content="1. Introduction">§</span></a>
+      </span>
+      </span>
+    </h2>
     <p><em>This section is non-normative.</em></p>
     <p>The Cognitive and Learning Disabilities Accessibility Task Force's aim is to improve web accessibility for people with cognitive and learning disabilities. This is being done as part of the Web Content Accessibility Guidelines (WCAG) and Accessible Platform Architecture Working Group (APA WG), part of the Web Accessibility Initiative (WAI) of the <abbr title="World Wide Web Consortium">W3C</abbr>. Challenges facing this work include: </p>
     <ul>
@@ -2526,7 +2403,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <p>Then we can start the process again with phase 2 for additional research and new user groups, possibly including emotional disabilities.</p>
 
     <section id="importance-of-this-document" typeof="bibo:Chapter" resource="#importance-of-this-document" property="bibo:hasPart">
-      <h3 id="h-importance-of-this-document" resource="#h-importance-of-this-document"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.1 </span>Importance of This Document<span class="permalink" typeof="bookmark"><a href="#importance-of-this-document" aria-label="Permalink for 1.1 Importance of This Document" title="Permalink for 1.1 Importance of This Document" property="url"><span property="title" content="1.1 Importance of This Document">§</span></a></span></span></h3>
+      <h3 id="h-importance-of-this-document" resource="#h-importance-of-this-document"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.1 </span>Importance of This Document<span class="permalink" typeof="bookmark"><a href="#importance-of-this-document" aria-label="Permalink for 1.1 Importance of This Document" title="Permalink for 1.1 Importance of This Document" property="url"><span property="title" content="1.1 Importance of This Document">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>This document is important because enabling people with learning and cognitive disabilities to use the Web and Web technologies is of critical importance to both individuals and society.</p>
       <p>More and more, the Internet and the Web have become the main way people stay informed and current on news and health matters; keep in touch with friends and family; and it can provide independence such as convenient shopping etc. People who cannot use these interfaces will have an increased feeling of having a disability and of being alienated from society. </p>
       <p>
@@ -2537,7 +2417,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="people-with-cognitive-and-learning-disabilities-and-the-web" typeof="bibo:Chapter" resource="#people-with-cognitive-and-learning-disabilities-and-the-web" property="bibo:hasPart">
-      <h3 id="h-people-with-cognitive-and-learning-disabilities-and-the-web" resource="#h-people-with-cognitive-and-learning-disabilities-and-the-web"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>People with cognitive and learning disabilities and the Web<span class="permalink" typeof="bookmark"><a href="#people-with-cognitive-and-learning-disabilities-and-the-web" aria-label="Permalink for 1.2 People with cognitive and learning disabilities and the Web" title="Permalink for 1.2 People with cognitive and learning disabilities and the Web" property="url"><span property="title" content="1.2 People with cognitive and learning disabilities and the Web">§</span></a></span></span></h3>
+      <h3 id="h-people-with-cognitive-and-learning-disabilities-and-the-web" resource="#h-people-with-cognitive-and-learning-disabilities-and-the-web"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.2 </span>People with cognitive and learning disabilities and the Web<span class="permalink" typeof="bookmark"><a href="#people-with-cognitive-and-learning-disabilities-and-the-web" aria-label="Permalink for 1.2 People with cognitive and learning disabilities and the Web" title="Permalink for 1.2 People with cognitive and learning disabilities and the Web" property="url"><span property="title" content="1.2 People with cognitive and learning disabilities and the Web">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>People with cognitive and learning disabilities may be unable to use web content because of the design choices of the author. Examples include: </p>
       <ul>
         <li> People with impaired short term memory are unlikely to be able to remember passwords and access codes. They may have trouble or be unable to remember new symbols and interface paradigms. </li>
@@ -2550,12 +2433,18 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="assumptions" typeof="bibo:Chapter" resource="#assumptions" property="bibo:hasPart">
-      <h3 id="h-assumptions" resource="#h-assumptions"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.3 </span>Assumptions<span class="permalink" typeof="bookmark"><a href="#assumptions" aria-label="Permalink for 1.3 Assumptions" title="Permalink for 1.3 Assumptions" property="url"><span property="title" content="1.3 Assumptions">§</span></a></span></span></h3>
+      <h3 id="h-assumptions" resource="#h-assumptions"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.3 </span>Assumptions<span class="permalink" typeof="bookmark"><a href="#assumptions" aria-label="Permalink for 1.3 Assumptions" title="Permalink for 1.3 Assumptions" property="url"><span property="title" content="1.3 Assumptions">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>There is a huge number of cognitive disabilities and variations of them. If we attempt an analysis of all the possibilities, the job will be too big, and nothing will be achieved. Therefore, we are adopting a phased approach, selecting in phase one a limited scope of eight diverse disabilities, and hope to achieve something useful within that scope. Also note that helping users improve skills, and emotional disabilities, are out of scope for phase one. We anticipate this analysis will continue to a second or third phase where more user groups are analyzed, and the existing analyses are updated with new research and with new technologies and scenarios. </p>
     </section>
 
     <section id="maturity-of-this-publication" typeof="bibo:Chapter" resource="#maturity-of-this-publication" property="bibo:hasPart">
-      <h3 id="h-maturity-of-this-publication" resource="#h-maturity-of-this-publication"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.4 </span>Maturity of this publication<span class="permalink" typeof="bookmark"><a href="#maturity-of-this-publication" aria-label="Permalink for 1.4 Maturity of this publication" title="Permalink for 1.4 Maturity of this publication" property="url"><span property="title" content="1.4 Maturity of this publication">§</span></a></span></span></h3>
+      <h3 id="h-maturity-of-this-publication" resource="#h-maturity-of-this-publication"><span property="xhv:role" resource="xhv:heading"><span class="secno">1.4 </span>Maturity of this publication<span class="permalink" typeof="bookmark"><a href="#maturity-of-this-publication" aria-label="Permalink for 1.4 Maturity of this publication" title="Permalink for 1.4 Maturity of this publication" property="url"><span property="title" content="1.4 Maturity of this publication">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>The first and second sections of this document are an introduction that analyses the current situation and discusses many issues. Although we are expecting more work to be done on these sections, we consider them to be a mature. </p>
       <p> Subsequent sections (the roadmap) identifies unmet user needs and proposes way to solve these needs. These sections are not mature and are often incomplete. We are publishing them early to solicit early feedback on the format and the identification of user needs. You can follow our work on this section and see the latest draft from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. </p>
     </section>
@@ -2563,14 +2452,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   <section id="summary-of-issues-and-techniques" typeof="bibo:Chapter" resource="#summary-of-issues-and-techniques" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-summary-of-issues-and-techniques" resource="#h-summary-of-issues-and-techniques"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Summary of issues and techniques <span class="permalink" typeof="bookmark"><a href="#summary-of-issues-and-techniques" aria-label="Permalink for 2. Summary of issues and techniques " title="Permalink for 2. Summary of issues and techniques " property="url"><span property="title" content="2. Summary of issues and techniques ">§</span></a></span></span></h2>
+    <h2 id="h-summary-of-issues-and-techniques" resource="#h-summary-of-issues-and-techniques"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Summary of issues and techniques <span class="permalink" typeof="bookmark"><a href="#summary-of-issues-and-techniques" aria-label="Permalink for 2. Summary of issues and techniques " title="Permalink for 2. Summary of issues and techniques " property="url"><span property="title" content="2. Summary of issues and techniques ">§</span></a>
+      </span>
+      </span>
+    </h2>
     <p>As discussed above, the task force reviewed different disabilities to identify techniques that supported their using the web. The task force also reviewed issues that went beyond standard Web content, but affected the use of the Web for people with cognitive and learning disabilities.</p>
     <p>This section is a summary of these findings. The full reports can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.
       <!-- :</p>
 			<p><a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a> and <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-papers/</a>--></p>
 
     <section id="overview-of-techniques" typeof="bibo:Chapter" resource="#overview-of-techniques" property="bibo:hasPart">
-      <h3 id="h-overview-of-techniques" resource="#h-overview-of-techniques"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1 </span>Overview of techniques<span class="permalink" typeof="bookmark"><a href="#overview-of-techniques" aria-label="Permalink for 2.1 Overview of techniques" title="Permalink for 2.1 Overview of techniques" property="url"><span property="title" content="2.1 Overview of techniques">§</span></a></span></span></h3>
+      <h3 id="h-overview-of-techniques" resource="#h-overview-of-techniques"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.1 </span>Overview of techniques<span class="permalink" typeof="bookmark"><a href="#overview-of-techniques" aria-label="Permalink for 2.1 Overview of techniques" title="Permalink for 2.1 Overview of techniques" property="url"><span property="title" content="2.1 Overview of techniques">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>Most designers want people to be able to use their site. However designs that might be difficult for some people to use can actually bar people with cognitive and learning disabilities from using the content at all. Typically this happens because content providers may not be familiar with the needs of users having these impairments. We have reviewed multiple user groups as a first phase to identify user needs and challenges that are not fully included in WCAG. From this research we have identified techniques and themes though the techniques that authors need to be aware of (and are not full addressed in WCAG 2.0) The key themes are: </p>
       <ol>
         <li>Help as many users as possible understand the site and know how to use it. This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patters. Personalization based on user needs and markup properly annotated with cognitive semantics can help make the symbols and design as familiar to the user as possible. </li>
@@ -2595,7 +2490,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="summary-of-technique-solutions" typeof="bibo:Chapter" resource="#summary-of-technique-solutions" property="bibo:hasPart">
-      <h3 id="h-summary-of-technique-solutions" resource="#h-summary-of-technique-solutions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.2 </span>Summary of technique solutions <span class="permalink" typeof="bookmark"><a href="#summary-of-technique-solutions" aria-label="Permalink for 2.2 Summary of technique solutions " title="Permalink for 2.2 Summary of technique solutions " property="url"><span property="title" content="2.2 Summary of technique solutions ">§</span></a></span></span></h3>
+      <h3 id="h-summary-of-technique-solutions" resource="#h-summary-of-technique-solutions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.2 </span>Summary of technique solutions <span class="permalink" typeof="bookmark"><a href="#summary-of-technique-solutions" aria-label="Permalink for 2.2 Summary of technique solutions " title="Permalink for 2.2 Summary of technique solutions " property="url"><span property="title" content="2.2 Summary of technique solutions ">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>To help bridge the gap we propose the following strategies: </p>
       <p>1. Construct a full list of techniques.
         <!--: See <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a>--></p>
@@ -2631,23 +2529,35 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="summary-of-issues-papers" typeof="bibo:Chapter" resource="#summary-of-issues-papers" property="bibo:hasPart">
-      <h3 id="h-summary-of-issues-papers" resource="#h-summary-of-issues-papers"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3 </span>Summary of issues papers<span class="permalink" typeof="bookmark"><a href="#summary-of-issues-papers" aria-label="Permalink for 2.3 Summary of issues papers" title="Permalink for 2.3 Summary of issues papers" property="url"><span property="title" content="2.3 Summary of issues papers">§</span></a></span></span></h3> The following sections provide a summary of the issues and solutions. Full versions can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.
+      <h3 id="h-summary-of-issues-papers" resource="#h-summary-of-issues-papers"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3 </span>Summary of issues papers<span class="permalink" typeof="bookmark"><a href="#summary-of-issues-papers" aria-label="Permalink for 2.3 Summary of issues papers" title="Permalink for 2.3 Summary of issues papers" property="url"><span property="title" content="2.3 Summary of issues papers">§</span></a>
+        </span>
+        </span>
+      </h3>
+      The following sections provide a summary of the issues and solutions. Full versions can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.
       <!--discussed at <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-paper</a>-->
 
       <section id="issues-with-flat-design" typeof="bibo:Chapter" resource="#issues-with-flat-design" property="bibo:hasPart">
-        <h4 id="h-issues-with-flat-design" resource="#h-issues-with-flat-design"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.1 </span>Issues with flat design<span class="permalink" typeof="bookmark"><a href="#issues-with-flat-design" aria-label="Permalink for 2.3.1 Issues with flat design" title="Permalink for 2.3.1 Issues with flat design" property="url"><span property="title" content="2.3.1 Issues with flat design">§</span></a></span></span></h4>
+        <h4 id="h-issues-with-flat-design" resource="#h-issues-with-flat-design"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.1 </span>Issues with flat design<span class="permalink" typeof="bookmark"><a href="#issues-with-flat-design" aria-label="Permalink for 2.3.1 Issues with flat design" title="Permalink for 2.3.1 Issues with flat design" property="url"><span property="title" content="2.3.1 Issues with flat design">§</span></a>
+          </span>
+          </span>
+        </h4>
         <!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html</a></p>-->
         <p><strong>What it is:</strong> Since 2013 Flat design has become a popular UI design pattern characterized by clean flat areas of color, clear typography and simply iconography. </p>
 
         <section id="summary-of-the-problem-with-flat-design" typeof="bibo:Chapter" resource="#summary-of-the-problem-with-flat-design" property="bibo:hasPart">
-          <h5 id="h-summary-of-the-problem-with-flat-design" resource="#h-summary-of-the-problem-with-flat-design"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.1.1 </span>Summary of the problem with flat design:<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problem-with-flat-design" aria-label="Permalink for 2.3.1.1 Summary of the problem with flat design:" title="Permalink for 2.3.1.1 Summary of the problem with flat design:" property="url"><span property="title" content="2.3.1.1 Summary of the problem with flat design:">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-the-problem-with-flat-design" resource="#h-summary-of-the-problem-with-flat-design"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.1.1 </span>Summary of the problem with flat design:<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problem-with-flat-design" aria-label="Permalink for 2.3.1.1 Summary of the problem with flat design:" title="Permalink for 2.3.1.1 Summary of the problem with flat design:" property="url"><span property="title" content="2.3.1.1 Summary of the problem with flat design:">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Many people can not learn easily new design metaphors (most coga groups) or remember things that they learned (such as people with a Mild Cognitive Impairment or dementia). Without these skills it can be much harder or impossible to: </p>
           <ul>
             <li> locate a desired items to interact with and </li>
             <li> know what interaction may do </li>
           </ul>
-          <h5 id="summary-of-solutions-for-flat-design">Summary of solutions for flat design<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problem-with-flat-design" aria-label="Permalink for Summary of solutions for flat design" title="Permalink for Summary of solutions for flat design" property="url"><span property="title" content="Summary of solutions for flat design">§</span></a></span></h5>
+          <h5 id="summary-of-solutions-for-flat-design">Summary of solutions for flat design<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problem-with-flat-design" aria-label="Permalink for Summary of solutions for flat design" title="Permalink for Summary of solutions for flat design" property="url"><span property="title" content="Summary of solutions for flat design">§</span></a>
+            </span>
+          </h5>
           <ol>
             <li> In the authoring techniques and in proposal for WCAG we are recommending that content provide clear visual affordances (See appendix two for details on the proposed semantics.)</li>
             <li> In personalization we are adding settings to allow buttons and controls to have clear affordances </li>
@@ -2656,24 +2566,36 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section id="further-work-for-flat-design" typeof="bibo:Chapter" resource="#further-work-for-flat-design" property="bibo:hasPart">
-          <h5 id="h-further-work-for-flat-design" resource="#h-further-work-for-flat-design"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.1.2 </span>Further work for flat design<span class="permalink" typeof="bookmark"><a href="#further-work-for-flat-design" aria-label="Permalink for 2.3.1.2 Further work for flat design" title="Permalink for 2.3.1.2 Further work for flat design" property="url"><span property="title" content="2.3.1.2 Further work for flat design">§</span></a></span></span></h5>
+          <h5 id="h-further-work-for-flat-design" resource="#h-further-work-for-flat-design"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.1.2 </span>Further work for flat design<span class="permalink" typeof="bookmark"><a href="#further-work-for-flat-design" aria-label="Permalink for 2.3.1.2 Further work for flat design" title="Permalink for 2.3.1.2 Further work for flat design" property="url"><span property="title" content="2.3.1.2 Further work for flat design">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>How to recommend white spaces which can be confusing if over done for people with low visions? How to recommend clear groups </p>
         </section>
       </section>
 
       <section id="issues-with-web-security-and-privacy-technologies" typeof="bibo:Chapter" resource="#issues-with-web-security-and-privacy-technologies" property="bibo:hasPart">
-        <h4 id="h-issues-with-web-security-and-privacy-technologies" resource="#h-issues-with-web-security-and-privacy-technologies"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.2 </span>Issues with web security and privacy technologies<span class="permalink" typeof="bookmark"><a href="#issues-with-web-security-and-privacy-technologies" aria-label="Permalink for 2.3.2 Issues with web security and privacy technologies" title="Permalink for 2.3.2 Issues with web security and privacy technologies" property="url"><span property="title" content="2.3.2 Issues with web security and privacy technologies">§</span></a></span></span></h4>
+        <h4 id="h-issues-with-web-security-and-privacy-technologies" resource="#h-issues-with-web-security-and-privacy-technologies"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.2 </span>Issues with web security and privacy technologies<span class="permalink" typeof="bookmark"><a href="#issues-with-web-security-and-privacy-technologies" aria-label="Permalink for 2.3.2 Issues with web security and privacy technologies" title="Permalink for 2.3.2 Issues with web security and privacy technologies" property="url"><span property="title" content="2.3.2 Issues with web security and privacy technologies">§</span></a>
+          </span>
+          </span>
+        </h4>
         <!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html</a></p>-->
         <p><strong>what it is:</strong> For security purposes, introduction of intentional barriers to task completion. </p>
 
         <section id="summary-of-the-problems-with-security-and-privacy" typeof="bibo:Chapter" resource="#summary-of-the-problems-with-security-and-privacy" property="bibo:hasPart">
-          <h5 id="h-summary-of-the-problems-with-security-and-privacy" resource="#h-summary-of-the-problems-with-security-and-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.2.1 </span>Summary of the problems with security and privacy<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-with-security-and-privacy" aria-label="Permalink for 2.3.2.1 Summary of the problems with security and privacy" title="Permalink for 2.3.2.1 Summary of the problems with security and privacy" property="url"><span property="title" content="2.3.2.1 Summary of the problems with security and privacy">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-the-problems-with-security-and-privacy" resource="#h-summary-of-the-problems-with-security-and-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.2.1 </span>Summary of the problems with security and privacy<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-with-security-and-privacy" aria-label="Permalink for 2.3.2.1 Summary of the problems with security and privacy" title="Permalink for 2.3.2.1 Summary of the problems with security and privacy" property="url"><span property="title" content="2.3.2.1 Summary of the problems with security and privacy">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Many people (most COGA groups) have memory issues that can make copying text, or remembering passwords, difficult or impossible. Other contributing issues include impaired executive function. Difficult security mechanisms often bar people with cognitive disabilities from accessing content or using a service at all. </p>
         </section>
 
         <section id="summary-of-solutions-for-security-and-privacy" typeof="bibo:Chapter" resource="#summary-of-solutions-for-security-and-privacy" property="bibo:hasPart">
-          <h5 id="h-summary-of-solutions-for-security-and-privacy" resource="#h-summary-of-solutions-for-security-and-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.2.2 </span>Summary of solutions for security and privacy<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-security-and-privacy" aria-label="Permalink for 2.3.2.2 Summary of solutions for security and privacy" title="Permalink for 2.3.2.2 Summary of solutions for security and privacy" property="url"><span property="title" content="2.3.2.2 Summary of solutions for security and privacy">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-solutions-for-security-and-privacy" resource="#h-summary-of-solutions-for-security-and-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.2.2 </span>Summary of solutions for security and privacy<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-security-and-privacy" aria-label="Permalink for 2.3.2.2 Summary of solutions for security and privacy" title="Permalink for 2.3.2.2 Summary of solutions for security and privacy" property="url"><span property="title" content="2.3.2.2 Summary of solutions for security and privacy">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>We recommend a variety of solutions, which may work independently or jointly with others, such as: </p>
           <ul>
             <li> biometric devices, e.g., rings </li>
@@ -2685,7 +2607,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section id="further-work-for-security-and-privacy" typeof="bibo:Chapter" resource="#further-work-for-security-and-privacy" property="bibo:hasPart">
-          <h5 id="h-further-work-for-security-and-privacy" resource="#h-further-work-for-security-and-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.2.3 </span>Further work for security and privacy<span class="permalink" typeof="bookmark"><a href="#further-work-for-security-and-privacy" aria-label="Permalink for 2.3.2.3 Further work for security and privacy" title="Permalink for 2.3.2.3 Further work for security and privacy" property="url"><span property="title" content="2.3.2.3 Further work for security and privacy">§</span></a></span></span></h5>
+          <h5 id="h-further-work-for-security-and-privacy" resource="#h-further-work-for-security-and-privacy"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.2.3 </span>Further work for security and privacy<span class="permalink" typeof="bookmark"><a href="#further-work-for-security-and-privacy" aria-label="Permalink for 2.3.2.3 Further work for security and privacy" title="Permalink for 2.3.2.3 Further work for security and privacy" property="url"><span property="title" content="2.3.2.3 Further work for security and privacy">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Develop ease-of-use ideas, such as: </p>
           <ul>
             <li> alternative authentication factors </li>
@@ -2696,10 +2621,17 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="issues-with-user-safety" typeof="bibo:Chapter" resource="#issues-with-user-safety" property="bibo:hasPart">
-        <h4 id="h-issues-with-user-safety" resource="#h-issues-with-user-safety"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.3 </span>Issues with user safety<span class="permalink" typeof="bookmark"><a href="#issues-with-user-safety" aria-label="Permalink for 2.3.3 Issues with user safety" title="Permalink for 2.3.3 Issues with user safety" property="url"><span property="title" content="2.3.3 Issues with user safety">§</span></a></span></span></h4> Taken from the issue paper on safety. A full list of the Issue papers can be found on our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.
+        <h4 id="h-issues-with-user-safety" resource="#h-issues-with-user-safety"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.3 </span>Issues with user safety<span class="permalink" typeof="bookmark"><a href="#issues-with-user-safety" aria-label="Permalink for 2.3.3 Issues with user safety" title="Permalink for 2.3.3 Issues with user safety" property="url"><span property="title" content="2.3.3 Issues with user safety">§</span></a>
+          </span>
+          </span>
+        </h4>
+        Taken from the issue paper on safety. A full list of the Issue papers can be found on our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.
 
         <section id="summary-of-the-problems-with-user-safety" typeof="bibo:Chapter" resource="#summary-of-the-problems-with-user-safety" property="bibo:hasPart">
-          <h5 id="h-summary-of-the-problems-with-user-safety" resource="#h-summary-of-the-problems-with-user-safety"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.3.1 </span>Summary of the problems with user safety<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-with-user-safety" aria-label="Permalink for 2.3.3.1 Summary of the problems with user safety" title="Permalink for 2.3.3.1 Summary of the problems with user safety" property="url"><span property="title" content="2.3.3.1 Summary of the problems with user safety">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-the-problems-with-user-safety" resource="#h-summary-of-the-problems-with-user-safety"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.3.1 </span>Summary of the problems with user safety<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-with-user-safety" aria-label="Permalink for 2.3.3.1 Summary of the problems with user safety" title="Permalink for 2.3.3.1 Summary of the problems with user safety" property="url"><span property="title" content="2.3.3.1 Summary of the problems with user safety">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>People with impaired reasoning, attention or memory are particularly vulnerable to all types of cyber crime. Examples of types of criminals active on the internet include: </p>
           <ul>
             <li> Con-artists or cheats, who misled people into giving them money. </li>
@@ -2709,7 +2641,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section id="summary-of-solutions-for-user-safety" typeof="bibo:Chapter" resource="#summary-of-solutions-for-user-safety" property="bibo:hasPart">
-          <h5 id="h-summary-of-solutions-for-user-safety" resource="#h-summary-of-solutions-for-user-safety"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.3.2 </span>Summary of solutions for user safety<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-user-safety" aria-label="Permalink for 2.3.3.2 Summary of solutions for user safety" title="Permalink for 2.3.3.2 Summary of solutions for user safety" property="url"><span property="title" content="2.3.3.2 Summary of solutions for user safety">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-solutions-for-user-safety" resource="#h-summary-of-solutions-for-user-safety"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.3.2 </span>Summary of solutions for user safety<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-user-safety" aria-label="Permalink for 2.3.3.2 Summary of solutions for user safety" title="Permalink for 2.3.3.2 Summary of solutions for user safety" property="url"><span property="title" content="2.3.3.2 Summary of solutions for user safety">§</span></a>
+            </span>
+            </span>
+          </h5>
           <ol>
             <li>All user information must be kept safe, to the fullest extent possible. Any clues that the user has cognitive disabilities (such as a request for a simplified version) should be protected information.</li>
             <li>Security should be strong AND easily used by those with cognitive disabilities, such as a biometrics option. For a full discussion see the section on security.</li>
@@ -2728,14 +2663,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="issues-with-math" typeof="bibo:Chapter" resource="#issues-with-math" property="bibo:hasPart">
-        <h4 id="h-issues-with-math" resource="#h-issues-with-math"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.4 </span>Issues with math<span class="permalink" typeof="bookmark"><a href="#issues-with-math" aria-label="Permalink for 2.3.4 Issues with math" title="Permalink for 2.3.4 Issues with math" property="url"><span property="title" content="2.3.4 Issues with math">§</span></a></span></span></h4>
+        <h4 id="h-issues-with-math" resource="#h-issues-with-math"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.4 </span>Issues with math<span class="permalink" typeof="bookmark"><a href="#issues-with-math" aria-label="Permalink for 2.3.4 Issues with math" title="Permalink for 2.3.4 Issues with math" property="url"><span property="title" content="2.3.4 Issues with math">§</span></a>
+          </span>
+          </span>
+        </h4>
         <!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/math.html">https://rawgit.com/w3c/coga/master/issue-papers/math.html</a></p>-->
-        <h4 id="summary-of-the-problems-with-math">Summary of the problems with math<span class="permalink" typeof="bookmark"><a href="#issues-with-math" aria-label="Permalink for Summary of the problems with math" title="Permalink for Summary of the problems with math" property="url"><span property="title" content="Summary of the problems with math">§</span></a></span></h4>
+        <h4 id="summary-of-the-problems-with-math">Summary of the problems with math<span class="permalink" typeof="bookmark"><a href="#issues-with-math" aria-label="Permalink for Summary of the problems with math" title="Permalink for Summary of the problems with math" property="url"><span property="title" content="Summary of the problems with math">§</span></a>
+          </span>
+        </h4>
         <p>Numeracy issues can occur due to a range of difficulties, the most severe being the inability to read or understand numbers. It should be noted that different users may find math easer to understand than long text.</p>
 
         <section id="summary-of-solutions-for-math" typeof="bibo:Chapter" resource="#summary-of-solutions-for-math" property="bibo:hasPart">
-          <h5 id="h-summary-of-solutions-for-math" resource="#h-summary-of-solutions-for-math"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.4.1 </span>Summary of solutions for math<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-math" aria-label="Permalink for 2.3.4.1 Summary of solutions for math" title="Permalink for 2.3.4.1 Summary of solutions for math" property="url"><span property="title" content="2.3.4.1 Summary of solutions for math">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-solutions-for-math" resource="#h-summary-of-solutions-for-math"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.4.1 </span>Summary of solutions for math<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-math" aria-label="Permalink for 2.3.4.1 Summary of solutions for math" title="Permalink for 2.3.4.1 Summary of solutions for math" property="url"><span property="title" content="2.3.4.1 Summary of solutions for math">§</span></a>
+            </span>
+            </span>
+          </h5>
           <ul>
             <li> Move towards digital math that can be extended (not numbers in images) </li>
             <li> Enable highlighting of sections as they are being discussed </li>
@@ -2746,7 +2689,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="issues-with-multi-modal-content-delivery" typeof="bibo:Chapter" resource="#issues-with-multi-modal-content-delivery" property="bibo:hasPart">
-        <h4 id="h-issues-with-multi-modal-content-delivery" resource="#h-issues-with-multi-modal-content-delivery"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.5 </span>Issues with multi-modal content delivery<span class="permalink" typeof="bookmark"><a href="#issues-with-multi-modal-content-delivery" aria-label="Permalink for 2.3.5 Issues with multi-modal content delivery" title="Permalink for 2.3.5 Issues with multi-modal content delivery" property="url"><span property="title" content="2.3.5 Issues with multi-modal content delivery">§</span></a></span></span></h4>
+        <h4 id="h-issues-with-multi-modal-content-delivery" resource="#h-issues-with-multi-modal-content-delivery"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.5 </span>Issues with multi-modal content delivery<span class="permalink" typeof="bookmark"><a href="#issues-with-multi-modal-content-delivery" aria-label="Permalink for 2.3.5 Issues with multi-modal content delivery" title="Permalink for 2.3.5 Issues with multi-modal content delivery" property="url"><span property="title" content="2.3.5 Issues with multi-modal content delivery">§</span></a>
+          </span>
+          </span>
+        </h4>
         <!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/multi-modal.html">https://rawgit.com/w3c/coga/master/issue-papers/multi-modal.html</a></p>-->
         <p>Text, which comprises the vast majority of content on the Web, is difficult to understand by many people (most COGA groups). </p>
@@ -2761,7 +2707,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </ol>
 
         <section id="summary-of-solutions-for-multi-modal-content-delivery" typeof="bibo:Chapter" resource="#summary-of-solutions-for-multi-modal-content-delivery" property="bibo:hasPart">
-          <h5 id="h-summary-of-solutions-for-multi-modal-content-delivery" resource="#h-summary-of-solutions-for-multi-modal-content-delivery"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.5.1 </span>Summary of solutions for multi-modal content delivery<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-multi-modal-content-delivery" aria-label="Permalink for 2.3.5.1 Summary of solutions for multi-modal content delivery" title="Permalink for 2.3.5.1 Summary of solutions for multi-modal content delivery" property="url"><span property="title" content="2.3.5.1 Summary of solutions for multi-modal content delivery">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-solutions-for-multi-modal-content-delivery" resource="#h-summary-of-solutions-for-multi-modal-content-delivery"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.5.1 </span>Summary of solutions for multi-modal content delivery<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-multi-modal-content-delivery" aria-label="Permalink for 2.3.5.1 Summary of solutions for multi-modal content delivery" title="Permalink for 2.3.5.1 Summary of solutions for multi-modal content delivery" property="url"><span property="title" content="2.3.5.1 Summary of solutions for multi-modal content delivery">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Text can be made easier to understand when delivered in different modes. Ideally, people should be able to choose that content is delivered in the mode they comprehend best, such as: </p>
           <ul>
             <li> Text To Speech </li>
@@ -2780,7 +2729,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section id="further-work-for-multi-modal-content-delivery" typeof="bibo:Chapter" resource="#further-work-for-multi-modal-content-delivery" property="bibo:hasPart">
-          <h5 id="h-further-work-for-multi-modal-content-delivery" resource="#h-further-work-for-multi-modal-content-delivery"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.5.2 </span>Further work for multi-modal content delivery<span class="permalink" typeof="bookmark"><a href="#further-work-for-multi-modal-content-delivery" aria-label="Permalink for 2.3.5.2 Further work for multi-modal content delivery" title="Permalink for 2.3.5.2 Further work for multi-modal content delivery" property="url"><span property="title" content="2.3.5.2 Further work for multi-modal content delivery">§</span></a></span></span></h5>
+          <h5 id="h-further-work-for-multi-modal-content-delivery" resource="#h-further-work-for-multi-modal-content-delivery"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.5.2 </span>Further work for multi-modal content delivery<span class="permalink" typeof="bookmark"><a href="#further-work-for-multi-modal-content-delivery" aria-label="Permalink for 2.3.5.2 Further work for multi-modal content delivery" title="Permalink for 2.3.5.2 Further work for multi-modal content delivery" property="url"><span property="title" content="2.3.5.2 Further work for multi-modal content delivery">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Develop ease-of-use ideas, such as development and/or application of: </p>
           <ul>
             <li> plain-language standards </li>
@@ -2791,7 +2743,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="issues-with-personalization-and-user-preferences" typeof="bibo:Chapter" resource="#issues-with-personalization-and-user-preferences" property="bibo:hasPart">
-        <h4 id="h-issues-with-personalization-and-user-preferences" resource="#h-issues-with-personalization-and-user-preferences"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6 </span>Issues with Personalization and User Preferences<span class="permalink" typeof="bookmark"><a href="#issues-with-personalization-and-user-preferences" aria-label="Permalink for 2.3.6 Issues with Personalization and User Preferences" title="Permalink for 2.3.6 Issues with Personalization and User Preferences" property="url"><span property="title" content="2.3.6 Issues with Personalization and User Preferences">§</span></a></span></span></h4>
+        <h4 id="h-issues-with-personalization-and-user-preferences" resource="#h-issues-with-personalization-and-user-preferences"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6 </span>Issues with Personalization and User Preferences<span class="permalink" typeof="bookmark"><a href="#issues-with-personalization-and-user-preferences" aria-label="Permalink for 2.3.6 Issues with Personalization and User Preferences" title="Permalink for 2.3.6 Issues with Personalization and User Preferences" property="url"><span property="title" content="2.3.6 Issues with Personalization and User Preferences">§</span></a>
+          </span>
+          </span>
+        </h4>
         <!--<p><strong>Taken from:</strong>-->This summary pulls together a few different issue papers and addresses them together. They are:
         <ul>
           <li> User Preferences
@@ -2825,10 +2780,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <a rel="nofollow" href="http://www.w3.org/TR/coga-user-research/#aging-and-dementia"> </a>section 3.4.15.3 ) </p>
 
         <section id="summary-of-the-problems-and-issues" typeof="bibo:Chapter" resource="#summary-of-the-problems-and-issues" property="bibo:hasPart">
-          <h5 id="h-summary-of-the-problems-and-issues" resource="#h-summary-of-the-problems-and-issues"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.1 </span>Summary of the problems and issues: <span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-and-issues" aria-label="Permalink for 2.3.6.1 Summary of the problems and issues: " title="Permalink for 2.3.6.1 Summary of the problems and issues: " property="url"><span property="title" content="2.3.6.1 Summary of the problems and issues: ">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-the-problems-and-issues" resource="#h-summary-of-the-problems-and-issues"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.1 </span>Summary of the problems and issues: <span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-and-issues" aria-label="Permalink for 2.3.6.1 Summary of the problems and issues: " title="Permalink for 2.3.6.1 Summary of the problems and issues: " property="url"><span property="title" content="2.3.6.1 Summary of the problems and issues: ">§</span></a>
+            </span>
+            </span>
+          </h5>
 
           <section id="summary-of-issues-with-preferences-for-cognitive-disabilities" typeof="bibo:Chapter" resource="#summary-of-issues-with-preferences-for-cognitive-disabilities" property="bibo:hasPart">
-            <h6 id="h-summary-of-issues-with-preferences-for-cognitive-disabilities" resource="#h-summary-of-issues-with-preferences-for-cognitive-disabilities"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.1.1 </span>Summary of issues with preferences for cognitive disabilities<span class="permalink" typeof="bookmark"><a href="#summary-of-issues-with-preferences-for-cognitive-disabilities" aria-label="Permalink for 2.3.6.1.1 Summary of issues with preferences for cognitive disabilities" title="Permalink for 2.3.6.1.1 Summary of issues with preferences for cognitive disabilities" property="url"><span property="title" content="2.3.6.1.1 Summary of issues with preferences for cognitive disabilities">§</span></a></span></span></h6>
+            <h6 id="h-summary-of-issues-with-preferences-for-cognitive-disabilities" resource="#h-summary-of-issues-with-preferences-for-cognitive-disabilities"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.1.1 </span>Summary of issues with preferences for cognitive disabilities<span class="permalink" typeof="bookmark"><a href="#summary-of-issues-with-preferences-for-cognitive-disabilities" aria-label="Permalink for 2.3.6.1.1 Summary of issues with preferences for cognitive disabilities" title="Permalink for 2.3.6.1.1 Summary of issues with preferences for cognitive disabilities" property="url"><span property="title" content="2.3.6.1.1 Summary of issues with preferences for cognitive disabilities">§</span></a>
+              </span>
+              </span>
+            </h6>
             <p>Typical configurable features include adjustments such as colors, text and icon size, sounds or mouse double click speed. Current preferences tend to focus on physical needs that help the user use the content and not on cognitive needs and preferences that help the user understand the content. Meta data and ontologies for preferences also currently focus on physical accessibility needs. For our purposes we need the ontologies to support issues such as: </p>
             <ol>
               <li> Types of Language support – such as non-literal language or simple language </li>
@@ -2842,7 +2803,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </section>
 
           <section id="summary-of-issues-with-setting-and-gathering-preferences" typeof="bibo:Chapter" resource="#summary-of-issues-with-setting-and-gathering-preferences" property="bibo:hasPart">
-            <h6 id="h-summary-of-issues-with-setting-and-gathering-preferences" resource="#h-summary-of-issues-with-setting-and-gathering-preferences"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.1.2 </span>Summary of issues with setting and gathering preferences<span class="permalink" typeof="bookmark"><a href="#summary-of-issues-with-setting-and-gathering-preferences" aria-label="Permalink for 2.3.6.1.2 Summary of issues with setting and gathering preferences" title="Permalink for 2.3.6.1.2 Summary of issues with setting and gathering preferences" property="url"><span property="title" content="2.3.6.1.2 Summary of issues with setting and gathering preferences">§</span></a></span></span></h6>
+            <h6 id="h-summary-of-issues-with-setting-and-gathering-preferences" resource="#h-summary-of-issues-with-setting-and-gathering-preferences"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.1.2 </span>Summary of issues with setting and gathering preferences<span class="permalink" typeof="bookmark"><a href="#summary-of-issues-with-setting-and-gathering-preferences" aria-label="Permalink for 2.3.6.1.2 Summary of issues with setting and gathering preferences" title="Permalink for 2.3.6.1.2 Summary of issues with setting and gathering preferences" property="url"><span property="title" content="2.3.6.1.2 Summary of issues with setting and gathering preferences">§</span></a>
+              </span>
+              </span>
+            </h6>
             <p>People with cognitive disabilities can be become daunted, or worse, completely unable to select their desired preferences. Indeed depending on the individual and the technology being used it may be impossible with a supporter's assistance. </p>
             <p>So specific problems for people with cognitive disabilities include: </p>
             <ol>
@@ -2861,10 +2825,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section id="summary-of-solutions-for-personalization" typeof="bibo:Chapter" resource="#summary-of-solutions-for-personalization" property="bibo:hasPart">
-          <h5 id="h-summary-of-solutions-for-personalization" resource="#h-summary-of-solutions-for-personalization"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.2 </span>Summary of solutions for personalization<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-personalization" aria-label="Permalink for 2.3.6.2 Summary of solutions for personalization" title="Permalink for 2.3.6.2 Summary of solutions for personalization" property="url"><span property="title" content="2.3.6.2 Summary of solutions for personalization">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-solutions-for-personalization" resource="#h-summary-of-solutions-for-personalization"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.2 </span>Summary of solutions for personalization<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-personalization" aria-label="Permalink for 2.3.6.2 Summary of solutions for personalization" title="Permalink for 2.3.6.2 Summary of solutions for personalization" property="url"><span property="title" content="2.3.6.2 Summary of solutions for personalization">§</span></a>
+            </span>
+            </span>
+          </h5>
 
           <section id="strategies" typeof="bibo:Chapter" resource="#strategies" property="bibo:hasPart">
-            <h6 id="h-strategies" resource="#h-strategies"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.2.1 </span>Strategies<span class="permalink" typeof="bookmark"><a href="#strategies" aria-label="Permalink for 2.3.6.2.1 Strategies" title="Permalink for 2.3.6.2.1 Strategies" property="url"><span property="title" content="2.3.6.2.1 Strategies">§</span></a></span></span></h6>
+            <h6 id="h-strategies" resource="#h-strategies"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.2.1 </span>Strategies<span class="permalink" typeof="bookmark"><a href="#strategies" aria-label="Permalink for 2.3.6.2.1 Strategies" title="Permalink for 2.3.6.2.1 Strategies" property="url"><span property="title" content="2.3.6.2.1 Strategies">§</span></a>
+              </span>
+              </span>
+            </h6>
             <ol>
               <li>Promote and support advancements in technologies in these area. For example, our recommending for WCAG will be along the lines of "Use semantics and standardized techniques and that enable the content to be adapted to the user scenario and enable additional support " (See appendix two for details.)</li>
               <li>Enable compatibility with standards such as GPII but do not depend on them. </li>
@@ -2874,7 +2844,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </section>
 
           <section id="solutions-and-further-work-for-personalization" typeof="bibo:Chapter" resource="#solutions-and-further-work-for-personalization" property="bibo:hasPart">
-            <h6 id="h-solutions-and-further-work-for-personalization" resource="#h-solutions-and-further-work-for-personalization"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.2.2 </span>Solutions and further work for personalization<span class="permalink" typeof="bookmark"><a href="#solutions-and-further-work-for-personalization" aria-label="Permalink for 2.3.6.2.2 Solutions and further work for personalization" title="Permalink for 2.3.6.2.2 Solutions and further work for personalization" property="url"><span property="title" content="2.3.6.2.2 Solutions and further work for personalization">§</span></a></span></span></h6>
+            <h6 id="h-solutions-and-further-work-for-personalization" resource="#h-solutions-and-further-work-for-personalization"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.2.2 </span>Solutions and further work for personalization<span class="permalink" typeof="bookmark"><a href="#solutions-and-further-work-for-personalization" aria-label="Permalink for 2.3.6.2.2 Solutions and further work for personalization" title="Permalink for 2.3.6.2.2 Solutions and further work for personalization" property="url"><span property="title" content="2.3.6.2.2 Solutions and further work for personalization">§</span></a>
+              </span>
+              </span>
+            </h6>
             <ol>
               <li>Support in WCAG that encourages support the features of the operating system or standards that enable adaption , such as adding additional success criteria.</li>
               <li>Develop supporting techniques so authors know exactly what to do </li>
@@ -2887,7 +2860,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section id="end-to-end-basic-solution" typeof="bibo:Chapter" resource="#end-to-end-basic-solution" property="bibo:hasPart">
-          <h5 id="h-end-to-end-basic-solution" resource="#h-end-to-end-basic-solution"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.3 </span>End to end basic solution<span class="permalink" typeof="bookmark"><a href="#end-to-end-basic-solution" aria-label="Permalink for 2.3.6.3 End to end basic solution" title="Permalink for 2.3.6.3 End to end basic solution" property="url"><span property="title" content="2.3.6.3 End to end basic solution">§</span></a></span></span></h5>
+          <h5 id="h-end-to-end-basic-solution" resource="#h-end-to-end-basic-solution"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.3 </span>End to end basic solution<span class="permalink" typeof="bookmark"><a href="#end-to-end-basic-solution" aria-label="Permalink for 2.3.6.3 End to end basic solution" title="Permalink for 2.3.6.3 End to end basic solution" property="url"><span property="title" content="2.3.6.3 End to end basic solution">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>We need standardized terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use, possibly via an aria attribute and personal preferences. </p>
           <p>For example, assume an author can make it programmatically known that a button is used to send an email. At the user end, the button could be rendered with a symbol, term, and/or tooltips that are understandable for this particular user. It could automatically integrate with F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
           <p>Working examples of how this could be used in practice with user preferences are available Full versions can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. It demonstrates personalization for any use - including people with learning and memory issues </p>
@@ -2906,7 +2882,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section id="special-case" typeof="bibo:Chapter" resource="#special-case" property="bibo:hasPart">
-          <h5 id="h-special-case" resource="#h-special-case"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.4 </span>Special case<span class="permalink" typeof="bookmark"><a href="#special-case" aria-label="Permalink for 2.3.6.4 Special case" title="Permalink for 2.3.6.4 Special case" property="url"><span property="title" content="2.3.6.4 Special case">§</span></a></span></span></h5>
+          <h5 id="h-special-case" resource="#h-special-case"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.6.4 </span>Special case<span class="permalink" typeof="bookmark"><a href="#special-case" aria-label="Permalink for 2.3.6.4 Special case" title="Permalink for 2.3.6.4 Special case" property="url"><span property="title" content="2.3.6.4 Special case">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Products for people who are non-verbal often use symbols to help users communicate. These symbols are in fact peoples' language. Unfortunately many of these symbols are both subject to copyright AND are not interoperable. That means end-users can only use one device, and can not use apps or content from a different company. If we enabled mapping to open sets of symbol codes that, in turn, map to open or proprietary symbol sets, then they can be interoperable. At the user end , the user agent can load the symbols that the user knows. Symbol sets might still be proprietary but they would also be interoperable. That means the end user could use them across different devices, or any compatible content or applications. </p>
           <p>Our members are working on projects to enable interoperable symbol sets and the semantics that would enable it. Such as (Pseudocode): </p>
           <p>&lt;img coga-concept="<a rel="nofollow" href="http://symbo.arosac.org/somepage#girlnode">http://symbo.arosac.org/somepage#girlnode</a>" scr="girlwithbow.gif" /&gt; </p>
@@ -2919,17 +2898,26 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="issues-with-distractions" typeof="bibo:Chapter" resource="#issues-with-distractions" property="bibo:hasPart">
-        <h4 id="h-issues-with-distractions" resource="#h-issues-with-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.7 </span>Issues with distractions<span class="permalink" typeof="bookmark"><a href="#issues-with-distractions" aria-label="Permalink for 2.3.7 Issues with distractions" title="Permalink for 2.3.7 Issues with distractions" property="url"><span property="title" content="2.3.7 Issues with distractions">§</span></a></span></span></h4>
+        <h4 id="h-issues-with-distractions" resource="#h-issues-with-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.7 </span>Issues with distractions<span class="permalink" typeof="bookmark"><a href="#issues-with-distractions" aria-label="Permalink for 2.3.7 Issues with distractions" title="Permalink for 2.3.7 Issues with distractions" property="url"><span property="title" content="2.3.7 Issues with distractions">§</span></a>
+          </span>
+          </span>
+        </h4>
         <!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/distractions.html">https://rawgit.com/w3c/coga/master/issue-papers/distractions.html</a></p>-->
 
         <section id="summary-of-the-problems-with-distractions" typeof="bibo:Chapter" resource="#summary-of-the-problems-with-distractions" property="bibo:hasPart">
-          <h5 id="h-summary-of-the-problems-with-distractions" resource="#h-summary-of-the-problems-with-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.7.1 </span>Summary of the problems with distractions<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-with-distractions" aria-label="Permalink for 2.3.7.1 Summary of the problems with distractions" title="Permalink for 2.3.7.1 Summary of the problems with distractions" property="url"><span property="title" content="2.3.7.1 Summary of the problems with distractions">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-the-problems-with-distractions" resource="#h-summary-of-the-problems-with-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.7.1 </span>Summary of the problems with distractions<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-with-distractions" aria-label="Permalink for 2.3.7.1 Summary of the problems with distractions" title="Permalink for 2.3.7.1 Summary of the problems with distractions" property="url"><span property="title" content="2.3.7.1 Summary of the problems with distractions">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Distractions can cause people with cognitive disabilities to lose focus on the current action being performed or draw attention away from the primary content and can be difficult for some users to know how to understand, avoid and/or stop them. Distractions can come in the form of overlays, auto-playing content, animated side-bar content, advertisements, prompts, pop-ups, scrolling or auto-updating content and so on. </p>
         </section>
 
         <section id="summary-of-solutions-for-distractions" typeof="bibo:Chapter" resource="#summary-of-solutions-for-distractions" property="bibo:hasPart">
-          <h5 id="h-summary-of-solutions-for-distractions" resource="#h-summary-of-solutions-for-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.7.2 </span>Summary of solutions for distractions<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-distractions" aria-label="Permalink for 2.3.7.2 Summary of solutions for distractions" title="Permalink for 2.3.7.2 Summary of solutions for distractions" property="url"><span property="title" content="2.3.7.2 Summary of solutions for distractions">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-solutions-for-distractions" resource="#h-summary-of-solutions-for-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.7.2 </span>Summary of solutions for distractions<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-distractions" aria-label="Permalink for 2.3.7.2 Summary of solutions for distractions" title="Permalink for 2.3.7.2 Summary of solutions for distractions" property="url"><span property="title" content="2.3.7.2 Summary of solutions for distractions">§</span></a>
+            </span>
+            </span>
+          </h5>
           <ul>
             <li> Use personalization options to inform the content provider of accommodations required so the presentation of content can be modified. </li>
           </ul>
@@ -2960,23 +2948,35 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section id="integrated-solution-for-distractions" typeof="bibo:Chapter" resource="#integrated-solution-for-distractions" property="bibo:hasPart">
-          <h5 id="h-integrated-solution-for-distractions" resource="#h-integrated-solution-for-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.7.3 </span>Integrated solution for distractions<span class="permalink" typeof="bookmark"><a href="#integrated-solution-for-distractions" aria-label="Permalink for 2.3.7.3 Integrated solution for distractions" title="Permalink for 2.3.7.3 Integrated solution for distractions" property="url"><span property="title" content="2.3.7.3 Integrated solution for distractions">§</span></a></span></span></h5>
+          <h5 id="h-integrated-solution-for-distractions" resource="#h-integrated-solution-for-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.7.3 </span>Integrated solution for distractions<span class="permalink" typeof="bookmark"><a href="#integrated-solution-for-distractions" aria-label="Permalink for 2.3.7.3 Integrated solution for distractions" title="Permalink for 2.3.7.3 Integrated solution for distractions" property="url"><span property="title" content="2.3.7.3 Integrated solution for distractions">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Form a cross-application and cross-device distraction matrix that manages all distractions in one setting. In conjunction with this there could be a mechanism for the user to select or modify the distraction matrix to allow distractions only from certain users and/or applications. </p>
         </section>
       </section>
 
       <section id="issues-with-voice-menu-systems" typeof="bibo:Chapter" resource="#issues-with-voice-menu-systems" property="bibo:hasPart">
-        <h4 id="h-issues-with-voice-menu-systems" resource="#h-issues-with-voice-menu-systems"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.8 </span>Issues with voice menu systems<span class="permalink" typeof="bookmark"><a href="#issues-with-voice-menu-systems" aria-label="Permalink for 2.3.8 Issues with voice menu systems" title="Permalink for 2.3.8 Issues with voice menu systems" property="url"><span property="title" content="2.3.8 Issues with voice menu systems">§</span></a></span></span></h4>
+        <h4 id="h-issues-with-voice-menu-systems" resource="#h-issues-with-voice-menu-systems"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.8 </span>Issues with voice menu systems<span class="permalink" typeof="bookmark"><a href="#issues-with-voice-menu-systems" aria-label="Permalink for 2.3.8 Issues with voice menu systems" title="Permalink for 2.3.8 Issues with voice menu systems" property="url"><span property="title" content="2.3.8 Issues with voice menu systems">§</span></a>
+          </span>
+          </span>
+        </h4>
         <!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html">https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html</a></p>-->
 
         <section id="summary-of-the-problem" typeof="bibo:Chapter" resource="#summary-of-the-problem" property="bibo:hasPart">
-          <h5 id="h-summary-of-the-problem" resource="#h-summary-of-the-problem"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.8.1 </span>Summary of the problem<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problem" aria-label="Permalink for 2.3.8.1 Summary of the problem" title="Permalink for 2.3.8.1 Summary of the problem" property="url"><span property="title" content="2.3.8.1 Summary of the problem">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-the-problem" resource="#h-summary-of-the-problem"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.8.1 </span>Summary of the problem<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problem" aria-label="Permalink for 2.3.8.1 Summary of the problem" title="Permalink for 2.3.8.1 Summary of the problem" property="url"><span property="title" content="2.3.8.1 Summary of the problem">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>Voice menu systems and Voice XML are used to develop audio and voice response applications similar to automated telephone menu systems. These systems can cause issues for people with cognitive disabilities who may not have the reasoning skills to understand the instructions or have trouble processing the instructions quickly enough while listening to an array of options to choose from. A person with a cognitive disability may have trouble with short-term memory resulting in the inability to remember the number or verbal response required by the application, or may take a longer period of time to verbalize or enter in a response. </p>
         </section>
 
         <section id="summary-of-solutions-for-voice-menu-systems" typeof="bibo:Chapter" resource="#summary-of-solutions-for-voice-menu-systems" property="bibo:hasPart">
-          <h5 id="h-summary-of-solutions-for-voice-menu-systems" resource="#h-summary-of-solutions-for-voice-menu-systems"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.8.2 </span>Summary of solutions for voice menu systems<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-voice-menu-systems" aria-label="Permalink for 2.3.8.2 Summary of solutions for voice menu systems" title="Permalink for 2.3.8.2 Summary of solutions for voice menu systems" property="url"><span property="title" content="2.3.8.2 Summary of solutions for voice menu systems">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-solutions-for-voice-menu-systems" resource="#h-summary-of-solutions-for-voice-menu-systems"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.8.2 </span>Summary of solutions for voice menu systems<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-voice-menu-systems" aria-label="Permalink for 2.3.8.2 Summary of solutions for voice menu systems" title="Permalink for 2.3.8.2 Summary of solutions for voice menu systems" property="url"><span property="title" content="2.3.8.2 Summary of solutions for voice menu systems">§</span></a>
+            </span>
+            </span>
+          </h5>
           <ul>
             <li> Should have an easily remembered or standard instruction to reach a person for help, such as "0". </li>
             <li> Describe the option before giving the instruction of what information or option is used to select that option. </li>
@@ -2993,17 +2993,26 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="issues-with-online-payments" typeof="bibo:Chapter" resource="#issues-with-online-payments" property="bibo:hasPart">
-        <h4 id="h-issues-with-online-payments" resource="#h-issues-with-online-payments"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.9 </span>Issues with online payments<span class="permalink" typeof="bookmark"><a href="#issues-with-online-payments" aria-label="Permalink for 2.3.9 Issues with online payments" title="Permalink for 2.3.9 Issues with online payments" property="url"><span property="title" content="2.3.9 Issues with online payments">§</span></a></span></span></h4>
+        <h4 id="h-issues-with-online-payments" resource="#h-issues-with-online-payments"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.9 </span>Issues with online payments<span class="permalink" typeof="bookmark"><a href="#issues-with-online-payments" aria-label="Permalink for 2.3.9 Issues with online payments" title="Permalink for 2.3.9 Issues with online payments" property="url"><span property="title" content="2.3.9 Issues with online payments">§</span></a>
+          </span>
+          </span>
+        </h4>
         <!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/payments.html">https://rawgit.com/w3c/coga/master/issue-papers/payments.html</a></p>-->
 
         <section id="summary-of-the-problems-with-online-payments" typeof="bibo:Chapter" resource="#summary-of-the-problems-with-online-payments" property="bibo:hasPart">
-          <h5 id="h-summary-of-the-problems-with-online-payments" resource="#h-summary-of-the-problems-with-online-payments"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.9.1 </span>Summary of the problems with online payments<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-with-online-payments" aria-label="Permalink for 2.3.9.1 Summary of the problems with online payments" title="Permalink for 2.3.9.1 Summary of the problems with online payments" property="url"><span property="title" content="2.3.9.1 Summary of the problems with online payments">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-the-problems-with-online-payments" resource="#h-summary-of-the-problems-with-online-payments"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.9.1 </span>Summary of the problems with online payments<span class="permalink" typeof="bookmark"><a href="#summary-of-the-problems-with-online-payments" aria-label="Permalink for 2.3.9.1 Summary of the problems with online payments" title="Permalink for 2.3.9.1 Summary of the problems with online payments" property="url"><span property="title" content="2.3.9.1 Summary of the problems with online payments">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>People with various cognitive impairments can have a variety of difficulties with the online payment systems used in e-commerce. These difficulties range from having trouble understanding the instructions and process to be followed to complete a transaction to issues in providing the necessary personal and financial information to make an online payment. If an online payment system requires a lot of user input for required information, the presentation of the input fields could cause a cluttered look, which can be distracting and make it difficult for the user to process the steps to take to complete the transaction, adding to their frustration and stress. If the online payment system has voiced commands, persons with speech perception issues may not be able to fully understand the instructions to respond appropriately. </p>
         </section>
 
         <section id="summary-of-solutions-for-online-payments" typeof="bibo:Chapter" resource="#summary-of-solutions-for-online-payments" property="bibo:hasPart">
-          <h5 id="h-summary-of-solutions-for-online-payments" resource="#h-summary-of-solutions-for-online-payments"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.9.2 </span>Summary of solutions for online payments<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-online-payments" aria-label="Permalink for 2.3.9.2 Summary of solutions for online payments" title="Permalink for 2.3.9.2 Summary of solutions for online payments" property="url"><span property="title" content="2.3.9.2 Summary of solutions for online payments">§</span></a></span></span></h5>
+          <h5 id="h-summary-of-solutions-for-online-payments" resource="#h-summary-of-solutions-for-online-payments"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.3.9.2 </span>Summary of solutions for online payments<span class="permalink" typeof="bookmark"><a href="#summary-of-solutions-for-online-payments" aria-label="Permalink for 2.3.9.2 Summary of solutions for online payments" title="Permalink for 2.3.9.2 Summary of solutions for online payments" property="url"><span property="title" content="2.3.9.2 Summary of solutions for online payments">§</span></a>
+            </span>
+            </span>
+          </h5>
           <p>The solutions are split into five categories as follows: </p>
           <ul>
             <li> Navigation
@@ -3071,7 +3080,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="roadmap---tables-of-user-needs" typeof="bibo:Chapter" resource="#roadmap---tables-of-user-needs" property="bibo:hasPart">
-      <h3 id="h-roadmap---tables-of-user-needs" resource="#h-roadmap---tables-of-user-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4 </span>Roadmap - Tables of User Needs <span class="permalink" typeof="bookmark"><a href="#roadmap---tables-of-user-needs" aria-label="Permalink for 2.4 Roadmap - Tables of User Needs " title="Permalink for 2.4 Roadmap - Tables of User Needs " property="url"><span property="title" content="2.4 Roadmap - Tables of User Needs ">§</span></a></span></span></h3>
+      <h3 id="h-roadmap---tables-of-user-needs" resource="#h-roadmap---tables-of-user-needs"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4 </span>Roadmap - Tables of User Needs <span class="permalink" typeof="bookmark"><a href="#roadmap---tables-of-user-needs" aria-label="Permalink for 2.4 Roadmap - Tables of User Needs " title="Permalink for 2.4 Roadmap - Tables of User Needs " property="url"><span property="title" content="2.4 Roadmap - Tables of User Needs ">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>This section is work in progress for tables format for the coga roadmap and gap analysis. It identifies user needs that are not currently fully addressed by accessibility.</p>
       <p>Each table addresses a group of user needs represented by a few related user stories of the form of "As a <em>&lt;role&gt;,</em> I want <em>&lt;goal/desire&gt;</em> so that <em>&lt;benefit&gt;</em>".</p>
       <p>The tables show how related user needs can be met though:</p>
@@ -3088,7 +3100,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <p></p>
 
       <section id="table-1-authentication" typeof="bibo:Chapter" resource="#table-1-authentication" property="bibo:hasPart">
-        <h4 id="h-table-1-authentication" resource="#h-table-1-authentication"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.1 </span> Table 1: Authentication <span class="permalink" typeof="bookmark"><a href="#table-1-authentication" aria-label="Permalink for 2.4.1  Table 1: Authentication " title="Permalink for 2.4.1  Table 1: Authentication " property="url"><span property="title" content="2.4.1  Table 1: Authentication ">§</span></a></span></span></h4>
+        <h4 id="h-table-1-authentication" resource="#h-table-1-authentication"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.1 </span> Table 1: Authentication <span class="permalink" typeof="bookmark"><a href="#table-1-authentication" aria-label="Permalink for 2.4.1  Table 1: Authentication " title="Permalink for 2.4.1  Table 1: Authentication " property="url"><span property="title" content="2.4.1  Table 1: Authentication ">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p><strong>About the user:</strong> Many people (most COGA groups) have memory issues that can make copying text, or remembering passwords, difficult or impossible. Other contributing issues include impaired executive function. </p>
         <p>Sometimes security and authentication put a barrier between the user and the task that they are doing so that the user can not use the content or service. For example, difficult security mechanisms that require coping or remembering passwords often bar people with cognitive disabilities from accessing content or using a service at all. </p>
         <p>This leads to following user stories:</p>
@@ -3142,7 +3157,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="table-2-context-and-distractions" typeof="bibo:Chapter" resource="#table-2-context-and-distractions" property="bibo:hasPart">
-        <h4 id="h-table-2-context-and-distractions" resource="#h-table-2-context-and-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.2 </span>Table 2: Context and distractions<span class="permalink" typeof="bookmark"><a href="#table-2-context-and-distractions" aria-label="Permalink for 2.4.2 Table 2: Context and distractions" title="Permalink for 2.4.2 Table 2: Context and distractions" property="url"><span property="title" content="2.4.2 Table 2: Context and distractions">§</span></a></span></span></h4>
+        <h4 id="h-table-2-context-and-distractions" resource="#h-table-2-context-and-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.2 </span>Table 2: Context and distractions<span class="permalink" typeof="bookmark"><a href="#table-2-context-and-distractions" aria-label="Permalink for 2.4.2 Table 2: Context and distractions" title="Permalink for 2.4.2 Table 2: Context and distractions" property="url"><span property="title" content="2.4.2 Table 2: Context and distractions">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p><strong>About the user:</strong> Distractions can cause people with cognitive disabilities to lose focus on the current action being performed or draw attention away from the primary content and can be difficult for some users to know how to understand, avoid and/or stop them. </p>
         <p>Once people have become distracted it can be difficult for them to remember what they were doing. This is especially problematic for people with both low attention and impaired memory such as people with dementia.</p>
         <p>This leads to following user stories: To do - fill in user stories</p>
@@ -3159,7 +3177,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="table-3-entering-data-error-prevention-recovery" typeof="bibo:Chapter" resource="#table-3-entering-data-error-prevention-recovery" property="bibo:hasPart">
-        <h4 id="h-table-3-entering-data-error-prevention-recovery" resource="#h-table-3-entering-data-error-prevention-recovery"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.3 </span>Table 3: Entering data, error prevention &amp; recovery <span class="permalink" typeof="bookmark"><a href="#table-3-entering-data-error-prevention-recovery" aria-label="Permalink for 2.4.3 Table 3: Entering data, error prevention &amp; recovery " title="Permalink for 2.4.3 Table 3: Entering data, error prevention &amp; recovery " property="url"><span property="title" content="2.4.3 Table 3: Entering data, error prevention &amp; recovery ">§</span></a></span></span></h4>
+        <h4 id="h-table-3-entering-data-error-prevention-recovery" resource="#h-table-3-entering-data-error-prevention-recovery"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.3 </span>Table 3: Entering data, error prevention &amp; recovery <span class="permalink" typeof="bookmark"><a href="#table-3-entering-data-error-prevention-recovery" aria-label="Permalink for 2.4.3 Table 3: Entering data, error prevention &amp; recovery " title="Permalink for 2.4.3 Table 3: Entering data, error prevention &amp; recovery " property="url"><span property="title" content="2.4.3 Table 3: Entering data, error prevention &amp; recovery ">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p>About the user: Filling out forms and similar tasks can be overwhelming for most people with cognitive and learning disabilities. This includes relatively minor learning disabilities such as dyslexia or attention related disabilities. Many people (most COGA groups) have memory issues that can make copying text, difficult or impossible. Other contributing issues include impaired executive function. </p>
         <p>Many people learning disability can not remember numbers such as their post code, Social Security or Credit Card numbers. Many people even need to check their phone number. This makes entering information slow, and they may need to leave their desk or take a break.</p>
         <p>Many users find it very difficult to copy information, due to low visual memory or impaired executive function.</p>
@@ -3183,7 +3204,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="table-4-help-and-support" typeof="bibo:Chapter" resource="#table-4-help-and-support" property="bibo:hasPart">
-        <h4 id="h-table-4-help-and-support" resource="#h-table-4-help-and-support"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.4 </span>Table 4: Help and support<span class="permalink" typeof="bookmark"><a href="#table-4-help-and-support" aria-label="Permalink for 2.4.4 Table 4: Help and support" title="Permalink for 2.4.4 Table 4: Help and support" property="url"><span property="title" content="2.4.4 Table 4: Help and support">§</span></a></span></span></h4>
+        <h4 id="h-table-4-help-and-support" resource="#h-table-4-help-and-support"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.4 </span>Table 4: Help and support<span class="permalink" typeof="bookmark"><a href="#table-4-help-and-support" aria-label="Permalink for 2.4.4 Table 4: Help and support" title="Permalink for 2.4.4 Table 4: Help and support" property="url"><span property="title" content="2.4.4 Table 4: Help and support">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p><strong>About the user: </strong>To be filled in</p>
         <p>This leads to following user stories: To be filled in</p>
         <p><strong>User needs:</strong></p>
@@ -3201,7 +3225,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="table-5-simple-and-clear-interface" typeof="bibo:Chapter" resource="#table-5-simple-and-clear-interface" property="bibo:hasPart">
-        <h4 id="h-table-5-simple-and-clear-interface" resource="#h-table-5-simple-and-clear-interface"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.5 </span>Table 5: Simple and clear interface <span class="permalink" typeof="bookmark"><a href="#table-5-simple-and-clear-interface" aria-label="Permalink for 2.4.5 Table 5: Simple and clear interface " title="Permalink for 2.4.5 Table 5: Simple and clear interface " property="url"><span property="title" content="2.4.5 Table 5: Simple and clear interface ">§</span></a></span></span></h4>
+        <h4 id="h-table-5-simple-and-clear-interface" resource="#h-table-5-simple-and-clear-interface"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.5 </span>Table 5: Simple and clear interface <span class="permalink" typeof="bookmark"><a href="#table-5-simple-and-clear-interface" aria-label="Permalink for 2.4.5 Table 5: Simple and clear interface " title="Permalink for 2.4.5 Table 5: Simple and clear interface " property="url"><span property="title" content="2.4.5 Table 5: Simple and clear interface ">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p><strong>About the user:</strong> Many people can not learn easily new design metaphors or remember things that they learned (such as people with Mild Cognitive Impairment (MCI) or dementia. Without these skills it can be much harder or impossible to locate a desired items to interact with and know what interaction may do. The user can feel lost or overwhelmed. </p>
         <p>Many users can be overwhelmed by too many options, or too much information. If reading is slow then two much information mixed together will make it difficult or impossible to find the information you need.</p>
         <p>This leads to the following user stories: To be filled in</p>
@@ -3323,7 +3350,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="table-6-familiar-interface" typeof="bibo:Chapter" resource="#table-6-familiar-interface" property="bibo:hasPart">
-        <h4 id="h-table-6-familiar-interface" resource="#h-table-6-familiar-interface"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.6 </span>Table 6: Familiar interface<span class="permalink" typeof="bookmark"><a href="#table-6-familiar-interface" aria-label="Permalink for 2.4.6 Table 6: Familiar interface" title="Permalink for 2.4.6 Table 6: Familiar interface" property="url"><span property="title" content="2.4.6 Table 6: Familiar interface">§</span></a></span></span></h4>
+        <h4 id="h-table-6-familiar-interface" resource="#h-table-6-familiar-interface"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.6 </span>Table 6: Familiar interface<span class="permalink" typeof="bookmark"><a href="#table-6-familiar-interface" aria-label="Permalink for 2.4.6 Table 6: Familiar interface" title="Permalink for 2.4.6 Table 6: Familiar interface" property="url"><span property="title" content="2.4.6 Table 6: Familiar interface">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p><strong>About the user:</strong> Many people cannot learn easily new design metaphors or remember things that they learned (such as people with Mild Cognitive Impairment (MCI) or dementia. Without these skills it can be much harder or impossible to: </p>
         <ul>
           <li>locate desired items to interact with and </li>
@@ -3422,7 +3452,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="table-7-clear-and-understandable-content-and-text" typeof="bibo:Chapter" resource="#table-7-clear-and-understandable-content-and-text" property="bibo:hasPart">
-        <h4 id="h-table-7-clear-and-understandable-content-and-text" resource="#h-table-7-clear-and-understandable-content-and-text"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.7 </span>Table 7: Clear and understandable content and text<span class="permalink" typeof="bookmark"><a href="#table-7-clear-and-understandable-content-and-text" aria-label="Permalink for 2.4.7 Table 7: Clear and understandable content and text" title="Permalink for 2.4.7 Table 7: Clear and understandable content and text" property="url"><span property="title" content="2.4.7 Table 7: Clear and understandable content and text">§</span></a></span></span></h4>
+        <h4 id="h-table-7-clear-and-understandable-content-and-text" resource="#h-table-7-clear-and-understandable-content-and-text"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.7 </span>Table 7: Clear and understandable content and text<span class="permalink" typeof="bookmark"><a href="#table-7-clear-and-understandable-content-and-text" aria-label="Permalink for 2.4.7 Table 7: Clear and understandable content and text" title="Permalink for 2.4.7 Table 7: Clear and understandable content and text" property="url"><span property="title" content="2.4.7 Table 7: Clear and understandable content and text">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p>About the user: To be filled in</p>
         <p>This leads to following user stories: To be filled in</p>
         <p>User needs for understandable text:</p>
@@ -3444,7 +3477,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="table-8-navigating-the-system" typeof="bibo:Chapter" resource="#table-8-navigating-the-system" property="bibo:hasPart">
-        <h4 id="h-table-8-navigating-the-system" resource="#h-table-8-navigating-the-system"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.8 </span>Table 8: Navigating the system<span class="permalink" typeof="bookmark"><a href="#table-8-navigating-the-system" aria-label="Permalink for 2.4.8 Table 8: Navigating the system" title="Permalink for 2.4.8 Table 8: Navigating the system" property="url"><span property="title" content="2.4.8 Table 8: Navigating the system">§</span></a></span></span></h4>
+        <h4 id="h-table-8-navigating-the-system" resource="#h-table-8-navigating-the-system"><span property="xhv:role" resource="xhv:heading"><span class="secno">2.4.8 </span>Table 8: Navigating the system<span class="permalink" typeof="bookmark"><a href="#table-8-navigating-the-system" aria-label="Permalink for 2.4.8 Table 8: Navigating the system" title="Permalink for 2.4.8 Table 8: Navigating the system" property="url"><span property="title" content="2.4.8 Table 8: Navigating the system">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p>About the user: Many people (most COGA groups) have memory issues and/or language issues that can make remembering numbers while processing words, difficult or impossible. Other contributing issues include impaired executive function. </p>
         <p>Sometimes developers put a barrier between the user and the task that they are doing so that the user can not use the content or service.</p>
         <ul>
@@ -3533,503 +3569,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
   </section>
 
-  <section class="appendix" id="proposal-coga-semantics-to-enable-personalization" typeof="bibo:Chapter" resource="#proposal-coga-semantics-to-enable-personalization" property="bibo:hasPart">
+  <section id="personalization-semantics" typeof="bibo:Chapter" resource="#personalization-semantics" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-proposal-coga-semantics-to-enable-personalization" resource="#h-proposal-coga-semantics-to-enable-personalization"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>Proposal: COGA Semantics to Enable Personalization<span class="permalink" typeof="bookmark"><a href="#proposal-coga-semantics-to-enable-personalization" aria-label="Permalink for A. Proposal: COGA Semantics to Enable Personalization" title="Permalink for A. Proposal: COGA Semantics to Enable Personalization" property="url"><span property="title" content="A. Proposal: COGA Semantics to Enable Personalization">§</span></a></span></span></h2>
-
-    <section id="introduction-1" typeof="bibo:Chapter" resource="#introduction-1" property="bibo:hasPart">
-      <h3 id="h-introduction-1" resource="#h-introduction-1"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1 </span>Introduction<span class="permalink" typeof="bookmark"><a href="#introduction-1" aria-label="Permalink for A.1 Introduction" title="Permalink for A.1 Introduction" property="url"><span property="title" content="A.1 Introduction">§</span></a></span></span></h3>
-      <p>Personalization involves tailoring aspects of the user experience to meet the preferences or needs of the user. For example, having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be new for another requiring them to learn new symbols. Personalization could include loading a set of symbols that is appropriate for the specific user, ensuring that all users find the icons simple and familiar.<br> Technology holds the promise of being extremely flexible and the design of many systems includes the expectation that users will be able to optimise their interaction experience according to their personal preferences or accessibility requirements (needs).
-      </p>
-      <p></p>
-      We need personalization because:
-      <p></p>
-      <ul>
-        <li>Different user needs can conflict </li>
-        <li>Learning new design patterns (and widgets) can be confusing - we want to allow users to stick with what works for them </li>
-        <li>Extra support can be annoying to people who do not need it </li>
-        <li>Making content predictable is necessary for accessibility but can often be considered boring design </li>
-        <li>Ability to change levels of complexity (increase or decrease) - As people skills improve or decrease over time or context. </li>
-        <li>Enable us to really meet the user needs </li>
-      </ul>
-      <p></p>
-      <p>Some users need extra support. This can include: </p>
-      <ul>
-        <li> Symbols and graphics that they are familiar with </li>
-        <li> Tool tips </li>
-        <li> Language they understand </li>
-        <li> Less features </li>
-        <li> Separating advertisements, so they do not confuse them with native content </li>
-        <li> Keyboard short cuts </li>
-      </ul>
-      <p>For this we need standardized terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use via an attribute and personal preferences. </p>
-      <p>For example, assume an author can make it programanticaly known that a button is used to send an email. At at the user end, the button could be renderer with a symbol, term, and/or tooltips that is understandable for this particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
-      <p>Working examples of how this could be used in practice, with user preferences, are available at <a href="https://github.com/ayelet-seeman/coga.personalisation">https://github.com/ayelet-seeman/coga.personalisation</a>. This is a project to help personalization for any use - including people with learning and memory issues. It is described more at: <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization</a>. </p>
-      <p></p>
-      <p>This project consists of 4 parts:</p>
-      <ol>
-        <li><a href="https://github.com/ayelet-seeman/coga.personalisation/tree/JSON-Script">JSON files for user setting</a></li>
-        <li>Proposal for new syntax: (This document) <br>
-        </li>
-        <li>An HTML page that uses some of the new syntax: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/">https://github.com/ayelet-seeman/coga.personalisation/tree/ExampleWebPage/</a></li>
-        <li>Scripts that a web author can use or include that read the user settings in the JSON files and adapt the page for the user needs: <a href="https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options">https://github.com/ayelet-seeman/coga.personalisation/tree/Script-Options</a></li>
-      </ol>
-      <p>This is one example of personalization based on semantics. Others may follow. It is also worth noting that the GPII project is working on making user preferences portable which would also enhance this work.</p>
-      <p>In another use-case we would like to see interoperable symbol set codes for non-verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write and are not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. An open set of references for symbol codes for these symbol sets however, could be interoperable. That means the end user could use an open source symbol set or buy the symbols and use them across different devices or applications. Symbols could still be proprietary but they would also be interoperable. </p>
-
-      <section id="contextual-personalization" typeof="bibo:Chapter" resource="#contextual-personalization" property="bibo:hasPart">
-        <h4 id="h-contextual-personalization" resource="#h-contextual-personalization"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1.1 </span>Contextual Personalization<span class="permalink" typeof="bookmark"><a href="#contextual-personalization" aria-label="Permalink for A.1.1 Contextual Personalization" title="Permalink for A.1.1 Contextual Personalization" property="url"><span property="title" content="A.1.1 Contextual Personalization">§</span></a></span></span></h4>
-        <p>One important factor in optimizing the personalization of a product or service is to ensure that the personalization is appropriate for the current context of use. For example, settings that will suit the user of a mobile phone in their office or home will not be well suited to that user when they are driving a car. In a home or office, the typical user would probably prefer to send and receive text messages using the keyboard and screen of the mobile phone. However, in the car, voice input and text to speech output would be the most appropriate. In this car context, the profile settings of a typical user might be very similar to those that a blind user would use in all contexts.</p>
-      </section>
-
-    </section>
-
-    <section id="simplification" typeof="bibo:Chapter" resource="#simplification" property="bibo:hasPart">
-      <h3 id="h-simplification" resource="#h-simplification"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.2 </span>Simplification<span class="permalink" typeof="bookmark"><a href="#simplification" aria-label="Permalink for A.2 Simplification" title="Permalink for A.2 Simplification" property="url"><span property="title" content="A.2 Simplification">§</span></a></span></span></h3>
-      <p><strong>Requirement</strong>: The user must be able to request a way to identify and differentiate between critical features, medium features and less important features. These need to be defined as important from a user perspective in the content. Typically, critical features may be used by many or most users, 90% of the time or more. High important features would be above 60% use. Medium important features would be 20% of users use it 20% of the time . Under 20% usage would be of low importance.</p>
-      <p><strong>User experience</strong>: Based on personalization setting the user can see less options. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
-      <p><strong>Proposed attribute</strong>: coga-simplification (formerly coga-importance). Having the following values: (main task such as send for an email) </p>
-      <ul>
-        <li><code>coga-simplification="simplest"</code>. This setting should be used on:
-          <ul>
-            <li> Elements that are essential for the key function (from the user perspective) of the page (Example: The send button for an email draft) or</li>
-            <li> Elements that are sometimes critical to a user being able to use the site, such as "save my work" or "emergency instructions" or</li>
-            <li> Elements that are used by over 90% of a user group (such as parents or teachers) use this element most times they use the content<br>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <p>Typically 3 links or buttons would be considered "simplest"</p>
-      <ul>
-        <li> <code>coga-simplification="high"</code>. This setting should be used on:
-          <ul>
-            <li> Elements that are used frequent (Example: The delete button for an email draft) or</li>
-            <li> Elements that are sometimes important to a user being able to use the site, such as settings or</li>
-            <li> Elements that are used by frequently (over 60%) by a user group (such as parents or teachers) use this element most times they use the content</li>
-          </ul>
-        </li>
-        <li> <code>coga-simplification= "med"</code>. This setting should be used on elements that are not typically used.</li>
-        <li> <code>coga-simplification="low"</code>. This setting should be used on elements that are rarely used or only used by advanced users. (Example: The terms and services or the archive button for an email draft) </li>
-      </ul>
-      <div class="note">
-        <div class="note-title marker" aria-level="4" role="heading" id="h-note1"><span>Note</span></div>
-        <div class="">
-          <p>These semantics aid simplification. But what content is most useful to a user varies from user to user. For example, men may be more interested in mens clothing, and may not be interested in the more frequently use womens clothing option. For that reason we may add context for elements that will help the personalization agent select the most useful content for a given user. This is also necessary for reminders (see bellow). RDFa may be the best way forward for this aspect.</p>
-          <p> It is worth mentioning that a lot of this information is known for personalization of advertisements and content optimization. </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="adding-context" typeof="bibo:Chapter" resource="#adding-context" property="bibo:hasPart">
-      <h3 id="h-adding-context" resource="#h-adding-context"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.3 </span>Adding Context <span class="permalink" typeof="bookmark"><a href="#adding-context" aria-label="Permalink for A.3 Adding Context " title="Permalink for A.3 Adding Context " property="url"><span property="title" content="A.3 Adding Context ">§</span></a></span></span></h3>
-      <p><strong>Requirement:</strong> Having familiar terms and symbols is key to being able to use the web. However what is familiar for one user may be strange for another requiring them to learn new symbols. If a user agent or script knows the context of links, buttons, and other page elements then symbols and text used can be ones that the user understands. This can include: </p>
-      <ul>
-        <li> Symbols and graphics that they are familiar with </li>
-        <li> Tool tips </li>
-        <li> Language the use can understand </li>
-        <li> Keyboard short cuts </li>
-      </ul>
-      <p> </p>
-      <p>For that we need to standardize supportive syntax and terms that can be linked to associated symbols, terms, translations and explanations, for the individual, via an attribute.</p>
-      <p> </p>
-      <p><strong>Example user experience:</strong>, if an author gives to a button a role "send" then, without any work by the author, the button could be automatically rendered with a symbol, term, and/or tooltips that is understandable by a particular user. It could automatically imply F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. This would enable a consistent UI experience across applications and websites.</p>
-      <p><strong>Proposed attribute:</strong> <code>coga-action</code></p>
-      <p>For example: &lt;button coga-action="undo" &gt;default&lt;/button&gt;</p>
-      <p>The user experience may be simply replacing the text for the term "undo".</p>
-      <p><strong>Supported Values: </strong></p>
-      <p>The following could be supported values of <code>coga-action</code> for buttons:</p>
-      <ul>
-        <li>compose(default importance = "critical") </li>
-        <li>delete </li>
-        <li>next </li>
-        <li>previous </li>
-        <li>submit (default importance = "critical") </li>
-        <li>undo </li>
-        <li>cancel </li>
-        <li>buy</li>
-        <li>add label </li>
-        <li>move </li>
-        <li>view </li>
-        <li>save (default importance = "critical") </li>
-        <li>send (default importance = "critical") </li>
-        <li>received </li>
-        <li>sent </li>
-        <li>edit </li>
-        <li>reply </li>
-        <li>forward </li>
-        <li>my profile </li>
-        <li>upload </li>
-        <li>close </li>
-        <li>more </li>
-        <li>calendar </li>
-        <li>add entry </li>
-        <li>expand </li>
-        <li>unexpanded </li>
-        <li>open </li>
-        <li>new </li>
-        <li>print </li>
-        <li>settings </li>
-      </ul>
-    </section>
-
-    <section typeof="bibo:Chapter" resource="" property="bibo:hasPart">
-      <p><strong>Proposed attribute:</strong><code>coga-destination</code></p>
-      <p>The <code>coga-destination</code> attribute provides the context of a link. It should be used on a link element or element with role="link".</p>
-      <p>For example: &lt;a href="home.html" coga-destination="home" &gt;our main page&lt;/a&gt;</p>
-      <p>The user experience may be simply replacing the text for the term "home" and adding an icon. Based on personalization setting the user can see diffrent icons. A sample user experience is available at <a href="https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html">https://rawgit.com/ayelet-seeman/coga.personalisation/demo/conactUs.html </a></p>
-      <p>It may also position this button to a location on the screen where the user is expecting the home page link.</p>
-      <p><strong>Supported Values: </strong></p>
-      <p>The following could be supported values of <code>coga-destination</code>. </p>
-      <ul>
-        <li>home </li>
-        <li>contact us </li>
-        <li>our phone </li>
-        <li>our email </li>
-        <li>site map </li>
-        <li>help </li>
-        <li>about us </li>
-        <li>terms </li>
-        <li>tools </li>
-        <li>comment </li>
-        <li>language (English) </li>
-        <li>sign in </li>
-        <li>sign up </li>
-        <li>product </li>
-        <li>services </li>
-        <li>social (provide label ) </li>
-        <li>post </li>
-        <li>contactus </li>
-        <li>help </li>
-        <li>chat help </li>
-      </ul>
-    </section>
-
-    <section typeof="bibo:Chapter" resource="" property="bibo:hasPart">
-      <p><strong>Proposed attribute: </strong><code>coga-field</code></p>
-      <p><code>coga-field</code> provides the context of a text input field such as a text box. It should be used on an input, text a responding role.</p>
-      <p>For example: &lt;input type="text" name="fname" coga-field="phone"/&gt;</p>
-      <p>The user experience may include filling in the field and adding an icon.</p>
-      <p>coga-field values that would typically be on form controls and would have a user context - for example phone would relate to the user's phone</p>
-      <p>Note they can be concatenated such as coga-field="birthdate month"</p>
-      <ul>
-        <li>first name </li>
-        <li>family name </li>
-        <li>initial </li>
-        <li>phone (corresponds to a user phone number)</li>
-        <li>cell phone </li>
-        <li>address 1 </li>
-        <li>city </li>
-        <li>state </li>
-        <li>country </li>
-        <li>post code </li>
-        <li>phone </li>
-        <li>credit card </li>
-        <li>expiry </li>
-        <li>birth date</li>
-        <li>day, *month *year </li>
-        <li>expiry date</li>
-        <li>todays date</li>
-        <li>credit card code </li>
-        <li>date start </li>
-        <li>date end</li>
-      </ul>
-      <p><code>coga-field</code> can also give the context for text elements.</p>
-      <p><code>coga-field</code> values on text are:</p>
-      <ul>
-        <li>our-phone </li>
-        <li>our-address </li>
-        <li>our-email </li>
-      </ul>
-    </section>
-
-    <section id="general-context" typeof="bibo:Chapter" resource="#general-context" property="bibo:hasPart">
-      <h3 id="h-general-context" resource="#h-general-context"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.4 </span>General context<span class="permalink" typeof="bookmark"><a href="#general-context" aria-label="Permalink for A.4 General context" title="Permalink for A.4 General context" property="url"><span property="title" content="A.4 General context">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong> One important factor in optimizing the personalization of a product or service is to ensure that the personalization is appropriate for the current context of use as well as what is relevant for the user. For example a female user with a cognitive disability may need less options, and options that are for men are less likely to be relevant for her and may be demoted to bellow the scroll or placed under a "more option" button.</p>
-      <p><strong>Proposed attribute:</strong>coga-context</p>
-      Coga-context would let the author give additional contextual information about the content.
-      <p> Coga-context accepts the values of a URI or shortened URI.</p>
-      <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"women.html"</span> <span class="hljs-attr">coga-context</span>=<span class="hljs-string">"openref:gender#femail"</span>&gt;</span>women<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> </pre>
-      <p>To make this work without an RDF parser we recommend maintaining a list of recommended ontologies. </p>
-
-      <section id="should-we-be-using-rdfa" typeof="bibo:Chapter" resource="#should-we-be-using-rdfa" property="bibo:hasPart">
-        <h4 id="h-should-we-be-using-rdfa" resource="#h-should-we-be-using-rdfa"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.4.1 </span>Should we be using RDFa?<span class="permalink" typeof="bookmark"><a href="#should-we-be-using-rdfa" aria-label="Permalink for A.4.1 Should we be using RDFa?" title="Permalink for A.4.1 Should we be using RDFa?" property="url"><span property="title" content="A.4.1 Should we be using RDFa?">§</span></a></span></span></h4>
-        <p>The context based properties should be convertible to RDFa. (see <a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa Primer</a>) and the task force should create this mapping.</p>
-        <p>Note that a lot of this can be done using RDFa. However it is easy to change the meaning with RDFa and a very basic parser will misinterpret the result. The coga work needs to be usable by as many authors as possible, and not only thoughs who can implement RDF logic.</p>
-        <p>Further , personalization setting need to be limited, and RDF can give an unlimited number of potential options which will make the system unusable. (This is unless we create restrictions and controls on an ontology uses - such as mapping to know ontologies.)</p>
-        <p>For example, in the code below the property homepage does not refer to the home page of the site but of the person being references. Beyond declaring the type of data we are dealing with, each typeof creates a new blank node with its own distinct properties. </p>
-        <pre class="hljs javascript">&lt;div vocab=<span class="hljs-string">"http://xmlns.com/foaf/0.1/"</span>&gt;
-<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>        
-   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Person"</span>&gt;</span>          
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"homepage"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://example.com/bob/"</span>&gt;</span>Bob<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>        
-   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>        
-   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Person"</span>&gt;</span>          
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"homepage"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://example.com/eve/"</span>&gt;</span>Eve<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>        
-   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>        
-   <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">typeof</span>=<span class="hljs-string">"Person"</span>&gt;</span>         
-      <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"homepage"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"http://example.com/manu/"</span>&gt;</span>Manu<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>        
-   <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>     
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></span>
-        </pre>
-        <p> </p>
-        <p>We may recommend adding RDFA that describe the role of the item (see <a href="https://www.w3.org/TR/xhtml-rdfa-primer/">RDFa Primer</a>):</p>
-        <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">resource</span>=<span class="hljs-string">"/alice/posts/jos_barbecue"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"title"</span>&gt;</span>Jo's Barbecue<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Date: <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"created"</span>&gt;</span>2011-09-14<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">property</span>=<span class="hljs-string">"creator"</span>&gt;</span>Eve<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>        
-  ...     
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      </pre>
-        <p> </p>
-      </section>
-
-    </section>
-
-    <section id="concept-codes" typeof="bibo:Chapter" resource="#concept-codes" property="bibo:hasPart">
-      <h3 id="h-concept-codes" resource="#h-concept-codes"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.5 </span>Concept codes<span class="permalink" typeof="bookmark"><a href="#concept-codes" aria-label="Permalink for A.5 Concept codes" title="Permalink for A.5 Concept codes" property="url"><span property="title" content="A.5 Concept codes">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong>We would like to enable interoperable symbol set codes for Non verbal people. Products for people who are non vocal often use symbols to help users communicate. These symbols are in fact peoples language. Unfortunately many of these symbols are both subject to copy write AND not interoperable. That means end-users can only use one device, and can not use apps or AT from a different company. There are open set of symbol codes for these symbol sets, that could be referenced then they can be interoperable. alternatively wordnet nodes could be referenced. If the users symbols are mapped to the same nodes then users agents will be able to load the user understandable symbol. That means the end use could buy the symbols and use them across different devices or applications. They would still be proprietary but they would also be interoperable. </p>
-      <p>User experience: AAC users will load symbols that they understand in different applications that are made by a different provider.</p>
-      <p><strong>Proposed attribute:</strong> <code>coga-concept</code></p>
-      <p><strong>Supported Values:</strong> URL
-      </p>
-      <p><strong>Examples:</strong></p>
-      <p>&lt;img coga-concept="http//wordnet.com/node/girl" href="mygirlsy.bmp/&gt; </p>
-      <p> </p>
-    </section>
-
-    <section id="potential-parts-of-a-page" typeof="bibo:Chapter" resource="#potential-parts-of-a-page" property="bibo:hasPart">
-      <h3 id="h-potential-parts-of-a-page" resource="#h-potential-parts-of-a-page"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.6 </span>Potential parts of a page<span class="permalink" typeof="bookmark"><a href="#potential-parts-of-a-page" aria-label="Permalink for A.6 Potential parts of a page" title="Permalink for A.6 Potential parts of a page" property="url"><span property="title" content="A.6 Potential parts of a page">§</span></a></span></span></h3>
-      <p><strong>Requirement:</strong> The following could be extensions for aria landmarks or ePub </p>
-      <p><strong>User experience:</strong> symbols and colors could be used consistently across different content. </p>
-      <p>Links (such as ePub nav maps) can be automatically generated for people learn via keypoints or examples.</p>
-      <p><strong>Examples:</strong> </p>
-      <ul>
-        <li>key points </li>
-        <li>example </li>
-        <li>note </li>
-        <li>warning </li>
-        <li>step </li>
-        <li>external - for external content, such as sponsored or advertising </li>
-        <li>offers - for special offers that are complementary to the main content or task </li>
-        <li>advertisement - advertisement or sponsored content </li>
-      </ul>
-    </section>
-
-    <section id="number-free" typeof="bibo:Chapter" resource="#number-free" property="bibo:hasPart">
-      <h3 id="h-number-free" resource="#h-number-free"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.7 </span>Number free<span class="permalink" typeof="bookmark"><a href="#number-free" aria-label="Permalink for A.7 Number free" title="Permalink for A.7 Number free" property="url"><span property="title" content="A.7 Number free">§</span></a></span></span></h3>
-      <p><strong>Requirement</strong>: Not everyone can understand numbers. We therefor suggest coga-numberfree for alternative text for people who can not understand the main content</p>
-      <p><strong>User experience:</strong></p>
-      <p>A suggested user experience would be: Numerical concepts could be rendered by the user agent slightly different so that the user knows a number free explanation is available. The user can then mouse over the content and a tooltips would give the number free value</p>
-      <p><strong>Proposed attribute:</strong><code>coga-numberfree</code> </p>
-      <p><strong>Supported value : </strong> String</p>
-      <p><strong>For example:</strong></p>
-      <p><span>&lt;span coga-numberfree="almost all"&gt;9 out of 10</span> &lt;/span&gt;
-      </p>
-      <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">coga-numberfree</span>=<span class="hljs-string">"hat and coat weather"</span>&gt;</span>The weather is <span>9 degrees<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>
-      </pre>
-    </section>
-
-    <section id="non-literal-text-and-images" typeof="bibo:Chapter" resource="#non-literal-text-and-images" property="bibo:hasPart">
-      <h3 id="h-non-literal-text-and-images" resource="#h-non-literal-text-and-images"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.8 </span>Non-literal text and images<span class="permalink" typeof="bookmark"><a href="#non-literal-text-and-images" aria-label="Permalink for A.8 Non-literal text and images" title="Permalink for A.8 Non-literal text and images" property="url"><span property="title" content="A.8 Non-literal text and images">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong>Not everyone can understand non-literal text and icons such as metaphors, idioms etc. We need a tag that identifies text or images as non literal and allows the author to explain non-literal text and images to users.</p>
-      <p><strong>User experience:</strong></p>
-      <p>A suggested user experience would be: Non literal content could be rendered by the user agent slightly differently so that the user knows that this content should not be taken literally and that a literal explanation is available. The user can then mouse over the content and a tooltips would give the literal value.</p>
-      <p><strong>Proposed attribute: </strong><code>coga-literal</code> </p>
-      <p><strong>Supported value: </strong>String</p>
-      <p><strong>Examples:</strong></p>
-      <p>&lt;span coga-literal="it is raining hard"&gt; It is <span>raining cats and dogs</span> &lt;/span&gt;</p>
-      <p> User agents can render non-literal text in a different way so that users will know that this is non literal. They can then use a mouse over or other technique to receive the translation.
-      </p>
-    </section>
-
-    <section id="explain-and-feedback" typeof="bibo:Chapter" resource="#explain-and-feedback" property="bibo:hasPart">
-      <h3 id="h-explain-and-feedback" resource="#h-explain-and-feedback"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.9 </span>Explain and feedback<span class="permalink" typeof="bookmark"><a href="#explain-and-feedback" aria-label="Permalink for A.9 Explain and feedback" title="Permalink for A.9 Explain and feedback" property="url"><span property="title" content="A.9 Explain and feedback">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong></p>
-      <p>Some users need additional help. We request an attribute where the author can provide additional information.or what just happened.</p>
-      <strong>Proposed attribute: </strong><code>coga-feedback</code>
-      <p>This attribute provides immediate feedback that can be shown or spoken when any event is triggered on a control.</p>
-      <p><strong>User experience: </strong>This can be rendered as text at the top of the page and read immediately. Most users will not want this text rendered and spoken. Other users however will need it to know what has just happened. </p>
-      <strong>Proposed attribute: </strong><code>coga-explain</code>
-      <p>
-        This attribute provides any information that helps the user anticipate the functionality, such as letting the user know what behavior will trigger an event. This is most important if the mechanism is not standard. </p>
-      <p> User experience: This help can be rendered as a tool tip, help link or read when the control or link is read. Most users will not want this text rendered or spoken, but other users however will need it to understand the behavior of the element.</p>
-      <h3 id="examples">Examples:<span class="permalink" typeof="bookmark"><a href="#explain-and-feedback" aria-label="Permalink for Examples:" title="Permalink for Examples:" property="url"><span property="title" content="Examples:">§</span></a></span></h3>
-      <p> coga-explain= "press enter to send the email" </p>
-      <p>coga-feedback= "your email on birthdays was sent" </p>
-      <p>These values will change when the email is sent.</p>
-      <p>&nbsp;</p>
-    </section>
-
-
-    <section id="more-help" typeof="bibo:Chapter" resource="#more-help" property="bibo:hasPart">
-      <h3 id="h-more-help" resource="#h-more-help"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.10 </span>More Help<span class="permalink" typeof="bookmark"><a href="#more-help" aria-label="Permalink for A.10 More Help" title="Permalink for A.10 More Help" property="url"><span property="title" content="A.10 More Help">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong>Some users may need additional information or specifically additional help inforamtion. We request additonal attributes so that an author can indicate the existence of this additional information.</p>
-      <p><strong>Proposed attribute: </strong><code>coga-moreinfo</code></p>
-      <p><strong>Supported values: </strong>URL</p>
-      <p><strong>Proposed attribute: </strong><code>coga-extrahelp</code></p>
-      <p><strong>Supported values: </strong> tooltips/humanhelp/morehelp/glossary/dictionary/thesaurus</p>
-      <p><strong>Example:</strong></p>
-      <p>&lt;button type="button" coga-moreinfo="uri2 uri3" &gt;undo&lt;/button&gt;</p>
-      <p>URI 2 may read: </p>
-      <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"uri2"</span> <span class="hljs-attr">coga-extrahelp</span>=<span class="hljs-string">"morehelp"</span> <span class="hljs-attr">coga-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
-pressing the undo button will erase all your work on this page. Use this button with care. 
-If you press it by mistake, press control and y at the same time and your answers will come back. 
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"functiongethelp()"</span> <span class="hljs-attr">coga-extrahelp</span>=<span class="hljs-string">"humanhelp"</span> <span class="hljs-attr">coga-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span>
-I want a person to help me
-<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"uri3"</span> <span class="hljs-attr">coga-extrahelp</span>=<span class="hljs-string">"glossary"</span> <span class="hljs-attr">coga-hidden</span>=<span class="hljs-string">"true"</span>&gt;</span><p></p></pre></section>
-
-    <section id="potential-features" typeof="bibo:Chapter" resource="#potential-features" property="bibo:hasPart">
-      <h3 id="h-potential-features" resource="#h-potential-features"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.11 </span>Potential Features<span class="permalink" typeof="bookmark"><a href="#potential-features" aria-label="Permalink for A.11 Potential Features" title="Permalink for A.11 Potential Features" property="url"><span property="title" content="A.11 Potential Features">§</span></a></span></span></h3>
-      <p>The following may not be necessary </p>
-      <ul>
-        <li>Views </li>
-        <li>ascending. descending </li>
-        <li>day, week month </li>
-        <li>this week </li>
-        <li>this month </li>
-        <li>today </li>
-      </ul>
-    </section>
-
-    <section id="language-type-support" typeof="bibo:Chapter" resource="#language-type-support" property="bibo:hasPart">
-      <h3 id="h-language-type-support" resource="#h-language-type-support"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.12 </span>Language type support<span class="permalink" typeof="bookmark"><a href="#language-type-support" aria-label="Permalink for A.12 Language type support" title="Permalink for A.12 Language type support" property="url"><span property="title" content="A.12 Language type support">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong>Sometimes you may want to provide a simplified version of a section of a page. For example, you may wish to provide a simplified summary of legal document, but still have a longer version for other users. These alternative versions may not be identical in content but maintain the gist of the original content.</p>
-      <p><strong>Proposed attribute: </strong><code>coga-alternative</code> Would be used on an alternitive content as an alternative to more detailed or difficult to understand content. coga-alternative can be used on a span, div, link or image that servers as alternitive content to it's direct parent element.</p>
-
-      <p><strong>Supported values:</strong> </p>
-      <ul>
-        <li>On text: easylang, explain, more, vocab500, vocab1000, vocab2000, active, literal, numberfree, smallsentences, chunks, General: lessoptions. Whitespace, largefont&nbsp;</li>
-        <li>Images: symbolic , realistic</li>
-        <li>p0, p1, p1, p2, p3 Where p0 are images with true content, p1 is a symbol or illustration that is typically shown with alt="", P2 are extra illustration that most people will not mind such as at the start of a paragraph or option. p3 are for disability centric illustrations that can disturb other people and may be mid sentence.&nbsp;</li>
-      </ul>
-
-      <strong>Example:</strong>
-      <div><em>&lt;div&gt;</em></div>
-      <div><em>&lt;span</em> <em>coga-alternative="easylang numberfree vocab1000" class="hidden"&gt;&gt;most people prefer simple text</em><em>&lt;/span&gt;</em></div>
-      <div><em>In studies it was found that only 30% of users prefer long convoluted text with&nbsp;obtuse&nbsp;words and lots of numbers, with 56% claiming there&nbsp;preferred&nbsp;the simplified text , with the&nbsp;remainder&nbsp;unsure or stated it depends on the context.</em></div>
-      <div><em><br>
-			</em></div>
-      <div><em>&lt;/div&gt;</em></div>
-    </section>
-
-    <section typeof="bibo:Chapter" resource="" property="bibo:hasPart">
-      <p> <strong>Proposed attribute: </strong><code>coga-easylang</code> </p>
-      <p><code>coga-easylang</code> will contain a version of the content that is easier to read and understand. Note that this only works on small sections of text as the easylang attribute does not support full HTML, such as lists and sections.</p>
-
-      <p><strong>Supported values:</strong> String</p>
-      <p>&lt;span coga-easylang=" some text that is easy to read"&gt; some convoluted obtuse text&lt;/span&gt;</p>
-      <p>Where coga-easylang should use as simple well-known words as possible, and active voicing, literal text, small simple sentences.&nbsp;Acronyms and abbreviations should be avoided, unless they are the common way to refer to an item.</p>
-      <p> </p>
-    </section>
-
-    <section typeof="bibo:Chapter" resource="#logs" property="bibo:hasPart">
-      <h3 id="logs" resource="#logs"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.13 </span>Logs</span></h3>
-    </section>
-    <div>&nbsp;This proposal is to track the tasks that a user has done, so that they can be reminded of them, and return to or fix a task. The suggested syntax should allow the author to transform some of the information into breadcrumbs via CSS, and &nbsp;the user system can read and present more or less information to the user as per their preferences.
-      <p>Preferably this should be in the header so that the user agent can build a cross application log of user tasks.</p>
-      <p>Notes: </p>
-      <p>This is just a proposed syntax. Other syntax may be better.</p>
-      <p>For protection of privacy ,it must be easy for the user to delete the log, and prevent the log from being stored. </p>
-      <p>&nbsp;</p>
-    </div>
-    <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">log</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"booking trip"</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">step</span> <span class="hljs-attr">status</span> =<span class="hljs-string">"done"</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>buy ticket<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">actiontaken</span>&gt;</span>bought ticket to NY return<span class="hljs-tag">&lt;/<span class="hljs-name">actiontaken</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">changepossible</span>=<span class="hljs-string">"yes"</span>&gt;</span>url <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">step</span>&gt;</span></pre>
-    <pre class="hljs javascript">&lt;step  status =<span class="hljs-string">"done"</span>&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>hotel<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">actiontaken</span>&gt;</span>booked Sheraton single room<span class="hljs-tag">&lt;/<span class="hljs-name">actiontaken</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">changepossible</span>=<span class="hljs-string">"yes"</span>&gt;</span>url <span class="hljs-tag">&lt;/<span class="hljs-name">view</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">step</span>&gt;</span></span></pre>
-    <pre class="hljs javascript">&lt;step  status =<span class="hljs-string">"current"</span>&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>car rental<span class="hljs-tag">&lt;/<span class="hljs-name">name</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">view</span> <span class="hljs-attr">current</span> <span class="hljs-attr">changepossible</span>=<span class="hljs-string">"yes"</span>/&gt;</span> <span class="hljs-tag">&lt;/<span class="hljs-name">step</span>&gt;</span></span>       </pre>
-    <pre class="hljs xml"><span class="hljs-tag">&lt;/<span class="hljs-name">log</span>&gt;</span>
-
-Note that status can have values of :  done, pending , current. Where pending is a step that has not yet been completed but is not the current step.</pre>
-    <pre class="hljs">An alternative syntax could be</pre>
-    <pre class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"log"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"booking trip"</span> <span class="hljs-attr">aria-hidden</span>=<span class="hljs-string">"true"</span>/&gt;</span>
-</pre>
-    <p>Open questions: Should the application name be in the log?</p>
-
-    <section id="reminders-and-messages" typeof="bibo:Chapter" resource="#reminders-and-messages" property="bibo:hasPart">
-      <h3 id="h-reminders-and-messages" resource="#h-reminders-and-messages"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.14 </span>Reminders and messages<span class="permalink" typeof="bookmark"><a href="#reminders-and-messages" aria-label="Permalink for A.14 Reminders and messages" title="Permalink for A.14 Reminders and messages" property="url"><span property="title" content="A.14 Reminders and messages">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong>We require an attribute that enables different users to experience different amount of reminders and messages based on personal preferences. Reminders are a wonderful tool for many people with cognitive disabilities. However too many reminders will be annoying or distracting for some other users. Currently people can turn off distractions such as skype, and facebook, across different devices, and then may forget to turn them back on.</p>
-      <p>These semantics allow for different solutions so that users are able to focus without missing important messages. Users need to manage all distractions by forming a cross application and cross device distraction matrix that manages all distractions in one setting. It is based on a matrix for distractions at the operating system , browser or cloud level. People and users can be clustered in terms of importance or groups. For example, the CEO and your child's care giver could both be considered critical contacts. So even if they do not feel the message is urgent they can sometimes disrupt the user anyway. Some family members and important colleagues can be in another group, friends and extended family in a third group, system messages from the compliance system can be a different group again. </p>
-      <p><strong>Proposed attribute: </strong>coga-messageimportance</p>
-      <p><strong>Supported values: </strong></p>
-      <p><strong>critical: </strong>To be critical a message needs to be both urgent and content that the user is very likely to consider important. For example, a system may send a message that it is going to reboot in one miunet to install updates. </p>
-      <p><strong>medium: </strong>Important messages that needs the user's attention at their convenience. For example, a relatively important chat message.</p>
-      <p><strong>low</strong>: A message that does not need time sensitive attention. For example, a typical chat message</p>
-      <p><strong>Example:</strong></p>
-      <p>&lt;div role="alert" coga-messageimportance="medium"&gt; It is your daughter's birthday tomorrow&lt;/div&gt;</p>
-      <p>&nbsp;</p>
-      <p><strong>Proposed attribute: </strong>coga-messagefrom</p>
-      <p><strong>Supported values: </strong>a string value that identifies the sender of the message. If multiple names are used they can be separated by a coma.</p>
-      <p><strong>Example:</strong></p>
-      <p>&lt;div role="alert" coga-messageimportance="low" coga-messagefrom="lisa seeman, lseeman"&gt;I posted a new version on github for you to review&lt;/div&gt;</p>
-      <p>&nbsp;</p>
-      <p><strong>Proposed attribute: </strong>coga-messagecontext</p>
-      <p><strong>Supported values: </strong><strong> </strong>a string value that identifies the locaction that makes this message relevent. Typical values are "home" nd "work". If multiple locations are relivent they can be separated by a coma.</p>
-      <p><strong>Example:</strong></p>
-      <p>&lt;div role="alert" coga-messageimportance="low" coga-messagefrom="lisa seeman, lseeman" coga-messagecontext="work"&gt;I posted a new version on github for you to review&lt;/div&gt;</p>
-      <p>&nbsp;</p>
-      <p><strong>Proposed attribute: </strong>coga-messagetime</p>
-      <p><strong>Supported values: </strong><strong> </strong>24 hour date time format. DD.MM.YEAR.HOUR.MM - DD.MM.YEAR.HOUR.MM where the second date is an optional exclusive expiry date.</p>
-      <p><strong>Example:</strong></p>
-      <p>&lt;div role="alert" coga-messageimportance="medium" coga-messagefrom="my calender" coga-messagecontext="work" coga-messagetime="10.02.2017.00.00-16.02.2017.00.00"&gt;Renew your driving license this week&lt;/div&gt;</p>
-      <p>&lt;div role="alert" coga-messageimportance="critical" coga-messagefrom="my calender" coga-messagecontext="work" coga-messagetime="16.02.2017.00.00"&gt;Renew your driving license ASAP&lt;/div&gt;</p>
-      <p>&nbsp;</p>
-    </section>
-
-    <section id="distractions" typeof="bibo:Chapter" resource="#distractions" property="bibo:hasPart">
-      <h3 id="h-distractions" resource="#h-distractions"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.15 </span>Distractions<span class="permalink" typeof="bookmark"><a href="#distractions" aria-label="Permalink for A.15 Distractions" title="Permalink for A.15 Distractions" property="url"><span property="title" content="A.15 Distractions">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong> We require an attribute that indicates a distraction so that some users may be able to remove them from content.</p>
-      <p><strong>Proposed attribute: </strong><code> coga-distraction</code></p>
-      <p>This attribute should be used on non essential, detracting content, so that people who have problems keeping focus can turn them off. An example user experiences would be to hide all distraction content.</p>
-      <p><strong>Example: </strong> coga-distraction="moving ad"</p>
-      <p>Supported values: animations, auto-starting, moving, ad, message, chat , overlay, popup<br> Auto-changing (logs) third-party, offer ( includes suggestions).</p>
-      <p>Note that elements with the coga-distraction attribute should also have a lable or accessible name.</p>
-    </section>
-
-    <section id="additional-wai-aria-roles" typeof="bibo:Chapter" resource="#additional-wai-aria-roles" property="bibo:hasPart">
-      <h3 id="h-additional-wai-aria-roles" resource="#h-additional-wai-aria-roles"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.16 </span>Additional WAI-ARIA roles<span class="permalink" typeof="bookmark"><a href="#additional-wai-aria-roles" aria-label="Permalink for A.16 Additional WAI-ARIA roles" title="Permalink for A.16 Additional WAI-ARIA roles" property="url"><span property="title" content="A.16 Additional WAI-ARIA roles">§</span></a></span></span></h3>
-      <p><strong>Requirement: </strong> We may want to add roles for sections a page such as: contact us - for a contact us form&nbsp; </p>
-      <p><strong>User experience: </strong>symbols and colors could be used consistently across different content.</p>
-      <p>Nav maps can be automatically generated for people learn via key-points or examples.</p>
-      <p>Further these sections could be hidden in the normal rendering of a page or rendered the top of page depending on user preferences. The location of these sections can also be changed, based on the user preference, enabling the user to find them easily.</p>
-      <p>Values:</p>
-      <p></p>
-      <ul>
-        <li>summary</li>
-        <li>keypoints</li>
-        <li>example</li>
-        <li>note</li>
-        <li>warning</li>
-        <li>step</li>
-        <li>external - for external content, such as sponsored or advertising</li>
-        <li>offers - for special offers that are complementary to the main content or task</li>
-        <li>advertisement - advertisement or sponsored content</li>
-        <li>contactus</li>
-        <li>aboutus</li>
-      </ul>
-      <p> </p>
-    </section>
-    <!--
-		<section class="appendix" id="changelog">
-			<h2>Change Log</h2>
-			<section>
-				<h2>Substantive changes since the <a href="@@">last public working draft</a></h2>
-				<ul>
-					<li>@@</li>
-					<!- EdNote: After each WD publish, move contents of this list into the next one below. ->
-				</ul>
-			</section>
-			<section>
-				<h2>Other substantive changes since the <a href="@@">First Public Working Draft</a></h2>
-				<ul>
-					<li>@@</li>
-					<!- EdNote: After each WD publish, move previous list into this one. ->
-				</ul>
-			</section>
-		</section>
-		-->
+    <h2 id="h-personalization-semantics" resource="#h-personalization-semantics"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>Personalization semantics<span class="permalink" typeof="bookmark"><a href="#personalization-semantics" aria-label="Permalink for 3. Personalization semantics" title="Permalink for 3. Personalization semantics" property="url"><span property="title" content="3. Personalization semantics">§</span></a>
+      </span>
+      </span>
+    </h2>
+    <p>The ARIA Working Group is developing Personalization Semantics, a vocabulary of terms to indicate personalization preferences to applications which began in the Cognitive and Learning Disabilities Accessibility Task Force. At present, an <a href="https://w3c.github.io/personalization-semantics/">editors' draft of Personalization Semantics</a> is available.</p>
   </section>
-
-
   <!--<div data-include="../extension/index.html" data-oninclude="fixIncludes" data-include-replace="true">Extension</div>-->
 
   <!--
@@ -4055,7 +3602,10 @@ Note that status can have values of :  done, pending , current. Where pending is
 
   <section class="acknowledgements" id="significant-contributors-to-this-document" typeof="bibo:Chapter" resource="#significant-contributors-to-this-document" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-significant-contributors-to-this-document" resource="#h-significant-contributors-to-this-document"><span property="xhv:role" resource="xhv:heading"><span class="secno">B. </span>Significant contributors to this document<span class="permalink" typeof="bookmark"><a href="#significant-contributors-to-this-document" aria-label="Permalink for B. Significant contributors to this document" title="Permalink for B. Significant contributors to this document" property="url"><span property="title" content="B. Significant contributors to this document">§</span></a></span></span></h2>
+    <h2 id="h-significant-contributors-to-this-document" resource="#h-significant-contributors-to-this-document"><span property="xhv:role" resource="xhv:heading"><span class="secno">4. </span>Significant contributors to this document<span class="permalink" typeof="bookmark"><a href="#significant-contributors-to-this-document" aria-label="Permalink for 4. Significant contributors to this document" title="Permalink for 4. Significant contributors to this document" property="url"><span property="title" content="4. Significant contributors to this document">§</span></a>
+      </span>
+      </span>
+    </h2>
     <dl>
       <dt>Boland,&nbsp;Tim</dt>
       <dd>(National Institute of Standards and Technology (NIST))</dd>
@@ -4169,10 +3719,16 @@ Note that status can have values of :  done, pending , current. Where pending is
 
   <section id="references" class="appendix" typeof="bibo:Chapter" resource="#references" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-references" resource="#h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">C. </span>References<span class="permalink" typeof="bookmark"><a href="#references" aria-label="Permalink for C. References" title="Permalink for C. References" property="url"><span property="title" content="C. References">§</span></a></span></span></h2>
+    <h2 id="h-references" resource="#h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>References<span class="permalink" typeof="bookmark"><a href="#references" aria-label="Permalink for A. References" title="Permalink for A. References" property="url"><span property="title" content="A. References">§</span></a>
+      </span>
+      </span>
+    </h2>
 
     <section id="informative-references" typeof="bibo:Chapter" resource="#informative-references" property="bibo:hasPart">
-      <h3 id="h-informative-references" resource="#h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">C.1 </span>Informative references<span class="permalink" typeof="bookmark"><a href="#informative-references" aria-label="Permalink for C.1 Informative references" title="Permalink for C.1 Informative references" property="url"><span property="title" content="C.1 Informative references">§</span></a></span></span></h3>
+      <h3 id="h-informative-references" resource="#h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1 </span>Informative references<span class="permalink" typeof="bookmark"><a href="#informative-references" aria-label="Permalink for A.1 Informative references" title="Permalink for A.1 Informative references" property="url"><span property="title" content="A.1 Informative references">§</span></a>
+        </span>
+        </span>
+      </h3>
       <dl class="bibliography" resource=""><dt id="bib-ETSI-1">[ETSI-1]</dt>
         <dd>ETSI et al. EG 202 325. <a href="http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf" property="dc:references"><cite>Human Factors (HF); User Profile Management</cite></a>. URL: <a href="http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf" property="dc:references">http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf</a>
         </dd><dt id="bib-ETSI-2">[ETSI-2]</dt>
@@ -4184,13 +3740,13 @@ Note that status can have values of :  done, pending , current. Where pending is
         </dd><dt id="bib-GPII-1">[GPII-1]</dt>
         <dd>GPII. <a href="http://gpii.net/" property="dc:references"><cite>undefined</cite></a>. URL: <a href="http://gpii.net/" property="dc:references">http://gpii.net/</a>
         </dd><dt id="bib-HTML5">[HTML5]</dt>
-        <dd>Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Edward O'Connor; Silvia Pfeiffer. W3C. <a href="https://www.w3.org/TR/html5/" property="dc:references"><cite>HTML5</cite></a>. 28 October 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/" property="dc:references">https://www.w3.org/TR/html5/</a>
+        <dd>Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. <a href="https://www.w3.org/TR/html5/" property="dc:references"><cite>HTML5</cite></a>. 28 October 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/" property="dc:references">https://www.w3.org/TR/html5/</a>
         </dd><dt id="bib-WCAG">[WCAG]</dt>
         <dd>Wendy Chisholm; Gregg Vanderheiden; Ian Jacobs. W3C. <a href="https://www.w3.org/TR/WAI-WEBCONTENT" property="dc:references"><cite>Web Content Accessibility Guidelines 1.0</cite></a>. 5 May 1999. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WAI-WEBCONTENT" property="dc:references">https://www.w3.org/TR/WAI-WEBCONTENT</a>
         </dd><dt id="bib-WCAG20">[WCAG20]</dt>
         <dd>Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al. W3C. <a href="https://www.w3.org/TR/WCAG20/" property="dc:references"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/" property="dc:references">https://www.w3.org/TR/WCAG20/</a>
         </dd><dt id="bib-coga-issue-papers">[coga-issue-papers]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd>W3C. <a href="https://w3c.github.io/coga/issue-papers/" property="dc:references"><cite>Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</cite></a>. URL: <a href="https://w3c.github.io/coga/issue-papers/" property="dc:references">https://w3c.github.io/coga/issue-papers/</a>
         </dd><dt id="bib-coga-user-research">[coga-user-research]</dt>
         <dd>Lisa Seeman; Michael Cooper. W3C. <a href="https://www.w3.org/TR/coga-user-research/" property="dc:references"><cite>Cognitive Accessibility User Research</cite></a>. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/" property="dc:references">https://www.w3.org/TR/coga-user-research/</a>
         </dd><dt id="bib-wai-aria">[wai-aria]</dt>

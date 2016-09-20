@@ -145,10 +145,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-bottom: 1em;
     }
     
-    .note> p:first-child,
-    .ednote> p:first-child,
-    .issue> p:first-child,
-    .warning> p:first-child {
+    .note>p:first-child,
+    .ednote>p:first-child,
+    .issue>p:first-child,
+    .warning>p:first-child {
       margin-top: 0
     }
     
@@ -365,11 +365,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     }
     /* --- DL --- */
     
-    .section dd> p:first-child {
+    .section dd>p:first-child {
       margin-top: 0;
     }
     
-    .section dd> p:last-child {
+    .section dd>p:last-child {
       margin-bottom: 0;
     }
     
@@ -392,6 +392,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       }
     }
   </style>
+
   <title>Cognitive and Learning Disabilities and WCAG</title>
 
 
@@ -404,7 +405,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED">
   <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
-  <meta name="generator" content="ReSpec 4.4.5">
+  <meta name="generator" content="ReSpec 5.0.3">
   <script id="initialUserConfig" type="application/json">
     {
       "trace": true,
@@ -841,6 +842,18 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         {
           "title": "Cognitive Accessibility User Research; Aging and Dementia",
           "href": "https://www.w3.org/TR/coga-user-research/#aging-and-dementia",
+          "publisher": "W3C",
+          "editors": [
+            "Lisa Seeman",
+            "Michael Cooper"
+          ],
+          "etAl": "false",
+          "deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+        },
+        "coga-issue-papers":
+        {
+          "title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
+          "href": "https://w3c.github.io/coga/issue-papers/",
           "publisher": "W3C",
           "editors": [
             "Lisa Seeman",
@@ -2225,7 +2238,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Cognitive and Learning Disabilities and WCAG</h1>
-    <h2 id="w3c-editor-s-draft-16-august-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-08-16">16 August 2016</time></h2>
+    <h2 id="w3c-editor-s-draft-20-september-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-09-20">20 September 2016</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://w3c.github.io/coga/extension/">https://w3c.github.io/coga/extension/</a></dd>
@@ -2340,7 +2353,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             </ol>
           </li>
           <li class="tocline"><a href="#items-where-new-techniques-are-wcag-2.0-required" class="tocxref"><span class="secno">3.6 </span>Items where new techniques are WCAG 2.0 required</a></li>
-          <li class="tocline"><a href="#items-where-wcag-2.0-sc-levels-should-be-changed" class="tocxref"><span class="secno">3.7 </span>Items where WCAG 2.0 SC levels should be changed</a></li>
+          <li class="tocline"><a href="#changedlevels" class="tocxref"><span class="secno">3.7 </span>Items where WCAG 2.0 SC levels should be changed</a></li>
           <li class="tocline"><a href="#edits-to-wcag" class="tocxref"><span class="secno">3.8 </span>Edits to WCAG</a></li>
           <li class="tocline"><a href="#additional-notes" class="tocxref"><span class="secno">3.9 </span>Additional notes</a></li>
           <li class="tocline"><a href="#significant-contributors-this-section" class="tocxref"><span class="secno">3.10 </span>Significant contributors this section </a></li>
@@ -2358,7 +2371,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   <section id="introduction" typeof="bibo:Chapter" resource="#introduction" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-introduction" resource="#h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction<span class="permalink" typeof="bookmark"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction" property="url"><span property="title" content="1. Introduction">§</span></a></span></span></h2>
+    <h2 id="h-introduction" resource="#h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction<span class="permalink" typeof="bookmark"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction" property="url"><span property="title" content="1. Introduction">§</span></a>
+      </span>
+      </span>
+    </h2>
     <p>The following is for a first draft for adding needs for people with cognitive and learning disabilities into the Web Content Accessibility Guidelines (WCAG) [<cite><a class="bibref" href="#bib-WCAG20">WCAG20</a></cite>]. It is based on the user research [<cite><a class="bibref" href="#bib-coga-user-research">coga-user-research</a></cite>]
       <a href="https://w3c.github.io/wcag/coga/user-research.html"></a> and the issue papers available at [<cite><a class="bibref" href="#bib-coga-issue-papers">coga-issue-papers</a></cite>]
       <a href="https://rawgit.com/w3c/coga/master/issue-papers/index.html"></a>. </p>
@@ -2376,8 +2392,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   <section id="terms" typeof="bibo:Chapter" resource="#terms" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-terms" resource="#h-terms"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Terms<span class="permalink" typeof="bookmark"><a href="#terms" aria-label="Permalink for 2. Terms" title="Permalink for 2. Terms" property="url"><span property="title" content="2. Terms">§</span></a></span></span></h2>
+    <h2 id="h-terms" resource="#h-terms"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Terms<span class="permalink" typeof="bookmark"><a href="#terms" aria-label="Permalink for 2. Terms" title="Permalink for 2. Terms" property="url"><span property="title" content="2. Terms">§</span></a>
+      </span>
+      </span>
+    </h2>
     <dl class="termlist">
+
+      <dt><em>Author settable properties</em></dt>
+
+      <dd>type of distraction, type of help, type of transaction and type of reminder, instructions and status of an element. </dd>
+
       <dt><dfn data-dfn-type="dfn" id="dfn-clearly-indicated-success-or-failure">clearly indicated success or failure</dfn></dt>
       <dd>confirm that after a user action the user known that the action was successful or not. Applications should also let the user know what just happened and where they are in a process. </dd>
 
@@ -2392,6 +2416,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
       <dt><dfn data-dfn-type="dfn" id="dfn-concrete-wording">concrete wording</dfn></dt>
       <dd>information that a user might need or have searched to find out </dd>
+
+      <dt><dfn data-dfn-type="dfn" id="dfn-contextual-information">contextual information</dfn></dt>
+
+      <dd>Defined terms and tags that give meaning to the content such as context of elements; concept and role; relevance and information for simplification; position in a process</dd>
+
+      <dt>&nbsp;</dt>
 
       <dt><dfn data-dfn-type="dfn" id="dfn-easily-available-mode-or-setting">easily available mode or setting</dfn></dt>
       <dd>
@@ -2442,7 +2472,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <dd>Information the user may find important or need to know , such as infromation that the user may have searched to find. <span class="ednote">- coment - may be to vage. information can be non trivial but noone NEEDS to know it </span></dd>
 
       <dt><dfn data-dfn-type="dfn" id="dfn-personalization">personalization</dfn></dt>
-      <dd>user-defined. <span class="ednote">maybe change the word to individualization</span></dd>
+      <dd>User interface that is driven by the individual user's preferences.</dd>
 
       <dt><dfn data-dfn-type="dfn" id="dfn-rapid-feedback">rapid feedback</dfn></dt>
       <dd>less then 200 ms (from etsi) </dd>
@@ -2456,6 +2486,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
       <dt><dfn data-dfn-type="dfn" id="dfn-semantics">semantics</dfn></dt>
       <dd>definition</dd>
+
+      <dt><dfn data-dfn-type="dfn" id="dfn-signpost">signpost</dfn></dt>
+      <dd>an immediately perceptible indicator or obvious clue, that gives information or direction</dd>
 
       <dt><dfn data-dfn-type="dfn" id="dfn-sensitive-information">sensitive information</dfn></dt>
       <dd>information that can put people at risk or information the user wishes to protect <span class="ednote">To do - add examples including the user sets the time out</span></dd>
@@ -2486,7 +2519,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
   <section id="new-success-criteria" typeof="bibo:Chapter" resource="#new-success-criteria" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-new-success-criteria" resource="#h-new-success-criteria"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>New success criteria<span class="permalink" typeof="bookmark"><a href="#new-success-criteria" aria-label="Permalink for 3. New success criteria" title="Permalink for 3. New success criteria" property="url"><span property="title" content="3. New success criteria">§</span></a></span></span></h2>
+    <h2 id="h-new-success-criteria" resource="#h-new-success-criteria"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>New success criteria<span class="permalink" typeof="bookmark"><a href="#new-success-criteria" aria-label="Permalink for 3. New success criteria" title="Permalink for 3. New success criteria" property="url"><span property="title" content="3. New success criteria">§</span></a>
+      </span>
+      </span>
+    </h2>
     <div class="ednote">
       <div class="ednote-title marker" aria-level="3" role="heading" id="h-ednote1"><span>Editor's Note</span></div>
       <p class="">We will be adding a simple language equivalent for this page when we have agreed on the content </p>
@@ -2516,11 +2552,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="under-wcag-2.2-provide-users-enough-time-to-read-and-use-content.x" typeof="bibo:Chapter" resource="#under-wcag-2.2-provide-users-enough-time-to-read-and-use-content.x" property="bibo:hasPart">
-      <h3 id="h-under-wcag-2.2-provide-users-enough-time-to-read-and-use-content.x" resource="#h-under-wcag-2.2-provide-users-enough-time-to-read-and-use-content.x"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1 </span>Under WCAG 2.2 Provide users enough time to read and use content.<span class="permalink" typeof="bookmark"><a href="#under-wcag-2.2-provide-users-enough-time-to-read-and-use-content.x" aria-label="Permalink for 3.1 Under WCAG 2.2 Provide users enough time to read and use content." title="Permalink for 3.1 Under WCAG 2.2 Provide users enough time to read and use content." property="url"><span property="title" content="3.1 Under WCAG 2.2 Provide users enough time to read and use content.">§</span></a></span></span></h3>
+      <h3 id="h-under-wcag-2.2-provide-users-enough-time-to-read-and-use-content.x" resource="#h-under-wcag-2.2-provide-users-enough-time-to-read-and-use-content.x"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1 </span>Under WCAG 2.2 Provide users enough time to read and use content.<span class="permalink" typeof="bookmark"><a href="#under-wcag-2.2-provide-users-enough-time-to-read-and-use-content.x" aria-label="Permalink for 3.1 Under WCAG 2.2 Provide users enough time to read and use content." title="Permalink for 3.1 Under WCAG 2.2 Provide users enough time to read and use content." property="url"><span property="title" content="3.1 Under WCAG 2.2 Provide users enough time to read and use content.">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>We suggest adding the following as success criteria: </p>
 
       <section typeof="bibo:Chapter" resource="#timed" property="bibo:hasPart">
-        <h4 id="timed" resource="#timed"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1.1 </span>Timed event are not used except for the situations listed below.</span></h4>
+        <h4 id="timed" resource="#timed"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.1.1 </span>Timed event are not used except for the situations listed below.</span>
+        </h4>
         <p>(See COGA Techniques 2.9.1 ) </p>
         <ol>
           <li>Sessions time out after 20 hours have elapsed </li>
@@ -2546,7 +2586,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="under-wcag-2.3" typeof="bibo:Chapter" resource="#under-wcag-2.3" property="bibo:hasPart">
-      <h3 id="h-under-wcag-2.3" resource="#h-under-wcag-2.3"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2 </span>Under WCAG 2.3<span class="permalink" typeof="bookmark"><a href="#under-wcag-2.3" aria-label="Permalink for 3.2 Under WCAG 2.3" title="Permalink for 3.2 Under WCAG 2.3" property="url"><span property="title" content="3.2 Under WCAG 2.3">§</span></a></span></span></h3>
+      <h3 id="h-under-wcag-2.3" resource="#h-under-wcag-2.3"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2 </span>Under WCAG 2.3<span class="permalink" typeof="bookmark"><a href="#under-wcag-2.3" aria-label="Permalink for 3.2 Under WCAG 2.3" title="Permalink for 3.2 Under WCAG 2.3" property="url"><span property="title" content="3.2 Under WCAG 2.3">§</span></a>
+        </span>
+        </span>
+      </h3>
 
       <section typeof="bibo:Chapter" resource="#23" property="bibo:hasPart">
         <p>Guideline 2.3 "Do not design content in a way that is known to cause seizures" should be changed to: </p>
@@ -2556,12 +2599,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent" typeof="bibo:Chapter" resource="#do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent" property="bibo:hasPart">
-        <h4 id="h-do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent" resource="#h-do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2.1 </span>Do not expose user information in a way that can be exploited without informed consent<span class="permalink" typeof="bookmark"><a href="#do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent" aria-label="Permalink for 3.2.1 Do not expose user information in a way that can be exploited without informed consent" title="Permalink for 3.2.1 Do not expose user information in a way that can be exploited without informed consent" property="url"><span property="title" content="3.2.1 Do not expose user information in a way that can be exploited without informed consent">§</span></a></span></span></h4>
+        <h4 id="h-do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent" resource="#h-do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2.1 </span>Do not expose user information in a way that can be exploited without informed consent<span class="permalink" typeof="bookmark"><a href="#do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent" aria-label="Permalink for 3.2.1 Do not expose user information in a way that can be exploited without informed consent" title="Permalink for 3.2.1 Do not expose user information in a way that can be exploited without informed consent" property="url"><span property="title" content="3.2.1 Do not expose user information in a way that can be exploited without informed consent">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p class="technique">Techniques to include: using functional requirements for personlzation that do not suggest that the majority of users are disabled. Failure technique to be added of identifying a user to a code that is used mainly for people with dyscalculia. </p>
       </section>
 
       <section typeof="bibo:Chapter" resource="#semantics" property="bibo:hasPart">
-        <h4 id="semantics" resource="#semantics"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2.2 </span>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.</span></h4>
+        <h4 id="semantics" resource="#semantics"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.2.2 </span>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.</span>
+        </h4>
         <p>Note that this does not include selling products know to be harmful. </p>
         <p class="technique">Techniques to include: not adding automatically incrementing the number of items selected without warning the use . </p>
         <p class="technique">Techniques to include: Where leaving the site or task is likely to cause harm, ensure that the user is aware of the change and risks. For example, in a health care site when looking for one drug, and an advert takes the user to by a different drug</p>
@@ -2569,10 +2616,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="under-wcag-3.1" typeof="bibo:Chapter" resource="#under-wcag-3.1" property="bibo:hasPart">
-      <h3 id="h-under-wcag-3.1" resource="#h-under-wcag-3.1"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3 </span>Under WCAG 3.1<span class="permalink" typeof="bookmark"><a href="#under-wcag-3.1" aria-label="Permalink for 3.3 Under WCAG 3.1" title="Permalink for 3.3 Under WCAG 3.1" property="url"><span property="title" content="3.3 Under WCAG 3.1">§</span></a></span></span></h3>
+      <h3 id="h-under-wcag-3.1" resource="#h-under-wcag-3.1"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3 </span>Under WCAG 3.1<span class="permalink" typeof="bookmark"><a href="#under-wcag-3.1" aria-label="Permalink for 3.3 Under WCAG 3.1" title="Permalink for 3.3 Under WCAG 3.1" property="url"><span property="title" content="3.3 Under WCAG 3.1">§</span></a>
+        </span>
+        </span>
+      </h3>
 
       <section typeof="bibo:Chapter" resource="#instructions" property="bibo:hasPart">
-        <h4 id="instructions" resource="#instructions"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3.1 </span>Instructions, labels, navigation and <a href="#dfn-important-information" class="internalDFN" data-link-type="dfn">important information</a> are provided with a clear writing style that includes:</span></h4>
+        <h4 id="instructions" resource="#instructions"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3.1 </span>Instructions, labels, navigation and <a href="#dfn-important-information" class="internalDFN" data-link-type="dfn">important information</a> are provided with a clear writing style that includes:</span>
+        </h4>
         <p>(simple text version: Use a clear writing style) </p>
         <p>For all wording (other then exceptions): </p>
         <ol>
@@ -2628,7 +2679,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 
     <section typeof="bibo:Chapter" resource="#Providea clearstructureandlayout" property="bibo:hasPart">
-      <h3 id="Providea clearstructureandlayout" resource="#Providea clearstructureandlayout"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4 </span><strong>Provide a clear structure and layout</strong> (new guidline)</span></h3>
+      <h3 id="Providea clearstructureandlayout" resource="#Providea clearstructureandlayout"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4 </span><strong>Provide a clear structure and layout</strong> (new guidline)</span>
+      </h3>
       <p>We suggest adding the following a new guidline</p>
       <p>(See COGA Techniques 2.1) </p>
       <p>&nbsp;</p>
@@ -2641,8 +2693,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <p>&nbsp;</p>
 
       <section typeof="bibo:Chapter" resource="#chunks" property="bibo:hasPart">
-        <h4 id="chunks" resource="#chunks"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.1 </span>Information is provided in manageable chunks,  that include: <p></p>
-                    </span></h4>
+        <h4 id="chunks" resource="#chunks"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.1 </span>Information is provided in manageable chunks, that include:
+          <p></p>
+          </span>
+        </h4>
         <ol>
           <li>One idea per paragraph. (One sentence is enough for a paragraph.) </li>
           <li>Have one point per sentence. Long sentences can often be broken up into short sentences or lists. If a sentence can use more than two clauses, it typically can be broken up.</li>
@@ -2658,7 +2712,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section typeof="bibo:Chapter" resource="#324" property="bibo:hasPart">
-        <h4 id="324" resource="#324"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.2 </span><strong>Add to WCAG 3.2.4 </strong></span></h4>
+        <h4 id="324" resource="#324"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.2 </span><strong>Add to WCAG 3.2.4 </strong></span>
+        </h4>
         <ul>
           <li>Consistent styles are used for the <a href="#dfn-same-type-of-information" class="internalDFN" data-link-type="dfn">same type of information</a> and control (COGA Techniques 2.1.1). (see COGA Techniques 2.4) </li>
           <li>(removed - Provide a consistent design within a set of pages that includes:
@@ -2677,8 +2732,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section typeof="bibo:Chapter" resource="#obvious" property="bibo:hasPart">
-        <h4 id="obvious" resource="#obvious"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.3 </span><strong>The main purpose of each page and section of content is <em>obvious</em>. </strong> Extraneous information that is not relevant to the  main purpose of each page is separated in the modality of the user and pragmatically determinable.
-                </span></h4>
+        <h4 id="obvious" resource="#obvious"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.3 </span><strong>The main purpose of each page and section of content is <em>obvious</em>. </strong> Extraneous information that is not relevant to the main purpose of each page is separated in the modality of the user and pragmatically determinable.
+          </span>
+        </h4>
 
         <p>(Techniques Headings are provided that describe the topic or purpose of each section and are <em>easy to find</em>. </p>
         <p>also see COGA2.1.2) and wcag </p>
@@ -2693,7 +2749,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section typeof="bibo:Chapter" resource="#layout" property="bibo:hasPart">
-        <h4 id="layout" resource="#layout"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.4 </span><strong>Provide a clear and understandable layout  that includes:</strong></span></h4>
+        <h4 id="layout" resource="#layout"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.4 </span><strong>Provide a clear and understandable layout  that includes:</strong></span>
+        </h4>
         <ul>
           <li>Structure and relationships are obvious such that over 95% of users can immediately identity the structure and relationships (COGA Techniques 2.1.1) </li>
           <li>Paragraphs are clearly separated (white space in text or by a pause in speech content)</li>
@@ -2717,7 +2774,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section typeof="bibo:Chapter" resource="#controls" property="bibo:hasPart">
-        <h4 id="controls" resource="#controls"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.5 </span>Interactive controls are visually clear or visually clear controls are <a href="#dfn-easily-available-mode-or-setting" class="internalDFN" data-link-type="dfn">easily available</a> that conform to the following:</span></h4>
+        <h4 id="controls" resource="#controls"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.5 </span>Interactive controls are visually clear or visually clear controls are <a href="#dfn-easily-available-mode-or-setting" class="internalDFN" data-link-type="dfn">easily available</a> that conform to the following:</span>
+        </h4>
         <p>(See COGA Techniques 2.3) </p>
         <ol>
           <li>Interactive controls are persivable in the modality of the user</li>
@@ -2735,7 +2793,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section typeof="bibo:Chapter" resource="#familiar" property="bibo:hasPart">
-        <h4 id="familiar" resource="#familiar"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.6 </span><strong>A familiar   design, layout and common icons are easily available</strong>. </span></h4>
+        <h4 id="familiar" resource="#familiar"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.6 </span><strong>A familiar   design, layout and common icons are easily available</strong>. </span>
+        </h4>
         <p>A familiar design can be the user platform standard design or the design of a previous versions of this product that the user is familiar with and has successfully used. </p>
         <p>
         </p>
@@ -2763,7 +2822,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section typeof="bibo:Chapter" resource="#critical" property="bibo:hasPart">
-          <h5 id="critical" resource="#critical"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.6.1 </span><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> </span></h5>
+          <h5 id="critical" resource="#critical"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.6.1 </span><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> </span>
+          </h5>
 
           <ol>
             <li><em>Critical features</em> and <em>important information </em>can be used without use of a scroll bar. (Example -above the scroll or a clear link to it is above the scroll )</li>
@@ -2781,7 +2841,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
 
         <section typeof="bibo:Chapter" resource="#allinformation" property="bibo:hasPart">
-          <h5 id="allinformation" resource="#allinformation"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.6.2 </span><strong>All information is easy to find (AAA )</strong></span></h5>
+          <h5 id="allinformation" resource="#allinformation"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.6.2 </span><strong>All information is easy to find (AAA )</strong></span>
+          </h5>
           <ol>
             <li>Where there are more then five links directly under any one navigation heading or subheading it is examined to see if adding additional category would be helpful. (AAA) </li>
             <li>There are no more then no more than three clicks to get to information from a landing page or portal. (AAA) </li>
@@ -2791,7 +2852,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section typeof="bibo:Chapter" resource="#barrier" property="bibo:hasPart">
-        <h4 id="barrier" resource="#barrier"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.7 </span>When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</span></h4>
+        <h4 id="barrier" resource="#barrier"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.7 </span>When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</span>
+        </h4>
         <p>Additional abilities include <a href="#dfn-cognitive-function" class="internalDFN" data-link-type="dfn">cognitive functions</a> that are required, but are not necessary to achieve the main task for which the content was designed. Such as: </p>
         <ul>
           <li> Capture or security mechanisms that require copying, spelling or memory skills, </li>
@@ -2823,7 +2885,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
       <section typeof="bibo:Chapter" resource="#focus" property="bibo:hasPart">
 
-        <h4 id="focus" resource="#focus"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.8 </span>Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.</span></h4>
+        <h4 id="focus" resource="#focus"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.8 </span>Provide mechanisms that help the user focus and maintain or restore context if the context is lost.</span>
+        </h4>
         <p>(Remove uncertainty and help the user maintain context) </p>
         <p>This includes: </p>
         <ol>
@@ -2865,11 +2928,17 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="under-wcag-3.3-help-users-avoid-and-correct-mistakes.x" typeof="bibo:Chapter" resource="#under-wcag-3.3-help-users-avoid-and-correct-mistakes.x" property="bibo:hasPart">
-      <h3 id="h-under-wcag-3.3-help-users-avoid-and-correct-mistakes.x" resource="#h-under-wcag-3.3-help-users-avoid-and-correct-mistakes.x"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.5 </span>Under WCAG 3.3 Help users avoid and correct mistakes.<span class="permalink" typeof="bookmark"><a href="#under-wcag-3.3-help-users-avoid-and-correct-mistakes.x" aria-label="Permalink for 3.5 Under WCAG 3.3 Help users avoid and correct mistakes." title="Permalink for 3.5 Under WCAG 3.3 Help users avoid and correct mistakes." property="url"><span property="title" content="3.5 Under WCAG 3.3 Help users avoid and correct mistakes.">§</span></a></span></span></h3>
+      <h3 id="h-under-wcag-3.3-help-users-avoid-and-correct-mistakes.x" resource="#h-under-wcag-3.3-help-users-avoid-and-correct-mistakes.x"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.5 </span>Under WCAG 3.3 Help users avoid and correct mistakes.<span class="permalink" typeof="bookmark"><a href="#under-wcag-3.3-help-users-avoid-and-correct-mistakes.x" aria-label="Permalink for 3.5 Under WCAG 3.3 Help users avoid and correct mistakes." title="Permalink for 3.5 Under WCAG 3.3 Help users avoid and correct mistakes." property="url"><span property="title" content="3.5 Under WCAG 3.3 Help users avoid and correct mistakes.">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>We suggest adding the following success criteria: </p>
 
       <section id="the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" typeof="bibo:Chapter" resource="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" property="bibo:hasPart">
-        <h4 id="h-the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" resource="#h-the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.5.1 </span>The success or failure of every action should be <a href="#dfn-clearly-indicated-success-or-failure" class="internalDFN" data-link-type="dfn">clearly indicated</a> to the user and visual <a href="#dfn-rapid-feedback" class="internalDFN" data-link-type="dfn">rapid feedback</a> should be available. <a href="#dfn-spoken-feedback" class="internalDFN" data-link-type="dfn">Spoken feedback</a> should be a user selectable option.<span class="permalink" typeof="bookmark"><a href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" aria-label="Permalink for 3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option." title="Permalink for 3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option." property="url"><span property="title" content="3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option.">§</span></a></span></span></h4>
+        <h4 id="h-the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" resource="#h-the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.5.1 </span>The success or failure of every action should be <a href="#dfn-clearly-indicated-success-or-failure" class="internalDFN" data-link-type="dfn">clearly indicated</a> to the user and visual <a href="#dfn-rapid-feedback" class="internalDFN" data-link-type="dfn">rapid feedback</a> should be available. <a href="#dfn-spoken-feedback" class="internalDFN" data-link-type="dfn">Spoken feedback</a> should be a user selectable option.<span class="permalink" typeof="bookmark"><a href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" aria-label="Permalink for 3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option." title="Permalink for 3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option." property="url"><span property="title" content="3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option.">§</span></a>
+          </span>
+          </span>
+        </h4>
         <p>(COGA Techniques 2.6 ) </p>
         <p class="technique">Technique: an email is sent, It does not just disappear but the user can be told "your email was sent".</p>
       </section>
@@ -2879,12 +2948,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p>(See COGA Techniques 2.7 ) </p>
 
         <section typeof="bibo:Chapter" resource="#api" property="bibo:hasPart">
-          <h5 id="api" resource="#api"><span property="xhv:role" resource="xhv:heading"><strong>Known <a href="#dfn-standardized-apis" class="internalDFN" data-link-type="dfn">standardized APIs</a> for tools that help the user understand and use the content are supported. (s)</strong>. This includes:</span></h5>
+          <h5 id="api" resource="#api"><span property="xhv:role" resource="xhv:heading"><strong>Support known <a href="#dfn-standardized-apis" class="internalDFN" data-link-type="dfn">standardized APIs</a> for tools that help the user understand and use the content. </strong> This includes:</span></h5>
           <ul>
             <li> <a href="#dfn-safe-standardized-techniques" class="internalDFN" data-link-type="dfn">Standardized techniques</a> to support interoperable symbol sets are used when available. </li>
             <li>Allow reading of long form of acronyms</li>
-            <li>Support for synchronized speech highlighting, password management tools, and conent simplification </li>
+            <li>Support for text to speech with synchronized highlighting of the phrase being read, and conent simplification </li>
+            <li>Support for retaining content that has already been entered and password management</li>
           </ul>
+          <p>Exception: when there is a security or safety requirement to disable these apis for a specific field - such as credit card numbers</p>
+          <p>Failure technique: use of form autocomplete="off"</p>
         </section>
 
         <section typeof="bibo:Chapter" resource="#provided content" property="bibo:hasPart">
@@ -2903,19 +2975,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <p>For content with more then 200 words </p>
           <ol>
             <li>Provide a summary. For pieces of content with less then 200 words the heading may act as a summary. </li>
-            <li>The content owner identifies <a href="#dfn-keywords-that-aid-comprehension" class="internalDFN" data-link-type="dfn">keywords that aid comprehension</a> for the user and any keywords are programmatic determinable and visually emphasized. </li>
+            <li>The content owner identifies at least two <a href="#dfn-keywords-that-aid-comprehension" class="internalDFN" data-link-type="dfn">keywords that aid comprehension</a> for the user and keywords are programmatic determinable and emphasized in the modality of the user. </li>
           </ol>
           <p>For key content and call out boxes</p>
           <ul>
-            <li> Symbols are provided to help the user identify key content including: types of contact information, main functions, warnings, key points. Where a standard mechanism exists for the platform or technologies it should be used. </li>
+            <li> Symbols are provided to help the user identify key content including: types of contact information, main functions, warnings, key points, errors, system messages, notes, definitions, more information , types of help, table of content and site map, file types, search. Where a standard mechanism exists for the platform or technologies it should be used. </li>
           </ul>
           <p>For events</p>
           <ul>
             <li>Enable the user to set a reminder for date and time sensitive events. Reminders should be set only at the users request and the user should be able to personalize the reminder method. Where a standard mechanism exists for the platform or technologies it should be used</li>
           </ul>
-          <p>Where a standard mechanism exists for the platform or technologies exist for context sensitive help it should be used. (see <strong>WCAG 3.3.5</strong>)</p>
-
-
+          <p>For forms and non standard controls</p>
+          <ol>
+            <li>Where a standard mechanism for the platform or technologies exist for context sensitive help it should be used. (Simple search forms are excluded.)</li>
+            <li>Instructions should be available for non standard controls </li>
+          </ol>
+          <p>(see <strong>WCAG 3.3.5</strong>)</p>
           <p class="technique">Techniques include: a small site without access to their servers and can n install a free site search</p>
           <p class="technique">Techniques include: indexing and bookmarks in a video. </p>
           <div class="technique">Techniques include:
@@ -2953,8 +3028,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </div>
         </section>
 
-        <section typeof="bibo:Chapter" resource="" property="bibo:hasPart">
-          <p><strong>Prevent the user from making errors</strong></p>
+        <section typeof="bibo:Chapter" resource="#prevent" property="bibo:hasPart">
+          <h5 id="prevent" resource="#prevent"><span property="xhv:role" resource="xhv:heading"><strong>Prevent the user from making errors</strong></span></h5>
           <p>Was: Support is provided that help users complete and check their task, that includes</p>
           <p>(may be provided via a standard personalization mechanism) (COGA Techniques 2.9 ) </p>
 
@@ -2964,7 +3039,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             <li>Documented <a href="#dfn-common-input-errors" class="internalDFN" data-link-type="dfn">common input errors</a> can be corrected automatically. (example spelling mistakes)</li>
             <li>Enable and identify the default format and standards of locale and allow for change of format on labels and user input (removed use the default format and standards of locale and allow for change of format)</li>
             <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a href="#dfn-essential-information" class="internalDFN" data-link-type="dfn">essential information</a>. </li>
-            <li>Instructions are provided if there is not a label that fully describe the control or if it is not clear were to get the required information. Instructions that explains purpose and usage of the control (Graphics with a text alternative may be sufficient) ( A clear instruction or information is on where 99% of your target audience understand immediately what to do) </li>
+            <li>Instructions are provided if there is not a label that fully describe the control or if it is not clear were to get the required information. Instructions should explain the purpose and usage of the control. (Graphics with a text alternative may be sufficient) ( A clear instruction or information is on where 99% of your target audience understand immediately what to do) </li>
           </ol>
           <p>For legal and finacial transactions</p>
           <ol>
@@ -3024,9 +3099,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <section typeof="bibo:Chapter" resource="#support" property="bibo:hasPart">
           <h5 id="support" resource="#support"><span property="xhv:role" resource="xhv:heading"><strong>Support is provided that help users check their task and repair their work</strong></span></h5>
           <ol>
-            <li>A simple mechanism is provided to allow the user to undo mistakes. The user can repair information via clearly labeled action and get back to the place they were at, in one clearly labeled action with unwanted loss of data. </li>
+            <li>A simple mechanism is provided to allow the user to undo mistakes. The user can repair information via a clearly labeled action and get back to the place they were at, in one clearly labeled action with unwanted loss of data. </li>
             <li>A user can go a step back in a process via one clearly labeled action (exceptions may be required) </li>
-            <li>A summary is provided before submitting important information. (already in wcag as an option, but this is the best option for coga) -note we could lose this builet point and change WCAG <strong>3.3.4 </strong>to be for important information AND just summary</li>
+            <li>A summary is provided before submitting important information and the user is notified that they are about to submit the final information. (already in wcag as an option, but this is the best option for coga) -note we could lose this builet point and change WCAG <strong>3.3.4 </strong>to be for important information AND just summary</li>
+            <li>Time frames for canceling transactions are matien readable. </li>
           </ol>
           <p class="technique">Techniques to include: use coga/aria extension for steps in a process</p>
           <p>&nbsp;</p>
@@ -3075,7 +3151,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="items-where-new-techniques-are-wcag-2.0-required" typeof="bibo:Chapter" resource="#items-where-new-techniques-are-wcag-2.0-required" property="bibo:hasPart">
-      <h3 id="h-items-where-new-techniques-are-wcag-2.0-required" resource="#h-items-where-new-techniques-are-wcag-2.0-required"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.6 </span>Items where new techniques are WCAG 2.0 required<span class="permalink" typeof="bookmark"><a href="#items-where-new-techniques-are-wcag-2.0-required" aria-label="Permalink for 3.6 Items where new techniques are WCAG 2.0 required" title="Permalink for 3.6 Items where new techniques are WCAG 2.0 required" property="url"><span property="title" content="3.6 Items where new techniques are WCAG 2.0 required">§</span></a></span></span></h3>
+      <h3 id="h-items-where-new-techniques-are-wcag-2.0-required" resource="#h-items-where-new-techniques-are-wcag-2.0-required"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.6 </span>Items where new techniques are WCAG 2.0 required<span class="permalink" typeof="bookmark"><a href="#items-where-new-techniques-are-wcag-2.0-required" aria-label="Permalink for 3.6 Items where new techniques are WCAG 2.0 required" title="Permalink for 3.6 Items where new techniques are WCAG 2.0 required" property="url"><span property="title" content="3.6 Items where new techniques are WCAG 2.0 required">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>1.3.1 Info and Relationships: Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A) </p>
       <p>The following are <b>techniques under development</b>. We can not recommend their use until they have been proven to work reliably. </p>
       <ul>
@@ -3088,8 +3167,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </ul>
     </section>
 
-    <section id="items-where-wcag-2.0-sc-levels-should-be-changed" typeof="bibo:Chapter" resource="#items-where-wcag-2.0-sc-levels-should-be-changed" property="bibo:hasPart">
-      <h3 id="h-items-where-wcag-2.0-sc-levels-should-be-changed" resource="#h-items-where-wcag-2.0-sc-levels-should-be-changed"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.7 </span>Items where WCAG 2.0 SC levels should be changed<span class="permalink" typeof="bookmark"><a href="#items-where-wcag-2.0-sc-levels-should-be-changed" aria-label="Permalink for 3.7 Items where WCAG 2.0 SC levels should be changed" title="Permalink for 3.7 Items where WCAG 2.0 SC levels should be changed" property="url"><span property="title" content="3.7 Items where WCAG 2.0 SC levels should be changed">§</span></a></span></span></h3>
+    <section typeof="bibo:Chapter" resource="#changedlevels" property="bibo:hasPart">
+      <h3 id="changedlevels" resource="#changedlevels"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.7 </span>Items where WCAG 2.0 SC levels should be changed</span>
+      </h3>
       <p>We recommend the following level AAA are considered more important for COGA </p>
       <ul>
         <li>1.4.7 Low or No Background Audio No Background: The audio does not contain background sounds or Turn Off: The background sounds can be turned off. </li>
@@ -3120,7 +3200,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="edits-to-wcag" typeof="bibo:Chapter" resource="#edits-to-wcag" property="bibo:hasPart">
-      <h3 id="h-edits-to-wcag" resource="#h-edits-to-wcag"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.8 </span>Edits to WCAG<span class="permalink" typeof="bookmark"><a href="#edits-to-wcag" aria-label="Permalink for 3.8 Edits to WCAG" title="Permalink for 3.8 Edits to WCAG" property="url"><span property="title" content="3.8 Edits to WCAG">§</span></a></span></span></h3>
+      <h3 id="h-edits-to-wcag" resource="#h-edits-to-wcag"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.8 </span>Edits to WCAG<span class="permalink" typeof="bookmark"><a href="#edits-to-wcag" aria-label="Permalink for 3.8 Edits to WCAG" title="Permalink for 3.8 Edits to WCAG" property="url"><span property="title" content="3.8 Edits to WCAG">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>Contrast The visual presentation of text and images of text AND ICONS have a contrast ratio of at least </p>
       <div class="ednote">
         <div class="ednote-title marker" aria-level="4" role="heading" id="h-ednote4"><span>Editor's Note</span></div>
@@ -3129,13 +3212,19 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
 
     <section id="additional-notes" typeof="bibo:Chapter" resource="#additional-notes" property="bibo:hasPart">
-      <h3 id="h-additional-notes" resource="#h-additional-notes"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.9 </span>Additional notes<span class="permalink" typeof="bookmark"><a href="#additional-notes" aria-label="Permalink for 3.9 Additional notes" title="Permalink for 3.9 Additional notes" property="url"><span property="title" content="3.9 Additional notes">§</span></a></span></span></h3>
+      <h3 id="h-additional-notes" resource="#h-additional-notes"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.9 </span>Additional notes<span class="permalink" typeof="bookmark"><a href="#additional-notes" aria-label="Permalink for 3.9 Additional notes" title="Permalink for 3.9 Additional notes" property="url"><span property="title" content="3.9 Additional notes">§</span></a>
+        </span>
+        </span>
+      </h3>
       <p>
         User preferences can be transfered to a carer where the carer has guardianship or simpler position.</p>
     </section>
 
     <section id="significant-contributors-this-section" typeof="bibo:Chapter" resource="#significant-contributors-this-section" property="bibo:hasPart">
-      <h3 id="h-significant-contributors-this-section" resource="#h-significant-contributors-this-section"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.10 </span>Significant contributors this section <span class="permalink" typeof="bookmark"><a href="#significant-contributors-this-section" aria-label="Permalink for 3.10 Significant contributors this section " title="Permalink for 3.10 Significant contributors this section " property="url"><span property="title" content="3.10 Significant contributors this section ">§</span></a></span></span></h3>
+      <h3 id="h-significant-contributors-this-section" resource="#h-significant-contributors-this-section"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.10 </span>Significant contributors this section <span class="permalink" typeof="bookmark"><a href="#significant-contributors-this-section" aria-label="Permalink for 3.10 Significant contributors this section " title="Permalink for 3.10 Significant contributors this section " property="url"><span property="title" content="3.10 Significant contributors this section ">§</span></a>
+        </span>
+        </span>
+      </h3>
       <dl><dt>Milliken,&nbsp;Neil</dt>
         <dd>British Broadcasting Corporation</dd>
         <dt>Pluke,&nbsp;Mike</dt>
@@ -3145,18 +3234,25 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </dl>
     </section>
 
+
   </section>
 
   <section id="references" class="appendix" typeof="bibo:Chapter" resource="#references" property="bibo:hasPart">
     <!--OddPage-->
-    <h2 id="h-references" resource="#h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>References<span class="permalink" typeof="bookmark"><a href="#references" aria-label="Permalink for A. References" title="Permalink for A. References" property="url"><span property="title" content="A. References">§</span></a></span></span></h2>
+    <h2 id="h-references" resource="#h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>References<span class="permalink" typeof="bookmark"><a href="#references" aria-label="Permalink for A. References" title="Permalink for A. References" property="url"><span property="title" content="A. References">§</span></a>
+      </span>
+      </span>
+    </h2>
 
     <section id="informative-references" typeof="bibo:Chapter" resource="#informative-references" property="bibo:hasPart">
-      <h3 id="h-informative-references" resource="#h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1 </span>Informative references<span class="permalink" typeof="bookmark"><a href="#informative-references" aria-label="Permalink for A.1 Informative references" title="Permalink for A.1 Informative references" property="url"><span property="title" content="A.1 Informative references">§</span></a></span></span></h3>
+      <h3 id="h-informative-references" resource="#h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1 </span>Informative references<span class="permalink" typeof="bookmark"><a href="#informative-references" aria-label="Permalink for A.1 Informative references" title="Permalink for A.1 Informative references" property="url"><span property="title" content="A.1 Informative references">§</span></a>
+        </span>
+        </span>
+      </h3>
       <dl class="bibliography" resource=""><dt id="bib-WCAG20">[WCAG20]</dt>
         <dd>Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al. W3C. <a href="https://www.w3.org/TR/WCAG20/" property="dc:references"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/" property="dc:references">https://www.w3.org/TR/WCAG20/</a>
         </dd><dt id="bib-coga-issue-papers">[coga-issue-papers]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd>W3C. <a href="https://w3c.github.io/coga/issue-papers/" property="dc:references"><cite>Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</cite></a>. URL: <a href="https://w3c.github.io/coga/issue-papers/" property="dc:references">https://w3c.github.io/coga/issue-papers/</a>
         </dd><dt id="bib-coga-user-research">[coga-user-research]</dt>
         <dd>Lisa Seeman; Michael Cooper. W3C. <a href="https://www.w3.org/TR/coga-user-research/" property="dc:references"><cite>Cognitive Accessibility User Research</cite></a>. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/" property="dc:references">https://www.w3.org/TR/coga-user-research/</a>
         </dd>
