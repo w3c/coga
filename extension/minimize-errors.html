@@ -107,7 +107,7 @@
 				</p></div></blockquote>
                   <h3><a id="user-content-proposed" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#proposed" aria-hidden="true"></a>Proposed:</h3>
                                     <blockquote class="scquote"><div>
-                                      <p class="sctxt">@@<strong>3.3.3 Minimize user errors</strong>:  Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. When an <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">input error</a> is detected an automatic correction is made where reliable and possible. Otherwise if suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.@@</p>
+                                      <p class="sctxt">@@<strong>3.3.3 Minimize user errors</strong>:  Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. When an <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">input error</a> is detected an automatic correction is made where it is<em> known to be reliable and possible</em>. Otherwise, if suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.@@</p>
                                       <p class="sctxt">&nbsp;</p>
                                       <p class="sctxt">&nbsp;</p>
                                     </div></blockquote>
@@ -118,11 +118,15 @@
                 <p>(A)</p>
 		        <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
                 <dl class="termlist">
-                  id="dt-common-input-error">common input error</dt>
-                  <dd>errors that have been reported or documented more then one time, or have been documented in the understanding of the Success Criteria section or have supportive techniques</dd>
+                  common input error
+                  </dt>
+                  <dd>errors that have been  have been documented in the understanding of the Success Criteria section or have supportive techniques or that have been reported or documented more then one time and there is a know way to identify them</dd>
                 </dl>
                 <dt >reliable</dt>
                 <dd> 	where the behavour is almost always correct. </dd>
+                <dd>&nbsp;</dd>
+                <dt><span class="sctxt">known to be reliable and possible</span></dt>
+                <dd>Identified in the WCAG techniques as possible to correct</dd>
 		        <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
 		        <p>Principle 3 Understandable - Guideline 3.3: Help users avoid and correct mistakes.</p>
                 <p>This is an update to 3.3.3 Error Suggestion</p>
@@ -170,13 +174,16 @@
                                       
                                       Identify 
                                       
-                data with a constrained format in the form - look at techniques for these types of data formats</p>
-        <p>Step 2. Input common formats for a field which has a data format requirement (as identified in the techniques)</p>
-        <p>Step 3. Confirm that all common formats for writing the information are accepted </p>
+                data with a constrained format in the form </p>
+        <p>Step 2. look at techniques for these types of data formats to see if they are included as reliably fixable</p>
+        <p>Step 3. Input common formats for a field which has a data format requirement (as identified in the techniques)</p>
+        <p>Step 4. Confirm that all common formats for writing the information are accepted </p>
 		        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
                   <ul>
-					<li>Accept as many formats as possible, such as different ways of writing a phone number and date formats</li>
-					<li>Correct errors in the back-end, such as the post code being written in the text field with the city or state information</li>
+					<li>Accept as many formats as possible of different ways of writing a phone number</li>
+					<li>Accept as many formats as possible of different ways of writing a  date format</li>
+					<li>Using an interface were only valid dates can be selected</li>
+					<li>Correct errors of the post code being written in the text field with the city or state information</li>
 				  <li>Calendars and dates</li>
                             <ul>
                               <li>Calendars should default to the first relevant day. Work calendars should default to first working day of a user's locale. </li>
