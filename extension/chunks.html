@@ -101,9 +101,8 @@
 		    <div id="wiki-body">
 		      <div>
 		        <h2>SC Shortname: Manageable blocks of information</h2>
-		        <p></p>
 		        <h2><a id="user-content-sc-text" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#sc-text" aria-hidden="true"></a>SC Text</h2>
-		       		        <p>Information is provided in manageable blocks</p> 
+		       		        <p>Important information is provided in manageable blocks</p> 
 <p>For text</p>
  <ul>
 		          <li><strong>A single point per paragraph</strong>: A paragraph should consist of one or more sentences that deal with a single point.</li>
@@ -123,11 +122,34 @@ Media segments should be:</p>
 
 
 
-		        <p>Exception: There is an an exception where a diffrent structure is an essential part of the main function of the site. (For example a game or for a reading test.)</p>
+		        <p>Exception: There is are exceptions where:.</p>
+		        <ul>
+		          <li>The content will be penalized for not conforming to a given writing style (such as a dissertation or PHD proposal) </li>
+		          <li>A diffrent structure is an essential part of the main function of the site. (For example a game or for a reading test.)</li>
+		          <li>If the writing style is an essential part of the main function of the site, such as a literary work. </li>
+		          <li>The writing style items may be replaced for a location or type of   content were user testing has shown a more effective writing style to   aid comprehension for people with cognitive disabilities. Such as for   content written in a specific language. </li>
+		        </ul>
+                <p>&nbsp;</p>
 		       
-		        <h2><a id="user-content-suggestion-for-priority-level-aaaaaa" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-hidden="true"></a>Suggestion for Priority Level (AA)</h2>
+		        <h2><a id="user-content-suggestion-for-priority-level-aaaaaa" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-hidden="true"></a>Suggestion for Priority: Level (AA)</h2>
 		        <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
-		        <p>Manageable blocks of information : split or chunk content into smaller sections or pieces.</p>
+		        <dl>
+		          <dt>Manageable blocks of information : </dt>
+		          <dd>	content that is split or chunked into small sections or pieces.</dd>
+		         
+		          <dt>Important information</dt>
+	            
+                  <dd>
+                    <ol>
+                      <li>information the user may need to complete any action or task including an offline task. </li>
+                      <li>information the user may need to know related to safety, risks, privacy, health or opportunities. </li>
+                    </ol></dd></dl>
+                 
+                  
+                  <dt><em>Usability testing</em></dt>
+                  <dd><em></em><em>Usability testing</em> with a user group with at least five people with cognitive and/or learning disabilities and with at least three different learning and cognitive disabilities</dd>
+		        </dl>
+		        <p>&nbsp;</p>
 		        <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
 				<p>Under 3.1 with small changes</p>
 				<p><strong>Current</strong>
@@ -140,6 +162,9 @@ Media segments should be:</p>
 
 
 		        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
+		        <p>People who can not use content that does not conform to this SC include:</p>
+		        <p>&nbsp;</p>
+		        <p>&nbsp;</p>
 		        <p>Splitting information into manageable blocks assists:</p> 
 				<ul>
 		          <li>the increasing population who are over 60 (20% in the Northern Hemisphere by 2030) and many people with cognitive impairments, including language and learning disabilities. Over half of people over 60 years old - including mild cognative imparment an Age-Associate Memory Impairment (<em>AAMI</em>).		          </li>
@@ -159,16 +184,34 @@ Media segments should be:</p>
 					 <li> <a href="http://blog.edx.org/optimal-video-length-student-engagement">Optimal video length is 6 minutes or shorter </a> (Analysis by Philip Guo, Assistant Professor of Cognitive Science UC San Diego)</li>
                 </ul>
  
-		        <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
-				<h3>General Test</h3>
-				
-				<p>Step 1. Identify the relevant standard specifications such as:</p>
-				<ol>
-				  <li>COGA</li>
-				  <li>WCAG</li>
-				  <li>ARIA - not my expertise</li>
-			    </ol>
-				<p>Step 2. Ensure content conforms to those standards where they can be used for testing that information is provided in manageable blocks.</p>  
+		        <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability				</h2>
+		        <p>Identify the relevant standard tequneques. Ensure content conforms to those standards where they can be used for testing that information is provided in manageable blocks.</p>
+				<p>For text</p>
+                <ul>
+                  <li><strong>A single point per paragraph</strong>: A paragraph should consist of one or more sentences that deal with a single point. </li>
+                </ul>
+                <p>Possible test: Identify a key word or point. Confirm that each sentence relates directly to that keyword or point. (Keyword can be identified in the mark up with coga semantics at a later stage)</p>
+                <ul>
+                  <li><strong>Short sentences</strong>:   Sentence have a maximum of one conjunction and two commas. A sentence should consist of a single point or sub point. Exception: Where <em>Usability testing</em> has found a longer sentence to be clearer or easier to understand</li>
+                </ul>
+                <p>Possible test: This should be easy to test for, as one can count the number of conjunction and  commas. It is assumed by the time this becomes adopted automated tools will identify non conforment sentences for the author (this is a travel algorithm  using regex).</p>
+                <ul>
+                  <li><strong>Lists are used appropriately</strong>:   When there are three or more consecutive items that could be considered a list, a list is used.</li>
+                </ul>
+                <p>Possible test: An algorithm could identify sentences with 3 commas or colons (like this one....), key words such as &quot;such as:&quot; &quot;for the following reasons&quot; or &quot;step 1&quot;, sentence with semi bullet points such a s&quot;a, b, c,) etc. </p>
+                <p>A paragraph with four or more sentences , should be confirmed that they are not three or more list items. (the first sentence may be the contexts, and the next three may be list items)</p>
+                <p>Three or more consecutive paragraphs do not have to be checked as list items as they should be made up of separate points.</p>
+                <p>&nbsp; </p>
+                <p><strong>For audio or visual media</strong></p>
+                <p>Media is divided into a programmatically determinable and logical sequence. 
+                  Media segments should be:</p>
+                <ul>
+                  <li><strong>Six minutes or less</strong>: Media should be divided into segments that are 6 minutes or less in duration.</li>
+                  <li><strong>Programmatically determinable and logical</strong>:  Media should be presented in a programmatically determinable and logical order.</li>
+                  <li><strong>Navigable</strong>: Navigation to each segment and a unique descriptive label is provided for each media segment.</li>
+                </ul>
+				<p>This is  testable by timing/identifing the gap between <strong>Programmatically determinable and logical</strong> and <strong>Navigation to</strong> chunks that have a <strong>unique descriptive label</strong>. If the gap is over 6 minutes it doese not conform.</p>
+				<p>Detemining how to ensure it is logical and navigatable to or unique and descriptive is described in other WCAG tests (will add if needed)</p>  
 
 		        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
 		       
@@ -177,30 +220,18 @@ Media segments should be:</p>
 		          <li>breaking information into manageable blocks. <a href="https://rawgit.com/w3c/coga/master/techniques/index.html#break-your-content-into-manageable-chunks">(COGA Techniques 2.1.1)</a> <a href="https:\www.w3.org\TR\UNDERSTANDING-WCAG20\meaning.html">(for text see WCAG Guideline 3.1.5?</a> <a href="https://www.w3.org/TR/WCAG20-TECHS/G153.html">(WCAG G153: Making the text easier to read)</a>)</li>
 				  <li>providing content that is clear and to the point.<a href="https://rawgit.com/w3c/coga/master/techniques/index.html#be-clear-and-to-the-point">(COGA Techniques 2.3.1)</a>, <a href="https://www.w3.org/TR/WCAG20-TECHS/G153.html">(WCAG G153: Making the text easier to read)</a></li>
 				  <li>using lists where three or more consecutive items are presented in a paragraph or sentence.</li>
-		          <li>making manageable blocks of information and relationships programmatically determinable.<a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic">(WCAG  1.3.1 Info and Relationships)</a></li>
-				  <li>making each media section navigable to and provided with a unique label that describes the section.<a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html">(WCAG 4.1.2)</a></li>
+		          <li>making manageable blocks of information and relationships programmatically determinable.<a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic">(also see WCAG  1.3.1 Info and Relationships)</a></li>
+				  <li>making each media section navigable to and provided with a unique label that describes the section.</li>
 				  <li>ensuring media that is over five minutes is divided into programmatically determinable and logical sections</li>
 				  </ul>
 				  
-				 <h3>Common Failures for Success Criterion:</h3>
+			    <h3>Common Failures for Success Criterion:</h3>
 				 
-				 <p><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/meaning-supplements.html#meaning-supplements-techniques-head">Failures of Success Criterion 3.1.5 by the WCAG Working Group have yet to be documented</a></p>
-				<p>The following is a mistake that is considered a failure of Success Criterion 4.1.2 by the WCAG Working Group:</p>
-				<ol>
-<li>implementing custom controls [for media] that do not use an accessibility API for the technology, or do so incompletely - <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html#ensure-compat-rsv-techniques-head">Techniques and Failures for Success Criterion 4.1.2 - Name, Role, Value</a></li>
-</ol>
-
-<h2>Examples of Success Criterion 3.1</h2>
-(May be added after December 1st)
-<ul>
-
-<li>Example 1. A Web page with ...</li>
-</ul>
-
-
-				 
-
-                <p>&nbsp;</p>
+				 <p>A sentence with multiple clauses that could be tagged as a list but is not</p>
+				 <p>A paragraph with multiple points.</p>
+				 <p>A long video not broken into programmatically determinable chucks  of less the 6 minutes</p>
+				 <p>A long video  broken into programmatically determinable chucks but without  a unique descriptive labels on each chunk</p>
+				<p>&nbsp;</p>
 	          </div>
 	        </div>
 	      </div>
