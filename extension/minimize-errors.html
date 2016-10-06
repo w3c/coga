@@ -107,7 +107,7 @@
 				</p></div></blockquote>
                   <h3><a id="user-content-proposed" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#proposed" aria-hidden="true"></a>Proposed:</h3>
                                     <blockquote class="scquote"><div>
-                                      <p class="sctxt">@@<strong>3.3.3 Minimize user errors</strong>:  Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. When an <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">input error</a> is detected an automatic correction is made where it is<em> known to be reliable and possible</em>. Otherwise, if suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.@@</p>
+                                      <p class="sctxt">@@<strong>3.3.3 Minimize user errors</strong>: <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">Input errors</a> are automaticaly corrected where the correction is known to be reliable and achivable. Otherwise, @@if suggestions for corrections are known,  the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</p>
                                       <p class="sctxt">&nbsp;</p>
                                       <p class="sctxt">&nbsp;</p>
                                     </div></blockquote>
@@ -122,11 +122,8 @@
                   </dt>
                   <dd>errors that have been  have been documented in the understanding of the Success Criteria section or have supportive techniques or that have been reported or documented more then one time and there is a know way to identify them</dd>
                 </dl>
-                <dt >reliable</dt>
-                <dd> 	where the behavour is almost always correct. </dd>
-                <dd>&nbsp;</dd>
-                <dt><span class="sctxt">known to be reliable and possible</span></dt>
-                <dd>Identified in the WCAG techniques as possible to reliably correct</dd>
+                <dt><span class="sctxt">known to be reliable and achivable</span></dt>
+                <dd>Identified in the WCAG techniques as possible to reliably correct an errors, or found in user testing to constently </dd>
 		        <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
 		        <p>Principle 3 Understandable - Guideline 3.3: Help users avoid and correct mistakes.</p>
                 <p>This is an update to 3.3.3 Error Suggestion</p>
@@ -136,17 +133,11 @@
                   <p>Minimizing user generated errors by automatically correcting them will also minimize error notifications. Error notifications may be distracting for some users with cognitive disabilites, taking focus away from tasks and task completion. Users with cognitive disabilites may find it difficult to understand how to correct an error even when a notification is given. In the case of an unsuccessful form submission, this group of users may abandon forms because they are unsure of how to correct the error even though they are aware that an error has occurred.</p>
 
 <p>If automatic correction is reilable and possible it should be implemented. If automatic correction is not possible the content author, the user agent or supported APIs should provide a description of the error along with suggestions for fixing the error except when to do so would jeopardize the security or purpose of the content.</p>
+<p>This Success Criterion helps users who need help preventing errors. </p>
                   
 		        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
-                <p>The task force has good evidence from usability studies which shows that people abandon tasks and believe they cannot complete tasks if they receive too many errors</p>
-		        <p>This Success Criterion helps users who need help preventing errors. This can include:</p>
-                  <ul>
-                    <li>Automatic correction of required formats for input fields</li>
-                    <li>Appropriate default values for date fields within the context of the application</li>
-                      <li>Appropriate default time zone format based on local</li>
-                    <li>Appropriate default currency format based on local</li>
-                      <li>Appropriate default temperature format based on local</li>
-                  </ul>
+                <p>People with cognative disabilities and aging users abandon tasks and believe they cannot complete them if they receive too many errors. &lt;See Neilson studie&gt;		        </p>
+                <p>&nbsp;</p>
                   <p>We need to minimize errors because:</p>
                     <ul>
                       <li>Correcting errors before they occur will minimize the number of actions needed to complete a task or process</li>
@@ -167,7 +158,7 @@
             <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a></li>
             <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html">User Needs Table 3: Entering data, error prevention &amp; recovery</a></li>
 
-                      </ul>
+                    </ul>
 </div>
                   <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
         <p>Step 1. 
@@ -191,7 +182,15 @@
                             </ul>
                             <li>Temperature</li>
                             <ul>
-                              <li>Use the default temperature format of locale. The requirement to convert between Centigrade and Fahrenheit and vice versa is burdensome so defaulting to the format of the locale removes one layer of complexity.</li>
+                              <li>Use the default temperature format of location. The requirement to convert between Centigrade and Fahrenheit and vice versa is burdensome so defaulting to the format of the locale removes one layer of complexity.</li>
+                            </ul>
+                            <p>We can also  include:</p>
+                            <ul>
+                              <li>Automatic correction of required formats for any input fields</li>
+                              <li>Appropriate default values for date fields within the context of the application</li>
+                              <li>Appropriate default time zone format based on location</li>
+                              <li>Appropriate default currency format based on location</li>
+                              <li>Appropriate default temperature format based on location</li>
                             </ul>
                   </ul>
 	        </div>
