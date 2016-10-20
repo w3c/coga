@@ -1,0 +1,71 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
+	<head>
+		<title>Visually Clear Controls</title>
+		
+	</head>
+
+<body>
+		
+<h2>SC Shortname:</h2>
+	<p>Visually Clear Controls</p>
+<h2><a id="user-content-sc-text" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#sc-text" aria-hidden="true"></a>SC Text</h2>
+	<p>Interactive controls use a visual style that makes it understandable that the controls are interactive and indicate the active area for the control with the following exception:</p>
+	<ul>
+		<li><strong>Customizable: </strong>The visual affordances for interactive controls are available through personalization.</li>
+			</ul>
+	<p>Original wording: Interactive controls are clear or clear controls are easily available though personlization.  Boundaries on a interactive controls and icons should have a sufficient color contrast of 1.5 (visual only) or can be emphasized in the modality of the user.  Auditory  emphasis can include slightly louder content, a change in the pitch or a change in the voice.</p>
+<h2>Suggestion for Priority Level (A/AA/AAA)</h2>
+	<p>Level AA</p>
+<h2>Related Glossary additions or changes</h2>
+	<p>No additional definitions needed.</p>
+<h2>What Principle and Guideline the SC falls within.</h2>
+	<p>Principle 3, with COGA task force suggested updates to this principle to not be only for text content.</p>
+<h2>Description</h2>
+	<p>The intent of this success criterion is to help a person understand which elements in the content are interactive.  The success criterion would be met by ensuring there are sufficient visual affordances to indicate an element is interactive and the boundaries of the element.  This will not only set it apart from plain text content that is not interactive, but also indicate the clickable area for easier selection.</p>
+	<p>Note that visual affordances can take different forms. One common visual affordance is to put an underline under links. Another is to provide borders around interactive elements that have sufficient contrast to show the active clickable area for the element.</p>
+<h2>Benefits</h2>
+	<p>Many people cannot easily learn design metaphors that cause interactive controls to have subtle visual differences from the rest of the content, such as techniques found in flat design. When interactive controls have understandable visual affordances, users can more easily locate desired items to interact with and know what that interaction might do. In addition, when users can easily see the active boundaries for controls it improves the ability to select that control via a pointing device or by touch.</p>
+	<h3 id="resources2">Related Resources</h3>
+        <p>Resources are for information purposes only, no endorsement implied.</p>
+        <p>Example links </p>
+        <ul>
+            <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/#issues-with-flat-design">Gap analysis section 2.3.1 Issues with Flat Design</a></li>
+            <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html">User needs Table (Table 5: Simple and Clear Interface)</a></li>
+            <li><a href="https://rawgit.com/w3c/coga/master/techniques/index.html#use-clear-visual-affordances.x">Techniques for the Cognitive and Learning Disabilities Accessibility Task Force (COGA) Section 2.6.1 Use clear visual affordances</li>
+            <li><a href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">Flat Design Issue Paper</a></li>
+        </ul>
+<h2>Testability</h2>
+	<ol>
+		<li>Activate personalization for visually enhancing interactive elements, when available.</li>
+		<li>Identify the interactive elements in the content.</li>
+		<li>For non-link elements, ensure there is either a border, or a fill that:</li>
+		<ul>
+			<li>outlines the active area (e.g. clickable, touchable part) of the element. Note, if an element has multiple actions or active areas, each has an identifiable border or fill. </li>
+			<li>has sufficient contrast</li>
+		</ul>
+		<li>For links, ensure they have a visual affordance to identify them as a link (see techniques below).</li>
+	</ol>
+<h2>Techniques</h2>
+	<ol>
+		<li>Existing technique: <a href="http://www.w3.org/TR/WCAG20-TECHS/G183.html">G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them"></a> </li>
+		<li>New technique: Providing a border around the interactive area of the element with a contrast ratio of 4.5:1 with its background, or has fill that provides a contrast ratio of at least 3:1 from the background</li>
+		<p><strong>??? Note: I modified the contrast ratio for fill to the lower level similar to large text, as that seems to be more of a reasonable requirement. I also changed the wording of what you are contrasting against - the background color vs. the surrounding static content.  We can debate this, but I don't think there are any user studies to back up these specific requirements (either what was originally there or what I have) and I would like to remain reasonable. If you have an icon in the UI that has a background or border applied, it seems unreasonable to request that each has a 4.5 contrast from the label next to it or below it.</strong></p>		
+		<p>Some examples of interactive elements where the border would be most helpful:</p>
+		<ul>
+			<li>Icons</li>
+			<li>Buttons</li>
+			<li>Text input fields</li>
+			<li>Switches</li>
+			<li>Sliders</li>
+		</ul>
+		<li>New technique: Providing an underline to identify links</li>
+		<li>New technique: Using personalization to enhance visual affordances on interactive elements</li>
+		<li></li>
+	</ol>
+	<p>References:</p>
+		<p>You will find a lot of techniques identified in our original proposal <a href="https://rawgit.com/w3c/coga/master/extension/index.html">coga for wcag</a></p>
+		<p>also look at <a href="https://rawgit.com/w3c/coga/master/techniques/index.htm">COGA Techniques</a></p>
+		<p>and <a href="http://www.w3.org/TR/WCAG20-TECHS/intro.html" >Techniques for WCAG 2.0 - W3C</a>		        </p>
+		<p>&nbsp;</p>
+</body>
+</html>
