@@ -1,75 +1,226 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 	<head>
-		<title>Voice Menu Systems</title>
-	</head>
-	<body>
-		<section>
-			<h2>Introduction</h2>
-            <p>This document an issue paper looking into the challenges and issues faced by users with learning disabilities and cognitive disabilities when using voice menu systems and voice ML.
+        <title>Voice Systems</title>
+    </head>
+    <body>
+        <section>
+            <h2>Introduction</h2>
+            <p>Voice systems are systems that a user interacts with by listening to spoken prompts from an automated system. 
+                The user responds by either
+                pressing keys on a telephone keypad or by speaking (or both). 
+                Voice systems are widespread in telephone self-service applications for customer support. 
             </p>
-            <p>This is part of a series of issue papers written by The Cognitive and Learning Disabilities Accessibility Task Force (COGA). COGA is a joint Task Force of the<a href="http://www.w3.org/WAI/APA/"> Accessible Platform Architectures (APA) Working Group</a> and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group (WCAG WG)</a>.
+            <p> It is worth noting that many crucial systems are dependent on this technology such as emergency notification, 
+                healthcare appointment reminders or prescription refilling, and others. 
+                Therefore full accessibility needs to be supported.</p>
+
+            Voice systems are often implemented with the W3C VoiceXML standard and supporting standards from the 
+            Voice Browser Working Group.
+            <p>See [[VoiceXML2.0]] and [[VoiceXML2.1]]
             </p>
-            <p>This work will be used as a base document for other work including a road-map for improving accessibility for people with learning disabilities and cognitive disabilities. </p>
-            <p>Voice menu systems and Voice XML enable voice dialogs systems and voice browsers. It is used for developing audio and voice response applications, such as telephone menu systems, banking systems and automated customer service portals. Users interact with voice browsers via the public switched telephone network (PSTN). These systems are very similar to other automated telephone menu systems and may issues overlap. </p>
-			<p> It is worth noting that many crucial systems are dependent on this technology such as emergency notification, healthcare or prescription refilling, and others. Therefor full accessibility needs to be supported.</p>
-			<p>See <a href="http://www.w3.org/TR/voicexml20/">http://www.w3.org/TR/voicexml20/</a> [[voicexml20]].</p>
-			<p>An example use case may be as follows:</p>
-			<ul>
-				<li>The user may be asked &quot;For sports press 1, For weather press 2, For Stargazer astrophysics press 3.&quot; The system then weights for a response.</li>
-				<li> Accessibility is discussed for the hard of hearing, and WCAG and WAI specification are cited as being relevant (see <a href="http://www.w3.org/TR/voicexml20/#dmlAAccessibility">http://www.w3.org/TR/voicexml20/#accessibility</a> [[voicexml20]], Appendix H). Beyond that, no examples or concerns are identified for cognitive accessibility.</li>
-			</ul>
-		</section>
-		<section>
-			<h2> Challenges for People with Cognitive Disabilities</h2>
-			<p>This technology can be very problematic for our user groups. </p>
-			<p>When useful you can bake issues up into the specific categories bellow: </p>
-			<section>
-				<h3> Effect of memory impairments </h3>
-				<p>A good working term memory is essential for using these systems. The user needs hold multiple pieces of transitory information in the mind such as the number that is being presented as an option , whilst processing the terms that follow.</p>
-				<p>A good short term memory (lasts seconds) is essential so that the user can remember the number or the term.</p>
-				<p>Without these functions the user will select the wrong number</p>
-			</section>
-			
-			<section>
-				<h3> Effect of impaired reasoning and executive function </h3>
-				<p>The use needs may need to compare similar options such as &quot;billing&quot;, &quot;accounts&quot;, &quot;sales&quot; and decide which is the service that is best suited to solve the issue at hand. Without strong reasoning skills the user is likely to select the incorrect extension the user will select the extension.</p>
-				<p>Advertisements and additional, unrequested information also increase the amount of processing required.</p>
-			</section>
-			<section>
-				<h3>Effect of attention related limitations</h3> 
-				<p>The use needs to focus on the different options and select the correct one. A person with impaired attention may have difficulties maintaining the necessary focus for a long or multi level menu. Advertising and additional, unrequested information also make it harder to retain attention. </p>
-			</section>
-			<section>
-				<h3> Effect of impaired language and auditory perception related functions</h3>
-				<p>The user needs to interpret the correct terms and match them to their needs. This involves speech perception: sounds of language are heard, interpreted and understood , within a given time.</p>
-			</section>
-			<section>
-				<h3>Effect of reduced knowledge</h3> 
-				<p>The user needs to be failure with the terms used in the menu, even if they are not relating to the service options required.</p>
-			</section>
-		</section>
-		<section>
-		  <h2>Proposed solutions </h2>
-			<ol>
-				<li> It must be easy to get though to a human. We suggest that the digit &quot;0&quot; be reserved, across all Voice ml systems, to get though to a human Some users need more time. </li>
-				<li>Extra time should be a user setting for both the speed of speech and ability for the user to define if they need a slower speech or more input time etc. </li>
-				<li>Pauses are important between phrases that allow processing time of language and options </li>
-				<li>Options in text should be given before the digit to select, or the instruction to select that option. This will mean you do not need to remember the digit or instruction whilst processing the term</li>
-				<li>The digit 0 (or other value) could be a reserved number for reaching a human operator. Setting 0 (assuming that is the reserved digit) to mean anything else will give an error. The digit 9 (or other value) could be a reserved number for going back to the last menu (error recovery). Setting 0 or 9 (assuming that they are the reserved digits) to mean anything else will give an error. </li>
-				<li>The user should be able to extend or disable time out as a system default on their device </li>
-				<li>Error recovery should be simple, and take you to a human operator. Error response should not though the user off the line or send them to a more complex menu. Preferably they should use a reserved digit. </li>
-				<li>Timed text should be adjustable (as with all accessible media).</li>
-				<li>Advertisement and other information should not be read as it can confuse the user and can make it harder to retain attention.</li>
-				<li>Terms used should be as simple as possible.</li>
-				<li>Examples and advice should be given on how to build a prompt that reduces the cognitive load <ol>
-						<li> Example1: Reducing cognitive load: The prompt <span class="example" >&quot;<em>press 1 for the the secreter,&quot;</em></span> requires the user to remember the digit 1 while interpreting the term secretary. It is less good then the prompt <span class="example" >&quot;<em>for the secretary (pause): press 1</em>&quot;</span> or <span class="example" >&quot;<em> for the secretary (pause) or for more help (pause): press 1</em>&quot;</span></li>
-						<li>Example 2: Setting a default for a human operator as the number 0</li>
-					</ol>
-				</li>
-			</ol>
-			<p class="note">Note. The above proposed solutions have not all been tested. They are not all supported in the standards. </p>
-			<p>Currently Voice XML does not seem to be used to improve accessibility for people with cognitive disabilities and in may case seems to decrease it. No author strategies are defined to this improve this situation. Until this issue is addressed many critical functions such as emergency and medical support, will become less and less accessible to people with cognitive disabilities.</p>
-	</section>
-	</body>
+            <p>However, it is important to emphasize that issues of cognitive accessibility for voice systems
+                apply without regard to whether
+                a voice system is implemented using the W3C voice standards or with a proprietary technology.It is impossible
+                for a user to tell what technologies are used in the underlying voice platform, but the usability 
+                principles will be the same whatever the underlying technology is.</p>
+            <p>An example use case may be as follows:</p>
+            <ul>
+                <li>The user may be asked &quot;For sports press 1, For weather press 2, 
+                    For Stargazer astrophysics press 3.&quot; The system then waits for a response.</li>
+                <li> Accessibility is discussed for the hard of hearing, and 
+                    WCAG and WAI specification are cited as being relevant 
+                    (see [[VoiceXML2.0#accessibility]])
+                    Beyond that, no examples or concerns are identified for cognitive accessibility.</li>
+
+            </ul>
+        </section>
+        <section>
+            <h2> Challenges for People with Cognitive Disabilities</h2>
+            <p>Voice technology can be very problematic for people with cognitive disabilities, due to its heavy demands on
+                memory and on the ability to understand and produce speech in real time.</p>
+            <section>
+                <h3> Effect of memory impairments on users' ability to understand and respond to prompts</h3>
+                <p>A good working memory is essential for using menu-based systems that present several choices
+                    to the user and ask them to select one choice, whether by speaking or through a key presss. 
+                    The user needs hold multiple pieces of transitory information in the mind 
+                    such as the number that is being presented as an option, whilst processing the terms that follow.</p>
+                <p>A good short term memory (several seconds) is essential so that the user can remember the 
+                    number or the term.</p>
+                <p>Without these functions the user is likely to select the wrong number.</p>
+            </section>
+            <section>
+                <h3> Executive function </h3>
+                <p>Users need to be able to decide when to act on a menu choice. While a menu is being presented, 
+                    should they wait to hear more
+                    options or should they select a choice that seems correct before hearing all the options?</p>
+                <p>Limitations of executive function may also cause problems 
+                    when the system response is too slow. The user may not know whether their input has 
+                    registered with the system, and consequently may press the key or speak again.
+                </p>
+            </section>
+            <section>
+                <h3> Effect of impaired reasoning </h3>
+                <p>The use needs may need to compare similar options 
+                    such as &quot;billing&quot;, &quot;accounts&quot;, &quot;sales&quot; and 
+                    decide which is the service that is best suited to solve the issue at hand. 
+                    Without strong reasoning skills the user is likely to select the wrong menu option.</p>
+                <p>Advertisements and additional, unrequested information also increase the amount of processing required.</p>
+            </section>
+            <section>
+                <h3>Effect of attention related limitations</h3> 
+                <p>The use needs to focus on the different options and select the correct one. 
+                    A person with impaired attention may have difficulties maintaining the necessary 
+                    focus for a long or multi level menu. Advertising and additional, 
+                    unrequested information also make it harder to retain attention. </p>
+            </section>
+            <section>
+                <h3> Effect of impaired language and auditory perception related functions</h3>
+                <p>The user needs to interpret the correct terms and match them to their needs within a certain time limit.
+                    This involves speech perception and language understanding: sounds of language are heard, 
+                    interpreted and understood, 
+                    within a given time.</p>
+            </section>
+            <section>
+                <h3> Effect of impaired speech and language production functions (for speech-recognition systems)</h3>
+                <p>The user needs to be able to formulate a spoken response to the prompt before the system "times out" and generates
+                    another prompt. In the most common type of speech-recognition system (directed dialog) the user only
+                    needs to be able to speak a word or short phrase. However, some systems ("natural language systems") allow the
+                    user to describe their issue in detail. While this feature is an advantage for some users because it
+                    does not require them to remember menu options, it can be problematic for users with disorders like
+                    aphasia who have difficulty speaking.
+                </p>
+            </section>
+            <section>
+                <h3>Effect of reduced knowledge</h3> 
+                <p>The user needs to be familiar with the terms used in the menu, 
+                    even if they are not relevant to the service options required.</p>
+            </section>
+        </section>
+        <section>
+            <h2>Proposed solutions </h2>
+            <h3>Human backup</h3>
+            <ol>
+                <li> For users who are unable to use the automated system, it must be possible to reach a human, either in a call
+                    center or another operator, through an easy transfer process (that is, not by being directed
+                    to call another phone number).
+                </li>
+                <li>There should be a reserved digit for requesting a human operator. 
+                    The most common digit used for this
+                    purpose is "0"; however, if another digit is already in widespread use in a particular country, then
+                    that digit should always be available to get to a human agent. Systems especially should not attempt
+                    to make it difficult for users to reach an agent through the use of complex digit combinations.
+                    This could be enforced by requiring implementations to not allow the reserved digit
+                    to mean anything other than going to an operator. </li>
+                <li>Other digits similarly could be used for specific reserved functions, keeping in mind that too many
+                    reserved digits will be confusing and difficult to learn. Remembering more than one or two reserved digits may be problematic for some users, but repeated verbal recitals of the reserved digits will also be distracting. 
+                </li>
+            </ol>
+            <h3>User settings</h3>
+            User-specific settings can be used to customize the voice user interface, keeping in mind that 
+            the available mechanisms for 
+            invoking user-specific settings are minimal in a voice interface (speech or DTMF tones). If it is difficult to set user
+            preferences, they won't be used. Setting preferences by natural language is the most natural ("slow down!") but is not currently very common.
+            <ol>
+                <li>Extra time should be a user setting for both the speed of speech and ability for the user 
+                    to define if they need a slower speech or more input time etc. </li>
+                <li>Timed text should be adjustable (as with all accessible media).</li>
+                <li>The user should be able to extend or disable time out as a system default on their device </li>
+                <li>Error recovery should be simple, and take you to a human operator. Error response should not though the user off the line or send them to a more complex menu. Preferably they should use a reserved digit. </li>
+                <li>Timed text should be adjustable (as with all accessible media).</li>
+                <li>Advertisement and other information should not be read as it can confuse the user and can make it harder to retain attention.</li>
+                <li>Terms used should be as simple as possible.</li>
+                <li>Examples and advice should be given on how to build a prompt that reduces the cognitive load 
+                    <ol>
+                        <li> Example 1: Reducing cognitive load: The prompt <span class="example" >&quot;<em>press 1 for the the secretary,&quot;</em></span> requires the user to remember the digit 1 while interpreting the term secretary. It is less good then the prompt <span class="example" >&quot;<em>for the secretary (pause): press 1</em>&quot;</span> or <span class="example" >&quot;<em> for the secretary (pause) or for more help (pause): press 1</em>&quot;</span></li>
+                        <li>Example 2: Setting a default for a human operator as the number 0</li>
+
+                    </ol>
+                </li>
+            </ol>
+            <h3>Follow best practices in general VUI design</h3>
+            Standard best practices in voice user interface apply to users with cognitive disabilities, and should be followed.
+            A good reference is published by The Association for 
+            Voice Interaction Design Wiki [AVIxD].
+            Another good reference is [ETSI ETR 096].
+            Some examples of generally accepted best practices in voice user interface design:
+            <ol>
+                <li>Pauses are important between phrases in order to allow processing time of language and options. </li>
+                <li>Options in text should be given before the digit to select, or the instruction to 
+                    select that option. This will mean that the user does not need to remember the 
+                    digit or instruction whilst processing the term. For example: The 
+                    prompt &quot;<em>press 1 for the the secretary,&quot;</em> 
+                    requires the user to remember the digit 1 while interpreting the term &quot;secretary&quot;. 
+                    A better prompt is &quot;<em>for the secretary (pause): press 1&quot;</em> or &quot; <em>for the secretary (pause) or for more help (pause): press 1</em>&quot;</li>
+                <li>Error recovery should be simple, and take the user to a human operator if the error persists.
+                    Error responses should not end the call or send the user to a more complex menu. 
+                </li>
+                <li>Advertisements and other extraneous information should not be read as it can confuse the 
+                    user and can make it harder to retain attention.</li>
+                <li>Terms used should be as simple and jargon-free as possible.</li>
+                <li>Tapered prompts should be used to increase the level of prompt detail when the 
+                    user does not respond as expected.
+                </li>
+            </ol>
+            See the AVIxD wiki cited above for additional recommendation and detail.
+            <h3>Considerations for Speech Recognition</h3>
+            <ol>
+                <li>For speech recognition based systems, 
+                    an existing ETSI standard for voice commands for many European languages
+                    exists and should be used where possible [ETSI 202 076],
+                    keeping in mind that expecting people to learn more than a few commands places a burden on the user.</li>
+                <li>Natural language understanding systems allow users to state their
+                    requests in their own words, and can be useful for users who have difficulty 
+                    remembering menu options, or who have difficulty mapping the offered menu options to
+                    their goals. However, natural language interfaces can be difficult to 
+                    use for users who have difficulty 
+                    producing speech or language. Directed dialog (menu-based) fallback or 
+                    transfer to an agent 
+                    should be provided.</li>
+            </ol>
+            <h3>Follow requirements of legislation</h3>
+            For example, the U.S. Telecommunications Act Section 255 Accessibility Guidelines [Section255] paragraph 1193.41 Input, control, and mechanical functions, clauses 
+            (g), (h) and (i) apply to cognitive disabilities and require that equipment should be operable without time-dependent controls, the ability to
+            speak, and should be operable by persons with limited cognitive skills.
+            <h3>Technology-based solutions</h3>
+            Recent developments in call center technology may be helpful for users with cognitive disabilities.
+            <ol>
+                <li>Visual IVR. When a call comes in on a smartphone, the system can ask the user if they want to 
+                    switch over to a visual interface which mirrors the voice interface. This allows a user to see the prompts
+                    instead of having to remember them.</li>
+                <li>Adaptive voice interface. This is a technology that is sensitive to the user's behavior and changes the voice interface dynamically. 
+                    For example, it can slow down or speed up to match the user's speech rate [Adaptive].
+                </li>
+                <li>Tapered prompts. Best practices in  voice user interface design include providing several different prompts for each point in the interaction. The different prompts are used based on the user's behavior. For example, if the user takes a long time to respond to a prompt, a simpler or more explanatory version of the prompt by be used instead of the default.</li>
+                <li>Human assistance. Although the user interacts normally with the voice system, in case 
+                    the system is unable to process the user's speech, a human agent acts behind the scenes to 
+                    perform the necessary processing. This would allow users with a limited ability to speak (whose speech might
+                    not be recognized by a speech recognizer) to 
+                    interact with the system. </li>
+            </ol>
+            <h3>Status of these solutions</h3>
+            <p>Note. The above proposed solutions have been tested for users in the general population and have
+                been shown to improve the usability of voice systems, although the extent to which they have been tested with users with cognitive disabilities is not clear.
+            </p>
+            <p class="note">Currently VoiceXML does not directly enforce accessibility for people with cognitive 
+                disabilities. However, a considerable literature on voice user interface design exists and
+                is in many cases very applicable to cognitive accessibility for voice systems. Developers must 
+                become aware of these resources and of the need to design systems
+                with these users in mind.
+            </p>
+        </section>
+        <section>
+            <h1> References</h1>
+            <ol>
+                <li>[AVIxD] <a href="http://videsign.wikispaces.com/">The Association for 
+                        Voice Interaction Design Wiki </a></li>
+                <li>[ETSI 202 076] <a href="http://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"> ETSI ES 202 076 V2.1.1 (2009-06)</a></li>
+                <li>[ETSI ETR 096] <a href="http://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf">ETSI ETR 096 Human factors guidelines for the design of
+                        minimum phone based user interface to computer services</a></li>
+                <li>[Section255] <a href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-telecommunications-act-guidelines/section-255-guidelines">
+                        Telecommunications Act Section 255 Accessibility Guidelines</a></li>
+                <li>[Adaptive]<a href="http://cdn2.hubspot.net/hub/120925/file-59944739-pdf/documents/Adaptive_Voice_WhitePaper.pdf">Adaptive Voice White Paper</a></li>
+            </ol>
+        </section>
+    </body>
 </html>

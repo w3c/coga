@@ -1,0 +1,236 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Minimize User Errors</title>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<script src="../common/biblio.js" class="remove"></script>
+		<style > 
+			.technique {border:dotted;}
+			
+			</style>
+		<!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
+		<script class="remove">
+	var respecConfig = {
+		// embed RDFa data in the output
+		trace:  true,
+		doRDFa: '1.1',
+		includePermalinks: true,
+		permalinkEdge:     true,
+		permalinkHide:     false,
+		tocIntroductory: true,
+		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+		specStatus:           "ED",
+		noRecTrack: true,
+		//crEnd:                "2012-04-30",
+		//perEnd:               "2013-07-23",
+		//publishDate:          "2013-08-22",
+		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+		
+		// the specifications short name, as in http://www.w3.org/TR/short-name/
+		shortName:            "Minimize User Errors",
+		
+
+		// if you wish the publication date to be other than today, set this
+		// publishDate:  "2009-08-06",
+		copyrightStart:  "2016",
+
+		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+		// and its maturity status
+		//previousPublishDate:  "",
+		//previousMaturity:  "",
+		//prevRecURI: "",
+		//previousDiffURI: "",
+
+		// if there a publicly available Editors Draft, this is the link
+		//edDraftURI: "https://w3c.github.io/coga/extension/",
+
+		// if this is a LCWD, uncomment and set the end of its review period
+		// lcEnd: "2012-02-21",
+
+		// editors, add as many as you like
+		// only "name" is required
+		//editors: [			{
+			//{ name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],							
+		
+
+		// authors, add as many as you like. 
+		// This is optional, uncomment if you have authors as well as editors.
+		// only "name" is required. Same format as editors.
+
+		//authors:  [
+		//    { name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],
+
+		/*
+		alternateFormats: [
+			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.pdf', label: "PDF version" }
+		],
+		*/
+		
+		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+		
+		// name of the WG
+		wg:           ["Cognitive and Learning Disabilities Accessibility Task Force", "Accessible Platform Architectures Working Group", "Web Content Accessibility Guidelines Working Group"],
+		
+		// URI of the public WG page
+		wgURI:        ["http://www.w3.org/WAI/PF/cognitive-a11y-tf/", "http://www.w3.org/WAI/APA/", "http://www.w3.org/WAI/GL/"],
+		
+		// name (with the @w3c.org) of the public mailing to which comments are due
+		wgPublicList: "public-coga-comments",
+		
+		// URI of the patent status for this WG, for Rec-track documents
+		// !!!! IMPORTANT !!!!
+		// This is important for Rec-track documents, do not copy a patent URI from a random
+		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+		// Team Contact.
+		wgPatentURI:  ["", "http://www.w3.org/2004/01/pp-impl/83907/status", "http://www.w3.org/2004/01/pp-impl/32212/status"],
+		//maxTocLevel: 2,
+		
+		localBiblio: biblio,
+	};
+		</script>
+	</head>
+
+<body>
+		<div id="wiki-content">
+		  <div>
+		    <div id="wiki-body">
+		      <div><h2><a id="user-content-sc-text" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#sc-text" aria-hidden="true"></a>Minimize User Errors</h2>
+                   <h3><a id="user-content-current" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#current" aria-hidden="true"></a>Current:</h3>
+                  <blockquote class="scquote"><div>
+<p class="sctxt"><strong class="sc-handle"><a href="http://www.w3.org/TR/2008/REC-WCAG20-20081211/#minimize-error-suggestions">3.3.3</a> Error Suggestion:</strong> If an <a href="#input-errordef" class="termref">input error</a> is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content. 
+					(Level AA)
+				</p></div></blockquote>
+                  <h3><a id="user-content-proposed" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#proposed" aria-hidden="true"></a>Proposed:</h3>
+                                    <blockquote class="scquote"><div>
+                                      <p class="sctxt">@@<strong>3.3.3 Minimize user errors</strong>: <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">Input errors</a> are automaticaly corrected where the correction is known to be reliable and achivable. Otherwise, @@if suggestions for corrections are known,  the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</p>
+                                      <p class="sctxt">&nbsp;</p>
+                                      <p class="sctxt">&nbsp;</p>
+                                    </div></blockquote>
+                <h3>Alternative wording</h3>
+                                    <p> Have a new SC : Input error are automatic correction where the correction is reliable.</p>
+                                    <p>&nbsp;</p>
+                <h2><a id="user-content-suggestion-for-priority-level-aaaaaa" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-hidden="true"></a>Suggestion for Priority Level</h2>
+                <p>(A)</p>
+		        <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
+                <dl class="termlist">
+                  common input error
+                  </dt>
+                  <dd>errors that have been  have been documented in the understanding of the Success Criteria section or have supportive techniques or that have been reported or documented more then one time and there is a know way to identify them</dd>
+                </dl>
+                <dt><span class="sctxt">known to be reliable and achivable</span></dt>
+                <dd>Identified in the WCAG techniques as possible to reliably correct an errors, or found in user testing to constently </dd>
+		        <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
+		        <p>Principle 3 Understandable - Guideline 3.3: Help users avoid and correct mistakes.</p>
+                <p>This is an update to 3.3.3 Error Suggestion</p>
+		        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
+                  <p>The intent of this Success Criteria is to minimize user generated errors by detecting, and when reilable and possible, automatically correcting common input errors.</p> 
+                  <p>For example, while registering for an online banking account a form requires the input of the user's birthdate. The required input format is xx/xx/xxxx with a leading zero for single digits. If a single input field with no input correction is presented, a user with a cognitive disability may enter 1/3/1996 thus triggering an error notification. It may not be clear to the user that the required format is 01/03/1996 even if an example for instance, xx/xx/xxxx, is shown below the input field or in the error notification. To alleviate any confusion for the user the application should insert a leading zero if a single digit is entered into the month or day along with the required forwardslash characters which act as a delimeter between the month, day and year.</p>
+                  <p>Minimizing user generated errors by automatically correcting them will also minimize error notifications. Error notifications may be distracting for some users with cognitive disabilites, taking focus away from tasks and task completion. Users with cognitive disabilites may find it difficult to understand how to correct an error even when a notification is given. In the case of an unsuccessful form submission, this group of users may abandon forms because they are unsure of how to correct the error even though they are aware that an error has occurred.</p>
+
+<p>If automatic correction is reilable and possible it should be implemented. If automatic correction is not possible the content author, the user agent or supported APIs should provide a description of the error along with suggestions for fixing the error except when to do so would jeopardize the security or purpose of the content.</p>
+<p>This Success Criterion helps users who need help preventing errors. </p>
+                  
+		        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
+                <p>People with cognative disabilities and aging users abandon tasks and believe they cannot complete them if they receive too many errors. &lt;See Neilson studie&gt;		        </p>
+                <p>&nbsp;</p>
+                  <p>We need to minimize errors because:</p>
+                    <ul>
+                      <li>Correcting errors before they occur will minimize the number of actions needed to complete a task or process</li>
+                        <li>Error notifications may be confusing for users with cognitive disabilities</li>
+                        <li>Error notifications can distract a user from tasks and task completion</li>
+                    </ul>
+                <p>This Success Criterion helps people with many different cognitive disabilities including people with: </p>
+            <ul>
+              <li>Language related disabilities </li>
+              <li>Memory related disabilities </li>
+              <li>Focus and attention related disabilities </li>
+              <li>Disabilities that effects executive function and decision making </li>
+            </ul>
+                  <div>
+      <h3 id="resources">Related Resources</h3>
+		  <p>Resources are for information purposes only, no endorsement implied.</p>
+          <ul>
+            <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a></li>
+            <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html">User Needs Table 3: Entering data, error prevention &amp; recovery</a></li>
+
+                    </ul>
+</div>
+                  <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
+        <p>Step 1. 
+                                      
+                                      Identify 
+                                      
+                data with a constrained format in the form </p>
+        <p>Step 2. look at techniques for these types of data formats to see if they are included as reliably fixable</p>
+        <p>Step 3. Input common formats for a field which has a data format requirement (as identified in the techniques)</p>
+        <p>Step 4. Confirm that all common formats for writing the information are accepted </p>
+		        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
+                  <ul>
+					<li>Accept as many formats as possible of different ways of writing a phone number</li>
+					<li>Accept as many formats as possible of different ways of writing a  date format</li>
+					<li>Using an interface were only valid dates can be selected</li>
+					<li>Correct errors of the post code being written in the text field with the city or state information</li>
+				  <li>Calendars and dates</li>
+                            <ul>
+                              <li>Calendars should default to the first relevant day. Work calendars should default to first working day of a user's locale. </li>
+                              <li>Calendar based booking systems must avoid ability to book return date before departure date. </li>
+                            </ul>
+                            <li>Temperature</li>
+                            <ul>
+                              <li>Use the default temperature format of location. The requirement to convert between Centigrade and Fahrenheit and vice versa is burdensome so defaulting to the format of the locale removes one layer of complexity.</li>
+                            </ul>
+                            <p>We can also  include:</p>
+                            <ul>
+                              <li>Automatic correction of required formats for any input fields</li>
+                              <li>Appropriate default values for date fields within the context of the application</li>
+                              <li>Appropriate default time zone format based on location</li>
+                              <li>Appropriate default currency format based on location</li>
+                              <li>Appropriate default temperature format based on location</li>
+                            </ul>
+                  </ul>
+	        </div>
+	      </div>
+
+
+<h2>Working group notes</h2>
+<p>removed the first sententce: <span class="sctxt">Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. </span></p>
+<p>It was decided that the original COGA Success Criteria below should be broken into three separate Success Criteria - <strong>Minimize User Errors</strong> (outlined above), <strong>Labels or Instructions</strong>, and <strong>Identify Charges</strong>.
+</p>
+<section>
+                  
+                  			<section>
+					<h4 id="prevent"><strong>Prevent the user from making errors</strong></h4>
+                                <p><strong>Was:</strong> Support is provided that help users complete and check their task, that includes</p>
+					<p>(may be provided via a standard personalization mechanism) (COGA Techniques 2.9 ) </p>
+					
+                    <p>In forms</p>
+                    <ol>
+                      <li>Use <a>known techniques</a> to prevent errors that are relevant to the content. All standard ways of representing information are accepted as input formats, such as different ways of writing a phone number and date formats. </li>
+                      <li>Documented <a>common input errors</a> can be corrected automatically. (example spelling mistakes)</li>
+                      <li>Enable and identify the default format and standards of locale and allow for change of format on labels and user input (removed use the default format and standards of locale and allow for change of format)</li>
+                      <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a>essential information</a>. </li>
+                      <li>Instructions are provided if there is not a label  that fully describe the control or if it is not clear were to get the required information. Instructions should explain the purpose and usage of the control. (Graphics with a text alternative may be sufficient) ( A clear instruction or information is on where 99% of your target audience understand immediately what to do) </li>
+                    </ol>
+                    <p>For legal and finacial transactions</p>
+                    <ol>
+                      <li>Options that may disadvantage the user are only selected at the users specific request. </li>
+                      <li>All types of charges must be clear at the start of a transaction task. </li>
+                      <li>When a <a>minimum is known for a type of charge</a> it must be be made clear at the start of the transaction task. (from support the user)</li>
+                    </ol>
+                    <p>For all content</p>
+                  <ol>
+                      <li>Non native content and sponsored content are clearly marked and visually differentiated by standardized techniques </li>
+                      <li> Clearly differentiate between facts and less substantiated opinions. <span class="ednote">Was rewritten from "Clearly differentiate between opinions and facts "</span></li>
+                  </ol>
+              
+              </section>
+              
+              
+
+</body>
+</html>

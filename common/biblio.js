@@ -5,7 +5,7 @@ var biblio = {
 		"title": "World Alzheimer Report 2010",
 		"publishDate": "2010",
 		"authors": ["Alzheimer's disease International"],
-		"etAl": false
+		"etAl": "false"
 		},
 
 	"AE-1":
@@ -85,7 +85,7 @@ var biblio = {
 	"Arcos-Burgos-1": {
 		"title": "A common variant of the latrophilin 3 gene, LPHN3, confers susceptibility to ADHD and predicts effectiveness of stimulant medication",
 		"authors": ["Arcos-Burgos, M."],
-		"etAl": true,
+		"etAl": "true",
 		"publisher": "Molecular Psychiatry, Vol 15 No. 11",
 		//"pages": "1053-1066",
 		"publishDate": "2010"
@@ -158,7 +158,7 @@ var biblio = {
 	"Banaschewski-1": {
 		"title": "Colour perception in ADHD",
 		"authors": ["Banaschewski, T."],
-		"etAl": true,
+		"etAl": "true",
 		"publisher": "Journal of child psychology and psychiatry, and allied disciplines, Vol 47 Issue 6",
 		"publishDate": "2006",
 		//"pages": "568-572"
@@ -299,6 +299,20 @@ var biblio = {
                 //"pages": "1041–1050",
                 "publishDate": "2006"
 		},
+
+
+		 "Carter-1":
+		{
+		"title": "UltraHaptics: Multi-Point Mid-Air Haptic Feedback for Touch Surfaces",
+		"authors": [
+			"Carter, T.",
+			"Seah, S. A."
+		],
+		"etAl": "true",
+		"href": "https://www.youtube.com/watch?v=2QkbVr4J7CM",
+		"publisher": "BristolIG",
+                      	"publishDate": "2013"
+		},
 		
 	"Castellanos-1": {
 		"title": "Characterizing cognition in ADHD: beyond executive dysfunction",
@@ -371,15 +385,41 @@ var biblio = {
 		"title": "Short changed: Protecting people with dementia from financial abuse",
 		"publishDate": "December 2011",
 		"authors": ["Chandaria, K."],
-		"etAl": false,
+		"etAl": "false",
 		"publisher": "Alzheimer’s Society"
 		},
+
+	"COGA-1": {
+		"title": "Cognitive Accessibility User Research; Aging and Dementia",
+		"href": "https://www.w3.org/TR/coga-user-research/#aging-and-dementia",
+		"publisher": "W3C",
+		"editors":
+		[
+			"Lisa Seeman",
+			"Michael Cooper"
+		],
+		"etAl": "false",
+		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+		},
+	
+	"coga-issue-papers": {
+		"title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
+		"href": "https://w3c.github.io/coga/issue-papers/",
+		"publisher": "W3C",
+		"editors":
+		[
+			"Lisa Seeman",
+			"Michael Cooper"
+		],
+		"etAl": "false",
+		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+	},
 							
 			"Cohen-Kadosh-1": {
 		"title": "Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing",
 		"publisher": "Current Biology, Vol 17, Issue 8",
 		"authors":["Cohen Kadosh, R."],
-		"etAl": true,
+		"etAl": "true",
 		//"pages": "689-93",
 		"publishDate": "2007",
 		"href": "http://www.sciencedirect.com/science/article/pii/S0960982207010652"
@@ -441,7 +481,7 @@ var biblio = {
 		"title": "Children with ADHD symptoms have a higher risk for reading, spelling and math difficulties in the GINIplus and LISAplus cohort studies",
 		"authors": ["Czamara, D."],
 		"publisher": "PLOS One, Vol 8(5)",
-		"etAl": true,
+		"etAl": "true",
 		"publishDate": "2013",
 		//"pages": "447-461",
 		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/23724008"
@@ -510,7 +550,7 @@ var biblio = {
 		{
 		"title": "Creating websites for people with dementia",
 		"authors": ["Dementia Engagement and Empowerment Project (DEEP) "],
-		"etAl": false,
+		"etAl": "false",
 		"href": "http://dementiavoices.org.uk/wp-content/uploads/2013/11/DEEP-Guide-Creating-websites.pdf"
 		},
 		
@@ -612,6 +652,14 @@ var biblio = {
 		//"accessed": "11 September 2014"
 		},
 
+
+	 "ECS-1":
+		{
+		"title": "Arab Symbol Dictionary for AAC",
+		"etAl": "false",
+		"publisher": "ECS Accessibility Team",
+		"href": "http://access.ecs.soton.ac.uk/blog/symboldictionary/"
+		},
 		
 	"Eden-1": {
 		"title": "Abnormal processing of visual motion in dyslexia revealed by functional brain imaging",
@@ -629,6 +677,48 @@ var biblio = {
 		// "publishedBy": "Macmillan Publishers LTD",
 		"publishDate": "1996"
 	},
+
+		 "ETSI-1":
+		{
+		"title": "Human Factors (HF); User Profile Management",
+		"authors": ["ETSI"],
+		"publisher": "EG 202 325",
+		"etAl": "false",
+		"href": "http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf",
+		"publishDate": "2005"
+		},
+
+
+		 "ETSI-2":
+		{
+		"title": "Human Factors (HF); Personalization and User Profile Management; User Profile Preferences and Information",
+		"authors": ["ETSI"],
+		"publisher": "ES 202 746",
+		"etAl": "false",
+		"href": "http://www.etsi.org/deliver/etsi_es/202700_202799/202746/01.01.01_60/es_202746v010101p.pdf",
+		"publishDate": "2010"
+		},
+
+
+		 "ETSI-3":
+		{
+		"title": "Human Factors (HF); Personalization of eHealth systems by using eHealth user profiles (eHealth)",
+		"authors": ["ETSI"],
+		"publisher": "ES 202 642",
+		"etAl": "false",
+		"href": "http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf",
+		"publishDate": "2010"
+		},
+
+		 "ETSI-4":
+		{
+		"title": "Human Factors (HF); Personalization and User Profile Management; Architectural Framework",
+		"authors": ["ETSI"],
+		"publisher": "TS 102 747",
+		"etAl": "false",
+		"href": "http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf",
+		"publishDate": "2010"
+		},
 	
 	"Fabian-1": {
 		"title": "The Evolution of Aging",
@@ -771,6 +861,13 @@ var biblio = {
 		"publisher": "Aphasiology, Vol 19 Issue 12",
 		//"pages": "1134-1146",
 		"publishDate": "2005"
+		},
+
+		 "GPII-1":
+		{
+		"publisher": "GPII",
+		"etAl": "false",
+		"href": "http://gpii.net/"
 		},
 		
 	 "Greasley-1":
@@ -977,7 +1074,20 @@ var biblio = {
 		"publishDate": "2001"
 		//"pages": "287-92"
 		},
-	
+
+		 "Lundälv-1":
+		{
+		"title": "AAC Vocabulary Standardisation and Harmonisation",
+		"authors": [
+			"Lundälv, M.",
+			"Derbring, S."
+		],
+		"etAl": "false",
+		"href": "http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46",
+		"publisher": "Computers Helping People with Special Needs, Lecture Notes in Computer Science, Vol. 7383, pages 303-310",
+                      	"publishDate": "2012"
+		},
+
 	"Lyon-1": {
 		"title": "Neuroimaging a window to the neurological foundations of learning and behavior in children",
 
@@ -1084,7 +1194,7 @@ var biblio = {
 		{
 		"title": "Alzheimer's Disease Fact Sheet",
 		"authors": ["National Institute on Aging"],
-		"etAl": false,
+		"etAl": "false",
 		"href": "https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet",
 		"publisher": "National Institutes of Health"
 		},
@@ -1108,6 +1218,13 @@ var biblio = {
 		"publishDate": "2009",
 		"href": "http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder",
 		//"accessed": "10 September 2014"
+		},
+
+		 "Noun-Project-1":
+		{
+		"publisher": "The Noun Project",
+		"etAl": "false",
+		"href": "https://thenounproject.com/about/"
 		},
 		
 	 "Nunes-1":
@@ -1243,7 +1360,7 @@ var biblio = {
 		"title": "Impaired parietal magnitude processing in developmental dyscalculia",
 		"publisher": "Current Biology, Vol 17, Issue 24",
 		"authors":["Price, G.R."],
-		"etAl": true,
+		"etAl": "true",
 		//"pages": "1042-43",
 		"publishDate": "2007",
 		"href": "http://www.cell.com/current-biology/retrieve/pii/S0960982207020726"
@@ -1261,7 +1378,7 @@ var biblio = {
 			"Constable, R. T.",
 			"Shaywitz, S."
 		],
-		"etAl": true,
+		"etAl": "true",
 		//"pages": "1221–1238",
 		// "publishedBy": "Oxford University Press",
 		"publishDate": "1996"
@@ -1344,7 +1461,7 @@ var biblio = {
 		"title": "Comorbidity between ADDH and Learning Disability: A Review and Report in a Clinically Referred Sample",
 		"authors": ["Semrud-Clikeman, M."],
 		"publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 31 Issue 3",
-		"etAl": true,
+		"etAl": "true",
 		"publishDate": "2013",
 		//"pages": "438-448",
 		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/1592775"
@@ -1381,7 +1498,7 @@ var biblio = {
 
 		"publisher": "Annals of the New York Academy of Sciences, Vol. 682",
 		"authors": ["Tallal, P."],
-		"etAl": true,	
+		"etAl": "true",	
 		"publishDate": "1993"
 		},
 	
@@ -1446,7 +1563,7 @@ var biblio = {
 		"title": "Developmental Dyscalculia Is a Familial Learning Disability",
 		"publisher": "Journal of learning disabilities,  vol. 34, no. 1",
 		"authors":["Shalev, R.S."],
-		"etAl": true,
+		"etAl": "true",
 		//"pages": "1042-43",
 		"publishDate": "2001",
 		"href": "http://ldx.sagepub.com/content/34/1/59.short"
@@ -1457,7 +1574,7 @@ var biblio = {
 		"title": "Functional disruption in the organization of the brain for reading in dyslexia",
 		"publisher": "Proc. Natl. Acad. Sci. USA Vol. 95",
 		"authors":["Shaywitz S."],
-		"etAl": true,
+		"etAl": "true",
 		//"pages": "2636–2641",
 		// "publishedBy": "United States National Academy of Sciences",
 		"publishDate": "1998"
@@ -1548,7 +1665,7 @@ var biblio = {
 		{
 		"title": "Dementia 2013 infographic - text only version",
 		"authors": ["UK: Alzheimer's Society"],
-		"etAl": false,
+		"etAl": "false",
 		"href": "http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=2164"
 		},
 
@@ -1556,7 +1673,7 @@ var biblio = {
 		{
 		"title": "Changes in behaviour",
 		"authors": ["UK: Alzheimer's Society"],
-		"etAl": false,
+		"etAl": "false",
 		"href": "http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=159"
 		},
 		
@@ -1564,7 +1681,7 @@ var biblio = {
 		{
 		"title": "Developing Websites for Older People: How WCAG 2.0 Applies",
 		"authors": ["Web Accessibility Initiative (WAI)"],
-		"etAl": false,
+		"etAl": "false",
 		"href": "http://www.w3.org/WAI/older-users/developing",
 		"deliveredBy": "http://www.w3.org/WAI/",
 		"publisher": "W3C"
@@ -1581,7 +1698,7 @@ var biblio = {
 			"Michael Cooper",
 			"Shane McCarron"
 		],
-		"etAl": true,
+		"etAl": "true",
 		"deliveredBy": "http://www.w3.org/WAI/PF/"
 		},
 	
@@ -1637,6 +1754,15 @@ var biblio = {
 		//"href": "http://www.ncbi.nlm.nih.gov/pubmed/15490541"
 		},
 		
+
+	"Widgit-1": {
+		"title": "Widgit Symbols",
+		"authors": ["Widgit"],
+		"etAl": "false",
+		"href": "http://www.widgit.com/symbols/widgit_symbols.htm"
+		},
+
+
 	"Wikipedia-1": {
 		"title": "Attention deficit hyperactivity disorder",
 		"publisher": "Wikipedia",
@@ -1685,7 +1811,7 @@ var biblio = {
 		{
 		"title": "Ageing",
 		"authors": ["World Health Organization"],
-		"etAl": false,
+		"etAl": "false",
 		"href": "http://www.who.int/topics/ageing/en/"
 		},
 		
@@ -1693,11 +1819,17 @@ var biblio = {
 		{
 		"title": "Dementia",
 		"authors": ["World Health Organization"],
-		"etAl": false,
+		"etAl": "false",
 		"publishDate": "2015",
 		"href": "http://www.who.int/mediacentre/factsheets/fs362/en/"
 		},
-		
+	
+		"Widgit-1": {
+		"title": "Widgit Symbols",
+		"authors": ["Widgit"],
+		"etAl": "false",
+		"href": "http://www.widgit.com/symbols/widgit_symbols.htm"
+		},	
 		
 	"Wilson-1":
                 {
@@ -1718,7 +1850,7 @@ var biblio = {
 		"etAl": "true",
 		"publisher": "ASSETS '12 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 25-32",
 		"publishDate": "2012"
-		},
+		}
 		
 	
 };
