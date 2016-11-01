@@ -107,7 +107,7 @@
 				</p></div></blockquote>
                   <h3><a id="user-content-proposed" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#proposed" aria-hidden="true"></a>Proposed:</h3>
                                     <blockquote class="scquote"><div>
-                                      <p class="sctxt">@@<strong>3.3.3 Minimize user errors</strong>: <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">Input errors</a> are automaticaly corrected where the correction is known to be reliable and achivable. Otherwise, @@if suggestions for corrections are known,  the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</p>
+                                      <p class="sctxt">@@<strong>3.3.3 Minimize user errors</strong>: <a data-link-type="dfn" href="https://www.w3.org/TR/WCAG20/#input-errordef">Input errors</a> are automatically corrected where the correction is known to be reliable and achievable. Otherwise, @@if suggestions for corrections are known,  the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.</p>
                                       <p class="sctxt">&nbsp;</p>
                                       <p class="sctxt">&nbsp;</p>
                                     </div></blockquote>
@@ -122,27 +122,27 @@
                   </dt>
                   <dd>errors that have been  have been documented in the understanding of the Success Criteria section or have supportive techniques or that have been reported or documented more then one time and there is a know way to identify them</dd>
                 </dl>
-                <dt><span class="sctxt">known to be reliable and achivable</span></dt>
-                <dd>Identified in the WCAG techniques as possible to reliably correct an errors, or found in user testing to constently </dd>
+                <dt><span class="sctxt">known to be reliable and achievable</span></dt>
+                <dd>Identified in the WCAG techniques as possible to reliably correct an errors, or found in user testing to constantly </dd>
 		        <h2><a id="user-content-what-principle-and-guideline-the-sc-falls-within" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" aria-hidden="true"></a>What Principle and Guideline the SC falls within.</h2>
 		        <p>Principle 3 Understandable - Guideline 3.3: Help users avoid and correct mistakes.</p>
                 <p>This is an update to 3.3.3 Error Suggestion</p>
 		        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
-                  <p>The intent of this Success Criteria is to minimize user generated errors by detecting, and when reilable and possible, automatically correcting common input errors.</p> 
+                  <p>The intent of this Success Criteria is to minimize user generated errors by detecting, and when reliable and possible, automatically correcting common input errors.</p> 
                   <p>For example, while registering for an online banking account a form requires the input of the user's birthdate. The required input format is xx/xx/xxxx with a leading zero for single digits. If a single input field with no input correction is presented, a user with a cognitive disability may enter 1/3/1996 thus triggering an error notification. It may not be clear to the user that the required format is 01/03/1996 even if an example for instance, xx/xx/xxxx, is shown below the input field or in the error notification. To alleviate any confusion for the user the application should insert a leading zero if a single digit is entered into the month or day along with the required forwardslash characters which act as a delimeter between the month, day and year.</p>
                   <p>Minimizing user generated errors by automatically correcting them will also minimize error notifications. Error notifications may be distracting for some users with cognitive disabilites, taking focus away from tasks and task completion. Users with cognitive disabilites may find it difficult to understand how to correct an error even when a notification is given. In the case of an unsuccessful form submission, this group of users may abandon forms because they are unsure of how to correct the error even though they are aware that an error has occurred.</p>
 
-<p>If automatic correction is reilable and possible it should be implemented. If automatic correction is not possible the content author, the user agent or supported APIs should provide a description of the error along with suggestions for fixing the error except when to do so would jeopardize the security or purpose of the content.</p>
+<p>If automatic correction is reliable and possible it should be implemented. If automatic correction is not possible the content author, the user agent or supported APIs should provide a description of the error along with suggestions for fixing the error except when to do so would jeopardize the security or purpose of the content.</p>
 <p>This Success Criterion helps users who need help preventing errors. </p>
                   
 		        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
-                <p>People with cognative disabilities and aging users abandon tasks and believe they cannot complete them if they receive too many errors. &lt;See Neilson studie&gt;		        </p>
-                <p>&nbsp;</p>
-                  <p>We need to minimize errors because:</p>
-                    <ul>
+                <p>People with cognitive disabilities and aging users abandon tasks and believe they cannot complete them if they receive too many errors. &lt;See Neilson studies&gt;		        </p>
+                <p>We need to minimize errors because:</p>
+                  <ul>
+                      <li>Error notifications may be confusing for users with cognitive disabilities.  Many users will not understand the problem making the task impossible to complete</li>
+                      <li>Correcting errors is often difficult and frustrating for the user. Many users give up when they get successive errors</li>
+                      <li>Error notifications can distract a user from tasks and task completion</li>
                       <li>Correcting errors before they occur will minimize the number of actions needed to complete a task or process</li>
-                        <li>Error notifications may be confusing for users with cognitive disabilities</li>
-                        <li>Error notifications can distract a user from tasks and task completion</li>
                     </ul>
                 <p>This Success Criterion helps people with many different cognitive disabilities including people with: </p>
             <ul>
@@ -155,11 +155,12 @@
       <h3 id="resources">Related Resources</h3>
 		  <p>Resources are for information purposes only, no endorsement implied.</p>
           <ul>
-            <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a></li>
+            <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a>              including research carried out by Neil Milliken with web users who have dyscalculia - case studies.            </li>
             <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html">User Needs Table 3: Entering data, error prevention &amp; recovery</a></li>
-
-                    </ul>
-</div>
+            </ul>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+                </div>
                   <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
         <p>Step 1. 
                                       
@@ -174,6 +175,7 @@
 					<li>Accept as many formats as possible of different ways of writing a phone number</li>
 					<li>Accept as many formats as possible of different ways of writing a  date format</li>
 					<li>Using an interface were only valid dates can be selected</li>
+					<li>Accept voice prompts for people with a speech impairment</li>
 					<li>Correct errors of the post code being written in the text field with the city or state information</li>
 				  <li>Calendars and dates</li>
                             <ul>
@@ -198,7 +200,7 @@
 
 
 <h2>Working group notes</h2>
-<p>removed the first sententce: <span class="sctxt">Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. </span></p>
+<p>removed the first sentence: <span class="sctxt">Identify <a href="#dt-common-input-error" class="internalDFN" data-link-type="dt">common input errors</a>. </span></p>
 <p>It was decided that the original COGA Success Criteria below should be broken into three separate Success Criteria - <strong>Minimize User Errors</strong> (outlined above), <strong>Labels or Instructions</strong>, and <strong>Identify Charges</strong>.
 </p>
 <section>
@@ -216,7 +218,7 @@
                       <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a>essential information</a>. </li>
                       <li>Instructions are provided if there is not a label  that fully describe the control or if it is not clear were to get the required information. Instructions should explain the purpose and usage of the control. (Graphics with a text alternative may be sufficient) ( A clear instruction or information is on where 99% of your target audience understand immediately what to do) </li>
                     </ol>
-                    <p>For legal and finacial transactions</p>
+                    <p>For legal and financial transactions</p>
                     <ol>
                       <li>Options that may disadvantage the user are only selected at the users specific request. </li>
                       <li>All types of charges must be clear at the start of a transaction task. </li>
