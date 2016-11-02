@@ -130,7 +130,7 @@
 		        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
                   <p>The intent of this Success Criteria is to minimize user generated errors by detecting, and when reliable and possible, automatically correcting common input errors.</p> 
                   <p>For example, while registering for an online banking account a form requires the input of the user's birthdate. The required input format is xx/xx/xxxx with a leading zero for single digits. If a single input field with no input correction is presented, a user with a cognitive disability may enter 1/3/1996 thus triggering an error notification. It may not be clear to the user that the required format is 01/03/1996 even if an example for instance, xx/xx/xxxx, is shown below the input field or in the error notification. To alleviate any confusion for the user the application should insert a leading zero if a single digit is entered into the month or day along with the required forwardslash characters which act as a delimeter between the month, day and year.</p>
-                  <p>Minimizing user generated errors by automatically correcting them will also minimize error notifications. Error notifications may be distracting for some users with cognitive disabilites, taking focus away from tasks and task completion. Users with cognitive disabilites may find it difficult to understand how to correct an error even when a notification is given. In the case of an unsuccessful form submission, this group of users may abandon forms because they are unsure of how to correct the error even though they are aware that an error has occurred.</p>
+                  <p>Minimizing user generated errors by automatically correcting them will also minimize error notifications. Error notifications may be distracting for some users with cognitive disabilities, taking focus away from tasks and task completion. Users with cognitive disabilities may find it difficult to understand how to correct an error even when a notification is given. In the case of an unsuccessful form submission, this group of users may abandon forms because they are unsure of how to correct the error even though they are aware that an error has occurred.</p>
 
 <p>If automatic correction is reliable and possible it should be implemented. If automatic correction is not possible the content author, the user agent or supported APIs should provide a description of the error along with suggestions for fixing the error except when to do so would jeopardize the security or purpose of the content.</p>
 <p>This Success Criterion helps users who need help preventing errors. </p>
@@ -153,7 +153,6 @@
             </ul>
                   <div>
       <h3 id="resources">Related Resources</h3>
-		  <p>Resources are for information purposes only, no endorsement implied.</p>
           <ul>
             <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a>              including research carried out by Neil Milliken with web users who have dyscalculia - case studies.            </li>
             <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html">User Needs Table 3: Entering data, error prevention &amp; recovery</a></li>
@@ -180,7 +179,12 @@
 				  <li>Calendars and dates</li>
                             <ul>
                               <li>Calendars should default to the first relevant day. Work calendars should default to first working day of a user's locale. </li>
-                              <li>Calendar based booking systems must avoid ability to book return date before departure date. </li>
+                              <li>Calendar based booking systems must avoid ability to book return date before departure date. 
+                                <p><strong>Failure example:</strong> The booking form provides two calendars without clear labels and instruction and user is able to select dates without warning as to whether they are possible e.g. flight out on June 1st - flight return May 30th.</p>
+                                <p><strong>Pass example:</strong>User is unable to select inappropriate dates and a simple explanation provided should he/she try to do so. </p>
+                                <p><strong>Failure example: </strong>User can select inappropriate dates without warning.  Calendar merely grays out inappropriate dates which may not be noticed.  No warnings provided. </p>
+                                <p></p>
+                              </li>
                             </ul>
                             <li>Temperature</li>
                             <ul>
