@@ -1,26 +1,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>chunking</title>
-		<script 
+<head>
+    <title>chunking</title>
+    <script src="https://www.w3.org/Tools/respec/respec-w3c-common"
+            class="remove"></script>
+    <script src="../common/biblio.js"
+            class="remove"></script>
+    <style>
+        .technique {
+            border: dotted;
+        }
+    </style>
+    <!-- <script
 
-src="https://www.w3.org/Tools/respec/respec-w3c-common" 
+    src='http://pandora.aptest.com/respec/js/require.js' data-
 
-class="remove"></script>
-		<script src="../common/biblio.js" 
+    main="http://pandora.aptest.com/respec/js/profile-w3c-common" async
 
-class="remove"></script>
-		<style > 
-			.technique {border:dotted;}
-			
-			</style>
-		<!-- <script 
-
-src='http://pandora.aptest.com/respec/js/require.js' data-
-
-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async 
-
-class='remove'></script> -->
-		<script class="remove">
+    class='remove'></script> -->
+    <script class="remove">
 	var respecConfig = {
 		// embed RDFa data in the output
 		trace:  true,
@@ -29,7 +26,7 @@ class='remove'></script> -->
 		permalinkEdge:     true,
 		permalinkHide:     false,
 		tocIntroductory: true,
-		// specification status (e.g., WD, LC, NOTE, etc.). 
+		// specification status (e.g., WD, LC, NOTE, etc.).
 
 If in doubt use ED.
 		specStatus:           "ED",
@@ -37,23 +34,23 @@ If in doubt use ED.
 		//crEnd:                "2012-04-30",
 		//perEnd:               "2013-07-23",
 		//publishDate:          "2013-08-22",
-		//diffTool:             
+		//diffTool:
 
 "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
-		
-		// the specifications short name, as in 
+
+		// the specifications short name, as in
 
 http://www.w3.org/TR/short-name/
 		shortName:            "COGA SC 1",
-		
 
-		// if you wish the publication date to be other than 
+
+		// if you wish the publication date to be other than
 
 today, set this
 		// publishDate:  "2009-08-06",
 		copyrightStart:  "2016",
 
-		// if there is a previously published draft, 
+		// if there is a previously published draft,
 
 uncomment this and set its YYYY-MM-DD date
 		// and its maturity status
@@ -62,14 +59,14 @@ uncomment this and set its YYYY-MM-DD date
 		//prevRecURI: "",
 		//previousDiffURI: "",
 
-		// if there a publicly available Editors Draft, this is 
+		// if there a publicly available Editors Draft, this is
 
 the link
-		//edDraftURI: 
+		//edDraftURI:
 
 "https://w3c.github.io/coga/extension/",
 
-		// if this is a LCWD, uncomment and set the end 
+		// if this is a LCWD, uncomment and set the end
 
 of its review period
 		// lcEnd: "2012-02-21",
@@ -77,637 +74,759 @@ of its review period
 		// editors, add as many as you like
 		// only "name" is required
 		//editors: [			{
-			//{ name: "Your Name", url: 
+			//{ name: "Your Name", url:
 
 "http://example.org/",
-		//      company: "Your Company", companyURI: 
+		//      company: "Your Company", companyURI:
 
 "http://example.com/" },
-		//],					
+		//],
 
-		
-		
 
-		// authors, add as many as you like. 
-		// This is optional, uncomment if you have authors 
+
+
+		// authors, add as many as you like.
+		// This is optional, uncomment if you have authors
 
 as well as editors.
-		// only "name" is required. Same format as 
+		// only "name" is required. Same format as
 
 editors.
 
 		//authors:  [
-		//    { name: "Your Name", url: 
+		//    { name: "Your Name", url:
 
 "http://example.org/",
-		//      company: "Your Company", companyURI: 
+		//      company: "Your Company", companyURI:
 
 "http://example.com/" },
 		//],
 
 		/*
 		alternateFormats: [
-			{ uri: 'aria-diff.html', label: "Diff from 
+			{ uri: 'aria-diff.html', label: "Diff from
 
 Previous Recommendation" } ,
-			{ uri: 'aria.ps', label: "PostScript 
+			{ uri: 'aria.ps', label: "PostScript
 
-version" }, 
+version" },
 			{ uri: 'aria.pdf', label: "PDF version" }
 		],
 		*/
-		
-		// errata: 
+
+		// errata:
 
 'http://www.w3.org/2010/02/rdfa/errata.html',
-		
-		// name of the WG
-		wg:           ["Cognitive and Learning Disabilities 
 
-Accessibility Task Force", "Accessible Platform Architectures Working 
+		// name of the WG
+		wg:           ["Cognitive and Learning Disabilities
+
+Accessibility Task Force", "Accessible Platform Architectures Working
 
 Group", "Web Content Accessibility Guidelines Working Group"],
-		
-		// URI of the public WG page
-		wgURI:        
 
-["http://www.w3.org/WAI/PF/cognitive-a11y-tf/", 
+		// URI of the public WG page
+		wgURI:
+
+["http://www.w3.org/WAI/PF/cognitive-a11y-tf/",
 
 "http://www.w3.org/WAI/APA/", "http://www.w3.org/WAI/GL/"],
-		
-		// name (with the @w3c.org) of the public mailing 
+
+		// name (with the @w3c.org) of the public mailing
 
 to which comments are due
 		wgPublicList: "public-coga-comments",
-		
+
 		// URI of the patent status for this WG, for Rec-
 
 track documents
 		// !!!! IMPORTANT !!!!
-		// This is important for Rec-track documents, do 
+		// This is important for Rec-track documents, do
 
 not copy a patent URI from a random
-		// document unless you know what you're doing. 
+		// document unless you know what you're doing.
 
 If in doubt ask your friendly neighbourhood
 		// Team Contact.
-		wgPatentURI:  ["", 
+		wgPatentURI:  ["",
 
-"http://www.w3.org/2004/01/pp-impl/83907/status", 
+"http://www.w3.org/2004/01/pp-impl/83907/status",
 
 "http://www.w3.org/2004/01/pp-impl/32212/status"],
 		//maxTocLevel: 2,
-		
+
 		localBiblio: biblio,
 	};
-		</script>
-	</head>
-
+    </script>
+</head>
 <body>
-		<div id="wiki-content">
-		  <div>
-		    <div id="wiki-body">
-		      <div>
-		        <h2>SC Shortname: Manageable blocks of 
+    <div id="wiki-content">
+        <div>
+            <div id="wiki-body">
+                <div>
+                    <h2>
+                        SC Shortname: Manageable blocks of
 
-information</h2>
-		        <h2><a id="user-content-sc-text" 
+                        information
+                    </h2>
+                    <h2>
+                        <a id="user-content-sc-text"
+                           href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
 
-href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
+Success-Criteria#sc-text" aria-hidden="true"></a>SC Text
+                    </h2>
+                    <p>
+                        Important
 
-Success-Criteria#sc-text" aria-hidden="true"></a>SC Text</h2>
-		       		        <p>Important 
+                        information is provided in manageable blocks.
+                    </p>
+                    <p>For text:</p>
+                    <ul>
+                        <li>
+                            <strong>
+                                a single point per
 
-information is provided in manageable blocks.</p> 
-<p>For text</p>
- <ul>
-		          <li><strong>A single point per 
+                                paragraph:
+                            </strong> a paragraph  consists of one or more
 
-paragraph:</strong> A paragraph  consists of one or more 
+                            sentences about a single point.
+                        </li>
+                        <li>
+                            <strong>short sentences</strong>:
 
-sentences that deal with a single point.</li>
-		          <li><strong>Short sentences</strong>:   
+                            Sentences have a maximum of one conjunction and two commas. A
 
-Sentences have a maximum of one conjunction and two commas. A 
+                            sentence must consist of a single idea. Exception:
 
-sentence must consist of a single idea. Exception: 
+                            Where <em>usability testing</em> has found a longer sentence to be
 
-Where <em>Usability testing</em> has found a longer sentence to be 
+                            clearer or easier to understand.
+                        </li>
+                        <li>
+                            <strong>
+                                appropriately-used lists
+                            </strong>:   When there are three or more
 
-clearer or easier to understand.</li>
-				     <li><strong>Lists are 
+                            consecutive items that could be considered a list, a list is used.
+                        </li>
+                    </ul>
+                    <p>Audio or visual media are divided into programmatically-determinable and logical
 
-used appropriately</strong>:   When there are three or more 
+                        sequences.</p>
+                    <p>
+                        
+                        Media segments should be:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>six minutes or fewer</strong>:
 
-consecutive items that could be considered a list, a list is used.  </li>
-	            </ul>
+                            Media should be divided into segments that are 6 minutes or fewer in
 
-<p>For audio or visual media</p>
-<p>Media are divided into programmatically determinable and logical 
+                            duration.
+                        </li>
 
-sequences. 
-Media segments should be:</p>
- <ul>
-		          <li><strong>Six minutes or less</strong>: 
+                        <li>
+                            <strong>programmatically-determinable and logical</strong>:
 
-Media should be divided into segments that are 6 minutes or less in 
+                            Media should be presented in a programmatically-determinable and
 
-duration.</li>
-				   
+                            logical order.
+                        </li>
 
-<li><strong>Programmatically determinable and logical</strong>: 
+                        <li>
+                            <strong>navigable</strong>: Navigation to each segment, and a
 
- Media should be presented in a programmatically determinable and 
-
-logical order.</li>
-				    
-
-<li><strong>Navigable</strong>: Navigation to each segment and a 
-
-unique descriptive label are provided for each media segment.</li>
-				  </ul>
-
+                            unique, descriptive label are provided for each media segment.
+                        </li>
+                    </ul>
 
 
+                    <p>
+                        Exception - There are exceptions
 
-		        <p>Exception: There are exceptions 
+                        where:
+                    </p>
+                    <ul>
+                        <li>
+                            the content will be penalized for not
 
-where:</p>
-		        <ul>
-		          <li>the content will be penalized for not 
+                            conforming to a given writing style (such as a dissertation or a <abbr title="Doctor of Philosophy">Ph.D.</abbr> proposal);
+                        </li>
+                        <li>
+                            a different structure is an essential part
 
-conforming to a given writing style (such as a dissertation or a <abbr 
+                            of the main function of the site (for example, a game or a reading
 
-title="Doctor of Philosophy">Ph.D.</abbr> proposal); </li>
-		          <li>a different structure is an essential part 
+                            test);
+                        </li>
+                        <li>
+                            if the writing style is an essential part of
 
-of the main function of the site (for example, a game or a reading 
+                            the main function of the site, such as a literary work;
+                        </li>
+                        <li>
+                            the writing-style items may be replaced
 
-test);</li>
-		          <li>if the writing style is an essential part of 
+                            for a location or a type of content where user testing has shown a more
 
-the main function of the site, such as a literary work;</li>
-		          <li>the writing style items may be replaced 
+                            effective writing style to   aid comprehension for people with cognitive
 
-for a location or a type of content where user testing has shown a more 
+                            disabilities (for example, content written in a specific language).
+                        </li>
+                    </ul>
+                    <p>&nbsp;</p>
 
-effective writing style to   aid comprehension for people with cognitive 
+                    <h2>
+                        <a id="user-content-suggestion-for-
 
-disabilities (for example, content written in a specific language). </li>
-		        </ul>
-                <p>&nbsp;</p>
-		       
-		        <h2><a id="user-content-suggestion-for-
-
-priority-level-aaaaaa" 
-
-href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
+priority-level-aaaaaa"
+                           href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
 
 Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-
+                           hidden="true"></a>Suggestion for Priority: Level (AA)
+                    </h2>
+                    <h2>
+                        <a id="user-content-related-glossary-
 
-hidden="true"></a>Suggestion for Priority: Level (AA)</h2>
-		        <h2><a id="user-content-related-glossary-
-
-additions-or-changes" 
-
-href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
+additions-or-changes"
+                           href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
 
 Success-Criteria#related-glossary-additions-or-changes" aria-
+                           hidden="true"></a>Related Glossary additions or changes
+                    </h2>
+                    <dl>
+                        <dt>
+                            Manageable blocks of information:
 
-hidden="true"></a>Related Glossary additions or changes</h2>
-		        <dl>
-		          <dt>Manageable blocks of information: 
+                        </dt>
+                        <dd>
+                            content that is split or
 
-</dt>
-		          <dd>	content that is split or 
+                            chunked into small sections or pieces.
+                        </dd>
 
-chunked into small sections or pieces.</dd>
-		         
-		          <dt>Important information</dt>
-	            
-                  <dd>
-                    <ol>
-                      <li>information the user may need to complete any action 
+                        <dt>Important information:</dt>
 
-or task including an offline task. </li>
-                      <li>information the user may need to know related to 
+                        <dd>
+                            <ol>
+                                <li>
+                                    information the user may need to complete any action
 
-safety, risks, privacy, health, or opportunities. </li>
-                    </ol></dd></dl>
-                 
-                  
-                  <dt><em>Usability testing</em></dt>
-                  <dd><em></em><em>Usability testing</em> with a user 
+                                    or task including an offline task; and/or
+                                </li>
+                                <li>
+                                    information the user may need to know related to
 
-group of at least five people with cognitive and/or learning disabilities; 
+                                    safety, risks, privacy, health, or opportunities.
+                                </li>
+                            </ol>
+                        </dd>
+                    </dl>
 
-and with at least three different learning and cognitive disabilities</dd>
-		        </dl>
-		        <p>&nbsp;</p>
-		        <h2><a id="user-content-what-principle-
 
-and-guideline-the-sc-falls-within" 
+                    <dt><em>Usability testing</em></dt>
+                    <dd>
+                        <em></em><em>Usability testing</em> with a user
 
-href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
+                        group of at least five people with cognitive and/or learning disabilities;
 
-Success-Criteria#what-principle-and-guideline-the-sc-falls-within" 
+                        and with at least three different learning and cognitive disabilities.
+                    </dd>
+                    </dl>
+                    <p>&nbsp;</p>
+                    <h2>
+                        <a id="user-content-what-principle-
 
-aria-hidden="true"></a>What Principle and Guideline the SC falls 
+and-guideline-the-sc-falls-within"
+                           href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
 
-within.</h2>
-				<p>Under Guideline 3.1 
+Success-Criteria#what-principle-and-guideline-the-sc-falls-within"
+                           aria-hidden="true"></a>What Principle and Guideline the SC falls
 
-with small changes</p>
-				
+                        within.
+                    </h2>
+                    <p>
+                        Under Guideline 3.1
 
-<p><strong>Current</strong>
-			    </p>
-				<p>Guideline 3.1: Make text 
+                        with small changes
+                    </p>
 
-content readable and understandable</p>
-				<strong>Proposal</strong>
-				<p>Guideline 3.1: Make 
+                    <p>
+                        <strong>Current</strong>
+                    </p>
+                    <p>
+                        Guideline 3.1: Make text
 
-content readable and understandable.</p>
-		        <h2><a id="user-content-description" 
+                        content readable and understandable.
+                    </p>
+                    <strong>Proposal</strong>
+                    <p>
+                        Guideline 3.1: Make
 
-href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
+                        content readable and understandable.
+                    </p>
+                    <h2>
+                        <a id="user-content-description"
+                           href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
 
 Success-Criteria#description" aria-
+                           hidden="true"></a>Description
+                    </h2>
+                    <p>
+                        The intent of this success criterion is to
 
-hidden="true"></a>Description</h2>
-		       <p> The intent of this success criterion is to 
+                        split information into manageable blocks to reduce cognitive load, and
 
-split information into manageable blocks to reduce cognitive load, and 
+                        to aid working memory for all users.  It enables content to be presented
 
-to aid working memory for all users.  It enables content to be presented 
+                        in smaller, cohesive sections focusing on one point.  Readable content
 
-in smaller cohesive sections focusing on one point.  Readable content 
+                        has short paragraphs and sentences with a single focus; whilst time-
 
-has short paragraphs and sentences with a single focus; whilst time-
+                        based and synchronized media have navigable short sections.
+                    </p>
 
-based and synchronized media have navigable short sections.</p>
+                    <h2>
+                        <a id="user-content-benefits"
+                           href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
 
+Success-Criteria#benefits" aria-hidden="true"></a>Benefits
+                    </h2>
+                    <p>
+                        Chunking content, whether it is visual or
 
-		        <h2><a id="user-content-benefits" 
+                        auditory, supports those with working memory deficits, such as those
 
-href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
+                        with learning disabilities and brain injury. The breaking down of content
 
-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
-		        <p>Chunking content, whether it is visual or 
+                        into small sections, whether it is developed as audio or video output;
 
-auditory, supports those with working memory deficits, such as those 
+                        mathematical symbols; or a paragraph of text; improves levels of
 
-with learning disabilities and brain injury. The breaking down of content 
+                        comprehension.
+                    </p>
+                    <p>
+                        References for evidence of the benefits
 
-into small sections, whether it is developed as audio or video output; 
+                        include:
+                    </p>
+                    <ul>
+                        <li>
+                            Evmenova, Anna S., and Michael M.
 
-mathematical symbols; or a paragraph of text; improves levels of 
+                            Behrmann. "Research-Based Strategies for Teaching Content to
 
-comprehension. </p>
-		        <p>References for evidence of the benefits 
+                            Students with Intellectual Disabilities: Adapted Videos." Education and
 
-include:</p>
-		        <ul>
-		          <li> Evmenova, Anna S., and Michael M. 
+                            Training in Autism and Developmental Disabilities 46.3 (2011): 315-25.
 
-Behrmann. "Research-Based Strategies for Teaching Content to 
+                            Web. 
+                        </li>
+                        <li>
+                            Hock, M. and Mellard, D. (2005),
 
-Students with Intellectual Disabilities: Adapted Videos." Education and 
+                            Reading Comprehension Strategies for Adult Literacy Outcomes.
 
-Training in Autism and Developmental Disabilities 46.3 (2011): 315-25. 
+                            Journal of Adolescent &amp; Adult Literacy, 49: 192-200. 
+                        </li>
+                        <li>
+                            Zhang, D., Ding, Y., Stegall, J. and Mo,
 
-Web. </li>
-		          <li> Hock, M. and Mellard, D. (2005), 
+                            L. (2012), The Effect of Visual-Chunking-Representation
 
-Reading Comprehension Strategies for Adult Literacy Outcomes. 
+                            Accommodation on Geometry Testing for Students with Math
 
-Journal of Adolescent &amp; Adult Literacy, 49: 192-200. </li>
-		          <li> Zhang, D., Ding, Y., Stegall, J. and Mo, 
+                            Disabilities. Learning Disabilities Research &amp; Practice, 27: 167-
 
-L. (2012), The Effect of Visual-Chunking-Representation 
+                            177. doi:10.1111/j.1540-5826.2012.00364.x .
+                        </li>
+                    </ul>
 
-Accommodation on Geometry Testing for Students with Math 
+                    <p>&nbsp;</p>
+                    <p>
+                        Splitting information into manageable
 
-Disabilities. Learning Disabilities Research &amp; Practice, 27: 167-
+                        blocks assists:
+                    </p>
+                    <ul>
+                        <li>
+                            the increasing population who are over
 
-177. doi:10.1111/j.1540-5826.2012.00364.x .</li>
-	            </ul>
-		        
-		        <p>&nbsp;</p>
-		        <p>Splitting information into manageable 
+                            60 (20% in the Northern Hemisphere by 2030) and many people with
 
-blocks assists:</p> 
-				<ul>
-		          <li>the increasing population who are over 
+                            cognitive impairments, including language and learning disabilities.
 
-60 (20% in the Northern Hemisphere by 2030) and many people with 
+                            More than half of people over 60 years old - including mild cognitive
 
-cognitive impairments, including language and learning disabilities. 
+                            impairment and age-associated memory impairment
 
-More than half of people over 60 years old - including mild cognitive 
+                            (AAMI).
+                        </li>
+                        <li>
+                            working memory and retention of
 
-impairment and Age-Associate Memory Impairment 
+                            content.  Research indicates 50% of people surfing web pages
 
-(<em>AAMI</em>).		          </li>
-		          <li>working memory and retention of 
+                            spend fewer than 12 seconds on a page; and 17% between 2 and 4
 
-content.  Research indicates that 50% of those surfing web pages 
+                            seconds.
+                        </li>
+                        <li>
+                            those with reduced attention spans, and
 
-spend less than 12 seconds on a page; and 17% between 2-4 
+                            enables information to be understood more easily.   Research
 
-seconds.</li>
-		          <li>those with reduced attention spans, and 
+                            indicates the average attention span in 2015 was 8.25
 
-enables information to be understood more easily.   Research 
+                            seconds.
+                        </li>
+                    </ul>
+                    <p>
+                        A real world example is
 
-indicates that the average attention span in 2015 was 8.25 
+                        someone with Dyslexia working with a task force member.
+                    </p>                    
+                    <p>
+                        "If I am faced with a
 
-seconds.</li>
-	            </ul>
-				<p>A real world example is 
+                        long paragraph with sub clauses, I will copy it out and put in line breaks
 
-someone with dyslexia working with a task force member. </p>
-				<p> </p>
-				<p>"If I am faced with a 
+                        where I find a new keyword or point.  If I chunk the text, it is easier to
 
-long paragraph with sub clauses, I will copy it out and put in line breaks 
+                        follow each concept. Otherwise, it is just a wash of words and I lose
 
-where I find a new keyword or point.  If I chunk the text, it is easier to 
+                        track of which part I am meant to be concentrating on. When there are
 
-follow each concept. Otherwise, it is just a wash of words and I lose 
+                        no line breaks and I have to scroll across, I forget what is at the
 
-track of which part I am meant to be concentrating on. When there are 
+                        beginning of the line".   Adult with Dyslexia.
+                    </p>
+                    <p>
+                        Note that reading takes
 
-no line breaks and I have to scroll across, I forget what is at the 
+                        full cognitive function for many people, making remembering what was
 
-beginning of the line".   Adult with dyslexia.</p>
-				<p>Note that reading takes 
+                        written at the same time much harder.
+                    </p>
+                    <p> </p>
+                    <p>&nbsp;</p>
 
-full cognitive function for many people, making remembering what was 
+                    <h2 id="resources">
+                        Related
 
-written at the same time much harder.</p>
-				<p> </p>
-				<p>&nbsp;</p>
-				
-				<h2 id="resources">Related 
+                        Resources
+                    </h2>
+                    Resources are for information purposes only. No endorsement is intended or implied.
+                    <ul>
+                        <li>
+                            <a href="http://www.ldatschool.ca/executive-
 
-Resources </h2>
- Resources are for information purposes only, no endorsement implied. 
-				<ul>
-                  <li><a href="http://www.ldatschool.ca/executive-
+function/working-memory-and-cognitive-load/">
+                                Working Memory and
 
-function/working-memory-and-cognitive-load/">Working Memory and 
+                                Cognitive Load
+                            </a>.
+                        </li>
+                        <li>
+                            <a href="http://www.prb.org/pdf05/60.1globalaging.pdf">
+                                Global Aging:
 
-Cognitive Load</a>.</li>                
-                  <li> <a 
+                                The Challenge of Success
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ccit.college.columbia.edu/sites/ccit/files/weinreich-web-
 
-href="http://www.prb.org/pdf05/60.1globalaging.pdf">	Global Aging: 
+use-study.pdf">
+                                Weinreich, H., Obendorf, H., Herder, E., and Mayer, M.
 
-The Challenge of Success</a></li>
-                  <li><a 
+                                2008. Not quite the average: An empirical study of Web use.
+                            </a> ACM
 
-href="https://ccit.college.columbia.edu/sites/ccit/files/weinreich-web-
+                            Trans. Web, 2, 1, Article 5 (February 2008), 31 pages. DOI =
 
-use-study.pdf">Weinreich, H., Obendorf, H., Herder, E., and Mayer, M. 
+                            10.1145/1326561.1326566.
+                        </li>
+                        <li>
+                            <a href="http://www.statisticbrain.com/attention-span-
 
-2008. Not quite the average: An empirical study of Web use.</a> ACM 
+statistics/">Statistics Brain: Attention Span Statistics</a>.
+                        </li>
+                        <li>
+                            <a href="https://cft.vanderbilt.edu/guides-sub-pages/effective-
 
-Trans. Web, 2, 1, Article 5 (February 2008), 31 pages. DOI = 
+educational-videos/#seg">Segmenting video</a> (Philip Guo,
 
-10.1145/1326561.1326566.</li>
-                   <li> <a href="http://www.statisticbrain.com/attention-span-
+                            Assistant Professor of Cognitive Science, <abbr title="University of
 
-statistics/">Statistics Brain: Attention Span Statistics</a>.</li>
-				    <li> <a 
+California">UC</abbr> San Diego, et. al. 2014).
+                        </li>
+                        <li>
+                            <a href="http://blog.edx.org/optimal-video-length-student-
 
-href="https://cft.vanderbilt.edu/guides-sub-pages/effective-
+engagement">Optimal video length is 6 minutes or shorter</a>
+                            (Analysis by Philip Guo, Assistant Professor of Cognitive Science,
 
-educational-videos/#seg">Segmenting video</a> (Philip Guo, 
+                            <abbr title="University of California">UC</abbr> San Diego)
+                        </li>
+                    </ul>
 
-Assistant Professor of Cognitive Science, <abbr title="University of 
+                    <h2>
+                        <a id="user-content-testability"
+                           href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
 
-California">UC</abbr> San Diego, et. al. 2014).</li>
-					 <li> <a 
+Success-Criteria#testability" aria-hidden="true">Testability</a>
 
-href="http://blog.edx.org/optimal-video-length-student-
+                    </h2>
+                    <p>
+                        Identify the relevant standard
 
-engagement">Optimal video length is 6 minutes or shorter </a> 
+                        techniques. Ensure content conforms to those standards, where they
 
-(Analysis by Philip Guo, Assistant Professor of Cognitive Science, 
+                        can be used for testing, such that information is provided in manageable
 
-<abbr title="University of California">UC</abbr> San Diego)</li>
-                </ul>
- 
-		        <h2><a id="user-content-testability" 
+                        blocks.
+                    </p>
+                    <p>For text:</p>
+                    <ul>
+                        <li>
+                            <strong>a single point per paragraph</strong>: A
 
-href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
+                            paragraph should consist of one or more sentences that deal with a
 
-Success-Criteria#testability" aria-hidden="true"></a>Testability		
+                            single point.
+                        </li>
+                    </ul>
+                    <p>
+                        Possible test: Identify a keyword, or point, or topic sentence (a sentence that expresses the main idea of the paragraph in which it occurs). Confirm that
 
-		</h2>
-		        <p>Identify the relevant standard 
+                        each sentence relates directly to that keyword, point, or topic sentence. (Keywords can
 
-techniques. Ensure content conforms to those standards, where they 
+                        be identified in the mark up with <abbr title="cognitive
 
-can be used for testing that information is provided in manageable 
+accessibility">COGA</abbr> semantics at a later stage.)
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Short sentences</strong>:   Sentences have a
 
-blocks.</p>
-				<p>For text</p>
-                <ul>
-                  <li><strong>A single point per paragraph</strong>: A 
+                            maximum of one conjunction and two commas. A sentence should
 
-paragraph should consist of one or more sentences that deal with a 
+                            consist of a single idea. Exception: Where <em>
+                                usability
 
-single point. </li>
-                </ul>
-                <p>Possible test: Identify a key word or point or topic sentence(a sentence that expresses the main idea of the paragraph in which it occurs.) . Confirm that 
+                                testing
+                            </em> has found a longer sentence to be clearer or easier to
 
-each sentence relates directly to that keyword, point  or topic sentence. (Keyword can 
+                            understand.
+                        </li>
+                    </ul>
+                    <p>
+                        Possible test: This should be easy to test for, as one can
 
-be identified in the mark up with <abbr title="cognitive 
+                        count the numbers of conjunctions and commas. It is assumed that, by
 
-accessibility">COGA</abbr> semantics at a later stage.)</p>
-                <ul>
-                  <li><strong>Short sentences</strong>:   Sentences have a 
+                        the time this success criterion becomes adopted, automated tools will
 
-maximum of one conjunction and two commas. A sentence should 
+                        identify nonconforming sentences for the author. (This could be an
 
-consist of a single idea. Exception: Where <em>Usability 
+                        algorithm using regular expressions.)
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Lists are used appropriately</strong>:   When
 
-Testing</em> has found a longer sentence to be clearer or easier to 
+                            there are three or more consecutive items that could be considered a
 
-understand.</li>
-                </ul>
-                <p>Possible test: This should be easy to test for, as one can 
+                            list, a list is used.
+                        </li>
+                    </ul>
+                    <p>
+                        Possible test: An algorithm could identify sentences with
 
-count the numbers of conjunctions and commas. It is assumed that, by 
+                        3 commas or colons (like this one....); keywords such as &quot;such
 
-the time this success criterion becomes adopted, automated tools will 
+                        as:&quot;, &quot;for the following reasons&quot;, or &quot;step
 
-identify nonconforming sentences for the author. (This is a travel 
+                        1&quot;; sentences with bullet points (such as a, b, c); etc.
+                    </p>
+                    <p>
+                        For a paragraph with four or more sentences, it should be
 
-algorithm using regular expressions.)</p>
-                <ul>
-                  <li><strong>Lists are used appropriately</strong>:   When 
+                        confirmed that there are not three or more list items. (The first
 
-there are three or more consecutive items that could be considered a 
+                        sentence may be the context, and the next three may be list
 
-list, a list is used.</li>
-                </ul>
-                <p>Possible test: An algorithm could identify sentences with 
+                        items.)
+                    </p>
+                    <p>
+                        Three or more consecutive paragraphs do not have to be
 
-3 commas or colons (like this one....); keywords such as &quot;such 
+                        checked as list items because they should be made up of separate
 
-as:&quot;, &quot;for the following reasons&quot;, or &quot;step 
+                        points.
+                    </p>
+                    <p>&nbsp; </p>
+                    <p><strong>For audio or visual media</strong></p>
 
-1&quot;; sentences with bullet points (such as a, b, c); etc. </p>
-                <p>For a paragraph with four or more sentences, it should be 
+                    <p>
+                        Media are divided into programmatically-determinable and logical
 
-confirmed that there are not three or more list items. (The first 
+                        sequences.
+                        Media segments should be:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>six minutes or fewer</strong>:
 
-sentence may be the context, and the next three may be list 
+                            Media should be divided into segments that are 6 minutes or fewer in
 
-items.)</p>
-                <p>Three or more consecutive paragraphs do not have to be 
+                            duration.
+                        </li>
 
-checked as list items because they should be made up of separate 
+                        <li>
+                            <strong>programmatically-determinable and logical</strong>:
 
-points.</p>
-                <p>&nbsp; </p>
-                <p><strong>For audio or visual media</strong></p>
-                
+                            Media should be presented in a programmatically-determinable and
 
-<p>Media are divided into programmatically determinable and logical 
+                            logical order.
+                        </li>
 
-sequences. 
-Media segments should be:</p>
- <ul>
-		          <li><strong>Six minutes or less</strong>: 
+                        <li>
+                            <strong>navigable</strong>: Navigation to each segment, and a
 
-Media should be divided into segments that are 6 minutes or less in 
+                            unique descriptive label, are provided for each media segment.
+                        </li>
+                    </ul>
+                    <p>
+                        This is  testable by
 
-duration.</li>
-				   
+                        timing/identifing the gap between <strong>
+                            programmatically-determinable and logical
+                        </strong>; and <strong>navigation to</strong>
+                        chunks that have <strong>unique descriptive labels</strong>. If a gap
 
-<li><strong>Programmatically determinable and logical</strong>: 
+                        is over 6 minutes, it does not conform.
+                    </p>
+                    <p>
+                        Detemining how to
 
- Media should be presented in a programmatically determinable and 
+                        ensure it is logical and navigable, or unique and descriptive, is
 
-logical order.</li>
-				    
-
-<li><strong>Navigable</strong>: Navigation to each segment and a 
-
-unique descriptive label are provided for each media segment.</li>
-				  </ul>
-				<p>This is  testable by 
-
-timing/identifing the gap between <strong>programmatically 
-
-determinable and logical</strong>; and <strong>navigation to</strong> 
-
-chunks that have <strong>unique descriptive labels</strong>. If a gap 
-
-is over 6 minutes, it does not conform.</p>
-				<p>Detemining how to 
-
-ensure it is logical and navigatable to or unique and descriptive is 
-
-described in other WCAG tests (will add if needed)</p>  
-
-		        <h2><a id="user-content-techniques" 
-
-href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
+                        described in other WCAG tests. (Will add if needed.)
+                    </p>
+                    <h2>
+                        <a id="user-content-techniques"
+                           href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-
 
 Success-Criteria#techniques" aria-
+                           hidden="true"></a>Techniques
+                    </h2>
 
-hidden="true"></a>Techniques</h2>
-		       
-		        <h3>Techniques include:</h3>
-		        <ul>
-		          <li>breaking information into manageable 
+                    <h3>Techniques include:</h3>
+                    <ul>
+                        <li>
+                            breaking information into manageable
 
-blocks. <a 
+                            blocks. <a href="https://rawgit.com/w3c/coga/master/techniques/index.html#break
 
-href="https://rawgit.com/w3c/coga/master/techniques/index.html#break
+-your-content-into-manageable-chunks">
+                                (COGA Techniques
 
--your-content-into-manageable-chunks">(COGA Techniques 
+                                2.1.1)
+                            </a> <a href="https:\www.w3.org\TR\UNDERSTANDING-
 
-2.1.1)</a> <a href="https:\www.w3.org\TR\UNDERSTANDING-
+WCAG20\meaning.html">(for text see WCAG Guideline 3.1.5?</a> <a href="https://www.w3.org/TR/WCAG20-TECHS/G153.html">
+                                (WCAG
 
-WCAG20\meaning.html">(for text see WCAG Guideline 3.1.5?</a> <a 
+                                G153: Making the text easier to read)
+                            </a>;
+                        </li>
+                        <li>
+                            providing content that
 
-href="https://www.w3.org/TR/WCAG20-TECHS/G153.html">(WCAG 
+                            is clear and to the point. <a href="https://rawgit.com/w3c/coga/master/techniques/index.html#be-
 
-G153: Making the text easier to read)</a>;</li>
-				  <li>providing content that 
+clear-and-to-the-point">(COGA Techniques 2.3.1)</a>, <a href="https://www.w3.org/TR/WCAG20-TECHS/G153.html">
+                                (WCAG
 
-is clear and to the point.<a 
+                                G153: Making the text easier to read)
+                            </a>;
+                        </li>
+                        <li>
+                            using lists where three
 
-href="https://rawgit.com/w3c/coga/master/techniques/index.html#be-
+                            or more consecutive items are presented in a paragraph or a
 
-clear-and-to-the-point">(COGA Techniques 2.3.1)</a>, <a 
+                            sentence;
+                        </li>
+                        <li>
+                            making manageable blocks of
 
-href="https://www.w3.org/TR/WCAG20-TECHS/G153.html">(WCAG 
+                            information and relationships programmatically determinable.<a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-content-
 
-G153: Making the text easier to read)</a>;</li>
-				  <li>using lists where three 
+structure-separation-programmatic">
+                                (Also see WCAG  1.3.1 Info and
 
-or more consecutive items are presented in a paragraph or a 
+                                Relationships)</a>;
+                        </li>
+                        <li>
+                            making each media
 
-sentence;</li>
-		          <li>making manageable blocks of 
+                            section navigable to, and provided with, a unique label that describes
 
-information and relationships programmatically determinable.<a 
+                            the section; and
+                        </li>
+                        <li>
+                            ensuring media  over
 
-href="https://www.w3.org/WAI/WCAG20/quickref/#qr-content-
+                            five minutes are divided into programmatically determinable and logical
 
-structure-separation-programmatic">(also see WCAG  1.3.1 Info and 
+                            sections.
+                        </li>
+                    </ul>
 
-Relationships)</a>;</li>
-				  <li>making each media 
+                    <h3>
+                        Common Failures for Success
 
-section navigable to, and provided with, a unique label that describes 
+                        Criterion:
+                    </h3>
 
-the section; and</li>
-				  <li>ensuring media  over 
+                    <p>
+                        A sentence with
 
-five minutes are divided into programmatically determinable and logical 
+                        multiple clauses, which could be tagged as a list, but is not.
+                    </p>
+                    <p>
+                        A paragraph with
 
-sections.</li>
-				  </ul>
-				  
-			    <h3>Common Failures for Success 
+                        multiple points.
+                    </p>
+                    <p>
+                        A long video not broken
 
-Criterion:</h3>
-				 
-				 <p>A sentence with 
+                        into programmatically-determinable chucks  of fewer than 6 minutes.
+                    </p>
+                    <p>
+                        A long video  broken
 
-multiple clauses that could be tagged as a list but is not.</p>
-				 <p>A paragraph with 
+                        into programmatically-determinable chucks, but without  a unique
 
-multiple points.</p>
-				 <p>A long video not broken 
-
-into programmatically determinable chucks  of less the 6 minutes.</p>
-				 <p>A long video  broken 
-
-into programmatically determinable chucks, but without  a unique 
-
-descriptive label on each chunk.</p>
-				<p>&nbsp;</p>
-	          </div>
-	        </div>
-	      </div>
-</div>
-		<section>
-        <div>
-<h2> working groups notes (optional)</h2>
-        <p> maybe replace paragraph with chunk and paragraph is an example</p>
-        <p>&nbsp; </p>
-        <p>&nbsp;</p>
+                        descriptive label on each chunk.
+                    </p>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
         </div>
-        </section>
+    </div>
+    <section>
+        <div>
+            <h2> working groups notes (optional)</h2>
+            <p> maybe replace paragraph with chunk and paragraph as an example</p>
+            <p>&nbsp; </p>
+            <p>&nbsp;</p>
+        </div>
+    </section>
 </body>
 </html>
