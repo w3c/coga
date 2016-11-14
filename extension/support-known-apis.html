@@ -10,10 +10,7 @@
 		    <div id="wiki-body">
 		      <div>
 		        <h2>Support methods for comprehension and interaction</h2>
-		        <!-- <p>This is the short name for the SC (e.g. "Non-text Content" is the short name for SC 1.1.1 in WCAG 2.0)</p> -->
-				
-		        <h2><a id="user-content-sc-text" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#sc-text" aria-hidden="true"></a>Support known standardized APIs for tools that help the user understand and use the content.</h2>
-				
+		        <!-- <p>This is the short name for the SC (e.g. "Non-text Content" is the short name for SC 1.1.1 in WCAG 2.0)</p> -->		        Support known <em>standardized API's</em> for tools that help the user understand and use the content.
 		        <!-- <p><strong>Summary sentence:</strong> (optional)</p>
 		        <p>This is the text of the Success Criterion. Take the original wording from : <a href="https://rawgit.com/w3c/coga/master/extension/index.html">coga for wcag</a>. Remember to include any exceptions! </p>
 		        <p>The wording needs to be</p>
@@ -23,19 +20,18 @@
 		          <li>applicable to all content</li>
 	            </ul> -->
 				
-				<p>This includes:</p>
+				<p>Exceptions:</p>
 				<ul>
-		          <li>Standardized techniques to support interoperable symbol sets are used when available</li>
-				  <li>Allow reading of long form of acronyms</li>
-				  <li>Support for text to speech with synchronized highlighting of the phrase being read, and content simplification</li>
-				  <li>Support for retaining content that has already been entered and password management</li>
-				</ul>
-				<p>Exception: when there is a security or safety requirement, these APIs may be disabled for a specific field - such as credit card numbers.
-		        <h2><a id="user-content-suggestion-for-priority-level-aaaaaa" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-hidden="true"></a>Suggestion for Priority Level A</h2>
+				  <li>When there is a security or safety requirement, these API's may be disabled for the relevant  field . </li>
+				  <li>If it brakes  the main function of the site, such as evaluation and testing applications.</li>
+			    </ul>
+				<p>&nbsp;</p>
+				<p>&nbsp;</p>
+				<h2><a id="user-content-suggestion-for-priority-level-aaaaaa" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#suggestion-for-priority-level-aaaaaa" aria-hidden="true"></a>Suggestion for Priority Level A</h2>
 		        <h2><a id="user-content-related-glossary-additions-or-changes" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#related-glossary-additions-or-changes" aria-hidden="true"></a>Related Glossary additions or changes</h2>
 				<dl>
-					<dt><b>Standardized APIs</b></dt>
-					<dd>identified in the platform's documentation or in a WCAG technique or W3C publication</dd>
+					<dt><b>Standardized API's</b></dt>
+					<dd>identified in the native platform's documentation or in a WCAG technique</dd>
 				</dl>
 		        				
 				<!-- <p>Details of any suggested glossary definitions or changes. you can find most of these at <a href="file:///C:/Users/lseeman/Documents/coga/extension/index.html#terms"> Terms</a> (in our original proposal ) or inline in the original proposal.</p>
@@ -46,22 +42,39 @@
 		        <p>Principle 3, Guideline 3.3<br></p>
 				
 		        <h2><a id="user-content-description" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#description" aria-hidden="true"></a>Description</h2>
-		        <p>People with ADHD, Alzheimer's disease and other forms of dementia, traumatic brain injury, or weak executive function can experience memory impairments impacting their ability to remember details such as:</p>
-				<ul>
-				  <li>their user name and password</li>
-				  <li>what an acronym stands for</li>
-				  <li>a phone number</li>
-				  <li>the meaning of uncommon words</li>
-				</ul>
-		        <p>Poor working memory (i.e. difficulty holding on to several pieces of information at the same time) may also be experienced by people with these types of disabilities.</p>
+		        <p>The intent of this success criteria is to support compatibility with assistive technology and standardized personalization. The definition of standardized API's are  identified in the native platform's documentation or in a WCAG technique. This is important as the success criteria is not open ended. </p>
+		        <p>People with cognitive disabilities are often using add-ons as assistive technology. It is essential that add-ons and similar tools work. Otherwise we need to make the author support all the functions of the add ons in use as assistive technology.</p>
+		        <p>This includes:</p>
+                <ul>
+                  <li>Support for standard for the Internet of things that allow for simplified and personalized interfaces such as ISO/IEC 24752 &ldquo;Universal Remote Console Framework&rdquo; standard</li>
+                  <li>Standardized techniques to support interoperable symbol sets are used when available. </li>
+                  <li>Allow reading of long form of acronyms</li>
+                  <li>Support for  text to speech with synchronized highlighting of the phrase being read,  </li>
+                  <li>Content simplification </li>
+                  <li>Creating mind maps out of the heading structure</li>
+                  <li> Support for retaining content that has already been entered and password management</li>
+                  <li>Spell checking</li>
+                </ul>
+                <p>&nbsp;</p>
+		        <p>&nbsp;</p>
 				
 				
 		        <h2><a id="user-content-benefits" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#benefits" aria-hidden="true"></a>Benefits</h2>
-				<p>Providing access to simplified content and certain types of content like the long form of acronyms helps, and in some cases is necessary to allow, people with cognitive disabilities an opportunity to comprehend the content.</p>
+				<p>People with ADHD, Alzheimer's disease and other forms of dementia, traumatic brain injury, or weak executive function can experience memory impairments impacting their ability to remember details such as:</p>
+                <ul>
+                  <li>The IoT interface</li>
+                  <li>their user name and password</li>
+                  <li>what an acronym stands for</li>
+                  <li>a phone number</li>
+                  <li>the meaning of uncommon words</li>
+                </ul>
+                <p>Poor working memory (i.e. difficulty holding on to several pieces of information at the same time) may also be experienced by people with these types of disabilities.</p>
+                <p>Providing access to simplified content and certain types of content like the long form of acronyms helps, and in some cases is necessary to allow, people with cognitive disabilities an opportunity to comprehend the content.</p>
 				<p>Supporting password management tools enables people with memory related disabilities to successfully login and avoid being locked out of secure sites.</p>
-				<p>Storing non-sensitive, user provided information provides the means for completing a task in managable pieces rather than all at once. This is especially helpful for people with ADHD as well as other cognitive disabilities who may become distracted and logged out or fatigued while filling out a form.</p>
-				<p>Suggesting common information like a person's phone number or address when encountering form fields requesting this type of information helps all people, especially those with cognitive disabilities avoid making mistakes. It also eliminates the need for accuratly recalling this information from memory or to copy and paste it which is a task in and of itself that can prevent successful interaction with a form.</p>
+				<p>Storing non-sensitive, user provided information provides the means for completing a task in manageable pieces rather than all at once. This is especially helpful for people with ADHD as well as other cognitive disabilities who may become distracted and logged out or fatigued while filling out a form.</p>
+				<p>Suggesting common information like a person's phone number or address when encountering form fields requesting this type of information helps all people, especially those with cognitive disabilities avoid making mistakes. It also eliminates the need for accurately recalling this information from memory or to copy and paste it which is a task in and of itself that can prevent successful interaction with a form.</p>
 				<p>When people with literacy impairments or autism are unable to understand or become overwhelmed by textual content, support for interoperable symbol sets can provide a way for the content to be comprehended.</p>
+				<p>&nbsp;</p>
 								
 		        <!--<p>Clear information about how the proposal will<strong> benefit users</strong>, along with<strong> justification</strong> and <strong>evidence</strong> of the benefits (this may be a link to a different resource). You can add examples about the user if it helps.</p>
 		        <p>You can often find evidence in the bellow links, including the <a href="https://rawgit.com/w3c/coga/master/techniques/index.htm">COGA Techniques</a> and <a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a>. Feel free to add more!</p>
@@ -92,10 +105,25 @@
                 <p>&nbsp;</p> -->
 				
 		        <h2><a id="user-content-testability" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#testability" aria-hidden="true"></a>Testability</h2>
+		        <p>Look at the applicable standards identified in  the native platform's documentation or in a WCAG technique </p>
+		        <p>Confirm that the page confirms to the standard  </p>
+		        <p>confirm that none of the failure techniques apply</p>
+		        <p>&nbsp;</p>
+		        <p>&nbsp;</p>
 				
 		        <!-- <p>Description of how this SC can be tested. This may include manual, automated, or semi-automated mechanisms.</p> -->
 				
 		        <h2><a id="user-content-techniques" href="https://github.com/w3c/wcag21/wiki/Proposals-for-new-Success-Criteria#techniques" aria-hidden="true"></a>Techniques</h2>
+		        <p><strong>For HTML:</strong> Using HTML tags appropriately (note we will not be asking for full conformance juts correct use of element names and aria roles)</p>
+		        <p><strong>For native content:</strong> Using  the native platform's documentation for help support and design patterns</p>
+		        <p><strong>For Internet of Things:</strong> Using &ldquo;Universal Remote Console Framework&rdquo; standard for IoT (Internet of Things) devices (need to confirm that this gives the support we need)</p>
+		        <p><strong>For AAC content:</strong> Using concept codes on Augmentative and alternative communication (<em>AAC</em>)</p>
+		        <h3>Failures</h3>
+		        <ul>
+		          <li>disabling the items in the right click menu-bar</li>
+		          <li>disabling spell-check</li>
+	            </ul>
+		        <p>&nbsp;</p>
 				
 		        <!-- <p>Possible technique titles which could be used to satisfy the SC (just the titles). If existing techniques will help satisfy the SC these can be identified here also.</p>
 		        <p>For example, a simple change to 1.4.3 (as in the above example), might result in a response like this:</p>
