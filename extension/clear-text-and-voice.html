@@ -10,8 +10,8 @@
 		        <p><strong>clear text and voice</strong></p>
 		        <p>&nbsp;</p>
 		        <h2>SC Text</h2>
-		        <p><strong>clear text and voice:</strong> Provide clear typography (text), punctuation (text and numbers) and voice (speech) for readability and comprehension.</p>
-<p>Exception: If a specific typography, punctuation, text or voice is an essential part of the main function of the site.</p>
+		        <p><strong>clear text and voice:</strong> Provide clear typography (text and numbers), punctuation and voice (speech) for readability and comprehension.</p>
+<p>Exception: If a specific typography, punctuation, <span id="docs-internal-guid-9beb1966-67fa-fef5-ec21-6bee4438818e">content</span> text or voice is  essential.</p>
                 <p>&nbsp;</p>
                 <h2>Suggestion for Priority Level (A/AA/AAA)</h2>
                 <p>AA</p>
@@ -20,18 +20,18 @@
                 <ul>
                   <li>backed up by user research where COGA users are part of the user testing or,</li>
                   <li>identified in a known WCAG technique or,</li>
-                  <li>identified by the user preferences (preferred).</li>
+                  <li>identified by the user preferences (preferred) or,</li>
                   <li>defined by an international standard.</li>
                 </ul>
 		        <h2>What Principle and Guideline the SC falls within.</h2>
 		        <p>We suggest a new guideline under principle 3 &quot; <strong>Provide a clear structure and layout</strong>&quot;</p>
 		        <h2>Description and Benefits</h2>
-		        <p>The intent of the SC is, that users do not need to spend extra cognitive function deciphering letters, numbers and words, and can focus on understanding the meaning of the content. When words are hard to read or discriminate users with language related disabilities will fully focus on identifying the letters and building the words. they then have to piece together the words to build the sentence. However there is a limit to how many cognitive tasks a person can do at the same time, and if so much energy is put into identifying the words, it is often not possible to also understand the meaning of a sentence. </p>
+		        <p>The intent of the SC is, that users do not need to spend extra cognitive function deciphering letters, numbers and words, and can focus on understanding the meaning of the content. When words are hard to read or discriminate, users with language related disabilities will fully focus on identifying the letters and building the words. They then have to piece together the words to build the sentence. However there is a limit to how many cognitive tasks a person can do at the same time, and if so much energy is put into identifying the words, it is often not possible to also understand the meaning of a sentence. </p>
 <p>This may avoided by making the task of reading  and identifying words easier, so that the user can focus on the meaning.</p>
 		        <p>If identifying the words takes too much of the users focus, they will not also be able to understand the content making it not usable.		        </p>
 		        <p>&nbsp;</p>
 		        <h3><span property="xhv:role" resource="xhv:heading">Layout for Numbers</span></h3>
-		        <p>Check use of white space and punctuation characters between numbers. Use of spaces and commas within numbers can confuse and text to speech engines cope in different ways.</p>
+		        <p>Check use of white space and punctuation characters between numbers. Use of spaces and commas within numbers can change how text to speech engines  read it   - which confuse <span id="docs-internal-guid-9beb1966-67fd-20ef-f6f0-9f2dd942d435">people with cognitive disabilities</span>.</p>
 		        <h6 id="h-explanation-and-who-it-helps-19" resource="#h-explanation-and-who-it-helps-19">&nbsp;</h6>
 		        Where any numbers are presented their use needs to be considered. If they are representing dates, time, references, telephone numbers or mathematical notation their layout impacts on users' understanding. Users need to not only recognize standardized layouts but also to be able to understand the meaning as the numbers are read aloud by text to speech engines. This feature can provide those with dyscalculia, dyslexia and attention deficit disorder and those who may be under high cognitive load or situationally disabled with a better understanding of the concepts.
 		        <h5 id="example-1">Example</h5>
@@ -78,18 +78,17 @@
 		        <h2>Testability</h2>
 		        <p>&nbsp;</p>
 		        <ol>
-		          <li>Are fonts  (text), punctuation (text and numbers) and voice (speech) used   known to be clear from the WCAG techniques</li>
+		          <li><span id="docs-internal-guid-9beb1966-67ff-0668-60c8-b4d577e48eb5">Are fonts (text and numbers), punctuation, and voice (speech) used known to be clear from the WCAG techniques?</span></li>
 		          <li>If not can the  font, clear punctuation or voice be changed via a interoperable user setting</li>
 		          <li>If not has the font,  punctuation or voice usability been tested via user testing with at least five users with reading disabilities</li>
 </ol>
 		        <p>Pass result is a yes to one of the above questions</p>
 		        <h2>Techniques</h2>
 <ul>
-                  <li>Use a plain, evenly spaced sans serif font such as Arial or other  simple typography with good spacing, appropriate kerning and leading to separate text and  darker weight fonts. (List good fonts)</li>
-                  <li></li>
+                  <li>Use a plain, evenly spaced sans serif font such as Arial or other  simple typography with good spacing, appropriate kerning and leading to separate text and  darker weight fonts. (List of good fonts.)</li>
                   <li>Use appropriate punctuation and spacing when representing numbers and times</li>
-                  <li>se left justification with ragged right edge. (localization: for left to right languages only)</li>
-                  <li>Right justification with ragged left edge. (localization: for right to left languages only)</li>
+                  <li><span id="docs-internal-guid-9beb1966-6800-62b4-548a-f58f99386413">For left to right languages, use left justification with ragged right edge.</span></li>
+                  <li><span id="docs-internal-guid-9beb1966-6800-9ed3-b944-6d4c956e6892">For right to left languages, use right justification with ragged left edge.</span></li>
                   <li>Take care to use bold text just for key items, avoid using <em>italics</em>, ALLCAPS or underline for emphasis</li>
                   <li>Make important information two font sizes bigger</li>
                   <li>Numbers
@@ -104,9 +103,9 @@
                 </ul>
 <p>Failures</p>
 <ul>
-  <li>changing fonts in the same region </li>
-  <li>Using all capital letters. </li>
-  <li>.using non standard font alternatives such as Cufo'n</li>
+  <li>Changing fonts in the same region <span id="docs-internal-guid-9beb1966-6801-0e54-6f5b-2ca33621cff0"> that would qualify as a failure.</span> (List)</li>
+  <li>Using all capital letters inappropriately . </li>
+  <li>Using non standard font alternatives such as Cufo'n</li>
   <li>Roman Numerals presented in lower case</li>
   <li><strong> </strong>Numbers fail to conform to recognized layouts and are not read out accurately by text to speech engines.</li>
 </ul>
