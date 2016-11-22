@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
+﻿<html xmlns="http://www.w3.org/1999/xhtml" lang="en"> 
 	<head>
 		<title>Change on Request</title>
     </head>
@@ -7,16 +7,24 @@
                 <h3>Current:</h3>
 		        <p><strong>3.2.5 Change on Request:</strong>  Changes of context are initiated only by user request or a mechanism is available to turn off such changes. (Level AAA)</p>
                 <h3>Proposed:</h3>
-                <p class="sctxt">@@<strong>3.2.5 Change on Request: </strong>Changes of context, functionality, settings, route and orientation  are initiated only by user request or an easily available mechanism is available to turn off such changes. An easily available mechanism is also available to go to previous context,  functionality, settings, route and orientation. There is an exception if a change on request is crucial to the main usecase of the site for example, a game.@@</p>
+                <p class="sctxt">@@<strong>3.2.5 Change on Request: </strong>Changes of context, functionality, settings, <em>route</em> and <em>orientation</em>  are initiated only by user request or an <em>easily available mechanism</em> is available to turn off such changes. An easily available mechanism is also available to go to previous context,  functionality, settings, route and orientation. Exception: The changes are part of an activity where it is essential (e.g. a game)@@</p>
                 <h2>Suggestion for Priority Level:</h2>
                 <p>AA</p>
                 <h2>Related Glossary </h2>
                 <p>route: Directions and flow such as a GPS route</p>
                 <p>orientation: perspective or view such as map direction</p>
                 <dl>
-                  <dt>easily available (or easily available mode or setting)</dt>
-                </dl>
-                <dl>
+		          <dt>easily available (or easily available mode or setting) one or more of the follwing is true:</dt>
+
+                  <dd>
+
+        <ul>
+  <li>can be set one time with as a wide a scope as possible (such as using the standards of the <abbr title="operating system">OS</abbr>, From ISO 9241-112 or <abbr title="Global Public Inclusive Infrastructure">GPII</abbr> when   available); </li>
+  <li>
+        with the option to save or to change the setting, were available interoperably, but also for the scope of the set of web pages; </li>
+  <li>
+        is reachable from each screen where it may be needed, and the path and the control conforms to all of this document.</li>
+  </ul></dd></dl>           <dl>
                   <dd>
                     <ul>
                       <li> can be set one time with as a wide a scope as possible (such as using the standards of the <abbr title="operating system">OS</abbr>, <abbr title="European Telecommunications Standards Institute">ETSI</abbr> or <abbr title="Global Public Inclusive Infrastructure">GPII</abbr> when   available); and </li>
@@ -35,12 +43,9 @@
                     <ul>
                         <li>Automatic launching of new windows or pop-ups</li>
                         <li>Submission of forms through mechanisms other than a button that is clearly labeled using simple language to submit the form</li>
-                        <li>Slideshows without a mechanism for pausing</li>
-                        <li>A mobile Website that disables pinch zoom which is a default setting in the browser </li>
-                        <li>Audio or video that starts playing after page load without a mechanism for pausing</li>
-                        <li>Live news updates without a mechanism for pausing or requesting updates</li>
                         <li>Rerouting automatically by a GPS</li>
                         <li>Changing the direction of a map in a GPS</li>
+
                     </ul>
                     <p>For example, a user may not have a sense of direction or know their left and right. Before using a GPS they may study the route so that they know approximately what they are doing and can augment the directions of the GPS with their own context, using the GPS for cues. The GPS automatically reroutes them because  of a small traffic delay. They become completely lost and disorientated and can no longer use the application.</p>
 		        <h2>Benefits</h2>
@@ -58,8 +63,8 @@
 		          <li><a href="https://rawgit.com/w3c/coga/master/issue-papers/distractions.html">Distractions issue paper</a></li>
 		          <li><a href="https://rawgit.com/w3c/coga/master/gap-analysis/">Gap analysis </a></li>
 		          <li> <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html">User needs Tables 2 and 9 as well as tables 4 and 5 </a></li>
-		          <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a> (cite section)</li>
-		          <li> <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">Semantics for adaptive interfaces</a></li>
+		          <li><a rel="nofollow" href="https://w3c.github.io/wcag/coga/user-research.html">Background research document</a> </li>
+		          <li> <a rel="nofollow" href="https://w3c.github.io/personalization-semantics/">Semantics for adaptive interfaces</a></li>
 		          <li><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and <a href="https://github.com/ayelet-seeman/coga.personalisation">Example for personalization</a></li>
 		          <li><a href="https://rawgit.com/w3c/coga/master/techniques/index.html">Techniques</a></li>
 		          <li><a href="https://rawgit.com/w3c/coga/master/issue-papers/personalization-preferences.html">Personalization and Preferences</a></li>
@@ -67,7 +72,7 @@
 		        <p>See also </p>
                 <p>Resources are for information purposes only, no endorsement implied.</p>
                       <ul>
-                          <li><a href="http://ncdae.org/resources/articles/cognitive/">User Research - 3.7.6.6 Orientation and Error Prevention/Recovery</a></li>
+                          <li><a href="http://ncdae.org/resources/articles/cognitive/">User research article</a></li>
       
                 <li><a href="http://ncdae.org/resources/articles/cognitive/"><em>Cognitive Disabilities and the Web: Where Accessibility and Usability Meet?</em> - NCDAE</a></li>
                           <li><a href="http://webaim.org/articles/cognitive/design"><em>Cognitive Disabilities - Design Considerations</em> - WebAIM</a></li>
@@ -77,30 +82,32 @@
 		        <h2>Testability</h2>
     <p>For all content </p>
     <p><span class="sctxt">Step 1: Identify any automatic changes in context, functionality, settings, route and orientation</span> (using a similar way to how we identify changes in context now)</p>
-    <p>Step 2: Conform there is an easy way for the user to suppress and changes from step 1</p>
-    <p>Step 3: <span class="sctxt">Conform there is an easy to use mechanism is also available to go to previous context,  functionality, settings, route and orientation from step 1. </span></p>
+    <p>Step 2: Confirm there is an easy way for the user to suppress any changes from step 1</p>
+    <p>Step 3: <span class="sctxt">Confirm there is an easy to use mechanism is also available to go to the previous context,  functionality, settings, route and orientation from step 1. </span></p>
     <p>&nbsp;</p>
     <p><strong>Content specific examples</strong></p>
-    <p>For slide shows, audio or video</p>
+    <p>For slide shows, audio or video, confirm that:</p>
     <ul>
       <li>Content does not autoplay or</li>
         <li>A mechanism for stopping or pausing  is present</li>
 </ul>
-<p>For intermittent content updates such as news feeds or embedded social media updates</p>
+<p>For intermittent content updates such as news feeds or embedded social media updates, confirm that:</p>
     <ul>
         <li>A mechanism for pausing an update is present</li>
-        <li>A role back is present</li>
+        <li>A roll back is present</li>
     </ul>
     <p>&nbsp;</p>
 	
 		        <h2>Techniques</h2>
                 <ul>
-                    <li>A "pause" button for sideshows, video and audio</li>
-                    <li>A "request update" and "pause update" button for news feeds or embedded social media updates</li>
-                    <li>Setting the autoplay attribute on an embedded Yoytube video to "0"</li>
-                    <li>use of semantics and personalization to control changes</li>
+                    <li> Providing warning for any of the changes in context  and allowing the user to prevent the change if required. The warning allows sufficient time for the user to process the warning and react.</li</>
+<li>Providing a "pause" button for sideshows, video and audio</li>
+                    <li>Providing  a "request update" and "pause update" button for news feeds or embedded social media updates</li>
+                    <li>Setting the autoplay attribute on an embedded videovideo to "0"</li>
+                    <li>Using semantics and personalization to control changes</li>
                     <li>Allowing a user to turn off reroutes</li>
                     <li>Allowing a user to turn off changes in orientation</li>
+
             </ul>
     
     
