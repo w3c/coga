@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
+<html typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#" lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta lang="" property="dc:language" content="en">
+  <meta property="dc:language" content="en" lang="">
   <style>
     /*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
-    
+
     .hljs {
       display: block;
       overflow-x: auto;
@@ -18,20 +18,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #333;
       background: #f8f8f8;
     }
-    
+
     .hljs-comment,
     .hljs-quote {
       color: #998;
       font-style: italic;
     }
-    
+
     .hljs-keyword,
     .hljs-selector-tag,
     .hljs-subst {
       color: #333;
       font-weight: bold;
     }
-    
+
     .hljs-number,
     .hljs-literal,
     .hljs-variable,
@@ -39,75 +39,75 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-tag .hljs-attr {
       color: #008080;
     }
-    
+
     .hljs-string,
     .hljs-doctag {
       color: #d14;
     }
-    
+
     .hljs-title,
     .hljs-section,
     .hljs-selector-id {
       color: #900;
       font-weight: bold;
     }
-    
+
     .hljs-subst {
       font-weight: normal;
     }
-    
+
     .hljs-type,
     .hljs-class .hljs-title {
       color: #458;
       font-weight: bold;
     }
-    
+
     .hljs-tag,
     .hljs-name,
     .hljs-attribute {
       color: #000080;
       font-weight: normal;
     }
-    
+
     .hljs-regexp,
     .hljs-link {
       color: #009926;
     }
-    
+
     .hljs-symbol,
     .hljs-bullet {
       color: #990073;
     }
-    
+
     .hljs-built_in,
     .hljs-builtin-name {
       color: #0086b3;
     }
-    
+
     .hljs-meta {
       color: #999;
       font-weight: bold;
     }
-    
+
     .hljs-deletion {
       background: #fdd;
     }
-    
+
     .hljs-addition {
       background: #dfd;
     }
-    
+
     .hljs-emphasis {
       font-style: italic;
     }
-    
+
     .hljs-strong {
       font-weight: bold;
     }
   </style>
   <style>
     /* --- ISSUES/NOTES --- */
-    
+
     div.issue-title,
     div.note-title,
     div.ednote-title,
@@ -116,27 +116,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       min-width: 7.5em;
       color: #b9ab2d;
     }
-    
+
     div.issue-title {
       color: #e05252;
     }
-    
+
     div.note-title,
     div.ednote-title {
       color: #2b2;
     }
-    
+
     div.warning-title {
       color: #f22;
     }
-    
+
     div.issue-title span,
     div.note-title span,
     div.ednote-title span,
     div.warning-title span {
       text-transform: uppercase;
     }
-    
+
     div.note,
     div.issue,
     div.ednote,
@@ -144,14 +144,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-top: 1em;
       margin-bottom: 1em;
     }
-    
+
     .note>p:first-child,
     .ednote>p:first-child,
     .issue>p:first-child,
     .warning>p:first-child {
       margin-top: 0
     }
-    
+
     .issue,
     .note,
     .ednote,
@@ -160,7 +160,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       border-left-width: .5em;
       border-left-style: solid;
     }
-    
+
     div.issue,
     div.note,
     div.ednote,
@@ -170,32 +170,32 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       position: relative;
       clear: both;
     }
-    
+
     span.note,
     span.ednote,
     span.issue,
     span.warning {
       padding: .1em .5em .15em;
     }
-    
+
     .issue {
       border-color: #e05252;
       background: #fbe9e9;
     }
-    
+
     .note,
     .ednote {
       border-color: #52e052;
       background: #e9fbe9;
     }
-    
+
     .warning {
       border-color: #f11;
       border-width: .2em;
       border-style: solid;
       background: #fbe9e9;
     }
-    
+
     .warning-title:before {
       content: "⚠";
       /*U+26A0 WARNING SIGN*/
@@ -206,11 +206,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       vertical-align: top;
       margin-top: -0.5em;
     }
-    
+
     li.task-list-item {
       list-style: none;
     }
-    
+
     input.task-list-item-checkbox {
       margin: 0 0.35em 0.25em -1.6em;
       vertical-align: middle;
@@ -218,7 +218,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </style>
   <style>
     /* --- PERMALINKS --- */
-    
+
     .permalink {
       width: 1px;
       height: 1px;
@@ -229,7 +229,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-left: 4px;
       float: right;
     }
-    
+
     .permalink a,
     .permalink a:link,
     .permalink a:visited,
@@ -241,30 +241,33 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       font-weight: bold;
       color: #666 !important;
     }
-    
+
     .permalink abbr {
       border: 0;
     }
   </style>
+  <title>Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</title>
+
+
+
   <style id="respec-mainstyle">
     /*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
     /* Override code highlighter background */
-    
+
     .hljs {
       background: transparent !important;
     }
     /* --- INLINES --- */
-    
+
     em.rfc2119 {
       text-transform: lowercase;
-      font-variant: small-caps;
       font-style: normal;
       color: #900;
     }
-    
+
     h1 acronym,
     h2 acronym,
     h3 acronym,
@@ -281,124 +284,418 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     a abbr {
       border: none;
     }
-    
+
     dfn {
       font-weight: bold;
     }
-    
+
     a.internalDFN {
       color: inherit;
       border-bottom: 1px solid #99c;
       text-decoration: none;
     }
-    
+
     a.externalDFN {
       color: inherit;
       border-bottom: 1px dotted #ccc;
       text-decoration: none;
     }
-    
+
     a.bibref {
       text-decoration: none;
     }
-    
+
     cite .bibref {
       font-style: normal;
     }
-    
+
     code {
       color: #C83500;
     }
-    
+
     th code {
       color: inherit;
     }
     /* --- TOC --- */
-    
+
     .toc a,
     .tof a {
       text-decoration: none;
     }
-    
+
     a .secno,
     a .figno {
       color: #000;
     }
-    
+
     ul.tof,
     ol.tof {
       list-style: none outside none;
     }
-    
+
     .caption {
       margin-top: 0.5em;
       font-style: italic;
     }
     /* --- TABLE --- */
-    
+
     table.simple {
       border-spacing: 0;
       border-collapse: collapse;
       border-bottom: 3px solid #005a9c;
     }
-    
+
     .simple th {
       background: #005a9c;
       color: #fff;
       padding: 3px 5px;
       text-align: left;
     }
-    
+
     .simple th[scope="row"] {
       background: inherit;
       color: inherit;
       border-top: 1px solid #ddd;
     }
-    
+
     .simple td {
       padding: 3px 10px;
       border-top: 1px solid #ddd;
     }
-    
+
     .simple tr:nth-child(even) {
       background: #f0f6ff;
     }
     /* --- DL --- */
-    
+
     .section dd>p:first-child {
       margin-top: 0;
     }
-    
+
     .section dd>p:last-child {
       margin-bottom: 0;
     }
-    
+
     .section dd {
       margin-bottom: 1em;
     }
-    
+
     .section dl.attrs dd,
     .section dl.eldef dd {
       margin-bottom: 0;
     }
-    
-    .respec-hidden {
-      display: none;
+
+    #respec-ui {
+      position: fixed;
+      display: flex;
+      flex-direction: row-reverse;
+      top: 20px;
+      right: 20px;
+      width: 202px;
+      text-align: right;
+      z-index: 9000;
     }
-    
+
+    #respec-pill,
+    .respec-info-button {
+      background: #fff;
+      height: 2.5em;
+      color: rgb(120, 120, 120);
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
+    }
+
+    .respec-info-button {
+      border: none;
+      opacity: .75;
+      border-radius: 2em;
+      margin-right: 1em;
+      min-width: 3.5em;
+    }
+
+    .respec-info-button:focus,
+    .respec-info-button:hover {
+      opacity: 1;
+      transition: opacity .2s;
+    }
+
+    #respec-pill:disabled {
+      font-size: 2.8px;
+      text-indent: -9999em;
+      border-top: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-right: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-bottom: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-left: 1.1em solid #ffffff;
+      transform: translateZ(0);
+      animation: respec-spin .5s infinite linear;
+      box-shadow: none;
+    }
+
+    #respec-pill:disabled,
+    #respec-pill:disabled:after {
+      border-radius: 50%;
+      width: 10em;
+      height: 10em;
+    }
+
+    @keyframes respec-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #respec-pill:hover,
+    #respec-pill:focus {
+      color: rgb(0, 0, 0);
+      background-color: rgb(245, 245, 245);
+      transition: color .2s;
+    }
+
+    #respec-menu {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #fff;
+      box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
+      width: 200px;
+      display: none;
+      text-align: left;
+      margin-top: 32px;
+      font-size: .8em;
+    }
+
+    #respec-menu li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .respec-save-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(47%, 2fr));
+      grid-gap: .5cm;
+      padding: .5cm;
+    }
+
+    .respec-save-button:link {
+      padding-top: 16px;
+      color: rgb(240, 240, 240);
+      background: rgb(42, 90, 168);
+      justify-self: stretch;
+      height: 1cm;
+      text-decoration: none;
+      text-align: center;
+      font-size: inherit;
+      border: none;
+      border-radius: 0.2cm;
+    }
+
+    .respec-save-button:link:hover {
+      color: white;
+      background: rgb(42, 90, 168);
+      padding: 0;
+      margin: 0;
+      border: 0;
+      padding-top: 16px;
+    }
+
+
+    #respec-ui button:focus,
+    #respec-pill:focus,
+    .respec-option:focus {
+      outline: 0;
+      outline-style: none;
+    }
+
+    #respec-pill-error {
+      background-color: red;
+      color: white;
+    }
+
+    #respec-pill-warning {
+      background-color: orange;
+      color: white;
+    }
+
+    .respec-warning-list,
+    .respec-error-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: sans-serif;
+      background-color: rgb(255, 251, 230);
+      font-size: .9em;
+    }
+
+    .respec-warning-list li,
+    .respec-error-list li {
+      padding: 0.4em 0.7em;
+    }
+
+    .respec-warning-list li::before {
+      content: "⚠️";
+      padding-right: .5em;
+    }
+
+    .respec-warning-list li {
+      color: rgb(92, 59, 0);
+      border-bottom: thin solid rgb(255, 245, 194);
+    }
+
+    .respec-error-list,
+    .respec-error-list li {
+      background-color: rgb(255, 240, 240);
+    }
+
+    .respec-error-list li::before {
+      content: "💥";
+      padding-right: .5em;
+    }
+
+    .respec-error-list li {
+      padding: 0.4em 0.7em;
+      color: rgb(92, 59, 0);
+      border-bottom: thin solid rgb(255, 215, 215);
+    }
+
+    #respec-overlay {
+      display: block;
+      opacity: 0;
+      position: fixed;
+      z-index: 10000;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: #000;
+    }
+
+    .respec-modal {
+      display: block;
+      position: fixed;
+      opacity: 0;
+      z-index: 11000;
+      margin: auto;
+      top: 10%;
+      background: #fff;
+      border: 5px solid #666;
+      min-width: 20%;
+      width: 79%;
+      padding: 0;
+      max-height: 80%;
+      overflow-y: auto;
+      margin: 0 -.5cm
+    }
+
+    @media screen and (min-width: 78em) {
+      .respec-modal {
+        width: 62%;
+      }
+    }
+
+    .respec-modal h3 {
+      margin: 0;
+      padding: .2em;
+      text-align: center;
+      color: black;
+      background: linear-gradient(to bottom, rgba(238, 238, 238, 1) 0%, rgba(238, 238, 238, 1) 50%, rgba(204, 204, 204, 1) 100%);
+      font-size: 1em;
+    }
+
+    .respec-modal .inside p {
+      padding-left: 1cm;
+    }
+
+    #respec-menu button.respec-option {
+      background: white;
+      padding: 0 .2cm;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: inherit;
+      padding: 1.2em 1.2em;
+    }
+
+    #respec-menu button.respec-option:hover,
+    #respec-menu button:focus {
+      background-color: #eeeeee;
+    }
+
+    .respec-cmd-icon {
+      padding-right: .5em;
+    }
+
+    #respec-ui button.respec-option:last-child {
+      border: none;
+      border-radius: inherit;
+    }
+
+    .respec-offending-element {
+      display: inline-block;
+      position: relative;
+      background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x;
+    }
+
+    @supports (text-decoration-style: wavy) {
+      .respec-offending-element {
+        background: none;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: red;
+      }
+    }
+
+    #issue-summary>ul,
+    .respec-dfn-list {
+      column-count: 2;
+    }
+
+    #issue-summary li,
+    .respec-dfn-list li {
+      list-style: none;
+    }
+
+
+    .respec-button-copy-paste {
+      position: absolute;
+      display: block;
+      padding: 0px 8px;
+      height: 28px;
+      width: 40px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid rgb(144, 184, 222);
+      border-radius: 0px 0px 3px 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-appearance: none;
+      margin: 0px 127px;
+      border-left: 0;
+    }
+
+    p+.respec-button-copy-paste {
+      margin: 1px 127px;
+    }
+
     @media print {
       .removeOnSave {
         display: none;
       }
     }
   </style>
-  <title>Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</title>
-
-
-
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED">
-  <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
-  <meta name="generator" content="ReSpec 5.0.4">
+  <link rel="canonical" href="https://www.w3.org/TR/coga-techniques/">
+  <meta name="generator" content="ReSpec 11.4.1">
   <script id="initialUserConfig" type="application/json">
     {
       "trace": true,
@@ -2225,13 +2522,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     }
   </script>
 </head>
-<body class="h-entry toc-inline" role="document" id="respecDocument">
+<body aria-busy="false" class="h-entry toc-inline" id="respecDocument">
   <div class="head" role="contentinfo" id="respecHeader">
     <p>
-      <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
+      <a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" height="48" width="72"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</h1>
-    <h2 id="w3c-editor-s-draft-26-september-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-09-26">26 September 2016</time></h2>
+    <h2 id="w3c-editor-s-draft-16-march-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2017-03-16">16 March 2017</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a></dd>
@@ -2249,7 +2546,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
     </dl>
     <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2015-2016
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2015-2017
 
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
@@ -2292,7 +2589,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
               6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
     </p>
-    <p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2015/Process-20150901/">1 September 2015 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+    <p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2017/Process-20170301/">1 March 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
     </p>
 
   </section>
@@ -3240,9 +3537,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </h4>
         <p>Even with all of the above in place a person may not be able to marry up the concept of temperature with the numbers so giving additional hints may help make the link to whether something is hot or cold.</p>
         <p>Use symbols where appropriate for example for weather the symbols used such as sun, snowflake, sun &amp; cloud will give some indication. </p>
-        <p><strong>Pass example</strong>: The Temperature is Five Degrees Centigrade (Cold) <img src="img/SnowFlake.png" height="67" width="61" alt="" style="margin: 0px auto;"> hint: It's hat and scarf weather. </p>
+        <p><strong>Pass example</strong>: The Temperature is Five Degrees Centigrade (Cold) <img src="img/SnowFlake.png" alt="" style="margin: 0px auto;" height="67" width="61"> hint: It's hat and scarf weather. </p>
         <p><strong>Failure example</strong>: Failure to explain figures representing relative values. Temperature = 21℃/70℉</p>
-        <p>The Temperature is Thirty Degrees Centigrade (Very hot) <img src="img/sun.png" height="62" width="62" alt="" style="margin: 0px auto;"> hint: It's shorts weather </p>
+        <p>The Temperature is Thirty Degrees Centigrade (Very hot) <img src="img/sun.png" alt="" style="margin: 0px auto;" height="62" width="62"> hint: It's shorts weather </p>
         <p>Use for tags: Dyscalculia, dyslexia, attention deficit disorder, high cognitive load, situationally disabled.</p>
 
         <section typeof="bibo:Chapter" resource="" property="bibo:hasPart"> <strong>Sources/research</strong>
@@ -3582,11 +3879,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             </span>
           </h5>
           <p>Rather than having a scale of 1-5 where one is poor and 5 is excellent use the words across the page just under the question and it has also been shown that using the higher rating scale first can also impact positively on the results. </p>
-          <input type="checkbox" name="excellent" value="excellent"> excellent
-          <input type="checkbox" name="very good" value="very good"> very good
-          <input type="checkbox" name="good" value="good"> good
-          <input type="checkbox" name="fair" value="fair"> fair
-          <input type="checkbox" name="poor" value="poor"> poor
+          <input name="excellent" value="excellent" type="checkbox"> excellent
+          <input name="very good" value="very good" type="checkbox"> very good
+          <input name="good" value="good" type="checkbox"> good
+          <input name="fair" value="fair" type="checkbox"> fair
+          <input name="poor" value="poor" type="checkbox"> poor
           <p>Pass example: Offering users of a survey or questionnaire an alternative format.</p>
           <p>Failure example: Failure to offer users of a survey or questionnaire an alternative format.</p>
 
@@ -3743,9 +4040,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <h5 id="example-7">Example </h5>
           <p>Even with all of the above in place a person may not be able to marry up the concept of temperature with the numbers so giving additional hints may help make the link to whether something is hot or cold.</p>
           <p>Use symbols where appropriate for example for weather the symbols used such as sun, snowflake, sun &amp; cloud will give some indication. </p>
-          <p>Pass example: The Temperature is Five Degrees Centigrade (Cold) <img src="img/SnowFlake.png" height="67" width="61" alt="snowflake" style="margin: 0px auto;"> hint: It's hat and scarf weather. </p>
+          <p>Pass example: The Temperature is Five Degrees Centigrade (Cold) <img src="img/SnowFlake.png" alt="snowflake" style="margin: 0px auto;" height="67" width="61"> hint: It's hat and scarf weather. </p>
           <p>Failure example: Failure to explain figures representing relative values. Temperature = 21℃/70℉</p>
-          <p>The Temperature is Thirty Degrees Centigrade (Very hot) <img src="img/sun.png" height="62" width="62" alt="sun" style="margin: 0px auto;"> hint: It's shorts weather </p>
+          <p>The Temperature is Thirty Degrees Centigrade (Very hot) <img src="img/sun.png" alt="sun" style="margin: 0px auto;" height="62" width="62"> hint: It's shorts weather </p>
 
 
           <h5 id="examples-9">Examples</h5>
@@ -3982,10 +4279,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             <p>Techneques can be used in any media such as dividing your content into sections, and using a clear heading for each section. For multi media check that it is easy for the user to go back to each section using techniques such as indexing and bookmarks. </p>
             <h6 id="failure-example">Failure example </h6>
             <p>The following breadcrumbs do not help adequately the user know what they are doing</p>
-            <pre class="hljs">step 1 &gt;&gt;  step 2 &gt;&gt; <strong>step 3</strong></pre>
+            <pre aria-busy="false" aria-live="polite" class="hljs undefined">step 1 &gt;&gt;  step 2 &gt;&gt; step 3</pre>
             <h4 id="pass-example">Pass example </h4>
             <p>The following breadcrumbs reminds the user what they are doing</p>
-            <pre class="hljs">step 1 - ordered 15 products &gt;&gt;  step 2 -  payment information &gt;&gt; <strong>step 3</strong> <strong>- shipping information</strong></pre>
+            <pre aria-busy="false" aria-live="polite" class="hljs undefined">step 1 - ordered 15 products &gt;&gt;  step 2 -  payment information &gt;&gt; step 3 - shipping information</pre>
 
             <p>Make the breadcrumbs clickable so the user can click on them to find out more, such as what products were bought. Also this should allow the user to undo any errors and check their work. (See techniques on preventing errors.) The user must then be able to jump back to the current page without having to redo additional steps.</p>
             <p>&nbsp;</p>
@@ -4182,7 +4479,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     <h2 id="example-9">Example<span class="permalink" typeof="bookmark"><a href="#provide-symbols-on-key-content" aria-label="Permalink for Example" title="Permalink for Example" property="url"><span property="title" content="Example">§</span></a>
       </span>
     </h2>
-    <p>Using a symbol such as 0900 or 1300 <img src="img/TimeSamples.png" height="50" width="114" alt="2 suns, each representing a clock and with an arrow pointing to a time position" style="margin: 0px auto;"> along with the time - these symbols may be seen in a column along the side of the calendar.</p>
+    <p>Using a symbol such as 0900 or 1300 <img src="img/TimeSamples.png" alt="2 suns, each representing a clock and with an arrow pointing to a time position" style="margin: 0px auto;" height="50" width="114"> along with the time - these symbols may be seen in a column along the side of the calendar.</p>
     <p><strong>Pass example:</strong> Icons or symbols are used to denote repeated times within the calendar as an addition to times and / or text. </p>
     <p><strong>Failure example</strong>: Only numbers for time included in a calendar where there are repetitions. </p>
 

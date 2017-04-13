@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
+<html dir="ltr" typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#" lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta lang="" property="dc:language" content="en">
+  <meta property="dc:language" content="en" lang="">
   <style>
     /*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
-    
+
     .hljs {
       display: block;
       overflow-x: auto;
@@ -18,20 +18,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #333;
       background: #f8f8f8;
     }
-    
+
     .hljs-comment,
     .hljs-quote {
       color: #998;
       font-style: italic;
     }
-    
+
     .hljs-keyword,
     .hljs-selector-tag,
     .hljs-subst {
       color: #333;
       font-weight: bold;
     }
-    
+
     .hljs-number,
     .hljs-literal,
     .hljs-variable,
@@ -39,75 +39,75 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-tag .hljs-attr {
       color: #008080;
     }
-    
+
     .hljs-string,
     .hljs-doctag {
       color: #d14;
     }
-    
+
     .hljs-title,
     .hljs-section,
     .hljs-selector-id {
       color: #900;
       font-weight: bold;
     }
-    
+
     .hljs-subst {
       font-weight: normal;
     }
-    
+
     .hljs-type,
     .hljs-class .hljs-title {
       color: #458;
       font-weight: bold;
     }
-    
+
     .hljs-tag,
     .hljs-name,
     .hljs-attribute {
       color: #000080;
       font-weight: normal;
     }
-    
+
     .hljs-regexp,
     .hljs-link {
       color: #009926;
     }
-    
+
     .hljs-symbol,
     .hljs-bullet {
       color: #990073;
     }
-    
+
     .hljs-built_in,
     .hljs-builtin-name {
       color: #0086b3;
     }
-    
+
     .hljs-meta {
       color: #999;
       font-weight: bold;
     }
-    
+
     .hljs-deletion {
       background: #fdd;
     }
-    
+
     .hljs-addition {
       background: #dfd;
     }
-    
+
     .hljs-emphasis {
       font-style: italic;
     }
-    
+
     .hljs-strong {
       font-weight: bold;
     }
   </style>
   <style>
     /* --- ISSUES/NOTES --- */
-    
+
     div.issue-title,
     div.note-title,
     div.ednote-title,
@@ -116,27 +116,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       min-width: 7.5em;
       color: #b9ab2d;
     }
-    
+
     div.issue-title {
       color: #e05252;
     }
-    
+
     div.note-title,
     div.ednote-title {
       color: #2b2;
     }
-    
+
     div.warning-title {
       color: #f22;
     }
-    
+
     div.issue-title span,
     div.note-title span,
     div.ednote-title span,
     div.warning-title span {
       text-transform: uppercase;
     }
-    
+
     div.note,
     div.issue,
     div.ednote,
@@ -144,14 +144,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-top: 1em;
       margin-bottom: 1em;
     }
-    
+
     .note>p:first-child,
     .ednote>p:first-child,
     .issue>p:first-child,
     .warning>p:first-child {
       margin-top: 0
     }
-    
+
     .issue,
     .note,
     .ednote,
@@ -160,7 +160,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       border-left-width: .5em;
       border-left-style: solid;
     }
-    
+
     div.issue,
     div.note,
     div.ednote,
@@ -170,32 +170,32 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       position: relative;
       clear: both;
     }
-    
+
     span.note,
     span.ednote,
     span.issue,
     span.warning {
       padding: .1em .5em .15em;
     }
-    
+
     .issue {
       border-color: #e05252;
       background: #fbe9e9;
     }
-    
+
     .note,
     .ednote {
       border-color: #52e052;
       background: #e9fbe9;
     }
-    
+
     .warning {
       border-color: #f11;
       border-width: .2em;
       border-style: solid;
       background: #fbe9e9;
     }
-    
+
     .warning-title:before {
       content: "⚠";
       /*U+26A0 WARNING SIGN*/
@@ -206,11 +206,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       vertical-align: top;
       margin-top: -0.5em;
     }
-    
+
     li.task-list-item {
       list-style: none;
     }
-    
+
     input.task-list-item-checkbox {
       margin: 0 0.35em 0.25em -1.6em;
       vertical-align: middle;
@@ -218,7 +218,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </style>
   <style>
     /* --- PERMALINKS --- */
-    
+
     .permalink {
       width: 1px;
       height: 1px;
@@ -229,7 +229,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-left: 4px;
       float: right;
     }
-    
+
     .permalink a,
     .permalink a:link,
     .permalink a:visited,
@@ -241,30 +241,40 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       font-weight: bold;
       color: #666 !important;
     }
-    
+
     .permalink abbr {
       border: 0;
     }
   </style>
+
+  <title>Cognitive and Learning Disabilities and WCAG</title>
+
+
+  <style>
+    .technique {
+      border: dotted;
+    }
+  </style>
+  <!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
+
   <style id="respec-mainstyle">
     /*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
     /* Override code highlighter background */
-    
+
     .hljs {
       background: transparent !important;
     }
     /* --- INLINES --- */
-    
+
     em.rfc2119 {
       text-transform: lowercase;
-      font-variant: small-caps;
       font-style: normal;
       color: #900;
     }
-    
+
     h1 acronym,
     h2 acronym,
     h3 acronym,
@@ -281,131 +291,418 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     a abbr {
       border: none;
     }
-    
+
     dfn {
       font-weight: bold;
     }
-    
+
     a.internalDFN {
       color: inherit;
       border-bottom: 1px solid #99c;
       text-decoration: none;
     }
-    
+
     a.externalDFN {
       color: inherit;
       border-bottom: 1px dotted #ccc;
       text-decoration: none;
     }
-    
+
     a.bibref {
       text-decoration: none;
     }
-    
+
     cite .bibref {
       font-style: normal;
     }
-    
+
     code {
       color: #C83500;
     }
-    
+
     th code {
       color: inherit;
     }
     /* --- TOC --- */
-    
+
     .toc a,
     .tof a {
       text-decoration: none;
     }
-    
+
     a .secno,
     a .figno {
       color: #000;
     }
-    
+
     ul.tof,
     ol.tof {
       list-style: none outside none;
     }
-    
+
     .caption {
       margin-top: 0.5em;
       font-style: italic;
     }
     /* --- TABLE --- */
-    
+
     table.simple {
       border-spacing: 0;
       border-collapse: collapse;
       border-bottom: 3px solid #005a9c;
     }
-    
+
     .simple th {
       background: #005a9c;
       color: #fff;
       padding: 3px 5px;
       text-align: left;
     }
-    
+
     .simple th[scope="row"] {
       background: inherit;
       color: inherit;
       border-top: 1px solid #ddd;
     }
-    
+
     .simple td {
       padding: 3px 10px;
       border-top: 1px solid #ddd;
     }
-    
+
     .simple tr:nth-child(even) {
       background: #f0f6ff;
     }
     /* --- DL --- */
-    
+
     .section dd>p:first-child {
       margin-top: 0;
     }
-    
+
     .section dd>p:last-child {
       margin-bottom: 0;
     }
-    
+
     .section dd {
       margin-bottom: 1em;
     }
-    
+
     .section dl.attrs dd,
     .section dl.eldef dd {
       margin-bottom: 0;
     }
-    
-    .respec-hidden {
-      display: none;
+
+    #respec-ui {
+      position: fixed;
+      display: flex;
+      flex-direction: row-reverse;
+      top: 20px;
+      right: 20px;
+      width: 202px;
+      text-align: right;
+      z-index: 9000;
     }
-    
+
+    #respec-pill,
+    .respec-info-button {
+      background: #fff;
+      height: 2.5em;
+      color: rgb(120, 120, 120);
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
+    }
+
+    .respec-info-button {
+      border: none;
+      opacity: .75;
+      border-radius: 2em;
+      margin-right: 1em;
+      min-width: 3.5em;
+    }
+
+    .respec-info-button:focus,
+    .respec-info-button:hover {
+      opacity: 1;
+      transition: opacity .2s;
+    }
+
+    #respec-pill:disabled {
+      font-size: 2.8px;
+      text-indent: -9999em;
+      border-top: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-right: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-bottom: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-left: 1.1em solid #ffffff;
+      transform: translateZ(0);
+      animation: respec-spin .5s infinite linear;
+      box-shadow: none;
+    }
+
+    #respec-pill:disabled,
+    #respec-pill:disabled:after {
+      border-radius: 50%;
+      width: 10em;
+      height: 10em;
+    }
+
+    @keyframes respec-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #respec-pill:hover,
+    #respec-pill:focus {
+      color: rgb(0, 0, 0);
+      background-color: rgb(245, 245, 245);
+      transition: color .2s;
+    }
+
+    #respec-menu {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #fff;
+      box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
+      width: 200px;
+      display: none;
+      text-align: left;
+      margin-top: 32px;
+      font-size: .8em;
+    }
+
+    #respec-menu li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .respec-save-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(47%, 2fr));
+      grid-gap: .5cm;
+      padding: .5cm;
+    }
+
+    .respec-save-button:link {
+      padding-top: 16px;
+      color: rgb(240, 240, 240);
+      background: rgb(42, 90, 168);
+      justify-self: stretch;
+      height: 1cm;
+      text-decoration: none;
+      text-align: center;
+      font-size: inherit;
+      border: none;
+      border-radius: 0.2cm;
+    }
+
+    .respec-save-button:link:hover {
+      color: white;
+      background: rgb(42, 90, 168);
+      padding: 0;
+      margin: 0;
+      border: 0;
+      padding-top: 16px;
+    }
+
+
+    #respec-ui button:focus,
+    #respec-pill:focus,
+    .respec-option:focus {
+      outline: 0;
+      outline-style: none;
+    }
+
+    #respec-pill-error {
+      background-color: red;
+      color: white;
+    }
+
+    #respec-pill-warning {
+      background-color: orange;
+      color: white;
+    }
+
+    .respec-warning-list,
+    .respec-error-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: sans-serif;
+      background-color: rgb(255, 251, 230);
+      font-size: .9em;
+    }
+
+    .respec-warning-list li,
+    .respec-error-list li {
+      padding: 0.4em 0.7em;
+    }
+
+    .respec-warning-list li::before {
+      content: "⚠️";
+      padding-right: .5em;
+    }
+
+    .respec-warning-list li {
+      color: rgb(92, 59, 0);
+      border-bottom: thin solid rgb(255, 245, 194);
+    }
+
+    .respec-error-list,
+    .respec-error-list li {
+      background-color: rgb(255, 240, 240);
+    }
+
+    .respec-error-list li::before {
+      content: "💥";
+      padding-right: .5em;
+    }
+
+    .respec-error-list li {
+      padding: 0.4em 0.7em;
+      color: rgb(92, 59, 0);
+      border-bottom: thin solid rgb(255, 215, 215);
+    }
+
+    #respec-overlay {
+      display: block;
+      opacity: 0;
+      position: fixed;
+      z-index: 10000;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: #000;
+    }
+
+    .respec-modal {
+      display: block;
+      position: fixed;
+      opacity: 0;
+      z-index: 11000;
+      margin: auto;
+      top: 10%;
+      background: #fff;
+      border: 5px solid #666;
+      min-width: 20%;
+      width: 79%;
+      padding: 0;
+      max-height: 80%;
+      overflow-y: auto;
+      margin: 0 -.5cm
+    }
+
+    @media screen and (min-width: 78em) {
+      .respec-modal {
+        width: 62%;
+      }
+    }
+
+    .respec-modal h3 {
+      margin: 0;
+      padding: .2em;
+      text-align: center;
+      color: black;
+      background: linear-gradient(to bottom, rgba(238, 238, 238, 1) 0%, rgba(238, 238, 238, 1) 50%, rgba(204, 204, 204, 1) 100%);
+      font-size: 1em;
+    }
+
+    .respec-modal .inside p {
+      padding-left: 1cm;
+    }
+
+    #respec-menu button.respec-option {
+      background: white;
+      padding: 0 .2cm;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: inherit;
+      padding: 1.2em 1.2em;
+    }
+
+    #respec-menu button.respec-option:hover,
+    #respec-menu button:focus {
+      background-color: #eeeeee;
+    }
+
+    .respec-cmd-icon {
+      padding-right: .5em;
+    }
+
+    #respec-ui button.respec-option:last-child {
+      border: none;
+      border-radius: inherit;
+    }
+
+    .respec-offending-element {
+      display: inline-block;
+      position: relative;
+      background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x;
+    }
+
+    @supports (text-decoration-style: wavy) {
+      .respec-offending-element {
+        background: none;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: red;
+      }
+    }
+
+    #issue-summary>ul,
+    .respec-dfn-list {
+      column-count: 2;
+    }
+
+    #issue-summary li,
+    .respec-dfn-list li {
+      list-style: none;
+    }
+
+
+    .respec-button-copy-paste {
+      position: absolute;
+      display: block;
+      padding: 0px 8px;
+      height: 28px;
+      width: 40px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid rgb(144, 184, 222);
+      border-radius: 0px 0px 3px 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-appearance: none;
+      margin: 0px 127px;
+      border-left: 0;
+    }
+
+    p+.respec-button-copy-paste {
+      margin: 1px 127px;
+    }
+
     @media print {
       .removeOnSave {
         display: none;
       }
     }
   </style>
-
-  <title>Cognitive and Learning Disabilities and WCAG</title>
-
-
-  <style>
-    .technique {
-      border: dotted;
-    }
-  </style>
-  <!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
-
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED">
-  <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
-  <meta name="generator" content="ReSpec 5.0.4">
+  <link rel="canonical" href="https://www.w3.org/TR/coga-extension/">
+  <meta name="generator" content="ReSpec 11.4.1">
   <script id="initialUserConfig" type="application/json">
     {
       "trace": true,
@@ -2232,13 +2529,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     }
   </script>
 </head>
-<body class="h-entry toc-inline" role="document" id="respecDocument">
+<body aria-busy="false" class="h-entry toc-inline" id="respecDocument">
   <div class="head" role="contentinfo" id="respecHeader">
     <p>
-      <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
+      <a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" height="48" width="72"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Cognitive and Learning Disabilities and WCAG</h1>
-    <h2 id="w3c-editor-s-draft-26-september-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-09-26">26 September 2016</time></h2>
+    <h2 id="w3c-editor-s-draft-16-march-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2017-03-16">16 March 2017</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://w3c.github.io/coga/extension/">https://w3c.github.io/coga/extension/</a></dd>
@@ -2256,7 +2553,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
     </dl>
     <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2016
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2016-2017
 
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
@@ -2299,7 +2596,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
               6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
     </p>
-    <p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2015/Process-20150901/">1 September 2015 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+    <p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2017/Process-20170301/">1 March 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
     </p>
 
   </section>
@@ -2325,7 +2622,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </li>
           <li class="tocline"><a href="#under-wcag-3.1" class="tocxref"><span class="secno">3.3 </span>Under WCAG 3.1</a>
             <ol class="toc">
-              <li class="tocline"><a href="#instructions" class="tocxref"><span class="secno">3.3.1 </span>Instructions, labels, navigation and <span class="formerLink" data-link-type="dfn">important information</span> are provided with a clear writing style that includes:</a></li>
+              <li class="tocline"><a href="#instructions" class="tocxref"><span class="secno">3.3.1 </span>Instructions, labels, navigation and <span class="formerLink" title="Linking error: not matching <dfn>">important information</span> are provided with a clear writing style that includes:</a></li>
             </ol>
           </li>
           <li class="tocline"><a href="#Providea clearstructureandlayout" class="tocxref"><span class="secno">3.4 </span><strong>Provide a clear structure and layout</strong> (new guidline)</a>
@@ -2336,7 +2633,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               <li class="tocline"><a href="#obvious" class="tocxref"><span class="secno">3.4.3 </span><strong>The main purpose of each page and section of content is <em>obvious</em>. </strong> Extraneous information that is not relevant to the  main purpose of each page is separated in the modality of the user and pragmatically determinable.
                 </a></li>
               <li class="tocline"><a href="#layout" class="tocxref"><span class="secno">3.4.4 </span><strong>Provide a clear and understandable layout  that includes:</strong></a></li>
-              <li class="tocline"><a href="#controls" class="tocxref"><span class="secno">3.4.5 </span>Interactive controls are visually clear or visually clear controls are <span class="formerLink" data-link-type="dfn">easily available</span> that conform to the following:</a></li>
+              <li class="tocline"><a href="#controls" class="tocxref"><span class="secno">3.4.5 </span>Interactive controls are visually clear or visually clear controls are <span class="formerLink" title="Linking error: not matching <dfn>">easily available</span> that conform to the following:</a></li>
               <li class="tocline"><a href="#familiar" class="tocxref"><span class="secno">3.4.6 </span><strong>A familiar   design, layout and common icons are easily available</strong>. </a>
                 <ol class="toc">
                   <li class="tocline"><a href="#critical" class="tocxref"><span class="secno">3.4.6.1 </span><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> </a></li>
@@ -2349,7 +2646,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </li>
           <li class="tocline"><a href="#under-wcag-3.3-help-users-avoid-and-correct-mistakes.x" class="tocxref"><span class="secno">3.5 </span>Under WCAG 3.3 Help users avoid and correct mistakes.</a>
             <ol class="toc">
-              <li class="tocline"><a href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" class="tocxref"><span class="secno">3.5.1 </span>The success or failure of every action should be <span class="formerLink" data-link-type="dfn">clearly indicated</span> to the user and visual <span class="formerLink" data-link-type="dfn">rapid feedback</span> should be available. <span class="formerLink" data-link-type="dfn">Spoken feedback</span> should be a user selectable option.</a></li>
+              <li class="tocline"><a href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" class="tocxref"><span class="secno">3.5.1 </span>The success or failure of every action should be <span class="formerLink" data-link-type="dfn">clearly indicated</span> to the user and visual <span class="formerLink" title="Linking error: not matching <dfn>">rapid feedback</span> should be available. <span class="formerLink" title="Linking error: not matching <dfn>">Spoken feedback</span> should be a user selectable option.</a></li>
             </ol>
           </li>
           <li class="tocline"><a href="#items-where-new-techniques-are-wcag-2.0-required" class="tocxref"><span class="secno">3.6 </span>Items where new techniques are WCAG 2.0 required</a></li>
@@ -2423,7 +2720,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
       <dt>&nbsp;</dt>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-easily-available-mode-or-setting">easily available mode or setting</dfn></dt>
+      <dt><dfn data-lt="easily available" data-dfn-for="">easily available (or easily available mode or setting</dfn>)</dt>
       <dd>
         <ul>
           <li> can be set one time with as a wide a scope as possible (such as using the standards of the OS, ETSI or GPII when available) and </li>
@@ -2432,16 +2729,16 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </ul>
       </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-easily-recognizable">easily-recognizable</dfn></dt>
+      <dt><dfn>easily-recognizable</dfn></dt>
       <dd>such as 99% of the intended audience will recognize this as feedback for the action of the action, such as a tick or a green traffic lite to green with a word such as "correct" </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-enabling-additional-support">enabling additional support</dfn></dt>
+      <dt><dfn>enabling additional support</dfn></dt>
       <dd>definition</dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-essential-information">essential information</dfn></dt>
-      <dd>information that is required by the application to complete the task requested by the used. Clear visual indicator is one that 99% of your <a href="#dfn-target-audience" class="internalDFN" data-link-type="dfn">target audience</a> understand) </dd>
+      <dt><dfn>essential information</dfn></dt>
+      <dd>information that is required by the application to complete the task requested by the used. Clear visual indicator is one that 99% of your <a class="respec-offending-element" title="Linking error: not matching <dfn>">target audience</a> understand) </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-important-information">important information</dfn></dt>
+      <dt><dfn>important information</dfn></dt>
       <dd>
         <ol>
           <li>information the user may need to complete any action or task including an offline task. </li>
@@ -2450,53 +2747,53 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p>(COGA Techniques 2.5) </p>
       </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-jargon">jargon</dfn></dt>
+      <dt><dfn>jargon</dfn></dt>
       <dd>a type of language that is used in a particular context and may not be well understood outside of it </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-keywords-that-aid-comprehension">keywords that aid comprehension</dfn></dt>
+      <dt><dfn>keywords that aid comprehension</dfn></dt>
       <dd>definition</dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-known-techniques">known techniques</dfn></dt>
+      <dt><dfn>known techniques</dfn></dt>
       <dd>any wcag techniques or platform official documentation for any technologies used </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-minimum-known-for-a-type-of-charge">minimum known for a type of charge</dfn></dt>
+      <dt><dfn data-lt="minimum is known for a type of charge">minimum known for a type of charge</dfn></dt>
       <dd>when this is a charge that is incurred 90% or more of the time with this traction. Charges that you almost always you have to pay such as airport tax. or any seat on an airplane not just a preferred seat). User request is a selection by the user that 99% of the target audience understand the implication. </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-most-commonly-used-3000-words">most commonly used 3000 words</dfn></dt>
+      <dt><dfn>most commonly used 3000 words</dfn></dt>
       <dd>any credible word list may be used and audience may be taken into account in conducting the word list. So , for example, if the audience is young, blog will be in the 3000 words. You may however have a site for retirees the word list may be different. If it is not included in the techniques the author should publish what word list was used. </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-non-literal-text">non-literal text</dfn></dt>
+      <dt><dfn>non-literal text</dfn></dt>
       <dd>definition</dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-non-trivial-information">non-trivial information</dfn></dt>
+      <dt><dfn>non-trivial information</dfn></dt>
       <dd>Information the user may find important or need to know , such as infromation that the user may have searched to find. <span class="ednote">- coment - may be to vage. information can be non trivial but noone NEEDS to know it </span></dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-personalization">personalization</dfn></dt>
+      <dt><dfn>personalization</dfn></dt>
       <dd>User interface that is driven by the individual user's preferences.</dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-rapid-feedback">rapid feedback</dfn></dt>
+      <dt><dfn>rapid feedback</dfn></dt>
       <dd>less then 200 ms (from etsi) </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-safe-standardized-techniques">safe standardized techniques</dfn></dt>
+      <dt><dfn data-lt="standardized techniques">safe standardized techniques</dfn></dt>
       <dd>standardized by wcag, other w3c groups, or by the platform, browser or operating system where user vulnerabilities are not exposed without informed consent <span class="ednote">this will be a discussion and is not yet finalized</span>
       </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-same-type-of-information">same type of information</dfn></dt>
+      <dt><dfn>same type of information</dfn></dt>
       <dd>information with the same role, such as warnings, key points, errors, news items headings of the same importance, etc.</dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-semantics">semantics</dfn></dt>
+      <dt><dfn>semantics</dfn></dt>
       <dd>definition</dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-signpost">signpost</dfn></dt>
+      <dt><dfn>signpost</dfn></dt>
       <dd>an immediately perceptible indicator or obvious clue, that gives information or direction</dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-sensitive-information">sensitive information</dfn></dt>
+      <dt><dfn>sensitive information</dfn></dt>
       <dd>information that can put people at risk or information the user wishes to protect <span class="ednote">To do - add examples including the user sets the time out</span></dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-spoken-feedback">spoken feedback</dfn></dt>
+      <dt><dfn>spoken feedback</dfn></dt>
       <dd>Spoken feedback is often more effective then written feedback. However having both spoken feedback and longer lasting written and visual feedback helps the user know where they are and restores the context if attention is lost. Spoken feedback can annoy and distract some people so spoken feedback should be available as an option and in response to a user preference setting when available. </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-standard-layout-design">standard layout design</dfn></dt>
+      <dt><dfn>standard layout design</dfn></dt>
       <dd>
         <ol>
           <li>recommended in a wcag technique (techniques can be submitted by any other standard and just approved by wcag) or </li>
@@ -2505,13 +2802,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </ol>
       </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-standardized-apis">standardized APIs</dfn></dt>
+      <dt><dfn>standardized APIs</dfn></dt>
       <dd>identified in the platform's documentation or in a WCAG technique or <abbr title="World Wide Web Consortium">W3C</abbr> publication</dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-target-audience">target audience</dfn></dt>
+      <dt><dfn>target audience</dfn></dt>
       <dd>people use this content </dd>
 
-      <dt><dfn data-dfn-type="dfn" id="dfn-web-related-modality">web related modality</dfn></dt>
+      <dt><dfn>web related modality</dfn></dt>
       <dd>such as email, VOIP phone, chat - but excluding snail mail and not if support is not provided to the public. (COGA Techniques 2.10.2 ) </dd>
 
     </dl>
@@ -2535,7 +2832,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <h4 id="under-wcag-1.3---create-content-that-can-be-presented-in-different-ways-for-example-simpler-layout-without-losing-information-or-structure.x" resource="#under-wcag-1.3---create-content-that-can-be-presented-in-different-ways-for-example-simpler-layout-without-losing-information-or-structure.x"><span property="xhv:role" resource="xhv:heading">Under WCAG 1.3 - Create content that can be presented in different ways (for example simpler layout) without losing information or structure.</span></h4>
 
         <section typeof="bibo:Chapter" resource="#semantics" property="bibo:hasPart">
-          <h5 id="semantics" resource="#semantics"><span property="xhv:role" resource="xhv:heading">Use <a href="#dfn-semantics" class="internalDFN" data-link-type="dfn">semantics</a> and <a href="#dfn-safe-standardized-techniques" class="internalDFN" data-link-type="dfn">safe standardized techniques</a> that enable the content to be adapted to the user scenario including <a href="#dfn-enabling-additional-support" class="internalDFN" data-link-type="dfn">enabling additional support</a> and <a href="#dfn-personalization" class="internalDFN" data-link-type="dfn">personalization</a>.</span></h5>
+          <h5 id="semantics" resource="#semantics"><span property="xhv:role" resource="xhv:heading">Use <a class="respec-offending-element" title="Linking error: not matching <dfn>">semantics</a> and <a class="respec-offending-element" title="Linking error: not matching <dfn>">safe standardized techniques</a> that enable the content to be adapted to the user scenario including <a class="respec-offending-element" title="Linking error: not matching <dfn>">enabling additional support</a> and <a class="respec-offending-element" title="Linking error: not matching <dfn>">personalization</a>.</span></h5>
           <div class="technique">Techniques include:
             <ul>
               <li>Use semantics and standardized techniques to provide extra help (COGA Techniques 4.1)</li>
@@ -2564,13 +2861,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p>(See COGA Techniques 2.9.1 ) </p>
         <ol>
           <li>Sessions time out after 20 hours have elapsed </li>
-          <li>Where security may be at risk a session can time out after half an hour of disuse. Where financial or <a href="#dfn-sensitive-information" class="internalDFN" data-link-type="dfn">sensitive information</a> is at risk the time out can be shorter </li>
+          <li>Where security may be at risk a session can time out after half an hour of disuse. Where financial or <a class="respec-offending-element" title="Linking error: not matching <dfn>">sensitive information</a> is at risk the time out can be shorter </li>
           <li>Timing is essential to the function of the content - such as some tests. </li>
         </ol>
         <p>Where there is an exception, the content must conform to WCAG 2.2.1 Timing Adjustable, so long as </p>
         <ol>
           <li>The function to turn off, adjust or extend the timing are controlled by simple action and labeled with simple text. </li>
-          <li>A user or administrator settable time minimum must be provided to complete any controlling action. Note that all user setting must be easy to set and use <a href="#dfn-safe-standardized-techniques" class="internalDFN" data-link-type="dfn">standardized techniques</a> when available.</li>
+          <li>A user or administrator settable time minimum must be provided to complete any controlling action. Note that all user setting must be easy to set and use <a class="respec-offending-element" title="Linking error: not matching <dfn>">standardized techniques</a> when available.</li>
           <li>The user can be made aware of the time out limits, including the length of the warning - this condition may be deleted </li>
           <li>The user can easily return to the same point in a task, without data loss.
             <ol>
@@ -2622,7 +2919,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </h3>
 
       <section typeof="bibo:Chapter" resource="#instructions" property="bibo:hasPart">
-        <h4 id="instructions" resource="#instructions"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3.1 </span>Instructions, labels, navigation and <a href="#dfn-important-information" class="internalDFN" data-link-type="dfn">important information</a> are provided with a clear writing style that includes:</span>
+        <h4 id="instructions" resource="#instructions"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.3.1 </span>Instructions, labels, navigation and <a class="respec-offending-element" title="Linking error: not matching <dfn>">important information</a> are provided with a clear writing style that includes:</span>
         </h4>
         <p>(simple text version: Use a clear writing style) </p>
         <p>For all wording (other then exceptions): </p>
@@ -2634,8 +2931,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <li>Double negatives are not used </li>
           <li> Reduce ambiguities by:
             <ol>
-              <li> metaphors and <a href="#dfn-non-literal-text" class="internalDFN" data-link-type="dfn">non-literal text</a> are not used or can be automatically replaced via an easy to set user setting and standardized technique. All meaning must be retained when <a href="#dfn-non-literal-text" class="internalDFN" data-link-type="dfn">non-literal text</a> are replaced. </li>
-              <li> the meaning of each word should be clear from the word's context, or programmatically determinable. </li>
+              <li> metaphors and <a class="respec-offending-element" title="Linking error: not matching <dfn>">non-literal text</a> are not used or can be automatically replaced via an easy to set user setting and standardized technique. All meaning must be retained when <a class="respec-offending-element" title="Linking error: not matching <dfn>">non-literal text</a> are replaced. </li>
+              <li> the meaning of each word is clear from the word's context, or programmatically determinable. </li>
             </ol>
           </li>
         </ol>
@@ -2715,7 +3012,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <h4 id="324" resource="#324"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.2 </span><strong>Add to WCAG 3.2.4 </strong></span>
         </h4>
         <ul>
-          <li>Consistent styles are used for the <a href="#dfn-same-type-of-information" class="internalDFN" data-link-type="dfn">same type of information</a> and control (COGA Techniques 2.1.1). (see COGA Techniques 2.4) </li>
+          <li>Consistent styles are used for the <a class="respec-offending-element" title="Linking error: not matching <dfn>">same type of information</a> and control (COGA Techniques 2.1.1). (see COGA Techniques 2.4) </li>
           <li>(removed - Provide a consistent design within a set of pages that includes:
             <ul>
               <li>A consistent layout of common elements such as navigational elements, search and controls</li>
@@ -2774,7 +3071,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section typeof="bibo:Chapter" resource="#controls" property="bibo:hasPart">
-        <h4 id="controls" resource="#controls"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.5 </span>Interactive controls are visually clear or visually clear controls are <a href="#dfn-easily-available-mode-or-setting" class="internalDFN" data-link-type="dfn">easily available</a> that conform to the following:</span>
+        <h4 id="controls" resource="#controls"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.4.5 </span>Interactive controls are visually clear or visually clear controls are <a class="respec-offending-element" title="Linking error: not matching <dfn>">easily available</a> that conform to the following:</span>
         </h4>
         <p>(See COGA Techniques 2.3) </p>
         <ol>
@@ -2803,7 +3100,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p></p>
 
         <section typeof="bibo:Chapter" resource="" property="bibo:hasPart">
-          <p class="technique"> Techniques to include: Making common components and icons programmatic determinable enables their positions to be standardized via <a href="#dfn-personalization" class="internalDFN" data-link-type="dfn">personalization</a>. </p>
+          <p class="technique"> Techniques to include: Making common components and icons programmatic determinable enables their positions to be standardized via <a class="respec-offending-element" title="Linking error: not matching <dfn>">personalization</a>. </p>
           <div class="technique"> Techniques to include: Example of coga-wcag technique In 2015 in English sites standard layout for web sites includes:
             <ul>
               <li>the search box is in the right hand corner</li>
@@ -2834,7 +3131,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                 <li>Each page can be reached though any high level page that it logically could belong. </li>
               </ol>
             </li>
-            <li>Help and support page or function should be reachable with one user interaction. When human help is available the correct contact information or mechanism should be reachable within two user interactions. (Removed: Where human help is provided, it is available via one clearly labeled action for each <a href="#dfn-web-related-modality" class="internalDFN" data-link-type="dfn">web related modality</a> for which the help is available.)</li>
+            <li>Help and support page or function should be reachable with one user interaction. When human help is available the correct contact information or mechanism should be reachable within two user interactions. (Removed: Where human help is provided, it is available via one clearly labeled action for each <a class="respec-offending-element" title="Linking error: not matching <dfn>">web related modality</a> for which the help is available.)</li>
             <li>Provide a search box. Exception is provided were adding a search box is a significant expense for the site </li>
           </ol>
           <p>define: <strong><em>content most likely to be important to the user</em></strong></p>
@@ -2890,7 +3187,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p>(Remove uncertainty and help the user maintain context) </p>
         <p>This includes: </p>
         <ol>
-          <li>Use <a href="#dfn-known-techniques" class="internalDFN" data-link-type="dfn">known techniques</a> that remind the user of the context, including:
+          <li>Use <a class="respec-offending-element" title="Linking error: not matching <dfn>">known techniques</a> that remind the user of the context, including:
             <ol>
               <li>Signposts to remind the user of the current task and subtask. Signposts should not distract the user when they choice to change tasks without the users concent. </li>
               <li>In the scope of a task, provide a signposts of broader context. For a non-complicated task, such as reading a home page, clearly identifying the site and it's aim is sufficient. </li>
@@ -2935,7 +3232,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <p>We suggest adding the following success criteria: </p>
 
       <section id="the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" typeof="bibo:Chapter" resource="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" property="bibo:hasPart">
-        <h4 id="h-the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" resource="#h-the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.5.1 </span>The success or failure of every action should be <a href="#dfn-clearly-indicated-success-or-failure" class="internalDFN" data-link-type="dfn">clearly indicated</a> to the user and visual <a href="#dfn-rapid-feedback" class="internalDFN" data-link-type="dfn">rapid feedback</a> should be available. <a href="#dfn-spoken-feedback" class="internalDFN" data-link-type="dfn">Spoken feedback</a> should be a user selectable option.<span class="permalink" typeof="bookmark"><a href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" aria-label="Permalink for 3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option." title="Permalink for 3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option." property="url"><span property="title" content="3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option.">§</span></a>
+        <h4 id="h-the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" resource="#h-the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.5.1 </span>The success or failure of every action should be <a href="#dfn-clearly-indicated-success-or-failure" class="internalDFN" data-link-type="dfn">clearly indicated</a> to the user and visual <a class="respec-offending-element" title="Linking error: not matching <dfn>">rapid feedback</a> should be available. <a class="respec-offending-element" title="Linking error: not matching <dfn>">Spoken feedback</a> should be a user selectable option.<span class="permalink" typeof="bookmark"><a href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available.-spoken-feedback-should-be-a-user-selectable-option.x" aria-label="Permalink for 3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option." title="Permalink for 3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option." property="url"><span property="title" content="3.5.1 The success or failure of every action should be clearly indicated to the user and visual rapid feedback should be available. Spoken feedback should be a user selectable option.">§</span></a>
           </span>
           </span>
         </h4>
@@ -2948,9 +3245,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p>(See COGA Techniques 2.7 ) </p>
 
         <section typeof="bibo:Chapter" resource="#api" property="bibo:hasPart">
-          <h5 id="api" resource="#api"><span property="xhv:role" resource="xhv:heading"><strong>Support known <a href="#dfn-standardized-apis" class="internalDFN" data-link-type="dfn">standardized APIs</a> for tools that help the user understand and use the content. </strong> This includes:</span></h5>
+          <h5 id="api" resource="#api"><span property="xhv:role" resource="xhv:heading"><strong>Support known <a class="respec-offending-element" title="Linking error: not matching <dfn>">standardized APIs</a> for tools that help the user understand and use the content. </strong> This includes:</span></h5>
           <ul>
-            <li> <a href="#dfn-safe-standardized-techniques" class="internalDFN" data-link-type="dfn">Standardized techniques</a> to support interoperable symbol sets are used when available. </li>
+            <li> <a class="respec-offending-element" title="Linking error: not matching <dfn>">Standardized techniques</a> to support interoperable symbol sets are used when available. </li>
             <li>Allow reading of long form of acronyms</li>
             <li>Support for text to speech with synchronized highlighting of the phrase being read, and conent simplification </li>
             <li>Support for retaining content that has already been entered and password management</li>
@@ -2964,7 +3261,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <p>(See COGA Techniques 2.7 ) </p>
           <p>For icons and jargon</p>
           <ul>
-            <li> All icons and <a href="#dfn-jargon" class="internalDFN" data-link-type="dfn">jargon</a> have a short explanation available Where a standard mechanism exists for the platform or technologies it should be used.(COGA Techniques 2.7. )(removed to techneque: Short tooltips on all icons and <a href="#dfn-jargon" class="internalDFN" data-link-type="dfn">jargon</a> that clarify the meaning are provided.. )</li>
+            <li> All icons and <a class="respec-offending-element" title="Linking error: not matching <dfn>">jargon</a> have a short explanation available Where a standard mechanism exists for the platform or technologies it should be used.(COGA Techniques 2.7. )(removed to techneque: Short tooltips on all icons and <a class="respec-offending-element" title="Linking error: not matching <dfn>">jargon</a> that clarify the meaning are provided.. )</li>
           </ul>
           <p>For content relating to numbers and complex information</p>
           <ul>
@@ -2975,7 +3272,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <p>For content with more then 200 words </p>
           <ol>
             <li>Provide a summary. For pieces of content with less then 200 words the heading may act as a summary. </li>
-            <li>The content owner identifies at least two <a href="#dfn-keywords-that-aid-comprehension" class="internalDFN" data-link-type="dfn">keywords that aid comprehension</a> for the user and keywords are programmatic determinable and emphasized in the modality of the user. </li>
+            <li>The content owner identifies at least two <a class="respec-offending-element" title="Linking error: not matching <dfn>">keywords that aid comprehension</a> for the user and keywords are programmatic determinable and emphasized in the modality of the user. </li>
           </ol>
           <p>For key content and call out boxes</p>
           <ul>
@@ -3011,7 +3308,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             </ul>
           </div>
           <div class="technique"> Techniques to include:Technique to include: personalization used to remove extraneous information and reduce the clicks.</div>
-          <div class="technique"> Techniques to include: 1,use testing to find what helps, 2, identifying any words that may make the user realize this is relevant content, 3, identifying that there are no <a href="#dfn-keywords-that-aid-comprehension" class="internalDFN" data-link-type="dfn">keywords that aid comprehension</a> for example, when all keywords short sections are used under clear headings.</div>
+          <div class="technique"> Techniques to include: 1,use testing to find what helps, 2, identifying any words that may make the user realize this is relevant content, 3, identifying that there are no <a class="respec-offending-element" title="Linking error: not matching <dfn>">keywords that aid comprehension</a> for example, when all keywords short sections are used under clear headings.</div>
           <p class="technique">Techniques include: using see also to alow a user to reach related content that is not in this path. A link to a site map which has all the content in it can also be sufficient</p>
           <div class="ednote">
             <div class="ednote-title marker" aria-level="6" role="heading" id="h-ednote2"><span>Editor's Note</span></div>
@@ -3035,17 +3332,17 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
           <p>In forms</p>
           <ol>
-            <li>Use <a href="#dfn-known-techniques" class="internalDFN" data-link-type="dfn">known techniques</a> to prevent errors that are relevant to the content. All standard ways of representing information are accepted as input formats, such as different ways of writing a phone number and date formats. </li>
+            <li>Use <a class="respec-offending-element" title="Linking error: not matching <dfn>">known techniques</a> to prevent errors that are relevant to the content. All standard ways of representing information are accepted as input formats, such as different ways of writing a phone number and date formats. </li>
             <li>Documented <a href="#dfn-common-input-errors" class="internalDFN" data-link-type="dfn">common input errors</a> can be corrected automatically. (example spelling mistakes)</li>
             <li>Enable and identify the default format and standards of locale and allow for change of format on labels and user input (removed use the default format and standards of locale and allow for change of format)</li>
-            <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a href="#dfn-essential-information" class="internalDFN" data-link-type="dfn">essential information</a>. </li>
+            <li>Clear visual indicators are provided that identify what information is essential, and non-essential information is clearly differentiated from <a class="respec-offending-element" title="Linking error: not matching <dfn>">essential information</a>. </li>
             <li>Instructions are provided if there is not a label that fully describe the control or if it is not clear were to get the required information. Instructions should explain the purpose and usage of the control. (Graphics with a text alternative may be sufficient) ( A clear instruction or information is on where 99% of your target audience understand immediately what to do) </li>
           </ol>
           <p>For legal and finacial transactions</p>
           <ol>
             <li>Options that may disadvantage the user are only selected at the users specific request. </li>
             <li>All types of charges must be clear at the start of a transaction task. </li>
-            <li>When a <a href="#dfn-minimum-known-for-a-type-of-charge" class="internalDFN" data-link-type="dfn">minimum is known for a type of charge</a> it must be be made clear at the start of the transaction task. (from support the user)</li>
+            <li>When a <a class="respec-offending-element" title="Linking error: not matching <dfn>">minimum is known for a type of charge</a> it must be be made clear at the start of the transaction task. (from support the user)</li>
           </ol>
           <p>For all content</p>
           <ol>
@@ -3116,7 +3413,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <p>(Remove uncertainty and help the user maintain context) </p>
           <p>This includes: </p>
           <ol>
-            <li>Use <a href="#dfn-known-techniques" class="internalDFN" data-link-type="dfn">known techniques</a> that remind the user of the context, including:
+            <li>Use <a class="respec-offending-element" title="Linking error: not matching <dfn>">known techniques</a> that remind the user of the context, including:
               <ol>
                 <li>Signposts to remind the user of the current task and subtask. Signposts should not distract the user when they choice to change tasks without the users concent. </li>
                 <li>In the scope of a task, provide a signposts of broader context including steps completed, current step and steps pending. For a non-complicated task, such as reading a home page, clearly identifying the site and it's aim is sufficient. </li>
@@ -3188,7 +3485,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <p>We would want to lose the text "except where the purpose of the link would be ambiguous to users in general" </p>
         </li>
         <li>2.4.10 Section Headings: Section headings are used to organize the content. (Level AAA) Note 1: "Heading" is used in its general sense and includes titles and other ways to add a heading to different types of content. </li>
-        <li>3.1.3 Unusual Words: A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and <a href="#dfn-jargon" class="internalDFN" data-link-type="dfn">jargon</a>. (Level AAA) </li>
+        <li>3.1.3 Unusual Words: A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and <a class="respec-offending-element" title="Linking error: not matching <dfn>">jargon</a>. (Level AAA) </li>
         <li>3.1.4 Abbreviations: A mechanism for identifying the expanded form or meaning of abbreviations is available. (Level AAA) </li>
         <li>3.1.5 Reading Level: When text requires reading ability more advanced than the lower secondary education level after removal of proper names and titles, supplemental content, or a version that does not require reading ability more advanced than the lower secondary education level, is available. (Level AAA) </li>
         <li>Note that this may need exceptions but most exceptions would still require a summary at an easier reading level. </li>
@@ -3250,11 +3547,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </span>
       </h3>
       <dl class="bibliography" resource=""><dt id="bib-WCAG20">[WCAG20]</dt>
-        <dd>Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al. W3C. <a href="https://www.w3.org/TR/WCAG20/" property="dc:references"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/" property="dc:references">https://www.w3.org/TR/WCAG20/</a>
+        <dd><a href="https://www.w3.org/TR/WCAG20/" property="dc:references"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al. W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/" property="dc:references">https://www.w3.org/TR/WCAG20/</a>
         </dd><dt id="bib-coga-issue-papers">[coga-issue-papers]</dt>
-        <dd>W3C. <a href="https://w3c.github.io/coga/issue-papers/" property="dc:references"><cite>Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</cite></a>. URL: <a href="https://w3c.github.io/coga/issue-papers/" property="dc:references">https://w3c.github.io/coga/issue-papers/</a>
+        <dd><a href="https://w3c.github.io/coga/issue-papers/" property="dc:references"><cite>Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</cite></a>. W3C. URL: <a href="https://w3c.github.io/coga/issue-papers/" property="dc:references">https://w3c.github.io/coga/issue-papers/</a>
         </dd><dt id="bib-coga-user-research">[coga-user-research]</dt>
-        <dd>Lisa Seeman; Michael Cooper. W3C. <a href="https://www.w3.org/TR/coga-user-research/" property="dc:references"><cite>Cognitive Accessibility User Research</cite></a>. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/" property="dc:references">https://www.w3.org/TR/coga-user-research/</a>
+        <dd><a href="https://www.w3.org/TR/coga-user-research/" property="dc:references"><cite>Cognitive Accessibility User Research</cite></a>. Lisa Seeman-Kestenbaum; Michael Cooper. W3C. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/" property="dc:references">https://www.w3.org/TR/coga-user-research/</a>
         </dd>
       </dl>
     </section>

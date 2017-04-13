@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en-US" typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#">
+<html typeof="bibo:Document " prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#" lang="en-US">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta lang="" property="dc:language" content="en">
+  <meta property="dc:language" content="en" lang="">
   <style>
     /*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 */
-    
+
     .hljs {
       display: block;
       overflow-x: auto;
@@ -18,20 +18,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       color: #333;
       background: #f8f8f8;
     }
-    
+
     .hljs-comment,
     .hljs-quote {
       color: #998;
       font-style: italic;
     }
-    
+
     .hljs-keyword,
     .hljs-selector-tag,
     .hljs-subst {
       color: #333;
       font-weight: bold;
     }
-    
+
     .hljs-number,
     .hljs-literal,
     .hljs-variable,
@@ -39,75 +39,75 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     .hljs-tag .hljs-attr {
       color: #008080;
     }
-    
+
     .hljs-string,
     .hljs-doctag {
       color: #d14;
     }
-    
+
     .hljs-title,
     .hljs-section,
     .hljs-selector-id {
       color: #900;
       font-weight: bold;
     }
-    
+
     .hljs-subst {
       font-weight: normal;
     }
-    
+
     .hljs-type,
     .hljs-class .hljs-title {
       color: #458;
       font-weight: bold;
     }
-    
+
     .hljs-tag,
     .hljs-name,
     .hljs-attribute {
       color: #000080;
       font-weight: normal;
     }
-    
+
     .hljs-regexp,
     .hljs-link {
       color: #009926;
     }
-    
+
     .hljs-symbol,
     .hljs-bullet {
       color: #990073;
     }
-    
+
     .hljs-built_in,
     .hljs-builtin-name {
       color: #0086b3;
     }
-    
+
     .hljs-meta {
       color: #999;
       font-weight: bold;
     }
-    
+
     .hljs-deletion {
       background: #fdd;
     }
-    
+
     .hljs-addition {
       background: #dfd;
     }
-    
+
     .hljs-emphasis {
       font-style: italic;
     }
-    
+
     .hljs-strong {
       font-weight: bold;
     }
   </style>
   <style>
     /* --- ISSUES/NOTES --- */
-    
+
     div.issue-title,
     div.note-title,
     div.ednote-title,
@@ -116,27 +116,27 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       min-width: 7.5em;
       color: #b9ab2d;
     }
-    
+
     div.issue-title {
       color: #e05252;
     }
-    
+
     div.note-title,
     div.ednote-title {
       color: #2b2;
     }
-    
+
     div.warning-title {
       color: #f22;
     }
-    
+
     div.issue-title span,
     div.note-title span,
     div.ednote-title span,
     div.warning-title span {
       text-transform: uppercase;
     }
-    
+
     div.note,
     div.issue,
     div.ednote,
@@ -144,14 +144,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-top: 1em;
       margin-bottom: 1em;
     }
-    
+
     .note>p:first-child,
     .ednote>p:first-child,
     .issue>p:first-child,
     .warning>p:first-child {
       margin-top: 0
     }
-    
+
     .issue,
     .note,
     .ednote,
@@ -160,7 +160,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       border-left-width: .5em;
       border-left-style: solid;
     }
-    
+
     div.issue,
     div.note,
     div.ednote,
@@ -170,32 +170,32 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       position: relative;
       clear: both;
     }
-    
+
     span.note,
     span.ednote,
     span.issue,
     span.warning {
       padding: .1em .5em .15em;
     }
-    
+
     .issue {
       border-color: #e05252;
       background: #fbe9e9;
     }
-    
+
     .note,
     .ednote {
       border-color: #52e052;
       background: #e9fbe9;
     }
-    
+
     .warning {
       border-color: #f11;
       border-width: .2em;
       border-style: solid;
       background: #fbe9e9;
     }
-    
+
     .warning-title:before {
       content: "⚠";
       /*U+26A0 WARNING SIGN*/
@@ -206,11 +206,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       vertical-align: top;
       margin-top: -0.5em;
     }
-    
+
     li.task-list-item {
       list-style: none;
     }
-    
+
     input.task-list-item-checkbox {
       margin: 0 0.35em 0.25em -1.6em;
       vertical-align: middle;
@@ -218,7 +218,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </style>
   <style>
     /* --- PERMALINKS --- */
-    
+
     .permalink {
       width: 1px;
       height: 1px;
@@ -229,7 +229,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       margin-left: 4px;
       float: right;
     }
-    
+
     .permalink a,
     .permalink a:link,
     .permalink a:visited,
@@ -241,30 +241,34 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       font-weight: bold;
       color: #666 !important;
     }
-    
+
     .permalink abbr {
       border: 0;
     }
   </style>
+  <title>Cognitive Accessibility User Research</title>
+
+
+  <!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
+
   <style id="respec-mainstyle">
     /*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
     /* Override code highlighter background */
-    
+
     .hljs {
       background: transparent !important;
     }
     /* --- INLINES --- */
-    
+
     em.rfc2119 {
       text-transform: lowercase;
-      font-variant: small-caps;
       font-style: normal;
       color: #900;
     }
-    
+
     h1 acronym,
     h2 acronym,
     h3 acronym,
@@ -281,125 +285,418 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     a abbr {
       border: none;
     }
-    
+
     dfn {
       font-weight: bold;
     }
-    
+
     a.internalDFN {
       color: inherit;
       border-bottom: 1px solid #99c;
       text-decoration: none;
     }
-    
+
     a.externalDFN {
       color: inherit;
       border-bottom: 1px dotted #ccc;
       text-decoration: none;
     }
-    
+
     a.bibref {
       text-decoration: none;
     }
-    
+
     cite .bibref {
       font-style: normal;
     }
-    
+
     code {
       color: #C83500;
     }
-    
+
     th code {
       color: inherit;
     }
     /* --- TOC --- */
-    
+
     .toc a,
     .tof a {
       text-decoration: none;
     }
-    
+
     a .secno,
     a .figno {
       color: #000;
     }
-    
+
     ul.tof,
     ol.tof {
       list-style: none outside none;
     }
-    
+
     .caption {
       margin-top: 0.5em;
       font-style: italic;
     }
     /* --- TABLE --- */
-    
+
     table.simple {
       border-spacing: 0;
       border-collapse: collapse;
       border-bottom: 3px solid #005a9c;
     }
-    
+
     .simple th {
       background: #005a9c;
       color: #fff;
       padding: 3px 5px;
       text-align: left;
     }
-    
+
     .simple th[scope="row"] {
       background: inherit;
       color: inherit;
       border-top: 1px solid #ddd;
     }
-    
+
     .simple td {
       padding: 3px 10px;
       border-top: 1px solid #ddd;
     }
-    
+
     .simple tr:nth-child(even) {
       background: #f0f6ff;
     }
     /* --- DL --- */
-    
+
     .section dd>p:first-child {
       margin-top: 0;
     }
-    
+
     .section dd>p:last-child {
       margin-bottom: 0;
     }
-    
+
     .section dd {
       margin-bottom: 1em;
     }
-    
+
     .section dl.attrs dd,
     .section dl.eldef dd {
       margin-bottom: 0;
     }
-    
-    .respec-hidden {
-      display: none;
+
+    #respec-ui {
+      position: fixed;
+      display: flex;
+      flex-direction: row-reverse;
+      top: 20px;
+      right: 20px;
+      width: 202px;
+      text-align: right;
+      z-index: 9000;
     }
-    
+
+    #respec-pill,
+    .respec-info-button {
+      background: #fff;
+      height: 2.5em;
+      color: rgb(120, 120, 120);
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
+    }
+
+    .respec-info-button {
+      border: none;
+      opacity: .75;
+      border-radius: 2em;
+      margin-right: 1em;
+      min-width: 3.5em;
+    }
+
+    .respec-info-button:focus,
+    .respec-info-button:hover {
+      opacity: 1;
+      transition: opacity .2s;
+    }
+
+    #respec-pill:disabled {
+      font-size: 2.8px;
+      text-indent: -9999em;
+      border-top: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-right: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-bottom: 1.1em solid rgba(40, 40, 40, 0.2);
+      border-left: 1.1em solid #ffffff;
+      transform: translateZ(0);
+      animation: respec-spin .5s infinite linear;
+      box-shadow: none;
+    }
+
+    #respec-pill:disabled,
+    #respec-pill:disabled:after {
+      border-radius: 50%;
+      width: 10em;
+      height: 10em;
+    }
+
+    @keyframes respec-spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    #respec-pill:hover,
+    #respec-pill:focus {
+      color: rgb(0, 0, 0);
+      background-color: rgb(245, 245, 245);
+      transition: color .2s;
+    }
+
+    #respec-menu {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: #fff;
+      box-shadow: 1px 1px 8px 0 rgba(100, 100, 100, .5);
+      width: 200px;
+      display: none;
+      text-align: left;
+      margin-top: 32px;
+      font-size: .8em;
+    }
+
+    #respec-menu li {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .respec-save-buttons {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(47%, 2fr));
+      grid-gap: .5cm;
+      padding: .5cm;
+    }
+
+    .respec-save-button:link {
+      padding-top: 16px;
+      color: rgb(240, 240, 240);
+      background: rgb(42, 90, 168);
+      justify-self: stretch;
+      height: 1cm;
+      text-decoration: none;
+      text-align: center;
+      font-size: inherit;
+      border: none;
+      border-radius: 0.2cm;
+    }
+
+    .respec-save-button:link:hover {
+      color: white;
+      background: rgb(42, 90, 168);
+      padding: 0;
+      margin: 0;
+      border: 0;
+      padding-top: 16px;
+    }
+
+
+    #respec-ui button:focus,
+    #respec-pill:focus,
+    .respec-option:focus {
+      outline: 0;
+      outline-style: none;
+    }
+
+    #respec-pill-error {
+      background-color: red;
+      color: white;
+    }
+
+    #respec-pill-warning {
+      background-color: orange;
+      color: white;
+    }
+
+    .respec-warning-list,
+    .respec-error-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-family: sans-serif;
+      background-color: rgb(255, 251, 230);
+      font-size: .9em;
+    }
+
+    .respec-warning-list li,
+    .respec-error-list li {
+      padding: 0.4em 0.7em;
+    }
+
+    .respec-warning-list li::before {
+      content: "⚠️";
+      padding-right: .5em;
+    }
+
+    .respec-warning-list li {
+      color: rgb(92, 59, 0);
+      border-bottom: thin solid rgb(255, 245, 194);
+    }
+
+    .respec-error-list,
+    .respec-error-list li {
+      background-color: rgb(255, 240, 240);
+    }
+
+    .respec-error-list li::before {
+      content: "💥";
+      padding-right: .5em;
+    }
+
+    .respec-error-list li {
+      padding: 0.4em 0.7em;
+      color: rgb(92, 59, 0);
+      border-bottom: thin solid rgb(255, 215, 215);
+    }
+
+    #respec-overlay {
+      display: block;
+      opacity: 0;
+      position: fixed;
+      z-index: 10000;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      background: #000;
+    }
+
+    .respec-modal {
+      display: block;
+      position: fixed;
+      opacity: 0;
+      z-index: 11000;
+      margin: auto;
+      top: 10%;
+      background: #fff;
+      border: 5px solid #666;
+      min-width: 20%;
+      width: 79%;
+      padding: 0;
+      max-height: 80%;
+      overflow-y: auto;
+      margin: 0 -.5cm
+    }
+
+    @media screen and (min-width: 78em) {
+      .respec-modal {
+        width: 62%;
+      }
+    }
+
+    .respec-modal h3 {
+      margin: 0;
+      padding: .2em;
+      text-align: center;
+      color: black;
+      background: linear-gradient(to bottom, rgba(238, 238, 238, 1) 0%, rgba(238, 238, 238, 1) 50%, rgba(204, 204, 204, 1) 100%);
+      font-size: 1em;
+    }
+
+    .respec-modal .inside p {
+      padding-left: 1cm;
+    }
+
+    #respec-menu button.respec-option {
+      background: white;
+      padding: 0 .2cm;
+      border: none;
+      width: 100%;
+      text-align: left;
+      font-size: inherit;
+      padding: 1.2em 1.2em;
+    }
+
+    #respec-menu button.respec-option:hover,
+    #respec-menu button:focus {
+      background-color: #eeeeee;
+    }
+
+    .respec-cmd-icon {
+      padding-right: .5em;
+    }
+
+    #respec-ui button.respec-option:last-child {
+      border: none;
+      border-radius: inherit;
+    }
+
+    .respec-offending-element {
+      display: inline-block;
+      position: relative;
+      background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x;
+    }
+
+    @supports (text-decoration-style: wavy) {
+      .respec-offending-element {
+        background: none;
+        text-decoration-line: underline;
+        text-decoration-style: wavy;
+        text-decoration-color: red;
+      }
+    }
+
+    #issue-summary>ul,
+    .respec-dfn-list {
+      column-count: 2;
+    }
+
+    #issue-summary li,
+    .respec-dfn-list li {
+      list-style: none;
+    }
+
+
+    .respec-button-copy-paste {
+      position: absolute;
+      display: block;
+      padding: 0px 8px;
+      height: 28px;
+      width: 40px;
+      color: #333;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      background-color: #eee;
+      background-image: linear-gradient(#fcfcfc, #eee);
+      border: 1px solid rgb(144, 184, 222);
+      border-radius: 0px 0px 3px 0;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-appearance: none;
+      margin: 0px 127px;
+      border-left: 0;
+    }
+
+    p+.respec-button-copy-paste {
+      margin: 1px 127px;
+    }
+
     @media print {
       .removeOnSave {
         display: none;
       }
     }
   </style>
-  <title>Cognitive Accessibility User Research</title>
-
-
-  <!-- <script src='http://pandora.aptest.com/respec/js/require.js' data-main="http://pandora.aptest.com/respec/js/profile-w3c-common" async class='remove'></script> -->
-
   <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED">
-  <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
-  <meta name="generator" content="ReSpec 5.0.4">
+  <link rel="canonical" href="https://www.w3.org/TR/coga-user-research/">
+  <meta name="generator" content="ReSpec 11.4.1">
   <script id="initialUserConfig" type="application/json">
     {
       "trace": true,
@@ -2227,13 +2524,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     }
   </script>
 </head>
-<body class="h-entry toc-inline" role="document" id="respecDocument">
+<body aria-busy="false" class="h-entry toc-inline" id="respecDocument">
   <div class="head" role="contentinfo" id="respecHeader">
     <p>
-      <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
+      <a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" height="48" width="72"></a>
     </p>
     <h1 class="title p-name" id="title" property="dcterms:title">Cognitive Accessibility User Research</h1>
-    <h2 id="w3c-editor-s-draft-26-september-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2016-09-26">26 September 2016</time></h2>
+    <h2 id="w3c-editor-s-draft-16-march-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time property="dcterms:issued" class="dt-published" datetime="2017-03-16">16 March 2017</time></h2>
     <dl>
       <dt>This version:</dt>
       <dd><a class="u-url" href="https://w3c.github.io/coga/user-research/">https://w3c.github.io/coga/user-research/</a></dd>
@@ -2251,7 +2548,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
     </dl>
     <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2014-2016
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2014-2017
 
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
@@ -2298,7 +2595,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       <a href="https://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section
               6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
     </p>
-    <p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2015/Process-20150901/">1 September 2015 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+    <p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2017/Process-20170301/">1 March 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
     </p>
 
   </section>
@@ -2332,7 +2629,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <li class="tocline"><a href="#intellectual-disability" class="tocxref"><span class="secno">3.5 </span>Intellectual Disability</a>
             <ol class="toc"></ol>
           </li>
-          <li class="tocline"><a href="#description" class="tocxref"><span class="secno">3.6 </span>Description</a>
+          <li class="tocline"><a href="#attention-deficit-hyperactivity-disorder-adhd" class="tocxref"><span class="secno">3.6 </span>Attention deficit hyperactivity disorder (ADHD)</a>
             <ol class="toc"></ol>
           </li>
           <li class="tocline"><a href="#autism" class="tocxref"><span class="secno">3.7 </span>Autism</a>
@@ -3094,7 +3391,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         <p>This section is a technical reference. Jump to the next section on <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Gap_Analysis/Dyslexia#Symptoms">#Symptoms</a> for more practical information. </p>
         <p><b>Overview:</b> Mainstream credible research in behavioral neurology agrees that dyslexia is a consequence of an altered neural substrate in the various regions of the brain responsible for the reading process. fMRI scans [<cite><a class="bibref" href="#bib-Friston-1">Friston-1</a></cite>], [<cite><a class="bibref" href="#bib-Talairach-1">Talairach-1</a></cite>] have shown different subgroups of dyslexia exhibit under-activity in areas such as: </p>
         <ul>
-          <li>V5/MT (BA Area 19) - resulting in visual discriminatory problems [<cite><a class="bibref" href="#bib-Eden-1">Eden-1</a></cite>], [<cite><a class="bibref" href="#bib-Henderson">Henderson</a></cite>], possibly disturbing magnocellular function [<cite><a class="bibref" href="#bib-Stein-1">Stein-1</a></cite>];
+          <li>V5/MT (BA Area 19) - resulting in visual discriminatory problems [<cite><a class="bibref" href="#bib-Eden-1">Eden-1</a></cite>], [<cite><a class="bibref" href="#bib-Henderson-1">Henderson-1</a></cite>], possibly disturbing magnocellular function [<cite><a class="bibref" href="#bib-Stein-1">Stein-1</a></cite>];
           </li>
           <li>auditory cortex (BA areas 41 and 42) - resulting in low auditory-discrimination skills [<cite><a class="bibref" href="#bib-Tallal-1">Tallal-1</a></cite>]; </li>
           <li>superior-temporal gyrus (BA Area 22) Wernike's area and striate cortex or V1 (Area 17) - resulting in a phoneme processing problem [<cite><a class="bibref" href="#bib-Shaywitz-1">Shaywitz-1</a></cite>], ([<cite><a class="bibref" href="#bib-Black-1">Black-1</a></cite>], pages 331–376), [<cite><a class="bibref" href="#bib-Geschwind-1">Geschwind-1</a></cite>], and pattern recognition; </li>
@@ -4664,7 +4961,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             <li> 15% of people living with dementia, an estimated 112,500 people (in the UK), have been victims of financial abuse, such as cold calling, scam mail, or mis-selling. </li>
             <li> 62% of carers reported that the person they care for had been approached by cold callers or doorstep-sales people. </li>
             <li> 70% reported that telephone callers routinely targeted the person they care for. Not only have people lost money, but they and their families have also suffered stress, exhaustion, and frustration as a result. </li>
-            <li> 76% of people reported having trouble managing their money, with a range of issues highlighted, such as the challenges of bank-security procedures; and a lack of dementia awareness in banks and other financial-services organizations. UK ONLY [<cite><a class="bibref" href="#bib-chandaria-1">chandaria-1</a></cite>] </li>
+            <li> 76% of people reported having trouble managing their money, with a range of issues highlighted, such as the challenges of bank-security procedures; and a lack of dementia awareness in banks and other financial-services organizations. UK ONLY [<cite><a class="bibref" href="#bib-Chandaria-1">Chandaria-1</a></cite>] </li>
             <li> Mood/Personality: Controlling confusion and irritability when changes are made to their routine, environment, or location. Difficulty in feeling safe. </li>
           </ul>
         </section>
@@ -6016,8 +6313,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             </h6>
             <ul>
               <li> There are an estimated 35.6 million people with dementia worldwide. By 2050, this figure will rise to over 115 million. (2) </li>
-              <li> There are 7.7 million new cases every year. [<cite><a class="bibref" href="#bib-who-4">who-4</a></cite>] </li>
-              <li> Alzheimer's disease is the most common form of dementia, and may contribute to 60-70% of cases. [<cite><a class="bibref" href="#bib-who-4">who-4</a></cite>] </li>
+              <li> There are 7.7 million new cases every year. [<cite><a class="bibref" href="#bib-WHO-4">WHO-4</a></cite>] </li>
+              <li> Alzheimer's disease is the most common form of dementia, and may contribute to 60-70% of cases. [<cite><a class="bibref" href="#bib-WHO-4">WHO-4</a></cite>] </li>
               <li> In 2010, dementia had an estimated global cost of US $604 Billion, 1% of global GDP. [<cite><a class="bibref" href="#bib-ADI-1">ADI-1</a></cite>] </li>
             </ul>
           </section>
@@ -6028,7 +6325,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               </span>
             </h6>
             <ul>
-              <li> A study cited by the European Collaboration on Dementia (EuroCoDe) states that, in Europe, approximately 5 million women have dementia, compared with 2 and half million men. [<cite><a class="bibref" href="#bib-AE-1">AE-1</a></cite>] Cognitive decline is often accelerated in women following menopause. [<cite><a class="bibref" href="#bib-Thillers-1">Thillers-1</a></cite>] </li>
+              <li> A study cited by the European Collaboration on Dementia (EuroCoDe) states that, in Europe, approximately 5 million women have dementia, compared with 2 and half million men. [<cite><a class="bibref" href="#bib-AE-1">AE-1</a></cite>] Cognitive decline is often accelerated in women following menopause. [<cite><a class="bibref" href="#bib-Thilers-1">Thilers-1</a></cite>] </li>
             </ul>
           </section>
         </section>
@@ -6093,7 +6390,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             </li>
           </ul>
           <ul>
-            <li> <abbr title="World Wide Web Consortium">W3C</abbr> Developing Websites for Older People: How WCAG 2.0 Applies: [<cite><a class="bibref" href="#bib-WAI-1">WAI-1</a></cite>].
+            <li> <abbr title="World Wide Web Consortium">W3C</abbr> Developing Websites for Older People: How WCAG 2.0 Applies: [<cite><a class="bibref" href="#bib-WAI">WAI</a></cite>].
             </li>
           </ul>
         </section>
@@ -6159,7 +6456,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <div id="INDIVUI"></div>
           <dl>
             <dt>INDIVUI </dt>
-            <dd> How Individual Should Digital AT User Interfaces Be for People with Dementia. [<cite><a class="bibref" href="#bib-cudd-1">cudd-1</a></cite>]</dd>
+            <dd> How Individual Should Digital AT User Interfaces Be for People with Dementia. [<cite><a class="bibref" href="#bib-Cudd-1">Cudd-1</a></cite>]</dd>
           </dl>
           <p><b>Abstract.</b> A literature review of papers that have explored digital-technology. user-interface design for people with dementia is reported. Only papers that have employed target user input directly, or from other works, have been included. Twenty four were analyzed. Improvements in reporting of studies are recommended. A case is made for considering the population of people with dementia as so heterogeneous that one design does not suit all. This is illustrated through some case-study reports from people with dementia. Furthermore, it is proposed that, by grouping people into functionally-similar sub-groups, interfaces may be designed for these groups that will collectively establish a sequence of 'stepping stone' interfaces that better address appropriate functioning and maintain self-efficacy. Fundamentally, people living with dementia are unique individuals with unique specific needs. A priori, in life experiences, interests, willingness to learn, environmental factors, and co-morbidities, they are as varied as any of their age peers. One thing they do not share with those peers is the degenerative consequences of the specific dementia they have. The progression of their disease also follows a unique time line, even if the general symptoms (and thus perhaps functional ability) change in a fairly predictable order. In the face of these statements, it might be inferred that it is most likely people with dementia require individual but adaptive (to progression of the disease), bespoke solutions for sustained independent living.</p>
           <p>Given the breadth of individuality in people, the effects of dementias, and indeed their progression, it is impossible to view them as a single, homogeneous population in terms of specifying a single user interface. In consequence, rather than simply designing for all people living with dementia, it is suggested that design for populations at stages of functional ability be investigated. Methods that set out to identify shared and bespoke requirements are needed to systematically establish any generalization. Currently, studies on design of digital AT, and indeed other ICT for people living with dementia, need to report much-more detail on: describing their participants; details of user interface features that worked well; and how much and what form carers' help took. More attention also needs to compare strategies and features that work to identify those that are best; or at least best for specific functional ability or tasks.</p>
@@ -6173,7 +6470,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               <dt>[INDIVUI_10] </dt>
               <dd>[<cite><a class="bibref" href="#bib-Alm-1">Alm-1</a></cite>] </dd>
               <dt>[INDIVUI_12] </dt>
-              <dd> [<cite><a class="bibref" href="#bib-Armstrong">Armstrong</a></cite>] </dd>
+              <dd> [<cite><a class="bibref" href="#bib-Armstrong-1">Armstrong-1</a></cite>] </dd>
               <dt>[INDIVUI_13] </dt>
               <dd>[<cite><a class="bibref" href="#bib-Astell-1">Astell-1</a></cite>]</dd>
               <dt>[INDIVUI_25] </dt>
@@ -6189,7 +6486,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               <dt>[INDIVUI_19] </dt>
               <dd> [<cite><a class="bibref" href="#bib-Hellman-1">Hellman-1</a></cite>]</dd>
               <dt>[INDIVUI_20] </dt>
-              <dd> [<cite><a class="bibref" href="#bib-Hyry-">Hyry-</a></cite>]</dd>
+              <dd> [<cite><a class="bibref" href="#bib-Hyry-1">Hyry-1</a></cite>]</dd>
               <dt>[INDIVUI_21] </dt>
               <dd> [<cite><a class="bibref" href="#bib-Karlsson-1">Karlsson-1</a></cite>] </dd>
               <dt>[INDIVUI_23] </dt>
@@ -6703,8 +7000,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
     </section>
 
-    <section id="description" typeof="bibo:Chapter" resource="#description" property="bibo:hasPart">
-      <h3 id="h-description" resource="#h-description"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.6 </span>Description<span class="permalink" typeof="bookmark"><a href="#description" aria-label="Permalink for 3.6 Description" title="Permalink for 3.6 Description" property="url"><span property="title" content="3.6 Description">§</span></a>
+    <section id="attention-deficit-hyperactivity-disorder-adhd" typeof="bibo:Chapter" resource="#attention-deficit-hyperactivity-disorder-adhd" property="bibo:hasPart">
+      <h3 id="h-attention-deficit-hyperactivity-disorder-adhd" resource="#h-attention-deficit-hyperactivity-disorder-adhd"><span property="xhv:role" resource="xhv:heading"><span class="secno">3.6 </span>Attention deficit hyperactivity disorder (ADHD)<span class="permalink" typeof="bookmark"><a href="#attention-deficit-hyperactivity-disorder-adhd" aria-label="Permalink for 3.6 Attention deficit hyperactivity disorder (ADHD)" title="Permalink for 3.6 Attention deficit hyperactivity disorder (ADHD)" property="url"><span property="title" content="3.6 Attention deficit hyperactivity disorder (ADHD)">§</span></a>
         </span>
         </span>
       </h3>
@@ -6738,7 +7035,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <li> time estimation. </li>
         </ul>
         <p>It is unclear if any of these context-dependent cognitive effects are unique to ADHD. However, evidence suggests they are not explained by co-occurring problems and, in most instances, are more-clearly associated with ADHD (the issue being more pronounced) than with other disorders exhibiting the same issues [<cite><a class="bibref" href="#bib-Willcutt-1">Willcutt-1</a></cite>]. </p>
-        <p>Comorbidity with learning disabilities is common in people with ADHD. The literature reviewed shows a wide variance of the incidence of people with ADHD that also present with learning disabilities of between 20% and 60% [<cite><a class="bibref" href="#bib-Czamara-1">Czamara-1</a></cite>]. This highly-variable overlap has been previously attributed to inconsistencies in the definition of learning disabilities, and a general over identification of learning disabilities [<cite><a class="bibref" href="#bib-Semrud-Clikema-1">Semrud-Clikema-1</a></cite>]. However, comorbidity with reading disorder [[Germanò-1]], dyslexia, dyspraxia [<cite><a class="bibref" href="#bib-Pauc-1">Pauc-1</a></cite>], and dyscalculia [<cite><a class="bibref" href="#bib-Lindsay-1">Lindsay-1</a></cite>] have all been reported, although the underlying functional processes remain unclear [<cite><a class="bibref" href="#bib-Czamara-1">Czamara-1</a></cite>]. </p>
+        <p>Comorbidity with learning disabilities is common in people with ADHD. The literature reviewed shows a wide variance of the incidence of people with ADHD that also present with learning disabilities of between 20% and 60% [<cite><a class="bibref" href="#bib-Czamara-1">Czamara-1</a></cite>]. This highly-variable overlap has been previously attributed to inconsistencies in the definition of learning disabilities, and a general over identification of learning disabilities [<cite><a class="bibref" href="#bib-Semrud-Clikeman-1">Semrud-Clikeman-1</a></cite>]. However, comorbidity with reading disorder [[Germanò-1]], dyslexia, dyspraxia [<cite><a class="bibref" href="#bib-Pauc-1">Pauc-1</a></cite>], and dyscalculia [<cite><a class="bibref" href="#bib-Lindsay-1">Lindsay-1</a></cite>] have all been reported, although the underlying functional processes remain unclear [<cite><a class="bibref" href="#bib-Czamara-1">Czamara-1</a></cite>]. </p>
         <p>Comorbidity with behavioral disabilities (such as oppositional-defiant disorder and developmental-coordination disorder) has been shown to be extremely high (&gt;70%) amongst young children (Kadesjö &amp; Gillberg, 2001), suggesting that ADHD without comorbidity is atypical in children with ADHD. </p>
       </section>
 
@@ -9016,265 +9313,263 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </span>
       </h3>
       <dl class="bibliography" resource=""><dt id="bib-ADI-1">[ADI-1]</dt>
-        <dd>Alzheimer's disease International et al. <cite>World Alzheimer Report 2010</cite>.
+        <dd><cite>World Alzheimer Report 2010</cite>Alzheimer's disease International et al.
         </dd><dt id="bib-AE-1">[AE-1]</dt>
-        <dd>Alzheimer Europe et al. <cite>2006-2008: European Collaboration on Dementia (EuroCoDe)</cite>.
+        <dd><cite>2006-2008: European Collaboration on Dementia (EuroCoDe)</cite>Alzheimer Europe et al.
         </dd><dt id="bib-APA-1">[APA-1]</dt>
-        <dd>American Psychiatric Association et al. Washington D.C.: American Psychiatric Association. <cite>Diagnostic and statistical manual of mental disorders (DSM-5)</cite>.
+        <dd><cite>Diagnostic and statistical manual of mental disorders (DSM-5)</cite>American Psychiatric Association et al. Washington D.C.: American Psychiatric Association.
         </dd><dt id="bib-ASHA-2">[ASHA-2]</dt>
-        <dd>American Speech-Language-Hearing Association et al. <a href="http://www.asha.org/public/speech/disorders/AAC/" property="dc:references"><cite>Augmentative and Alternative Communication (AAC)</cite></a>. URL: <a href="http://www.asha.org/public/speech/disorders/AAC/" property="dc:references">http://www.asha.org/public/speech/disorders/AAC/</a>
+        <dd><a href="http://www.asha.org/public/speech/disorders/AAC/" property="dc:references"><cite>Augmentative and Alternative Communication (AAC)</cite></a>. American Speech-Language-Hearing Association et al.URL: <a href="http://www.asha.org/public/speech/disorders/AAC/" property="dc:references">http://www.asha.org/public/speech/disorders/AAC/</a>
         </dd><dt id="bib-ASHA-3">[ASHA-3]</dt>
-        <dd>the National Joint Committee for the Communicative Needs of Persons with Severe Disabilities et al. Asha, 34(Suppl. 7). <a href="http://www.asha.org/policy/GL1992-00201/" property="dc:references"><cite>Guidelines for meeting the communication needs of persons with severe disabilities</cite></a>. URL: <a href="http://www.asha.org/policy/GL1992-00201/" property="dc:references">http://www.asha.org/policy/GL1992-00201/</a>
+        <dd><a href="http://www.asha.org/policy/GL1992-00201/" property="dc:references"><cite>Guidelines for meeting the communication needs of persons with severe disabilities</cite></a>. the National Joint Committee for the Communicative Needs of Persons with Severe Disabilities et al. Asha, 34(Suppl. 7). URL: <a href="http://www.asha.org/policy/GL1992-00201/" property="dc:references">http://www.asha.org/policy/GL1992-00201/</a>
         </dd><dt id="bib-Alm-1">[Alm-1]</dt>
-        <dd>Alm, N.; Dye, R. et al. Proceedings of Accessible Design in the digital world, Dundee, 23-25 August 2005. <cite>Making software accessible to people with severe memory deficits</cite>.
+        <dd><cite>Making software accessible to people with severe memory deficits</cite>Alm, N.; Dye, R. et al. Proceedings of Accessible Design in the digital world, Dundee, 23-25 August 2005.
         </dd><dt id="bib-Alm-2">[Alm-2]</dt>
-        <dd>Alm, N.; Astell, A. et al. Lecture Notes in Computer Science (including sub-series Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), Volume 4555 LNCS, Part 2, pages 617-623. . <cite>An interactive entertainment system usable by elderly people with dementia</cite>.
+        <dd><cite>An interactive entertainment system usable by elderly people with dementia</cite>Alm, N.; Astell, A. et al. Lecture Notes in Computer Science (including sub-series Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), Volume 4555 LNCS, Part 2, pages 617-623. .
         </dd><dt id="bib-Alm-3">[Alm-3]</dt>
-        <dd>Alm, N.; Dye, R. et al. IEEE Computer, Volume 40 Issue 5, pages 35-41. <cite>A communication support system for older people with dementia</cite>.
+        <dd><cite>A communication support system for older people with dementia</cite>Alm, N.; Dye, R. et al. IEEE Computer, Volume 40 Issue 5, pages 35-41.
         </dd><dt id="bib-Alm-4">[Alm-4]</dt>
-        <dd>Alm, N.; Dye, R. et al. Proceedings of the 2003 conference on Universal usability (CUU '03). ACM, New York, NY, USA, pages 156-157. <cite>Designing an interface usable by people with dementia</cite>.
-        </dd><dt id="bib-Armstrong">[Armstrong]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd><cite>Designing an interface usable by people with dementia</cite>Alm, N.; Dye, R. et al. Proceedings of the 2003 conference on Universal usability (CUU '03). ACM, New York, NY, USA, pages 156-157.
+        </dd><dt id="bib-Armstrong-1">[Armstrong-1]</dt>
+        <dd><cite>Developing smart phone applications for people with Alzheimer's disease</cite>Armstrong, N.; Nugent, C. D. et al. Proceedings of the IEEE / EMBS Region 8 International Conference on Information Technology Applications in Biomedicine, ITAB.
         </dd><dt id="bib-Astell-1">[Astell-1]</dt>
-        <dd>Astell, A. J.; Alm, N. et al. Journal of Dementia Care, Volume 17, Issue 1, pages 36-39. <cite>Working with people with dementia to develop technology: The CIRCA and Living in the Moment projects</cite>.
+        <dd><cite>Working with people with dementia to develop technology: The CIRCA and Living in the Moment projects</cite>Astell, A. J.; Alm, N. et al. Journal of Dementia Care, Volume 17, Issue 1, pages 36-39.
         </dd><dt id="bib-Astell-2">[Astell-2]</dt>
-        <dd>Astell, A. J.; Ellis, M. P. et al. Proceedings of the International Workshop on Cognitive Prostheses and Assisted Communication, pages 16-20. <cite> "Living in the Moment": Developing an interactive multimedia activity system for elderly people with dementia</cite>.
+        <dd><cite> "Living in the Moment": Developing an interactive multimedia activity system for elderly people with dementia</cite>Astell, A. J.; Ellis, M. P. et al. Proceedings of the International Workshop on Cognitive Prostheses and Assisted Communication, pages 16-20.
         </dd><dt id="bib-Banaschewski-1">[Banaschewski-1]</dt>
-        <dd>Banaschewski, T. et al. Journal of child psychology and psychiatry, and allied disciplines, Vol 47 Issue 6. <cite>Colour perception in ADHD</cite>.
+        <dd><cite>Colour perception in ADHD</cite>Banaschewski, T. et al. Journal of child psychology and psychiatry, and allied disciplines, Vol 47 Issue 6.
         </dd><dt id="bib-Benson-1">[Benson-1]</dt>
-        <dd>Benson, D. F. et al. Oxford Univ. Press. <cite>The Neurology of Thinking</cite>.
+        <dd><cite>The Neurology of Thinking</cite>Benson, D. F. et al. Oxford Univ. Press.
         </dd><dt id="bib-Bercow-1">[Bercow-1]</dt>
         <dd><a href="http://dera.ioe.ac.uk/8405/1/7771-dcsf-bercow.pdf" property="dc:references"><cite>The Bercow Report: A Review of Services for Children and Young People 0 to 19 with Speech, Language and Communication Needs</cite></a>. URL: <a href="http://dera.ioe.ac.uk/8405/1/7771-dcsf-bercow.pdf" property="dc:references">http://dera.ioe.ac.uk/8405/1/7771-dcsf-bercow.pdf</a>
         </dd><dt id="bib-Berninger-1">[Berninger-1]</dt>
-        <dd>Berninger, B.; Virginia W. et al. Developmental Neuropsychology 33 (6). <cite>A Multidisciplinary Approach to Understanding Developmental Dyslexia Within Working-Memory Architecture: Genotypes, Phenotypes, Brain, and Instruction</cite>.
+        <dd><cite>A Multidisciplinary Approach to Understanding Developmental Dyslexia Within Working-Memory Architecture: Genotypes, Phenotypes, Brain, and Instruction</cite>Berninger, B.; Virginia W. et al. Developmental Neuropsychology 33 (6).
         </dd><dt id="bib-Black-1">[Black-1]</dt>
-        <dd>Black, S. E.; Behrmann, M. et al. Academic Press. <cite>Localization and Neuro-imaging in Neuropsychology</cite>.
+        <dd><cite>Localization and Neuro-imaging in Neuropsychology</cite>Black, S. E.; Behrmann, M. et al. Academic Press.
         </dd><dt id="bib-Boman-1">[Boman-1]</dt>
-        <dd>Boman, I.; Rosenberg, L. et al. Disability and Rehabilitation: Assistive Technology, Volume 7, Issue 5, pages 356-363. <cite>First steps in designing a videophone for people with dementia: Identification of users' potentials and the requirements of communication technology</cite>.
+        <dd><cite>First steps in designing a videophone for people with dementia: Identification of users' potentials and the requirements of communication technology</cite>Boman, I.; Rosenberg, L. et al. Disability and Rehabilitation: Assistive Technology, Volume 7, Issue 5, pages 356-363.
         </dd><dt id="bib-Brandenburg-1">[Brandenburg-1]</dt>
-        <dd>Brandenburg, C.; Worrall, A.; Rodriguez, A. D.; Copland, D. et al. Aphasiology, Vol 27 Issue 4. <cite>Mobile computing technology and aphasia: An integrated review of accessibility and potential uses</cite>.
+        <dd><cite>Mobile computing technology and aphasia: An integrated review of accessibility and potential uses</cite>Brandenburg, C.; Worrall, A.; Rodriguez, A. D.; Copland, D. et al. Aphasiology, Vol 27 Issue 4.
         </dd><dt id="bib-Brennan-1">[Brennan-1]</dt>
-        <dd>Brennan, A.; Worrall, L.; McKenna, K. et al. Aphasiology, Vol 19 Issue 8. <a href="http://www.tandfonline.com/doi/abs/10.1080/02687030444000958" property="dc:references"><cite>The relationship between specific features of aphasia-friendly written material and comprehension of written material for people with aphasia: An exploratory study</cite></a>. URL: <a href="http://www.tandfonline.com/doi/abs/10.1080/02687030444000958" property="dc:references">http://www.tandfonline.com/doi/abs/10.1080/02687030444000958</a>
+        <dd><a href="http://www.tandfonline.com/doi/abs/10.1080/02687030444000958" property="dc:references"><cite>The relationship between specific features of aphasia-friendly written material and comprehension of written material for people with aphasia: An exploratory study</cite></a>. Brennan, A.; Worrall, L.; McKenna, K. et al. Aphasiology, Vol 19 Issue 8. URL: <a href="http://www.tandfonline.com/doi/abs/10.1080/02687030444000958" property="dc:references">http://www.tandfonline.com/doi/abs/10.1080/02687030444000958</a>
         </dd><dt id="bib-Bruandet-1">[Bruandet-1]</dt>
-        <dd>Bruandet, M. et al. Neuropsychologia, Vol 42, Issue 3. <cite>A cognitive characterization of dyscalculia in Turner syndrome</cite>.
+        <dd><cite>A cognitive characterization of dyscalculia in Turner syndrome</cite>Bruandet, M. et al. Neuropsychologia, Vol 42, Issue 3.
         </dd><dt id="bib-Bussing-1">[Bussing-1]</dt>
-        <dd>Bussing, R. et al. Journal of Emotional and Behavioral Disorders, Vol 6 Issue 4. <cite>Explanatory Models of ADHD Do They Differ by Ethnicity, Child Gender, or Treatment Status?</cite>.
+        <dd><cite>Explanatory Models of ADHD Do They Differ by Ethnicity, Child Gender, or Treatment Status?</cite>Bussing, R. et al. Journal of Emotional and Behavioral Disorders, Vol 6 Issue 4.
         </dd><dt id="bib-Butterworth-1">[Butterworth-1]</dt>
-        <dd>Butterworth, B. et al. London: Macmillan. <cite>The Mathematical Brain</cite>.
+        <dd><cite>The Mathematical Brain</cite>Butterworth, B. et al. London: Macmillan.
         </dd><dt id="bib-CDC-1">[CDC-1]</dt>
-        <dd>Centers for Disease Control and Prevention et al. <a href="http://www.cdc.gov/ncbddd/adhd/diagnosis.html" property="dc:references"><cite>Attention-Deficit / Hyperactivity Disorder (ADHD) Symptoms and Diagnosis</cite></a>. URL: <a href="http://www.cdc.gov/ncbddd/adhd/diagnosis.html" property="dc:references">http://www.cdc.gov/ncbddd/adhd/diagnosis.html</a>
+        <dd><a href="http://www.cdc.gov/ncbddd/adhd/diagnosis.html" property="dc:references"><cite>Attention-Deficit / Hyperactivity Disorder (ADHD) Symptoms and Diagnosis</cite></a>. Centers for Disease Control and Prevention et al.URL: <a href="http://www.cdc.gov/ncbddd/adhd/diagnosis.html" property="dc:references">http://www.cdc.gov/ncbddd/adhd/diagnosis.html</a>
         </dd><dt id="bib-CDC-2">[CDC-2]</dt>
-        <dd>Centers for Disease Control and Prevention et al. <a href="http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html" property="dc:references"><cite>Attention-Deficit / Hyperactivity Disorder (ADHD) Key Findings: Trends in the Parent-Report of Health Care Provider-Diagnosis and Medication Treatment for ADHD: United States, 2003-2011</cite></a>. URL: <a href="http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html" property="dc:references">http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html</a>
+        <dd><a href="http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html" property="dc:references"><cite>Attention-Deficit / Hyperactivity Disorder (ADHD) Key Findings: Trends in the Parent-Report of Health Care Provider-Diagnosis and Medication Treatment for ADHD: United States, 2003-2011</cite></a>. Centers for Disease Control and Prevention et al.URL: <a href="http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html" property="dc:references">http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html</a>
         </dd><dt id="bib-CDC-3">[CDC-3]</dt>
-        <dd>Centers for Disease Control and Prevention et al. <a href="http://www.cdc.gov/ncbddd/adhd/facts.html" property="dc:references"><cite>Attention-Deficit / Hyperactivity Disorder (ADHD): Facts About ADHD</cite></a>. URL: <a href="http://www.cdc.gov/ncbddd/adhd/facts.html" property="dc:references">http://www.cdc.gov/ncbddd/adhd/facts.html</a>
+        <dd><a href="http://www.cdc.gov/ncbddd/adhd/facts.html" property="dc:references"><cite>Attention-Deficit / Hyperactivity Disorder (ADHD): Facts About ADHD</cite></a>. Centers for Disease Control and Prevention et al.URL: <a href="http://www.cdc.gov/ncbddd/adhd/facts.html" property="dc:references">http://www.cdc.gov/ncbddd/adhd/facts.html</a>
         </dd><dt id="bib-CDC-4">[CDC-4]</dt>
-        <dd>United States Centers for Disease Control and Prevention et al. <a href="http://www.cdc.gov/ncbddd/autism/facts.html" property="dc:references"><cite>Autism Spectrum Disorder (ASD): Facts About ASD</cite></a>. URL: <a href="http://www.cdc.gov/ncbddd/autism/facts.html" property="dc:references">http://www.cdc.gov/ncbddd/autism/facts.html</a>
+        <dd><a href="http://www.cdc.gov/ncbddd/autism/facts.html" property="dc:references"><cite>Autism Spectrum Disorder (ASD): Facts About ASD</cite></a>. United States Centers for Disease Control and Prevention et al.URL: <a href="http://www.cdc.gov/ncbddd/autism/facts.html" property="dc:references">http://www.cdc.gov/ncbddd/autism/facts.html</a>
         </dd><dt id="bib-CDC-5">[CDC-5]</dt>
-        <dd>United States Centers for Disease Control and Prevention et al. <a href="http://www.cdc.gov/ncbddd/autism/data.html" property="dc:references"><cite>Autism Spectrum Disorder (ASD): Data &amp; Statistics</cite></a>. URL: <a href="http://www.cdc.gov/ncbddd/autism/data.html" property="dc:references">http://www.cdc.gov/ncbddd/autism/data.html</a>
+        <dd><a href="http://www.cdc.gov/ncbddd/autism/data.html" property="dc:references"><cite>Autism Spectrum Disorder (ASD): Data &amp; Statistics</cite></a>. United States Centers for Disease Control and Prevention et al.URL: <a href="http://www.cdc.gov/ncbddd/autism/data.html" property="dc:references">http://www.cdc.gov/ncbddd/autism/data.html</a>
         </dd><dt id="bib-CDC-6">[CDC-6]</dt>
-        <dd>National Center on Birth Defects and Developmental Disabilities, Centers for Disease Control and Prevention et al. Surveillance Summaries, Vol 63 No. SS02. <a href="http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w" property="dc:references"><cite>Prevalence of Autism Spectrum Disorder Among Children Aged 8 Years — Autism and Developmental Disabilities Monitoring Network, 11 Sites, United States</cite></a>. URL: <a href="http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w" property="dc:references">http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w</a>
+        <dd><a href="http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w" property="dc:references"><cite>Prevalence of Autism Spectrum Disorder Among Children Aged 8 Years — Autism and Developmental Disabilities Monitoring Network, 11 Sites, United States</cite></a>. National Center on Birth Defects and Developmental Disabilities, Centers for Disease Control and Prevention et al. Surveillance Summaries, Vol 63 No. SS02. URL: <a href="http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w" property="dc:references">http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w</a>
         </dd><dt id="bib-CUMC-1">[CUMC-1]</dt>
-        <dd>Columbia University Medical Center et al. ScienceDaily Research News. <a href="http://www.sciencedaily.com/releases/2013/12/131222160018.htm" property="dc:references"><cite>Where Alzheimer's starts and how it spreads</cite></a>. URL: <a href="http://www.sciencedaily.com/releases/2013/12/131222160018.htm" property="dc:references">http://www.sciencedaily.com/releases/2013/12/131222160018.htm</a>
+        <dd><a href="http://www.sciencedaily.com/releases/2013/12/131222160018.htm" property="dc:references"><cite>Where Alzheimer's starts and how it spreads</cite></a>. Columbia University Medical Center et al. ScienceDaily Research News. URL: <a href="http://www.sciencedaily.com/releases/2013/12/131222160018.htm" property="dc:references">http://www.sciencedaily.com/releases/2013/12/131222160018.htm</a>
         </dd><dt id="bib-Cao-1">[Cao-1]</dt>
-        <dd>Fan Cao; Tali Bitan; Tai-Li Chou et al. Journal of Child Psychology and Psychiatry, Vol 47, Issue 10. <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03" property="dc:references"><cite>Deficient orthographic and phonological representations in children with dyslexia revealed by brain activation patterns</cite></a>. URL: <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03" property="dc:references">http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03</a>
+        <dd><a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03" property="dc:references"><cite>Deficient orthographic and phonological representations in children with dyslexia revealed by brain activation patterns</cite></a>. Fan Cao; Tali Bitan; Tai-Li Chou et al. Journal of Child Psychology and Psychiatry, Vol 47, Issue 10. URL: <a href="http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03" property="dc:references">http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03</a>
         </dd><dt id="bib-Castellanos-1">[Castellanos-1]</dt>
-        <dd>Castellanos, F. X.; Sonuga-Barke, J. S.; Milham, M. P.; Tannock, R. et al. Trends in Cognitive Sciences, Vol 10 Issue 3. <cite>Characterizing cognition in ADHD: beyond executive dysfunction</cite>.
+        <dd><cite>Characterizing cognition in ADHD: beyond executive dysfunction</cite>Castellanos, F. X.; Sonuga-Barke, J. S.; Milham, M. P.; Tannock, R. et al. Trends in Cognitive Sciences, Vol 10 Issue 3.
+        </dd><dt id="bib-Chandaria-1">[Chandaria-1]</dt>
+        <dd><cite>Short changed: Protecting people with dementia from financial abuse</cite>Chandaria, K. et al. Alzheimer’s Society.
         </dd><dt id="bib-Cohen-Kadosh-1">[Cohen-Kadosh-1]</dt>
-        <dd>Cohen Kadosh, R. et al. Current Biology, Vol 17, Issue 8. <a href="http://www.sciencedirect.com/science/article/pii/S0960982207010652" property="dc:references"><cite>Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing</cite></a>. URL: <a href="http://www.sciencedirect.com/science/article/pii/S0960982207010652" property="dc:references">http://www.sciencedirect.com/science/article/pii/S0960982207010652</a>
+        <dd><a href="http://www.sciencedirect.com/science/article/pii/S0960982207010652" property="dc:references"><cite>Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing</cite></a>. Cohen Kadosh, R. et al. Current Biology, Vol 17, Issue 8. URL: <a href="http://www.sciencedirect.com/science/article/pii/S0960982207010652" property="dc:references">http://www.sciencedirect.com/science/article/pii/S0960982207010652</a>
         </dd><dt id="bib-Connect-1">[Connect-1]</dt>
-        <dd>Connect - the communication disability network et al. <a href="http://www.ukconnect.org/aphasiaquestionsandanswers_302.aspx" property="dc:references"><cite>Aphasia questions and answers: How many people have aphasia?</cite></a>. URL: <a href="http://www.ukconnect.org/aphasiaquestionsandanswers_302.aspx" property="dc:references">http://www.ukconnect.org/aphasiaquestionsandanswers_302.aspx</a>
+        <dd><a href="http://www.ukconnect.org/aphasiaquestionsandanswers_302.aspx" property="dc:references"><cite>Aphasia questions and answers: How many people have aphasia?</cite></a>. Connect - the communication disability network et al.URL: <a href="http://www.ukconnect.org/aphasiaquestionsandanswers_302.aspx" property="dc:references">http://www.ukconnect.org/aphasiaquestionsandanswers_302.aspx</a>
+        </dd><dt id="bib-Cudd-1">[Cudd-1]</dt>
+        <dd><cite>How Individual Should Digital AT User Interfaces Be for People with Dementia</cite>Cudd, P.; Greasley, P. et al. Assistive Technology Research Series, Volume 33: Assistive Technology: From Research to Practice, pages 602-609.
         </dd><dt id="bib-Cummins-1">[Cummins-1]</dt>
-        <dd>Cummins, M. et al. <a href="http://marlacummins.com/50-tools-to-manage-your-adult-adhd/" property="dc:references"><cite>Tools To manage Your Adult ADHD - UPDATED</cite></a>. URL: <a href="http://marlacummins.com/50-tools-to-manage-your-adult-adhd/" property="dc:references">http://marlacummins.com/50-tools-to-manage-your-adult-adhd/</a>
+        <dd><a href="http://marlacummins.com/50-tools-to-manage-your-adult-adhd/" property="dc:references"><cite>Tools To manage Your Adult ADHD - UPDATED</cite></a>. Cummins, M. et al.URL: <a href="http://marlacummins.com/50-tools-to-manage-your-adult-adhd/" property="dc:references">http://marlacummins.com/50-tools-to-manage-your-adult-adhd/</a>
         </dd><dt id="bib-Czamara-1">[Czamara-1]</dt>
-        <dd>Czamara, D. et al. PLOS One, Vol 8(5). <cite>Children with ADHD symptoms have a higher risk for reading, spelling and math difficulties in the GINIplus and LISAplus cohort studies</cite>.
+        <dd><cite>Children with ADHD symptoms have a higher risk for reading, spelling and math difficulties in the GINIplus and LISAplus cohort studies</cite>Czamara, D. et al. PLOS One, Vol 8(5).
         </dd><dt id="bib-DEEP-1">[DEEP-1]</dt>
-        <dd>Dementia Engagement and Empowerment Project (DEEP) et al. <a href="http://dementiavoices.org.uk/wp-content/uploads/2013/11/DEEP-Guide-Creating-websites.pdf" property="dc:references"><cite>Creating websites for people with dementia</cite></a>. URL: <a href="http://dementiavoices.org.uk/wp-content/uploads/2013/11/DEEP-Guide-Creating-websites.pdf" property="dc:references">http://dementiavoices.org.uk/wp-content/uploads/2013/11/DEEP-Guide-Creating-websites.pdf</a>
+        <dd><a href="http://dementiavoices.org.uk/wp-content/uploads/2013/11/DEEP-Guide-Creating-websites.pdf" property="dc:references"><cite>Creating websites for people with dementia</cite></a>. Dementia Engagement and Empowerment Project (DEEP) et al.URL: <a href="http://dementiavoices.org.uk/wp-content/uploads/2013/11/DEEP-Guide-Creating-websites.pdf" property="dc:references">http://dementiavoices.org.uk/wp-content/uploads/2013/11/DEEP-Guide-Creating-websites.pdf</a>
         </dd><dt id="bib-Dahn-1">[Dahn-1]</dt>
-        <dd>Dahn, I.; Ferdinand, P.; Lachmann, P. et al. Computers helping people with special needs, 14 international conference ICCHP 2014, pages 323-330. <cite>Supporting senior citizens in using tablet computers</cite>.
+        <dd><cite>Supporting senior citizens in using tablet computers</cite>Dahn, I.; Ferdinand, P.; Lachmann, P. et al. Computers helping people with special needs, 14 international conference ICCHP 2014, pages 323-330.
         </dd><dt id="bib-Davies-1">[Davies-1]</dt>
-        <dd>Davies, R. J.; Nugent, C. D. et al. Pervasive and Mobile Computing, Volume 5, Issue 3, pages 253-267. . <cite> A user driven approach to develop a cognitive prosthetic to address the unmet needs of people with mild dementia</cite>.
+        <dd><cite> A user driven approach to develop a cognitive prosthetic to address the unmet needs of people with mild dementia</cite>Davies, R. J.; Nugent, C. D. et al. Pervasive and Mobile Computing, Volume 5, Issue 3, pages 253-267. .
         </dd><dt id="bib-De-Magalhaes-1">[De-Magalhaes-1]</dt>
-        <dd>De Magalhaes, J. P. et al. <a href="http://www.senescence.info/" property="dc:references"><cite>Welcome to senescence.info! An educational and information resource on the science of aging</cite></a>. URL: <a href="http://www.senescence.info/" property="dc:references">http://www.senescence.info/</a>
+        <dd><a href="http://www.senescence.info/" property="dc:references"><cite>Welcome to senescence.info! An educational and information resource on the science of aging</cite></a>. De Magalhaes, J. P. et al.URL: <a href="http://www.senescence.info/" property="dc:references">http://www.senescence.info/</a>
         </dd><dt id="bib-Dejerine-1">[Dejerine-1]</dt>
-        <dd>Dejerine, J. et al. C. R. Societe du Biologie 43. <cite>Sur un cas de cécité verbale avec agraphie, suivi d’autopsie</cite>.
+        <dd><cite>Sur un cas de cécité verbale avec agraphie, suivi d’autopsie</cite>Dejerine, J. et al. C. R. Societe du Biologie 43.
         </dd><dt id="bib-Demonet-1">[Demonet-1]</dt>
-        <dd>Demonet, J. F.; Price, C.; Wise., R.; Frackowiak, R. S. J. et al. Brain 117. <cite>A PET study of cognitive strategies in normal subjects during language tasks influence of phonetic ambiguity and sequence processing on phoneme monitoring</cite>.
+        <dd><cite>A PET study of cognitive strategies in normal subjects during language tasks influence of phonetic ambiguity and sequence processing on phoneme monitoring</cite>Demonet, J. F.; Price, C.; Wise., R.; Frackowiak, R. S. J. et al. Brain 117.
         </dd><dt id="bib-Demurie-1">[Demurie-1]</dt>
-        <dd>Demurie, E.; Roeyers, H.; Baeyens, D.; Sonuga-Barke, E. et al. Journal of Child Psychology and Psychiatry, Vol 52 Issue 11. <cite>Common alterations in sensitivity to type but not amount of reward in ADHD and autism spectrum disorders</cite>.
+        <dd><cite>Common alterations in sensitivity to type but not amount of reward in ADHD and autism spectrum disorders</cite>Demurie, E.; Roeyers, H.; Baeyens, D.; Sonuga-Barke, E. et al. Journal of Child Psychology and Psychiatry, Vol 52 Issue 11.
         </dd><dt id="bib-Dietz-1">[Dietz-1]</dt>
-        <dd>Dietz, A.; Hux, K.; McKelvey, M. L.; Beukelman, D. R.; Weissling, K. et al. Aphasiology, Vol 23 Issues 7-8. <cite>Reading comprehension by people with chronic aphasia: A comparison of three levels of visuographic contextual support</cite>.
+        <dd><cite>Reading comprehension by people with chronic aphasia: A comparison of three levels of visuographic contextual support</cite>Dietz, A.; Hux, K.; McKelvey, M. L.; Beukelman, D. R.; Weissling, K. et al. Aphasiology, Vol 23 Issues 7-8.
         </dd><dt id="bib-Dobsz-1">[Dobsz-1]</dt>
-        <dd>Dobsz, K.; Dobsz, M. et al. Computers helping people with special needs, 14 international conference ICCHP 2014, pages 399-402. <cite>Tablets in the rehabilitation of memory impairment</cite>.
+        <dd><cite>Tablets in the rehabilitation of memory impairment</cite>Dobsz, K.; Dobsz, M. et al. Computers helping people with special needs, 14 international conference ICCHP 2014, pages 399-402.
         </dd><dt id="bib-Donnelly-1">[Donnelly-1]</dt>
-        <dd>Donnelly, M.; Nugent, C et al. IEEE Multimedia, Volume 17, Issue 2, pages 42-51. <cite>A mobile multimedia technology to aid those with alzheimer's disease</cite>.
+        <dd><cite>A mobile multimedia technology to aid those with alzheimer's disease</cite>Donnelly, M.; Nugent, C et al. IEEE Multimedia, Volume 17, Issue 2, pages 42-51.
         </dd><dt id="bib-Duffy-1">[Duffy-1]</dt>
-        <dd>Duffy, F. et al. ADDitude. <a href="http://www.additudemag.com/adhd/article/9365.html" property="dc:references"><cite>The Write Tools for ADHD Students</cite></a>. URL: <a href="http://www.additudemag.com/adhd/article/9365.html" property="dc:references">http://www.additudemag.com/adhd/article/9365.html</a>
+        <dd><a href="http://www.additudemag.com/adhd/article/9365.html" property="dc:references"><cite>The Write Tools for ADHD Students</cite></a>. Duffy, F. et al. ADDitude. URL: <a href="http://www.additudemag.com/adhd/article/9365.html" property="dc:references">http://www.additudemag.com/adhd/article/9365.html</a>
         </dd><dt id="bib-Eden-1">[Eden-1]</dt>
-        <dd>Eden, G. F; VanMeter, J. W.; Rumsey, J. M.; Maisog, J. M.; Woods, R. P.; Zeffiro, T. A. et al. Nature (London) 389. <cite>Abnormal processing of visual motion in dyslexia revealed by functional brain imaging</cite>.
+        <dd><cite>Abnormal processing of visual motion in dyslexia revealed by functional brain imaging</cite>Eden, G. F; VanMeter, J. W.; Rumsey, J. M.; Maisog, J. M.; Woods, R. P.; Zeffiro, T. A. et al. Nature (London) 389.
         </dd><dt id="bib-Fabian-1">[Fabian-1]</dt>
-        <dd>Fabian, D.; Flatt, T. et al. Nature Education Knowledge, Vol 3 Issue 10. <cite>The Evolution of Aging</cite>.
+        <dd><cite>The Evolution of Aging</cite>Fabian, D.; Flatt, T. et al. Nature Education Knowledge, Vol 3 Issue 10.
         </dd><dt id="bib-Faraone-1">[Faraone-1]</dt>
-        <dd>Faraone, S. V.; Sergeant, J.; Gilberg, C.; Biedrman, J. et al. World Psychiatry, Vol 2 Issue 2. <cite>The worldwide prevalence of ADHD: is it an American condition?</cite>.
+        <dd><cite>The worldwide prevalence of ADHD: is it an American condition?</cite>Faraone, S. V.; Sergeant, J.; Gilberg, C.; Biedrman, J. et al. World Psychiatry, Vol 2 Issue 2.
         </dd><dt id="bib-Friedman-1">[Friedman-1]</dt>
-        <dd>Friedman, R. F.; Ween, J. E.; Albert, M. L. et al. Oxford Univ. Press, New York. <cite>Clinical Neuropsychology</cite>.
+        <dd><cite>Clinical Neuropsychology</cite>Friedman, R. F.; Ween, J. E.; Albert, M. L. et al. Oxford Univ. Press, New York.
         </dd><dt id="bib-Friston-1">[Friston-1]</dt>
-        <dd>Friston, K. J.; Ashburner, J.; Frith, C. D; Poline, J.-B.; Heather,J. D.; Frackowiak, R. S. J. et al. Human Brain Mapping, Vol 2, Issue 4. <cite>Statistical parametric maps in functional imaging: a general linear approach</cite>.
+        <dd><cite>Statistical parametric maps in functional imaging: a general linear approach</cite>Friston, K. J.; Ashburner, J.; Frith, C. D; Poline, J.-B.; Heather,J. D.; Frackowiak, R. S. J. et al. Human Brain Mapping, Vol 2, Issue 4.
         </dd><dt id="bib-Geary-1">[Geary-1]</dt>
-        <dd>Geary, D.C. et al. Psychological Bulletin, Vol 114, Issue 2. <a href="http://psycnet.apa.org/psycinfo/1994-02259-001" property="dc:references"><cite>Mathematical disabilities: cognitive, neuropsychological, and genetic components</cite></a>. URL: <a href="http://psycnet.apa.org/psycinfo/1994-02259-001" property="dc:references">http://psycnet.apa.org/psycinfo/1994-02259-001</a>
+        <dd><a href="http://psycnet.apa.org/psycinfo/1994-02259-001" property="dc:references"><cite>Mathematical disabilities: cognitive, neuropsychological, and genetic components</cite></a>. Geary, D.C. et al. Psychological Bulletin, Vol 114, Issue 2. URL: <a href="http://psycnet.apa.org/psycinfo/1994-02259-001" property="dc:references">http://psycnet.apa.org/psycinfo/1994-02259-001</a>
         </dd><dt id="bib-Geschwind-1">[Geschwind-1]</dt>
-        <dd>Geschwind, N. et al. Brain 88. <cite>Disconnexion syndromes in animals and man. I.</cite>.
+        <dd><cite>Disconnexion syndromes in animals and man. I.</cite>Geschwind, N. et al. Brain 88.
         </dd><dt id="bib-Greasley-1">[Greasley-1]</dt>
-        <dd>Greasley, P.; Cudd, P. et al. AAATE proceedings. <cite>Language and Communication in the Dementias: Implications for User Interface Design</cite>.
+        <dd><cite>Language and Communication in the Dementias: Implications for User Interface Design</cite>Greasley, P.; Cudd, P. et al. AAATE proceedings.
         </dd><dt id="bib-Hellman-1">[Hellman-1]</dt>
-        <dd>Hellman, R. et al. Advanced Technologies and Societal Change, pages 167-176. <cite>Usable User Interfaces for Persons with Memory Impairments</cite>.
-        </dd><dt id="bib-Henderson">[Henderson]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd><cite>Usable User Interfaces for Persons with Memory Impairments</cite>Hellman, R. et al. Advanced Technologies and Societal Change, pages 167-176.
         </dd><dt id="bib-Henderson-1">[Henderson-1]</dt>
-        <dd>Henderson, V. W. et al. Brain Lang. 29. <cite>Anatomy of posterior pathways in reading: A reassessment</cite>.
+        <dd><cite>Anatomy of posterior pathways in reading: A reassessment</cite>Henderson, V. W. et al. Brain Lang. 29.
         </dd><dt id="bib-Herbert-1">[Herbert-1]</dt>
-        <dd>Herbert, R.; Haw, C.; Brown, C.; Gregory, E.; Brumfitt, S. et al. London: Stroke Association. <cite>Accessible Information Guidelines</cite>.
+        <dd><cite>Accessible Information Guidelines</cite>Herbert, R.; Haw, C.; Brown, C.; Gregory, E.; Brumfitt, S. et al. London: Stroke Association.
         </dd><dt id="bib-Horton-1">[Horton-1]</dt>
-        <dd>Horton, S.; Quesenbery, W. et al. UX Magazine, No. 1216. <a href="http://uxmag.com/articles/book-excerpt-a-web-for-everyone" property="dc:references"><cite>Book Excerpt: A Web for Everyone</cite></a>. URL: <a href="http://uxmag.com/articles/book-excerpt-a-web-for-everyone" property="dc:references">http://uxmag.com/articles/book-excerpt-a-web-for-everyone</a>
-        </dd><dt id="bib-Hyry-">[Hyry-]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd><a href="http://uxmag.com/articles/book-excerpt-a-web-for-everyone" property="dc:references"><cite>Book Excerpt: A Web for Everyone</cite></a>. Horton, S.; Quesenbery, W. et al. UX Magazine, No. 1216. URL: <a href="http://uxmag.com/articles/book-excerpt-a-web-for-everyone" property="dc:references">http://uxmag.com/articles/book-excerpt-a-web-for-everyone</a>
+        </dd><dt id="bib-Hyry-1">[Hyry-1]</dt>
+        <dd><cite>Requirements guideline of assistive technology for people suffering from dementia</cite>Hyry, J.; Yamamoto, G.; Pulli, P. et al. ACM International Conference Proceeding Series. ISABEL '11 Proceedings of the 4th International Symposium on Applied Sciences in Biomedical and Communication Technologies, Article Number 39.
         </dd><dt id="bib-Karlsson-1">[Karlsson-1]</dt>
-        <dd>Karlsson, E.; Axelsson, K. et al. Open Nursing Journal, Volume 5, pages, 102-110. <cite> The challenge of coming to terms with the use of a new digital assistive device: A case study of two persons with mild dementia</cite>.
+        <dd><cite> The challenge of coming to terms with the use of a new digital assistive device: A case study of two persons with mild dementia</cite>Karlsson, E.; Axelsson, K. et al. Open Nursing Journal, Volume 5, pages, 102-110.
         </dd><dt id="bib-Kerkhof-1">[Kerkhof-1]</dt>
-        <dd>Kerkhof, Y.; Rabiee, F.; Willems, C. G. et al. Assistive Technology Research Series, Volume 29, pages 3-9. <cite>Memory aid to structure and support daily activities for people with dementia</cite>.
+        <dd><cite>Memory aid to structure and support daily activities for people with dementia</cite>Kerkhof, Y.; Rabiee, F.; Willems, C. G. et al. Assistive Technology Research Series, Volume 29, pages 3-9.
         </dd><dt id="bib-Kessler-1">[Kessler-1]</dt>
-        <dd>Kessler, R. C. et al. The American Journal of Psychiatry, Vol 163 Issue 4. <cite>The prevalence and correlates of adult ADHD in the United States: results from the National Comorbidity Survey Replication</cite>.
+        <dd><cite>The prevalence and correlates of adult ADHD in the United States: results from the National Comorbidity Survey Replication</cite>Kessler, R. C. et al. The American Journal of Psychiatry, Vol 163 Issue 4.
         </dd><dt id="bib-Kim-1">[Kim-1]</dt>
-        <dd>Kim, Y.; Leventhal, B.; Koh, Y. et al. American Journal of Psychiatry, Vol 170 Issue 6. <cite>Prevalence of autism spectrum disorders in a total population sample</cite>.
+        <dd><cite>Prevalence of autism spectrum disorders in a total population sample</cite>Kim, Y.; Leventhal, B.; Koh, Y. et al. American Journal of Psychiatry, Vol 170 Issue 6.
         </dd><dt id="bib-Kitching-1">[Kitching-1]</dt>
-        <dd>Kitching, J. et al. Journal of the Royal Society of Medicine , Vol 83 Issue 5. <cite>Patient information lea?ets: The state of the art</cite>.
+        <dd><cite>Patient information lea?ets: The state of the art</cite>Kitching, J. et al. Journal of the Royal Society of Medicine , Vol 83 Issue 5.
         </dd><dt id="bib-Ladislav-1">[Ladislav-1]</dt>
-        <dd>Ladislav, K. et al. Journal of Learning Disabilities. vol. 7 no. 3. <a href="http://ldx.sagepub.com/content/7/3/164.short" property="dc:references"><cite>Developmental Dyscalculia</cite></a>. URL: <a href="http://ldx.sagepub.com/content/7/3/164.short" property="dc:references">http://ldx.sagepub.com/content/7/3/164.short</a>
+        <dd><a href="http://ldx.sagepub.com/content/7/3/164.short" property="dc:references"><cite>Developmental Dyscalculia</cite></a>. Ladislav, K. et al. Journal of Learning Disabilities. vol. 7 no. 3. URL: <a href="http://ldx.sagepub.com/content/7/3/164.short" property="dc:references">http://ldx.sagepub.com/content/7/3/164.short</a>
         </dd><dt id="bib-Lauriks-1">[Lauriks-1]</dt>
-        <dd>Lauriks, S.; Reinersmann, A. et al. Ageing Research Reviews, Volume 6, Issue 3, pages 223-246. <cite>Review of ICT-based services for identified unmet needs in people with dementia</cite>.
+        <dd><cite>Review of ICT-based services for identified unmet needs in people with dementia</cite>Lauriks, S.; Reinersmann, A. et al. Ageing Research Reviews, Volume 6, Issue 3, pages 223-246.
         </dd><dt id="bib-Lim-1">[Lim-1]</dt>
-        <dd> Lim, F. S.; Wallace, T. et al. Gerontology, Volume 59, Number 2, pages 174-182. <cite>Usability of tablet computers by people with early-stage dementia</cite>.
+        <dd><cite>Usability of tablet computers by people with early-stage dementia</cite> Lim, F. S.; Wallace, T. et al. Gerontology, Volume 59, Number 2, pages 174-182.
         </dd><dt id="bib-Lindsay-1">[Lindsay-1]</dt>
-        <dd>Lindsay, R. L.; Tomazic, T.; Accardo, P. J. et al. Journal of developmental and behavioral pediatrics, Vol 22 Issue 5. <cite>Attentional function as measured by a Continuous Performance Task in children with dyscalculia</cite>.
+        <dd><cite>Attentional function as measured by a Continuous Performance Task in children with dyscalculia</cite>Lindsay, R. L.; Tomazic, T.; Accardo, P. J. et al. Journal of developmental and behavioral pediatrics, Vol 22 Issue 5.
         </dd><dt id="bib-Lyon-1">[Lyon-1]</dt>
-        <dd>Lyon, G.; Rumsey J.; Constable, R. T.; Shaywitz, S. et al. Brookes Publishing Company. <cite>Neuroimaging a window to the neurological foundations of learning and behavior in children</cite>.
+        <dd><cite>Neuroimaging a window to the neurological foundations of learning and behavior in children</cite>Lyon, G.; Rumsey J.; Constable, R. T.; Shaywitz, S. et al. Brookes Publishing Company.
         </dd><dt id="bib-Martinussen-1">[Martinussen-1]</dt>
-        <dd>Martinussen, R.; Hayden, J.; Hogg-Johnson, S.; Tannock, R. et al. Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 44 Issue 4. <cite>A Meta-Analysis of Working Memory Impairments in Children With Attention-Deficit/Hyperactivity Disorder</cite>.
+        <dd><cite>A Meta-Analysis of Working Memory Impairments in Children With Attention-Deficit/Hyperactivity Disorder</cite>Martinussen, R.; Hayden, J.; Hogg-Johnson, S.; Tannock, R. et al. Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 44 Issue 4.
         </dd><dt id="bib-Mayo-1">[Mayo-1]</dt>
-        <dd>Mayo Clinic et al. <a href="http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647" property="dc:references"><cite>Attention-deficit/hyperactivity disorder (ADHD) in children Treatments and drugs</cite></a>. URL: <a href="http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647" property="dc:references">http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647</a>
+        <dd><a href="http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647" property="dc:references"><cite>Attention-deficit/hyperactivity disorder (ADHD) in children Treatments and drugs</cite></a>. Mayo Clinic et al.URL: <a href="http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647" property="dc:references">http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647</a>
         </dd><dt id="bib-Meiland-1">[Meiland-1]</dt>
-        <dd>Meiland, F. J. M.; De Boer, M. E. et al. Communications in Computer and Information Science Volume 277 CCIS, pages 146-151. <cite>Functional requirements for assistive technology for people with cognitive impairments and dementia</cite>.
+        <dd><cite>Functional requirements for assistive technology for people with cognitive impairments and dementia</cite>Meiland, F. J. M.; De Boer, M. E. et al. Communications in Computer and Information Science Volume 277 CCIS, pages 146-151.
         </dd><dt id="bib-Milliken-1">[Milliken-1]</dt>
-        <dd>Milliken, N.; Grainger J. <cite>Autism Challenges and Avoidances, Interview of Anonymous User X</cite>.
+        <dd><cite>Autism Challenges and Avoidances, Interview of Anonymous User X</cite>Milliken, N.; Grainger J.
         </dd><dt id="bib-Mosby-1">[Mosby-1]</dt>
-        <dd>Mosby et al. Elsevier. <cite>Mosby's Medical Dictionary, 8th edition</cite>.
+        <dd><cite>Mosby's Medical Dictionary, 8th edition</cite>Mosby et al. Elsevier.
         </dd><dt id="bib-Muskens-1">[Muskens-1]</dt>
-        <dd>Muskens, L.; van Lent, R. et al. Computers helping people with special needs, 14 international conference ICCHP 2014, pages 392 - 393. <cite>Never too Old to Use a Tablet: Designing Tablet Applications for the Cognitively and Physically Impaired Elderly</cite>.
+        <dd><cite>Never too Old to Use a Tablet: Designing Tablet Applications for the Cognitively and Physically Impaired Elderly</cite>Muskens, L.; van Lent, R. et al. Computers helping people with special needs, 14 international conference ICCHP 2014, pages 392 - 393.
         </dd><dt id="bib-NIA-1">[NIA-1]</dt>
-        <dd>National Institute on Aging et al. National Institutes of Health. <a href="https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet" property="dc:references"><cite>Alzheimer's Disease Fact Sheet</cite></a>. URL: <a href="https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet" property="dc:references">https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet</a>
+        <dd><a href="https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet" property="dc:references"><cite>Alzheimer's Disease Fact Sheet</cite></a>. National Institute on Aging et al. National Institutes of Health. URL: <a href="https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet" property="dc:references">https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet</a>
         </dd><dt id="bib-NIDCD-1">[NIDCD-1]</dt>
-        <dd>National Institute on Deafness and Other Communication Disorders (NIDCD) et al. <a href="http://www.nidcd.nih.gov/health/statistics/vsl/Pages/stats.aspx" property="dc:references"><cite>Quick Statistics</cite></a>. URL: <a href="http://www.nidcd.nih.gov/health/statistics/vsl/Pages/stats.aspx" property="dc:references">http://www.nidcd.nih.gov/health/statistics/vsl/Pages/stats.aspx</a>
+        <dd><a href="http://www.nidcd.nih.gov/health/statistics/vsl/Pages/stats.aspx" property="dc:references"><cite>Quick Statistics</cite></a>. National Institute on Deafness and Other Communication Disorders (NIDCD) et al.URL: <a href="http://www.nidcd.nih.gov/health/statistics/vsl/Pages/stats.aspx" property="dc:references">http://www.nidcd.nih.gov/health/statistics/vsl/Pages/stats.aspx</a>
         </dd><dt id="bib-NRC-1">[NRC-1]</dt>
-        <dd>National Resource Center on ADHD et al. <a href="http://www.help4adhd.org/en/about/causes" property="dc:references"><cite>About ADHD Causes and Brain Chemistry</cite></a>. URL: <a href="http://www.help4adhd.org/en/about/causes" property="dc:references">http://www.help4adhd.org/en/about/causes</a>
+        <dd><a href="http://www.help4adhd.org/en/about/causes" property="dc:references"><cite>About ADHD Causes and Brain Chemistry</cite></a>. National Resource Center on ADHD et al.URL: <a href="http://www.help4adhd.org/en/about/causes" property="dc:references">http://www.help4adhd.org/en/about/causes</a>
         </dd><dt id="bib-Nigg-1">[Nigg-1]</dt>
-        <dd>Nigg, J. T. et al. Psychiatric Times. <a href="http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder" property="dc:references"><cite>Cognitive Impairments Found With Attention-Deficit/Hyperactivity Disorder</cite></a>. URL: <a href="http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder" property="dc:references">http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder</a>
+        <dd><a href="http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder" property="dc:references"><cite>Cognitive Impairments Found With Attention-Deficit/Hyperactivity Disorder</cite></a>. Nigg, J. T. et al. Psychiatric Times. URL: <a href="http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder" property="dc:references">http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder</a>
         </dd><dt id="bib-Nunes-1">[Nunes-1]</dt>
-        <dd>Nunes, F.; Kerwin, M. et al. ASSETS '12 Proceedings of the 14th international ACM SIGACCESS conference on Computers and accessibility, pages 41-48. <cite>Design recommendations for tv user interfaces for older adults: findings from the eCAALYX project</cite>.
+        <dd><cite>Design recommendations for tv user interfaces for older adults: findings from the eCAALYX project</cite>Nunes, F.; Kerwin, M. et al. ASSETS '12 Proceedings of the 14th international ACM SIGACCESS conference on Computers and accessibility, pages 41-48.
         </dd><dt id="bib-Orpwood-1">[Orpwood-1]</dt>
-        <dd>Orpwoodm R.; Chadd, J. et al. Universal Access in the Information Society, Volume 9, Issue 3, pages 249-259. <cite>Designing technology to improve quality of life for people with dementia: User-led approaches.</cite>.
+        <dd><cite>Designing technology to improve quality of life for people with dementia: User-led approaches.</cite>Orpwoodm R.; Chadd, J. et al. Universal Access in the Information Society, Volume 9, Issue 3, pages 249-259.
         </dd><dt id="bib-PECS-1">[PECS-1]</dt>
-        <dd>Picture Exchange Communication System USA et al. Pyramid Educational Consultants. <a href="http://www.pecsusa.com/pecs.php" property="dc:references"><cite>What is PECS?</cite></a>. URL: <a href="http://www.pecsusa.com/pecs.php" property="dc:references">http://www.pecsusa.com/pecs.php</a>
+        <dd><a href="http://www.pecsusa.com/pecs.php" property="dc:references"><cite>What is PECS?</cite></a>. Picture Exchange Communication System USA et al. Pyramid Educational Consultants. URL: <a href="http://www.pecsusa.com/pecs.php" property="dc:references">http://www.pecsusa.com/pecs.php</a>
         </dd><dt id="bib-Pauc-1">[Pauc-1]</dt>
-        <dd>Pauc, R. et al. Clinical Chiropractic, Vol 8 Issue 4. <cite>Comorbidity of dyslexia, dyspraxia, attention deficit disorder (ADD), attention deficit hyperactive disorder (ADHD), obsessive compulsive disorder (OCD) and Tourette's syndrome in children: A prospective epidemiological study</cite>.
+        <dd><cite>Comorbidity of dyslexia, dyspraxia, attention deficit disorder (ADD), attention deficit hyperactive disorder (ADHD), obsessive compulsive disorder (OCD) and Tourette's syndrome in children: A prospective epidemiological study</cite>Pauc, R. et al. Clinical Chiropractic, Vol 8 Issue 4.
         </dd><dt id="bib-Paulesu-1">[Paulesu-1]</dt>
-        <dd>Paulesu, E.; Frith, U.; Snowling, M.; Gallagher, A.; Morton, J.; Frackowiak, R. S. J.; Frith, C. D. et al. Brain 119. <cite>Is developmental dyslexia a disconnection syndrome?</cite>.
+        <dd><cite>Is developmental dyslexia a disconnection syndrome?</cite>Paulesu, E.; Frith, U.; Snowling, M.; Gallagher, A.; Morton, J.; Frackowiak, R. S. J.; Frith, C. D. et al. Brain 119.
         </dd><dt id="bib-Petersen-1">[Petersen-1]</dt>
-        <dd>Petersen, S. E.; Fox, P. T.; Snyder, A. Z.; Raichle, M. E. et al. Science, Vol 249, Issue 4972. <cite>Activation of extrastriate and frontal cortical areas by visual words and word-like stimuli</cite>.
+        <dd><cite>Activation of extrastriate and frontal cortical areas by visual words and word-like stimuli</cite>Petersen, S. E.; Fox, P. T.; Snyder, A. Z.; Raichle, M. E. et al. Science, Vol 249, Issue 4972.
         </dd><dt id="bib-Phiriyapokanon-1">[Phiriyapokanon-1]</dt>
-        <dd>Phiriyapokanon, T. et al. Mälardalen University Press Sweden. <cite>Is a big button enough for elderly users? Towards user interface guidelines for elderly users </cite>.
+        <dd><cite>Is a big button enough for elderly users? Towards user interface guidelines for elderly users </cite>Phiriyapokanon, T. et al. Mälardalen University Press Sweden.
         </dd><dt id="bib-Pistorius-1">[Pistorius-1]</dt>
-        <dd>Pistorius, M. et al. Communication Matters Conference 2011. <cite>Communication: An AAC User's Perspective</cite>.
+        <dd><cite>Communication: An AAC User's Perspective</cite>Pistorius, M. et al. Communication Matters Conference 2011.
         </dd><dt id="bib-Polanczyk-1">[Polanczyk-1]</dt>
-        <dd>Polanczyk, G. et al. The American Journal of Psychiatry, Vol 164 Issue 6. <cite>The worldwide prevalence of ADHD: a systematic review and metaregression analysis</cite>.
+        <dd><cite>The worldwide prevalence of ADHD: a systematic review and metaregression analysis</cite>Polanczyk, G. et al. The American Journal of Psychiatry, Vol 164 Issue 6.
         </dd><dt id="bib-Price-1">[Price-1]</dt>
-        <dd>Price, G.R. et al. Current Biology, Vol 17, Issue 24. <a href="http://www.cell.com/current-biology/retrieve/pii/S0960982207020726" property="dc:references"><cite>Impaired parietal magnitude processing in developmental dyscalculia</cite></a>. URL: <a href="http://www.cell.com/current-biology/retrieve/pii/S0960982207020726" property="dc:references">http://www.cell.com/current-biology/retrieve/pii/S0960982207020726</a>
+        <dd><a href="http://www.cell.com/current-biology/retrieve/pii/S0960982207020726" property="dc:references"><cite>Impaired parietal magnitude processing in developmental dyscalculia</cite></a>. Price, G.R. et al. Current Biology, Vol 17, Issue 24. URL: <a href="http://www.cell.com/current-biology/retrieve/pii/S0960982207020726" property="dc:references">http://www.cell.com/current-biology/retrieve/pii/S0960982207020726</a>
         </dd><dt id="bib-Pugh-1">[Pugh-1]</dt>
-        <dd>Pugh, K.; Shaywitz, B.; Constable, R. T.; Shaywitz, S. et al. Brain 119. <cite>Cerebral organization of component processes in reading</cite>.
+        <dd><cite>Cerebral organization of component processes in reading</cite>Pugh, K.; Shaywitz, B.; Constable, R. T.; Shaywitz, S. et al. Brain 119.
         </dd><dt id="bib-RDWG-1">[RDWG-1]</dt>
-        <dd>W3C. <a href="http://www.w3.org/WAI/RD/2012/easy-to-read/note/ED-E2R-20140123" property="dc:references"><cite>Research Report on Easy to Read on the Web</cite></a>. W3C Editor's Draft. URL: <a href="http://www.w3.org/WAI/RD/2012/easy-to-read/note/ED-E2R-20140123" property="dc:references">http://www.w3.org/WAI/RD/2012/easy-to-read/note/ED-E2R-20140123</a>
+        <dd><a href="http://www.w3.org/WAI/RD/2012/easy-to-read/note/ED-E2R-20140123" property="dc:references"><cite>Research Report on Easy to Read on the Web</cite></a>. W3C. W3C Editor's Draft. URL: <a href="http://www.w3.org/WAI/RD/2012/easy-to-read/note/ED-E2R-20140123" property="dc:references">http://www.w3.org/WAI/RD/2012/easy-to-read/note/ED-E2R-20140123</a>
         </dd><dt id="bib-Rose-1">[Rose-1]</dt>
-        <dd>Rose, T. A.; Worrall, L. E.; Hickson, L. M.; Hoffmann, T. C. et al. Aphasiology, Vol 25 Issue 12. <cite>Exploring the use of graphics in written health information for people with aphasia</cite>.
+        <dd><cite>Exploring the use of graphics in written health information for people with aphasia</cite>Rose, T. A.; Worrall, L. E.; Hickson, L. M.; Hoffmann, T. C. et al. Aphasiology, Vol 25 Issue 12.
         </dd><dt id="bib-Rose-2">[Rose-2]</dt>
-        <dd>Rose, T. A.; Worrall, L. E.; Hickson, L. M.; Hoffmann, T. C. et al. International Journal of Speech-Language Pathology, Vol14 Issue 1. <cite>Guiding principles for printed education materials: Design preferences of people with aphasia</cite>.
+        <dd><cite>Guiding principles for printed education materials: Design preferences of people with aphasia</cite>Rose, T. A.; Worrall, L. E.; Hickson, L. M.; Hoffmann, T. C. et al. International Journal of Speech-Language Pathology, Vol14 Issue 1.
         </dd><dt id="bib-Rumsey-1">[Rumsey-1]</dt>
-        <dd>Rumsey, J. M.; Nace, K.; Donohue, B.; Wise, D.; Maisog, J. M.; Andreason, P. et al. Arch. Neurol. 54. <cite>Failure to activate the left temporal cortex in dyslexia: insights from a multiple case study of dyslexic adults</cite>.
+        <dd><cite>Failure to activate the left temporal cortex in dyslexia: insights from a multiple case study of dyslexic adults</cite>Rumsey, J. M.; Nace, K.; Donohue, B.; Wise, D.; Maisog, J. M.; Andreason, P. et al. Arch. Neurol. 54.
         </dd><dt id="bib-Sato-1">[Sato-1]</dt>
-        <dd>Sato, D.; Kobayashi, M. et al. ASSETS '11 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 155-162. <cite>How voice augmentation supports elderly web users</cite>.
+        <dd><cite>How voice augmentation supports elderly web users</cite>Sato, D.; Kobayashi, M. et al. ASSETS '11 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 155-162.
         </dd><dt id="bib-Savitch-1">[Savitch-1]</dt>
-        <dd>Savitch, N.; Zaphiris, P. et al. Lecture Notes in Computer Science (including sub-series Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) Volume 4061 LNCS, pages 144-151. . <cite> Accessible websites for people with dementia: A preliminary investigation into information architecture</cite>.
-        </dd><dt id="bib-Semrud-Clikema-1">[Semrud-Clikema-1]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd><cite> Accessible websites for people with dementia: A preliminary investigation into information architecture</cite>Savitch, N.; Zaphiris, P. et al. Lecture Notes in Computer Science (including sub-series Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) Volume 4061 LNCS, pages 144-151. .
+        </dd><dt id="bib-Semrud-Clikeman-1">[Semrud-Clikeman-1]</dt>
+        <dd><cite>Comorbidity between ADDH and Learning Disability: A Review and Report in a Clinically Referred Sample</cite>Semrud-Clikeman, M. et al. Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 31 Issue 3.
         </dd><dt id="bib-Shalev-1">[Shalev-1]</dt>
-        <dd>Shalev, R.S. et al. Journal of Child Neurology vol. 19 no. 10. <cite>Developmental Dyscalculia</cite>.
+        <dd><cite>Developmental Dyscalculia</cite>Shalev, R.S. et al. Journal of Child Neurology vol. 19 no. 10.
         </dd><dt id="bib-Shalev-2">[Shalev-2]</dt>
-        <dd>Shalev, R.S. et al. Journal of learning disabilities, vol. 34, no. 1. <a href="http://ldx.sagepub.com/content/34/1/59.short" property="dc:references"><cite>Developmental Dyscalculia Is a Familial Learning Disability</cite></a>. URL: <a href="http://ldx.sagepub.com/content/34/1/59.short" property="dc:references">http://ldx.sagepub.com/content/34/1/59.short</a>
+        <dd><a href="http://ldx.sagepub.com/content/34/1/59.short" property="dc:references"><cite>Developmental Dyscalculia Is a Familial Learning Disability</cite></a>. Shalev, R.S. et al. Journal of learning disabilities, vol. 34, no. 1. URL: <a href="http://ldx.sagepub.com/content/34/1/59.short" property="dc:references">http://ldx.sagepub.com/content/34/1/59.short</a>
         </dd><dt id="bib-Shaywitz-1">[Shaywitz-1]</dt>
-        <dd>Shaywitz S. et al. Proc. Natl. Acad. Sci. USA Vol. 95. <cite>Functional disruption in the organization of the brain for reading in dyslexia</cite>.
+        <dd><cite>Functional disruption in the organization of the brain for reading in dyslexia</cite>Shaywitz S. et al. Proc. Natl. Acad. Sci. USA Vol. 95.
         </dd><dt id="bib-Sinfield-1">[Sinfield-1]</dt>
-        <dd>Sinfield, J. et al. <a href="http://untappedbrilliance.com/colors-adhd" property="dc:references"><cite>Colors and ADHD: How Color Coding Can Make Your Life Easier</cite></a>. URL: <a href="http://untappedbrilliance.com/colors-adhd" property="dc:references">http://untappedbrilliance.com/colors-adhd</a>
+        <dd><a href="http://untappedbrilliance.com/colors-adhd" property="dc:references"><cite>Colors and ADHD: How Color Coding Can Make Your Life Easier</cite></a>. Sinfield, J. et al.URL: <a href="http://untappedbrilliance.com/colors-adhd" property="dc:references">http://untappedbrilliance.com/colors-adhd</a>
         </dd><dt id="bib-Smith-1">[Smith-1]</dt>
-        <dd>Smith, M.; Segal, R. et al. Helpguide. <a href="http://www.helpguide.org/articles/add-adhd/adult-adhd-attention-deficit-disorder-self-help.htm" property="dc:references"><cite>Adult ADD / ADHD Self-Help</cite></a>. URL: <a href="http://www.helpguide.org/articles/add-adhd/adult-adhd-attention-deficit-disorder-self-help.htm" property="dc:references">http://www.helpguide.org/articles/add-adhd/adult-adhd-attention-deficit-disorder-self-help.htm</a>
+        <dd><a href="http://www.helpguide.org/articles/add-adhd/adult-adhd-attention-deficit-disorder-self-help.htm" property="dc:references"><cite>Adult ADD / ADHD Self-Help</cite></a>. Smith, M.; Segal, R. et al. Helpguide. URL: <a href="http://www.helpguide.org/articles/add-adhd/adult-adhd-attention-deficit-disorder-self-help.htm" property="dc:references">http://www.helpguide.org/articles/add-adhd/adult-adhd-attention-deficit-disorder-self-help.htm</a>
         </dd><dt id="bib-Soar-1">[Soar-1]</dt>
-        <dd> Soar, J. et al. Annals of Telecommunications- Annales Des Telecommunications, Volume 65, Issue 9, pages, 479-483. <cite>The potential of information and communication technologies to support ageing and independent living</cite>.
+        <dd><cite>The potential of information and communication technologies to support ageing and independent living</cite> Soar, J. et al. Annals of Telecommunications- Annales Des Telecommunications, Volume 65, Issue 9, pages, 479-483.
         </dd><dt id="bib-Stein-1">[Stein-1]</dt>
-        <dd>Stein J. et al. Dyslexia. 2001 Jan-Mar;7(1). <cite>The magnocellular theory of developmental dyslexia</cite>.
+        <dd><cite>The magnocellular theory of developmental dyslexia</cite>Stein J. et al. Dyslexia. 2001 Jan-Mar;7(1).
         </dd><dt id="bib-Talairach-1">[Talairach-1]</dt>
-        <dd>Talairach, J.; Tournoux, P. et al. Thieme, New York. <cite>Coplanar Stereotaxic Atlas of the Human Brain. Three-Dimensional Proportional System: An Approach to Cerebral Imaging</cite>.
+        <dd><cite>Coplanar Stereotaxic Atlas of the Human Brain. Three-Dimensional Proportional System: An Approach to Cerebral Imaging</cite>Talairach, J.; Tournoux, P. et al. Thieme, New York.
         </dd><dt id="bib-Tallal-1">[Tallal-1]</dt>
-        <dd>Tallal, P. et al. Annals of the New York Academy of Sciences, Vol. 682. <cite>Temporal information processing in the nervous system: special reference to dyslexia and dysphasia</cite>.
+        <dd><cite>Temporal information processing in the nervous system: special reference to dyslexia and dysphasia</cite>Tallal, P. et al. Annals of the New York Academy of Sciences, Vol. 682.
         </dd><dt id="bib-Tartakovsky-1">[Tartakovsky-1]</dt>
-        <dd>Tartakovsky, M. et al. Psych Central. <a href="http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767" property="dc:references"><cite>15 ADHD-Friendly Tips to Fire Up Your Focus</cite></a>. URL: <a href="http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767" property="dc:references">http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767</a>
+        <dd><a href="http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767" property="dc:references"><cite>15 ADHD-Friendly Tips to Fire Up Your Focus</cite></a>. Tartakovsky, M. et al. Psych Central. URL: <a href="http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767" property="dc:references">http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767</a>
         </dd><dt id="bib-Taylor-1">[Taylor-1]</dt>
-        <dd>Taylor; Francis et al. ScienceDaily Research News. <a href="http://www.sciencedaily.com/releases/2014/03/140326114514.htm" property="dc:references"><cite>Eye movement when reading could be early indicator of Alzheimer's</cite></a>. URL: <a href="http://www.sciencedaily.com/releases/2014/03/140326114514.htm" property="dc:references">http://www.sciencedaily.com/releases/2014/03/140326114514.htm</a>
-        </dd><dt id="bib-Thillers-1">[Thillers-1]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd><a href="http://www.sciencedaily.com/releases/2014/03/140326114514.htm" property="dc:references"><cite>Eye movement when reading could be early indicator of Alzheimer's</cite></a>. Taylor; Francis et al. ScienceDaily Research News. URL: <a href="http://www.sciencedaily.com/releases/2014/03/140326114514.htm" property="dc:references">http://www.sciencedaily.com/releases/2014/03/140326114514.htm</a>
+        </dd><dt id="bib-Thilers-1">[Thilers-1]</dt>
+        <dd><cite>Accelerated postmenopausal cognitive decline is restricted to women with normal BMI: longitudinal evidence from the Betula project.</cite>Thilers, P. P. et al. Psychoneuroendocrinology, Volume 35, Issue 4, Pages 516–524, Elsevier Inc.
         </dd><dt id="bib-Topo-1">[Topo-1]</dt>
-        <dd>Topo, P. et al. Journal of Applied Gerontology Volume 28, Number 1, pages 5-37. <cite> Technology studies to meet the needs of people with dementia and their caregivers: A literature review</cite>.
+        <dd><cite> Technology studies to meet the needs of people with dementia and their caregivers: A literature review</cite>Topo, P. et al. Journal of Applied Gerontology Volume 28, Number 1, pages 5-37.
         </dd><dt id="bib-Trewin-1">[Trewin-1]</dt>
-        <dd>Trewin, S.; Richards, J. T. et al. ASSETS '12 Proceedings of the 14th international ACM SIGACCESS conference on Computers and accessibility, pages 119-126. <cite>Understanding the role of age and fluid intelligence in information search</cite>.
+        <dd><cite>Understanding the role of age and fluid intelligence in information search</cite>Trewin, S.; Richards, J. T. et al. ASSETS '12 Proceedings of the 14th international ACM SIGACCESS conference on Computers and accessibility, pages 119-126.
         </dd><dt id="bib-UKAS-1">[UKAS-1]</dt>
-        <dd>UK: Alzheimer's Society et al. <a href="http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=2164" property="dc:references"><cite>Dementia 2013 infographic - text only version</cite></a>. URL: <a href="http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=2164" property="dc:references">http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=2164</a>
+        <dd><a href="http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=2164" property="dc:references"><cite>Dementia 2013 infographic - text only version</cite></a>. UK: Alzheimer's Society et al.URL: <a href="http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=2164" property="dc:references">http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=2164</a>
         </dd><dt id="bib-UN-1">[UN-1]</dt>
-        <dd>United Nations Expert Meeting on Building Inclusive Societies and Development through Promotion of Accessible Information and Communication Technologies (ICTs); Tokyo, Japan. <a href="http://www.un.org/disabilities/default.asp?id=1596" property="dc:references"><cite>Emerging issues and trends</cite></a>. URL: <a href="http://www.un.org/disabilities/default.asp?id=1596" property="dc:references">http://www.un.org/disabilities/default.asp?id=1596</a>
-        </dd><dt id="bib-WAI-1">[WAI-1]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd><a href="http://www.un.org/disabilities/default.asp?id=1596" property="dc:references"><cite>Emerging issues and trends</cite></a>. United Nations Expert Meeting on Building Inclusive Societies and Development through Promotion of Accessible Information and Communication Technologies (ICTs); Tokyo, Japan. URL: <a href="http://www.un.org/disabilities/default.asp?id=1596" property="dc:references">http://www.un.org/disabilities/default.asp?id=1596</a>
+        </dd><dt id="bib-WAI">[WAI]</dt>
+        <dd><a href="http://www.w3.org/WAI/older-users/developing" property="dc:references"><cite>Developing Websites for Older People: How WCAG 2.0 Applies</cite></a>. Web Accessibility Initiative (WAI) et al. W3C. URL: <a href="http://www.w3.org/WAI/older-users/developing" property="dc:references">http://www.w3.org/WAI/older-users/developing</a>
         </dd><dt id="bib-WHO-3">[WHO-3]</dt>
-        <dd>World Health Organization et al. <a href="http://www.who.int/topics/ageing/en/" property="dc:references"><cite>Ageing</cite></a>. URL: <a href="http://www.who.int/topics/ageing/en/" property="dc:references">http://www.who.int/topics/ageing/en/</a>
+        <dd><a href="http://www.who.int/topics/ageing/en/" property="dc:references"><cite>Ageing</cite></a>. World Health Organization et al.URL: <a href="http://www.who.int/topics/ageing/en/" property="dc:references">http://www.who.int/topics/ageing/en/</a>
+        </dd><dt id="bib-WHO-4">[WHO-4]</dt>
+        <dd><a href="http://www.who.int/mediacentre/factsheets/fs362/en/" property="dc:references"><cite>Dementia</cite></a>. World Health Organization et al.URL: <a href="http://www.who.int/mediacentre/factsheets/fs362/en/" property="dc:references">http://www.who.int/mediacentre/factsheets/fs362/en/</a>
         </dd><dt id="bib-Watson-1">[Watson-1]</dt>
-        <dd>Watson, S. et al. Healthline. <a href="http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps" property="dc:references"><cite>The Best ADHD iPhone &amp; Android Apps of the Year</cite></a>. URL: <a href="http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps" property="dc:references">http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps</a>
+        <dd><a href="http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps" property="dc:references"><cite>The Best ADHD iPhone &amp; Android Apps of the Year</cite></a>. Watson, S. et al. Healthline. URL: <a href="http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps" property="dc:references">http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps</a>
         </dd><dt id="bib-WebAIM-1">[WebAIM-1]</dt>
-        <dd>WebAIM et al. Center for Persons with DisabilitiesUtah State University. <a href="http://webaim.org/articles/cognitive/" property="dc:references"><cite>Cognitive Disabilities</cite></a>. URL: <a href="http://webaim.org/articles/cognitive/" property="dc:references">http://webaim.org/articles/cognitive/</a>
+        <dd><a href="http://webaim.org/articles/cognitive/" property="dc:references"><cite>Cognitive Disabilities</cite></a>. WebAIM et al. Center for Persons with DisabilitiesUtah State University. URL: <a href="http://webaim.org/articles/cognitive/" property="dc:references">http://webaim.org/articles/cognitive/</a>
         </dd><dt id="bib-WebAIM-2">[WebAIM-2]</dt>
-        <dd>WebAIM et al. Center for Persons with Disabilities, Utah State University. <a href="http://wave.webaim.org/cognitive" property="dc:references"><cite>Cognitive Web Accessibility Checklist</cite></a>. URL: <a href="http://wave.webaim.org/cognitive" property="dc:references">http://wave.webaim.org/cognitive</a>
+        <dd><a href="http://wave.webaim.org/cognitive" property="dc:references"><cite>Cognitive Web Accessibility Checklist</cite></a>. WebAIM et al. Center for Persons with Disabilities, Utah State University. URL: <a href="http://wave.webaim.org/cognitive" property="dc:references">http://wave.webaim.org/cognitive</a>
         </dd><dt id="bib-WebMD-1">[WebMD-1]</dt>
-        <dd>WebMD et al. LLC. <a href="http://www.webmd.com/add-adhd/guide/executive-function" property="dc:references"><cite>Executive Function Skills and Disorders</cite></a>. URL: <a href="http://www.webmd.com/add-adhd/guide/executive-function" property="dc:references">http://www.webmd.com/add-adhd/guide/executive-function</a>
+        <dd><a href="http://www.webmd.com/add-adhd/guide/executive-function" property="dc:references"><cite>Executive Function Skills and Disorders</cite></a>. WebMD et al. LLC. URL: <a href="http://www.webmd.com/add-adhd/guide/executive-function" property="dc:references">http://www.webmd.com/add-adhd/guide/executive-function</a>
         </dd><dt id="bib-Weiler-1">[Weiler-1]</dt>
-        <dd>Weiler, M. D.; Bernstein, J. H.; Bellinger, D.; Waber, D. P. et al. Journal of Learning Disabilities, Vol 35 Issue 5. <cite>Information processing deficits in children with attention-deficit/hyperactivity disorder, inattentive type, and children with reading disability</cite>.
+        <dd><cite>Information processing deficits in children with attention-deficit/hyperactivity disorder, inattentive type, and children with reading disability</cite>Weiler, M. D.; Bernstein, J. H.; Bellinger, D.; Waber, D. P. et al. Journal of Learning Disabilities, Vol 35 Issue 5.
         </dd><dt id="bib-Wikipedia-1">[Wikipedia-1]</dt>
-        <dd>Wikipedia. <a href="http://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder" property="dc:references"><cite>Attention deficit hyperactivity disorder</cite></a>. URL: <a href="http://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder" property="dc:references">http://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder</a>
+        <dd><a href="http://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder" property="dc:references"><cite>Attention deficit hyperactivity disorder</cite></a>. Wikipedia. URL: <a href="http://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder" property="dc:references">http://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder</a>
         </dd><dt id="bib-Willcutt-1">[Willcutt-1]</dt>
-        <dd>Willcutt, E.; Sonuga-Barke, E.; Nigg, J. T.; Sergeant , J. A. et al. Advances in Biological Psychiatry, Vol 24: Recent Trends and Developments, Basel: Karger. <cite>Recent Developments in Neuropsychological Models of Childhood Psychiatric Disorders</cite>.
+        <dd><cite>Recent Developments in Neuropsychological Models of Childhood Psychiatric Disorders</cite>Willcutt, E.; Sonuga-Barke, E.; Nigg, J. T.; Sergeant , J. A. et al. Advances in Biological Psychiatry, Vol 24: Recent Trends and Developments, Basel: Karger.
         </dd><dt id="bib-Wilson-1">[Wilson-1]</dt>
-        <dd>Wilson, A.J. et al. <a href="http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm" property="dc:references"><cite>Dyscalculia primer and resource guide</cite></a>. URL: <a href="http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm" property="dc:references">http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm</a>
+        <dd><a href="http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm" property="dc:references"><cite>Dyscalculia primer and resource guide</cite></a>. Wilson, A.J. et al.URL: <a href="http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm" property="dc:references">http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm</a>
         </dd><dt id="bib-Wockl-1">[Wockl-1]</dt>
-        <dd>Wockl, B.; Yildizoglu, U. et al. ASSETS '12 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 25-32. <cite>Basic senior personas: a representative design tool covering the spectrum of European older adults</cite>.
-        </dd><dt id="bib-chandaria-1">[chandaria-1]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd><cite>Basic senior personas: a representative design tool covering the spectrum of European older adults</cite>Wockl, B.; Yildizoglu, U. et al. ASSETS '12 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 25-32.
         </dd><dt id="bib-communication-matters-1">[communication-matters-1]</dt>
-        <dd>Communication Matters et al. Communication Matters Conference 2011. <a href="http://www.communicationmatters.org.uk/shining-a-light-on-aac" property="dc:references"><cite>Shining a light on Augmentative and Alternative Communication</cite></a>. URL: <a href="http://www.communicationmatters.org.uk/shining-a-light-on-aac" property="dc:references">http://www.communicationmatters.org.uk/shining-a-light-on-aac</a>
-        </dd><dt id="bib-cudd-1">[cudd-1]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
-        </dd><dt id="bib-who-4">[who-4]</dt>
-        <dd><em style="color: #f00">Reference not found.</em>
+        <dd><a href="http://www.communicationmatters.org.uk/shining-a-light-on-aac" property="dc:references"><cite>Shining a light on Augmentative and Alternative Communication</cite></a>. Communication Matters et al. Communication Matters Conference 2011. URL: <a href="http://www.communicationmatters.org.uk/shining-a-light-on-aac" property="dc:references">http://www.communicationmatters.org.uk/shining-a-light-on-aac</a>
         </dd>
       </dl>
     </section>
