@@ -417,7 +417,7 @@ var biblio = {
 	
 	"coga-issue-papers": {
 		"title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
-		"href": "https://w3c.github.io/coga/issue-papers/",
+		"href": "https://www.w3.org/TR/coga-issue-papers/",
 		"publisher": "W3C",
 		"editors":
 		[
