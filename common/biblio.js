@@ -401,6 +401,19 @@ var biblio = {
 		"etAl": "false",
 		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
 		},
+		
+	"coga-gap-analysis": {
+		"title": "Cognitive Accessibility Roadmap and Gap Analysis",
+		"href": "https://www.w3.org/TR/coga-gap-analysis/",
+		"publisher": "W3C",
+		"editors":
+		[
+			"Lisa Seeman",
+			"Michael Cooper"
+		],
+		"etAl": "false",
+		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+	},
 	
 	"coga-issue-papers": {
 		"title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
