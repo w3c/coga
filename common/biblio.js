@@ -1294,6 +1294,20 @@ var biblio = {
 		//"pages": "189-198"
 		},
 
+	"personalization-semantics-1.0": {
+		"title": "Personalization Semantics 1.0",
+		"href": "https://www.w3.org/TR/personalization-semantics-1.0/",
+		"publisher": "W3C",
+		"editors":
+		[
+			"Rich Schwerdtfeger",
+			"Lisa Seeman",
+			"Michael Cooper"
+		],
+		"etAl": "false",
+		"deliveredBy": "https://www.w3.org/WAI/ARIA/"
+
+	},
 	
 	"Paulesu-1": {
 		"title": "Is developmental dyslexia a disconnection syndrome?",
