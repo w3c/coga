@@ -404,7 +404,7 @@ var biblio = {
 		
 	"coga-gap-analysis": {
 		"title": "Cognitive Accessibility Roadmap and Gap Analysis",
-		"href": "https://www.w3.org/TR/coga-gap-analysis/",
+		"href": "https://w3c.github.io/coga/gap-analysis/",
 		"publisher": "W3C",
 		"editors":
 		[
@@ -417,7 +417,7 @@ var biblio = {
 	
 	"coga-issue-papers": {
 		"title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
-		"href": "https://www.w3.org/TR/coga-issue-papers/",
+		"href": "https://w3c.github.io/coga/issue-papers/",
 		"publisher": "W3C",
 		"editors":
 		[
