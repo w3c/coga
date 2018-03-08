@@ -142,9 +142,9 @@ table {border:thin; border-style:groove;}
 				      <td><p><span property="xhv:role" resource="xhv:heading">Attention and focus</span></p>
 			          <p>(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/COGA/master/techniques/index.html#attention-and-focus">§ link</a>)</p></td>
 				      <td>
-				        <p><strong>Proposed attribute: </strong> COGA-distraction</p>
+				        <p><strong>Proposed attribute: </strong> aui-distraction</p>
 				        <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#distractions">§ link</a>)</p>
-				        <p><strong>Proposed attribute: </strong>COGA-reminder</p>
+				        <p><strong>Proposed attribute: </strong>aui-reminder</p>
 				        <p>Enable users to turn off less-helpful reminders.</p>
 			          <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#reminders">§ link</a>)</p></td>
 				      <td>We need the formal user setting to enable  different responses to semantics.</td>
@@ -175,7 +175,7 @@ table {border:thin; border-style:groove;}
 				        <p>Any choices made by users in a process are easy to review in one clearly-labeled action, and users can get back to the place they were at in one clearly labeled action.			          </p>
 			          <p>For an uncomplicated task, the web site is identified (broader scope).</p></td>
 				      <td><p><strong>Proposed attribute: </strong></p>
-				        <p>LOG</p>
+				        <p>aui-LOG</p>
 				        <p>Should we enable a programmable way of identifying what are normal hidden vARIAbles of </p>
 			            <ul>
 			              <li>labels for steps in the process;</li>
@@ -220,10 +220,10 @@ table {border:thin; border-style:groove;}
 			          <p>Enable users to set a reminder for date-and-time sensitive   events. Reminders should be set only at users' request. Users   should be able to personalize the reminder method. </p></td>
 				      <td><p>As  above, and if you have a calendar/mail program, you should provide a feature that could notify users of an impending meeting or to dos (broader scope). </p></td>
 				      <td><p><strong>Proposed attributes:</strong></p>
-				        <p>COGA-messageimportance</p>
-                        <p>COGA-messagefrom</p>
-                        <p>COGA-messagecontext</p>
-                        <p>COGA-messagetime</p>
+				        <p>aui-messageimportance</p>
+                        <p>messagefrom</p>
+                        <p>messagecontext</p>
+                        <p>messagetime</p>
                         <p>Enable users to turn off less-helpful reminders.</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#reminders">§ link</a>)</p></td>
 				      <td><p>User settings for how reminders are handled, including preferred modalities of different levels. Examples are: email, SMS, call, pop up.</p>
@@ -361,7 +361,7 @@ table {border:thin; border-style:groove;}
 <span property="xhv:role" resource="xhv:heading">Provide Help</span>
 			          <p resource="#provide-help">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/COGA/master/techniques/index.html#provide-help">§ link</a>)</p>
 			          <p resource="#provide-help">@@</p>
-			          <p resource="#prevent-errors"> COGA Techniques 2.7:  COGA-explain to explain any nonstandard UI where they cannot be </p></td>
+			          <p resource="#prevent-errors"> COGA Techniques 2.7:  aui-explain to explain any nonstandard UI where they cannot be </p></td>
 				      <td> <strong>Explain and feedback</strong>
 <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#h-explain-and-feedback" >§ link</a>)</p>
 <span property="xhv:role" resource="xhv:heading"><strong>Adding Context </strong></span>
@@ -374,13 +374,13 @@ table {border:thin; border-style:groove;}
 		              
 		              <p><strong>Help</strong></p>
 		              <p>Some users may need additional   information, or specifically additional-help information. We request   additonal attributes so an author can indicate existence of   additional information.</p>
-                      <p><strong>Proposed attribute: </strong>COGA-moreinfo</p>
+                      <p><strong>Proposed attribute: </strong>aui-moreinfo</p>
                       <p><strong>Supported values: </strong>URI</p>
-                      <p><strong>Proposed attribute: </strong>COGA-extrahelp</p>
+                      <p><strong>Proposed attribute: </strong>aui-extrahelp</p>
                       <p><strong>Supported values: </strong>URI</p>
-                      <p><strong>Proposed attribute: </strong>COGA-helptype</p></td>
+                      <p><strong>Proposed attribute: </strong>aui-helptype</p></td>
 				      <td><p>Settings for how help is handled</p>
-				        <p><strong>Log</strong></p>
+				        <p><strong>aui-Log</strong></p>
 				        <p>Keep log-in (binary)</p>
 				        <p><strong>Show log</strong></p>
 				        <p>access key</p>
@@ -459,22 +459,22 @@ Always    open</p>
                         
                         <p>to change: feedback should be a role</p>
                         
-                        <p><strong>COGA-moreinfo</strong></p>
-                        <p>This supports a URI where more help is provided (often with an COGA-extrahelp support).</p>
+                        <p><strong>aui-moreinfo</strong></p>
+                        <p>This supports a URI where more help is provided (often with an aui-extrahelp support).</p>
                         
                         
-                        <p><strong>COGA-extrahelp</strong> </p>
+                        <p><strong>aui-extrahelp</strong> </p>
                         
                         <p>This is really an element with a help role.</p>
                         <p>The attribute tells you what type of help it is   tooltips/humanhelp/morehelp.</p>
                         <p>/glossary/dictionary/thesaurus</p>
                         
                         <p><strong>To do </strong></p>
-                        <p>Add the use case of an error message with COGA-moreinfo, and COGA-extrahelp to the semantics document</p>
+                        <p>Add the use case of an error message with aui-moreinfo, and aui-extrahelp to the semantics document</p>
                                               </td>
 				      <td><p>see <em>Settings for how Explain and feedback</em> above.</p>
 			          
-			          <p>Should <strong>COGA-moreinfo</strong> links be shown:</p>
+			          <p>Should <strong>aui-moreinfo</strong> links be shown:</p>
 			          <ul>
 			            <li>never;</li>
 			            <li>text;</li>
@@ -482,7 +482,7 @@ Always    open</p>
 			            <li>icon and text?</li>
 			            </ul>
 			          
-			          <p><strong>COGA-helptype</strong> - for each type </p>
+			          <p><strong>aui-helptype</strong> - for each type </p>
 			          <p>tooltips/humanhelp/morehelp</p>
                       <p>/glossary/dictionary/thesaurus etc.:</p>
                       
@@ -733,20 +733,20 @@ Always    open</p>
 				        <p resource="#h-more-help">(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#h-more-help">§ link</a>)</p>
 				        <p resource="#h-more-help">@@</p>
 				        <p><strong>Requirement: </strong>Some users may need additional   information, or specifically additional help information. We request   additional attributes so an author can indicate the existence of   this additional information.</p>
-                        <p><strong>Proposed attribute: </strong>COGA-moreinfo</p>
+                        <p><strong>Proposed attribute: </strong>aui-moreinfo</p>
                         <p><strong>Supported values: </strong>URI</p>
-                        <p><strong>Proposed attribute: </strong>COGA-extrahelp</p>
+                        <p><strong>Proposed attribute: </strong>aui-extrahelp</p>
                         <p><strong>Supported values: </strong>URI</p>
-                        <p><strong>Proposed attribute: </strong>COGA-helptype</p>
+					      <p><strong>Proposed attribute: </strong>aui-helptype</p>
                         <p><strong>Supported values: </strong> tooltips/humanhelp/morehelp/topicsearch/automated/faqs/helpform/simplified/glossary/dictionary/thesaurus</p>
                         <p> </p>
                         <p><strong>Example:</strong></p>
-                        <p>&lt;button type="button" COGA-extrahelp="uri2 uri3" &gt;undo&lt;/button&gt;</p>
+                        <p>&lt;button type="button" aui-extrahelp="uri2 uri3" &gt;undo&lt;/button&gt;</p>
                         <p>URI 2 may read: </p>
-                        <pre>&lt;div id="uri2" COGA-helptype="morehelp" 
-COGA-hidden="true"&gt;  
+                        <pre>&lt;div id="uri2" aui-helptype="morehelp" 
+aria-hidden="true"&gt;  
 Pressing the undo button will erase all your work on a page. 
-Use this button with care.   If you press it by mistake, press control and y at the same time and your answers will come back.   &lt;/div&gt;    &lt;a href="functiongethelp()" COGA-helptype="humanhelp" COGA-hidden="true"&gt;  I want a person to help me  &lt;/a&gt;  &lt;div id="uri3" COGA-extrahelp="glossary" COGA-hidden="true"&gt;</pre>
+Use this button with care.   If you press it by mistake, press control and y at the same time and your answers will come back.   &lt;/div&gt;    &lt;a href="functiongethelp()" aui-helptype="humanhelp" aui-hidden="true"&gt;  I want a person to help me  &lt;/a&gt;  &lt;div id="uri3" aui-extrahelp="glossary" aui-hidden="true"&gt;</pre>
                         <p resource="#h-more-help">@@</p></td>
 				      <td><p>See help personalization in the table above, and personalization settings for the context (includes help types).</p>
 			          
@@ -909,7 +909,7 @@ Use this button with care.   If you press it by mistake, press control and y at 
 				      <td><strong>Reminders: </strong>.....   Reminders should be set only at users' requests, and users should be   able to personalize the reminder method. Where a standard mechanism   exists for the platform or technologies, it should be used.</td>
 				      <td><span property="xhv:role" resource="xhv:heading">Attention and focus</span>
 			          <p resource="#attention-and-focus">(<a  title="expand" class="expand" aria-label="expand " href="https://rawgit.com/w3c/COGA/master/techniques/index.html#attention-and-focus">§ link</a>)</p></td>
-				      <td><p><strong>Proposed attribute: </strong>COGA-reminder</p>
+				      <td><p><strong>Proposed attribute: </strong>aui-reminder</p>
                         <p>Enable users to turn off less-helpful reminders.</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#reminders">§ link</a>)</p>
                       
@@ -1159,7 +1159,7 @@ Potential parts of a page
 					       <p> Part of this could be adressed in WCAG 2.1 at level AAA by 1.3.5.</p>
 				        </td>
 				      <td>Non-native content and sponsored content are clearly marked, and are visually differentiated by standardized techniques. </td>
-				      <td><p><strong>Proposed attribute: </strong> COGA-distraction</p>
+				      <td><p><strong>Proposed attribute: </strong> aui-distraction</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#distractions">§ link</a>)</p>
                       <p><strong>Potential parts of a page</strong></p>
                       <p><strong>Examples:</strong></p>
@@ -1236,17 +1236,17 @@ Potential parts of a page
                         <p>(Provided content and information that help users understand <a href="https://rawgit.com/w3c/COGA/master/extension/index.html#dfn-complex-information">complex information</a> , long documents, numerical information, forms, and nonstandard controls).</p>
                         <p resource="#h-instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes">@@</p>
 		              </td>
-				      <td>COGA-explain for more details on users interface.</td>
+				      <td>aui-explain for more details on users interface.</td>
 				      <td><span property="xhv:role" resource="xhv:heading">Language type support</span>
 			          <p resource="#h-language-type-support">(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#h-language-type-support">§ link</a>)</p>
 			          <p resource="#h-language-type-support">@@</p>
-			          <p resource="#h-language-type-support">COGA-explain for more details on users' interfaces</p></td>
+			          <p resource="#h-language-type-support">aui-explain for more details on users' interfaces</p></td>
 				      <td><p>as above</p>
 			          
 			          
-			          <p>settings - how should COGA-explain be shown?</p>
+			          <p>user settings - how should aui-explain be shown?</p>
 			          
-			          <p><strong>COGA-explain</strong> - </p>
+			          <p><strong>aui-explain</strong> - </p>
                       
                       <ul>
                         <li>show never;</li>
@@ -1332,9 +1332,9 @@ Potential parts of a page
 				      <td class="summary"></td>
 				      <td class="summary"><p>Adding Context</p>
 				        <p>In adding a semantic for the context (what the thing is for), such as </p>
-                        <p>COGA-action="undo" </p>
+                        <p>aui-action="undo" </p>
                         <p>or </p>
-                        <p>COGA-destination="home"</p>
+                        <p>aui-destination="home"</p>
                         <p>and additional landmarks or regions, such as </p>
                       <p>role=&quot;warning&quot;</p>
 					      <p><strong>Note</strong></p> 
@@ -1342,7 +1342,7 @@ Potential parts of a page
 				        
                       
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="https://rawgit.com/w3c/COGA/master/gap-analysis/semantics.html#h-adding-context">§ link</a>)</p></td>
-				      <td class="summary"><p>User settings will need to address how to handle different contexts, such as COGA-action="undo" , for example, an which symbol to load for the setting. </p>
+				      <td class="summary"><p>User settings will need to address how to handle different contexts, such as aui-action="undo" , for example, an which symbol to load for the setting. </p>
                       <p>A mechanism is needed to read users' settings and adapt the page. Open source script is available/ being worked on at <a href="http://rawgit.com/ayelet-seeman/COGA.personalisation">http://rawgit.com/ayelet-seeman/COGA.personalisation</a></p>
                       
                       <p>User settings for each contextual element include:</p>
@@ -1357,7 +1357,7 @@ Potential parts of a page
                       <p>to add : location)</p>
                       
                       <p><strong>Also add for other COGA attributes</strong></p>
-                      <p>&quot;@COGA-simplification&quot;: [{         &quot;critical&quot;: {             &quot;settings&quot;: [{                 &quot;@ARIA-hidden&quot;: &quot;false&quot;,                 &quot;CSS&quot;: &quot;visibility:visible;&quot;             }]         }</p>
+                      <p>&quot;@aui-simplification&quot;: [{         &quot;critical&quot;: {             &quot;settings&quot;: [{                 &quot;@ARIA-hidden&quot;: &quot;false&quot;,                 &quot;CSS&quot;: &quot;visibility:visible;&quot;             }]         }</p>
                       <p><strong>designs that are familiar</strong></p>
                       <p>We will need a vocabulary of design elements, such as hamburger menus, pop-ups, help swipe right, setting swipe left, etc.</p>
                       <p>For each one, <strong>familiar options:</strong></p>
@@ -1513,15 +1513,15 @@ Potential parts of a page
                       <p>(<a  title="Permalink for 2.3 Writing style" aria-label="expand 2.3 Writing style" href="https://rawgit.com/w3c/COGA/master/techniques/index.html#writing-style" class="expand">§ link</a>)</p>
                       <p><span property="xhv:role" resource="xhv:heading">2.3.1 Be clear and to the point.</span></p>
                       <p>(<a  title="Permalink for 2.3.1 Be clear and to the point" aria-label="expand 2.3.1 Be clear and to the point" href="https://rawgit.com/w3c/COGA/master/techniques/index.html#be-clear-and-to-the-point">§ link</a>)</p></td>
-                    <td><p><strong>COGA-alternative</strong></p>
+                    <td><p><strong>aui-alternative</strong></p>
                       <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§ link</a>)                      </p>
-                      <p><strong>COGA-easylang</strong></p>
+                      <p><strong>aui-easylang</strong></p>
                       <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§  link</a></p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
                       <p><strong>Alternative is to use of EMMA</strong></p>
                       <p> (<a  title="expand" class="expand" aria-label="expand example" href="">§</a> example)</p>
                       <p>However, we still need to standardize the terms, such as for complexity.</p>
-                      <p><strong>COGA-literal</strong></p>
+                      <p><strong>aui-literal</strong></p>
                       <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§ link</a>)</p>
                       <p><strong>Emotional ML</strong> can also be used to identify emotions in content (also for multimedia).</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§ link</a>)</p>
@@ -1570,7 +1570,7 @@ Potential parts of a page
                       <h4 resource="#h-be-clear-and-to-the-point" id="h-be-clear-and-to-the-point2">@@</h4>
                       2.3.2 Give instructions clearly<span typeof="bookmark"><a property="url" title="Permalink for 2.3.2 Give instructions clearly" aria-label="Permalink for 2.3.2 Give instructions clearly" href="https://rawgit.com/w3c/COGA/master/techniques/index.html#give-instructions-clearly"><span content="2.3.2 Give instructions clearly" property="title"></span></a></span>
                       <p>(<a property="url" title="Permalink for 2.3.2 Give instructions clearly" aria-label="Permalink for 2.3.2 Give instructions clearly" href="https://rawgit.com/w3c/COGA/master/techniques/index.html#give-instructions-clearly">§ link</a>)</p></td>
-                    <td><p><strong>COGA-literal </strong></p>
+                    <td><p><strong>aui-literal </strong></p>
                       <p>(<a  title="expand" class="expand" aria-label="expand values" href="">§  link</a>)</p>
                       <p><strong>Emotional ML</strong> can also be used to identify emotions in content (also for multimedia).</p>
                       <p>Question: Do we need another way of adding the emotions or sarcasm into content?</p>
@@ -1617,7 +1617,7 @@ Potential parts of a page
                       <p>(<a  title="expand" class="expand" aria-label="expand " href="">§ link</a>) </p>
                       
                       <p>ADD: Explain mathematical concepts with non-mathematical language. For example &quot;change 90% agree&quot;, to &quot;most users (90-%) agree&quot;.</p></td>
-                    <td><p>COGA-numberfree</p>
+                    <td><p>aui-numberfree</p>
                       <p>(<a  title="expand" class="expand" aria-label="expand example" href="">§ link</a>)</p></td>
                     <td><p>User settings must  identify:</p>
                       <p>1.  when a user prefers content with less numerical content and prefers words;</p>
@@ -1687,7 +1687,7 @@ Potential parts of a page
                       <p>And others...</p></td>
                     <td><p>As above</p>
                       <p>Also, having less content is helpful for slow readers,</p>
-                      <p>COGA-simplification= "simplest"</p>
+                      <p>aui-simplification= "simplest"</p>
                       <p>()</p>
                       <p>Enabling APIs is also important.</p>
                       <p>()</p></td>
