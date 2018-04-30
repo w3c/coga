@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
+		<base href="https://rawgit.com/w3c/coga/transfer-usable-to-html/content-usable/">
 		<title>Making content usable for people with cognitive and learning disabilities</title>
 		<meta charset="utf-8"/>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
@@ -9,12 +10,19 @@
 	
 		<link href="../common/common.css" rel="stylesheet" type="text/css" />
 		
-		
+		<!-- Used just for highlighting, will be removed before going into master -->
+		<style type="text/css">
+			.edited {
+				background-color: yellow;
+			}
+		</style>
+
 	</head>
 	<body>
 
-		<section id="abstract">
-			<p></p>
+		<section id="abstract" class="edited">
+			<p>This document provides advice for content authors on making websites more usable for people with learning and cognitive disabilities.</p>
+			<p><em>This document is non-normative.</em></p>
 		</section>
 
 		<section id="sotd"></section>
@@ -22,14 +30,28 @@
 		<section class="informative" id="introduction">
 
 			<h1>Introduction</h1>
-			
-		</section>
 
-		<section id="aims">
-			<h1>Aim</h1>
 			<p>Making websites and applications that are friendly for people with cognitive impairments affects every part of design and development.</p>
 			<p>Traditionally accessibility has been most focused on the interface, and making that usable for people with sensory and physical impairments in vision, hearing and/or mobility. Some accessibility features will help people with cognitive impairments, but often the issues are about context, language, usability, and other more general factors that impact everyone to some degree.</p>
 			<p>This document aims to provide guidance on how to make websites and applications that are friendly for people with cognitive impairments by providing guidance for your designs, and design process.</p>
+
+
+			<p class="edited">Other resources from the Cognitive and Learning Disabilities Accessibility Task Force include:</p>
+			<ul class="edited">
+				<li>
+					<strong><a href="https://www.w3.org/TR/coga-gap-analysis/">Gap analysis</a></strong>: A summary of issues and techniques that analyses the current situation, in terms of user groups, and discusses many issues. The roadmap identifies gaps and unmet user needs and suggest ways to meet these needs. 
+				</li>
+				<li>
+					<strong><a href="https://www.w3.org/TR/coga-issue-papers/">Issues papers</a></strong>: A list of issues that impact people with cognitive impairments such as &quot;Personalization and Preferences&quot; and &quot;Symbols for Non-Verbal&quot;.
+				</li>
+				<li>
+					<strong><a href="https://www.w3.org/TR/coga-user-research/">User Research</a></strong>: describes challenges in the areas of attention, executive function, knowledge, language , literacy, memory, perception, and reasoning.
+				</li>
+				<li>
+					<strong><a href="https://www.w3.org/TR/coga-techniques/">Techniques</a></strong>: gathering together techniques and strategies that help people with cognitive impairments. 
+				</li>
+			</ul>
+
 			<section id="process">
 				<h2>Process</h2>
 				<p>Some aspects of making things friendly for people with cognitive impairments are best dealt with as part of the overall design process. For most organizations there should be scope for taking a <a href="https://www.usability.gov/what-and-why/user-centered-design.html">user-centred design process</a>.</p>
@@ -44,7 +66,7 @@
 						</li>
 					</ul>
 				</p>
-				<p>If people with cognitive impairments are included in the usability testing and their feedback is accounted for, you can be sure that the website will be very easy to use for everyone. (See <a href="#testing_groups_feedback">Usability testing</a>, below)</p>
+				<p>If people with cognitive impairments are included in the usability testing and their feedback is accounted for, you can be sure that the website will be easier to use for everyone. (See <a href="#testing_groups_feedback">Usability testing</a>, below)</p>
 			</section>
 			<section id="accessibility_guidance">
 				<h2>Accessibility Guidance (Design Themes)</h2>
@@ -58,12 +80,12 @@
 				<p>For requirements which can be reliably tested, WCAG 2.1 provides many well-tested success criteria. Where there is overlap this document will link to the appropriate <a href="https://www.w3.org/TR/WCAG21/">WCAG 2.1</a> criteria.</p>
 			</section>
 			<section id="scale">
-				<h2>Scale</h2>
+				<h2 class="edited">Applicability for different websites</h2>
 				<p>How much effort an organization should expend on making a website friendly for people with cognitive impairments will vary. For organizations that provide public services, or are national (or international) private service providers and already conduct user-research, they should:</p>
 				<p>
 					<ul>
-						<li>
-							Include people with cognitive impairments as part of the process;
+						<li class="edited">
+							Include people with learning and cognitive disabilities as part of the process;
 						</li>
 						<li>
 							Review designs and early stage development with the design themes in this document.
@@ -85,9 +107,10 @@
 			<p class="ednote">We intend to add a summary of the user need addressed in <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html"> https://rawgit.com/w3c/coga/master/gap-analysis/table.html</a></p>
 		</section>
 
-		<section id="persona">
+		<section id="persona" class="edited">
 			<h1>Use Cases / Persona</h1>
-			<p>This section should include document on <a href="https://www.w3.org/TR/WCAG21/">persona</a>.</p>
+			<p>Learning and cognitive disabilities are often invisible in day to day life until people encounter particular challenges. To provide some context and understanding eight personas have been created which outline fictional people with various cognitive issues and the challenges they face.</p>
+			<p>@@@ We can't link to a Google doc, do we need to HTML-ise this? <a href="https://docs.google.com/document/d/18bjXRKSW7hT8PQyS2TCzPyo90i55pJamIGSdTrYdBIQ/">Personas for learning and cognitive disabilities</a>.</p>
 		</section>
 
 		<section id="testing_groups_feedback">
@@ -136,20 +159,21 @@
 				<p>
 					<ul>
 						<li>
-							Ensure that the participation forms are easy to understand, send them to the participant in advance, and allow plenty of time for the participant to ask questions and fill in forms;
+							<p>Ensure that the participation forms are easy to understand, send them to the participant in advance, and allow plenty of time for the participant to ask questions and fill in forms;</p>
 						</li>
 						<li>
-							Allow the participant to bring a carer, family member or friend to attend with them. If your tester has a guardian you should get informed consent from both the tester and their guardian;
+							<p>Allow the participant to bring a carer, family member or friend to attend with them. If your tester has a guardian you should get informed consent from both the tester and their guardian;</p>
+						</li>
+						<li class="edited">
+							<p>It helps to provide easy methods of assessing mood, rather than asking for the participant to verbalise, try asking them to select a smiley face, such as:<br />
+							<figure><img src="img/faces-happy-to-sad.png" width="200" alt="a set of 5 smiley faces from happy, through neutral, to sad." /></figure></p>
 						</li>
 						<li>
-							It helps to provide easy methods of assessing mood, rather than asking for the participant to verbalise, try asking them to select a smiley face, such as:
-						</li>
-						<li>
-							Ensure the person does not feel like they are at fault for making mistakes; this is a likely scenario for people with cognitive impairments.
+							<p>Ensure the person does not feel like they are at fault for making mistakes; this is a likely scenario for people with cognitive impairments.</p>
 						</li>
 					</ul>
 				</p>
-				<p class="ednote">The next six paragraphs may be removed as it is both covered in usability guidance in the links above and significantly incomplete in comparison. We would be interested in finding out if anyone finds it useful to include.</p>
+				<p class="ednote">The next few paragraphs up to the next section may be removed as it is both covered in usability guidance in the links above and significantly incomplete in comparison. We would be interested in finding out if anyone finds it useful to include.</p>
 				<p>Some brief guidance on usability testing:</p>
 				<p>
 					<ol>
@@ -198,12 +222,11 @@
 		</section>
 
 		<section id="design_themes">
-			<h1>Design Themes</h1>
+			<h1>Design Requirement Themes</h1>
 			<p>To help web content providers meet the needs of people with cognitive and learning disabilities we have identified the following themes:</p>
 			<p>
 				<ol>
 					<li><p><strong>Design so that as many users as possible understand the site and know how to use it. </strong>This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patterns. Personalization and good use of semantics can help make the symbols and design as familiar to the user as possible. People with cognitive disabilities rely upon predictable behavior in digital content. For example, many websites do not follow the standard convention for hyperlinks: blue = unvisited; purple = visited; and underlined. </p>
-					<p>This includes the following design requirements ….</p>
 					</li>
 					<li><p><strong>Help the user find what they need. </strong>Navigating the system should be easy</p></li>
 					<li><p><strong>Use clear and understandable content</strong> This includes clear text, clear images, speech, and easy to understand video. For text, we mean understandable at an upper-primary grade reading level.</p></li>
@@ -217,13 +240,13 @@
 
 			<section id="design_requirements">
 				<h2>Design requirements</h2>
-				<p class="ednote">The task force  is taking all the design requirements and turning them into easy to read checkpoints. They will be divided by themes listed above.
-				<p>Most of the design requirements were originally created as recommendations for WCAG. The full list can be viewed here: https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To_Do_list.</p>
-				<p>You can also review the progress of the  task force in making readable requirements, geared to web developers at https://docs.google.com/document/d/1WcfVALVq8PS9CLXUuAfV9Op0wXvI2yJYedj5jO23GTk/edit?usp=sharing</p>
+				<p class="ednote">The task force is taking all the design requirements and turning them into easy to read checkpoints. They will be divided by themes listed above.</p>
+				<p>Most of the design requirements were originally created as recommendations for WCAG, the <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To_Do_list">full list of potential requirements</a> is available, and you can also review the progress of the task force in making <a href="https://docs.google.com/document/d/1WcfVALVq8PS9CLXUuAfV9Op0wXvI2yJYedj5jO23GTk/">readable requirements geared to web developers</a>.</p>
 				<p>The task force appreciates feedback on this work.</p>
 				</p>
 				<p>Table of design requirements and user groups</p>
 				<p class="ednote">We intend to redo this table when we have completed our easy to read design recommendations.</p>
+				<p class="edited">@@@ Short summary and link to the table...</p>
 				<p>Please view the  table at <a href="table.html">Table of design requirements and user group</a> </p>
 			</section>
 		</section>
