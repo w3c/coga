@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-<title>Personalization and User Preferences</title>
-</head>
-<body>
 <section>
  <h1>Personalization and User Preferences</h1>
-  <section>
-   
-  
-
-    <h2>Boilerplate</h2>
-    <p>This document an issue paper looking into the potential and issues faced by users with learning disabilities and cognitive disabilities when using personalization and user preferences.
-      
-      This is part of a series of issue papers written by The Cognitive and Learning Disabilities Accessibility Task Force (COGA). COGA is a joint Task Force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures (APA) Working Group</a> and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group (WCAG WG)</a>.    </p>
-    <p>This work will be used as a base document for other work including a road-map for improving accessibility for people with learning disabilities and cognitive disabilities. </p>  </section><section>  <h2>Introduction</h2>
+<section>  <h2>Introduction</h2>
     <p><strong>What is personalization:</strong> Personalization involves tailoring aspects of the user experience to meet the preferences or needs of the user. Technology holds the promise of being extremely flexible and the design of many systems includes the expectation that users will be able to optimize their interaction experience according to their personal preferences or accessibility requirements (needs). </p>
     <p> <strong>What are user preferences</strong> are settings that identify the specifics needs of the individual user. To be effective user preferences should be standardized so that multiple applications can tailor their content to the user needs without each requiring the user to specify preferences.</p>
     <p>We need personalization because: </p>
@@ -85,10 +71,9 @@
         <li>enabling usable security (see XXX);</li>
         <li>edding graded help that works with the needs of this user (see XXX ).</li>
       </ol>
-    </section></section></section>
+    </section></section>
     
   
-  <section>
     <section>
 <h2>User preferences</h2>
       
@@ -96,10 +81,8 @@
       
       <section>
         <h3>Challenges of user preferences for people with cognitive disabilities</h3>
-        <section>
           <p>People with cognitive disabilities can be become daunted, or worse, completely unable to effectively use preferences to improve their experience on their own. Preference selection is often implemented by providing a range of forms with controls for enabling or choosing options for each preference. These forms can be complex in detail such audio configuration and in size given that some forms are extensive. A specific preference can be hard to locate in control panels with many options even when search and browsing are provided (e.g., Windows control Panel). As a result, some users in this group will be unable set their preferences without assistance.</p>
           <p>There are also other potential difficulties after changes to preferences are made. Changes may not be implemented immediately or further action is required for this to happen. It may also be difficult to revert to a previous setting after trailing and rejecting a particular setting.</p>
-        </section>
       </section>
       <section>
         <h3>Templates for preferences</h3>
@@ -179,14 +162,14 @@
     </section><section>
       <h4>Adding to ways we can address personalization</h4>
       <ol>
-        <li>User CSS [[CSS]] allowing an ARIA [[wai-aria]] role for extra help to be loaded However, user style sheets are being deprecated.</li>
-        <li>RDF [[rdf]] and RDFA [[rdfa]] . Issues with these solutions include adaptability and whether typical authors will use them correctly and without errors.</li>
+        <li>User CSS [[CSS-2017]] allowing an ARIA [[wai-aria]] role for extra help to be loaded However, user style sheets are being deprecated.</li>
+        <li>RDF [[rdf-concepts]] and RDFA [[rdfa-core]] . Issues with these solutions include adaptability and whether typical authors will use them correctly and without errors.</li>
         <li>Create additional semantics such as	mentioned	in	the	issue paper Proposal for Additional Page Semantics.	These semantics, as well as element names, landmarks, Indi UI and WAI-ARIA roles can be linked to user preference to enable the interface to be adapted. A demonstration can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.</li>
       </ol>
       <p>If there is an output we will need data binding.</p>
     </section>
       </section><section>
-        <h3 resource="#h-strategies" id="h-strategies"><span property="xhv:role" resource="xhv:heading">Strategies</span></h3>
+        <h3>Strategies</h3>
         <ol>
           <li>Promote and support advancements in technologies in these  area. For example, our recommending for WCAG [[<a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/index.php?title=WCAG20">WCAG20</a>]] will be along the lines of  "Use semantics and standardized techniques that enable the content  to be adapted to the user scenario and enable additional support".</li>
           <li>Enable compatibility with standards such as GPII but do not depend on them. </li>
@@ -194,7 +177,7 @@
           <li>Enable simple solutions that are expendable - encouraging more complex solutions in the future, such as having preferences be easily cascaded to allow for contextual personalization and for portability in the future. </li>
         </ol>
         </section><section>
-        <h4 resource="#h-solutions-and-further-work-for-personalization" id="h-solutions-and-further-work-for-personalization"><span property="xhv:role" resource="xhv:heading"> Further work for personalization</span></h4>
+        <h4>Further work for personalization</h4>
         <ol>
           <li>Support in WCAG that encourages support the features of the  operating system or standards that enable adaption, such as adding  additional success criteria.</li>
           <li>Develop supporting techniques so authors know exactly what to do </li>
@@ -212,7 +195,7 @@
         </ol>
       </section>
         <section>
-        <h3 resource="#h-end-to-end-basic-solution" id="h-end-to-end-basic-solution"><span property="xhv:role" resource="xhv:heading"> End to end basic solution</span></h3>
+        <h3>End to end basic solution</h3>
         <p>We need standardized terms and supportive syntax that can be  linked to associated symbols, terms, translations and explanations for  the individual use, possibly via an aria attribute and personal  preferences. </p>
         <p>For example, assume an author can make it programmatically known  that a button is used to send an email. At the user end, the button  could be rendered with a symbol, term, and/or tooltips that are  understandable for this particular user. It could automatically  integrate with F1 help that explains the send function in simple terms.  It could be identified with a keyboard short cut that will always be  used for send. In addition, it could be identified as important and  always rendered, or rendered as a large button. </p>
         <p>Working examples of how this could be used in practice with user preferences are available Full versions can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. It demonstrates personalization for any use - including people with learning and memory issues </p>
@@ -225,10 +208,7 @@
         </ol>
         <p>This is only one example way to use the semantics. Others may follow. It is also worth noting that the GPII [[GPII-1]] and ETSI [[ETSI-1]] is working on making user preferences portable which would also enhance this work. </p>
       </section><section>
-        <h3 resource="#h-special-case" id="h-special-case"><span property="xhv:role" resource="xhv:heading"> Special case</span></h3>
+        <h3>Special case</h3>
         <p>Products for people who are non-verbal often use symbols to help users communicate. These symbols are in fact peoples' language. Unfortunately many of these symbols are both subject to copyright AND are not interoperable. That means end-users can only use one device, and cannot use apps or content from a different company. If we enabled mapping to open sets of symbol codes that, in turn, map to open or proprietary  symbol sets, then they can be interoperable. At the user end, the user agent can load the symbols that the user knows. Symbol sets might still be proprietary but they would also be interoperable. That means the end user could use them across different devices, or  any compatible content or applications. This is addressed further in the issue paper on symbols for people who are non-verbal.</p>
   </section>  </section>
-   </section>
-        
-</body>
-</html>
+</section>
