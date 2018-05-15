@@ -1877,7 +1877,7 @@ var biblio = {
 		"etAl": "true",
 		"publisher": "ASSETS '12 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 25-32",
 		"publishDate": "2012"
-		}
+		},
 
 		"making-content-usable": {
 		"title": "Making content usable for people with cognitive and learning disabilities",
@@ -1890,7 +1890,7 @@ var biblio = {
 		],
 		"etAl": "false",
 		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
-	},
+		}
 		
 	
 };
