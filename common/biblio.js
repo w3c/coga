@@ -1879,7 +1879,7 @@ var biblio = {
 		"publishDate": "2012"
 		},
 
-		"making-content-usable": {
+	"making-content-usable": {
 		"title": "Making content usable for people with cognitive and learning disabilities",
 		"href": "https://rawgit.com/w3c/coga/master/content-usable/usable.html",
 		"publisher": "W3C",
