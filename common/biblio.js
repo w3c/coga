@@ -698,7 +698,7 @@ var biblio = {
 		"href": "http://www.etsi.org/"
 		},
 
-		 "ETSI-EG 202 325":
+		 "ETSI-EG-202-325":
 		{
 		"title": "Human Factors (HF); User Profile Management",
 		"authors": ["ETSI"],
@@ -709,7 +709,7 @@ var biblio = {
 		},
 
 
-		 "ETSI-ES 202 746":
+		 "ETSI-ES-202-746":
 		{
 		"title": "Human Factors (HF); Personalization and User Profile Management; User Profile Preferences and Information",
 		"authors": ["ETSI"],
@@ -720,7 +720,7 @@ var biblio = {
 		},
 
 
-		 "ETSI-ES 202 642":
+		 "ETSI-ES-202-642":
 		{
 		"title": "Human Factors (HF); Personalization of eHealth systems by using eHealth user profiles (eHealth)",
 		"authors": ["ETSI"],
@@ -730,7 +730,7 @@ var biblio = {
 		"publishDate": "2010"
 		},
 
-		 "ETSI-TS 102 747":
+		 "ETSI-TS-102-747":
 		{
 		"title": "Human Factors (HF); Personalization and User Profile Management; Architectural Framework",
 		"authors": ["ETSI"],
