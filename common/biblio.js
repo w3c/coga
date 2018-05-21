@@ -691,7 +691,14 @@ var biblio = {
 		"publishDate": "1996"
 	},
 
-		 "ETSI-1":
+		 "ETSI":
+		{
+		"publisher": "The European Telecommunications Standards Institute",
+		"etAl": "false",
+		"href": "http://www.etsi.org/"
+		},
+
+		 "ETSI-EG 202 325":
 		{
 		"title": "Human Factors (HF); User Profile Management",
 		"authors": ["ETSI"],
@@ -702,7 +709,7 @@ var biblio = {
 		},
 
 
-		 "ETSI-2":
+		 "ETSI-ES 202 746":
 		{
 		"title": "Human Factors (HF); Personalization and User Profile Management; User Profile Preferences and Information",
 		"authors": ["ETSI"],
@@ -713,7 +720,7 @@ var biblio = {
 		},
 
 
-		 "ETSI-3":
+		 "ETSI ES 202 642":
 		{
 		"title": "Human Factors (HF); Personalization of eHealth systems by using eHealth user profiles (eHealth)",
 		"authors": ["ETSI"],
@@ -723,7 +730,7 @@ var biblio = {
 		"publishDate": "2010"
 		},
 
-		 "ETSI-4":
+		 "ETSI TS 102 747":
 		{
 		"title": "Human Factors (HF); Personalization and User Profile Management; Architectural Framework",
 		"authors": ["ETSI"],
@@ -876,9 +883,9 @@ var biblio = {
 		"publishDate": "2005"
 		},
 
-		 "GPII-1":
+		 "GPII":
 		{
-		"publisher": "GPII",
+		"publisher": "The Global Public Inclusive Infrastructure",
 		"etAl": "false",
 		"href": "http://gpii.net/"
 		},
@@ -1879,18 +1886,7 @@ var biblio = {
 		"publishDate": "2012"
 		},
 
-	"making-content-usable": {
-		"title": "Making content usable for people with cognitive and learning disabilities",
-		"href": "https://rawgit.com/w3c/coga/master/content-usable/usable.html",
-		"publisher": "W3C",
-		"editors":
-		[
-			"Lisa Seeman",
-			"Michael Cooper"
-		],
-		"etAl": "false",
-		"deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
-		}
+	
 		
 	
 };
