@@ -693,7 +693,7 @@ var biblio = {
 
 		 "ETSI":
 		{
-		"publisher": "The European Telecommunications Standards Institute",
+		"title": "The European Telecommunications Standards Institute",
 		"etAl": "false",
 		"href": "http://www.etsi.org/"
 		},
@@ -720,7 +720,7 @@ var biblio = {
 		},
 
 
-		 "ETSI ES 202 642":
+		 "ETSI-ES 202 642":
 		{
 		"title": "Human Factors (HF); Personalization of eHealth systems by using eHealth user profiles (eHealth)",
 		"authors": ["ETSI"],
@@ -730,7 +730,7 @@ var biblio = {
 		"publishDate": "2010"
 		},
 
-		 "ETSI TS 102 747":
+		 "ETSI-TS 102 747":
 		{
 		"title": "Human Factors (HF); Personalization and User Profile Management; Architectural Framework",
 		"authors": ["ETSI"],
@@ -885,7 +885,7 @@ var biblio = {
 
 		 "GPII":
 		{
-		"publisher": "The Global Public Inclusive Infrastructure",
+		"title": "The Global Public Inclusive Infrastructure",
 		"etAl": "false",
 		"href": "http://gpii.net/"
 		},
