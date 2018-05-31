@@ -691,7 +691,14 @@ var biblio = {
 		"publishDate": "1996"
 	},
 
-		 "ETSI-1":
+		 "ETSI":
+		{
+		"title": "The European Telecommunications Standards Institute",
+		"etAl": "false",
+		"href": "http://www.etsi.org/"
+		},
+
+		 "ETSI-EG-202-325":
 		{
 		"title": "Human Factors (HF); User Profile Management",
 		"authors": ["ETSI"],
@@ -702,7 +709,7 @@ var biblio = {
 		},
 
 
-		 "ETSI-2":
+		 "ETSI-ES-202-746":
 		{
 		"title": "Human Factors (HF); Personalization and User Profile Management; User Profile Preferences and Information",
 		"authors": ["ETSI"],
@@ -713,7 +720,7 @@ var biblio = {
 		},
 
 
-		 "ETSI-3":
+		 "ETSI-ES-202-642":
 		{
 		"title": "Human Factors (HF); Personalization of eHealth systems by using eHealth user profiles (eHealth)",
 		"authors": ["ETSI"],
@@ -723,7 +730,7 @@ var biblio = {
 		"publishDate": "2010"
 		},
 
-		 "ETSI-4":
+		 "ETSI-TS-102-747":
 		{
 		"title": "Human Factors (HF); Personalization and User Profile Management; Architectural Framework",
 		"authors": ["ETSI"],
@@ -876,9 +883,9 @@ var biblio = {
 		"publishDate": "2005"
 		},
 
-		 "GPII-1":
+		 "GPII":
 		{
-		"publisher": "GPII",
+		"title": "The Global Public Inclusive Infrastructure",
 		"etAl": "false",
 		"href": "http://gpii.net/"
 		},
@@ -1877,7 +1884,9 @@ var biblio = {
 		"etAl": "true",
 		"publisher": "ASSETS '12 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 25-32",
 		"publishDate": "2012"
-		}
+		},
+
+	
 		
 	
 };
