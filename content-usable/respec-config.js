@@ -15,7 +15,7 @@ var respecConfig = {
     //diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 
     // the specifications short name, as in http://www.w3.org/TR/short-name/
-    shortName:            "making-content-usable",
+    shortName:            "coga-usable",
 
 
     // if you wish the publication date to be other than today, set this
