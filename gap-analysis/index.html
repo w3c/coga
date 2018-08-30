@@ -23,10 +23,10 @@
 		//perEnd:               "2013-07-23",
 		//publishDate:          "2013-08-22",
 		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
-		
+
 		// the specifications short name, as in http://www.w3.org/TR/short-name/
 		shortName:            "coga-gap-analysis",
-		
+
 
 		// if you wish the publication date to be other than today, set this
 		//publishDate:  "2017-05-16",
@@ -51,7 +51,7 @@
 		editors: [
 			{
 				name: "Lisa Seeman",
-				
+
 				mailto: "lseeman@us.ibm.com",
 			},
 			{
@@ -63,7 +63,7 @@
 			}
 		],
 
-		// authors, add as many as you like. 
+		// authors, add as many as you like.
 		// This is optional, uncomment if you have authors as well as editors.
 		// only "name" is required. Same format as editors.
 
@@ -75,22 +75,22 @@
 		/*
 		alternateFormats: [
 			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
-			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.ps', label: "PostScript version" },
 			{ uri: 'aria.pdf', label: "PDF version" }
 		],
 		*/
-		
+
 		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
-		
+
 		// name of the WG
 		wg:           ["Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
-		
+
 		// URI of the public WG page
 		wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
-		
+
 		// name (with the @w3c.org) of the public mailing to which comments are due
 		wgPublicList: "public-coga-comments",
-		
+
 		// URI of the patent status for this WG, for Rec-track documents
 		// !!!! IMPORTANT !!!!
 		// This is important for Rec-track documents, do not copy a patent URI from a random
@@ -98,7 +98,7 @@
 		// Team Contact.
 		wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
 		//maxTocLevel: 2,
-		
+
 		localBiblio: biblio,
 	};
 		</script>
@@ -121,18 +121,23 @@ th > p:first-child, td > p:first-child {
 .technique {
     border: thin dashed black;
 }
-        </style>
+		</style>
+		<style type="text/css">
+			.steve-qa-highlight {
+				 background-color: yellow;
+		}
+		</style>
 	</head>
 <body>
 		<section id="abstract">
-			
+
 			<p>This document is a gap analysis and roadmap for the state of accessibility for people with learning and cognitive disabilities when using the Web and information technologies. It builds on the information presented in <a href="https://www.w3.org/TR/coga-user-research/">Cognitive Accessibility User Research</a> [[coga-user-research]] and <a href="https://w3c.github.io/coga/issue-papers/">Cognitive Accessibility Issue Papers</a> [[coga-issue-papers]] to evaluate where user needs remain to be met in technologies and accessibility guidelines. For various accessibility issues, this document provides a summary of issues and techniques, then identifies gaps and unmet user needs and suggest ways technologies may meet these needs in the future.</p>
-			
+
 			<p>This document also contains a section with practical advice on <a href="#a-appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities">how to make content usable for people with learning and cognitive disabilities</a>. Content developers may prefer to start there. We hope it will meet the needs of web developers, content creators and policy makers. </p>
 
-			
+
 			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
-			
+
 			<!-- Todo: the commented out items above need to be messaged in a different way, they are not comprehensively covered even though listed -->
 		</section>
 <section id="sotd">
@@ -150,7 +155,7 @@ th > p:first-child, td > p:first-child {
 <section class="informative" id="introduction">
 			<h2>Introduction</h2>
 			<p>The Cognitive and Learning Disabilities Accessibility Task Force's aim is to improve web accessibility for people with cognitive and learning disabilities. </p>
-	
+
 	<p>This document contains a gap analysis and review of key issues, a roadmap for inclusion for different user needs.</p>
 	<p>It is designed for standards groups and policy makers. However, it has useful information for anyone trying to understand the topic. There is also an appendix on <a href="#a-appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities">how to make content usable for people with leaning and cognitive disabilities</a>. Content developers may find this section the most useful.</p>
 	<p>This is being done as part of the Web Content Accessibility Guidelines (WCAG) and Accessible Platform Architecture Working Group (APA WG), part of the Web Accessibility Initiative (WAI) of the W3C. Challenges facing this work include: </p>
@@ -160,7 +165,7 @@ th > p:first-child, td > p:first-child {
 				<li>The advice given in the research and available guidance is often vague and is not testable. So, even if developers read the research they would not know exactly what to do or when they have reached an acceptable level of accessibility.</li>
 			    <li>Another major challenge is capturing difficulties related to cognitive disabilities that may be undeclared. People with cognitive disabilities may be embarrassed about their disabilities and may be less likely to request accommodations. They may be       afraid of discrimination, especially in the work place. Others are not aware of their disability or of the impact it has on their functioning.</li>
                    <li>Attitudes and misinformation can       also become a barrier to inclusion for people with cognitive disabilities.       For example, developers that may feel people with cognitive disabilities       are not in their &quot;target audience&quot; and so have no interest in their inclusion. Also, studies of usability often over-sample college students. This       can mean that the results work less well for those inadequately       represented among sub-groups of college students (such the aging       population).</li>
-			
+
               <li>Attitudes and misinformation can also become a barrier to inclusion for people with cognitive disabilities. For example, developers that may feel people with cognitive disabilities are not in their “target audience” and so have no interest in their inclusion. Also, studies of usability often over-sample college students. Thus the results work less well for groups who are not well represented among sub-groups of college students (such the aging population).</li>
               <li>Accessibility has typically been based upon the assumption that any website can be designed to be usable by people with disabilities. However, when making a website usable for people with cognitive disabilities, the content itself may need to be changed (e.g. simplified), or support adaptability (e.g. multi-modal delivery).</li>
             </ul>
@@ -193,7 +198,7 @@ th > p:first-child, td > p:first-child {
 			<p>The diagram shows how these need to be integrated to enable accessibility for people with cognitive disabilities</p>
 			<figure>
 				<img width="386" height="411" src="img/project-description.jpg" alt="what we are doing as hexagons" />
-			
+
 			<figcaption>Figure 1. Diagram  showing user research leading to techniques &amp; WCAG extension, specific  issues, semantics for adaptive interfaces and preferences with integration of  standards</figcaption></figure>
 <p>A roadmap must enable the integration  of all the pieces that can make accessibility for people with cognitive  disabilities workable. A roadmap must also address the author needs and issues  that will help make this work practical. For example: Best practice documents  and how to ensure that personalization is practical and testable.</p>
 <figure>
@@ -240,9 +245,9 @@ th > p:first-child, td > p:first-child {
 		<p>It is a long document and we know it can be hard to find your way around it. ( In the meantime here are some sections of particular interest:
 		</p>
 <ul><li>
-There is a Summary of Issue Papers that addresses some of the issues that people with learning and cognitive disabilities face, such as problems with logging on, safety, voice menu systems, and many other topics. This may be useful for anyone trying to gain more understanding of the topic. 
+There is a Summary of Issue Papers that addresses some of the issues that people with learning and cognitive disabilities face, such as problems with logging on, safety, voice menu systems, and many other topics. This may be useful for anyone trying to gain more understanding of the topic.
 </li><li>There is a section with Tables of User Needs that identify the  different needs of the community and proposes suggestions on how standards and technologies could be developed to meet these needs. This may be useful for standards’ groups and policy makers.
-</li><li>There is also an  appendix on how to make content usable for people with learning and cognitive disabilities. This section contains  a section with practical advice and content developers may prefer to start here. We hope it will also meet the needs of web developers, content creators and policy makers. 
+</li><li>There is also an  appendix on how to make content usable for people with learning and cognitive disabilities. This section contains  a section with practical advice and content developers may prefer to start here. We hope it will also meet the needs of web developers, content creators and policy makers.
 </li></ul>					<p class="ednote" title="This section will added">
 			We are aware that it is difficult to find your way around this document. We intend to add this section to help. Suggestions for other ways to improve it are welcome.
 			</p>
@@ -267,21 +272,21 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 				<h3>Overview of Techniques</h3>
 				<p>Most designers want people to be able to use their site. However designs that might be difficult for some people to use can actually bar people with cognitive and learning disabilities from using the content at all. Typically this happens because content providers may not be familiar with the needs of users having these impairments. We have reviewed multiple user groups as a first phase to identify user needs and challenges that are not fully included in WCAG.  From this research we have identified techniques and themes though the techniques that authors need to be aware of (and are not full addressed in WCAG 2.0) The key themes are: </p>
 				<ol>
-					<li>Help as many users as possible understand the site and know how to use it. This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patters. Personalization based on user needs and markup properly annotated with cognitive semantics can help make the symbols and design as familiar to the user as possible. </li>
+					<li>Help as many users as possible understand the site and know how to use it. This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design <span class="steve-qa-highlight">patterns</span>. Personalization based on user needs and markup properly annotated with cognitive semantics can help make the symbols and design as familiar to the user as possible. </li>
 					<li>Prevent the user from making mistakes and make it easy to correct mistakes when they do occur. A good design and use of proven scripts will make errors less likely, but when they do occur the user should know how to correct them, without having to render other data or start from the beginning. </li>
 					<li>Help the user to refocus and to restore context if attention is lost. Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes) </li>
 				</ol>
 				<p>Main techniques include: <!--(Taken from <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a>) --></p>
 				<ul>
-					<li> Use a clear structure with easy to follow sections short paragraphs manageable chunks </li>
+					<li> Use a clear structure with easy to follow sections short paragraphs <span class="steve-qa-highlight">in</span> manageable chunks </li>
 					<li> Use an easy to follow writing style </li>
 					<li> Provide rapid and direct feedback </li>
 					<li> Help the user understand the content and orientate themselves in the content. </li>
-			        <li>Help users complete and check       their work  to make it       less likely that the user will make mistakes and  easier to       undo mistakes when they occur </li>
-				
+					<li>Help users complete and check       their work  to make it       less likely that the <span class="steve-qa-highlight"></span>they</span>> will make mistakes and  easier <span class="steve-qa-highlight">for them</span> to       undo mistakes when they occur </li>
+
                   <li> Provide help </li>
                   <li> Help the user focus and help restore the context if attention is lost </li>
-                  <li> Enable adaptability and personalization, so that symbols text and other features   are familiar and helpful to the user </li>
+                  <li> Enable adaptability and personalization, so that symbols<span class="steve-qa-highlight">,</span> text and other features   are familiar and helpful to the user </li>
                   <li> Minimize the cognitive skills required to use the content and avoid barriers that stop people with cognitive disabilities from using content, such as hard to use security mechanisms. </li>
                 </ul>
 				<p>A full list of the authoring techniques identified can be found on our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. </p>
@@ -303,7 +308,7 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 					<li>This could be done via a  WAI- ARIA module or a new Cognitive semantics specification </li>
 					<li>The techniques for adaptation MUST use these semantics </li>
 					<li>Specify concrete user settings to represent user preferences that can be used to direct a web application on how to modify the content </li>
-					
+
 				</ol>
 				(See appendix one for details on the proposed semantics.)
 				<p>4. Define testing criteria to ensure the authors know when they are done. </p>
@@ -313,14 +318,14 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 				</ol>
 				<p>5. Support, and when appropriate, enable better personalization and adaption of content to meet our users' needs. This has the following advantages:</p>
 				<ol>
-					<li> It reduces the effort needed by the author. The author will just need to enable personalization, which is easier then working on issues such as simplification and clarity. </li>
+					<li> It reduces the effort needed by the author. The author will just need to enable personalization, which is easier <span class="steve-qa-highlight">than</span> working on issues such as simplification and clarity. </li>
 					<li> Enables author creativity. Ideally an author could create any interface that they wish, but by enabling API's and personalization, our user groups can receive an adapted interface that is suitable for their needs. </li>
-					<li> Better accessibility and inclusion. Sometimes, especially with these user groups, user needs can conflict. With adaptability and personalization the interface is personalized to the individuals user needs. </li>
+					<li> Better accessibility and inclusion. Sometimes, especially with these user groups, user needs can conflict. With adaptability and personalization<span class="steve-qa-highlight">,</span> the interface is personalized to the individuals user needs. </li>
 				</ol>
 				<p>See the discussion on personalization below. </p>
 			</section>
 			<section>
-	<h3>Summary of Issue Papers</h3> 
+	<h3>Summary of Issue Papers</h3>
 				The following sections provide a summary of the issues and solutions. Full versions can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. <!--discussed at <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-paper</a>-->
 			<section>
 				<h4>Flat Design</h4>
@@ -378,7 +383,7 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 					</ul>
 				</section>
 			</section>
-			<section><h4>User Safety</h4> 
+			<section><h4>User Safety</h4>
 			<!--Taken from the issue paper on safety.  		A full list of the Issue papers can be found on our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. -->
 			  <section>
 				<h5>Problems with User Safety</h5>
@@ -467,7 +472,7 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 			</section>
 			<section>
 				<h4>Personalization and User Preferences</h4>
-				<!--<p><strong>Taken from:</strong>--> This summary pulls together a few different issue papers and addresses them together. They are: 
+				<!--<p><strong>Taken from:</strong>--> This summary pulls together a few different issue papers and addresses them together. They are:
 				<ul>
 					<li> User Preferences <!--<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/preferences.html">https://rawgit.com/w3c/coga/master/issue-papers/preferences.html</a>--></li>
 					<li> Adaptable Links and Buttons <!--<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html">https://rawgit.com/w3c/coga/master/issue-papers/links-buttons.html</a>--></li>
@@ -525,7 +530,7 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 				</section></section>
 				<section>
 					<h4>Solutions for Personalization</h4>
-				
+
 					<ol>
 						<li>Promote and support advancements in technologies in these area. For example, our recommending for WCAG will be along the lines of &quot;Use semantics and standardized techniques and that enable the content to be adapted to the user scenario and enable additional support &quot; (See appendix two for details.)</li>
 						<li>Enable compatibility with standards such as [[GPII]] but do not depend on them. </li>
@@ -706,14 +711,14 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 					</ul>
 				</section>
 			</section>
-					
-		
 
 
 
 
-	
-		
+
+
+
+
 		<section>
 			<h4>Symbol Users with Speech, Language, and Literacy Difficulties</h4>
 				<!--<p><strong>Taken from:</strong> <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html">https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html</a></p>-->
@@ -876,7 +881,7 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 	</section>
 </section>
 
-		
+
 
 		<section>
 			<h3>Roadmap of Solutions Against User Needs</h3>
@@ -891,7 +896,7 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 
 	<section class="appendix">
 		<h2>Appendix: Making content usable for people with cognitive and learning disabilities</h2>
-		<p> This appendix on how to make content usable for people with learning and cognitive disabilities. 
+		<p> This appendix on how to make content usable for people with learning and cognitive disabilities.
 			It contains practical advice and developer resources. We hope it will meet the needs of web developers, content creators and policy makers. It includes:</p>
 		<ul >
 		<li ><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#background" >Background about people with learning and cognitive disabilities and the web</a></li>
@@ -908,7 +913,7 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 
 		<!--<div data-include="../extension/index.html" data-oninclude="fixIncludes" data-include-replace="true">Extension</div>-->
 
-    
+
 	<section class="appendix" id="changelog">
 			<h2>Change Log</h2>
 			<p>The full <a href="https://github.com/w3c/coga/commits">commit history to gap analysis</a> is available.</p>
@@ -930,7 +935,7 @@ There is a Summary of Issue Papers that addresses some of the issues that people
 				</ul>
 			</section>-->
 		</section>
-		
+
 	<div data-include="../common/acknowledgements.html" data-oninclude="fixIncludes" data-include-replace="true">Acknowledgements placeholder</div>
 
 
