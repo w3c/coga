@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 22.5.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.0.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -87,29 +87,6 @@ input.task-list-item-checkbox {
 .issue a.respec-label-light {
   color: #000;
   background-color: #fff;
-}
-</style><style>/* --- PERMALINKS --- */
-
-.permalink {
-  width: 1px;
-  height: 1px;
-  overflow: visible;
-  font-size: 10pt;
-  font-style: normal;
-  vertical-align: middle;
-  margin-left: 4px;
-  float: right;
-}
-
-.permalink a, .permalink a:link, .permalink a:visited, .permalink a:hover, .permalink a:focus, .permalink a:active {
-  background:transparent !important;
-  text-decoration:none;
-  font-weight: bold;
-  color:#666 !important;
-}
-
-.permalink abbr {
-  border:0;
 }
 </style>
 
@@ -249,11 +226,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd > p:first-child {
+.section dd>p:first-child {
   margin-top: 0;
 }
 
-.section dd > p:last-child {
+.section dd>p:last-child {
   margin-bottom: 0;
 }
 
@@ -266,7 +243,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary > ul,
+#issue-summary>ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -282,7 +259,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details > * {
+details.respec-tests-details>* {
   padding-right: 2em;
 }
 
@@ -295,20 +272,82 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open] > summary {
+details.respec-tests-details[open]>summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details > ul {
+details.respec-tests-details>ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details > li {
+details.respec-tests-details>li {
   padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
 }
 
 @media print {
@@ -2111,9 +2150,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       "publishDate": "2012"
     }
   },
-  "publishDate": "2018-08-22",
-  "publishISODate": "2018-08-22T00:00:00.000Z",
-  "generatedSubtitle": "Working Draft 22 August 2018"
+  "publishDate": "2018-09-20",
+  "publishISODate": "2018-09-20T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 20 September 2018"
 }</script><meta name="description" content="This document is a gap analysis and roadmap for the state of accessibility for people with learning and cognitive disabilities when using the Web and information technologies. It builds on the information presented in Cognitive Accessibility User Research [coga-user-research] and Cognitive Accessibility Issue Papers [coga-issue-papers] to evaluate where user needs remain to be met in technologies and accessibility guidelines. For various accessibility issues, this document provides a summary of issues and techniques, then identifies gaps and unmet user needs and suggest ways technologies may meet these needs in the future."></head>
 <body class="h-entry toc-inline"><div class="head">
   <a href="https://www.w3.org/" class="logo">
@@ -2121,9 +2160,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
   </a>
   <h1 id="title" class="title p-name">Cognitive Accessibility Roadmap and Gap Analysis</h1>
   
-  <h2 id="w3c-working-draft-22-august-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-08-22">22 August 2018</time></h2>
+  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Working Draft <time class="dt-published" datetime="2018-09-20">20 September 2018</time></h2>
   <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-coga-gap-analysis-20180822/">https://www.w3.org/TR/2018/WD-coga-gap-analysis-20180822/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/coga-gap-analysis/">https://www.w3.org/TR/coga-gap-analysis/</a></dd>
+    <dt>This version:</dt><dd><a class="u-url" href="https://www.w3.org/TR/2018/WD-coga-gap-analysis-20180920/">https://www.w3.org/TR/2018/WD-coga-gap-analysis-20180920/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/coga-gap-analysis/">https://www.w3.org/TR/coga-gap-analysis/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd>
     
     
@@ -2156,7 +2195,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </p>
   <hr title="Separator for header">
 </div>
-		<section id="abstract" class="introductory"><!--OddPage--><h2 id="abstract-0">Abstract</h2>
+		<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>
 			
 			<p>This document is a gap analysis and roadmap for the state of accessibility for people with learning and cognitive disabilities when using the Web and information technologies. It builds on the information presented in <a href="https://www.w3.org/TR/coga-user-research/">Cognitive Accessibility User Research</a> [<cite><a class="bibref" href="#bib-coga-user-research">coga-user-research</a></cite>] and <a href="https://w3c.github.io/coga/issue-papers/">Cognitive Accessibility Issue Papers</a> [<cite><a class="bibref" href="#bib-coga-issue-papers">coga-issue-papers</a></cite>] to evaluate where user needs remain to be met in technologies and accessibility guidelines. For various accessibility issues, this document provides a summary of issues and techniques, then identifies gaps and unmet user needs and suggest ways technologies may meet these needs in the future.</p>
 			
@@ -2167,7 +2206,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			
 			<!-- Todo: the commented out items above need to be messaged in a different way, they are not comprehensively covered even though listed -->
 		</section>
-<section id="sotd" class="introductory"><!--OddPage--><h2 id="status-of-this-document">Status of This Document</h2><p>
+<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
       </p><p>This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as a Working Draft. This document explores user needs for people with cognitive or learning disabilities and identifies where additional web content authoring guidance is needed to help authors meet these needs. This information is important to new guidance being added to Web Content Accessibility Guidelines 2.1.
        		</p><p>Feedback on any aspect of the document is accepted. For this publication, the Working Groups particularly seek feedback on the following questions:</p><ul>
@@ -2209,11 +2248,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           
           
         </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a href="#importance-of-this-document" class="tocxref"><span class="secno">1.1 </span>Importance of This Document</a></li><li class="tocline"><a href="#people-with-cognitive-and-learning-disabilities-and-the-web" class="tocxref"><span class="secno">1.2 </span>People with Cognitive and Learning Disabilities and the Web</a></li><li class="tocline"><a href="#finding-your-way-around-this-document" class="tocxref"><span class="secno">1.3 </span>Finding your way around this document</a></li><li class="tocline"><a href="#assumptions" class="tocxref"><span class="secno">1.4 </span>Assumptions</a></li><li class="tocline"><a href="#maturity-of-this-publication" class="tocxref"><span class="secno">1.5 </span>Maturity of This Publication</a></li></ol></li><li class="tocline"><a href="#summary-of-issues-and-techniques" class="tocxref"><span class="secno">2. </span>Summary of Issues and Techniques </a><ol class="toc"><li class="tocline"><a href="#overview-of-techniques" class="tocxref"><span class="secno">2.1 </span>Overview of Techniques</a></li><li class="tocline"><a href="#summary-of-technique-solutions" class="tocxref"><span class="secno">2.2 </span>Summary of Technique Solutions </a></li><li class="tocline"><a href="#summary-of-issue-papers" class="tocxref"><span class="secno">2.3 </span>Summary of Issue Papers</a><ol class="toc"><li class="tocline"><a href="#flat-design" class="tocxref"><span class="secno">2.3.1 </span>Flat Design</a><ol class="toc"><li class="tocline"><a href="#problem-with-flat-design" class="tocxref"><span class="secno">2.3.1.1 </span>Problem with Flat Design</a></li><li class="tocline"><a href="#solutions-for-flat-design" class="tocxref"><span class="secno">2.3.1.2 </span>Solutions for Flat Design</a></li><li class="tocline"><a href="#further-work-for-flat-design" class="tocxref"><span class="secno">2.3.1.3 </span>Further Work for Flat Design</a></li></ol></li><li class="tocline"><a href="#web-security-and-privacy-technologies" class="tocxref"><span class="secno">2.3.2 </span>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a href="#problems-with-security-and-privacy" class="tocxref"><span class="secno">2.3.2.1 </span>Problems with Security and Privacy</a></li><li class="tocline"><a href="#solutions-for-security-and-privacy" class="tocxref"><span class="secno">2.3.2.2 </span>Solutions for Security and Privacy</a></li><li class="tocline"><a href="#further-work-for-security-and-privacy" class="tocxref"><span class="secno">2.3.2.3 </span>Further Work for Security and Privacy</a></li></ol></li><li class="tocline"><a href="#user-safety" class="tocxref"><span class="secno">2.3.3 </span>User Safety</a><ol class="toc"><li class="tocline"><a href="#problems-with-user-safety" class="tocxref"><span class="secno">2.3.3.1 </span>Problems with User Safety</a></li><li class="tocline"><a href="#solutions-for-user-safety" class="tocxref"><span class="secno">2.3.3.2 </span>Solutions for User Safety</a></li></ol></li><li class="tocline"><a href="#math" class="tocxref"><span class="secno">2.3.4 </span>Math</a><ol class="toc"><li class="tocline"><a href="#problems-with-math" class="tocxref"><span class="secno">2.3.4.1 </span>Problems with Math</a></li><li class="tocline"><a href="#solutions-for-math" class="tocxref"><span class="secno">2.3.4.2 </span>Solutions for Math</a></li></ol></li><li class="tocline"><a href="#multi-modal-content-delivery" class="tocxref"><span class="secno">2.3.5 </span>Multi-modal Content Delivery</a><ol class="toc"><li class="tocline"><a href="#solutions-for-multi-modal-content-delivery" class="tocxref"><span class="secno">2.3.5.1 </span>Solutions for Multi-modal Content Delivery</a></li><li class="tocline"><a href="#further-work-for-multi-modal-content-delivery" class="tocxref"><span class="secno">2.3.5.2 </span>Further Work for Multi-modal Content Delivery</a></li></ol></li><li class="tocline"><a href="#personalization-and-user-preferences" class="tocxref"><span class="secno">2.3.6 </span>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a href="#problems-with-personalization" class="tocxref"><span class="secno">2.3.6.1 </span>Problems with Personalization</a><ol class="toc"><li class="tocline"><a href="#preferences-for-cognitive-disabilities" class="tocxref"><span class="secno">2.3.6.1.1 </span>Preferences for Cognitive Disabilities</a></li><li class="tocline"><a href="#setting-and-gathering-preferences" class="tocxref"><span class="secno">2.3.6.1.2 </span>Setting and Gathering Preferences</a></li></ol></li><li class="tocline"><a href="#solutions-for-personalization" class="tocxref"><span class="secno">2.3.6.2 </span>Solutions for Personalization</a></li><li class="tocline"><a href="#further-work-for-personalization" class="tocxref"><span class="secno">2.3.6.3 </span>Further Work for Personalization</a><ol class="toc"><li class="tocline"><a href="#end-to-end-basic-solution" class="tocxref"><span class="secno">2.3.6.3.1 </span>End to End Basic Solution</a></li><li class="tocline"><a href="#special-case" class="tocxref"><span class="secno">2.3.6.3.2 </span>Special Case</a></li></ol></li></ol></li><li class="tocline"><a href="#distractions" class="tocxref"><span class="secno">2.3.7 </span>Distractions</a><ol class="toc"><li class="tocline"><a href="#problems-with-distractions" class="tocxref"><span class="secno">2.3.7.1 </span>Problems with Distractions</a></li><li class="tocline"><a href="#solutions-for-distractions" class="tocxref"><span class="secno">2.3.7.2 </span>Solutions for Distractions</a></li><li class="tocline"><a href="#further-work-for-distractions" class="tocxref"><span class="secno">2.3.7.3 </span>Further Work for Distractions</a></li></ol></li><li class="tocline"><a href="#voice-menu-systems" class="tocxref"><span class="secno">2.3.8 </span>Voice Menu Systems</a><ol class="toc"><li class="tocline"><a href="#problem-with-voice-menu-systems" class="tocxref"><span class="secno">2.3.8.1 </span>Problem with Voice Menu Systems</a></li><li class="tocline"><a href="#solutions-for-voice-menu-systems" class="tocxref"><span class="secno">2.3.8.2 </span>Solutions for Voice Menu Systems</a></li></ol></li><li class="tocline"><a href="#online-payments" class="tocxref"><span class="secno">2.3.9 </span>Online Payments</a><ol class="toc"><li class="tocline"><a href="#problems-with-online-payments" class="tocxref"><span class="secno">2.3.9.1 </span>Problems with Online Payments</a></li><li class="tocline"><a href="#solutions-for-online-payments" class="tocxref"><span class="secno">2.3.9.2 </span>Solutions for Online Payments</a></li></ol></li><li class="tocline"><a href="#symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">2.3.10 </span>Symbol Users with Speech, Language, and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a href="#problems-with-symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">2.3.10.1 </span>Problems with Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a href="#solutions-for-symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">2.3.10.2 </span>Solutions for Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a href="#further-work-for-symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">2.3.10.3 </span>Further Work for Symbol Users with Speech, Language, and Literacy Difficulties</a></li></ol></li><li class="tocline"><a href="#task-completion-and-emotional-disabilities" class="tocxref"><span class="secno">2.3.11 </span>Task Completion and Emotional Disabilities</a><ol class="toc"><li class="tocline"><a href="#problems-with-task-completion-and-emotional-disabilities" class="tocxref"><span class="secno">2.3.11.1 </span>Problems with Task Completion and Emotional Disabilities</a></li><li class="tocline"><a href="#solutions-for-task-completion-and-emotional-disabilities" class="tocxref"><span class="secno">2.3.11.2 </span>Solutions for Task Completion and Emotional Disabilities</a></li><li class="tocline"><a href="#further-work-for-task-completion-and-emotional-disabilities" class="tocxref"><span class="secno">2.3.11.3 </span>Further Work for Task Completion and Emotional Disabilities</a></li></ol></li><li class="tocline"><a href="#graded-help" class="tocxref"><span class="secno">2.3.12 </span>Graded Help</a><ol class="toc"><li class="tocline"><a href="#problems-with-graded-help" class="tocxref"><span class="secno">2.3.12.1 </span>Problems with Graded Help</a></li><li class="tocline"><a href="#solutions-for-graded-help" class="tocxref"><span class="secno">2.3.12.2 </span>Solutions for Graded Help</a></li><li class="tocline"><a href="#further-work-for-graded-help" class="tocxref"><span class="secno">2.3.12.3 </span>Further Work for Graded Help</a></li></ol></li><li class="tocline"><a href="#way-finding" class="tocxref"><span class="secno">2.3.13 </span>Way Finding</a><ol class="toc"><li class="tocline"><a href="#problems-with-way-finding" class="tocxref"><span class="secno">2.3.13.1 </span>Problems with Way Finding</a></li><li class="tocline"><a href="#solutions-for-way-finding" class="tocxref"><span class="secno">2.3.13.2 </span>Solutions for Way Finding</a></li><li class="tocline"><a href="#further-work-for-way-finding" class="tocxref"><span class="secno">2.3.13.3 </span>Further Work for Way Finding</a></li></ol></li><li class="tocline"><a href="#web-of-things-wot" class="tocxref"><span class="secno">2.3.14 </span>Web of Things (WoT)</a><ol class="toc"><li class="tocline"><a href="#problems-with-web-of-things-wot" class="tocxref"><span class="secno">2.3.14.1 </span>Problems with Web of Things (WoT)</a></li><li class="tocline"><a href="#solutions-for-web-of-things-wot" class="tocxref"><span class="secno">2.3.14.2 </span>Solutions for Web of Things (WoT)</a></li><li class="tocline"><a href="#further-work-for-web-of-things-wot" class="tocxref"><span class="secno">2.3.14.3 </span>Further Work for Web of Things (WoT)</a></li></ol></li></ol></li></ol></li><li class="tocline"><a href="#tables-of-user-needs" class="tocxref"><span class="secno">3. </span>Tables of User Needs</a><ol class="toc"><li class="tocline"><a href="#table1" class="tocxref"><span class="secno">3.1 </span> Table 1: Authentication and Safety</a></li><li class="tocline"><a href="#table2" class="tocxref"><span class="secno">3.2 </span>Table 2: Context and Distractions</a></li><li class="tocline"><a href="#table3" class="tocxref"><span class="secno">3.3 </span>Table 3: Entering Data, Error Prevention, &amp; Recovery </a></li><li class="tocline"><a href="#table4" class="tocxref"><span class="secno">3.4 </span>Table 4: Help and support</a></li><li class="tocline"><a href="#table5" class="tocxref"><span class="secno">3.5 </span>Table 5: Simple and Clear Interface </a></li><li class="tocline"><a href="#table6" class="tocxref"><span class="secno">3.6 </span>Table 6: Familiar interface</a></li><li class="tocline"><a href="#table7" class="tocxref"><span class="secno">3.7 </span>Table 7: Clear and understandable content and text.</a></li><li class="tocline"><a href="#table8" class="tocxref"><span class="secno">3.8 </span>Table 8: Navigating the system</a></li><li class="tocline"><a href="#table9" class="tocxref"><span class="secno">3.9 </span>Table 9: Navigation and GPS</a></li></ol></li><li class="tocline"><a href="#personalization-semantics" class="tocxref"><span class="secno">4. </span>Personalization Semantics</a></li><li class="tocline"><a href="#appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities" class="tocxref"><span class="secno">A. </span>Appendix: Making content usable for people with cognitive and learning disabilities</a><ol class="toc"><li class="tocline"><a href="#introduction_for_usable" class="tocxref"><span class="secno">A.1 </span>Introduction</a><ol class="toc"><li class="tocline"><a href="#process" class="tocxref"><span class="secno">A.1.1 </span>Process</a></li><li class="tocline"><a href="#scale" class="tocxref"><span class="secno">A.1.2 </span>Applicability across websites</a></li></ol></li><li class="tocline"><a href="#background" class="tocxref"><span class="secno">A.2 </span>Background about people with learning and cognitive disabilities and the web</a></li><li class="tocline"><a href="#user_needs" class="tocxref"><span class="secno">A.3 </span>User Needs</a></li><li class="tocline"><a href="#persona" class="tocxref"><span class="secno">A.4 </span>Use Cases / Persona</a></li><li class="tocline"><a href="#testing_groups_feedback" class="tocxref"><span class="secno">A.5 </span>Usability Testing, Focus Groups and Feedback</a><ol class="toc"><li class="tocline"><a href="#differences_testing" class="tocxref"><span class="secno">A.5.1 </span>Differences from usability testing with the general population</a></li></ol></li><li class="tocline"><a href="#design_themes" class="tocxref"><span class="secno">A.6 </span>Design Requirement Themes</a><ol class="toc"><li class="tocline"><a href="#design_requirements" class="tocxref"><span class="secno">A.6.1 </span>Design requirements</a></li><li class="tocline"><a href="#user-group-mapping" class="tocxref"><span class="secno">A.6.2 </span>Mapping requirements to user groups</a></li></ol></li><li class="tocline"><a href="#special_applications" class="tocxref"><span class="secno">A.7 </span>Special applications</a></li><li class="tocline"><a href="#issues_and_considerations" class="tocxref"><span class="secno">A.8 </span>Issues and considerations</a><ol class="toc"><li class="tocline"><a href="#guidance_for_policy_makers" class="tocxref"><span class="secno">A.8.1 </span>Guidance for policy makers</a></li></ol></li></ol></li><li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">B. </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#significant-editorial-changes-since-the-first-public-working-draft" class="tocxref"><span class="secno">B.1 </span>Significant editorial changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">C. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_group" class="tocxref"><span class="secno">C.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a href="#ack_others" class="tocxref"><span class="secno">C.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">C.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">D. </span>References</a><ol class="toc"><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">D.1 </span>Informative references</a></li></ol></li></ol></nav>
+        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a href="#importance-of-this-document" class="tocxref"><span class="secno">1.1 </span>Importance of This Document</a></li><li class="tocline"><a href="#people-with-cognitive-and-learning-disabilities-and-the-web" class="tocxref"><span class="secno">1.2 </span>People with Cognitive and Learning Disabilities and the Web</a></li><li class="tocline"><a href="#finding-your-way-around-this-document" class="tocxref"><span class="secno">1.3 </span>Finding your way around this document</a></li><li class="tocline"><a href="#assumptions" class="tocxref"><span class="secno">1.4 </span>Assumptions</a></li><li class="tocline"><a href="#maturity-of-this-publication" class="tocxref"><span class="secno">1.5 </span>Maturity of This Publication</a></li></ol></li><li class="tocline"><a href="#summary-of-issues-and-techniques" class="tocxref"><span class="secno">2. </span>Summary of Issues and Techniques </a><ol class="toc"><li class="tocline"><a href="#overview-of-techniques" class="tocxref"><span class="secno">2.1 </span>Overview of Techniques</a></li><li class="tocline"><a href="#summary-of-technique-solutions" class="tocxref"><span class="secno">2.2 </span>Summary of Technique Solutions </a></li><li class="tocline"><a href="#summary-of-issue-papers" class="tocxref"><span class="secno">2.3 </span>Summary of Issue Papers</a><ol class="toc"><li class="tocline"><a href="#flat-design" class="tocxref"><span class="secno">2.3.1 </span>Flat Design</a><ol class="toc"><li class="tocline"><a href="#problem-with-flat-design" class="tocxref"><span class="secno">2.3.1.1 </span>Problem with Flat Design</a></li><li class="tocline"><a href="#solutions-for-flat-design" class="tocxref"><span class="secno">2.3.1.2 </span>Solutions for Flat Design</a></li><li class="tocline"><a href="#further-work-for-flat-design" class="tocxref"><span class="secno">2.3.1.3 </span>Further Work for Flat Design</a></li></ol></li><li class="tocline"><a href="#web-security-and-privacy-technologies" class="tocxref"><span class="secno">2.3.2 </span>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a href="#problems-with-security-and-privacy" class="tocxref"><span class="secno">2.3.2.1 </span>Problems with Security and Privacy</a></li><li class="tocline"><a href="#solutions-for-security-and-privacy" class="tocxref"><span class="secno">2.3.2.2 </span>Solutions for Security and Privacy</a></li><li class="tocline"><a href="#further-work-for-security-and-privacy" class="tocxref"><span class="secno">2.3.2.3 </span>Further Work for Security and Privacy</a></li></ol></li><li class="tocline"><a href="#user-safety" class="tocxref"><span class="secno">2.3.3 </span>User Safety</a><ol class="toc"><li class="tocline"><a href="#problems-with-user-safety" class="tocxref"><span class="secno">2.3.3.1 </span>Problems with User Safety</a></li><li class="tocline"><a href="#solutions-for-user-safety" class="tocxref"><span class="secno">2.3.3.2 </span>Solutions for User Safety</a></li></ol></li><li class="tocline"><a href="#math" class="tocxref"><span class="secno">2.3.4 </span>Math</a><ol class="toc"><li class="tocline"><a href="#problems-with-math" class="tocxref"><span class="secno">2.3.4.1 </span>Problems with Math</a></li><li class="tocline"><a href="#solutions-for-math" class="tocxref"><span class="secno">2.3.4.2 </span>Solutions for Math</a></li></ol></li><li class="tocline"><a href="#multi-modal-content-delivery" class="tocxref"><span class="secno">2.3.5 </span>Multi-modal Content Delivery</a><ol class="toc"><li class="tocline"><a href="#solutions-for-multi-modal-content-delivery" class="tocxref"><span class="secno">2.3.5.1 </span>Solutions for Multi-modal Content Delivery</a></li><li class="tocline"><a href="#further-work-for-multi-modal-content-delivery" class="tocxref"><span class="secno">2.3.5.2 </span>Further Work for Multi-modal Content Delivery</a></li></ol></li><li class="tocline"><a href="#personalization-and-user-preferences" class="tocxref"><span class="secno">2.3.6 </span>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a href="#problems-with-personalization" class="tocxref"><span class="secno">2.3.6.1 </span>Problems with Personalization</a><ol class="toc"><li class="tocline"><a href="#preferences-for-cognitive-disabilities" class="tocxref"><span class="secno">2.3.6.1.1 </span>Preferences for Cognitive Disabilities</a></li><li class="tocline"><a href="#setting-and-gathering-preferences" class="tocxref"><span class="secno">2.3.6.1.2 </span>Setting and Gathering Preferences</a></li></ol></li><li class="tocline"><a href="#solutions-for-personalization" class="tocxref"><span class="secno">2.3.6.2 </span>Solutions for Personalization</a></li><li class="tocline"><a href="#further-work-for-personalization" class="tocxref"><span class="secno">2.3.6.3 </span>Further Work for Personalization</a><ol class="toc"><li class="tocline"><a href="#end-to-end-basic-solution" class="tocxref"><span class="secno">2.3.6.3.1 </span>End to End Basic Solution</a></li><li class="tocline"><a href="#special-case" class="tocxref"><span class="secno">2.3.6.3.2 </span>Special Case</a></li></ol></li></ol></li><li class="tocline"><a href="#distractions" class="tocxref"><span class="secno">2.3.7 </span>Distractions</a><ol class="toc"><li class="tocline"><a href="#problems-with-distractions" class="tocxref"><span class="secno">2.3.7.1 </span>Problems with Distractions</a></li><li class="tocline"><a href="#solutions-for-distractions" class="tocxref"><span class="secno">2.3.7.2 </span>Solutions for Distractions</a></li><li class="tocline"><a href="#further-work-for-distractions" class="tocxref"><span class="secno">2.3.7.3 </span>Further Work for Distractions</a></li></ol></li><li class="tocline"><a href="#voice-menu-systems" class="tocxref"><span class="secno">2.3.8 </span>Voice Menu Systems</a><ol class="toc"><li class="tocline"><a href="#problem-with-voice-menu-systems" class="tocxref"><span class="secno">2.3.8.1 </span>Problem with Voice Menu Systems</a></li><li class="tocline"><a href="#solutions-for-voice-menu-systems" class="tocxref"><span class="secno">2.3.8.2 </span>Solutions for Voice Menu Systems</a></li></ol></li><li class="tocline"><a href="#online-payments" class="tocxref"><span class="secno">2.3.9 </span>Online Payments</a><ol class="toc"><li class="tocline"><a href="#problems-with-online-payments" class="tocxref"><span class="secno">2.3.9.1 </span>Problems with Online Payments</a></li><li class="tocline"><a href="#solutions-for-online-payments" class="tocxref"><span class="secno">2.3.9.2 </span>Solutions for Online Payments</a></li></ol></li><li class="tocline"><a href="#symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">2.3.10 </span>Symbol Users with Speech, Language, and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a href="#problems-with-symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">2.3.10.1 </span>Problems with Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a href="#solutions-for-symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">2.3.10.2 </span>Solutions for Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a href="#further-work-for-symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">2.3.10.3 </span>Further Work for Symbol Users with Speech, Language, and Literacy Difficulties</a></li></ol></li><li class="tocline"><a href="#task-completion-and-emotional-disabilities" class="tocxref"><span class="secno">2.3.11 </span>Task Completion and Emotional Disabilities</a><ol class="toc"><li class="tocline"><a href="#problems-with-task-completion-and-emotional-disabilities" class="tocxref"><span class="secno">2.3.11.1 </span>Problems with Task Completion and Emotional Disabilities</a></li><li class="tocline"><a href="#solutions-for-task-completion-and-emotional-disabilities" class="tocxref"><span class="secno">2.3.11.2 </span>Solutions for Task Completion and Emotional Disabilities</a></li><li class="tocline"><a href="#further-work-for-task-completion-and-emotional-disabilities" class="tocxref"><span class="secno">2.3.11.3 </span>Further Work for Task Completion and Emotional Disabilities</a></li></ol></li><li class="tocline"><a href="#graded-help" class="tocxref"><span class="secno">2.3.12 </span>Graded Help</a><ol class="toc"><li class="tocline"><a href="#problems-with-graded-help" class="tocxref"><span class="secno">2.3.12.1 </span>Problems with Graded Help</a></li><li class="tocline"><a href="#solutions-for-graded-help" class="tocxref"><span class="secno">2.3.12.2 </span>Solutions for Graded Help</a></li><li class="tocline"><a href="#further-work-for-graded-help" class="tocxref"><span class="secno">2.3.12.3 </span>Further Work for Graded Help</a></li></ol></li><li class="tocline"><a href="#way-finding" class="tocxref"><span class="secno">2.3.13 </span>Way Finding</a><ol class="toc"><li class="tocline"><a href="#problems-with-way-finding" class="tocxref"><span class="secno">2.3.13.1 </span>Problems with Way Finding</a></li><li class="tocline"><a href="#solutions-for-way-finding" class="tocxref"><span class="secno">2.3.13.2 </span>Solutions for Way Finding</a></li><li class="tocline"><a href="#further-work-for-way-finding" class="tocxref"><span class="secno">2.3.13.3 </span>Further Work for Way Finding</a></li></ol></li><li class="tocline"><a href="#web-of-things-wot" class="tocxref"><span class="secno">2.3.14 </span>Web of Things (WoT)</a><ol class="toc"><li class="tocline"><a href="#problems-with-web-of-things-wot" class="tocxref"><span class="secno">2.3.14.1 </span>Problems with Web of Things (WoT)</a></li><li class="tocline"><a href="#solutions-for-web-of-things-wot" class="tocxref"><span class="secno">2.3.14.2 </span>Solutions for Web of Things (WoT)</a></li><li class="tocline"><a href="#further-work-for-web-of-things-wot" class="tocxref"><span class="secno">2.3.14.3 </span>Further Work for Web of Things (WoT)</a></li></ol></li></ol></li></ol></li><li class="tocline"><a href="#roadmap-of-solutions-against-user-needs" class="tocxref"><span class="secno">3. </span>Roadmap of Solutions Against User Needs</a><ol class="toc"><li class="tocline"><a href="#table1" class="tocxref"><span class="secno">3.1 </span> Table 1: Authentication and Safety</a></li><li class="tocline"><a href="#table2" class="tocxref"><span class="secno">3.2 </span>Table 2: Context and Distractions</a></li><li class="tocline"><a href="#table3" class="tocxref"><span class="secno">3.3 </span>Table 3: Entering Data, Error Prevention, &amp; Recovery </a></li><li class="tocline"><a href="#table4" class="tocxref"><span class="secno">3.4 </span>Table 4: Help and support</a></li><li class="tocline"><a href="#table5" class="tocxref"><span class="secno">3.5 </span>Table 5: Simple and Clear Interface </a></li><li class="tocline"><a href="#table6" class="tocxref"><span class="secno">3.6 </span>Table 6: Familiar interface</a></li><li class="tocline"><a href="#table7" class="tocxref"><span class="secno">3.7 </span>Table 7: Clear and understandable content and text.</a></li><li class="tocline"><a href="#table8" class="tocxref"><span class="secno">3.8 </span>Table 8: Navigating the system</a></li><li class="tocline"><a href="#table9" class="tocxref"><span class="secno">3.9 </span>Table 9: Navigation and GPS</a></li></ol></li><li class="tocline"><a href="#personalization-semantics" class="tocxref"><span class="secno">4. </span>Personalization Semantics</a></li><li class="tocline"><a href="#appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities" class="tocxref"><span class="secno">A. </span>Appendix: Making content usable for people with cognitive and learning disabilities</a><ol class="toc"><li class="tocline"><a href="#changelog" class="tocxref"><span class="secno">A.1 </span>Change Log</a><ol class="toc"><li class="tocline"><a href="#significant-editorial-changes-since-the-first-public-working-draft" class="tocxref"><span class="secno">A.1.1 </span>Significant editorial changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">A.2 </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a href="#ack_group" class="tocxref"><span class="secno">A.2.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a href="#ack_others" class="tocxref"><span class="secno">A.2.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a href="#ack_funders" class="tocxref"><span class="secno">A.2.3 </span>Enabling funders</a></li></ol></li></ol></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">B. </span>References</a><ol class="toc"><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">B.1 </span>Informative references</a></li></ol></li></ol></nav>
 <section class="informative" id="introduction">
-			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<span class="permalink"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction"><span>§</span></a></span></h2><p><em>This section is non-normative.</em></p>
+			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
 			<p>The Cognitive and Learning Disabilities Accessibility Task Force's aim is to improve web accessibility for people with cognitive and learning disabilities. </p>
-	<p>This document contains a gap analysis and review of key issues, a roadmap for inclusion for different user needs, and a section on <a href="#a-appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities">how to make content usable for people with leaning and cognitive disabilities</a>. Content developers may find this section the most useful </p>
+	
+	<p>This document contains a gap analysis and review of key issues, a roadmap for inclusion for different user needs.</p>
+	<p>It is designed for standards groups and policy makers. However, it has useful information for anyone trying to understand the topic. There is also an appendix on <a href="#a-appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities">how to make content usable for people with leaning and cognitive disabilities</a>. Content developers may find this section the most useful.</p>
 	<p>This is being done as part of the Web Content Accessibility Guidelines (WCAG) and Accessible Platform Architecture Working Group (APA WG), part of the Web Accessibility Initiative (WAI) of the <abbr title="World Wide Web Consortium">W3C</abbr>. Challenges facing this work include: </p>
 			<ul>
 				<li>Lack of availability of open research: Research on this topic tends to be behind a “paywall” which means that developers and policy makers may be unable to find out what techniques are proven to work to address the needs of people with disabilities</li>
@@ -2275,7 +2316,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			</ul>
 			<p>Then we can start the process again with  phase 2 for additional research and new user groups, possibly including emotional disabilities.</p>
 			<section id="importance-of-this-document">
-				<h3 id="x1-1-importance-of-this-document"><span class="secno">1.1 </span>Importance of This Document<span class="permalink"><a href="#importance-of-this-document" aria-label="Permalink for 1.1 Importance of This Document" title="Permalink for 1.1 Importance of This Document"><span>§</span></a></span></h3>
+				<h3 id="x1-1-importance-of-this-document"><span class="secno">1.1 </span>Importance of This Document<a class="self-link" aria-label="§" href="#importance-of-this-document"></a></h3>
 				<p>This document is important because enabling people with learning and cognitive disabilities to use the Web and Web technologies is of critical importance to both individuals and society.</p>
 				<p>More  and more, the Internet and the Web have become the main way people stay  informed and current on news and health matters; keep in touch with friends and  family; and it can provide independence such as convenient shopping etc. People  who cannot use these interfaces will have an increased feeling of having a  disability and of being alienated from society. </p>
 				<p>
@@ -2285,7 +2326,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 <p>We therefore invite you to review this draft; and comment and consider how your technologies and work may be affected by these issues.</p>
 			</section>
 			<section id="people-with-cognitive-and-learning-disabilities-and-the-web">
-				<h3 id="x1-2-people-with-cognitive-and-learning-disabilities-and-the-web"><span class="secno">1.2 </span>People with Cognitive and Learning Disabilities and the Web<span class="permalink"><a href="#people-with-cognitive-and-learning-disabilities-and-the-web" aria-label="Permalink for 1.2 People with Cognitive and Learning Disabilities and the Web" title="Permalink for 1.2 People with Cognitive and Learning Disabilities and the Web"><span>§</span></a></span></h3>
+				<h3 id="x1-2-people-with-cognitive-and-learning-disabilities-and-the-web"><span class="secno">1.2 </span>People with Cognitive and Learning Disabilities and the Web<a class="self-link" aria-label="§" href="#people-with-cognitive-and-learning-disabilities-and-the-web"></a></h3>
 				<p>People with cognitive and learning disabilities may be unable to use web content because of the design choices of the author. Examples include: </p>
 				<ul>
 					<li> People with impaired short term memory are unlikely to be able to remember passwords and access codes. They may have trouble or be unable to remember new symbols and interface paradigms. </li>
@@ -2297,29 +2338,35 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</ul>
 			</section>
 	<section id="finding-your-way-around-this-document">
-				<h3 id="x1-3-finding-your-way-around-this-document"><span class="secno">1.3 </span>Finding your way around this document<span class="permalink"><a href="#finding-your-way-around-this-document" aria-label="Permalink for 1.3 Finding your way around this document" title="Permalink for 1.3 Finding your way around this document"><span>§</span></a></span></h3>
-					<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span><span style="text-transform: none">: This section will added</span></div><p class="">
+				<h3 id="x1-3-finding-your-way-around-this-document"><span class="secno">1.3 </span>Finding your way around this document<a class="self-link" aria-label="§" href="#finding-your-way-around-this-document"></a></h3>
+		<p>It is a long document and we know it can be hard to find your way around it. ( In the meantime here are some sections of particular interest:
+		</p>
+<ul><li>
+There is a Summary of Issue Papers that addresses some of the issues that people with learning and cognitive disabilities face, such as problems with logging on, safety, voice menu systems, and many other topics. This may be useful for anyone trying to gain more understanding of the topic. 
+</li><li>There is a section with Tables of User Needs that identify the  different needs of the community and proposes suggestions on how standards and technologies could be developed to meet these needs. This may be useful for standards’ groups and policy makers.
+</li><li>There is also an  appendix on how to make content usable for people with learning and cognitive disabilities. This section contains  a section with practical advice and content developers may prefer to start here. We hope it will also meet the needs of web developers, content creators and policy makers. 
+</li></ul>					<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span><span style="text-transform: none">: This section will added</span></div><p class="">
 			We are aware that it is difficult to find your way around this document. We intend to add this section to help. Suggestions for other ways to improve it are welcome.
 			</p></div>
 	</section>
 			<section id="assumptions">
-				<h3 id="x1-4-assumptions"><span class="secno">1.4 </span>Assumptions<span class="permalink"><a href="#assumptions" aria-label="Permalink for 1.4 Assumptions" title="Permalink for 1.4 Assumptions"><span>§</span></a></span></h3>
+				<h3 id="x1-4-assumptions"><span class="secno">1.4 </span>Assumptions<a class="self-link" aria-label="§" href="#assumptions"></a></h3>
 				<p>There is a huge number of cognitive disabilities and variations of them. If we attempt an analysis of all the possibilities, the job will be too big, and nothing will be achieved. Therefore, we are adopting a phased approach, selecting in phase one a limited scope of eight diverse disabilities, and hope to achieve something useful within that scope. Also note that helping users improve skills, and emotional disabilities, are out of scope for phase one. We anticipate this analysis will continue to a second or third phase where more user groups are analyzed, and the existing analyses are updated with new research and with new technologies and scenarios. </p>
 			</section>
 			<section id="maturity-of-this-publication">
-				<h3 id="x1-5-maturity-of-this-publication"><span class="secno">1.5 </span>Maturity of This Publication<span class="permalink"><a href="#maturity-of-this-publication" aria-label="Permalink for 1.5 Maturity of This Publication" title="Permalink for 1.5 Maturity of This Publication"><span>§</span></a></span></h3>
+				<h3 id="x1-5-maturity-of-this-publication"><span class="secno">1.5 </span>Maturity of This Publication<a class="self-link" aria-label="§" href="#maturity-of-this-publication"></a></h3>
 				<p>The first and   second sections of this document are  an introduction  that analyses the current situation and discusses many issues. Although we are expecting more work to be done on these sections,  we consider them to be a    mature. </p>
 				<p> Subsequent   sections (the roadmap)  identifies  unmet user needs and proposes way to solve these needs. These sections are not  mature and are often incomplete. We are publishing them early to solicit early   feedback on the format and the identification of user needs. You can follow our work on this section and see the latest draft  from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. </p>
 			</section>
 </section>
 		<section id="summary-of-issues-and-techniques">
-	<!--OddPage--><h2 id="x2-summary-of-issues-and-techniques"><span class="secno">2. </span>Summary of Issues and Techniques <span class="permalink"><a href="#summary-of-issues-and-techniques" aria-label="Permalink for 2. Summary of Issues and Techniques " title="Permalink for 2. Summary of Issues and Techniques "><span>§</span></a></span></h2>
+	<!--OddPage--><h2 id="x2-summary-of-issues-and-techniques"><span class="secno">2. </span>Summary of Issues and Techniques <a class="self-link" aria-label="§" href="#summary-of-issues-and-techniques"></a></h2>
 			<p>As discussed above, the task force reviewed different disabilities to identify techniques that supported their using the web. The task force also reviewed issues that went beyond standard Web content, but affected the use of the Web for people with cognitive and learning disabilities.</p>
 			<p>This section is a summary of these findings. The full reports can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.
 <!-- :</p>
 			<p><a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a> and <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-papers/</a>--></p>
 			<section id="overview-of-techniques">
-				<h3 id="x2-1-overview-of-techniques"><span class="secno">2.1 </span>Overview of Techniques<span class="permalink"><a href="#overview-of-techniques" aria-label="Permalink for 2.1 Overview of Techniques" title="Permalink for 2.1 Overview of Techniques"><span>§</span></a></span></h3>
+				<h3 id="x2-1-overview-of-techniques"><span class="secno">2.1 </span>Overview of Techniques<a class="self-link" aria-label="§" href="#overview-of-techniques"></a></h3>
 				<p>Most designers want people to be able to use their site. However designs that might be difficult for some people to use can actually bar people with cognitive and learning disabilities from using the content at all. Typically this happens because content providers may not be familiar with the needs of users having these impairments. We have reviewed multiple user groups as a first phase to identify user needs and challenges that are not fully included in WCAG.  From this research we have identified techniques and themes though the techniques that authors need to be aware of (and are not full addressed in WCAG 2.0) The key themes are: </p>
 				<ol>
 					<li>Help as many users as possible understand the site and know how to use it. This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patters. Personalization based on user needs and markup properly annotated with cognitive semantics can help make the symbols and design as familiar to the user as possible. </li>
@@ -2342,7 +2389,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				<p>A full list of the authoring techniques identified can be found on our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. </p>
 			</section>
 			<section id="summary-of-technique-solutions">
-				<h3 id="x2-2-summary-of-technique-solutions"><span class="secno">2.2 </span>Summary of Technique Solutions <span class="permalink"><a href="#summary-of-technique-solutions" aria-label="Permalink for 2.2 Summary of Technique Solutions " title="Permalink for 2.2 Summary of Technique Solutions "><span>§</span></a></span></h3>
+				<h3 id="x2-2-summary-of-technique-solutions"><span class="secno">2.2 </span>Summary of Technique Solutions <a class="self-link" aria-label="§" href="#summary-of-technique-solutions"></a></h3>
 				<p>To help bridge the gap we propose the following strategies: </p>
 				<p>1. Construct a full list of techniques.<!--: See <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/techniques/index.html">https://rawgit.com/w3c/coga/master/techniques/index.html</a>--></p>
 				<p>2. Support an extension to [<cite><a class="bibref" href="#bib-wcag">WCAG</a></cite>] that supports the techniques. This will include: </p>
@@ -2375,15 +2422,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				<p>See the discussion on personalization below. </p>
 			</section>
 			<section id="summary-of-issue-papers">
-	<h3 id="x2-3-summary-of-issue-papers"><span class="secno">2.3 </span>Summary of Issue Papers<span class="permalink"><a href="#summary-of-issue-papers" aria-label="Permalink for 2.3 Summary of Issue Papers" title="Permalink for 2.3 Summary of Issue Papers"><span>§</span></a></span></h3> 
+	<h3 id="x2-3-summary-of-issue-papers"><span class="secno">2.3 </span>Summary of Issue Papers<a class="self-link" aria-label="§" href="#summary-of-issue-papers"></a></h3> 
 				The following sections provide a summary of the issues and solutions. Full versions can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. <!--discussed at <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-paper</a>-->
 			<section id="flat-design">
-				<h4 id="x2-3-1-flat-design"><span class="secno">2.3.1 </span>Flat Design<span class="permalink"><a href="#flat-design" aria-label="Permalink for 2.3.1 Flat Design" title="Permalink for 2.3.1 Flat Design"><span>§</span></a></span></h4>
+				<h4 id="x2-3-1-flat-design"><span class="secno">2.3.1 </span>Flat Design<a class="self-link" aria-label="§" href="#flat-design"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html">https://rawgit.com/w3c/coga/master/issue-papers/flat-design.html</a></p>-->
 				<p>Since 2013, flat design has become a popular UI design pattern characterized by clean flat areas of color, clear typography and simply iconography. </p>
 				<section id="problem-with-flat-design">
-					<h5 id="x2-3-1-1-problem-with-flat-design"><span class="secno">2.3.1.1 </span>Problem with Flat Design<span class="permalink"><a href="#problem-with-flat-design" aria-label="Permalink for 2.3.1.1 Problem with Flat Design" title="Permalink for 2.3.1.1 Problem with Flat Design"><span>§</span></a></span></h5>
+					<h5 id="x2-3-1-1-problem-with-flat-design"><span class="secno">2.3.1.1 </span>Problem with Flat Design<a class="self-link" aria-label="§" href="#problem-with-flat-design"></a></h5>
 					<p>Many people can not learn easily new design metaphors (most coga groups) or remember things that they learned (such as people with a Mild Cognitive Impairment or dementia). Without these skills it can be much harder or impossible to: </p>
 					<ul>
 						<li> locate a desired items to interact with and </li>
@@ -2391,7 +2438,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ul>
 				</section>
 				<section id="solutions-for-flat-design">
-					<h5 id="x2-3-1-2-solutions-for-flat-design"><span class="secno">2.3.1.2 </span>Solutions for Flat Design<span class="permalink"><a href="#solutions-for-flat-design" aria-label="Permalink for 2.3.1.2 Solutions for Flat Design" title="Permalink for 2.3.1.2 Solutions for Flat Design"><span>§</span></a></span></h5>
+					<h5 id="x2-3-1-2-solutions-for-flat-design"><span class="secno">2.3.1.2 </span>Solutions for Flat Design<a class="self-link" aria-label="§" href="#solutions-for-flat-design"></a></h5>
 					<ol>
 						<li> In the authoring techniques and in proposal for WCAG we are recommending that content provide clear visual affordances (See appendix two for details on the proposed semantics.)</li>
 						<li> In personalization we are adding settings to allow buttons and controls to have clear affordances </li>
@@ -2399,21 +2446,21 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ol>
 				</section>
 				<section id="further-work-for-flat-design">
-					<h5 id="x2-3-1-3-further-work-for-flat-design"><span class="secno">2.3.1.3 </span>Further Work for Flat Design<span class="permalink"><a href="#further-work-for-flat-design" aria-label="Permalink for 2.3.1.3 Further Work for Flat Design" title="Permalink for 2.3.1.3 Further Work for Flat Design"><span>§</span></a></span></h5>
+					<h5 id="x2-3-1-3-further-work-for-flat-design"><span class="secno">2.3.1.3 </span>Further Work for Flat Design<a class="self-link" aria-label="§" href="#further-work-for-flat-design"></a></h5>
 					<p>How to recommend white spaces which can be confusing if over done for people with low visions? How to recommend clear groups </p>
 				</section>
 			</section>
 			<section id="web-security-and-privacy-technologies">
-				<h4 id="x2-3-2-web-security-and-privacy-technologies"><span class="secno">2.3.2 </span>Web Security and Privacy Technologies<span class="permalink"><a href="#web-security-and-privacy-technologies" aria-label="Permalink for 2.3.2 Web Security and Privacy Technologies" title="Permalink for 2.3.2 Web Security and Privacy Technologies"><span>§</span></a></span></h4>
+				<h4 id="x2-3-2-web-security-and-privacy-technologies"><span class="secno">2.3.2 </span>Web Security and Privacy Technologies<a class="self-link" aria-label="§" href="#web-security-and-privacy-technologies"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html</a></p>-->
 				<p>For security purposes, web security and privacy introduce intentional barriers to task completion. </p>
 				<section id="problems-with-security-and-privacy">
-					<h5 id="x2-3-2-1-problems-with-security-and-privacy"><span class="secno">2.3.2.1 </span>Problems with Security and Privacy<span class="permalink"><a href="#problems-with-security-and-privacy" aria-label="Permalink for 2.3.2.1 Problems with Security and Privacy" title="Permalink for 2.3.2.1 Problems with Security and Privacy"><span>§</span></a></span></h5>
+					<h5 id="x2-3-2-1-problems-with-security-and-privacy"><span class="secno">2.3.2.1 </span>Problems with Security and Privacy<a class="self-link" aria-label="§" href="#problems-with-security-and-privacy"></a></h5>
 					<p>Many people (most COGA groups) have memory issues that can make copying text, or remembering passwords, difficult or impossible. Other contributing issues include impaired executive function. Difficult security mechanisms often bar people with cognitive disabilities from accessing content or using a service at all. </p>
 				</section>
 				<section id="solutions-for-security-and-privacy">
-					<h5 id="x2-3-2-2-solutions-for-security-and-privacy"><span class="secno">2.3.2.2 </span>Solutions for Security and Privacy<span class="permalink"><a href="#solutions-for-security-and-privacy" aria-label="Permalink for 2.3.2.2 Solutions for Security and Privacy" title="Permalink for 2.3.2.2 Solutions for Security and Privacy"><span>§</span></a></span></h5>
+					<h5 id="x2-3-2-2-solutions-for-security-and-privacy"><span class="secno">2.3.2.2 </span>Solutions for Security and Privacy<a class="self-link" aria-label="§" href="#solutions-for-security-and-privacy"></a></h5>
 					<p>We recommend a variety of solutions, which may work independently or jointly with others, such as: </p>
 					<ul>
 						<li> biometric devices, e.g., rings </li>
@@ -2424,7 +2471,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ul>
 				</section>
 				<section id="further-work-for-security-and-privacy">
-					<h5 id="x2-3-2-3-further-work-for-security-and-privacy"><span class="secno">2.3.2.3 </span>Further Work for Security and Privacy<span class="permalink"><a href="#further-work-for-security-and-privacy" aria-label="Permalink for 2.3.2.3 Further Work for Security and Privacy" title="Permalink for 2.3.2.3 Further Work for Security and Privacy"><span>§</span></a></span></h5>
+					<h5 id="x2-3-2-3-further-work-for-security-and-privacy"><span class="secno">2.3.2.3 </span>Further Work for Security and Privacy<a class="self-link" aria-label="§" href="#further-work-for-security-and-privacy"></a></h5>
 					<p>Develop ease-of-use ideas, such as: </p>
 					<ul>
 						<li> alternative authentication factors </li>
@@ -2433,10 +2480,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ul>
 				</section>
 			</section>
-			<section id="user-safety"><h4 id="x2-3-3-user-safety"><span class="secno">2.3.3 </span>User Safety<span class="permalink"><a href="#user-safety" aria-label="Permalink for 2.3.3 User Safety" title="Permalink for 2.3.3 User Safety"><span>§</span></a></span></h4> 
+			<section id="user-safety"><h4 id="x2-3-3-user-safety"><span class="secno">2.3.3 </span>User Safety<a class="self-link" aria-label="§" href="#user-safety"></a></h4> 
 			<!--Taken from the issue paper on safety.  		A full list of the Issue papers can be found on our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. -->
 			  <section id="problems-with-user-safety">
-				<h5 id="x2-3-3-1-problems-with-user-safety"><span class="secno">2.3.3.1 </span>Problems with User Safety<span class="permalink"><a href="#problems-with-user-safety" aria-label="Permalink for 2.3.3.1 Problems with User Safety" title="Permalink for 2.3.3.1 Problems with User Safety"><span>§</span></a></span></h5>
+				<h5 id="x2-3-3-1-problems-with-user-safety"><span class="secno">2.3.3.1 </span>Problems with User Safety<a class="self-link" aria-label="§" href="#problems-with-user-safety"></a></h5>
 					<p>People with impaired reasoning, attention or memory are particularly vulnerable to all types of cyber crime. Examples of types of criminals active on the internet include: </p>
 					<ul>
 						<li> Con-artists or cheats, who misled people into giving them money. </li>
@@ -2445,7 +2492,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ul>
 			  </section>
 				<section id="solutions-for-user-safety">
-					<h5 id="x2-3-3-2-solutions-for-user-safety"><span class="secno">2.3.3.2 </span>Solutions for User Safety<span class="permalink"><a href="#solutions-for-user-safety" aria-label="Permalink for 2.3.3.2 Solutions for User Safety" title="Permalink for 2.3.3.2 Solutions for User Safety"><span>§</span></a></span></h5>
+					<h5 id="x2-3-3-2-solutions-for-user-safety"><span class="secno">2.3.3.2 </span>Solutions for User Safety<a class="self-link" aria-label="§" href="#solutions-for-user-safety"></a></h5>
 					<ol>
 						<li>All user information must be kept safe, to the fullest extent possible. Any clues that the user has cognitive disabilities (such as a request for a simplified version) should be protected information.</li>
 						<li>Security should be strong AND easily used by those with cognitive disabilities, such as a biometrics option. For a full discussion see the section on security.</li>
@@ -2462,14 +2509,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ol>
 		  </section></section>
 			<section id="math">
-				<h4 id="x2-3-4-math"><span class="secno">2.3.4 </span>Math<span class="permalink"><a href="#math" aria-label="Permalink for 2.3.4 Math" title="Permalink for 2.3.4 Math"><span>§</span></a></span></h4>
+				<h4 id="x2-3-4-math"><span class="secno">2.3.4 </span>Math<a class="self-link" aria-label="§" href="#math"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/math.html">https://rawgit.com/w3c/coga/master/issue-papers/math.html</a></p>-->
 				<section id="problems-with-math">
-				<h5 id="x2-3-4-1-problems-with-math"><span class="secno">2.3.4.1 </span>Problems with Math<span class="permalink"><a href="#problems-with-math" aria-label="Permalink for 2.3.4.1 Problems with Math" title="Permalink for 2.3.4.1 Problems with Math"><span>§</span></a></span></h5>
+				<h5 id="x2-3-4-1-problems-with-math"><span class="secno">2.3.4.1 </span>Problems with Math<a class="self-link" aria-label="§" href="#problems-with-math"></a></h5>
 				<p>Numeracy  issues can occur due to a range of difficulties, the most severe being the  inability to read or understand numbers. It should be noted that different  users may find math  easer to understand  than long text.</p>
 </section><section id="solutions-for-math">
-		<h5 id="x2-3-4-2-solutions-for-math"><span class="secno">2.3.4.2 </span>Solutions for Math<span class="permalink"><a href="#solutions-for-math" aria-label="Permalink for 2.3.4.2 Solutions for Math" title="Permalink for 2.3.4.2 Solutions for Math"><span>§</span></a></span></h5>
+		<h5 id="x2-3-4-2-solutions-for-math"><span class="secno">2.3.4.2 </span>Solutions for Math<a class="self-link" aria-label="§" href="#solutions-for-math"></a></h5>
 		<ul>
 			<li> Move towards digital math that can be extended (not numbers in images) </li>
 			<li> Enable highlighting of sections as they are being discussed </li>
@@ -2479,7 +2526,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	  </section>
 			</section>
 			<section id="multi-modal-content-delivery">
-				<h4 id="x2-3-5-multi-modal-content-delivery"><span class="secno">2.3.5 </span>Multi-modal Content Delivery<span class="permalink"><a href="#multi-modal-content-delivery" aria-label="Permalink for 2.3.5 Multi-modal Content Delivery" title="Permalink for 2.3.5 Multi-modal Content Delivery"><span>§</span></a></span></h4>
+				<h4 id="x2-3-5-multi-modal-content-delivery"><span class="secno">2.3.5 </span>Multi-modal Content Delivery<a class="self-link" aria-label="§" href="#multi-modal-content-delivery"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/multi-modal.html">https://rawgit.com/w3c/coga/master/issue-papers/multi-modal.html</a></p>-->
 				<p>Text, which comprises the vast majority of content on the Web, is difficult to understand by many people (most COGA groups). </p>
@@ -2493,7 +2540,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<li>Too many multi-modal items on a page can make the page confusing or overwhelming</li>
 				</ol>
 				<section id="solutions-for-multi-modal-content-delivery">
-					<h5 id="x2-3-5-1-solutions-for-multi-modal-content-delivery"><span class="secno">2.3.5.1 </span>Solutions for Multi-modal Content Delivery<span class="permalink"><a href="#solutions-for-multi-modal-content-delivery" aria-label="Permalink for 2.3.5.1 Solutions for Multi-modal Content Delivery" title="Permalink for 2.3.5.1 Solutions for Multi-modal Content Delivery"><span>§</span></a></span></h5>
+					<h5 id="x2-3-5-1-solutions-for-multi-modal-content-delivery"><span class="secno">2.3.5.1 </span>Solutions for Multi-modal Content Delivery<a class="self-link" aria-label="§" href="#solutions-for-multi-modal-content-delivery"></a></h5>
 					<p>Text can be made easier to understand when delivered in different modes. Ideally, people should be able to choose that content is delivered in the mode they comprehend best, such as: </p>
 					<ul>
 						<li> Text To Speech </li>
@@ -2511,7 +2558,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ol>
 				</section>
 				<section id="further-work-for-multi-modal-content-delivery">
-					<h5 id="x2-3-5-2-further-work-for-multi-modal-content-delivery"><span class="secno">2.3.5.2 </span>Further Work for Multi-modal Content Delivery<span class="permalink"><a href="#further-work-for-multi-modal-content-delivery" aria-label="Permalink for 2.3.5.2 Further Work for Multi-modal Content Delivery" title="Permalink for 2.3.5.2 Further Work for Multi-modal Content Delivery"><span>§</span></a></span></h5>
+					<h5 id="x2-3-5-2-further-work-for-multi-modal-content-delivery"><span class="secno">2.3.5.2 </span>Further Work for Multi-modal Content Delivery<a class="self-link" aria-label="§" href="#further-work-for-multi-modal-content-delivery"></a></h5>
 					<p>Develop ease-of-use ideas, such as development and/or application of: </p>
 					<ul>
 						<li> plain-language standards </li>
@@ -2521,7 +2568,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</section>
 			</section>
 			<section id="personalization-and-user-preferences">
-				<h4 id="x2-3-6-personalization-and-user-preferences"><span class="secno">2.3.6 </span>Personalization and User Preferences<span class="permalink"><a href="#personalization-and-user-preferences" aria-label="Permalink for 2.3.6 Personalization and User Preferences" title="Permalink for 2.3.6 Personalization and User Preferences"><span>§</span></a></span></h4>
+				<h4 id="x2-3-6-personalization-and-user-preferences"><span class="secno">2.3.6 </span>Personalization and User Preferences<a class="self-link" aria-label="§" href="#personalization-and-user-preferences"></a></h4>
 				<!--<p><strong>Taken from:</strong>--> This summary pulls together a few different issue papers and addresses them together. They are: 
 				<ul>
 					<li> User Preferences <!--<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/preferences.html">https://rawgit.com/w3c/coga/master/issue-papers/preferences.html</a>--></li>
@@ -2546,9 +2593,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				<p>For example, using a familiar design, terms and symbols is key to being able to use the web for people who can not remember new symbols (such as some people with memory related impairments like dementia). However, what is familiar for one user may be new for another. Personalization could include loading a set of symbols that is appropriate for the specific user, ensuring that all users find the design and icons simple and familiar. </p>
 				<p>(See [<cite><a class="bibref" href="#bib-coga-user-research">coga-user-research</a></cite>]<a rel="nofollow" href="http://www.w3.org/TR/coga-user-research/#aging-and-dementia"> </a>section 3.4.15.3 ) </p>
 			<section id="problems-with-personalization">
-				 <h5 id="x2-3-6-1-problems-with-personalization"><span class="secno">2.3.6.1 </span>Problems with Personalization<span class="permalink"><a href="#problems-with-personalization" aria-label="Permalink for 2.3.6.1 Problems with Personalization" title="Permalink for 2.3.6.1 Problems with Personalization"><span>§</span></a></span></h5>
+				 <h5 id="x2-3-6-1-problems-with-personalization"><span class="secno">2.3.6.1 </span>Problems with Personalization<a class="self-link" aria-label="§" href="#problems-with-personalization"></a></h5>
 				 <section id="preferences-for-cognitive-disabilities">
-				   <h6 id="x2-3-6-1-1-preferences-for-cognitive-disabilities"><span class="secno">2.3.6.1.1 </span>Preferences for Cognitive Disabilities<span class="permalink"><a href="#preferences-for-cognitive-disabilities" aria-label="Permalink for 2.3.6.1.1 Preferences for Cognitive Disabilities" title="Permalink for 2.3.6.1.1 Preferences for Cognitive Disabilities"><span>§</span></a></span></h6>
+				   <h6 id="x2-3-6-1-1-preferences-for-cognitive-disabilities"><span class="secno">2.3.6.1.1 </span>Preferences for Cognitive Disabilities<a class="self-link" aria-label="§" href="#preferences-for-cognitive-disabilities"></a></h6>
 					<p>Typical configurable features include adjustments such as colors, text and icon size, sounds or mouse double click speed. Current preferences tend to focus on physical needs that help the user use the content and not on cognitive needs and preferences that help the user understand the content. Meta data and ontologies for preferences also currently focus on physical accessibility needs. For our purposes we need the ontologies to support issues such as: </p>
 					<ol>
 						<li> Types of Language support – such as non-literal language or simple language </li>
@@ -2561,7 +2608,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ol>
 			  </section>
 				<section id="setting-and-gathering-preferences">
-					<h6 id="x2-3-6-1-2-setting-and-gathering-preferences"><span class="secno">2.3.6.1.2 </span>Setting and Gathering Preferences<span class="permalink"><a href="#setting-and-gathering-preferences" aria-label="Permalink for 2.3.6.1.2 Setting and Gathering Preferences" title="Permalink for 2.3.6.1.2 Setting and Gathering Preferences"><span>§</span></a></span></h6>
+					<h6 id="x2-3-6-1-2-setting-and-gathering-preferences"><span class="secno">2.3.6.1.2 </span>Setting and Gathering Preferences<a class="self-link" aria-label="§" href="#setting-and-gathering-preferences"></a></h6>
 					<p>People with cognitive disabilities can be become daunted, or worse, completely unable to select their desired preferences. Indeed depending on the individual and the technology being used it may be impossible with a supporter's assistance. </p>
 					<p>So specific problems for people with cognitive disabilities include: </p>
 					<ol>
@@ -2579,7 +2626,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<p>Metadata is another related topic. Metadata allows the user to find content that they can use and suites their personal needs and preferences. A lot of work has been done for enabling metadata that helps people with physical disabilities find versions of content that they can use. However the semantics and terms do not support the specific requirements of people with different cognitive disabilities. </p>
 				</section></section>
 				<section id="solutions-for-personalization">
-					<h5 id="x2-3-6-2-solutions-for-personalization"><span class="secno">2.3.6.2 </span>Solutions for Personalization<span class="permalink"><a href="#solutions-for-personalization" aria-label="Permalink for 2.3.6.2 Solutions for Personalization" title="Permalink for 2.3.6.2 Solutions for Personalization"><span>§</span></a></span></h5>
+					<h5 id="x2-3-6-2-solutions-for-personalization"><span class="secno">2.3.6.2 </span>Solutions for Personalization<a class="self-link" aria-label="§" href="#solutions-for-personalization"></a></h5>
 				
 					<ol>
 						<li>Promote and support advancements in technologies in these area. For example, our recommending for WCAG will be along the lines of "Use semantics and standardized techniques and that enable the content to be adapted to the user scenario and enable additional support " (See appendix two for details.)</li>
@@ -2589,7 +2636,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ol>
 				</section>
 				<section id="further-work-for-personalization">
-					<h5 id="x2-3-6-3-further-work-for-personalization"><span class="secno">2.3.6.3 </span>Further Work for Personalization<span class="permalink"><a href="#further-work-for-personalization" aria-label="Permalink for 2.3.6.3 Further Work for Personalization" title="Permalink for 2.3.6.3 Further Work for Personalization"><span>§</span></a></span></h5>
+					<h5 id="x2-3-6-3-further-work-for-personalization"><span class="secno">2.3.6.3 </span>Further Work for Personalization<a class="self-link" aria-label="§" href="#further-work-for-personalization"></a></h5>
 					<ol>
 						<li>Support  in WCAG that encourages support the features of the  operating system or standards that enable adaption ,  such as adding  additional  success criteria.</li>
 						<li>Develop supporting techniques so authors know exactly what to do </li>
@@ -2599,7 +2646,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                       <li> Ensure any solutions architecture protects the user's privacy, such as client side adaptations and metadata that reflect functional requirements only. We also suggest an additional issue paper on related ethics. </li>
                     </ol>
 				<section id="end-to-end-basic-solution">
-					<h6 id="x2-3-6-3-1-end-to-end-basic-solution"><span class="secno">2.3.6.3.1 </span>End to End Basic Solution<span class="permalink"><a href="#end-to-end-basic-solution" aria-label="Permalink for 2.3.6.3.1 End to End Basic Solution" title="Permalink for 2.3.6.3.1 End to End Basic Solution"><span>§</span></a></span></h6>
+					<h6 id="x2-3-6-3-1-end-to-end-basic-solution"><span class="secno">2.3.6.3.1 </span>End to End Basic Solution<a class="self-link" aria-label="§" href="#end-to-end-basic-solution"></a></h6>
 					<p>We need standardized terms and supportive syntax that can be linked to associated symbols, terms, translations and explanations for the individual use, possibly via an aria attribute and personal preferences. </p>
 					<p>For example, assume an author can make it programmatically known that a button is used to send an email. At the user end, the button could be rendered with a symbol, term, and/or tooltips that are understandable for this particular user. It could automatically integrate with F1 help that explains the send function in simple terms. It could be identified with a keyboard short cut that will always be used for send. In addition it could be identified as important and always rendered, or rendered as a large button. </p>
 					<p>Working examples of how this could be used in practice with user preferences are available Full versions can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. It demonstrates personalization for any use - including people with learning and memory issues </p>
@@ -2614,7 +2661,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<p>This is only one example way to use the semantics. Others may follow. It is also worth noting that the [<cite><a class="bibref" href="#bib-gpii">GPII</a></cite>] project is working on making user preferences portable which would also enhance this work. </p>
 				</section>
 				<section id="special-case">
-					<h6 id="x2-3-6-3-2-special-case"><span class="secno">2.3.6.3.2 </span>Special Case<span class="permalink"><a href="#special-case" aria-label="Permalink for 2.3.6.3.2 Special Case" title="Permalink for 2.3.6.3.2 Special Case"><span>§</span></a></span></h6>
+					<h6 id="x2-3-6-3-2-special-case"><span class="secno">2.3.6.3.2 </span>Special Case<a class="self-link" aria-label="§" href="#special-case"></a></h6>
 					<p>Products  for people who are  non-verbal  often use symbols to help users communicate. These symbols are in fact peoples'  language. Unfortunately many of these symbols are both subject to copyright AND  are not interoperable. That means end-users can only use one device, and can not use apps or content from a different company. If we enabled  mapping to open sets of symbol codes that, in turn, map to open or proprietary  symbol sets, then they can be interoperable. At the user end ,  the user agent can load the symbols that the user knows. Symbol   sets might still be proprietary but they  would also be interoperable. That means the end  user  could use them across different devices, or any compatible content  or applications. </p>
 <p>Our members are working on projects to enable interoperable symbol sets and the semantics that would enable it. Such as (Pseudocode): </p>
 					<p>&lt;img coga-concept="&lt;a rel="nofollow" href="http://symbo.arosac.org/somepage#girlnode"&gt;http://symbo.arosac.org/somepage#girlnode&lt;/a&gt;" scr="girlwithbow.gif" /&gt; </p>
@@ -2626,15 +2673,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</section>
     </section></section>
 			<section id="distractions">
-				<h4 id="x2-3-7-distractions"><span class="secno">2.3.7 </span>Distractions<span class="permalink"><a href="#distractions" aria-label="Permalink for 2.3.7 Distractions" title="Permalink for 2.3.7 Distractions"><span>§</span></a></span></h4>
+				<h4 id="x2-3-7-distractions"><span class="secno">2.3.7 </span>Distractions<a class="self-link" aria-label="§" href="#distractions"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/distractions.html">https://rawgit.com/w3c/coga/master/issue-papers/distractions.html</a></p>-->
 				<section id="problems-with-distractions">
-					<h5 id="x2-3-7-1-problems-with-distractions"><span class="secno">2.3.7.1 </span>Problems with Distractions<span class="permalink"><a href="#problems-with-distractions" aria-label="Permalink for 2.3.7.1 Problems with Distractions" title="Permalink for 2.3.7.1 Problems with Distractions"><span>§</span></a></span></h5>
+					<h5 id="x2-3-7-1-problems-with-distractions"><span class="secno">2.3.7.1 </span>Problems with Distractions<a class="self-link" aria-label="§" href="#problems-with-distractions"></a></h5>
 					<p>Distractions can cause people with cognitive disabilities to lose focus on the current action being performed or draw attention away from the primary content and can be difficult for some users to know how to understand, avoid and/or stop them. Distractions can come in the form of overlays, auto-playing content, animated side-bar content, advertisements, prompts, pop-ups, scrolling or auto-updating content and so on. </p>
 				</section>
 				<section id="solutions-for-distractions">
-					<h5 id="x2-3-7-2-solutions-for-distractions"><span class="secno">2.3.7.2 </span>Solutions for Distractions<span class="permalink"><a href="#solutions-for-distractions" aria-label="Permalink for 2.3.7.2 Solutions for Distractions" title="Permalink for 2.3.7.2 Solutions for Distractions"><span>§</span></a></span></h5>
+					<h5 id="x2-3-7-2-solutions-for-distractions"><span class="secno">2.3.7.2 </span>Solutions for Distractions<a class="self-link" aria-label="§" href="#solutions-for-distractions"></a></h5>
 					<ul>
 						<li> Use personalization options to inform  the content provider of accommodations required so the presentation of content can be modified. </li>
 					</ul>
@@ -2664,20 +2711,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ul>
 				</section>
 				<section id="further-work-for-distractions">
-					<h5 id="x2-3-7-3-further-work-for-distractions"><span class="secno">2.3.7.3 </span>Further Work for Distractions<span class="permalink"><a href="#further-work-for-distractions" aria-label="Permalink for 2.3.7.3 Further Work for Distractions" title="Permalink for 2.3.7.3 Further Work for Distractions"><span>§</span></a></span></h5>
+					<h5 id="x2-3-7-3-further-work-for-distractions"><span class="secno">2.3.7.3 </span>Further Work for Distractions<a class="self-link" aria-label="§" href="#further-work-for-distractions"></a></h5>
 					<p>Form a cross-application and cross-device distraction matrix that manages all distractions in one setting. In conjunction with this there could be a mechanism for the user to select or modify the distraction matrix to allow distractions only from certain users and/or applications. </p>
 				</section>
 			</section>
 			<section id="voice-menu-systems">
-				<h4 id="x2-3-8-voice-menu-systems"><span class="secno">2.3.8 </span>Voice Menu Systems<span class="permalink"><a href="#voice-menu-systems" aria-label="Permalink for 2.3.8 Voice Menu Systems" title="Permalink for 2.3.8 Voice Menu Systems"><span>§</span></a></span></h4>
+				<h4 id="x2-3-8-voice-menu-systems"><span class="secno">2.3.8 </span>Voice Menu Systems<a class="self-link" aria-label="§" href="#voice-menu-systems"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html">https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html</a></p>-->
 				<section id="problem-with-voice-menu-systems">
-					<h5 id="x2-3-8-1-problem-with-voice-menu-systems"><span class="secno">2.3.8.1 </span>Problem with Voice Menu Systems<span class="permalink"><a href="#problem-with-voice-menu-systems" aria-label="Permalink for 2.3.8.1 Problem with Voice Menu Systems" title="Permalink for 2.3.8.1 Problem with Voice Menu Systems"><span>§</span></a></span></h5>
+					<h5 id="x2-3-8-1-problem-with-voice-menu-systems"><span class="secno">2.3.8.1 </span>Problem with Voice Menu Systems<a class="self-link" aria-label="§" href="#problem-with-voice-menu-systems"></a></h5>
 					<p>Voice menu systems and Voice XML are used to develop audio and voice response applications similar to automated telephone menu systems. These systems can cause issues for people with cognitive disabilities who may not have the reasoning skills to understand the instructions or have trouble processing the instructions quickly enough while listening to an array of options to choose from. A person with a cognitive disability may have trouble with short-term memory resulting in the inability to remember the number or verbal response required by the application, or may take a longer period of time to verbalize or enter in a response. </p>
 				</section>
 				<section id="solutions-for-voice-menu-systems">
-					<h5 id="x2-3-8-2-solutions-for-voice-menu-systems"><span class="secno">2.3.8.2 </span>Solutions for Voice Menu Systems<span class="permalink"><a href="#solutions-for-voice-menu-systems" aria-label="Permalink for 2.3.8.2 Solutions for Voice Menu Systems" title="Permalink for 2.3.8.2 Solutions for Voice Menu Systems"><span>§</span></a></span></h5>
+					<h5 id="x2-3-8-2-solutions-for-voice-menu-systems"><span class="secno">2.3.8.2 </span>Solutions for Voice Menu Systems<a class="self-link" aria-label="§" href="#solutions-for-voice-menu-systems"></a></h5>
 					<ul>
 						<li> Should have an easily remembered or standard instruction to reach a person for help, such as "0". </li>
 						<li> Describe the option before giving the instruction of what information or option is used to select that option. </li>
@@ -2693,15 +2740,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</section>
 			</section>
 	<section id="online-payments">
-				<h4 id="x2-3-9-online-payments"><span class="secno">2.3.9 </span>Online Payments<span class="permalink"><a href="#online-payments" aria-label="Permalink for 2.3.9 Online Payments" title="Permalink for 2.3.9 Online Payments"><span>§</span></a></span></h4>
+				<h4 id="x2-3-9-online-payments"><span class="secno">2.3.9 </span>Online Payments<a class="self-link" aria-label="§" href="#online-payments"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/payments.html">https://rawgit.com/w3c/coga/master/issue-papers/payments.html</a></p>-->
 				<section id="problems-with-online-payments">
-					<h5 id="x2-3-9-1-problems-with-online-payments"><span class="secno">2.3.9.1 </span>Problems with Online Payments<span class="permalink"><a href="#problems-with-online-payments" aria-label="Permalink for 2.3.9.1 Problems with Online Payments" title="Permalink for 2.3.9.1 Problems with Online Payments"><span>§</span></a></span></h5>
+					<h5 id="x2-3-9-1-problems-with-online-payments"><span class="secno">2.3.9.1 </span>Problems with Online Payments<a class="self-link" aria-label="§" href="#problems-with-online-payments"></a></h5>
 					<p>People with various cognitive impairments can have a variety of difficulties with the online payment systems used in e-commerce. These difficulties range from having trouble understanding the instructions and process to be followed to complete a transaction to issues in providing the necessary personal and financial information to make an online payment. If an online payment system requires a lot of user input for required information, the presentation of the input fields could cause a cluttered look, which can be distracting and make it difficult for the user to process the steps to take to complete the transaction, adding to their frustration and stress. If the online payment system has voiced commands, persons with speech perception issues may not be able to fully understand the instructions to respond appropriately. </p>
 				</section>
 				<section id="solutions-for-online-payments">
-					<h5 id="x2-3-9-2-solutions-for-online-payments"><span class="secno">2.3.9.2 </span>Solutions for Online Payments<span class="permalink"><a href="#solutions-for-online-payments" aria-label="Permalink for 2.3.9.2 Solutions for Online Payments" title="Permalink for 2.3.9.2 Solutions for Online Payments"><span>§</span></a></span></h5>
+					<h5 id="x2-3-9-2-solutions-for-online-payments"><span class="secno">2.3.9.2 </span>Solutions for Online Payments<a class="self-link" aria-label="§" href="#solutions-for-online-payments"></a></h5>
 					<p>The solutions are split into five categories as follows: </p>
 					<ul>
 						<li> Navigation <ul>
@@ -2770,18 +2817,18 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	
 		
 		<section id="symbol-users-with-speech-language-and-literacy-difficulties">
-			<h4 id="x2-3-10-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">2.3.10 </span>Symbol Users with Speech, Language, and Literacy Difficulties<span class="permalink"><a href="#symbol-users-with-speech-language-and-literacy-difficulties" aria-label="Permalink for 2.3.10 Symbol Users with Speech, Language, and Literacy Difficulties" title="Permalink for 2.3.10 Symbol Users with Speech, Language, and Literacy Difficulties"><span>§</span></a></span></h4>
+			<h4 id="x2-3-10-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">2.3.10 </span>Symbol Users with Speech, Language, and Literacy Difficulties<a class="self-link" aria-label="§" href="#symbol-users-with-speech-language-and-literacy-difficulties"></a></h4>
 				<!--<p><strong>Taken from:</strong> <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html">https://rawgit.com/w3c/coga/master/issue-papers/symbols-non-verbal.html</a></p>-->
 			<section id="problems-with-symbol-users-with-speech-language-and-literacy-difficulties">
-				<h5 id="x2-3-10-1-problems-with-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">2.3.10.1 </span>Problems with Symbol Users with Speech, Language, and Literacy Difficulties<span class="permalink"><a href="#problems-with-symbol-users-with-speech-language-and-literacy-difficulties" aria-label="Permalink for 2.3.10.1 Problems with Symbol Users with Speech, Language, and Literacy Difficulties" title="Permalink for 2.3.10.1 Problems with Symbol Users with Speech, Language, and Literacy Difficulties"><span>§</span></a></span></h5>
+				<h5 id="x2-3-10-1-problems-with-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">2.3.10.1 </span>Problems with Symbol Users with Speech, Language, and Literacy Difficulties<a class="self-link" aria-label="§" href="#problems-with-symbol-users-with-speech-language-and-literacy-difficulties"></a></h5>
 					<p>Some users communicate through the use of symbols, rather than written text, as part of an Augmentative and Alternative Communication (AAC) system.  Symbol users face a wide variety of barriers to accessing web content, but one of the main challenges is a lack of standard interoperability or a mechanism for translating how a concept is represented in one symbol set to how it may be represented in another symbol set.</p>
 			</section>
 			<section id="solutions-for-symbol-users-with-speech-language-and-literacy-difficulties">
-				<h5 id="x2-3-10-2-solutions-for-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">2.3.10.2 </span>Solutions for Symbol Users with Speech, Language, and Literacy Difficulties<span class="permalink"><a href="#solutions-for-symbol-users-with-speech-language-and-literacy-difficulties" aria-label="Permalink for 2.3.10.2 Solutions for Symbol Users with Speech, Language, and Literacy Difficulties" title="Permalink for 2.3.10.2 Solutions for Symbol Users with Speech, Language, and Literacy Difficulties"><span>§</span></a></span></h5>
+				<h5 id="x2-3-10-2-solutions-for-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">2.3.10.2 </span>Solutions for Symbol Users with Speech, Language, and Literacy Difficulties<a class="self-link" aria-label="§" href="#solutions-for-symbol-users-with-speech-language-and-literacy-difficulties"></a></h5>
 					<p>Map symbol libraries to common concepts, so that symbols can be accurately converted to text in any language and then presented to other users in their preferred symbol library.</p>
 			</section>
 			<section id="further-work-for-symbol-users-with-speech-language-and-literacy-difficulties">
-				<h5 id="x2-3-10-3-further-work-for-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">2.3.10.3 </span>Further Work for Symbol Users with Speech, Language, and Literacy Difficulties<span class="permalink"><a href="#further-work-for-symbol-users-with-speech-language-and-literacy-difficulties" aria-label="Permalink for 2.3.10.3 Further Work for Symbol Users with Speech, Language, and Literacy Difficulties" title="Permalink for 2.3.10.3 Further Work for Symbol Users with Speech, Language, and Literacy Difficulties"><span>§</span></a></span></h5>
+				<h5 id="x2-3-10-3-further-work-for-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">2.3.10.3 </span>Further Work for Symbol Users with Speech, Language, and Literacy Difficulties<a class="self-link" aria-label="§" href="#further-work-for-symbol-users-with-speech-language-and-literacy-difficulties"></a></h5>
 				<ul>
 					<li>Explore the use of AUI-symbol = "uri" and the Concept Coding Framework (CCF) to link and map symbols based on concept coding</li>
 					<li>Work with symbol dataset providers to publish symbols and concepts as "Linked Open Data"</li>
@@ -2790,14 +2837,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			</section>
 		</section>
 	<section id="task-completion-and-emotional-disabilities">
-			<h4 id="x2-3-11-task-completion-and-emotional-disabilities"><span class="secno">2.3.11 </span>Task Completion and Emotional Disabilities<span class="permalink"><a href="#task-completion-and-emotional-disabilities" aria-label="Permalink for 2.3.11 Task Completion and Emotional Disabilities" title="Permalink for 2.3.11 Task Completion and Emotional Disabilities"><span>§</span></a></span></h4>
+			<h4 id="x2-3-11-task-completion-and-emotional-disabilities"><span class="secno">2.3.11 </span>Task Completion and Emotional Disabilities<a class="self-link" aria-label="§" href="#task-completion-and-emotional-disabilities"></a></h4>
 				<!--<p><strong>Taken from:</strong> <a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/task-completion.html">https://rawgit.com/w3c/coga/master/issue-papers/task-completion.html</a></p>-->
 			<section id="problems-with-task-completion-and-emotional-disabilities">
-				<h5 id="x2-3-11-1-problems-with-task-completion-and-emotional-disabilities"><span class="secno">2.3.11.1 </span>Problems with Task Completion and Emotional Disabilities<span class="permalink"><a href="#problems-with-task-completion-and-emotional-disabilities" aria-label="Permalink for 2.3.11.1 Problems with Task Completion and Emotional Disabilities" title="Permalink for 2.3.11.1 Problems with Task Completion and Emotional Disabilities"><span>§</span></a></span></h5>
+				<h5 id="x2-3-11-1-problems-with-task-completion-and-emotional-disabilities"><span class="secno">2.3.11.1 </span>Problems with Task Completion and Emotional Disabilities<a class="self-link" aria-label="§" href="#problems-with-task-completion-and-emotional-disabilities"></a></h5>
 					<p>Users experiencing anxiety, depression or other emotional disabilities may experience difficulty completing online tasks. This is especially true if the tasks are timed or require the user to complete steps involving multiple screens.</p>
 			</section>
 			<section id="solutions-for-task-completion-and-emotional-disabilities">
-				<h5 id="x2-3-11-2-solutions-for-task-completion-and-emotional-disabilities"><span class="secno">2.3.11.2 </span>Solutions for Task Completion and Emotional Disabilities<span class="permalink"><a href="#solutions-for-task-completion-and-emotional-disabilities" aria-label="Permalink for 2.3.11.2 Solutions for Task Completion and Emotional Disabilities" title="Permalink for 2.3.11.2 Solutions for Task Completion and Emotional Disabilities"><span>§</span></a></span></h5>
+				<h5 id="x2-3-11-2-solutions-for-task-completion-and-emotional-disabilities"><span class="secno">2.3.11.2 </span>Solutions for Task Completion and Emotional Disabilities<a class="self-link" aria-label="§" href="#solutions-for-task-completion-and-emotional-disabilities"></a></h5>
 					<p>Provide feedback to users if a task is not complete and provide a way for users to know:</p>
 				<ul>
 					<li>How long a task will take</li>
@@ -2811,7 +2858,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</ul>
 			</section>
 			<section id="further-work-for-task-completion-and-emotional-disabilities">
-				<h5 id="x2-3-11-3-further-work-for-task-completion-and-emotional-disabilities"><span class="secno">2.3.11.3 </span>Further Work for Task Completion and Emotional Disabilities<span class="permalink"><a href="#further-work-for-task-completion-and-emotional-disabilities" aria-label="Permalink for 2.3.11.3 Further Work for Task Completion and Emotional Disabilities" title="Permalink for 2.3.11.3 Further Work for Task Completion and Emotional Disabilities"><span>§</span></a></span></h5>
+				<h5 id="x2-3-11-3-further-work-for-task-completion-and-emotional-disabilities"><span class="secno">2.3.11.3 </span>Further Work for Task Completion and Emotional Disabilities<a class="self-link" aria-label="§" href="#further-work-for-task-completion-and-emotional-disabilities"></a></h5>
 				<ul>
 					<li>Outline existing WCAG 2.1 success criteria that support task completion and define techniques for the remaining solutions</li>
 					<li>Create additional techniques</li>
@@ -2822,15 +2869,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			</section>
 	</section>
 	<section id="graded-help">
-			<h4 id="x2-3-12-graded-help"><span class="secno">2.3.12 </span>Graded Help<span class="permalink"><a href="#graded-help" aria-label="Permalink for 2.3.12 Graded Help" title="Permalink for 2.3.12 Graded Help"><span>§</span></a></span></h4>
+			<h4 id="x2-3-12-graded-help"><span class="secno">2.3.12 </span>Graded Help<a class="self-link" aria-label="§" href="#graded-help"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/graded-help.html">https://rawgit.com/w3c/coga/master/issue-papers/graded-help.html</a></p>-->
 			<section id="problems-with-graded-help">
-				<h5 id="x2-3-12-1-problems-with-graded-help"><span class="secno">2.3.12.1 </span>Problems with Graded Help<span class="permalink"><a href="#problems-with-graded-help" aria-label="Permalink for 2.3.12.1 Problems with Graded Help" title="Permalink for 2.3.12.1 Problems with Graded Help"><span>§</span></a></span></h5>
+				<h5 id="x2-3-12-1-problems-with-graded-help"><span class="secno">2.3.12.1 </span>Problems with Graded Help<a class="self-link" aria-label="§" href="#problems-with-graded-help"></a></h5>
 					<p>Users with cognitive impairments may need different levels and different types of help, depending on their circumstances.</p>
 			</section>
 			<section id="solutions-for-graded-help">
-				<h5 id="x2-3-12-2-solutions-for-graded-help"><span class="secno">2.3.12.2 </span>Solutions for Graded Help<span class="permalink"><a href="#solutions-for-graded-help" aria-label="Permalink for 2.3.12.2 Solutions for Graded Help" title="Permalink for 2.3.12.2 Solutions for Graded Help"><span>§</span></a></span></h5>
+				<h5 id="x2-3-12-2-solutions-for-graded-help"><span class="secno">2.3.12.2 </span>Solutions for Graded Help<a class="self-link" aria-label="§" href="#solutions-for-graded-help"></a></h5>
 					<p>Offer multiple means of help and a consistent mechanism for users to choose the type of help they need.  For example:</p>
 				<ul>
 					<li>Help is located in one location on every screen</li>
@@ -2843,7 +2890,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</ul>
 			</section>
 			<section id="further-work-for-graded-help">
-				<h5 id="x2-3-12-3-further-work-for-graded-help"><span class="secno">2.3.12.3 </span>Further Work for Graded Help<span class="permalink"><a href="#further-work-for-graded-help" aria-label="Permalink for 2.3.12.3 Further Work for Graded Help" title="Permalink for 2.3.12.3 Further Work for Graded Help"><span>§</span></a></span></h5>
+				<h5 id="x2-3-12-3-further-work-for-graded-help"><span class="secno">2.3.12.3 </span>Further Work for Graded Help<a class="self-link" aria-label="§" href="#further-work-for-graded-help"></a></h5>
 				<ul>
 					<li>Define help use cases for various platforms and language needs</li>
 					<li>Create supporting techniques and semantics</li>
@@ -2853,11 +2900,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			</section>
 		</section>
 		<section id="way-finding">
-			<h4 id="x2-3-13-way-finding"><span class="secno">2.3.13 </span>Way Finding<span class="permalink"><a href="#way-finding" aria-label="Permalink for 2.3.13 Way Finding" title="Permalink for 2.3.13 Way Finding"><span>§</span></a></span></h4>
+			<h4 id="x2-3-13-way-finding"><span class="secno">2.3.13 </span>Way Finding<a class="self-link" aria-label="§" href="#way-finding"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/wayfinding-indoors.html">https://rawgit.com/w3c/coga/master/issue-papers/wayfinding-indoors.html</a></p>-->
 			<section id="problems-with-way-finding">
-				<h5 id="x2-3-13-1-problems-with-way-finding"><span class="secno">2.3.13.1 </span>Problems with Way Finding<span class="permalink"><a href="#problems-with-way-finding" aria-label="Permalink for 2.3.13.1 Problems with Way Finding" title="Permalink for 2.3.13.1 Problems with Way Finding"><span>§</span></a></span></h5>
+				<h5 id="x2-3-13-1-problems-with-way-finding"><span class="secno">2.3.13.1 </span>Problems with Way Finding<a class="self-link" aria-label="§" href="#problems-with-way-finding"></a></h5>
 				<p>People with cognitive impairments may experience problems navigating through buildings such as museums, hospitals, airports, and public transportation stations. Navigation difficulties can be caused by problems with:</p>
 				<ul>
 					<li>Memory</li>
@@ -2878,7 +2925,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<li>Confusion with directional terms such as left and right</li>
 			</ul></section>
 			<section id="solutions-for-way-finding">
-				<h5 id="x2-3-13-2-solutions-for-way-finding"><span class="secno">2.3.13.2 </span>Solutions for Way Finding<span class="permalink"><a href="#solutions-for-way-finding" aria-label="Permalink for 2.3.13.2 Solutions for Way Finding" title="Permalink for 2.3.13.2 Solutions for Way Finding"><span>§</span></a></span></h5>
+				<h5 id="x2-3-13-2-solutions-for-way-finding"><span class="secno">2.3.13.2 </span>Solutions for Way Finding<a class="self-link" aria-label="§" href="#solutions-for-way-finding"></a></h5>
 				<ul>
 					<li>Ease-of-use principles (e.g. use of color, consistent layout, use of symbols or images, clearly marked directions, etc.)</li>
 					<li>Guidelines for wayfinding technologies</li>
@@ -2886,23 +2933,23 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</ul>
 			</section>
 			<section id="further-work-for-way-finding">
-				<h5 id="x2-3-13-3-further-work-for-way-finding"><span class="secno">2.3.13.3 </span>Further Work for Way Finding<span class="permalink"><a href="#further-work-for-way-finding" aria-label="Permalink for 2.3.13.3 Further Work for Way Finding" title="Permalink for 2.3.13.3 Further Work for Way Finding"><span>§</span></a></span></h5>
+				<h5 id="x2-3-13-3-further-work-for-way-finding"><span class="secno">2.3.13.3 </span>Further Work for Way Finding<a class="self-link" aria-label="§" href="#further-work-for-way-finding"></a></h5>
 				<ul>
 					<li>Explore current wayfinding technologies and applications for people with cognitive impairments</li>
 					<li>Develop example wayfinding techniques to use when designing solutions with the needs of cognitive impairments in mind</li>
 			</ul></section>
 		</section>
 		<section id="web-of-things-wot">
-			<h4 id="x2-3-14-web-of-things-wot"><span class="secno">2.3.14 </span>Web of Things (WoT)<span class="permalink"><a href="#web-of-things-wot" aria-label="Permalink for 2.3.14 Web of Things (WoT)" title="Permalink for 2.3.14 Web of Things (WoT)"><span>§</span></a></span></h4>
+			<h4 id="x2-3-14-web-of-things-wot"><span class="secno">2.3.14 </span>Web of Things (WoT)<a class="self-link" aria-label="§" href="#web-of-things-wot"></a></h4>
 				<!--<p><strong>Taken from:</strong>
 					<a rel="nofollow" href="https://rawgit.com/w3c/coga/master/issue-papers/wot.html">https://rawgit.com/w3c/coga/master/issue-papers/wot.html</a></p>-->
 			<section id="problems-with-web-of-things-wot">
-				<h5 id="x2-3-14-1-problems-with-web-of-things-wot"><span class="secno">2.3.14.1 </span>Problems with Web of Things (WoT)<span class="permalink"><a href="#problems-with-web-of-things-wot" aria-label="Permalink for 2.3.14.1 Problems with Web of Things (WoT)" title="Permalink for 2.3.14.1 Problems with Web of Things (WoT)"><span>§</span></a></span></h5>
+				<h5 id="x2-3-14-1-problems-with-web-of-things-wot"><span class="secno">2.3.14.1 </span>Problems with Web of Things (WoT)<a class="self-link" aria-label="§" href="#problems-with-web-of-things-wot"></a></h5>
 					<p>People with cognitive impairments may experience multiple difficulties with devices that are part of the Internet of Things.  For example, some people may have trouble processing text and numbers. The test or symbols used may not be intuitive to the user.   Other people may have difficulty with auditory information, spatial orientation, or responding to prompts on devices before the prompts time out.  These types of difficulties could prohibit people with cognitive disabilities from operating smart devices that have impacts on their health and safety.</p>
 				<p>In addition, user  data is used to drive decision making across smart systems. If systems are not usable by people with disabilities, then these groups of people become invisible to the decision making process. Analysis of data needs to ensure that all disability groups are represented in user data and feedback.</p>
 			</section>
 			<section id="solutions-for-web-of-things-wot">
-				<h5 id="x2-3-14-2-solutions-for-web-of-things-wot"><span class="secno">2.3.14.2 </span>Solutions for Web of Things (WoT)<span class="permalink"><a href="#solutions-for-web-of-things-wot" aria-label="Permalink for 2.3.14.2 Solutions for Web of Things (WoT)" title="Permalink for 2.3.14.2 Solutions for Web of Things (WoT)"><span>§</span></a></span></h5>
+				<h5 id="x2-3-14-2-solutions-for-web-of-things-wot"><span class="secno">2.3.14.2 </span>Solutions for Web of Things (WoT)<a class="self-link" aria-label="§" href="#solutions-for-web-of-things-wot"></a></h5>
 				<ul>
 					<li>Provide guidance to support consistent design for navigation, familiar terms and symbols, functional user preferences, contextual clues and personal use patterns, consistent layout, and the effective use of multimedia.</li>
 					<li>Provide interfaces to support:
@@ -2916,7 +2963,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</ul>
 			</section>
 			<section id="further-work-for-web-of-things-wot">
-				<h5 id="x2-3-14-3-further-work-for-web-of-things-wot"><span class="secno">2.3.14.3 </span>Further Work for Web of Things (WoT)<span class="permalink"><a href="#further-work-for-web-of-things-wot" aria-label="Permalink for 2.3.14.3 Further Work for Web of Things (WoT)" title="Permalink for 2.3.14.3 Further Work for Web of Things (WoT)"><span>§</span></a></span></h5>
+				<h5 id="x2-3-14-3-further-work-for-web-of-things-wot"><span class="secno">2.3.14.3 </span>Further Work for Web of Things (WoT)<a class="self-link" aria-label="§" href="#further-work-for-web-of-things-wot"></a></h5>
 				<ul>
 					<li>Review and evaluate the application of API's such as <a href="http://www.openurc.org/">URC</a> <a href="http://www.openurc.org/">http://www.openurc.org/</a></li>
 					<li>Review IoT API's to determine if they provide cognitive supports, such as the ability to have fewer features presented to the end user and understandable, familiar interfaces</li>
@@ -2933,8 +2980,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 		
 
-		<section id="tables-of-user-needs">
-			<!--OddPage--><h2 id="x3-tables-of-user-needs"><span class="secno">3. </span>Tables of User Needs<span class="permalink"><a href="#tables-of-user-needs" aria-label="Permalink for 3. Tables of User Needs" title="Permalink for 3. Tables of User Needs"><span>§</span></a></span></h2>
+		<section id="roadmap-of-solutions-against-user-needs">
+			<!--OddPage--><h2 id="x3-roadmap-of-solutions-against-user-needs"><span class="secno">3. </span>Roadmap of Solutions Against User Needs<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h2>
 			<p></p>
 
 
@@ -2951,8 +2998,10 @@ table {border:thin; border-style:groove;}
 
 
 
-<p>This section is a work in progress for discussion of the tables format for the COGA roadmap. It identifies user needs that are not currently fully addressed by accessibility.</p>
-<a id="userneeds"></a><strong>User needs:</strong> each  table addresses a group of user needs. The tables show how related user needs can be met. 
+<p>This section identifies the different needs of the community and proposes suggestions on how standards and technologies could be developed to meet these needs. This section is designed for standards’ groups and policy makers.
+Each section addresses a different group of related user needs. Related user needs have been grouped together to help define a coherent solution space.
+It identifies user needs that are not currently fully addressed by accessibility.</p>
+<a id="userneeds"></a><strong>Tables of user needs:</strong> each  table addresses a group of user needs. The tables show how related user needs can be met. 
 <ul>
   <li>Each row starts, in the first column, with user needs to be addressed.</li>
   <li><a id="WCAGex"></a>The second column in each row describes how user needs could be addressed in the next version of the WCAG. It gives the names of the relevant success criteria proposals. For the full text, see  current at <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To Do_list">WCAG  COGA SC and To Do List</a></li>
@@ -2974,7 +3023,7 @@ table {border:thin; border-style:groove;}
 	<p>There is also an <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Gap_Analysis_Summary#Summary_of_Issues">issue summary</a>.</p></div></div>
 <p><strong>Please note this table is incomplete, and is a work in progress.</strong>) </p>
 <section>
-				<h3 id="table1"><span class="secno">3.1 </span> Table 1: Authentication and Safety</h3>
+				<h3 id="table1"><span class="secno">3.1 </span> Table 1: Authentication and Safety<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				<p><strong>About users:</strong> Many users (most COGA groups) have memory issues that can make transcribing text or remembering passwords difficult or impossible. Other contributing issues include impaired executive function. </p>
 				<p>Sometimes security and authentication put a barrier between users and the tasks they are doing. For example, requiring remembering and/or transcribing passwords often bar users with cognitive disabilities from accessing content or using a service. </p>
 				<p>This leads to the following user stories.</p>
@@ -3039,7 +3088,7 @@ table {border:thin; border-style:groove;}
     
   </tbody>
 </table>
-				<h3 id="Discussion1">Discussion</h3>
+				<h3 id="Discussion1">Discussion<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
                 <p><a href="https://w3c.github.io/coga/issue-papers/privacy-security.html">Privacy and Security issue paper</a><a href="https://w3c.github.io/coga/issue-papers/security.html"></a></p>
                 <p><a href="https://w3c.github.io/coga/issue-papers/safety.html">Online Safety issue paper</a></p>
                 <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for Personalization</a> and <a href="https://github.com/ayelet-seeman/COGA.personalisation">example for personalization</a></p>
@@ -3049,7 +3098,7 @@ table {border:thin; border-style:groove;}
   
 </section>
 <section>
-  <h3 id="table2"><span class="secno">3.2 </span>Table 2: Context and Distractions</h3>
+  <h3 id="table2"><span class="secno">3.2 </span>Table 2: Context and Distractions<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				<p><strong>About users:</strong> distractions can cause users with cognitive disabilities to lose focus on the current action being performed; or draw attention away from primary content; and can be difficult for some users to know how to understand, avoid, and/or stop them.</p>
 				<p>Once users become distracted, it can be difficult for them to remember what they were doing. This is especially problematic for users with both low attention and impaired memory, such as users with dementia.</p>
 				<p>This leads to the following user stories.</p><div class="ednote" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><p class=""> The task force intends to add user stories.</p></div>
@@ -3179,7 +3228,7 @@ table {border:thin; border-style:groove;}
 			          <p>(Assume I have an attention disability, and/or an impaired short-term memory, and/or impaired executive function).</p></th>
 				      <td><p>As above</p>
 			          <p>and </p>
-			          <h3 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x3">Change 2.2.4 Interruptions:<span class="permalink"><a href="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x3" aria-label="Permalink for Change 2.2.4 Interruptions:" title="Permalink for Change 2.2.4 Interruptions:"><span>§</span></a></span></h3>
+			          <h3 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x3">Change 2.2.4 Interruptions:<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 			          <p>and</p>
 			          <p><strong>Upgrade 3.2.5 Change on Request:</strong></p>
 			          
@@ -3218,7 +3267,7 @@ table {border:thin; border-style:groove;}
 			        </tr>
 			      </tbody>
 			  </table>
-  <h4 id="Discussion3">Discussion</h4>
+  <h4 id="Discussion3">Discussion<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
     <p><a href="https://w3c.github.io/coga/issue-papers/distractions.html">Distractions issue paper</a></p>
     <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and
     <a href="https://github.com/ayelet-seeman/COGA.personalisation">Example for personalization</a></p>
@@ -3228,7 +3277,7 @@ table {border:thin; border-style:groove;}
     
 </section>
 			<section>
-			  <h3 id="table3"><span class="secno">3.3 </span>Table 3: Entering Data, Error Prevention, &amp; Recovery </h3>
+			  <h3 id="table3"><span class="secno">3.3 </span>Table 3: Entering Data, Error Prevention, &amp; Recovery <a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				<p>About users: Completing forms and similar tasks can be overwhelming for most users with cognitive and learning disabilities. This includes relatively minor learning disabilities, such as Dyslexia, or attention related disabilities. Many users (most COGA groups) have memory issues that can make transcribing text difficult or impossible. Other contributing issues include impaired executive function. </p>
 				<p>Many  users with learning disabilities cannot  remember numbers, such as those for their post/zip code, Social Security, or credit card. Many users even need  to  check their phone numbers. This makes  entering information slow, and they may need to leave their desks or take breaks.</p>
 				<p>Many users find it very difficult to transcribe information due to low visual memory or impaired executive function.</p>
@@ -3277,7 +3326,7 @@ table {border:thin; border-style:groove;}
                         <p>Where an understanding of math is not a primary   requirement for using content,&nbsp;reinforce numbers with non-numerical   values.&nbsp;</p>
                         <p>Simple search forms are excluded (context-sensitive help as technique).</p>
                         
-                        <h3 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following3"> Clear controls​<span class="permalink"><a href="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following3" aria-label="Permalink for  Clear controls​" title="Permalink for  Clear controls​"><span>§</span></a></span></h3>
+                        <h3 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following3"> Clear controls​<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
                         
 				        <p>--------</p>
 				        			        <p>Where there is no way to make visual controls clear, ensure instructions are provided (technique COGA explain).</p>
@@ -3449,7 +3498,7 @@ Always    open</p>
 				      <td><p><strong>Help</strong></p>
 				        
 <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-standardized-APIs">Support APIs</a> (may change)                      
-<h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes">..<span class="permalink"><a href="#h-support-is-provided-that-help-users-understand-the-content-that-includes" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h4></td>
+<h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4></td>
 				      <td><p>Avoid form autocomplete="off"</p>
 			          
 			          <p>Correctly use tags, such as list items, so that text to speech, with synchronized text highlighting, works correctly.</p></td>
@@ -3534,7 +3583,7 @@ Always    open</p>
 			        </tr>
 			      </tbody>
 			  </table>
-				<h4 id="Discussion3">Discussion</h4>
+				<h4 id="Discussion3">Discussion<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
                 
                 <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for Personalization</a> and <a href="https://github.com/ayelet-seeman/COGA.personalisation">Example for personalization</a></p>
                 <p><a href="https://www.w3.org/TR/personalization-semantics-1.0/">Semantics</a></p>
@@ -3543,7 +3592,7 @@ Always    open</p>
                 
 </section>
 			<section>
-			  <h3 id="table4"><span class="secno">3.4 </span>Table 4: Help and support</h3>
+			  <h3 id="table4"><span class="secno">3.4 </span>Table 4: Help and support<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				<p>About Users </p><div class="ednote" id="issue-container-generatedID-24"><div role="heading" class="ednote-title marker" id="h-ednote-24" aria-level="4"><span>Editor's note</span></div><p class=""> To be completed.</p></div>
 				<p>This leads to the following user stories. </p>
 				
@@ -3626,13 +3675,13 @@ Always    open</p>
 					     <div class="ednote" id="issue-container-generatedID-26"><div role="heading" class="ednote-title marker" id="h-ednote-26" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be adressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
 				        
                         <p></p>
-                        <h3 id="semantics3">..<span class="permalink"><a href="#semantics3" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h3>
+                        <h3 id="semantics3">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				        <p><strong>Critical features</strong> and important information are above the   fold on users' devices, and&nbsp;are accentuated in the preferred modality of a   user, or they appear before other main content.&nbsp;</p>
                         
                         <p>&nbsp;Navigation uses clear words and a 
                         <strong>familiar interface</strong>.</p>
                         <p>Help and support page or function should be reachable with one user   interaction. When human help is available, contact   information or the correct mechanism should be reachable within two user   interactions. </p>
-                        <h5 id="critical6">..<span class="permalink"><a href="#critical6" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h5>
+                        <h5 id="critical6">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h5>
 				        
 				        
 				        
@@ -3725,7 +3774,7 @@ I want a person to help me<span class="hljs-tag">&lt;/<span class="hljs-name">a<
 				      <td><p><strong>3.3.5 Help: (AA)</strong> (changes)</p>
                         <p>Provide content and information that help users understand&nbsp;<a href="https://w3c.github.io/coga/extension/index.html#dfn-complex-information">complex information</a>, long documents,&nbsp;numerical information,&nbsp;forms, and nonstandard controls.&nbsp;</p>
                         <p>sufficient techniques </p>
-                        <h5 id="provided_content5">..<span class="permalink"><a href="#provided_content5" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h5>
+                        <h5 id="provided_content5">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h5>
                         <p>(See COGA Techniques 2.7.) </p>
                         <p>For icons and jargon:</p>
                         <ul>
@@ -3771,7 +3820,7 @@ I want a person to help me<span class="hljs-tag">&lt;/<span class="hljs-name">a<
 				      <th scope="row">  I need rapid feedback. </th>
 				      <td><p id="API"><strong>Provide Feedback.</strong></p>
 				        
-			                                  <h3 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes3">..<span class="permalink"><a href="#h-support-is-provided-that-help-users-understand-the-content-that-includes3" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h3></td>
+			                                  <h3 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes3">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3></td>
 				      <td><p resource="#provide-speech-support">..</p></td>
 				      <td><a href="https://w3c.github.io/personalization-semantics/help/index.html#feedback-explanation">aui-feedback</a>
                         <p></p>
@@ -3856,7 +3905,7 @@ I want a person to help me<span class="hljs-tag">&lt;/<span class="hljs-name">a<
 				
 </section>
 			<section>
-				<h3 id="table5"><span class="secno">3.5 </span>Table 5: Simple and Clear Interface </h3>
+				<h3 id="table5"><span class="secno">3.5 </span>Table 5: Simple and Clear Interface <a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				<p><strong>About users:</strong> many users cannot easily learn new design metaphors, or remember things they learned, such as users with mild cognitive impairment or dementia. Without these skills, it can be much harder or impossible to locate desired items to interact with, and to know what interactions may do.</p>
 			  <p>Many users can be overwhelmed by too many options, or too much information. If reading is slow, then too much information mixed together will make it difficult or impossible to find the information needed.</p>
 				<p>This leads to the following user stories. </p>
@@ -3919,17 +3968,17 @@ I want a person to help me<span class="hljs-tag">&lt;/<span class="hljs-name">a<
 			        </tr>
 				    <tr>
 				      <th class="summary" scope="row">I can find the controls that I need.</th>
-				      <td class="summary"><h3 id="familiar3">Familiar Layout<span class="permalink"><a href="#familiar3" aria-label="Permalink for Familiar Layout" title="Permalink for Familiar Layout"><span>§</span></a></span></h3>
+				      <td class="summary"><h3 id="familiar3">Familiar Layout<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				        <p><strong>Critical features and important information.</strong></p>
 				        <p><strong>Headings</strong>, </p>
 				        <p resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x"><strong>Changes to</strong> <strong>3.2.4 - </strong><strong>Consistent Identification:</strong></p>
                         <p resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x"><strong>Changes to 3.2.3 Consistent Navigation</strong>: </p>
 				        <p><strong>clear controls </strong></p>
 				        <p>See also</p>
-		                <h4 resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x" id="use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x">support <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-personalization">personalization</a>.<span class="permalink"><a href="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x" aria-label="Permalink for support personalization." title="Permalink for support personalization."><span>§</span></a></span></h4>
+		                <h4 resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x" id="use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x">support <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-personalization">personalization</a>.<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 		                <p resource="#use-semantics-and-safe-standardized-techniques-that-enable-the-content-to-be-adapted-to-the-user-scenario-including-enabling-additional-support-and-personalization.x">..</p>
                       <p>&nbsp;</p></td>
-				      <td><h4 resource="#h-use-clear-visual-affordances.x" id="h-use-clear-visual-affordances.x">..<span class="permalink"><a href="#h-use-clear-visual-affordances.x" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h4></td>
+				      <td><h4 resource="#h-use-clear-visual-affordances.x" id="h-use-clear-visual-affordances.x">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4></td>
 				      <td><a title="expand" class="expand" aria-label="expand example" href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a>
                         
                       <p></p></td>
@@ -3941,16 +3990,16 @@ I want a person to help me<span class="hljs-tag">&lt;/<span class="hljs-name">a<
 			        </tr>
 				    <tr>
 				      <th scope="row">I need a structure that is easy follow. </th>
-				      <td><h4 id="chunks3"> Manageable chunks<span class="permalink"><a href="#chunks3" aria-label="Permalink for  Manageable chunks" title="Permalink for  Manageable chunks"><span>§</span></a></span></h4>
+				      <td><h4 id="chunks3"> Manageable chunks<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 			            <p><strong>3.2.4 Consistent identification</strong></p>
-			            <h4 id="controls"> Clear controls <span class="permalink"><a href="#controls" aria-label="Permalink for  Clear controls " title="Permalink for  Clear controls "><span>§</span></a></span></h4>
+			            <h4 id="controls"> Clear controls <a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 			            <p><strong>Familiar layout</strong></p>
 			            <p><strong>Clear structure and relationships</strong></p>
 			            <p><strong>3.2.3 Consistent Navigation</strong></p>
 			            <p><strong>2.1.1 Consistent styles</strong></p>
 			            
 		                <p id="critical4"><strong>Critical features and important information</strong></p>
-	                  				        <h4 resource="#h-provide-a-clear-structure-that-includes" id="h-provide-a-clear-structure-that-includes">..<span class="permalink"><a href="#h-provide-a-clear-structure-that-includes" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h4></td>
+	                  				        <h4 resource="#h-provide-a-clear-structure-that-includes" id="h-provide-a-clear-structure-that-includes">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4></td>
 				      <td><div class="ednote" id="issue-container-generatedID-37"><div role="heading" class="ednote-title marker" id="h-ednote-37" aria-level="4"><span>Editor's note</span></div><p class=""> add a technique on how to mark up a site map so it is adaptable.</p></div></td>
 				      <td><p>Log</p>
 			          <div class="ednote" id="issue-container-generatedID-38"><div role="heading" class="ednote-title marker" id="h-ednote-38" aria-level="4"><span>Editor's note</span></div><p class=""> add semantics for a sitemap page.</p></div>
@@ -3962,8 +4011,8 @@ I want a person to help me<span class="hljs-tag">&lt;/<span class="hljs-name">a<
 			        </tr>
 				    <tr>
 				      <th scope="row">I can easily find content I need.</th>
-				      <td><h4 id="chunks2">As above and <span class="permalink"><a href="#chunks2" aria-label="Permalink for As above and " title="Permalink for As above and "><span>§</span></a></span></h4>
-				        <h4 id="x3-3-5-help-aa">3.3.5 Help: (AA)</h4>
+				      <td><h4 id="chunks2">As above and <a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
+				        <h4 id="x3-3-5-help-aa">3.3.5 Help: (AA)<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 				        <p><strong>Provide search</strong></p>
 				        
 			          </td>
@@ -3975,9 +4024,9 @@ I want a person to help me<span class="hljs-tag">&lt;/<span class="hljs-name">a<
 				    <tr>
 				      <th scope="row">I need signposts so I can       find information I need. </th>
 				      <td><strong>Clear Purpose</strong>
-				        <h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="see-also">See also</h4>
+				        <h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="see-also">See also<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 <strong><em>Critical features </em></strong>
-<h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x2">3.3.5 Help: (AA)<span class="permalink"><a href="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x2" aria-label="Permalink for 3.3.5 Help: (AA)" title="Permalink for 3.3.5 Help: (AA)"><span>§</span></a></span></h4>
+<h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x2">3.3.5 Help: (AA)<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
                         <p resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x">Sufficient techniques for long documents include keywords.</p>
                       <div class="ednote" id="issue-container-generatedID-39"><div role="heading" class="ednote-title marker" id="h-ednote-39" aria-level="4"><span>Editor's note</span></div><p class=""> change to &nbsp;2.4.10 &nbsp;to AA, with the addition that headings are  available, and a technique that headings are shown via personalization.</p></div></td>
 				      <td><p>use of headings </p>
@@ -4043,11 +4092,11 @@ Potential parts of a page
 				        
 <strong>Critical features and important information </strong>
 				        
-				        <h4 id="layout4"><strong>Clear and understandable layout </strong><span class="permalink"><a href="#layout4" aria-label="Permalink for Clear and understandable layout " title="Permalink for Clear and understandable layout "><span>§</span></a></span></h4>
+				        <h4 id="layout4"><strong>Clear and understandable layout </strong><a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 				        <p><strong>3.3.3 Minimize user errors&nbsp;</strong>				        </p>
 				        <p><strong>Consistent cues</strong> are provided that identify&nbsp;&nbsp;different content types; and   the&nbsp;status of elements and regions that help users understand their   roles or states.</p>
 				        
-			          <h4 resource="#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes" id="h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes">..<span class="permalink"><a href="#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h4></td>
+			          <h4 resource="#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes" id="h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4></td>
 				      <td><div class="ednote" id="issue-container-generatedID-42"><div role="heading" class="ednote-title marker" id="h-ednote-42" aria-level="4"><span>Editor's note</span></div><p class=""> make technique for the following.</p></div>
                         <ol>
                           <li>Non-native content and sponsored content are clearly marked, and are visually differentiated by standardized techniques. </li>
@@ -4092,7 +4141,7 @@ Potential parts of a page
 			        </tr>
 				    <tr>
 				      <th scope="row">I know where to find things on a page. </th>
-				      <td><h4 resource="#h-a-predictable-design-is-used-within-a-set-of-pages-that-includes" id="h-a-predictable-design-is-used-within-a-set-of-pages-that-includes">Familiar layout: <span class="permalink"><a href="#h-a-predictable-design-is-used-within-a-set-of-pages-that-includes" aria-label="Permalink for Familiar layout: " title="Permalink for Familiar layout: "><span>§</span></a></span></h4>
+				      <td><h4 resource="#h-a-predictable-design-is-used-within-a-set-of-pages-that-includes" id="h-a-predictable-design-is-used-within-a-set-of-pages-that-includes">Familiar layout: <a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 				        
                       <p>and </p>
                       
@@ -4116,7 +4165,7 @@ Potential parts of a page
 			        </tr>
 				    <tr>
 				      <th scope="row">I know the design patterns. </th>
-				      <td><h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following2">clear controls <span class="permalink"><a href="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following2" aria-label="Permalink for clear controls " title="Permalink for clear controls "><span>§</span></a></span></h4>
+				      <td><h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following2">clear controls <a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 				        <p resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following">..</p>
 				        <p resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><strong>Familiar layout</strong></p>
 				        <p resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following">..</p>
@@ -4141,7 +4190,7 @@ Potential parts of a page
 			        </tr>
 				    <tr>
 				      <th scope="row">Unambiguous affordances - I know what things are and what they do. </th>
-				      <td><h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following4">clear controls <span class="permalink"><a href="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following4" aria-label="Permalink for clear controls " title="Permalink for clear controls "><span>§</span></a></span></h4>
+				      <td><h4 resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following" id="h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following4">clear controls <a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
                         <p resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><strong>Familiar layout</strong></p>
                         <p resource="#h-interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><strong>Understandable language</strong> (instructions, labels, navigation, and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-important-information">important information</a> )</p>
 			            <p resource="#h-instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes">..</p>
@@ -4197,7 +4246,7 @@ Potential parts of a page
 				
 			</section>
 <section>
-  <h3 id="table6"><span class="secno">3.6 </span>Table 6: Familiar interface</h3>
+  <h3 id="table6"><span class="secno">3.6 </span>Table 6: Familiar interface<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				<p><strong>About users:</strong> many users cannot easily learn new design metaphors, or remember things they learned, such as users with mild cognitive impairment or dementia. Without these skills, it can be much harder or impossible to locate desired items to interact with, and to know what interactions may do. Users can feel lost or overwhelmed. </p>
 				<p>Using a familiar design, terms and symbols are key to being able to use the web for users who cannot remember new symbols (such as some users with memory related impairments like dementia). Therefore, users need things to be familiar including:</p>
 				<ul>
@@ -4235,7 +4284,7 @@ Potential parts of a page
 					      <div class="ednote" id="issue-container-generatedID-49"><div role="heading" class="ednote-title marker" id="h-ednote-49" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be addressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
 				        
 				        <p>--------</p>
-				        <h3 id="familiar2">Familiar layout: <span class="permalink"><a href="#familiar2" aria-label="Permalink for Familiar layout: " title="Permalink for Familiar layout: "><span>§</span></a></span></h3>
+				        <h3 id="familiar2">Familiar layout: <a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				        
 			          </td>
 				      <td class="summary"></td>
@@ -4367,7 +4416,7 @@ Potential parts of a page
 				<div class="ednote" id="issue-container-generatedID-54"><div role="heading" class="ednote-title marker" id="h-ednote-54" aria-level="4"><span>Editor's note</span></div><p class=""> add the above user needs to the table, mapping user needs to solutions.</p></div>
 </section>
 			<section>
-			  <h3 id="table7"><span class="secno">3.7 </span>Table 7: Clear and understandable content and text.</h3>
+			  <h3 id="table7"><span class="secno">3.7 </span>Table 7: Clear and understandable content and text.<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 				<p>About Users </p><div class="ednote" id="issue-container-generatedID-55"><div role="heading" class="ednote-title marker" id="h-ednote-55" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
 				<p>This leads to the following user stories. </p>
 				<p>User needs for understandable text:</p>
@@ -4473,7 +4522,7 @@ Potential parts of a page
                       <p></p>
                       <p><a href="https://w3c.github.io/coga/techniques/index.html#be-clear-and-to-the-point">2.3.1 Be clear and to the point</a>.</p>
                       <p></p>
-                      <h3 resource="#h-be-clear-and-to-the-point" id="h-be-clear-and-to-the-point2">..<span class="permalink"><a href="#h-be-clear-and-to-the-point2" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h3>
+                      <h3 resource="#h-be-clear-and-to-the-point" id="h-be-clear-and-to-the-point2">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
                       <p><a href="https://w3c.github.io/coga/techniques/index.html#give-instructions-clearly">2.3.2 Give instructions clearly</a></p>
                       <p></p></td>
                     <td><p><strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#literal-explanation">aui-literal</a></strong></p>
@@ -4510,13 +4559,13 @@ Potential parts of a page
                       <p>Also see</p>
                       <strong><a href="https://w3c.github.io/coga/extension/index.html#semantics">Support personalization</a>.</strong>
                       
-                      <h3 id="provided_content2">..<span class="permalink"><a href="#provided_content2" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h3>
+                      <h3 id="provided_content2">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
                       
                     </td>
                     <td><p>Ability to have mathematical notation with text to speech to aid understanding.</p>
                       <p>Use of synchronized highlighting of complex graphics and formula with speech. </p>
                       <p>Associate maths, sections of math, and sections of complex items, with explanations.</p>
-                      <h5 resource="#h-relative-values" id="h-relative-values2"><a href="https://w3c.github.io/coga/techniques/index.html#relative-values">2.6.3.5 Relative values</a><span class="permalink"><a href="#h-relative-values2" aria-label="Permalink for 2.6.3.5 Relative values" title="Permalink for 2.6.3.5 Relative values"><span>§</span></a></span></h5>
+                      <h5 resource="#h-relative-values" id="h-relative-values2"><a href="https://w3c.github.io/coga/techniques/index.html#relative-values">2.6.3.5 Relative values</a><a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h5>
                       <div class="ednote" id="issue-container-generatedID-61"><div role="heading" class="ednote-title marker" id="h-ednote-61" aria-level="4"><span>Editor's note</span></div><p class=""> this is not clear.</p></div>
                       <p></p>
                       <p><a href="https://w3c.github.io/coga/techniques/index.html#relative-values">Use semantics to provide extra help</a>.</p>
@@ -4615,7 +4664,7 @@ Potential parts of a page
                       <p>-----------</p>
                     <p><strong>Support    personalization.</strong></p>
                     
-                    <h5 id="provided_content3">3.3.5 Help: (AA)<span class="permalink"><a href="#provided_content3" aria-label="Permalink for 3.3.5 Help: (AA)" title="Permalink for 3.3.5 Help: (AA)"><span>§</span></a></span></h5>
+                    <h5 id="provided_content3">3.3.5 Help: (AA)<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h5>
                     <p><strong>with sufficient techniques </strong>.</p>
                     <p>For key content and callout boxes:</p>
                     <ul>
@@ -4658,7 +4707,7 @@ Potential parts of a page
                 </tbody>
               </table>
               
-              <h4 id="discussions"><a id="Discussion7"></a>Discussions</h4>
+              <h4 id="discussions"><a id="Discussion7"></a>Discussions<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
                          <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Feb/0046.html">Emotional ML</a></p>
                          <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Mar/0001.html">EMMA examples</a>
                            
@@ -4679,7 +4728,7 @@ Potential parts of a page
               </p>
 </section>
             <section>
-              <h3 id="table8"><span class="secno">3.8 </span>Table 8: Navigating the system</h3>
+              <h3 id="table8"><span class="secno">3.8 </span>Table 8: Navigating the system<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
               <p>About  users: Many users (most COGA groups) have memory issues and/or language issues that can make remembering numbers, while  processing words, difficult or impossible. Other contributing issues include  impaired executive function. </p>
               <p>Sometimes developers put a barrier between users and the task they are doing so users cannot use the content or service.</p>
               <ul>
@@ -4717,13 +4766,13 @@ Potential parts of a page
                     <p>----------------------------</p>
                     <p>See also</p>
                     
-                    <h3 id="instructions">Understandable language<span class="permalink"><a href="#instructions" aria-label="Permalink for Understandable language" title="Permalink for Understandable language"><span>§</span></a></span></h3>
-                    <h4 id="manageable-blocks">Manageable blocks</h4>
-                    <h4 id="layout"><strong> Clear and understandable layout  </strong><span class="permalink"><a href="#layout" aria-label="Permalink for  Clear and understandable layout  " title="Permalink for  Clear and understandable layout  "><span>§</span></a></span></h4>
-                    <h4 id="familiar"><strong>A familiar design </strong><span class="permalink"><a href="#familiar" aria-label="Permalink for A familiar design " title="Permalink for A familiar design "><span>§</span></a></span></h4>
+                    <h3 id="instructions">Understandable language<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
+                    <h4 id="manageable-blocks">Manageable blocks<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
+                    <h4 id="layout"><strong> Clear and understandable layout  </strong><a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
+                    <h4 id="familiar"><strong>A familiar design </strong><a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
 <strong>Critical features </strong>
                     <p><strong><a href="https://w3c.github.io/coga/extension/index.html#semantics">Support personalization</a>.&nbsp;</strong></p>
-                    <h3 id="semantics2">..<span class="permalink"><a href="#semantics2" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h3>
+                    <h3 id="semantics2">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
                     
                     
                     
@@ -4769,7 +4818,7 @@ Potential parts of a page
                       <p>) </p>
                       <p><strong><a href="the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available-spoken-feedback-should-be-a-user-selectable-option">Help</a></strong></p>
                       <p> </p>
-                      <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes4">..<span class="permalink"><a href="#h-support-is-provided-that-help-users-understand-the-content-that-includes4" aria-label="Permalink for .." title="Permalink for .."><span>§</span></a></span></h4>
+                      <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes4">..<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
                       
                     <div class="ednote" id="issue-container-generatedID-77"><div role="heading" class="ednote-title marker" id="h-ednote-77" aria-level="4"><span>Editor's note</span></div><p class=""> further work?</p></div></td>
                     <td><div class="ednote" id="issue-container-generatedID-78"><div role="heading" class="ednote-title marker" id="h-ednote-78" aria-level="4"><span>Editor's note</span></div><p class=""> needs further investigation.</p></div></td>
@@ -4811,7 +4860,7 @@ Potential parts of a page
                 </tbody>
               </table>
 
-<h4 id="Discussion8">Discussion</h4>
+<h4 id="Discussion8">Discussion<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h4>
             <p><a href="https://w3c.github.io/coga/issue-papers/voice-menus.html">Voice ML Issue Paper</a></p>
             <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Mar/0001.html">EMMA examples</a> </p>
             <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and <a href="https://github.com/ayelet-seeman/COGA.personalisation">Example for personalization</a> </p>
@@ -4820,7 +4869,7 @@ Potential parts of a page
 <p><a href="https://w3c.github.io/coga/techniques/index.html ">Techniques</a></p>
 </section>
 <section>
-<h3 id="table9"><span class="secno">3.9 </span>Table 9: Navigation and GPS</h3>
+<h3 id="table9"><span class="secno">3.9 </span>Table 9: Navigation and GPS<a class="self-link" aria-label="§" href="#roadmap-of-solutions-against-user-needs"></a></h3>
 <p>About Users </p><div class="ednote" id="issue-container-generatedID-82"><div role="heading" class="ednote-title marker" id="h-ednote-82" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
 <p>This leads to the following user stories. </p>
 <p>User needs for understandable navigation:</p>
@@ -4915,375 +4964,35 @@ Potential parts of a page
 		  </section>
 	
 	<section id="personalization-semantics">
-		<!--OddPage--><h2 id="x4-personalization-semantics"><span class="secno">4. </span>Personalization Semantics<span class="permalink"><a href="#personalization-semantics" aria-label="Permalink for 4. Personalization Semantics" title="Permalink for 4. Personalization Semantics"><span>§</span></a></span></h2>
+		<!--OddPage--><h2 id="x4-personalization-semantics"><span class="secno">4. </span>Personalization Semantics<a class="self-link" aria-label="§" href="#personalization-semantics"></a></h2>
 		<p>The ARIA Working Group is developing <a href="https://www.w3.org/TR/personalization-semantics-1.0/">Personalization Semantics 1.0</a> [<cite><a class="bibref" href="#bib-personalization-semantics-1.0">personalization-semantics-1.0</a></cite>], a vocabulary of terms to indicate personalization preferences to applications which began in the Cognitive and Learning Disabilities Accessibility Task Force.</p>
 	</section>
 
 	<section class="appendix" id="appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities">
-		<!--OddPage--><h2 id="a-appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities"><span class="secno">A. </span>Appendix: Making content usable for people with cognitive and learning disabilities<span class="permalink"><a href="#appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities" aria-label="Permalink for A. Appendix: Making content usable for people with cognitive and learning disabilities" title="Permalink for A. Appendix: Making content usable for people with cognitive and learning disabilities"><span>§</span></a></span></h2>
-		
-
-
-		<section class="informative" id="introduction_for_usable">
-
-			<h3 id="a-1-introduction"><span class="secno">A.1 </span>Introduction<span class="permalink"><a href="#introduction_for_usable" aria-label="Permalink for A.1 Introduction" title="Permalink for A.1 Introduction"><span>§</span></a></span></h3><p><em>This section is non-normative.</em></p>
-
-			<p>Making websites and applications that are friendly for people with cognitive impairments affects every part of design and development.</p>
-			<p>Traditionally accessibility has been most focused on the interface, and making that usable for people with sensory and physical impairments in vision, hearing and/or mobility. Some accessibility features will help people with cognitive impairments, but often the issues are about context, language, usability, and other more general factors that impact everyone to some degree.</p>
-			<p>This document aims to provide guidance on how to make websites and applications that are friendly for people with cognitive impairments by providing guidance for your designs, and design process.</p>
-
-			<section id="process">
-				<h4 id="a-1-1-process"><span class="secno">A.1.1 </span>Process<span class="permalink"><a href="#process" aria-label="Permalink for A.1.1 Process" title="Permalink for A.1.1 Process"><span>§</span></a></span></h4>
-				<p>Some aspects of making things friendly for people with cognitive impairments are best dealt with as part of the overall design process. For most organizations there should be scope for taking a <a href="https://www.usability.gov/what-and-why/user-centered-design.html">user-centred design process</a>.</p>
-				<p>Key parts of this process for people with cognitive impairments should be:</p>
-				<p>
-					</p><ul>
-						<li>
-							Including cognitive issues in the context of use and requirements;
-						</li>
-						<li>
-							Including people with cognitive issues in research methods such as usability testing.
-						</li>
-					</ul>
-				<p></p>
-				<p>If people with cognitive impairments are included in the usability testing and their feedback is accounted for, you can be sure that the website will be easier to use for everyone. (See <a href="#testing_groups_feedback">Usability testing</a>, below)</p>
-			</section>
-
-			<section id="scale">
-				<h4 id="a-1-2-applicability-across-websites"><span class="secno">A.1.2 </span>Applicability across websites<span class="permalink"><a href="#scale" aria-label="Permalink for A.1.2 Applicability across websites" title="Permalink for A.1.2 Applicability across websites"><span>§</span></a></span></h4>
-				<p>How much effort an organization should expend on making a website friendly for people with cognitive impairments will vary. For organizations that provide public services, or are national (or international) private service providers and already conduct user-research, they should:</p>
-				<p>
-					</p><ul>
-						<li>
-							Include people with learning and cognitive disabilities as part of user research such as usability-testing;
-						</li>
-						<li>
-							Review designs and early stage development with the design themes in this document.
-						</li>
-					</ul>
-				<p></p>
-				<p>For organizations that do not include usability testing as part of the process, they could use this document to review designs and implementations.</p>
-
-			</section>
-		</section>
-
-		<section id="background">
-			<h3 id="a-2-background-about-people-with-learning-and-cognitive-disabilities-and-the-web"><span class="secno">A.2 </span>Background about people with learning and cognitive disabilities and the web<span class="permalink"><a href="#background" aria-label="Permalink for A.2 Background about people with learning and cognitive disabilities and the web" title="Permalink for A.2 Background about people with learning and cognitive disabilities and the web"><span>§</span></a></span></h3>
-			<div class="ednote" id="issue-container-generatedID-91"><div role="heading" class="ednote-title marker" id="h-ednote-91" aria-level="4"><span>Editor's note</span></div><p class="">We intend to add a short background in this section. This may be a separate document.</p></div>
-		</section>
-
-		<section id="user_needs">
-			<h3 id="a-3-user-needs"><span class="secno">A.3 </span>User Needs<span class="permalink"><a href="#user_needs" aria-label="Permalink for A.3 User Needs" title="Permalink for A.3 User Needs"><span>§</span></a></span></h3>
-			<div class="ednote" id="issue-container-generatedID-92"><div role="heading" class="ednote-title marker" id="h-ednote-92" aria-level="4"><span>Editor's note</span></div><p class="">We intend to add a summary of the user need addressed in <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html"> https://rawgit.com/w3c/coga/master/gap-analysis/table.html</a></p></div>
-		</section>
-
-		<section id="persona">
-			<h3 id="a-4-use-cases-persona"><span class="secno">A.4 </span>Use Cases / Persona<span class="permalink"><a href="#persona" aria-label="Permalink for A.4 Use Cases / Persona" title="Permalink for A.4 Use Cases / Persona"><span>§</span></a></span></h3>
-			<p>Any time there is a 'target audience', there will be people with with learning and cognitive disabilities in that audience. Cogntiive issues are often invisible in day to day life until people encounter particular challenges. To provide some context and understanding eight personas have been created which outline fictional people with various cognitive issues and the challenges they face.</p>
-			<p><a href="../persona/index.html">Personas for learning and cognitive disabilities</a>.</p>
-
-		</section>
-
-		<section id="testing_groups_feedback">
-			<h3 id="a-5-usability-testing-focus-groups-and-feedback"><span class="secno">A.5 </span>Usability Testing, Focus Groups and Feedback<span class="permalink"><a href="#testing_groups_feedback" aria-label="Permalink for A.5 Usability Testing, Focus Groups and Feedback" title="Permalink for A.5 Usability Testing, Focus Groups and Feedback"><span>§</span></a></span></h3>
-			<p>Usability testing is the best way to know if your content and functionality works for real people with cognitive and learning disabilities.</p>
-			<div><img alt="aspects for providing guidance, include usability, accessibility, reliably testable accessibility and automatically testable accessibility " src="img/guidance_aspect.png" height="486" width="600"></div>
-			<p>Finding five to ten people with different learning and cognitive disabilities can be relatively easy, such as friends, colleagues, relatives or neighbors who:</p>
-			<p>
-				</p><ul>
-					<li>
-						Are older and struggle to use computers, or have age-related forgetfulness;
-					</li>
-					<li>
-						Are at an early stage of dementia
-					</li>
-					<li>
-						Have dyslexia, dyscalculia or ADHD
-					</li>
-					<li>
-						Have a learning or intellectual disability
-					</li>
-					<li>
-						People with acquired cognitive issues (for example, due to neurological trauma) who have the same challenges as people with other disabilities such as: 
-						<ul>
-							<li>having difficulty (asking a family member to help) with booking travel booking or hotel booking online</li>
-							<li>being unable to use online banking</li>
-							<li>coping with content forms and pop up windows when errors occur</li>
-						</ul>
-					</li>
-				</ul>
-			<p></p>
-			<p>It is beyond the scope of this document to provide a guide to usability testing and user-research, however, there are many resources available such as:</p>
-			<p>
-				</p><ul>
-					<li>
-						<a href="https://uxmastery.com/beginners-guide-to-usability-testing/">How to Conduct Usability Testing from Start to Finish</a>, from UX Mastery.
-					</li>
-					<li>
-						<a href="https://www.usability.gov/how-to-and-tools/methods/usability-testing.html">Usability.gov usability testing resources</a>.
-					</li>
-				</ul>
-			<p></p>
-			<section id="differences_testing">
-				<h4 id="a-5-1-differences-from-usability-testing-with-the-general-population"><span class="secno">A.5.1 </span>Differences from usability testing with the general population<span class="permalink"><a href="#differences_testing" aria-label="Permalink for A.5.1 Differences from usability testing with the general population" title="Permalink for A.5.1 Differences from usability testing with the general population"><span>§</span></a></span></h4>
-				<p>There are some differences when testing for accessibility, and that includes when testing with people who have cognitive impairments:</p>
-				<p>
-					</p><ul>
-						<li>
-							<p>Ensure that the participation forms are easy to understand, send them to the participant in advance, and allow plenty of time for the participant to ask questions and fill in forms;</p>
-						</li>
-						<li>
-							<p>Allow the participant to bring a carer, family member or friend to attend with them. If your tester has a guardian you should get informed consent from both the tester and their guardian;</p>
-						</li>
-						<li>
-							<p>It helps to provide easy methods of assessing mood, rather than asking for the participant to verbalise, try asking them to select a smiley face, such as:<br>
-							</p><figure id="fig-generatedID"><img src="img/faces-happy-to-sad.png" width="200" alt="a set of 5 smiley faces from happy, through neutral, to sad."></figure><p></p>
-						</li>
-						<li>
-							<p>Ensure the person does not feel like they are at fault for making mistakes; this is a likely scenario for people with cognitive impairments.</p>
-						</li>
-					</ul>
-				<p></p>
-				<div class="ednote" id="issue-container-generatedID-93"><div role="heading" class="ednote-title marker" id="h-ednote-93" aria-level="5"><span>Editor's note</span></div><p class="">The next few paragraphs up to the next section may be removed as it is both covered in usability guidance in the links above and significantly incomplete in comparison. We would be interested in finding out if anyone finds it useful to include.</p></div>
-				<p>Some brief guidance on usability testing:</p>
-				<p>
-					</p><ol>
-						<li>
-							Can your users ( people with learning and cognitive disabilities)  manage each task reasonably easily and fast. You can time the task taken to complete, and note any parts that where the users are slowed down or seem to struggle. Also note any errors that they making including clicking on the wrong thing.
-						</li>
-						<li>
-							Is completing the task frustrating or upsetting?
-							<ol>
-								<li>You can ask the users how they are feeling before and after the tasks (or rate their mode such as selecting the smilly which represents how they feel, such as:</li>
-								<li>ask them if anything was annoying.</li>
-							</ol>
-						</li>
-						<li>
-							<p>How can you make it better for your users ( people with learning and cognitive disabilities)</p>
-							<ol>
-								<li>You can analyze the data collected above</li>
-								<li>ask them how they feel about the system and if anything was annoying.</li>
-							</ol>
-							<p>If the user if failing blame the designer and not the user. Such as “ it is so helpful that you are doing this because our designers are not very good, or are always playing computer games so they think everyone is good at this stuff” or “you are really helping us make  this useable by real people and not just engineers” . Stop the process if users are getting distressed despite this.</p>
-						</li>
-					</ol>
-				<p></p>
-				<p>As a short overview, usability could be measured based on efficacy, efficiency and satisfaction. This can be done by measuring or tracking: </p>
-				<p>
-					</p><ul>
-						<li>successes and noting any errors to measure efficacy,</li>
-						<li>time taken per task to measure efficiency, note that the relative time between tasks is often more useful than absolute numbers. and</li>
-						<li>user’s mood and comments to measure satisfaction.</li>
-					</ul>
-				<p></p>
-				<p>At the end of the evaluation you should be able to answer:</p>
-				<p>
-					</p><ul>
-						<li>What prevents the user from completing a task?</li>
-						<li>What creates confusion? When and why do they misinterpret the interface?</li>
-						<li>What produces an error and an incorrect action?</li>
-						<li>When does the user get frustrated or upset</li>
-						<li>When does the user misunderstand navigation, menus and controls?</li>
-						<li>How can these problems be avoided?</li>
-					</ul>
-				<p></p>
-				<p>Note you will need to get informed consent from the tester before testing. Explain what they will be doing and why it is helping you. If there are any risks they need to be explained and understood. If your tester has a guardian you should get informed consent from both the tester and their guardian. Make sure potential participants are aware they can withdraw from the testing situation at any time and that their comments will be anonymised before being used in any report.</p>
-				<p>(With thanks to Smart4MD for this overview.  I SMART4MD is co-financed by the European Union under an EU Framework Programme for Research and Innovation – Horizon 2020, with grant agreement number 643399.and the European commission for this contribution.)</p>
-			</section>
-		</section>
-
-		<section id="design_themes">
-			<h3 id="a-6-design-requirement-themes"><span class="secno">A.6 </span>Design Requirement Themes<span class="permalink"><a href="#design_themes" aria-label="Permalink for A.6 Design Requirement Themes" title="Permalink for A.6 Design Requirement Themes"><span>§</span></a></span></h3>
-			<p>To help web content providers meet the needs of people with cognitive and learning disabilities we have identified the following themes:</p>
-			<p>
-				</p><ol>
-					<li><p><strong>Design so that as many users as possible understand the site and know how to use it. </strong>This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patterns. Personalization and good use of semantics can help make the symbols and design as familiar to the user as possible. People with cognitive disabilities rely upon predictable behavior in digital content. For example, many websites do not follow the standard convention for hyperlinks: blue = unvisited; purple = visited; and underlined. </p>
-					</li>
-					<li><p><strong>Help the user find what they need. </strong>Navigating the system should be easy</p></li>
-					<li><p><strong>Use clear and understandable content</strong> This includes clear text, clear images, speech, and easy to understand video. For text, we mean understandable at an upper-primary grade reading level.</p></li>
-					<li><p><strong>Prevent the user from making mistakes and make it easy to correct mistakes when they do occur.</strong> A good design and use of scripts will make errors less likely, but when they do occur the user should know how to correct them, without having to render other data or start from the beginning.</p></li>
-					<li><p><strong>Help the user focus and restore context if attention is lost.</strong> Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.)</p></li>
-					<li><p><strong>Minimize the cognitive skills required to use the content and avoid barriers</strong> that stop people with cognitive disabilities from using content, such as hard to use security mechanisms. When possible, provide more accessible options. </p></li>
-					<li><p><strong>Provide help and support.</strong> Graphics, summaries of long documents, adding  icons to headings and links are all examples of extra help and support.</p></li>
-					<li><p><strong>Feedback is usable by everyone.</strong> If users have difficulty sending  feedback then you will not know if they are able to use the content or when they are experiencing problems. Therefore, it is essential that all the feedback mechanisms are tested by people with cognitive disabilities.</p></li>
-				</ol>
-			<p></p>
-
-			<section id="design_requirements">
-				<h4 id="a-6-1-design-requirements"><span class="secno">A.6.1 </span>Design requirements<span class="permalink"><a href="#design_requirements" aria-label="Permalink for A.6.1 Design requirements" title="Permalink for A.6.1 Design requirements"><span>§</span></a></span></h4>
-				<div class="ednote" id="issue-container-generatedID-94"><div role="heading" class="ednote-title marker" id="h-ednote-94" aria-level="5"><span>Editor's note</span></div><p class="">The task force is taking all the design requirements and turning them into easy to read checkpoints. They will be divided by themes listed above.</p></div>
-				<p>Most of the design requirements were originally created as recommendations for WCAG, the <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To_Do_list">full list of potential requirements</a> is available, and you can also review the progress of the task force in making <a href="https://docs.google.com/document/d/1WcfVALVq8PS9CLXUuAfV9Op0wXvI2yJYedj5jO23GTk/">readable requirements geared to web developers</a>.</p>
-				<p>The task force appreciates feedback on this work.</p>
-			</section>
-			<section id="user-group-mapping">
-				<h4 id="a-6-2-mapping-requirements-to-user-groups"><span class="secno">A.6.2 </span>Mapping requirements to user groups<span class="permalink"><a href="#user-group-mapping" aria-label="Permalink for A.6.2 Mapping requirements to user groups" title="Permalink for A.6.2 Mapping requirements to user groups"><span>§</span></a></span></h4>
-				<p>The table of design requirements and user groups maps requirements such as "User safety" and "Task completion" with the groups of users who benefit, such as those with "Memory impairments" and "Reduced focus and context".</p>
-				<p>Please review the table at <a href="../content-usable/table.html">Table of design requirements and user groups</a> </p>
-				<div class="ednote" id="issue-container-generatedID-95"><div role="heading" class="ednote-title marker" id="h-ednote-95" aria-level="5"><span>Editor's note</span></div><p class="">The task force intends to redo this table when the easy to read design recommendations are complete.</p></div>
-			</section>
-		</section>
-
-		<section id="special_applications">
-			<h3 id="a-7-special-applications"><span class="secno">A.7 </span>Special applications<span class="permalink"><a href="#special_applications" aria-label="Permalink for A.7 Special applications" title="Permalink for A.7 Special applications"><span>§</span></a></span></h3>
-			<p id="ednote">We intend to add sections on GPS systems, conversational interfaces. Design patterns and gathering and analyzing user feedback and data.</p>
-		</section>
-
-		<section id="issues_and_considerations">
-			<h3 id="a-8-issues-and-considerations"><span class="secno">A.8 </span>Issues and considerations<span class="permalink"><a href="#issues_and_considerations" aria-label="Permalink for A.8 Issues and considerations" title="Permalink for A.8 Issues and considerations"><span>§</span></a></span></h3>
-			<div class="ednote" id="issue-container-generatedID-96"><div role="heading" class="ednote-title marker" id="h-ednote-96" aria-level="4"><span>Editor's note</span></div><div class="">We intend to add additional sections on:
-				<ul>
-					<li>Items for further research</li>
-					<li>Data driven systems</li>
-					<li>Known issues (internationalization, author burden, test ability)</li>
-					<li>Guidance for assistive technologies</li>
-					<li>Guidance for Browsers</li>
-				</ul>
-			</div></div>
-
-			<section id="guidance_for_policy_makers">
-				<h4 id="a-8-1-guidance-for-policy-makers"><span class="secno">A.8.1 </span>Guidance for policy makers<span class="permalink"><a href="#guidance_for_policy_makers" aria-label="Permalink for A.8.1 Guidance for policy makers" title="Permalink for A.8.1 Guidance for policy makers"><span>§</span></a></span></h4>
-				<div class="ednote" id="issue-container-generatedID-97"><div role="heading" class="ednote-title marker" id="h-ednote-97" aria-level="5"><span>Editor's note</span></div><p class="">We intend to redo the introduction</p></div>
-				<p>This section provides guidance for policy makers on how to  use the design requirements to build a policy. This includes:</p>
-				<p>
-					</p><ul>
-						<li>Defining the scenarios included in your policy</li>
-						<li>Looking at the different criteria and deciding if they are important for the scenarios in your policy</li>
-						<li>Building a policy that include the important criteria for the scenarios included in your policy.</li>
-					</ul>
-				<p></p>
-				<p><u>Table of design requirements and policy criteria</u></p>
-				<table>
-					<tbody><tr>
-						<th>Number</th>
-						<th>Name</th>
-						<th>Testable</th>
-						<th>Requires user testing</th>
-						<th>Can be applied to all content</th>
-						<th>Important for conversational interfaces</th>
-						<th>Important for IOT</th>
-						<th>User need level</th>
-					</tr>
-					<tr>
-						<td>1</td>
-						<td>Clear purpose</td>
-						<td>yes</td>
-						<td>no</td>
-						<td>yes</td>
-						<td>yes</td>
-						<td>yes</td>
-						<td>high</td>
-					</tr>
-					<tr>
-						<td>2</td>
-						<td>Support personalization</td>
-						<td>yes</td>
-						<td>no</td>
-						<td>yes</td>
-						<td>yes</td>
-						<td>yes</td>
-						<td>high</td>
-					</tr>
-					<tr>
-						<td>3</td>
-						<td>Support simplification</td>
-						<td>yes</td>
-						<td>no</td>
-						<td>yes</td>
-						<td>yes</td>
-						<td>yes</td>
-						<td>high</td>
-					</tr>
-					<tr>
-						<td>4</td>
-						<td>Familiar design</td>
-						<td>yes</td>
-						<td>sometimes</td>
-						<td>yes</td>
-						<td>no</td>
-						<td>yes</td>
-						<td>high</td>
-					</tr>
-				</tbody></table>
-				<div class="ednote" id="issue-container-generatedID-98"><div role="heading" class="ednote-title marker" id="h-ednote-98" aria-level="5"><span>Editor's note</span></div><p class="">This table needs to be completed for each design requirement. The task force would appreciate feedback on additional criteria that would be helpful for policy makers.</p></div>
-				<p><strong>Example recommendations for policies:</strong></p>
-				<p>
-					</p><ul>
-						<li>A policy for critical services might include any item with a high or medium level need</li>
-						<li>A policy for emergency services might  include all items</li>
-						<li>A policy for legislation for wide adoption for all web sites might  include any item that are testable, does not require human testing and have a high user need level.</li>
-						<li>A policy for legislation for content needed in the workplace might  include any item that are testable, and have a high or medium level user need level.</li>
-					</ul>
-				<p></p>
-				<p><strong>The following are example scenarios that may be included in a policy:</strong></p>
-				<p>
-					</p><ul>
-						<li>Critical services - such as water, health care, phone and internet services, government services</li>
-						<li>Emergency services - such as police, fire, etc</li>
-						<li>Content needed in the workplace, including professional sites</li>
-						<li>Content that helps autonomy such as apps and interfaces to run home devices, book a cab, write an email etc.</li>
-					</ul>
-				<p></p>
-				<p><strong>The following are example user considerations:</strong></p>
-				<p>
-					</p><ul>
-						<li>Safety</li>
-						<li>Autonomy and savings in care-giving</li>
-						<li>Cost associated with people leaving the work place earlier than necessary.</li>
-					</ul>
-				<p></p>
-				<p><strong>Other considerations include:</strong></p>
-				<p>
-					</p><ul>
-						<li>Does this item require user testing to conform, and is this too  expensive for the scope of sites that might be required to comply</li>
-						<li>See the issue paper on user testing for more information</li>
-					</ul>
-				<p></p>
-				<div class="ednote" id="issue-container-generatedID-99"><div role="heading" class="ednote-title marker" id="h-ednote-99" aria-level="5"><span>Editor's note</span></div><p class="">This section is incomplete. The task force would appreciate receiving feedback of such as  additional examples, scenarios and considerations.</p></div>
-			</section>
-			<div class="ednote" id="issue-container-generatedID-100"><div role="heading" class="ednote-title marker" id="h-ednote-100" aria-level="4"><span>Editor's note</span></div><p class="">We intend to add a glossary and links to our research pages</p></div>
-		</section>
-
-
-
-
-
-
-	
-		<!--
-
-		<section class="appendix" id="changelog">
-			<h2>Change Log</h2>
-
-			<section>
-				<h2>Substantive changes since the <a href="@@">last public working draft</a></h2>
-				<ul>
-					<li>@@</li>
-					<!- EdNote: After each WD publish, move contents of this list into the next one below. ->
-				</ul>
-			</section>
-
-			<section>
-				<h2>Other substantive changes since the <a href="@@">First Public Working Draft</a></h2>
-				<ul>
-					<li>@@</li>
-					<!- EdNote: After each WD publish, move previous list into this one. ->
-				</ul>
-			</section>
-		</section>
-
-		-->
-
-
-	</section>
+		<!--OddPage--><h2 id="a-appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities"><span class="secno">A. </span>Appendix: Making content usable for people with cognitive and learning disabilities<a class="self-link" aria-label="§" href="#appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities"></a></h2>
+		<p> This appendix on how to make content usable for people with learning and cognitive disabilities. 
+			It contains practical advice and developer resources. We hope it will meet the needs of web developers, content creators and policy makers. It includes:</p>
+		<ul>
+		<li><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#background">Background about people with learning and cognitive disabilities and the web</a></li>
+		<li><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#user_needs">User Needs</a></li>
+		<li><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#persona">Use Cases / Persona</a></li>
+		<li><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#testing_groups_feedback">Usability Testing, Focus Groups and Feedback</a></li>
+		<li><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#design_themes">Design Requirements</a></li>
+		<li><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#user-group-mapping">Mapping requirements to user groups</a></li>
+		<li><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#issues_and_considerations">Issues and considerations</a></li>
+		<li><a href="https://rawgit.com/w3c/coga/separate-usable-doc/content-usable/usable.html#guidance_for_policy_makers">Guidance for policy makers</a></li>
+		</ul>
+		<!--<section data-include="../content-usable/index.html" data-oninclude="fixIncludes" data-include-replace="true"></section>
+	</section>-->
 
 		<!--<div data-include="../extension/index.html" data-oninclude="fixIncludes" data-include-replace="true">Extension</div>-->
 
     
 	<section class="appendix" id="changelog">
-			<!--OddPage--><h2 id="b-change-log"><span class="secno">B. </span>Change Log<span class="permalink"><a href="#changelog" aria-label="Permalink for B. Change Log" title="Permalink for B. Change Log"><span>§</span></a></span></h2>
+			<h3 id="a-1-change-log"><span class="secno">A.1 </span>Change Log<a class="self-link" aria-label="§" href="#changelog"></a></h3>
 			<p>The full <a href="https://github.com/w3c/coga/commits">commit history to gap analysis</a> is available.</p>
 			<section id="significant-editorial-changes-since-the-first-public-working-draft">
-				<h3 id="b-1-significant-editorial-changes-since-the-first-public-working-draft"><span class="secno">B.1 </span>Significant editorial changes since the <a href="https://www.w3.org/TR/2017/WD-coga-gap-analysis-20171207/">First Public Working Draft</a><span class="permalink"><a href="#significant-editorial-changes-since-the-first-public-working-draft" aria-label="Permalink for B.1 Significant editorial changes since the First Public Working Draft" title="Permalink for B.1 Significant editorial changes since the First Public Working Draft"><span>§</span></a></span></h3>
+				<h4 id="a-1-1-significant-editorial-changes-since-the-first-public-working-draft"><span class="secno">A.1.1 </span>Significant editorial changes since the <a href="https://www.w3.org/TR/2017/WD-coga-gap-analysis-20171207/">First Public Working Draft</a><a class="self-link" aria-label="§" href="#significant-editorial-changes-since-the-first-public-working-draft"></a></h4>
 				<ul>
 					<li>2018-03-08: Changed the prefix from coga- to aui-;</li>
 					<li>2018-04-05: Updated the content and link in table for use needs;</li>
@@ -5302,9 +5011,9 @@ Potential parts of a page
 		</section>
 		
 	<section class="appendix informative section" id="acknowledgements">
-	<!--OddPage--><h2 id="c-acknowledgments"><span class="secno">C. </span>Acknowledgments<span class="permalink"><a href="#acknowledgements" aria-label="Permalink for C. Acknowledgments" title="Permalink for C. Acknowledgments"><span>§</span></a></span></h2><p><em>This section is non-normative.</em></p>
+	<h3 id="a-2-acknowledgments"><span class="secno">A.2 </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h3><p><em>This section is non-normative.</em></p>
 	<section class="section" id="ack_group">
-			<h3 id="c-1-participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><span class="secno">C.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication<span class="permalink"><a href="#ack_group" aria-label="Permalink for C.1 Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication" title="Permalink for C.1 Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication"><span>§</span></a></span></h3>
+			<h4 id="a-2-1-participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><span class="secno">A.2.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication<a class="self-link" aria-label="§" href="#ack_group"></a></h4>
 			<ul>
 				<li>Renaldo Bernard (University of Southampton)</li>
 				<li>Shari Butler (Pearson plc) </li>
@@ -5331,7 +5040,7 @@ Potential parts of a page
 	</section>
 
 	<section class="section" id="ack_others">
-		<h3 id="c-2-other-cognitive-and-learning-disabilities-task-force-contributors-commenters-and-previously-active-participants"><span class="secno">C.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants<span class="permalink"><a href="#ack_others" aria-label="Permalink for C.2 Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants" title="Permalink for C.2 Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants"><span>§</span></a></span></h3>
+		<h4 id="a-2-2-other-cognitive-and-learning-disabilities-task-force-contributors-commenters-and-previously-active-participants"><span class="secno">A.2.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants<a class="self-link" aria-label="§" href="#ack_others"></a></h4>
 		<ul>
 			<li>Jim Allan (Invited Expert)</li>
 			<li>Tim Boland (National Institute of Standards and Technology (NIST))</li>
@@ -5365,7 +5074,7 @@ Potential parts of a page
 	</section>
 	-->
 	<section class="section" id="ack_funders">
-		<h3 id="c-3-enabling-funders"><span class="secno">C.3 </span>Enabling funders<span class="permalink"><a href="#ack_funders" aria-label="Permalink for C.3 Enabling funders" title="Permalink for C.3 Enabling funders"><span>§</span></a></span></h3>
+		<h4 id="a-2-3-enabling-funders"><span class="secno">A.2.3 </span>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h4>
 		<p>This publication has been funded in part with Federal funds from the U.S. Department of Health and Human Services, National Institute on Disability Independent Living and Rehabilitation Research (NIDILRR) under contract HHSP23301500054. The content of this publication does not necessarily reflect the views or official policies of the U.S. Department of Health and Human Services, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 	</section>
 </section>
@@ -5374,11 +5083,11 @@ Potential parts of a page
 
 	
 
-<section id="references" class="appendix">
-      <!--OddPage--><h2 id="d-references"><span class="secno">D. </span>References<span class="permalink"><a href="#references" aria-label="Permalink for D. References" title="Permalink for D. References"><span>§</span></a></span></h2>
+</section><section id="references" class="appendix">
+      <!--OddPage--><h2 id="b-references"><span class="secno">B. </span>References<a class="self-link" aria-label="§" href="#references"></a></h2>
       
     <section id="informative-references">
-        <h3 id="d-1-informative-references"><span class="secno">D.1 </span>Informative references<span class="permalink"><a href="#informative-references" aria-label="Permalink for D.1 Informative references" title="Permalink for D.1 Informative references"><span>§</span></a></span></h3>
+        <h3 id="b-1-informative-references"><span class="secno">B.1 </span>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-coga-issue-papers">[coga-issue-papers]</dt><dd><a href="https://w3c.github.io/coga/issue-papers/"><cite>Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</cite></a>.  W3C. URL: <a href="https://w3c.github.io/coga/issue-papers/">https://w3c.github.io/coga/issue-papers/</a></dd><dt id="bib-coga-user-research">[coga-user-research]</dt><dd><a href="https://www.w3.org/TR/coga-user-research/"><cite>Cognitive Accessibility User Research</cite></a>. Lisa Seeman-Kestenbaum; Michael Cooper. W3C. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/">https://www.w3.org/TR/coga-user-research/</a></dd><dt id="bib-emma">[EMMA]</dt><dd><a href="https://www.w3.org/TR/emma/"><cite>EMMA: Extensible MultiModal Annotation markup language</cite></a>. Michael Johnston. W3C. 10 February 2009. W3C Recommendation. URL: <a href="https://www.w3.org/TR/emma/">https://www.w3.org/TR/emma/</a></dd><dt id="bib-etsi">[ETSI]</dt><dd><a href="http://www.etsi.org/"><cite>The European Telecommunications Standards Institute</cite></a>. URL: <a href="http://www.etsi.org/">http://www.etsi.org/</a></dd><dt id="bib-etsi-eg-202-325">[ETSI-EG-202-325]</dt><dd><a href="http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf"><cite>Human Factors (HF); User Profile Management</cite></a>. ETSI et al. EG 202 325. URL: <a href="http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf">http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf</a></dd><dt id="bib-etsi-es-202-642">[ETSI-ES-202-642]</dt><dd><a href="http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf"><cite>Human Factors (HF); Personalization of eHealth systems by using eHealth user profiles (eHealth)</cite></a>. ETSI et al. ES 202 642. URL: <a href="http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf">http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf</a></dd><dt id="bib-etsi-es-202-746">[ETSI-ES-202-746]</dt><dd><a href="http://www.etsi.org/deliver/etsi_es/202700_202799/202746/01.01.01_60/es_202746v010101p.pdf"><cite>Human Factors (HF); Personalization and User Profile Management; User Profile Preferences and Information</cite></a>. ETSI et al. ES 202 746. URL: <a href="http://www.etsi.org/deliver/etsi_es/202700_202799/202746/01.01.01_60/es_202746v010101p.pdf">http://www.etsi.org/deliver/etsi_es/202700_202799/202746/01.01.01_60/es_202746v010101p.pdf</a></dd><dt id="bib-etsi-ts-102-747">[ETSI-TS-102-747]</dt><dd><a href="http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf"><cite>Human Factors (HF); Personalization and User Profile Management; Architectural Framework</cite></a>. ETSI et al. TS 102 747. URL: <a href="http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf">http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf</a></dd><dt id="bib-gpii">[GPII]</dt><dd><a href="http://gpii.net/"><cite>The Global Public Inclusive Infrastructure</cite></a>. URL: <a href="http://gpii.net/">http://gpii.net/</a></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-personalization-semantics-1.0">[personalization-semantics-1.0]</dt><dd><a href="https://www.w3.org/TR/personalization-semantics-1.0/"><cite>Personalization Semantics 1.0</cite></a>.  W3C. URL: <a href="https://www.w3.org/TR/personalization-semantics-1.0/">https://www.w3.org/TR/personalization-semantics-1.0/</a></dd><dt id="bib-wai-aria">[wai-aria]</dt><dd><a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al. W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a></dd><dt id="bib-wcag">[WCAG]</dt><dd><a href="https://www.w3.org/TR/WAI-WEBCONTENT/"><cite>Web Content Accessibility Guidelines 1.0</cite></a>. Wendy Chisholm; Gregg Vanderheiden; Ian Jacobs. W3C. 5 May 1999. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WAI-WEBCONTENT/">https://www.w3.org/TR/WAI-WEBCONTENT/</a></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al. W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></dd>
       </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>

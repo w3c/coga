@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 22.5.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 23.0.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -87,29 +87,6 @@ input.task-list-item-checkbox {
 .issue a.respec-label-light {
   color: #000;
   background-color: #fff;
-}
-</style><style>/* --- PERMALINKS --- */
-
-.permalink {
-  width: 1px;
-  height: 1px;
-  overflow: visible;
-  font-size: 10pt;
-  font-style: normal;
-  vertical-align: middle;
-  margin-left: 4px;
-  float: right;
-}
-
-.permalink a, .permalink a:link, .permalink a:visited, .permalink a:hover, .permalink a:focus, .permalink a:active {
-  background:transparent !important;
-  text-decoration:none;
-  font-weight: bold;
-  color:#666 !important;
-}
-
-.permalink abbr {
-  border:0;
 }
 </style>
 		<title>Cognitive Accessibility Issue Papers</title>
@@ -227,11 +204,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd > p:first-child {
+.section dd>p:first-child {
   margin-top: 0;
 }
 
-.section dd > p:last-child {
+.section dd>p:last-child {
   margin-bottom: 0;
 }
 
@@ -244,7 +221,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary > ul,
+#issue-summary>ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -260,7 +237,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details > * {
+details.respec-tests-details>* {
   padding-right: 2em;
 }
 
@@ -273,20 +250,82 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open] > summary {
+details.respec-tests-details[open]>summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details > ul {
+details.respec-tests-details>ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details > li {
+details.respec-tests-details>li {
   padding-left: 1em;
+}
+
+a[href].self-link:hover {
+  opacity: 1;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+}
+
+aside.example .marker > a.self-link {
+  color: inherit;
+}
+
+h2>a.self-link,
+h3>a.self-link,
+h4>a.self-link,
+h5>a.self-link,
+h6>a.self-link {
+  border: none;
+  color: inherit;
+  font-size: 83%;
+  height: 2em;
+  left: -1.6em;
+  opacity: .5;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  top: 0;
+  transition: opacity .2s;
+  width: 2em;
+}
+
+h2>a.self-link::before,
+h3>a.self-link::before,
+h4>a.self-link::before,
+h5>a.self-link::before,
+h6>a.self-link::before {
+  content: "§";
+  display: block;
+}
+
+@media (max-width: 767px) {
+  dd {
+    margin-left: 0;
+  }
+
+  /* Don't position self-link in headings off-screen */
+  h2>a.self-link,
+  h3>a.self-link,
+  h4>a.self-link,
+  h5>a.self-link,
+  h6>a.self-link {
+    left: auto;
+    top: auto;
+  }
 }
 
 @media print {
@@ -1988,9 +2027,9 @@ details.respec-tests-details > li {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2018-08-22",
-  "publishISODate": "2018-08-22T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 22 August 2018"
+  "publishDate": "2018-09-20",
+  "publishISODate": "2018-09-20T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 20 September 2018"
 }</script><meta name="description" content="This is a set of papers that describe accessibility issues for users with various cognitive or learning disabilities. Each issue paper takes information from Cognitive Accessibility User Research [coga-user-research] and distills it into a description of the challenges for a specific user group or web usage pattern, and suggests ways to address those challenges. This information informs the Cognitive Accessibility Roadmap and Gap analysis [coga-gap-analysis] in its identification of which solutions remain unmet at this time. The set of issue papers in this publication is not comprehensive and additional ones may be added to future publications of this document."></head>
 	<body class="h-entry toc-inline"><div class="head">
   <a href="https://www.w3.org/" class="logo">
@@ -1998,7 +2037,7 @@ details.respec-tests-details > li {
   </a>
   <h1 id="title" class="title p-name">Cognitive Accessibility Issue Papers</h1>
   
-  <h2 id="w3c-editor-s-draft-22-august-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-08-22">22 August 2018</time></h2>
+  <h2><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-09-20">20 September 2018</time></h2>
   <dl>
     <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/coga/issue-papers/">https://w3c.github.io/coga/issue-papers/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/coga-issue-papers/">https://www.w3.org/TR/coga-issue-papers/</a></dd>
     <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/issue-papers/">https://w3c.github.io/coga/issue-papers/</a></dd>
@@ -2033,11 +2072,11 @@ details.respec-tests-details > li {
       </p>
   <hr title="Separator for header">
 </div>
-		<section id="abstract" class="introductory"><!--OddPage--><h2 id="abstract-0">Abstract</h2>
+		<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>
 			<p>This is a set of papers that describe accessibility issues for users with various cognitive or learning disabilities. Each issue paper takes information from <a href="https://www.w3.org/TR/coga-user-research/">Cognitive Accessibility User Research</a> [<cite><a class="bibref" href="#bib-coga-user-research">coga-user-research</a></cite>] and distills it into a description of the challenges for a specific user group or web usage pattern, and suggests ways to address those challenges. This information informs the <a href="https://www.w3.org/TR/coga-gap-analysis/">Cognitive Accessibility Roadmap and Gap analysis</a> [<cite><a class="bibref" href="#bib-coga-gap-analysis">coga-gap-analysis</a></cite>] in its identification of which solutions remain unmet at this time. The set of issue papers in this publication is not comprehensive and additional ones may be added to future publications of this document.</p>
 			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
 		</section>
-		<section id="sotd" class="introductory"><!--OddPage--><h2 id="status-of-this-document">Status of This Document</h2><p>
+		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
       </p><p>Feedback on any aspect of the document is accepted. For this publication, the Working Groups particularly seek feedback on the following questions:</p><ul>
 				<li>Are issues for the included user groups well covered?</li>
@@ -2096,10 +2135,10 @@ details.respec-tests-details > li {
                 Reduced knowledge
             </a></li></ol></li><li class="tocline"><a href="#proposed-solutions" class="tocxref"><span class="secno">4.3 </span> Proposed solutions </a><ol class="toc"><li class="tocline"><a href="#w3c-recommended-guidelines-and-techniques" class="tocxref"><span class="secno">4.3.1 </span><abbr title="World Wide Web Consortium">W3C</abbr> recommended guidelines and techniques</a></li><li class="tocline"><a href="#ease-of-use-ideas" class="tocxref"><span class="secno">4.3.2 </span>Ease-of-use ideas</a></li><li class="tocline"><a href="#alternative-web-security-and-privacy-technologies" class="tocxref"><span class="secno">4.3.3 </span>Alternative web security and privacy technologies</a><ol class="toc"><li class="tocline"><a href="#captcha-alternatives" class="tocxref"><span class="secno">4.3.3.1 </span><abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> alternatives</a></li></ol></li></ol></li></ol></li><li class="tocline"><a href="#supplementing-text-with-multi-modal-content" class="tocxref"><span class="secno">5. </span>Supplementing text with multi-modal content</a><ol class="toc"><li class="tocline"><a href="#introduction-1" class="tocxref"><span class="secno">5.1 </span>Introduction</a></li><li class="tocline"><a href="#challenges-of-text-for-people-with-cognitive-disabilities" class="tocxref"><span class="secno">5.2 </span> Challenges of text for people with cognitive disabilities </a><ol class="toc"><li class="tocline"><a href="#memory-0" class="tocxref"><span class="secno">5.2.1 </span>Memory </a></li><li class="tocline"><a href="#executive-function-0" class="tocxref"><span class="secno">5.2.2 </span>Executive function </a></li><li class="tocline"><a href="#attention-related-limitations-0" class="tocxref"><span class="secno">5.2.3 </span>Attention-related limitations </a></li><li class="tocline"><a href="#language-related-functions" class="tocxref"><span class="secno">5.2.4 </span>Language-related functions </a></li><li class="tocline"><a href="#literacy-related-functions" class="tocxref"><span class="secno">5.2.5 </span>Literacy-related functions </a></li><li class="tocline"><a href="#perception-processing-limitations-0" class="tocxref"><span class="secno">5.2.6 </span>Perception-processing limitations </a></li><li class="tocline"><a href="#reduced-knowledge-0" class="tocxref"><span class="secno">5.2.7 </span>Reduced knowledge </a></li></ol></li><li class="tocline"><a href="#use-cases-for-multi-modal-content" class="tocxref"><span class="secno">5.3 </span>Use cases for multi-modal content</a></li><li class="tocline"><a href="#ways-to-enhance-text-with-multi-modal-content" class="tocxref"><span class="secno">5.4 </span> Ways to enhance text with multi-modal content</a></li><li class="tocline"><a href="#ease-of-use-ideas-0" class="tocxref"><span class="secno">5.5 </span>Ease-of-use ideas</a></li></ol></li><li class="tocline"><a href="#distractions" class="tocxref"><span class="secno">6. </span>Distractions</a><ol class="toc"><li class="tocline"><a href="#introduction-2" class="tocxref"><span class="secno">6.1 </span>Introduction		  </a></li><li class="tocline"><a href="#source-of-distraction" class="tocxref"><span class="secno">6.2 </span>Source of distraction</a></li><li class="tocline"><a href="#distractions-and-people-with-cognitive-disabilities" class="tocxref"><span class="secno">6.3 </span>Distractions and people with cognitive disabilities</a></li><li class="tocline"><a href="#proposed-solutions-0" class="tocxref"><span class="secno">6.4 </span>Proposed solutions</a><ol class="toc"><li class="tocline"><a href="#informing-content-providers-of-needs" class="tocxref"><span class="secno">6.4.1 </span>Informing content providers of needs</a></li><li class="tocline"><a href="#overlays-pop-up-or-pop-over-windows" class="tocxref"><span class="secno">6.4.2 </span>Overlays, pop up or pop over windows</a></li><li class="tocline"><a href="#adverts" class="tocxref"><span class="secno">6.4.3 </span>Adverts</a></li><li class="tocline"><a href="#notifications" class="tocxref"><span class="secno">6.4.4 </span>Notifications</a></li><li class="tocline"><a href="#distracting-content-adwords-blinking-text-unexpected-changes-in-content-etc" class="tocxref"><span class="secno">6.4.5 </span>Distracting Content (Adwords, blinking text, unexpected changes in content etc)</a></li><li class="tocline"><a href="#application-install-prompts" class="tocxref"><span class="secno">6.4.6 </span>Application install prompts</a></li></ol></li><li class="tocline"><a href="#integrated-solution" class="tocxref"><span class="secno">6.5 </span>Integrated  solution</a></li><li class="tocline"><a href="#related-links" class="tocxref"><span class="secno">6.6 </span>Related links</a></li></ol></li><li class="tocline"><a href="#voice-systems" class="tocxref"><span class="secno">7. </span>Voice Systems</a><ol class="toc"><li class="tocline"><a href="#introduction-3" class="tocxref"><span class="secno">7.1 </span>Introduction</a></li><li class="tocline"><a href="#challenges-for-people-with-cognitive-disabilities" class="tocxref"><span class="secno">7.2 </span> Challenges for People with Cognitive Disabilities</a><ol class="toc"><li class="tocline"><a href="#effect-of-memory-impairments-on-users-ability-to-understand-and-respond-to-prompts" class="tocxref"><span class="secno">7.2.1 </span> Effect of memory impairments on users' ability to understand and respond to prompts</a></li><li class="tocline"><a href="#executive-function-1" class="tocxref"><span class="secno">7.2.2 </span> Executive function </a></li><li class="tocline"><a href="#effect-of-impaired-reasoning" class="tocxref"><span class="secno">7.2.3 </span> Effect of impaired reasoning </a></li><li class="tocline"><a href="#effect-of-attention-related-limitations" class="tocxref"><span class="secno">7.2.4 </span>Effect of attention related limitations</a></li><li class="tocline"><a href="#effect-of-impaired-language-and-auditory-perception-related-functions" class="tocxref"><span class="secno">7.2.5 </span> Effect of impaired language and auditory perception related functions</a></li><li class="tocline"><a href="#effect-of-impaired-speech-and-language-production-functions-for-speech-recognition-systems" class="tocxref"><span class="secno">7.2.6 </span> Effect of impaired speech and language production functions (for speech-recognition systems)</a></li><li class="tocline"><a href="#effect-of-reduced-knowledge" class="tocxref"><span class="secno">7.2.7 </span>Effect of reduced knowledge</a></li></ol></li><li class="tocline"><a href="#proposed-solutions-1" class="tocxref"><span class="secno">7.3 </span>Proposed solutions </a></li><li class="tocline"><a href="#references-0" class="tocxref"><span class="secno">7.4 </span> References</a></li></ol></li><li class="tocline"><a href="#online-payments" class="tocxref"><span class="secno">8. </span>Online Payments</a><ol class="toc"><li class="tocline"><a href="#introduction-4" class="tocxref"><span class="secno">8.1 </span>Introduction</a></li><li class="tocline"><a href="#use-case" class="tocxref"><span class="secno">8.2 </span>Use Case</a></li><li class="tocline"><a href="#challenges-of-web-payments-for-people-with-cognitive-disabilities" class="tocxref"><span class="secno">8.3 </span>Challenges of web payments for people with cognitive disabilities</a></li><li class="tocline"><a href="#proposed-solutions-2" class="tocxref"><span class="secno">8.4 </span>Proposed solutions</a><ol class="toc"><li class="tocline"><a href="#navigation" class="tocxref"><span class="secno">8.4.1 </span>Navigation</a></li><li class="tocline"><a href="#functionality" class="tocxref"><span class="secno">8.4.2 </span>Functionality</a></li><li class="tocline"><a href="#content-and-text" class="tocxref"><span class="secno">8.4.3 </span>Content and text</a></li><li class="tocline"><a href="#layout" class="tocxref"><span class="secno">8.4.4 </span>Layout</a></li><li class="tocline"><a href="#multimedia" class="tocxref"><span class="secno">8.4.5 </span>Multimedia</a></li></ol></li><li class="tocline"><a href="#reference-used" class="tocxref"><span class="secno">8.5 </span>Reference Used:</a></li></ol></li><li class="tocline"><a href="#online-safety" class="tocxref"><span class="secno">9. </span>Online Safety</a><ol class="toc"><li class="tocline"><a href="#introduction-5" class="tocxref"><span class="secno">9.1 </span>Introduction</a></li><li class="tocline"><a href="#safety-issues-for-people-with-cognitive-disabilities" class="tocxref"><span class="secno">9.2 </span>Safety issues for people with cognitive disabilities</a><ol class="toc"><li class="tocline"><a href="#hackers" class="tocxref"><span class="secno">9.2.1 </span>Hackers</a></li><li class="tocline"><a href="#con-artists" class="tocxref"><span class="secno">9.2.2 </span>Con-artists </a></li><li class="tocline"><a href="#sexual-predators" class="tocxref"><span class="secno">9.2.3 </span>Sexual predators</a></li><li class="tocline"><a href="#personalization-problems" class="tocxref"><span class="secno">9.2.4 </span>Personalization problems</a></li></ol></li><li class="tocline"><a href="#proposed-solutions-3" class="tocxref"><span class="secno">9.3 </span>Proposed Solutions</a><ol class="toc"><li class="tocline"><a href="#hackers-0" class="tocxref"><span class="secno">9.3.1 </span>Hackers</a></li><li class="tocline"><a href="#sexual-predators-and-con-artists" class="tocxref"><span class="secno">9.3.2 </span>Sexual predators and con-artists</a></li></ol></li><li class="tocline"><a href="#acknowledgments" class="tocxref"><span class="secno">9.4 </span>Acknowledgments</a></li></ol></li><li class="tocline"><a href="#symbol-users-with-speech-language-and-literacy-difficulties" class="tocxref"><span class="secno">10. </span>Symbol users with Speech, Language and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a href="#introduction-6" class="tocxref"><span class="secno">10.1 </span>Introduction</a></li><li class="tocline"><a href="#challenges-for-people-with-cognitive-disabilities-using-symbols" class="tocxref"><span class="secno">10.2 </span> Challenges for people with cognitive disabilities using symbols</a><ol class="toc"><li class="tocline"><a href="#memory-1" class="tocxref"><span class="secno">10.2.1 </span>Memory </a></li><li class="tocline"><a href="#reasoning-and-executive-function" class="tocxref"><span class="secno">10.2.2 </span>Reasoning and executive function</a></li><li class="tocline"><a href="#attention-related-limitations-1" class="tocxref"><span class="secno">10.2.3 </span>Attention-related limitations</a></li><li class="tocline"><a href="#language-and-auditory-perception-related-functions" class="tocxref"><span class="secno">10.2.4 </span>Language and auditory perception related functions</a></li><li class="tocline"><a href="#literacy-related-functions-0" class="tocxref"><span class="secno">10.2.5 </span>Literacy-related functions</a></li><li class="tocline"><a href="#knowledge" class="tocxref"><span class="secno">10.2.6 </span>Knowledge</a></li></ol></li></ol></li><li class="tocline"><a href="#use-of-numbers-and-math-on-the-web" class="tocxref"><span class="secno">11. </span>Use of Numbers and Math on the Web</a><ol class="toc"><li class="tocline"><a href="#introduction-7" class="tocxref"><span class="secno">11.1 </span>Introduction</a></li><li class="tocline"><a href="#specific-categories" class="tocxref"><span class="secno">11.2 </span>Specific Categories</a><ol class="toc"><li class="tocline"><a href="#effect-of-memory-impairments" class="tocxref"><span class="secno">11.2.1 </span>Effect of memory impairments</a></li><li class="tocline"><a href="#effect-of-impaired-executive-function" class="tocxref"><span class="secno">11.2.2 </span>Effect of impaired executive function</a></li><li class="tocline"><a href="#effect-of-impaired-reasoning-0" class="tocxref"><span class="secno">11.2.3 </span>Effect of impaired reasoning</a></li><li class="tocline"><a href="#effect-of-attention-related-limitations-0" class="tocxref"><span class="secno">11.2.4 </span>Effect of attention-related limitations</a></li><li class="tocline"><a href="#effect-of-impaired-language-related-functions" class="tocxref"><span class="secno">11.2.5 </span>Effect of impaired language related functions</a></li><li class="tocline"><a href="#effect-of-impaired-literacy-related-functions" class="tocxref"><span class="secno">11.2.6 </span>Effect of impaired literacy related functions</a></li><li class="tocline"><a href="#effect-of-perception-processing-limitations" class="tocxref"><span class="secno">11.2.7 </span>Effect of perception-processing limitations</a></li><li class="tocline"><a href="#effect-of-reduced-knowledge-0" class="tocxref"><span class="secno">11.2.8 </span>Effect of reduced knowledge</a></li><li class="tocline"><a href="#effect-of-impaired-understanding-of-behaviours-or-consciousness" class="tocxref"><span class="secno">11.2.9 </span>Effect of impaired understanding of behaviours or consciousness</a></li></ol></li><li class="tocline"><a href="#proposed-solutions-4" class="tocxref"><span class="secno">11.3 </span>Proposed Solutions</a></li></ol></li><li class="tocline"><a href="#significant-contributors-to-the-issue-papers" class="tocxref"><span class="secno">12. </span>Significant contributors to the issue papers </a></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">A. </span>References</a><ol class="toc"><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">A.1 </span>Informative references</a></li></ol></li></ol></nav>
 	<section id="introduction">
-			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<span class="permalink"><a href="#introduction" aria-label="Permalink for 1. Introduction" title="Permalink for 1. Introduction"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 		</section>
 	<section id="list-of-issue-papers">
-			<!--OddPage--><h2 id="x2-list-of-issue-papers"><span class="secno">2. </span>List of Issue Papers<span class="permalink"><a href="#list-of-issue-papers" aria-label="Permalink for 2. List of Issue Papers" title="Permalink for 2. List of Issue Papers"><span>§</span></a></span></h2>
+			<!--OddPage--><h2 id="x2-list-of-issue-papers"><span class="secno">2. </span>List of Issue Papers<a class="self-link" aria-label="§" href="#list-of-issue-papers"></a></h2>
 			<ul>
 			  <li><a href="personalization-preferences.html">Personalization and Preferences</a></li>
 			  <li><a href="privacy-security.html">Security and Privacy Technologies</a></li>
@@ -2115,8 +2154,8 @@ details.respec-tests-details > li {
 	  </ul>
 		</section>
 		<section id="personalization-and-user-preferences">
- <!--OddPage--><h2 id="x3-personalization-and-user-preferences"><span class="secno">3. </span>Personalization and User Preferences<span class="permalink"><a href="#personalization-and-user-preferences" aria-label="Permalink for 3. Personalization and User Preferences" title="Permalink for 3. Personalization and User Preferences"><span>§</span></a></span></h2>
-<section id="introduction-0">  <h3 id="x3-1-introduction"><span class="secno">3.1 </span>Introduction<span class="permalink"><a href="#introduction-0" aria-label="Permalink for 3.1 Introduction" title="Permalink for 3.1 Introduction"><span>§</span></a></span></h3>
+ <!--OddPage--><h2 id="x3-personalization-and-user-preferences"><span class="secno">3. </span>Personalization and User Preferences<a class="self-link" aria-label="§" href="#personalization-and-user-preferences"></a></h2>
+<section id="introduction-0">  <h3 id="x3-1-introduction"><span class="secno">3.1 </span>Introduction<a class="self-link" aria-label="§" href="#introduction-0"></a></h3>
     <p><strong>What is personalization:</strong> Personalization involves tailoring aspects of the user experience to meet the preferences or needs of the user. Technology holds the promise of being extremely flexible and the design of many systems includes the expectation that users will be able to optimize their interaction experience according to their personal preferences or accessibility requirements (needs). </p>
     <p> <strong>What are user preferences</strong> are settings that identify the specifics needs of the individual user. To be effective user preferences should be standardized so that multiple applications can tailor their content to the user needs without each requiring the user to specify preferences.</p>
     <p>We need personalization because: </p>
@@ -2147,10 +2186,10 @@ details.respec-tests-details > li {
 </ul>
   </section>
   <section id="examples-of-what-we-may-want-personalization-to-do">
-    <h3 id="x3-2-examples-of-what-we-may-want-personalization-to-do"><span class="secno">3.2 </span>Examples of what we may want personalization to do<span class="permalink"><a href="#examples-of-what-we-may-want-personalization-to-do" aria-label="Permalink for 3.2 Examples of what we may want personalization to do" title="Permalink for 3.2 Examples of what we may want personalization to do"><span>§</span></a></span></h3>
+    <h3 id="x3-2-examples-of-what-we-may-want-personalization-to-do"><span class="secno">3.2 </span>Examples of what we may want personalization to do<a class="self-link" aria-label="§" href="#examples-of-what-we-may-want-personalization-to-do"></a></h3>
     <p>We want to be able to add, remove or change content and features as well as address other issues where personalization can be beneficial. The following are some examples of what is needed.</p>
     <section id="adding-content-and-features">
-      <h4 id="x3-2-1-adding-content-and-features"><span class="secno">3.2.1 </span>Adding content and features<span class="permalink"><a href="#adding-content-and-features" aria-label="Permalink for 3.2.1 Adding content and features" title="Permalink for 3.2.1 Adding content and features"><span>§</span></a></span></h4>
+      <h4 id="x3-2-1-adding-content-and-features"><span class="secno">3.2.1 </span>Adding content and features<a class="self-link" aria-label="§" href="#adding-content-and-features"></a></h4>
       <p>We need to be able to add content and feature such as: </p>
       <ol>
         <li>extra help; </li>
@@ -2160,7 +2199,7 @@ details.respec-tests-details > li {
       </ol>
     </section>
     <section id="removing-content-and-features">
-      <h4 id="x3-2-2-removing-content-and-features"><span class="secno">3.2.2 </span>Removing content and features<span class="permalink"><a href="#removing-content-and-features" aria-label="Permalink for 3.2.2 Removing content and features" title="Permalink for 3.2.2 Removing content and features"><span>§</span></a></span></h4>
+      <h4 id="x3-2-2-removing-content-and-features"><span class="secno">3.2.2 </span>Removing content and features<a class="self-link" aria-label="§" href="#removing-content-and-features"></a></h4>
       <p>We need to be able to remove or "hide" confusing elements, such as: </p>
       <ol>
         <li>extra or secondary features; </li>
@@ -2171,7 +2210,7 @@ details.respec-tests-details > li {
       <p>Note that all the information can be behind a "more" button or "legal" link. This will mean that all the information is still available - just not overwhelming. </p>
     </section>
     <section id="changing-content-and-features">
-      <h4 id="x3-2-3-changing-content-and-features"><span class="secno">3.2.3 </span>Changing content and features<span class="permalink"><a href="#changing-content-and-features" aria-label="Permalink for 3.2.3 Changing content and features" title="Permalink for 3.2.3 Changing content and features"><span>§</span></a></span></h4>
+      <h4 id="x3-2-3-changing-content-and-features"><span class="secno">3.2.3 </span>Changing content and features<a class="self-link" aria-label="§" href="#changing-content-and-features"></a></h4>
       <p>We need to be able to change user interface components to ones that the user knows how to use such as: </p>
       <ol>
         <li>an “easy use” media player; </li>
@@ -2181,7 +2220,7 @@ details.respec-tests-details > li {
       </ol>
     </section>
     <section id="addressing-key-issues">
-      <h4 id="x3-2-4-addressing-key-issues"><span class="secno">3.2.4 </span>Addressing key issues<span class="permalink"><a href="#addressing-key-issues" aria-label="Permalink for 3.2.4 Addressing key issues" title="Permalink for 3.2.4 Addressing key issues"><span>§</span></a></span></h4>
+      <h4 id="x3-2-4-addressing-key-issues"><span class="secno">3.2.4 </span>Addressing key issues<a class="self-link" aria-label="§" href="#addressing-key-issues"></a></h4>
       <p>We need to be able to address key issue such as: </p>
       <ol>
         <li>enabling usable security (see XXX);</li>
@@ -2191,26 +2230,26 @@ details.respec-tests-details > li {
     
   
     <section id="user-preferences">
-<h3 id="x3-3-user-preferences"><span class="secno">3.3 </span>User preferences<span class="permalink"><a href="#user-preferences" aria-label="Permalink for 3.3 User preferences" title="Permalink for 3.3 User preferences"><span>§</span></a></span></h3>
+<h3 id="x3-3-user-preferences"><span class="secno">3.3 </span>User preferences<a class="self-link" aria-label="§" href="#user-preferences"></a></h3>
       
 <p>Technology holds the promise of being extremely flexible and the design of many systems includes the expectation that users will be able to optimize their interaction experience according to their personal preferences or accessibility requirements. Typical configurable features include color, text and icon size, sounds and mouse double click speed. More comprehensive preferences include enabling different input methods such as speech recognition or assistive technology like screen readers. Other preferences such as language or regional conventions also affect the user's interactions.</p>
       
       <section id="challenges-of-user-preferences-for-people-with-cognitive-disabilities">
-        <h4 id="x3-3-1-challenges-of-user-preferences-for-people-with-cognitive-disabilities"><span class="secno">3.3.1 </span>Challenges of user preferences for people with cognitive disabilities<span class="permalink"><a href="#challenges-of-user-preferences-for-people-with-cognitive-disabilities" aria-label="Permalink for 3.3.1 Challenges of user preferences for people with cognitive disabilities" title="Permalink for 3.3.1 Challenges of user preferences for people with cognitive disabilities"><span>§</span></a></span></h4>
+        <h4 id="x3-3-1-challenges-of-user-preferences-for-people-with-cognitive-disabilities"><span class="secno">3.3.1 </span>Challenges of user preferences for people with cognitive disabilities<a class="self-link" aria-label="§" href="#challenges-of-user-preferences-for-people-with-cognitive-disabilities"></a></h4>
           <p>People with cognitive disabilities can be become daunted, or worse, completely unable to effectively use preferences to improve their experience on their own. Preference selection is often implemented by providing a range of forms with controls for enabling or choosing options for each preference. These forms can be complex in detail such audio configuration and in size given that some forms are extensive. A specific preference can be hard to locate in control panels with many options even when search and browsing are provided (e.g., Windows control Panel). As a result, some users in this group will be unable set their preferences without assistance.</p>
           <p>There are also other potential difficulties after changes to preferences are made. Changes may not be implemented immediately or further action is required for this to happen. It may also be difficult to revert to a previous setting after trailing and rejecting a particular setting.</p>
       </section>
       <section id="templates-for-preferences">
-        <h4 id="x3-3-2-templates-for-preferences"><span class="secno">3.3.2 </span>Templates for preferences<span class="permalink"><a href="#templates-for-preferences" aria-label="Permalink for 3.3.2 Templates for preferences" title="Permalink for 3.3.2 Templates for preferences"><span>§</span></a></span></h4>
+        <h4 id="x3-3-2-templates-for-preferences"><span class="secno">3.3.2 </span>Templates for preferences<a class="self-link" aria-label="§" href="#templates-for-preferences"></a></h4>
         <p>The use of custom templates of default preferences for particular groups of users is one method by which members of those groups can be immediately provided with potentially useful settings across a wide range of products and services as a starting point. The task for individual users would then be greatly reduced as they would only need to adjust those default settings that did not match their own personal preferences or needs. The ETSI work (see User Profile Management [<cite><a class="bibref" href="#bib-etsi-1">ETSI-1</a></cite>]) suggests that organizations that represent such groups of users could develop and promote the use of such user profile templates to their client groups.</p>
           <p>Selecting  "Use typical settings" when installing a program is effectively using a template that defines a well-balanced set of preferences for a typical user. Clicking on one or more check boxes before selecting "Use typical settings" could allow one of two or three alternative templates to be applied. The [<cite><a class="bibref" href="#bib-etsi-1">ETSI-1</a></cite>] and [<cite><a class="bibref" href="#bib-etsi-2">ETSI-2</a></cite>] documents listed in the references describe mechanisms for creating, modifying and applying templates.</p>
       </section>
       <section id="inferring-preferences">
-        <h4 id="x3-3-3-inferring-preferences"><span class="secno">3.3.3 </span>Inferring preferences <span class="permalink"><a href="#inferring-preferences" aria-label="Permalink for 3.3.3 Inferring preferences " title="Permalink for 3.3.3 Inferring preferences "><span>§</span></a></span></h4>
+        <h4 id="x3-3-3-inferring-preferences"><span class="secno">3.3.3 </span>Inferring preferences <a class="self-link" aria-label="§" href="#inferring-preferences"></a></h4>
         <p>Commercial services frequently use inference algorithms to infer preferences from user behavior. Such inference methods can also be of value in non-commercial personalization schemes that are solely designed to benefit the user. However, inferred preferences will always be wrong, even if they only fail to capture minor individual quirks. It is therefore important for users that they are able to correct inaccurate inferences.</p>
       </section>
 <section id="managing-user-preferences">
-        <h4 id="x3-3-4-managing-user-preferences"><span class="secno">3.3.4 </span>Managing user preferences <span class="permalink"><a href="#managing-user-preferences" aria-label="Permalink for 3.3.4 Managing user preferences " title="Permalink for 3.3.4 Managing user preferences "><span>§</span></a></span></h4>
+        <h4 id="x3-3-4-managing-user-preferences"><span class="secno">3.3.4 </span>Managing user preferences <a class="self-link" aria-label="§" href="#managing-user-preferences"></a></h4>
         <p>Another issue is that changes to settings may not take immediate effect, or if they do, it may be difficult to roll back from a setting that was tried out of curiosity but is unsuitable for the user. As a result, people with cognitive disabilities can be become daunted, or worse, completely unable to select their desired preferences. Indeed, depending on the individual and the technology being used, it may be impossible without a supporter's assistance. So specific problems for people with cognitive disabilities include:</p>
         <ul>
           <li>too many settings and/or options for each; </li>
@@ -2222,15 +2261,15 @@ details.respec-tests-details > li {
      </section>
     </section>
      <section id="potential-solutions">
-       <h3 id="x3-4-potential-solutions"><span class="secno">3.4 </span>Potential solutions <span class="permalink"><a href="#potential-solutions" aria-label="Permalink for 3.4 Potential solutions " title="Permalink for 3.4 Potential solutions "><span>§</span></a></span></h3>
+       <h3 id="x3-4-potential-solutions"><span class="secno">3.4 </span>Potential solutions <a class="self-link" aria-label="§" href="#potential-solutions"></a></h3>
        <section id="potential-solutions-for-user-preferences">
-        <h4 id="x3-4-1-potential-solutions-for-user-preferences"><span class="secno">3.4.1 </span>Potential solutions for user preferences <span class="permalink"><a href="#potential-solutions-for-user-preferences" aria-label="Permalink for 3.4.1 Potential solutions for user preferences " title="Permalink for 3.4.1 Potential solutions for user preferences "><span>§</span></a></span></h4>
+        <h4 id="x3-4-1-potential-solutions-for-user-preferences"><span class="secno">3.4.1 </span>Potential solutions for user preferences <a class="self-link" aria-label="§" href="#potential-solutions-for-user-preferences"></a></h4>
         <p><strong>Interoperable personalization schemes</strong>. Interoperable  personalization schemes are where users want or need products and  services to be personalized, they would prefer or need this to happen  across the widest possible range of products or services.  Personalization schemes that deliver this ideal will only succeed if  they are standardized and if that standard is adopted by the widest  range of product and service providers. However, there are many critical  issues for any personalization scheme to resolve such as funding and  adoption. </p>
        <p>Current works in progress are GPII (see [<cite><a class="bibref" href="#bib-gpii-1">GPII-1</a></cite>] which is compatible with ISO/IEC 24751) and ETSI (see User Profile Management [<cite><a class="bibref" href="#bib-etsi-1">ETSI-1</a></cite>], Personalization of eHealth systems by using eHealth user profiles (eHealth) [<cite><a class="bibref" href="#bib-etsi-3">ETSI-3</a></cite>], and Personalization and User Profile Management; Architectural Framework [<cite><a class="bibref" href="#bib-etsi-4">ETSI-4</a></cite>] ).</p></section>
   
   <section id="potential-solutions-for-personalization">
-    <h4 id="x3-4-2-potential-solutions-for-personalization"><span class="secno">3.4.2 </span>Potential solutions for personalization <span class="permalink"><a href="#potential-solutions-for-personalization" aria-label="Permalink for 3.4.2 Potential solutions for personalization " title="Permalink for 3.4.2 Potential solutions for personalization "><span>§</span></a></span></h4><section id="ways-that-personalization-is-currently-addressed">
-    <h5 id="x3-4-2-1-ways-that-personalization-is-currently-addressed"><span class="secno">3.4.2.1 </span>Ways that personalization is currently addressed <span class="permalink"><a href="#ways-that-personalization-is-currently-addressed" aria-label="Permalink for 3.4.2.1 Ways that personalization is currently addressed " title="Permalink for 3.4.2.1 Ways that personalization is currently addressed "><span>§</span></a></span></h5>
+    <h4 id="x3-4-2-potential-solutions-for-personalization"><span class="secno">3.4.2 </span>Potential solutions for personalization <a class="self-link" aria-label="§" href="#potential-solutions-for-personalization"></a></h4><section id="ways-that-personalization-is-currently-addressed">
+    <h5 id="x3-4-2-1-ways-that-personalization-is-currently-addressed"><span class="secno">3.4.2.1 </span>Ways that personalization is currently addressed <a class="self-link" aria-label="§" href="#ways-that-personalization-is-currently-addressed"></a></h5>
     Personalization is currently addressed via many different ways such as:
     
     <ol>
@@ -2258,7 +2297,7 @@ details.respec-tests-details > li {
     </ol>
     </section>
     <section id="limitations-of-current-personalization-implementations">
-      <h5 id="x3-4-2-2-limitations-of-current-personalization-implementations"><span class="secno">3.4.2.2 </span>Limitations of current personalization implementations <span class="permalink"><a href="#limitations-of-current-personalization-implementations" aria-label="Permalink for 3.4.2.2 Limitations of current personalization implementations " title="Permalink for 3.4.2.2 Limitations of current personalization implementations "><span>§</span></a></span></h5>
+      <h5 id="x3-4-2-2-limitations-of-current-personalization-implementations"><span class="secno">3.4.2.2 </span>Limitations of current personalization implementations <a class="self-link" aria-label="§" href="#limitations-of-current-personalization-implementations"></a></h5>
       <p>The above implementations do not address most what of what we need. </p>
       <ol>
         <li>None of the current implementations address all the use cases for people with learning and cognitive disabilities. For example using personalization so that a main stream website can  alternative symbol that are familure to a user or group of users.</li>
@@ -2276,7 +2315,7 @@ details.respec-tests-details > li {
         <li>Live Chat help boxes can be intrusive and complicate the page, need role or other semantic term. </li>
       </ol>
     </section><section id="adding-to-ways-we-can-address-personalization">
-      <h5 id="x3-4-2-3-adding-to-ways-we-can-address-personalization"><span class="secno">3.4.2.3 </span>Adding to ways we can address personalization<span class="permalink"><a href="#adding-to-ways-we-can-address-personalization" aria-label="Permalink for 3.4.2.3 Adding to ways we can address personalization" title="Permalink for 3.4.2.3 Adding to ways we can address personalization"><span>§</span></a></span></h5>
+      <h5 id="x3-4-2-3-adding-to-ways-we-can-address-personalization"><span class="secno">3.4.2.3 </span>Adding to ways we can address personalization<a class="self-link" aria-label="§" href="#adding-to-ways-we-can-address-personalization"></a></h5>
       <ol>
         <li>User <abbr title="Cascading Style Sheets">CSS</abbr> [<cite><a class="bibref" href="#bib-css-2017">CSS-2017</a></cite>] allowing an ARIA [<cite><a class="bibref" href="#bib-wai-aria">wai-aria</a></cite>] role for extra help to be loaded However, user style sheets are being deprecated.</li>
         <li>RDF [<cite><a class="bibref" href="#bib-rdf-concepts">rdf-concepts</a></cite>] and RDFA [<cite><a class="bibref" href="#bib-rdfa-core">rdfa-core</a></cite>] . Issues with these solutions include adaptability and whether typical authors will use them correctly and without errors.</li>
@@ -2285,7 +2324,7 @@ details.respec-tests-details > li {
       <p>If there is an output we will need data binding.</p>
     </section>
       </section><section id="strategies">
-        <h4 id="x3-4-3-strategies"><span class="secno">3.4.3 </span>Strategies<span class="permalink"><a href="#strategies" aria-label="Permalink for 3.4.3 Strategies" title="Permalink for 3.4.3 Strategies"><span>§</span></a></span></h4>
+        <h4 id="x3-4-3-strategies"><span class="secno">3.4.3 </span>Strategies<a class="self-link" aria-label="§" href="#strategies"></a></h4>
         <ol>
           <li>Promote and support advancements in technologies in these  area. For example, our recommending for WCAG [[<a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/index.php?title=WCAG20">WCAG20</a>]] will be along the lines of  "Use semantics and standardized techniques that enable the content  to be adapted to the user scenario and enable additional support".</li>
           <li>Enable compatibility with standards such as GPII but do not depend on them. </li>
@@ -2293,7 +2332,7 @@ details.respec-tests-details > li {
           <li>Enable simple solutions that are expendable - encouraging more complex solutions in the future, such as having preferences be easily cascaded to allow for contextual personalization and for portability in the future. </li>
         </ol>
         </section><section id="further-work-for-personalization">
-        <h4 id="x3-4-4-further-work-for-personalization"><span class="secno">3.4.4 </span>Further work for personalization<span class="permalink"><a href="#further-work-for-personalization" aria-label="Permalink for 3.4.4 Further work for personalization" title="Permalink for 3.4.4 Further work for personalization"><span>§</span></a></span></h4>
+        <h4 id="x3-4-4-further-work-for-personalization"><span class="secno">3.4.4 </span>Further work for personalization<a class="self-link" aria-label="§" href="#further-work-for-personalization"></a></h4>
         <ol>
           <li>Support in WCAG that encourages support the features of the  operating system or standards that enable adaption, such as adding  additional success criteria.</li>
           <li>Develop supporting techniques so authors know exactly what to do </li>
@@ -2311,7 +2350,7 @@ details.respec-tests-details > li {
         </ol>
       </section>
         <section id="end-to-end-basic-solution">
-        <h4 id="x3-4-5-end-to-end-basic-solution"><span class="secno">3.4.5 </span>End to end basic solution<span class="permalink"><a href="#end-to-end-basic-solution" aria-label="Permalink for 3.4.5 End to end basic solution" title="Permalink for 3.4.5 End to end basic solution"><span>§</span></a></span></h4>
+        <h4 id="x3-4-5-end-to-end-basic-solution"><span class="secno">3.4.5 </span>End to end basic solution<a class="self-link" aria-label="§" href="#end-to-end-basic-solution"></a></h4>
         <p>We need standardized terms and supportive syntax that can be  linked to associated symbols, terms, translations and explanations for  the individual use, possibly via an aria attribute and personal  preferences. </p>
         <p>For example, assume an author can make it programmatically known  that a button is used to send an email. At the user end, the button  could be rendered with a symbol, term, and/or tooltips that are  understandable for this particular user. It could automatically  integrate with F1 help that explains the send function in simple terms.  It could be identified with a keyboard short cut that will always be  used for send. In addition, it could be identified as important and  always rendered, or rendered as a large button. </p>
         <p>Working examples of how this could be used in practice with user preferences are available Full versions can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>. It demonstrates personalization for any use - including people with learning and memory issues </p>
@@ -2324,14 +2363,14 @@ details.respec-tests-details > li {
         </ol>
         <p>This is only one example way to use the semantics. Others may follow. It is also worth noting that the GPII [<cite><a class="bibref" href="#bib-gpii-1">GPII-1</a></cite>] and ETSI [<cite><a class="bibref" href="#bib-etsi-1">ETSI-1</a></cite>] is working on making user preferences portable which would also enhance this work. </p>
       </section><section id="special-case">
-        <h4 id="x3-4-6-special-case"><span class="secno">3.4.6 </span>Special case<span class="permalink"><a href="#special-case" aria-label="Permalink for 3.4.6 Special case" title="Permalink for 3.4.6 Special case"><span>§</span></a></span></h4>
+        <h4 id="x3-4-6-special-case"><span class="secno">3.4.6 </span>Special case<a class="self-link" aria-label="§" href="#special-case"></a></h4>
         <p>Products for people who are non-verbal often use symbols to help users communicate. These symbols are in fact peoples' language. Unfortunately many of these symbols are both subject to copyright AND are not interoperable. That means end-users can only use one device, and cannot use apps or content from a different company. If we enabled mapping to open sets of symbol codes that, in turn, map to open or proprietary  symbol sets, then they can be interoperable. At the user end, the user agent can load the symbols that the user knows. Symbol sets might still be proprietary but they would also be interoperable. That means the end user could use them across different devices, or  any compatible content or applications. This is addressed further in the issue paper on symbols for people who are non-verbal.</p>
   </section>  </section>
 </section>
 		<section id="web-security-and-privacy-technologies">
-        <!--OddPage--><h2 id="x4-web-security-and-privacy-technologies"><span class="secno">4. </span>Web Security and Privacy Technologies<span class="permalink"><a href="#web-security-and-privacy-technologies" aria-label="Permalink for 4. Web Security and Privacy Technologies" title="Permalink for 4. Web Security and Privacy Technologies"><span>§</span></a></span></h2>
+        <!--OddPage--><h2 id="x4-web-security-and-privacy-technologies"><span class="secno">4. </span>Web Security and Privacy Technologies<a class="self-link" aria-label="§" href="#web-security-and-privacy-technologies"></a></h2>
         <section id="description-of-the-technologies">
-        <h3 id="x4-1-description-of-the-technologies"><span class="secno">4.1 </span>Description of the technologies<span class="permalink"><a href="#description-of-the-technologies" aria-label="Permalink for 4.1 Description of the technologies" title="Permalink for 4.1 Description of the technologies"><span>§</span></a></span></h3>
+        <h3 id="x4-1-description-of-the-technologies"><span class="secno">4.1 </span>Description of the technologies<a class="self-link" aria-label="§" href="#description-of-the-technologies"></a></h3>
         <p>Most user interfaces are designed to help users complete tasks. However, web security and privacy technologies intentionally introduce barriers to task completion. They require users to perceive more and to do more to complete tasks. Three examples of these technologies are passwords, <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr>, and 2-Factor Authentication.</p>
         <ul>
             <li>Passwords are words or character strings used for authentication and/or for identity confirmation.  </li>
@@ -2356,11 +2395,7 @@ details.respec-tests-details > li {
     <section id="challenges-of-security-and-privacy-for-people-with-cognitive-disabilities">
         <h3 id="x4-2-challenges-of-security-and-privacy-for-people-with-cognitive-disabilities"><span class="secno">4.2 </span>
             Challenges of security and privacy for people with cognitive disabilities
-        <span class="permalink"><a href="#challenges-of-security-and-privacy-for-people-with-cognitive-disabilities" aria-label="Permalink for 4.2 
-            Challenges of security and privacy for people with cognitive disabilities
-        " title="Permalink for 4.2 
-            Challenges of security and privacy for people with cognitive disabilities
-        "><span>§</span></a></span></h3>
+        <a class="self-link" aria-label="§" href="#challenges-of-security-and-privacy-for-people-with-cognitive-disabilities"></a></h3>
         <p>
             Web security and privacy technologies often block people with cognitive and/or physical disabilities who may not be able to:
         </p>
@@ -2385,11 +2420,7 @@ details.respec-tests-details > li {
         <section id="memory">
             <h4 id="x4-2-1-memory"><span class="secno">4.2.1 </span>
                 Memory 
-            <span class="permalink"><a href="#memory" aria-label="Permalink for 4.2.1 
-                Memory 
-            " title="Permalink for 4.2.1 
-                Memory 
-            "><span>§</span></a></span></h4>
+            <a class="self-link" aria-label="§" href="#memory"></a></h4>
             <p>Many people with cognitive disabilities:</p>
             <ul>
                 <li>may have to look at or listen to text several times to copy or type it into a form field;</li>
@@ -2407,11 +2438,7 @@ details.respec-tests-details > li {
         <section id="executive-function">
             <h4 id="x4-2-2-executive-function"><span class="secno">4.2.2 </span>
                 Executive function
-            <span class="permalink"><a href="#executive-function" aria-label="Permalink for 4.2.2 
-                Executive function
-            " title="Permalink for 4.2.2 
-                Executive function
-            "><span>§</span></a></span></h4>
+            <a class="self-link" aria-label="§" href="#executive-function"></a></h4>
             <p>Many people with cognitive disabilities may not:</p>
             <ul>
                 <li>complete a multi-step procedure for submitting text, such as a password;</li>
@@ -2429,11 +2456,7 @@ details.respec-tests-details > li {
         <section id="attention-related-limitations">
             <h4 id="x4-2-3-attention-related-limitations"><span class="secno">4.2.3 </span>
                 Attention-related limitations
-            <span class="permalink"><a href="#attention-related-limitations" aria-label="Permalink for 4.2.3 
-                Attention-related limitations
-            " title="Permalink for 4.2.3 
-                Attention-related limitations
-            "><span>§</span></a></span></h4>
+            <a class="self-link" aria-label="§" href="#attention-related-limitations"></a></h4>
             <p>People with cognitive disabilities may not focus due to:</p>
 
             <img width="314" height="125" style="float: right; margin-left: 0.5em;" src="img/recaptcha-example.gif" alt="Example: shows 2 italicized words with lines through them; field with label 'Type the two words:';  3 buttons; and text 'reCAPTCHA', 'stop spam', 'read books'.">
@@ -2447,11 +2470,7 @@ details.respec-tests-details > li {
         <section id="impaired-language-related-functions">
             <h4 id="x4-2-4-impaired-language-related-functions"><span class="secno">4.2.4 </span>
                 Impaired language-related functions
-            <span class="permalink"><a href="#impaired-language-related-functions" aria-label="Permalink for 4.2.4 
-                Impaired language-related functions
-            " title="Permalink for 4.2.4 
-                Impaired language-related functions
-            "><span>§</span></a></span></h4>
+            <a class="self-link" aria-label="§" href="#impaired-language-related-functions"></a></h4>
             <p>Some people with cognitive disabilities:</p>
             <ul>
                 <li>may have comprehension problems exacerbated by text or instructions presented in a non-native language.</li>
@@ -2460,11 +2479,7 @@ details.respec-tests-details > li {
         <section id="impaired-literacy-related-functions">
             <h4 id="x4-2-5-impaired-literacy-related-functions"><span class="secno">4.2.5 </span>
                 Impaired literacy-related functions
-            <span class="permalink"><a href="#impaired-literacy-related-functions" aria-label="Permalink for 4.2.5 
-                Impaired literacy-related functions
-            " title="Permalink for 4.2.5 
-                Impaired literacy-related functions
-            "><span>§</span></a></span></h4>
+            <a class="self-link" aria-label="§" href="#impaired-literacy-related-functions"></a></h4>
             <p>Some people with cognitive disabilities:</p>
             <ul>
                 <li>may not comprehend the meaning of instructions related to web security and privacy technologies;  </li>
@@ -2474,11 +2489,7 @@ details.respec-tests-details > li {
         <section id="perception-processing-limitations">
             <h4 id="x4-2-6-perception-processing-limitations"><span class="secno">4.2.6 </span>
                 Perception-processing limitations
-            <span class="permalink"><a href="#perception-processing-limitations" aria-label="Permalink for 4.2.6 
-                Perception-processing limitations
-            " title="Permalink for 4.2.6 
-                Perception-processing limitations
-            "><span>§</span></a></span></h4>
+            <a class="self-link" aria-label="§" href="#perception-processing-limitations"></a></h4>
             <p>Many people with cognitive disabilities may not:</p>
             <ul>
                 <li>read text at all because of the intentional distortion of it, a <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> technique;</li>
@@ -2495,11 +2506,7 @@ details.respec-tests-details > li {
         <section id="reduced-knowledge">
             <h4 id="x4-2-7-reduced-knowledge"><span class="secno">4.2.7 </span>
                 Reduced knowledge
-            <span class="permalink"><a href="#reduced-knowledge" aria-label="Permalink for 4.2.7 
-                Reduced knowledge
-            " title="Permalink for 4.2.7 
-                Reduced knowledge
-            "><span>§</span></a></span></h4>
+            <a class="self-link" aria-label="§" href="#reduced-knowledge"></a></h4>
             <p>Some people with cognitive disabilities may not:</p>
             <ul>
                 <li>recognize images, such as symbols or icons, of web security and privacy technologies; </li>
@@ -2508,9 +2515,9 @@ details.respec-tests-details > li {
         </section>
     </section>
     <section id="proposed-solutions">
-      <h3 id="x4-3-proposed-solutions"><span class="secno">4.3 </span> Proposed solutions <span class="permalink"><a href="#proposed-solutions" aria-label="Permalink for 4.3  Proposed solutions " title="Permalink for 4.3  Proposed solutions "><span>§</span></a></span></h3>
+      <h3 id="x4-3-proposed-solutions"><span class="secno">4.3 </span> Proposed solutions <a class="self-link" aria-label="§" href="#proposed-solutions"></a></h3>
         <section id="w3c-recommended-guidelines-and-techniques">
-            <h4 id="x4-3-1-w3c-recommended-guidelines-and-techniques"><span class="secno">4.3.1 </span><abbr title="World Wide Web Consortium">W3C</abbr> recommended guidelines and techniques<span class="permalink"><a href="#w3c-recommended-guidelines-and-techniques" aria-label="Permalink for 4.3.1 W3C recommended guidelines and techniques" title="Permalink for 4.3.1 W3C recommended guidelines and techniques"><span>§</span></a></span></h4>
+            <h4 id="x4-3-1-w3c-recommended-guidelines-and-techniques"><span class="secno">4.3.1 </span><abbr title="World Wide Web Consortium">W3C</abbr> recommended guidelines and techniques<a class="self-link" aria-label="§" href="#w3c-recommended-guidelines-and-techniques"></a></h4>
             <ul>
                 <li>
                     Provide text alternatives that identify and describe the purpose of the non-text content.
@@ -2554,7 +2561,7 @@ details.respec-tests-details > li {
             </ul>
         </section>
         <section id="ease-of-use-ideas">
-            <h4 id="x4-3-2-ease-of-use-ideas"><span class="secno">4.3.2 </span>Ease-of-use ideas<span class="permalink"><a href="#ease-of-use-ideas" aria-label="Permalink for 4.3.2 Ease-of-use ideas" title="Permalink for 4.3.2 Ease-of-use ideas"><span>§</span></a></span></h4>
+            <h4 id="x4-3-2-ease-of-use-ideas"><span class="secno">4.3.2 </span>Ease-of-use ideas<a class="self-link" aria-label="§" href="#ease-of-use-ideas"></a></h4>
             <ul>
                 <li>
                     Allow alternative authentication factors, such as:
@@ -2579,7 +2586,7 @@ details.respec-tests-details > li {
             </ul>
         </section>
         <section id="alternative-web-security-and-privacy-technologies">
-            <h4 id="x4-3-3-alternative-web-security-and-privacy-technologies"><span class="secno">4.3.3 </span>Alternative web security and privacy technologies<span class="permalink"><a href="#alternative-web-security-and-privacy-technologies" aria-label="Permalink for 4.3.3 Alternative web security and privacy technologies" title="Permalink for 4.3.3 Alternative web security and privacy technologies"><span>§</span></a></span></h4>
+            <h4 id="x4-3-3-alternative-web-security-and-privacy-technologies"><span class="secno">4.3.3 </span>Alternative web security and privacy technologies<a class="self-link" aria-label="§" href="#alternative-web-security-and-privacy-technologies"></a></h4>
             <ul>
                 <li>
                     Security tokens, some of which are hardware devices, can be used to make authentication easier. Security tokens are used instead of, or in addition to, other forms of authentication such as passwords. Security-token hardware devices:
@@ -2617,7 +2624,7 @@ details.respec-tests-details > li {
                 <li><a href="http://webaim.org/blog/spam_free_accessible_forms/">Spam-free accessible forms</a>, WebAIM, Utah State University, March, 2007.</li>
             </ul>
             <section id="captcha-alternatives">
-                <h5 id="x4-3-3-1-captcha-alternatives"><span class="secno">4.3.3.1 </span><abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> alternatives<span class="permalink"><a href="#captcha-alternatives" aria-label="Permalink for 4.3.3.1 CAPTCHA alternatives" title="Permalink for 4.3.3.1 CAPTCHA alternatives"><span>§</span></a></span></h5>
+                <h5 id="x4-3-3-1-captcha-alternatives"><span class="secno">4.3.3.1 </span><abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> alternatives<a class="self-link" aria-label="§" href="#captcha-alternatives"></a></h5>
                 <ul>
                     <li>Inaccessibility of <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr>: Alternatives to Visual Turing Tests on the Web [<cite><a class="bibref" href="#bib-turingtest">turingtest</a></cite>]</li>
                     <li> Determine the time difference between when a web form is loaded and when it is submitted. If it is submitted quickly, which may be indicative of a spambot, discard the submission. Otherwise, keep it.</li>
@@ -2641,9 +2648,9 @@ details.respec-tests-details > li {
 </section>
 
 		<section id="supplementing-text-with-multi-modal-content">
-        <!--OddPage--><h2 id="x5-supplementing-text-with-multi-modal-content"><span class="secno">5. </span>Supplementing text with multi-modal content<span class="permalink"><a href="#supplementing-text-with-multi-modal-content" aria-label="Permalink for 5. Supplementing text with multi-modal content" title="Permalink for 5. Supplementing text with multi-modal content"><span>§</span></a></span></h2>
+        <!--OddPage--><h2 id="x5-supplementing-text-with-multi-modal-content"><span class="secno">5. </span>Supplementing text with multi-modal content<a class="self-link" aria-label="§" href="#supplementing-text-with-multi-modal-content"></a></h2>
 	<section id="introduction-1">
-		<h3 id="x5-1-introduction"><span class="secno">5.1 </span>Introduction<span class="permalink"><a href="#introduction-1" aria-label="Permalink for 5.1 Introduction" title="Permalink for 5.1 Introduction"><span>§</span></a></span></h3>
+		<h3 id="x5-1-introduction"><span class="secno">5.1 </span>Introduction<a class="self-link" aria-label="§" href="#introduction-1"></a></h3>
         <p>Textual content can be made easier to understand when delivered in different modes to help people with cognitive disabilities. These modes can include the addition of:</p>
         <ul>
             <li>speech, via text-to-speech (<abbr title="Text To Speech">TTS</abbr>);</li>
@@ -2654,7 +2661,7 @@ details.respec-tests-details > li {
         </ul>
 	</section>
     <section id="challenges-of-text-for-people-with-cognitive-disabilities">
-        <h3 id="x5-2-challenges-of-text-for-people-with-cognitive-disabilities"><span class="secno">5.2 </span> Challenges of text for people with cognitive disabilities <span class="permalink"><a href="#challenges-of-text-for-people-with-cognitive-disabilities" aria-label="Permalink for 5.2  Challenges of text for people with cognitive disabilities " title="Permalink for 5.2  Challenges of text for people with cognitive disabilities "><span>§</span></a></span></h3>
+        <h3 id="x5-2-challenges-of-text-for-people-with-cognitive-disabilities"><span class="secno">5.2 </span> Challenges of text for people with cognitive disabilities <a class="self-link" aria-label="§" href="#challenges-of-text-for-people-with-cognitive-disabilities"></a></h3>
         <p>Difficulty of text comprehension by people with cognitive disabilities ranges from minimal to extreme. They may comprehend most of a web page's textual content, or none at all. These can impact people with impairments of:</p>
 			<ul>
 				<li>memory; </li>
@@ -2666,7 +2673,7 @@ details.respec-tests-details > li {
 				<li>knowledge.</li>
 			</ul>
         <section id="memory-0">
-            <h4 id="x5-2-1-memory"><span class="secno">5.2.1 </span>Memory <span class="permalink"><a href="#memory-0" aria-label="Permalink for 5.2.1 Memory " title="Permalink for 5.2.1 Memory "><span>§</span></a></span></h4>
+            <h4 id="x5-2-1-memory"><span class="secno">5.2.1 </span>Memory <a class="self-link" aria-label="§" href="#memory-0"></a></h4>
             <p>People with cognitive disabilities may have to:</p>
             <ul>
                 <li>read text several times to aid comprehension;</li>
@@ -2677,7 +2684,7 @@ details.respec-tests-details > li {
             <p>“Good cues for individuals without EMI (episodic memory impairment) can be more subtle and less central to the experience, whereas good cues for those with memory impairment  need to cover the important highlights of the experience so that they can re-learn and re-construct the forgotten experience […] Individuals with EMI are more easily cognitively overloaded, which leads to a need for systems to present a smaller number of only the most powerful cues.”<!-- See [[Lee-1]]--></p>   
         </section>
         <section id="executive-function-0">
-            <h4 id="x5-2-2-executive-function"><span class="secno">5.2.2 </span>Executive function <span class="permalink"><a href="#executive-function-0" aria-label="Permalink for 5.2.2 Executive function " title="Permalink for 5.2.2 Executive function "><span>§</span></a></span></h4>
+            <h4 id="x5-2-2-executive-function"><span class="secno">5.2.2 </span>Executive function <a class="self-link" aria-label="§" href="#executive-function-0"></a></h4>
             <p>People with cognitive disabilities may not:</p>
             <ul>
                 <li>sufficiently process / understand text as they read it; </li>
@@ -2686,7 +2693,7 @@ details.respec-tests-details > li {
             </ul>
         </section>
         <section id="attention-related-limitations-0">
-            <h4 id="x5-2-3-attention-related-limitations"><span class="secno">5.2.3 </span>Attention-related limitations <span class="permalink"><a href="#attention-related-limitations-0" aria-label="Permalink for 5.2.3 Attention-related limitations " title="Permalink for 5.2.3 Attention-related limitations "><span>§</span></a></span></h4>
+            <h4 id="x5-2-3-attention-related-limitations"><span class="secno">5.2.3 </span>Attention-related limitations <a class="self-link" aria-label="§" href="#attention-related-limitations-0"></a></h4>
             <p>People with cognitive disabilities:</p>
             <ul>
                 <li>may not attend to important concepts and relevant details; and/or</li>
@@ -2694,7 +2701,7 @@ details.respec-tests-details > li {
             </ul>
         </section>
         <section id="language-related-functions">
-            <h4 id="x5-2-4-language-related-functions"><span class="secno">5.2.4 </span>Language-related functions <span class="permalink"><a href="#language-related-functions" aria-label="Permalink for 5.2.4 Language-related functions " title="Permalink for 5.2.4 Language-related functions "><span>§</span></a></span></h4>
+            <h4 id="x5-2-4-language-related-functions"><span class="secno">5.2.4 </span>Language-related functions <a class="self-link" aria-label="§" href="#language-related-functions"></a></h4>
             <p>People with cognitive disabilities may not understand text because they:</p>
             <ul>
                 <li>are unable to sound out letters or words;</li>
@@ -2704,7 +2711,7 @@ details.respec-tests-details > li {
             </ul>
         </section>
         <section id="literacy-related-functions">
-            <h4 id="x5-2-5-literacy-related-functions"><span class="secno">5.2.5 </span>Literacy-related functions <span class="permalink"><a href="#literacy-related-functions" aria-label="Permalink for 5.2.5 Literacy-related functions " title="Permalink for 5.2.5 Literacy-related functions "><span>§</span></a></span></h4>
+            <h4 id="x5-2-5-literacy-related-functions"><span class="secno">5.2.5 </span>Literacy-related functions <a class="self-link" aria-label="§" href="#literacy-related-functions"></a></h4>
             <p>Some people with cognitive disabilities may not:</p>
             <ul>
                 <li>cope with sounds or syllables that comprise words;</li>
@@ -2714,7 +2721,7 @@ details.respec-tests-details > li {
             </ul>
         </section>
         <section id="perception-processing-limitations-0">
-            <h4 id="x5-2-6-perception-processing-limitations"><span class="secno">5.2.6 </span>Perception-processing limitations <span class="permalink"><a href="#perception-processing-limitations-0" aria-label="Permalink for 5.2.6 Perception-processing limitations " title="Permalink for 5.2.6 Perception-processing limitations "><span>§</span></a></span></h4>
+            <h4 id="x5-2-6-perception-processing-limitations"><span class="secno">5.2.6 </span>Perception-processing limitations <a class="self-link" aria-label="§" href="#perception-processing-limitations-0"></a></h4>
             <p>Many people with cognitive disabilities may not:</p>
             <ul>
                 <li>comprehend text that can't be enlarged without distortion;</li>
@@ -2722,7 +2729,7 @@ details.respec-tests-details > li {
             </ul>
         </section>
         <section id="reduced-knowledge-0">
-            <h4 id="x5-2-7-reduced-knowledge"><span class="secno">5.2.7 </span>Reduced knowledge <span class="permalink"><a href="#reduced-knowledge-0" aria-label="Permalink for 5.2.7 Reduced knowledge " title="Permalink for 5.2.7 Reduced knowledge "><span>§</span></a></span></h4>
+            <h4 id="x5-2-7-reduced-knowledge"><span class="secno">5.2.7 </span>Reduced knowledge <a class="self-link" aria-label="§" href="#reduced-knowledge-0"></a></h4>
             <p>Some people with cognitive disabilities may not comprehend text because:</p>
             <ul>
                 <li>they do not have relevant background knowledge; and/or</li>
@@ -2731,7 +2738,7 @@ details.respec-tests-details > li {
         </section>
     </section>
 		<section id="use-cases-for-multi-modal-content">
-			<h3 id="x5-3-use-cases-for-multi-modal-content"><span class="secno">5.3 </span>Use cases for multi-modal content<span class="permalink"><a href="#use-cases-for-multi-modal-content" aria-label="Permalink for 5.3 Use cases for multi-modal content" title="Permalink for 5.3 Use cases for multi-modal content"><span>§</span></a></span></h3>
+			<h3 id="x5-3-use-cases-for-multi-modal-content"><span class="secno">5.3 </span>Use cases for multi-modal content<a class="self-link" aria-label="§" href="#use-cases-for-multi-modal-content"></a></h3>
 			<p>Other use cases include:</p>
 			<ol>
 				<li>Jumping to the relevant part of content. This is typically not supported, making content less usable.</li>
@@ -2741,16 +2748,16 @@ details.respec-tests-details > li {
 			</ol>
 		</section>
     <section id="ways-to-enhance-text-with-multi-modal-content">
-        <h3 id="x5-4-ways-to-enhance-text-with-multi-modal-content"><span class="secno">5.4 </span> Ways to enhance text with multi-modal content<span class="permalink"><a href="#ways-to-enhance-text-with-multi-modal-content" aria-label="Permalink for 5.4  Ways to enhance text with multi-modal content" title="Permalink for 5.4  Ways to enhance text with multi-modal content"><span>§</span></a></span></h3>
+        <h3 id="x5-4-ways-to-enhance-text-with-multi-modal-content"><span class="secno">5.4 </span> Ways to enhance text with multi-modal content<a class="self-link" aria-label="§" href="#ways-to-enhance-text-with-multi-modal-content"></a></h3>
         <p>Text is written communication.</p>
         <p>Textual content can be provided in a variety of alternative modes / formats as described below. Ideally, people with cognitive disabilities should be able to choose that content is delivered in the mode they comprehend best. This is an important component of the proposed <a href="http://gpii.net/">Global Public Inclusive Infrastructure</a>.</p>
-        <h3 id="text-to-speech">Text-to-speech<span class="permalink"><a href="#ways-to-enhance-text-with-multi-modal-content" aria-label="Permalink for Text-to-speech" title="Permalink for Text-to-speech"><span>§</span></a></span></h3>
+        <h3 id="text-to-speech">Text-to-speech<a class="self-link" aria-label="§" href="#ways-to-enhance-text-with-multi-modal-content"></a></h3>
         <p>Text-to-speech (<abbr title="Text To Speech">TTS</abbr>) is hardware and/or software that produces human speech by a device such as a computer. Most <abbr title="Text To Speech">TTS</abbr> reads text aloud in a synthesized voice. Other <abbr title="Text To Speech">TTS</abbr> converts symbols, such as those employed by augmentative and alternative communication (AAC), into spoken speech.</p>
         <p>Many people with cognitive disabilities, such as Dyslexia, may have the capacity to use a screen reader for <abbr title="Text To Speech">TTS</abbr>. However, people with severe cognitive disabilities, such as intellectual disabilities, may require simpler <abbr title="Text To Speech">TTS</abbr> delivery.</p>
         <p>A common example is a <abbr title="Text To Speech">TTS</abbr> widget embedded in a website. An alternative is a <a href="http://www.w3.org/TR/css3-speech/"> <abbr title="Cascading Style Sheets">CSS</abbr> speech module, as proposed by the <abbr title="World Wide Web Consortium">W3C</abbr></a>. Advantages include that there is nothing to download and install; and learning how to use a <abbr title="Text To Speech">TTS</abbr> widget or a <abbr title="Cascading Style Sheets">CSS</abbr> speech module is dramatically simpler than learning how to use a screen reader.</p>
         <p>The <abbr title="Text To Speech">TTS</abbr> should be limited to relevant content, and exclude such text as found in menus, footers, and advertisements. Another helpful feature is the visual highlighting of text as it is read aloud. Such features may help people with cognitive disabilities who are overwhelmed even by simple <abbr title="Text To Speech">TTS</abbr> delivery.</p>
         <!--<p>There is an overwhelming amount of research that shows a multi-modal approach can “enhance assimilation of information” when text and numerical information are read aloud (See [[Shany-1]], [[Hecker-1]], [[Gy-1]], [[Lacina-1]].); video options are provided ([[Lacina-1]], [[Deibel-1]].); and there are multiple means of navigation and interaction (See [[Doyle-1]].) with clear layout, headings, and use of imagery (See [[Lacina-1]].).</p>-->
-        <h3 id="video"> Video <span class="permalink"><a href="#ways-to-enhance-text-with-multi-modal-content" aria-label="Permalink for  Video " title="Permalink for  Video "><span>§</span></a></span></h3>
+        <h3 id="video"> Video <a class="self-link" aria-label="§" href="#ways-to-enhance-text-with-multi-modal-content"></a></h3>
         <p>Video is a short film clip of moving visual images with or without audio.</p>
         <p>To aid comprehension, video with audio should be captioned and/or have audio description, which provides important information not described or spoken in the main sound track. For example, see <a href="http://mindfulresearch.co.uk/2011/08/29/autistic-spectrum-captions-and-audio-description/">"Autistic spectrum, captions and audio description".</a></p>
         <p>Further, video and audio should be navigable, such as:</p>
@@ -2766,20 +2773,20 @@ details.respec-tests-details > li {
             <li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-audio-desc-only.html">1.2.5 Audio Description (pre-recorded):</a> Audio description is provided for all pre-recorded video content in synchronized media. (Level AA)</li>
             <li><a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/media-equiv-extended-ad.html">1.2.7 Extended Audio Description (pre-recorded):</a> Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all pre-recorded video content in synchronized media. (Level AAA)</li>
         </ul>
-        <h3 id="supplement-with-contextually-relevant-images">Supplement with contextually-relevant images <span class="permalink"><a href="#ways-to-enhance-text-with-multi-modal-content" aria-label="Permalink for Supplement with contextually-relevant images " title="Permalink for Supplement with contextually-relevant images "><span>§</span></a></span></h3>
+        <h3 id="supplement-with-contextually-relevant-images">Supplement with contextually-relevant images <a class="self-link" aria-label="§" href="#ways-to-enhance-text-with-multi-modal-content"></a></h3>
         <p>An image is a picture, a representation of a visual perception.</p>
         <p>User research has shown that text comprehension is significantly enhanced where accompanied by contextually-relevant images. A picture of an object may be easier to recognize than a textual description of it.</p>
         <p>Diagrams and charts as visual representations could be helpful for textual descriptions of processes or flows. Employing <a href="http://www.w3.org/TR/2dcontext/"><abbr title="Hypertext Markup Language">HTML</abbr> Canvas, as proposed by the <abbr title="World Wide Web Consortium">W3C</abbr></a>, diagrams and charts could be interactive and have additional descriptions for their parts to aid comprehension.</p>
-        <h3 id="supplement-with-consistent-icons-and-graphics">Supplement with consistent icons and graphics <span class="permalink"><a href="#ways-to-enhance-text-with-multi-modal-content" aria-label="Permalink for Supplement with consistent icons and graphics " title="Permalink for Supplement with consistent icons and graphics "><span>§</span></a></span></h3>
+        <h3 id="supplement-with-consistent-icons-and-graphics">Supplement with consistent icons and graphics <a class="self-link" aria-label="§" href="#ways-to-enhance-text-with-multi-modal-content"></a></h3>
         <p>An icon is a small image or drawing that commonly represents a function. A graphic is a drawing of a visual perception or an abstract concept, or is otherwise a representation of an object or an idea.</p>
         <p>Text accompanied by consistent iconography helps convey meaning, such as by associating discrete textual passages with each other. Similarly, a pie-chart graphic may help convey meaning easier to comprehend than a table of statistics.</p>
 			<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">What is "consistent" in this context?</p></div>
-        <h3 id="replace-or-augment-by-symbol-sets">Replace or augment by symbol sets <span class="permalink"><a href="#ways-to-enhance-text-with-multi-modal-content" aria-label="Permalink for Replace or augment by symbol sets " title="Permalink for Replace or augment by symbol sets "><span>§</span></a></span></h3>
+        <h3 id="replace-or-augment-by-symbol-sets">Replace or augment by symbol sets <a class="self-link" aria-label="§" href="#ways-to-enhance-text-with-multi-modal-content"></a></h3>
         <p>A symbol is a sign that represents or suggests an idea, an object, an action, or a belief.</p>
         <p>Symbol sets can be used for augmentative and alternative communication (AAC) to support people with cognitive disabilities who have severe speech and/or language difficulties. This can include those who may understand speech, but who are unable to express what they wish to say, perhaps because of a physical disability. (It is common for people with cognitive disabilities to also have physical disabilities.) Ideally, <a href="https://w3c.github.io/coga/issue-papers/symbols-non-verbal.html">interoperable symbol sets could be used to replace or to augment web-based text</a>.</p>
     </section>
     <section id="ease-of-use-ideas-0">
-        <h3 id="x5-5-ease-of-use-ideas"><span class="secno">5.5 </span>Ease-of-use ideas<span class="permalink"><a href="#ease-of-use-ideas-0" aria-label="Permalink for 5.5 Ease-of-use ideas" title="Permalink for 5.5 Ease-of-use ideas"><span>§</span></a></span></h3>
+        <h3 id="x5-5-ease-of-use-ideas"><span class="secno">5.5 </span>Ease-of-use ideas<a class="self-link" aria-label="§" href="#ease-of-use-ideas-0"></a></h3>
         <p>Text should be written clearly and simply using the following attributes:</p>
         <ul>
             <li>
@@ -2800,16 +2807,16 @@ details.respec-tests-details > li {
 </section>
 
 			<section id="distractions">
-		<!--OddPage--><h2 id="x6-distractions"><span class="secno">6. </span>Distractions<span class="permalink"><a href="#distractions" aria-label="Permalink for 6. Distractions" title="Permalink for 6. Distractions"><span>§</span></a></span></h2>
+		<!--OddPage--><h2 id="x6-distractions"><span class="secno">6. </span>Distractions<a class="self-link" aria-label="§" href="#distractions"></a></h2>
 
 			<p>A distraction is something that prevents someone from concentrating on a chosen object of attention. When using the Internet distractions may draw the user's attention away from primary content, or from the current action being performed. </p>
 			<p>Distractions may cause issues for Internet users, especially those who have a cognitive impairment. </p>
 		<section id="introduction-2">
-		  <h3 id="x6-1-introduction"><span class="secno">6.1 </span>Introduction		  <span class="permalink"><a href="#introduction-2" aria-label="Permalink for 6.1 Introduction		  " title="Permalink for 6.1 Introduction		  "><span>§</span></a></span></h3>
+		  <h3 id="x6-1-introduction"><span class="secno">6.1 </span>Introduction		  <a class="self-link" aria-label="§" href="#introduction-2"></a></h3>
 		  <p>Drawing the user's attention away from primary content can create a range of issues depending on the user's impairment(s). If a user is consuming content and their attention is drawn away this may impact their ability to consume the primary content or complete an interaction (process). If a user is carrying out a complete multistep action (such as form filling) being distracted may cause the user to lose context, thread or position in the action or sequence of actions. </p>
 		</section>
 		<section id="source-of-distraction">
-		  <h3 id="x6-2-source-of-distraction"><span class="secno">6.2 </span>Source of distraction<span class="permalink"><a href="#source-of-distraction" aria-label="Permalink for 6.2 Source of distraction" title="Permalink for 6.2 Source of distraction"><span>§</span></a></span></h3>
+		  <h3 id="x6-2-source-of-distraction"><span class="secno">6.2 </span>Source of distraction<a class="self-link" aria-label="§" href="#source-of-distraction"></a></h3>
 			<p>Distraction may come from many sources. Common sources of distraction include:</p>
 			<p>Overlays: Overlays partially or completely cover the primary content. This makes it impossible to see content until the overlay is removed. Reasons for using an overlay include but are not restricted to help windows, adverts, surveys, paywalls, in page notifications or animations in the site itself. Examples include, but are not restricted to:</p>
   			<ul>
@@ -2828,14 +2835,14 @@ details.respec-tests-details > li {
 			<p>Blinking or scrolling text, scrolling and changes in context and changes in content that are not expected or requested by the user can also distract people and make it hard to focus.</p>
 		</section>
 		<section id="distractions-and-people-with-cognitive-disabilities">
-			<h3 id="x6-3-distractions-and-people-with-cognitive-disabilities"><span class="secno">6.3 </span>Distractions and people with cognitive disabilities<span class="permalink"><a href="#distractions-and-people-with-cognitive-disabilities" aria-label="Permalink for 6.3 Distractions and people with cognitive disabilities" title="Permalink for 6.3 Distractions and people with cognitive disabilities"><span>§</span></a></span></h3>
-			<h3 id="memory-2">Memory <span class="permalink"><a href="#distractions-and-people-with-cognitive-disabilities" aria-label="Permalink for Memory " title="Permalink for Memory "><span>§</span></a></span></h3>
+			<h3 id="x6-3-distractions-and-people-with-cognitive-disabilities"><span class="secno">6.3 </span>Distractions and people with cognitive disabilities<a class="self-link" aria-label="§" href="#distractions-and-people-with-cognitive-disabilities"></a></h3>
+			<h3 id="memory-2">Memory <a class="self-link" aria-label="§" href="#distractions-and-people-with-cognitive-disabilities"></a></h3>
 
 			<p>When attention is drawn away from an action (reading, form filling etc) it breaks the user experience sequence and may result in a loss of context, place or position in the action or sequence of actions for those with impaired memory. This may cause the user to need to re-read content repeatedly, return to a previous page, or restart a sequence such as form filling. This will cause the user to need additional time to complete an action which may cause additional time out issues. </p>
 
 			<p>Even one disruption of the user experience by distraction may cause users to abandon a task.  </p>
 		
-		  <h3 id="executive-function-2">Executive function<span class="permalink"><a href="#distractions-and-people-with-cognitive-disabilities" aria-label="Permalink for Executive function" title="Permalink for Executive function"><span>§</span></a></span></h3>
+		  <h3 id="executive-function-2">Executive function<a class="self-link" aria-label="§" href="#distractions-and-people-with-cognitive-disabilities"></a></h3>
 
 			<p>Those with impaired executive skills may have difficulty identifying the source of a distraction. They may have difficulty closing pop-ups, this may impact their ability to use a site with pop-up dialogs (messages, adverts, assistance windows). </p>
 
@@ -2850,24 +2857,24 @@ details.respec-tests-details > li {
 
 			<p>It may be difficult for those with impaired reasoning function to correctly interpret the purpose of the distraction, to differentiate between adverts, pop-up help windows or actual content. </p>
 		
-			<h3 id="attention-related-limitations-2">Attention related limitations<span class="permalink"><a href="#distractions-and-people-with-cognitive-disabilities" aria-label="Permalink for Attention related limitations" title="Permalink for Attention related limitations"><span>§</span></a></span></h3>
+			<h3 id="attention-related-limitations-2">Attention related limitations<a class="self-link" aria-label="§" href="#distractions-and-people-with-cognitive-disabilities"></a></h3>
 
 			<p>Those with attention related difficulties will have those difficulties increased by any distraction from Content focus. </p>
 
 			<p>Distraction will increase the time taken to consume content, and for those with significant attention related issues could make a site completely unusable.     </p>
 		
-			<h3 id="language-and-literacy-related-functions">Language and literacy related functions<span class="permalink"><a href="#distractions-and-people-with-cognitive-disabilities" aria-label="Permalink for Language and literacy related functions" title="Permalink for Language and literacy related functions"><span>§</span></a></span></h3>
+			<h3 id="language-and-literacy-related-functions">Language and literacy related functions<a class="self-link" aria-label="§" href="#distractions-and-people-with-cognitive-disabilities"></a></h3>
 
 			<p>Those with language related impairments may not be able to understand the context or purpose of a pop-up or help window.</p>
 		
 			<p>Those with literacy related impairments may not understand the purpose of a pop-up, or any instructions on how to close or deal with the distraction. </p>
 			<p>Those with literacy related impairments may need use of Text to Speech software (<abbr title="Text To Speech">TTS</abbr>) or other Assistive Technology (<abbr title="Assistive Technology">AT</abbr>). <abbr title="Assistive Technology">AT</abbr> functionality may be impaired by overlays. </p>
 		
-			<h3 id="perception-processing-limitations-1">Perception-processing limitations<span class="permalink"><a href="#distractions-and-people-with-cognitive-disabilities" aria-label="Permalink for Perception-processing limitations" title="Permalink for Perception-processing limitations"><span>§</span></a></span></h3>
+			<h3 id="perception-processing-limitations-1">Perception-processing limitations<a class="self-link" aria-label="§" href="#distractions-and-people-with-cognitive-disabilities"></a></h3>
 
 			<p>Perception-processing limitations may make it difficult for a user to understand the purpose of a distraction such as a help pop up, or to recognize that the overlay not a part of content. They may have difficulty closing any overlay/pop up or pop over window. </p>
 		
-			<h3 id="reduced-knowledge-1">Reduced knowledge<span class="permalink"><a href="#distractions-and-people-with-cognitive-disabilities" aria-label="Permalink for Reduced knowledge" title="Permalink for Reduced knowledge"><span>§</span></a></span></h3>
+			<h3 id="reduced-knowledge-1">Reduced knowledge<a class="self-link" aria-label="§" href="#distractions-and-people-with-cognitive-disabilities"></a></h3>
 
 			<p>Reduced Knowledge may prevent a user from identifying the nature of a distraction, and hence dealing with that distraction effectively.</p>
 		
@@ -2875,23 +2882,23 @@ details.respec-tests-details > li {
 		</section>
         
 		<section id="proposed-solutions-0">
-			<h3 id="x6-4-proposed-solutions"><span class="secno">6.4 </span>Proposed solutions<span class="permalink"><a href="#proposed-solutions-0" aria-label="Permalink for 6.4 Proposed solutions" title="Permalink for 6.4 Proposed solutions"><span>§</span></a></span></h3>
+			<h3 id="x6-4-proposed-solutions"><span class="secno">6.4 </span>Proposed solutions<a class="self-link" aria-label="§" href="#proposed-solutions-0"></a></h3>
 			<p>The following solutions are not tested, and may be accomplished via existing open standards.</p>
 		
 		<section id="informing-content-providers-of-needs">
-			<h4 id="x6-4-1-informing-content-providers-of-needs"><span class="secno">6.4.1 </span>Informing content providers of needs<span class="permalink"><a href="#informing-content-providers-of-needs" aria-label="Permalink for 6.4.1 Informing content providers of needs" title="Permalink for 6.4.1 Informing content providers of needs"><span>§</span></a></span></h4>
+			<h4 id="x6-4-1-informing-content-providers-of-needs"><span class="secno">6.4.1 </span>Informing content providers of needs<a class="self-link" aria-label="§" href="#informing-content-providers-of-needs"></a></h4>
 
 			<p>Inform the content provider of needs and accommodations required. This could be done via a User Agent String, JSON file, Metadata or similar. This would allow content providers to modify how distractions are handled, allowing the front loading of any important information etc. </p>
 		</section>
 		<section id="overlays-pop-up-or-pop-over-windows">
-			<h4 id="x6-4-2-overlays-pop-up-or-pop-over-windows"><span class="secno">6.4.2 </span>Overlays, pop up or pop over windows<span class="permalink"><a href="#overlays-pop-up-or-pop-over-windows" aria-label="Permalink for 6.4.2 Overlays, pop up or pop over windows" title="Permalink for 6.4.2 Overlays, pop up or pop over windows"><span>§</span></a></span></h4>
+			<h4 id="x6-4-2-overlays-pop-up-or-pop-over-windows"><span class="secno">6.4.2 </span>Overlays, pop up or pop over windows<a class="self-link" aria-label="§" href="#overlays-pop-up-or-pop-over-windows"></a></h4>
 			<p>Overlays should not be used where possible. </p>
 			<p>Where unavoidable the purpose of an Overlay should be clear. Overlay should be easily removed without scrolling. The closing mechanism should be clear easy to find, single click and effective. Closing mechanisms should be consistent, standardized and prominent throughout.   </p>
 			<p>Any overlay should be accessible, and should integrate with any existing <abbr title="Assistive Technology">AT</abbr> provision already on the site. </p>
 			<p>Where possible a user should be able to prevent any Overlays. If Overlays contain important information this information should be front loaded so the user does not miss any information.</p>
 		</section>
 		<section id="adverts">
-			<h4 id="x6-4-3-adverts"><span class="secno">6.4.3 </span>Adverts<span class="permalink"><a href="#adverts" aria-label="Permalink for 6.4.3 Adverts" title="Permalink for 6.4.3 Adverts"><span>§</span></a></span></h4>
+			<h4 id="x6-4-3-adverts"><span class="secno">6.4.3 </span>Adverts<a class="self-link" aria-label="§" href="#adverts"></a></h4>
 		  <p>Adverts should not automatically start playing (if Audio/Visual).</p>
 		  <ul>
 		    <li>Adverts should not Overlay content.</li>
@@ -2900,30 +2907,30 @@ details.respec-tests-details > li {
 		  </ul>
 		  </section>
 		<section id="notifications">
-			<h4 id="x6-4-4-notifications"><span class="secno">6.4.4 </span>Notifications<span class="permalink"><a href="#notifications" aria-label="Permalink for 6.4.4 Notifications" title="Permalink for 6.4.4 Notifications"><span>§</span></a></span></h4>
+			<h4 id="x6-4-4-notifications"><span class="secno">6.4.4 </span>Notifications<a class="self-link" aria-label="§" href="#notifications"></a></h4>
 
 			<p>Notifications - should be easy to dismiss, cancel or opt out of. </p>
 		</section>
 		<section id="distracting-content-adwords-blinking-text-unexpected-changes-in-content-etc">
-			<h4 id="x6-4-5-distracting-content-adwords-blinking-text-unexpected-changes-in-content-etc"><span class="secno">6.4.5 </span>Distracting Content (Adwords, blinking text, unexpected changes in content etc)<span class="permalink"><a href="#distracting-content-adwords-blinking-text-unexpected-changes-in-content-etc" aria-label="Permalink for 6.4.5 Distracting Content (Adwords, blinking text, unexpected changes in content etc)" title="Permalink for 6.4.5 Distracting Content (Adwords, blinking text, unexpected changes in content etc)"><span>§</span></a></span></h4>
+			<h4 id="x6-4-5-distracting-content-adwords-blinking-text-unexpected-changes-in-content-etc"><span class="secno">6.4.5 </span>Distracting Content (Adwords, blinking text, unexpected changes in content etc)<a class="self-link" aria-label="§" href="#distracting-content-adwords-blinking-text-unexpected-changes-in-content-etc"></a></h4>
 
 			<p>Distractions embedded in content should be avoided. </p>
 		</section>
 		<section id="application-install-prompts">
-			<h4 id="x6-4-6-application-install-prompts"><span class="secno">6.4.6 </span>Application install prompts<span class="permalink"><a href="#application-install-prompts" aria-label="Permalink for 6.4.6 Application install prompts" title="Permalink for 6.4.6 Application install prompts"><span>§</span></a></span></h4>
+			<h4 id="x6-4-6-application-install-prompts"><span class="secno">6.4.6 </span>Application install prompts<a class="self-link" aria-label="§" href="#application-install-prompts"></a></h4>
 
 			<p>Application install prompts should be clear, accessible and easy to dismiss. Confirmation should be obtained from the user before taking the user to any external site. </p>
 
 			<p>Where using an application may further impair a user the user should be clearly informed of any limitations, for example where an application is less accessible than the site itself. Similarly if an application is more accessible than the site itself the user should be informed, for example if the application allows more accommodations/customizations than the site itself.</p>
 		</section></section>
 		<section id="integrated-solution">
-			<h3 id="x6-5-integrated-solution"><span class="secno">6.5 </span>Integrated  solution<span class="permalink"><a href="#integrated-solution" aria-label="Permalink for 6.5 Integrated  solution" title="Permalink for 6.5 Integrated  solution"><span>§</span></a></span></h3>
+			<h3 id="x6-5-integrated-solution"><span class="secno">6.5 </span>Integrated  solution<a class="self-link" aria-label="§" href="#integrated-solution"></a></h3>
 			<p>This is a proposal to help people stay focused and productive. It is based on a matrix for distractions at the operating system , browser or cloud level. Currently people can turn off  distractions such as Skype, and Facebook, across different devices, and then may forget to turn them back on. This idea manages all distractions by forming a cross application and cross device distraction matrix that manages all distractions in one setting. People and users can be clustered in terms of importance or groups. For example, the CEO and your child's care giver could both be considered critical contacts. So even if they do not feel the message is urgent they can sometimes disrupt the user anyway. Some family members and important colleagues can be in another group, friends and extended family in a third group, system messages from the compliance system can be a different group again. </p>
 			<p>Dimensions in the matrix can include: Groups of contacts, how urgent the contact feels any message is, and the level of interruptions the user can tolerate at any given time or setting. The user can set how to handle any combination of the above for the level of concentration needed at the time. For example, during normal work hours, messages from important colleagues could interrupt the user, but any other messages would get logged and read when the user has time. In another example the user may be  giving a talk and sets the interruption level to critical. Then, only critical messages from key colleagues and family can interrupt. IE: Messages that a critical contact feels is critical and urgent. Default systems can include setting work hours. Optionally, distractions such as news websites could also be limited in low distraction times. </p>
 			<p>Further pop-ups and similar distractions must be always consistently easy to close and avoid so that all people can continue their task.</p>
 		</section>
 		<section id="related-links">
-			<h3 id="x6-6-related-links"><span class="secno">6.6 </span>Related links<span class="permalink"><a href="#related-links" aria-label="Permalink for 6.6 Related links" title="Permalink for 6.6 Related links"><span>§</span></a></span></h3>
+			<h3 id="x6-6-related-links"><span class="secno">6.6 </span>Related links<a class="self-link" aria-label="§" href="#related-links"></a></h3>
 			<p>
 				<a href="https://www.psychologytoday.com/blog/rewired-the-psychology-technology/201204/attention-alert-study-distraction-reveals-some">Attention Alert: A Study on Distraction Reveals Some Surprises</a>
 			</p>
@@ -2933,9 +2940,9 @@ details.respec-tests-details > li {
 	</section>
 
 		    <section id="voice-systems">
-    	<!--OddPage--><h2 id="x7-voice-systems"><span class="secno">7. </span>Voice Systems<span class="permalink"><a href="#voice-systems" aria-label="Permalink for 7. Voice Systems" title="Permalink for 7. Voice Systems"><span>§</span></a></span></h2>
+    	<!--OddPage--><h2 id="x7-voice-systems"><span class="secno">7. </span>Voice Systems<a class="self-link" aria-label="§" href="#voice-systems"></a></h2>
         <section id="introduction-3">
-            <h3 id="x7-1-introduction"><span class="secno">7.1 </span>Introduction<span class="permalink"><a href="#introduction-3" aria-label="Permalink for 7.1 Introduction" title="Permalink for 7.1 Introduction"><span>§</span></a></span></h3>
+            <h3 id="x7-1-introduction"><span class="secno">7.1 </span>Introduction<a class="self-link" aria-label="§" href="#introduction-3"></a></h3>
             <p>Voice systems are systems that a user interacts with by listening to spoken prompts from an automated system. 
                 The user responds by either
                 pressing keys on a telephone keypad or by speaking (or both). 
@@ -2966,11 +2973,11 @@ details.respec-tests-details > li {
             </ul>
         </section>
         <section id="challenges-for-people-with-cognitive-disabilities">
-            <h3 id="x7-2-challenges-for-people-with-cognitive-disabilities"><span class="secno">7.2 </span> Challenges for People with Cognitive Disabilities<span class="permalink"><a href="#challenges-for-people-with-cognitive-disabilities" aria-label="Permalink for 7.2  Challenges for People with Cognitive Disabilities" title="Permalink for 7.2  Challenges for People with Cognitive Disabilities"><span>§</span></a></span></h3>
+            <h3 id="x7-2-challenges-for-people-with-cognitive-disabilities"><span class="secno">7.2 </span> Challenges for People with Cognitive Disabilities<a class="self-link" aria-label="§" href="#challenges-for-people-with-cognitive-disabilities"></a></h3>
             <p>Voice technology can be very problematic for people with cognitive disabilities, due to its heavy demands on
                 memory and on the ability to understand and produce speech in real time.</p>
             <section id="effect-of-memory-impairments-on-users-ability-to-understand-and-respond-to-prompts">
-                <h4 id="x7-2-1-effect-of-memory-impairments-on-users-ability-to-understand-and-respond-to-prompts"><span class="secno">7.2.1 </span> Effect of memory impairments on users' ability to understand and respond to prompts<span class="permalink"><a href="#effect-of-memory-impairments-on-users-ability-to-understand-and-respond-to-prompts" aria-label="Permalink for 7.2.1  Effect of memory impairments on users' ability to understand and respond to prompts" title="Permalink for 7.2.1  Effect of memory impairments on users' ability to understand and respond to prompts"><span>§</span></a></span></h4>
+                <h4 id="x7-2-1-effect-of-memory-impairments-on-users-ability-to-understand-and-respond-to-prompts"><span class="secno">7.2.1 </span> Effect of memory impairments on users' ability to understand and respond to prompts<a class="self-link" aria-label="§" href="#effect-of-memory-impairments-on-users-ability-to-understand-and-respond-to-prompts"></a></h4>
                 <p>A good working memory is essential for using menu-based systems that present several choices
                     to the user and ask them to select one choice, whether by speaking or through a key presss. 
                     The user needs hold multiple pieces of transitory information in the mind 
@@ -2980,7 +2987,7 @@ details.respec-tests-details > li {
                 <p>Without these functions the user is likely to select the wrong number.</p>
             </section>
             <section id="executive-function-1">
-                <h4 id="x7-2-2-executive-function"><span class="secno">7.2.2 </span> Executive function <span class="permalink"><a href="#executive-function-1" aria-label="Permalink for 7.2.2  Executive function " title="Permalink for 7.2.2  Executive function "><span>§</span></a></span></h4>
+                <h4 id="x7-2-2-executive-function"><span class="secno">7.2.2 </span> Executive function <a class="self-link" aria-label="§" href="#executive-function-1"></a></h4>
                 <p>Users need to be able to decide when to act on a menu choice. While a menu is being presented, 
                     should they wait to hear more
                     options or should they select a choice that seems correct before hearing all the options?</p>
@@ -2990,7 +2997,7 @@ details.respec-tests-details > li {
                 </p>
             </section>
             <section id="effect-of-impaired-reasoning">
-                <h4 id="x7-2-3-effect-of-impaired-reasoning"><span class="secno">7.2.3 </span> Effect of impaired reasoning <span class="permalink"><a href="#effect-of-impaired-reasoning" aria-label="Permalink for 7.2.3  Effect of impaired reasoning " title="Permalink for 7.2.3  Effect of impaired reasoning "><span>§</span></a></span></h4>
+                <h4 id="x7-2-3-effect-of-impaired-reasoning"><span class="secno">7.2.3 </span> Effect of impaired reasoning <a class="self-link" aria-label="§" href="#effect-of-impaired-reasoning"></a></h4>
                 <p>The use needs may need to compare similar options 
                     such as "billing", "accounts", "sales" and 
                     decide which is the service that is best suited to solve the issue at hand. 
@@ -2998,21 +3005,21 @@ details.respec-tests-details > li {
                 <p>Advertisements and additional, unrequested information also increase the amount of processing required.</p>
             </section>
             <section id="effect-of-attention-related-limitations">
-                <h4 id="x7-2-4-effect-of-attention-related-limitations"><span class="secno">7.2.4 </span>Effect of attention related limitations<span class="permalink"><a href="#effect-of-attention-related-limitations" aria-label="Permalink for 7.2.4 Effect of attention related limitations" title="Permalink for 7.2.4 Effect of attention related limitations"><span>§</span></a></span></h4> 
+                <h4 id="x7-2-4-effect-of-attention-related-limitations"><span class="secno">7.2.4 </span>Effect of attention related limitations<a class="self-link" aria-label="§" href="#effect-of-attention-related-limitations"></a></h4> 
                 <p>The use needs to focus on the different options and select the correct one. 
                     A person with impaired attention may have difficulties maintaining the necessary 
                     focus for a long or multi level menu. Advertising and additional, 
                     unrequested information also make it harder to retain attention. </p>
             </section>
             <section id="effect-of-impaired-language-and-auditory-perception-related-functions">
-                <h4 id="x7-2-5-effect-of-impaired-language-and-auditory-perception-related-functions"><span class="secno">7.2.5 </span> Effect of impaired language and auditory perception related functions<span class="permalink"><a href="#effect-of-impaired-language-and-auditory-perception-related-functions" aria-label="Permalink for 7.2.5  Effect of impaired language and auditory perception related functions" title="Permalink for 7.2.5  Effect of impaired language and auditory perception related functions"><span>§</span></a></span></h4>
+                <h4 id="x7-2-5-effect-of-impaired-language-and-auditory-perception-related-functions"><span class="secno">7.2.5 </span> Effect of impaired language and auditory perception related functions<a class="self-link" aria-label="§" href="#effect-of-impaired-language-and-auditory-perception-related-functions"></a></h4>
                 <p>The user needs to interpret the correct terms and match them to their needs within a certain time limit.
                     This involves speech perception and language understanding: sounds of language are heard, 
                     interpreted and understood, 
                     within a given time.</p>
             </section>
             <section id="effect-of-impaired-speech-and-language-production-functions-for-speech-recognition-systems">
-                <h4 id="x7-2-6-effect-of-impaired-speech-and-language-production-functions-for-speech-recognition-systems"><span class="secno">7.2.6 </span> Effect of impaired speech and language production functions (for speech-recognition systems)<span class="permalink"><a href="#effect-of-impaired-speech-and-language-production-functions-for-speech-recognition-systems" aria-label="Permalink for 7.2.6  Effect of impaired speech and language production functions (for speech-recognition systems)" title="Permalink for 7.2.6  Effect of impaired speech and language production functions (for speech-recognition systems)"><span>§</span></a></span></h4>
+                <h4 id="x7-2-6-effect-of-impaired-speech-and-language-production-functions-for-speech-recognition-systems"><span class="secno">7.2.6 </span> Effect of impaired speech and language production functions (for speech-recognition systems)<a class="self-link" aria-label="§" href="#effect-of-impaired-speech-and-language-production-functions-for-speech-recognition-systems"></a></h4>
                 <p>The user needs to be able to formulate a spoken response to the prompt before the system "times out" and generates
                     another prompt. In the most common type of speech-recognition system (directed dialog) the user only
                     needs to be able to speak a word or short phrase. However, some systems ("natural language systems") allow the
@@ -3022,14 +3029,14 @@ details.respec-tests-details > li {
                 </p>
             </section>
             <section id="effect-of-reduced-knowledge">
-                <h4 id="x7-2-7-effect-of-reduced-knowledge"><span class="secno">7.2.7 </span>Effect of reduced knowledge<span class="permalink"><a href="#effect-of-reduced-knowledge" aria-label="Permalink for 7.2.7 Effect of reduced knowledge" title="Permalink for 7.2.7 Effect of reduced knowledge"><span>§</span></a></span></h4> 
+                <h4 id="x7-2-7-effect-of-reduced-knowledge"><span class="secno">7.2.7 </span>Effect of reduced knowledge<a class="self-link" aria-label="§" href="#effect-of-reduced-knowledge"></a></h4> 
                 <p>The user needs to be familiar with the terms used in the menu, 
                     even if they are not relevant to the service options required.</p>
             </section>
         </section>
         <section id="proposed-solutions-1">
-            <h3 id="x7-3-proposed-solutions"><span class="secno">7.3 </span>Proposed solutions <span class="permalink"><a href="#proposed-solutions-1" aria-label="Permalink for 7.3 Proposed solutions " title="Permalink for 7.3 Proposed solutions "><span>§</span></a></span></h3>
-            <h3 id="human-backup">Human backup<span class="permalink"><a href="#proposed-solutions-1" aria-label="Permalink for Human backup" title="Permalink for Human backup"><span>§</span></a></span></h3>
+            <h3 id="x7-3-proposed-solutions"><span class="secno">7.3 </span>Proposed solutions <a class="self-link" aria-label="§" href="#proposed-solutions-1"></a></h3>
+            <h3 id="human-backup">Human backup<a class="self-link" aria-label="§" href="#proposed-solutions-1"></a></h3>
             <ol>
                 <li> For users who are unable to use the automated system, it must be possible to reach a human, either in a call
                     center or another operator, through an easy transfer process (that is, not by being directed
@@ -3046,7 +3053,7 @@ details.respec-tests-details > li {
                     reserved digits will be confusing and difficult to learn. Remembering more than one or two reserved digits may be problematic for some users, but repeated verbal recitals of the reserved digits will also be distracting. 
                 </li>
             </ol>
-            <h3 id="user-settings">User settings<span class="permalink"><a href="#proposed-solutions-1" aria-label="Permalink for User settings" title="Permalink for User settings"><span>§</span></a></span></h3>
+            <h3 id="user-settings">User settings<a class="self-link" aria-label="§" href="#proposed-solutions-1"></a></h3>
             User-specific settings can be used to customize the voice user interface, keeping in mind that 
             the available mechanisms for 
             invoking user-specific settings are minimal in a voice interface (speech or DTMF tones). If it is difficult to set user
@@ -3068,7 +3075,7 @@ details.respec-tests-details > li {
                     </ol>
                 </li>
             </ol>
-            <h3 id="follow-best-practices-in-general-vui-design">Follow best practices in general VUI design<span class="permalink"><a href="#proposed-solutions-1" aria-label="Permalink for Follow best practices in general VUI design" title="Permalink for Follow best practices in general VUI design"><span>§</span></a></span></h3>
+            <h3 id="follow-best-practices-in-general-vui-design">Follow best practices in general VUI design<a class="self-link" aria-label="§" href="#proposed-solutions-1"></a></h3>
             Standard best practices in voice user interface apply to users with cognitive disabilities, and should be followed.
             A good reference is published by The Association for 
             Voice Interaction Design Wiki [AVIxD].
@@ -3093,7 +3100,7 @@ details.respec-tests-details > li {
                 </li>
             </ol>
             See the AVIxD wiki cited above for additional recommendation and detail.
-            <h3 id="considerations-for-speech-recognition">Considerations for Speech Recognition<span class="permalink"><a href="#proposed-solutions-1" aria-label="Permalink for Considerations for Speech Recognition" title="Permalink for Considerations for Speech Recognition"><span>§</span></a></span></h3>
+            <h3 id="considerations-for-speech-recognition">Considerations for Speech Recognition<a class="self-link" aria-label="§" href="#proposed-solutions-1"></a></h3>
             <ol>
                 <li>For speech recognition based systems, 
                     an existing ETSI standard for voice commands for many European languages
@@ -3108,11 +3115,11 @@ details.respec-tests-details > li {
                     transfer to an agent 
                     should be provided.</li>
             </ol>
-            <h3 id="follow-requirements-of-legislation">Follow requirements of legislation<span class="permalink"><a href="#proposed-solutions-1" aria-label="Permalink for Follow requirements of legislation" title="Permalink for Follow requirements of legislation"><span>§</span></a></span></h3>
+            <h3 id="follow-requirements-of-legislation">Follow requirements of legislation<a class="self-link" aria-label="§" href="#proposed-solutions-1"></a></h3>
             For example, the U.S. Telecommunications Act Section 255 Accessibility Guidelines [Section255] paragraph 1193.41 Input, control, and mechanical functions, clauses 
             (g), (h) and (i) apply to cognitive disabilities and require that equipment should be operable without time-dependent controls, the ability to
             speak, and should be operable by persons with limited cognitive skills.
-            <h3 id="technology-based-solutions">Technology-based solutions<span class="permalink"><a href="#proposed-solutions-1" aria-label="Permalink for Technology-based solutions" title="Permalink for Technology-based solutions"><span>§</span></a></span></h3>
+            <h3 id="technology-based-solutions">Technology-based solutions<a class="self-link" aria-label="§" href="#proposed-solutions-1"></a></h3>
             Recent developments in call center technology may be helpful for users with cognitive disabilities.
             <ol>
                 <li>Visual IVR. When a call comes in on a smartphone, the system can ask the user if they want to 
@@ -3128,7 +3135,7 @@ details.respec-tests-details > li {
                     not be recognized by a speech recognizer) to 
                     interact with the system. </li>
             </ol>
-            <h3 id="status-of-these-solutions">Status of these solutions<span class="permalink"><a href="#proposed-solutions-1" aria-label="Permalink for Status of these solutions" title="Permalink for Status of these solutions"><span>§</span></a></span></h3>
+            <h3 id="status-of-these-solutions">Status of these solutions<a class="self-link" aria-label="§" href="#proposed-solutions-1"></a></h3>
             <p>Note. The above proposed solutions have been tested for users in the general population and have
                 been shown to improve the usability of voice systems, although the extent to which they have been tested with users with cognitive disabilities is not clear.
             </p>
@@ -3140,7 +3147,7 @@ details.respec-tests-details > li {
             </p></div>
         </section>
         <section id="references-0">
-            <h3 id="x7-4-references"><span class="secno">7.4 </span> References<span class="permalink"><a href="#references-0" aria-label="Permalink for 7.4  References" title="Permalink for 7.4  References"><span>§</span></a></span></h3>
+            <h3 id="x7-4-references"><span class="secno">7.4 </span> References<a class="self-link" aria-label="§" href="#references-0"></a></h3>
             <ol>
                 <li>[AVIxD] <a href="http://videsign.wikispaces.com/">The Association for 
                         Voice Interaction Design Wiki </a></li>
@@ -3155,18 +3162,18 @@ details.respec-tests-details > li {
     </section>
 
 			<section id="online-payments">
-		<!--OddPage--><h2 id="x8-online-payments"><span class="secno">8. </span>Online Payments<span class="permalink"><a href="#online-payments" aria-label="Permalink for 8. Online Payments" title="Permalink for 8. Online Payments"><span>§</span></a></span></h2>
+		<!--OddPage--><h2 id="x8-online-payments"><span class="secno">8. </span>Online Payments<a class="self-link" aria-label="§" href="#online-payments"></a></h2>
 		
 		<section id="introduction-4">
-			<h3 id="x8-1-introduction"><span class="secno">8.1 </span>Introduction<span class="permalink"><a href="#introduction-4" aria-label="Permalink for 8.1 Introduction" title="Permalink for 8.1 Introduction"><span>§</span></a></span></h3>
+			<h3 id="x8-1-introduction"><span class="secno">8.1 </span>Introduction<a class="self-link" aria-label="§" href="#introduction-4"></a></h3>
 			<p>Online payment systems collect information necessary to enable electronic money movements used for but not limited to the purposes of e-commerce purchases, bill payments, person-to-person payments, transferring funds between account holder accounts, and wire transfers. The typical source of funds includes demand deposit accounts (also known as debit accounts) such as a checking or savings account, or a credit account such as a credit card or home equity line of credit. These systems function as a fast and secure electronic alternative to traditional money movement or payment methods such as checks and money orders. </p>
 			<p>Providers of online payment systems include financial institutions, e-commerce vendors, billers such as utility companies, government agencies, and online payment companies like PayPal, Official Payments, or Visa. A secure online account may or may not be required to use these systems. In addition to functionality, online payment systems provide access to transactions, and in some cases bills as well. </p>
 			<p>The terms "online payments", "web payments", "online bill payments", and "online transfers" all involve use of a web-based or mobile app interface for the purpose of consumer to business, person to person, or account to account money movements. Although some differences exist, the learning and cognitive disability challenges presented by all of these payment systems are very similar. Therefor, the terms are used synonymously in this paper.</p>
 			<p>Online payments provide opportunities for people with disabilities to live more independently, however interfaces poorly designed or not designed at all for learning and cognitive disabilities can lead to errant payments and the possibility of significant personal financial hardships. Full accessibility is a necessary part of the solution to prevent unintended, potentially financially burdensome consequences associated with using online payments.</p>
 		</section>
 		<section id="use-case">
-			<h3 id="x8-2-use-case"><span class="secno">8.2 </span>Use Case<span class="permalink"><a href="#use-case" aria-label="Permalink for 8.2 Use Case" title="Permalink for 8.2 Use Case"><span>§</span></a></span></h3>
-			<h3 id="a-person-wants-to-pay-for-an-online-purchase-during-check-out">A person wants to pay for an online purchase during check-out <span class="permalink"><a href="#use-case" aria-label="Permalink for A person wants to pay for an online purchase during check-out " title="Permalink for A person wants to pay for an online purchase during check-out "><span>§</span></a></span></h3>
+			<h3 id="x8-2-use-case"><span class="secno">8.2 </span>Use Case<a class="self-link" aria-label="§" href="#use-case"></a></h3>
+			<h3 id="a-person-wants-to-pay-for-an-online-purchase-during-check-out">A person wants to pay for an online purchase during check-out <a class="self-link" aria-label="§" href="#use-case"></a></h3>
 			<p>This use case assumes the person understands the 'shopping cart' concept and has successfully navigated to the payment starting point. The vendor payment system was developed with <abbr title="Hypertext Markup Language">HTML</abbr>.</p>
 			<p>Challenges for people with cognitive disabilities in online payments: </p>
 			<ul>
@@ -3182,7 +3189,7 @@ details.respec-tests-details > li {
 			</ul>
 		</section>
 		<section id="challenges-of-web-payments-for-people-with-cognitive-disabilities">
-			<h3 id="x8-3-challenges-of-web-payments-for-people-with-cognitive-disabilities"><span class="secno">8.3 </span>Challenges of web payments for people with cognitive disabilities<span class="permalink"><a href="#challenges-of-web-payments-for-people-with-cognitive-disabilities" aria-label="Permalink for 8.3 Challenges of web payments for people with cognitive disabilities" title="Permalink for 8.3 Challenges of web payments for people with cognitive disabilities"><span>§</span></a></span></h3>
+			<h3 id="x8-3-challenges-of-web-payments-for-people-with-cognitive-disabilities"><span class="secno">8.3 </span>Challenges of web payments for people with cognitive disabilities<a class="self-link" aria-label="§" href="#challenges-of-web-payments-for-people-with-cognitive-disabilities"></a></h3>
 			<p>While the use of computer technologies could be effective in helping individuals with cognitive disabilities make online payments, the diversity of ability, conditions, and experience of users with cognitive disabilities can create problems in many online payment situations. The sheer number of different types of cognitive disabilities and effects that they can have on users adds to an already complex issue. </p>
 			<p>Designing accessible web payment systems for users with cognitive disabilities can present some interesting challenges. Certain individuals may have trouble processing language and numbers, deciphering auditory input, and with comprehending spatial orientation. To understand material regarding web payments, a person must be able to identify information and integrate it into meaningful “pieces” or “components”. A person with a brain injury (or other cognitive impairments) may take longer to think and respond to online stimuli. In a web payment system, multiple windows as well as complex or cluttered displays can create distractions and cognitive processing problems. Extended sequential operations can be likewise distracting to those with memory deficit problems. The use of right and left click buttons on a mouse can create difficulties for users with memory, perception or reflex problems. </p>
 			<p>Individuals with lower literacy may have different reading patterns than high literacy readers when it comes to understanding web payment material; while high literacy readers scan text, people with low literacy may read the text “word for word”. This reading style can create a narrow field of view. Objects and information essential for successfully completing online payments may be missed when they are not directly in the flow of text a person is reading.</p>
@@ -3197,10 +3204,10 @@ details.respec-tests-details > li {
 			<p>Effect of impaired understanding of behaviors or consciousness: Improper understanding of behavioral norms, social cues, that may be important in successfully completing a web payment may introduce difficulties for certain persons. </p>
 		</section>
 		<section id="proposed-solutions-2">
-			<h3 id="x8-4-proposed-solutions"><span class="secno">8.4 </span>Proposed solutions<span class="permalink"><a href="#proposed-solutions-2" aria-label="Permalink for 8.4 Proposed solutions" title="Permalink for 8.4 Proposed solutions"><span>§</span></a></span></h3>
+			<h3 id="x8-4-proposed-solutions"><span class="secno">8.4 </span>Proposed solutions<a class="self-link" aria-label="§" href="#proposed-solutions-2"></a></h3>
 			<p>It is important in any proposed solutions to make operational tasks (interacting with a web payment system) as transparent as possible in order for people to focus their attentions on the content related functional aspects of the process. The following solutions support general usability of online payment systems for everyone, in addition to assisting those with cognitive disabilities. </p>
 			<section id="navigation">
-				<h4 id="x8-4-1-navigation"><span class="secno">8.4.1 </span>Navigation<span class="permalink"><a href="#navigation" aria-label="Permalink for 8.4.1 Navigation" title="Permalink for 8.4.1 Navigation"><span>§</span></a></span></h4>
+				<h4 id="x8-4-1-navigation"><span class="secno">8.4.1 </span>Navigation<a class="self-link" aria-label="§" href="#navigation"></a></h4>
 				<ul>
 					<li> Since improper or ambiguous navigation and labeling can create confusion, it is important to standardize controls, features, and navigation within a web payment system – consistency will greatly aid users with short-term memory difficulties. </li>
 					<li> It is important whenever possible to keep menus short and easy to understand, and to use clear labels and signs. </li>
@@ -3213,7 +3220,7 @@ details.respec-tests-details > li {
 				</ul>
 			</section>
 			<section id="functionality">
-				<h4 id="x8-4-2-functionality"><span class="secno">8.4.2 </span>Functionality<span class="permalink"><a href="#functionality" aria-label="Permalink for 8.4.2 Functionality" title="Permalink for 8.4.2 Functionality"><span>§</span></a></span></h4>
+				<h4 id="x8-4-2-functionality"><span class="secno">8.4.2 </span>Functionality<a class="self-link" aria-label="§" href="#functionality"></a></h4>
 				<p>It is desirable to allow the user control of as many aspects of the web payment system as possible. For example, <abbr title="Cascading Style Sheets">CSS</abbr> (Cascading Style Sheets) can be used to provide control of how information is presented. A user interface component can be used to change the <abbr title="Cascading Style Sheets">CSS</abbr> definitions for font and font size; change the line height or space between lines of text; increase the size of "clickable" areas; allow for mouse over highlighting of text for easier reading; change the background color of a page; and invert colors and increase contrast on the page. This approach can allow a designer to maintain higher level control over design families while allowing a person to control the presentation to suit their individual needs. </p>
 				<ul>
 					<li> It is desirable to provide external lists for complex operations for those with memory problems. </li>
@@ -3226,7 +3233,7 @@ details.respec-tests-details > li {
 				</ul>
 			</section>
 			<section id="content-and-text">
-				<h4 id="x8-4-3-content-and-text"><span class="secno">8.4.3 </span>Content and text<span class="permalink"><a href="#content-and-text" aria-label="Permalink for 8.4.3 Content and text" title="Permalink for 8.4.3 Content and text"><span>§</span></a></span></h4>
+				<h4 id="x8-4-3-content-and-text"><span class="secno">8.4.3 </span>Content and text<a class="self-link" aria-label="§" href="#content-and-text"></a></h4>
 				<p>Proposed solutions should address the three categories of human perception: </p>
 					<dl>
 						<dt>Active</dt>
@@ -3255,7 +3262,7 @@ details.respec-tests-details > li {
 				</ul>
 			</section>
 			<section id="layout">
-				<h4 id="x8-4-4-layout"><span class="secno">8.4.4 </span>Layout<span class="permalink"><a href="#layout" aria-label="Permalink for 8.4.4 Layout" title="Permalink for 8.4.4 Layout"><span>§</span></a></span></h4>
+				<h4 id="x8-4-4-layout"><span class="secno">8.4.4 </span>Layout<a class="self-link" aria-label="§" href="#layout"></a></h4>
 				<p>Making a web payment system visually interesting and easy to read can make "listening" to that system difficult (due to the use of graphical spacers and tables, which can disrupt the reading order of related text). The use of database driven text and Cascading Style Sheets (<abbr title="Cascading Style Sheets">CSS</abbr>) can create web payment systems that satisfy the needs of both visual and aural users, while still making it easy to change information and textual data. Additionally, style sheets help to convey context, allow for graceful degradation, and make it available for a greater number of possible browsers to read the code properly. </p>
 				<ul>
 					<li> Consistency is a design goal for most web payment systems. All of the pages in a web payment system should remain as consistent as possible. It is important to ensure that material is well organized on all pages of a web payment system. </li>
@@ -3267,7 +3274,7 @@ details.respec-tests-details > li {
 				</ul>
 			</section>
 			<section id="multimedia">
-				<h4 id="x8-4-5-multimedia"><span class="secno">8.4.5 </span>Multimedia<span class="permalink"><a href="#multimedia" aria-label="Permalink for 8.4.5 Multimedia" title="Permalink for 8.4.5 Multimedia"><span>§</span></a></span></h4>
+				<h4 id="x8-4-5-multimedia"><span class="secno">8.4.5 </span>Multimedia<a class="self-link" aria-label="§" href="#multimedia"></a></h4>
 				<p>Access techniques (where necessary) involving using multimedia for interacting with web payment systems should include (at a minimum): captioning, audio description, subtitling, and dubbing. However, a variety of new options for multimedia on the internet have presented themselves. </p>
 				<ul>
 					<li> It is desirable, since sound and vision may be "complementary modes of information", to use accompanying sounds to help cue a user as to what to do or to enhance a point. It is also desirable to use audio prompts to signal any change of state. </li>
@@ -3279,7 +3286,7 @@ details.respec-tests-details > li {
 			</section>
 		</section>
 		<section id="reference-used">
-			<h3 id="x8-5-reference-used"><span class="secno">8.5 </span>Reference Used:<span class="permalink"><a href="#reference-used" aria-label="Permalink for 8.5 Reference Used:" title="Permalink for 8.5 Reference Used:"><span>§</span></a></span></h3>
+			<h3 id="x8-5-reference-used"><span class="secno">8.5 </span>Reference Used:<a class="self-link" aria-label="§" href="#reference-used"></a></h3>
 			<p>
 				<a href="http://ncdae.org/resources/articles/cognitive/">Cognitive Disabilities and the Web: Where Accessibility and Usability Meet?</a> by The National Center on Disability and Access to Education
 			</p>
@@ -3297,9 +3304,9 @@ details.respec-tests-details > li {
 	</section>
 
 			<section id="online-safety">
-    <!--OddPage--><h2 id="x9-online-safety"><span class="secno">9. </span>Online Safety<span class="permalink"><a href="#online-safety" aria-label="Permalink for 9. Online Safety" title="Permalink for 9. Online Safety"><span>§</span></a></span></h2>
+    <!--OddPage--><h2 id="x9-online-safety"><span class="secno">9. </span>Online Safety<a class="self-link" aria-label="§" href="#online-safety"></a></h2>
 		<section id="introduction-5">
-    <h3 id="x9-1-introduction"><span class="secno">9.1 </span>Introduction<span class="permalink"><a href="#introduction-5" aria-label="Permalink for 9.1 Introduction" title="Permalink for 9.1 Introduction"><span>§</span></a></span></h3>
+    <h3 id="x9-1-introduction"><span class="secno">9.1 </span>Introduction<a class="self-link" aria-label="§" href="#introduction-5"></a></h3>
 		<p>The Internet is not always a safe place. Like life off the Internet, everyone is at risk of having crime being a part of their experience online. Usually referred to as cybercrime these activities, including fraud, terrorism, extortion, harassment and hacking are perpetrated by several types of criminals:</p>
 		<ul>
 			<li>Hackers may steal someone’s identity, information or money without the user being aware of what is happening.</li>
@@ -3307,20 +3314,20 @@ details.respec-tests-details > li {
 			<li>Sexual predators use the Internet to identify vulnerable people and exploit them, either online or offline.</li>
 		</ul></section>
 		<section id="safety-issues-for-people-with-cognitive-disabilities">
-			<h3 id="x9-2-safety-issues-for-people-with-cognitive-disabilities"><span class="secno">9.2 </span>Safety issues for people with cognitive disabilities<span class="permalink"><a href="#safety-issues-for-people-with-cognitive-disabilities" aria-label="Permalink for 9.2 Safety issues for people with cognitive disabilities" title="Permalink for 9.2 Safety issues for people with cognitive disabilities"><span>§</span></a></span></h3>
+			<h3 id="x9-2-safety-issues-for-people-with-cognitive-disabilities"><span class="secno">9.2 </span>Safety issues for people with cognitive disabilities<a class="self-link" aria-label="§" href="#safety-issues-for-people-with-cognitive-disabilities"></a></h3>
 			<section id="hackers">
-				<h4 id="x9-2-1-hackers"><span class="secno">9.2.1 </span>Hackers<span class="permalink"><a href="#hackers" aria-label="Permalink for 9.2.1 Hackers" title="Permalink for 9.2.1 Hackers"><span>§</span></a></span></h4>
+				<h4 id="x9-2-1-hackers"><span class="secno">9.2.1 </span>Hackers<a class="self-link" aria-label="§" href="#hackers"></a></h4>
 				<p>People with cognitive disabilities may not be able to easily use some of the common security measures used on the Web such as two-factor authentication and safe and unique passwords.</p>
 
 <p>Extra security precautions to increase password strength often make this group more vulnerable to "human error". This can encourage risky behaviour such as keeping a list of passwords on a desk which can be used by anyone who has physical access to the room. Also, when users ask for assistance to complete these security procedures, they can put themselves at high risk of being abused by those they trust to help.</p>
 
 			</section>
 			<section id="con-artists">
-				<h4 id="x9-2-2-con-artists"><span class="secno">9.2.2 </span>Con-artists <span class="permalink"><a href="#con-artists" aria-label="Permalink for 9.2.2 Con-artists " title="Permalink for 9.2.2 Con-artists "><span>§</span></a></span></h4>
+				<h4 id="x9-2-2-con-artists"><span class="secno">9.2.2 </span>Con-artists <a class="self-link" aria-label="§" href="#con-artists"></a></h4>
 				<p>These cyber-criminals use deception to gain trust and this enables them to negatively influence the behavior of vulnerable individuals. People with cognitive impairment who experience difficulty understanding social cues will likely fail to accurately identify a risky or potentially harmful situation. Those who have difficulty understanding others can act contrary to their own hypothetical actions in a given situation  (i.e., mind-blindness) are more trusting and may easily believe false information. Also, people with impaired reasoning, attention or memory may be similarly vulnerable to these situations as they are not especially cognitively equipped to validate presented information.</p>
 			</section>
 			<section id="sexual-predators">
-				<h4 id="x9-2-3-sexual-predators"><span class="secno">9.2.3 </span>Sexual predators<span class="permalink"><a href="#sexual-predators" aria-label="Permalink for 9.2.3 Sexual predators" title="Permalink for 9.2.3 Sexual predators"><span>§</span></a></span></h4>
+				<h4 id="x9-2-3-sexual-predators"><span class="secno">9.2.3 </span>Sexual predators<a class="self-link" aria-label="§" href="#sexual-predators"></a></h4>
 				<p>People with cognitive disabilities may be more at risk of being a victim of a sexual crime. This is more likely if: </p>
 				<ul>
 					<li> they tend to be unaware of someone using a fake identity or misleading information; </li>
@@ -3330,21 +3337,21 @@ details.respec-tests-details > li {
 				</ul>
 			</section>
             <section id="personalization-problems">
-				<h4 id="x9-2-4-personalization-problems"><span class="secno">9.2.4 </span>Personalization problems<span class="permalink"><a href="#personalization-problems" aria-label="Permalink for 9.2.4 Personalization problems" title="Permalink for 9.2.4 Personalization problems"><span>§</span></a></span></h4>
+				<h4 id="x9-2-4-personalization-problems"><span class="secno">9.2.4 </span>Personalization problems<a class="self-link" aria-label="§" href="#personalization-problems"></a></h4>
 				<p> Personalization is important, especially as a way to avoid conflict when meeting varying user needs, among many other reasons. However, there is a significant risk that if poorly implemented, user information and vulnerabilities can be exposed. This puts the most vulnerable users of this population at the greatest risk. </p>
 			</section>
 		</section>
 		<section id="proposed-solutions-3">
-			<h3 id="x9-3-proposed-solutions"><span class="secno">9.3 </span>Proposed Solutions<span class="permalink"><a href="#proposed-solutions-3" aria-label="Permalink for 9.3 Proposed Solutions" title="Permalink for 9.3 Proposed Solutions"><span>§</span></a></span></h3>
+			<h3 id="x9-3-proposed-solutions"><span class="secno">9.3 </span>Proposed Solutions<a class="self-link" aria-label="§" href="#proposed-solutions-3"></a></h3>
 			<p>Safety should be priority when making content accessibile for people with cognitive disabilities extra care should be applied at the same time to keep them safe. </p>
 			<p>All user information must be kept safe, to the fullest extent possible. Any clues that the user has cognitive disabilities, such as a request for a simplified version, should be protected information. </p>
 			<p>Personalization systems should be designed so that any information implying vulnerabilities are on the user device and are secure. Use of functional requirements can also be a safer alternative to describing user needs in systems such as meta-data.</p>
 			<section id="hackers-0">
-				<h4 id="x9-3-1-hackers"><span class="secno">9.3.1 </span>Hackers<span class="permalink"><a href="#hackers-0" aria-label="Permalink for 9.3.1 Hackers" title="Permalink for 9.3.1 Hackers"><span>§</span></a></span></h4>
+				<h4 id="x9-3-1-hackers"><span class="secno">9.3.1 </span>Hackers<a class="self-link" aria-label="§" href="#hackers-0"></a></h4>
 				<p>Security should be strong and easily used by those with cognitive disabilities, such as a biometrics option. For a full discussion see the <a href="privacy-security.html">issue paper on security</a>. </p>
 			</section>
 			<section id="sexual-predators-and-con-artists">
-				<h4 id="x9-3-2-sexual-predators-and-con-artists"><span class="secno">9.3.2 </span>Sexual predators and con-artists<span class="permalink"><a href="#sexual-predators-and-con-artists" aria-label="Permalink for 9.3.2 Sexual predators and con-artists" title="Permalink for 9.3.2 Sexual predators and con-artists"><span>§</span></a></span></h4>
+				<h4 id="x9-3-2-sexual-predators-and-con-artists"><span class="secno">9.3.2 </span>Sexual predators and con-artists<a class="self-link" aria-label="§" href="#sexual-predators-and-con-artists"></a></h4>
 				<ul>
 					<li> A site with a chat option should prevent any exchange of personal information. </li>
 					<li> Users should be regularly warned to avoid scams. </li>
@@ -3359,48 +3366,48 @@ details.respec-tests-details > li {
 			</section>
 		</section>
 		<section id="acknowledgments">
-		  <h3 id="x9-4-acknowledgments"><span class="secno">9.4 </span>Acknowledgments<span class="permalink"><a href="#acknowledgments" aria-label="Permalink for 9.4 Acknowledgments" title="Permalink for 9.4 Acknowledgments"><span>§</span></a></span></h3>
+		  <h3 id="x9-4-acknowledgments"><span class="secno">9.4 </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgments"></a></h3>
 			<p>Thanks to Crimes against Children Investigations Israel National Cyber Unit for the review. </p></section>
 	</section>
 
 		<section id="symbol-users-with-speech-language-and-literacy-difficulties">
-	<!--OddPage--><h2 id="x10-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">10. </span>Symbol users with Speech, Language and Literacy Difficulties<span class="permalink"><a href="#symbol-users-with-speech-language-and-literacy-difficulties" aria-label="Permalink for 10. Symbol users with Speech, Language and Literacy Difficulties" title="Permalink for 10. Symbol users with Speech, Language and Literacy Difficulties"><span>§</span></a></span></h2>
+	<!--OddPage--><h2 id="x10-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">10. </span>Symbol users with Speech, Language and Literacy Difficulties<a class="self-link" aria-label="§" href="#symbol-users-with-speech-language-and-literacy-difficulties"></a></h2>
 	<section id="introduction-6">
-        <h3 id="x10-1-introduction"><span class="secno">10.1 </span>Introduction<span class="permalink"><a href="#introduction-6" aria-label="Permalink for 10.1 Introduction" title="Permalink for 10.1 Introduction"><span>§</span></a></span></h3>
+        <h3 id="x10-1-introduction"><span class="secno">10.1 </span>Introduction<a class="self-link" aria-label="§" href="#introduction-6"></a></h3>
         <p>Voice Output Communication Aids (VOCAs) are devices that have been developed to allow pictures, symbols or words to be used with speech synthesis. The devices may be specialist items with built in systems carrying the symbols. They may also be a generic computer, tablet or mobile with specialist software or apps. The symbols are activated by single or multiple touches, eyes dwelling on a chosen image or manual use of a keyboard or switches. An external input device usually allows for step by step scanning up and down rows and columns of symbols on a grid. Symbols and word choices are personalised to suit the user, representing known objects, actions and happenings.</p>
         </section>
     <section id="challenges-for-people-with-cognitive-disabilities-using-symbols">
-      <h3 id="x10-2-challenges-for-people-with-cognitive-disabilities-using-symbols"><span class="secno">10.2 </span> Challenges for people with cognitive disabilities using symbols<span class="permalink"><a href="#challenges-for-people-with-cognitive-disabilities-using-symbols" aria-label="Permalink for 10.2  Challenges for people with cognitive disabilities using symbols" title="Permalink for 10.2  Challenges for people with cognitive disabilities using symbols"><span>§</span></a></span></h3>
+      <h3 id="x10-2-challenges-for-people-with-cognitive-disabilities-using-symbols"><span class="secno">10.2 </span> Challenges for people with cognitive disabilities using symbols<a class="self-link" aria-label="§" href="#challenges-for-people-with-cognitive-disabilities-using-symbols"></a></h3>
         <p>The users of Alternative and Augmentative Communication (AAC) based on images or pictographs as symbols tend to have no speech or language, very unintelligible speech or difficulties expressing themselves and/or may need reading support. Individuals may also have severe mobility and dexterity disabilities and/or cognitive impairments. Depending on the skills of the user, the environment and task in hand, symbols may be used to represent a phrase or whole sentence of speech or be made up of individual parts of speech to aid sentence making. Where literacy skills are a challenge the use of online communication becomes an issue due to the lack of accurate symbol to text or text to symbol sets that can be used/translate across all symbol systems.</p>
         <section id="memory-1">
-            <h4 id="x10-2-1-memory"><span class="secno">10.2.1 </span>Memory <span class="permalink"><a href="#memory-1" aria-label="Permalink for 10.2.1 Memory " title="Permalink for 10.2.1 Memory "><span>§</span></a></span></h4>
+            <h4 id="x10-2-1-memory"><span class="secno">10.2.1 </span>Memory <a class="self-link" aria-label="§" href="#memory-1"></a></h4>
             <p>Symbol users may be unable to cope with large amounts of online material. This depends on their ability but may limit the degree to which they can cope with content that is text based.</p>
         </section>
         <section id="reasoning-and-executive-function">
-            <h4 id="x10-2-2-reasoning-and-executive-function"><span class="secno">10.2.2 </span>Reasoning and executive function<span class="permalink"><a href="#reasoning-and-executive-function" aria-label="Permalink for 10.2.2 Reasoning and executive function" title="Permalink for 10.2.2 Reasoning and executive function"><span>§</span></a></span></h4>
+            <h4 id="x10-2-2-reasoning-and-executive-function"><span class="secno">10.2.2 </span>Reasoning and executive function<a class="self-link" aria-label="§" href="#reasoning-and-executive-function"></a></h4>
             <p>Symbol users may find it hard to plan a route through web pages unless navigation is clear.</p>
             <p> They may have other physical and cognitive impairments affecting their understanding and use of navigation controls.</p>
             <p>AAC users may also be overwhelmed by the amount of interactions required to complete tasks.</p>
         </section>
         <section id="attention-related-limitations-1">
-            <h4 id="x10-2-3-attention-related-limitations"><span class="secno">10.2.3 </span>Attention-related limitations<span class="permalink"><a href="#attention-related-limitations-1" aria-label="Permalink for 10.2.3 Attention-related limitations" title="Permalink for 10.2.3 Attention-related limitations"><span>§</span></a></span></h4>
+            <h4 id="x10-2-3-attention-related-limitations"><span class="secno">10.2.3 </span>Attention-related limitations<a class="self-link" aria-label="§" href="#attention-related-limitations-1"></a></h4>
             <p>Symbol users may find large amounts of text reduces attention but symbol based content helps concentration. </p>
         </section>
         <section id="language-and-auditory-perception-related-functions">
-            <h4 id="x10-2-4-language-and-auditory-perception-related-functions"><span class="secno">10.2.4 </span>Language and auditory perception related functions<span class="permalink"><a href="#language-and-auditory-perception-related-functions" aria-label="Permalink for 10.2.4 Language and auditory perception related functions" title="Permalink for 10.2.4 Language and auditory perception related functions"><span>§</span></a></span></h4>
+            <h4 id="x10-2-4-language-and-auditory-perception-related-functions"><span class="secno">10.2.4 </span>Language and auditory perception related functions<a class="self-link" aria-label="§" href="#language-and-auditory-perception-related-functions"></a></h4>
             <p>Symbol users may find dense text based content with audio output confusing whereas audio with symbols may be helpful.</p>
         </section>
         <section id="literacy-related-functions-0">
-            <h4 id="x10-2-5-literacy-related-functions"><span class="secno">10.2.5 </span>Literacy-related functions<span class="permalink"><a href="#literacy-related-functions-0" aria-label="Permalink for 10.2.5 Literacy-related functions" title="Permalink for 10.2.5 Literacy-related functions"><span>§</span></a></span></h4>
+            <h4 id="x10-2-5-literacy-related-functions"><span class="secno">10.2.5 </span>Literacy-related functions<a class="self-link" aria-label="§" href="#literacy-related-functions-0"></a></h4>
             <p>Symbol users may not comprehend the meaning of text based content and may fail to act correctly when warnings or other interactive items appear on the web.</p>
         </section>
         <section id="knowledge">
-            <h4 id="x10-2-6-knowledge"><span class="secno">10.2.6 </span>Knowledge<span class="permalink"><a href="#knowledge" aria-label="Permalink for 10.2.6 Knowledge" title="Permalink for 10.2.6 Knowledge"><span>§</span></a></span></h4>
+            <h4 id="x10-2-6-knowledge"><span class="secno">10.2.6 </span>Knowledge<a class="self-link" aria-label="§" href="#knowledge"></a></h4>
             <p>Symbol users may fail to recognize images, such as symbols or icons that are not in their known set and may lack the ability to use the web as it has been intended, failing to find understandable icons or imagery that provides easy to use navigation or content.</p>
         </section></section>
         <section class="respec-offending-element">
             <section>
-                <h4 id="proposed-solutions-5">Proposed solutions</h4>
+                <h4 id="proposed-solutions-5">Proposed solutions<a class="self-link" aria-label="§" href="#symbol-users-with-speech-language-and-literacy-difficulties"></a></h4>
                 <p>The strategy of mapping symbol sets to a common vocabulary may allow developers to incorporate helpful symbols knowing these can be automatically presented to the user in their own symbol language. This schema would also allow symbol users to use their own symbols in an edit box or form knowing it can be recognised by other symbol users with the automatic translation. The primary solutions for the mapping symbols for symbol users could be divided into three different user scenarios. For all these scenarios, the symbols presented to the symbol users could be alternative and adaptive based on the users' preference.</p>
                 <ul>
                     <li>Adaptive Symbols in the Web Content;</li>
@@ -3409,7 +3416,7 @@ details.respec-tests-details > li {
                 </ul>
             </section>
             <section>
-                <h4 id="using-proposed-syntax">Using proposed syntax</h4>
+                <h4 id="using-proposed-syntax">Using proposed syntax<a class="self-link" aria-label="§" href="#symbol-users-with-speech-language-and-literacy-difficulties"></a></h4>
                 <p> One option for interoperable symbol mapping uses the proposed syntax: aria-concept = "uri" to reference target concept URI like the following example. </p>
                 <div class="example">
                     &lt;img aria-concept="http://wordnet.org/somepage#girlnode" src="girlwithbow.gif"/&gt;</div>
@@ -3428,7 +3435,7 @@ details.respec-tests-details > li {
                     </ul>
             </section>
             <section>
-                <h4 id="mapping-symbols">Mapping symbols</h4>
+                <h4 id="mapping-symbols">Mapping symbols<a class="self-link" aria-label="§" href="#symbol-users-with-speech-language-and-literacy-difficulties"></a></h4>
                 <p>In order to map the symbols from different dictionaries, one of the approaches could be the use of an ontology and Semantic Web technologies to enable interoperability of symbols datasets.</p>
                 <p> An ontology is a formal specification of a shared conceptualization<!-- [[Gruber-1]]-->. In Semantic Web, a vocabulary can be considered as a special form of (usually light-weight) ontology, or sometimes also merely as a collection of URIs with a (usually informally) described meaning. Linked Data is a term used to describe a recommended best practice for exposing, sharing, and connecting pieces of data, information, and knowledge on the Semantic Web using URIs and RDF (The Resource Description Framework, <abbr title="World Wide Web Consortium">W3C</abbr> recommend metadata data model). The Concept Encoding Framework Working Group provides the multilingual and multi-modal lexical ontology (The Lexicon Model for Ontologies <!--[[Lemon-1]])--> of the CCF to be made available in a Linked Open Data (LOD) format. It also allows users to search symbols based on different concepts and metadata, such as language, symbol datasets, localization. The following example demonstrates using the RDFa to represent the mapping between symbols based on concept coding.
                 </p>
@@ -3481,9 +3488,9 @@ details.respec-tests-details > li {
 
 
 			<section id="use-of-numbers-and-math-on-the-web">
-		<!--OddPage--><h2 id="x11-use-of-numbers-and-math-on-the-web"><span class="secno">11. </span>Use of Numbers and Math on the Web<span class="permalink"><a href="#use-of-numbers-and-math-on-the-web" aria-label="Permalink for 11. Use of Numbers and Math on the Web" title="Permalink for 11. Use of Numbers and Math on the Web"><span>§</span></a></span></h2>
+		<!--OddPage--><h2 id="x11-use-of-numbers-and-math-on-the-web"><span class="secno">11. </span>Use of Numbers and Math on the Web<a class="self-link" aria-label="§" href="#use-of-numbers-and-math-on-the-web"></a></h2>
 		<section id="introduction-7">
-			<h3 id="x11-1-introduction"><span class="secno">11.1 </span>Introduction<span class="permalink"><a href="#introduction-7" aria-label="Permalink for 11.1 Introduction" title="Permalink for 11.1 Introduction"><span>§</span></a></span></h3>
+			<h3 id="x11-1-introduction"><span class="secno">11.1 </span>Introduction<a class="self-link" aria-label="§" href="#introduction-7"></a></h3>
 			<p>Numeracy issues can occur due to a range of difficulties, the most severe being the inability to read or understand numbers. However, the main problems tend to revolve around decoding. When reading measurement an individual with cognitive impairment may understand the concept of 90cms as a length but find it hard to cope with the fact that 0.9m and 900mm are the same length. Individual difficulties include: </p>
 			<ol>
 				<li>understanding what the representation of a number may mean as a concept of: </li>
@@ -3504,51 +3511,51 @@ details.respec-tests-details > li {
 			</ol>
 		</section>
 		<section id="specific-categories">
-			<h3 id="x11-2-specific-categories"><span class="secno">11.2 </span>Specific Categories<span class="permalink"><a href="#specific-categories" aria-label="Permalink for 11.2 Specific Categories" title="Permalink for 11.2 Specific Categories"><span>§</span></a></span></h3>
+			<h3 id="x11-2-specific-categories"><span class="secno">11.2 </span>Specific Categories<a class="self-link" aria-label="§" href="#specific-categories"></a></h3>
 			<section id="effect-of-memory-impairments">
-				<h4 id="x11-2-1-effect-of-memory-impairments"><span class="secno">11.2.1 </span>Effect of memory impairments<span class="permalink"><a href="#effect-of-memory-impairments" aria-label="Permalink for 11.2.1 Effect of memory impairments" title="Permalink for 11.2.1 Effect of memory impairments"><span>§</span></a></span></h4>
+				<h4 id="x11-2-1-effect-of-memory-impairments"><span class="secno">11.2.1 </span>Effect of memory impairments<a class="self-link" aria-label="§" href="#effect-of-memory-impairments"></a></h4>
 				<p>Tasks that involve recalling significant amounts of numbers or application including lengthy techniques may be difficult. Examples include, remembering phone and pin numbers, working through an online process such as booking and paying for a train ticket. Shopping online with multiple offers and alternatives. </p>
 			</section>
 			<section id="effect-of-impaired-executive-function">
-				<h4 id="x11-2-2-effect-of-impaired-executive-function"><span class="secno">11.2.2 </span>Effect of impaired executive function<span class="permalink"><a href="#effect-of-impaired-executive-function" aria-label="Permalink for 11.2.2 Effect of impaired executive function" title="Permalink for 11.2.2 Effect of impaired executive function"><span>§</span></a></span></h4>
+				<h4 id="x11-2-2-effect-of-impaired-executive-function"><span class="secno">11.2.2 </span>Effect of impaired executive function<a class="self-link" aria-label="§" href="#effect-of-impaired-executive-function"></a></h4>
 				<p>This involves working memory where individuals may misread and mistype numbers as well as have copying issues. Where numbers look or sound similar these may cause confusion for example, 7 and 9 or 66 and 56 – may be based upon the language and where numbers are read out with no visual cue or may be written with no audio support. </p>
 				<p>An alternative presentation of numbers may cause problems, so the difference between the calculator keypad, the numbers on a keyboard and a phone pad may result in incorrect numbers being used to unlock or access product services. Cognitive load associated with decoding numbers and symbols should be considered when offering alternative strategies. These alternatives could further exacerbate executive functioning difficulties, for example saying ‘1/5’ as ‘open fraction one over 5 close fraction’ compared to saying ‘one fifth’ – this is to do with the amount said or verbosity. </p>
 			</section>
 			<section id="effect-of-impaired-reasoning-0">
-				<h4 id="x11-2-3-effect-of-impaired-reasoning"><span class="secno">11.2.3 </span>Effect of impaired reasoning<span class="permalink"><a href="#effect-of-impaired-reasoning-0" aria-label="Permalink for 11.2.3 Effect of impaired reasoning" title="Permalink for 11.2.3 Effect of impaired reasoning"><span>§</span></a></span></h4>
+				<h4 id="x11-2-3-effect-of-impaired-reasoning"><span class="secno">11.2.3 </span>Effect of impaired reasoning<a class="self-link" aria-label="§" href="#effect-of-impaired-reasoning-0"></a></h4>
 				<p>If there is an impairment of abstract thinking and reasoning, problem solving and working online with numbers in any way will be impacted upon to such an extent that users will be unable to access arithmetical content, use numerical passwords or cope with decision making based on numerical information such as entering vehicle registration numbers where L and O many be confused with 1 and 0 (one and zero), particularly when using lower case. </p>
 				<p>Items that need to be added to an edit form in a particular manner such as zip codes or postal codes, dates, time, birthdates etc. may also cause confusion. </p>
 			</section>
 			<section id="effect-of-attention-related-limitations-0">
-				<h4 id="x11-2-4-effect-of-attention-related-limitations"><span class="secno">11.2.4 </span>Effect of attention-related limitations<span class="permalink"><a href="#effect-of-attention-related-limitations-0" aria-label="Permalink for 11.2.4 Effect of attention-related limitations" title="Permalink for 11.2.4 Effect of attention-related limitations"><span>§</span></a></span></h4>
+				<h4 id="x11-2-4-effect-of-attention-related-limitations"><span class="secno">11.2.4 </span>Effect of attention-related limitations<a class="self-link" aria-label="§" href="#effect-of-attention-related-limitations-0"></a></h4>
 				<p>Attention limitations may cause problems with completing items accurately where there are a required number of steps or where midway between two processes concentration has been lost due to another distraction e.g. adverts, pop-up, interstitials etc. This issue is linked to memory difficulties and being unable to cope with versioning – noticing the different file names where numbers have been used and not a complete change of title. </p>
 			</section>
 			<section id="effect-of-impaired-language-related-functions">
-				<h4 id="x11-2-5-effect-of-impaired-language-related-functions"><span class="secno">11.2.5 </span>Effect of impaired language related functions<span class="permalink"><a href="#effect-of-impaired-language-related-functions" aria-label="Permalink for 11.2.5 Effect of impaired language related functions" title="Permalink for 11.2.5 Effect of impaired language related functions"><span>§</span></a></span></h4>
+				<h4 id="x11-2-5-effect-of-impaired-language-related-functions"><span class="secno">11.2.5 </span>Effect of impaired language related functions<a class="self-link" aria-label="§" href="#effect-of-impaired-language-related-functions"></a></h4>
 				<p>Receptive and expressive speech and language impairments may hamper the ability to cope with numbers provided auditorily such audio <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr>. Cultural differences in the way numbers and math are spoken may cause issues around the order of presentation and the words used such as parentheses (US) or brackets (UK). </p>
 				<p>The inclusion or exclusion of certain elements of an equation when read aloud can have an impact on understanding, for example, leaving out parentheses or brackets. </p>
 				<p>Different voices used by text to speech engines read numbers in different ways for, example, phone numbers may be read incorrectly. </p>
 			</section>
 			<section id="effect-of-impaired-literacy-related-functions">
-				<h4 id="x11-2-6-effect-of-impaired-literacy-related-functions"><span class="secno">11.2.6 </span>Effect of impaired literacy related functions<span class="permalink"><a href="#effect-of-impaired-literacy-related-functions" aria-label="Permalink for 11.2.6 Effect of impaired literacy related functions" title="Permalink for 11.2.6 Effect of impaired literacy related functions"><span>§</span></a></span></h4> 
+				<h4 id="x11-2-6-effect-of-impaired-literacy-related-functions"><span class="secno">11.2.6 </span>Effect of impaired literacy related functions<a class="self-link" aria-label="§" href="#effect-of-impaired-literacy-related-functions"></a></h4> 
 				<p>This includes, difficulties with reading the symbols representing numbers and numerical concepts which can cause confusion, increased time taken when completing forms and the misreading of sums. This could be considered as a decoding issue. An example would be ‘50%’ failing to be understood as ‘fifty percent’. </p>
 			</section>
 			<section id="effect-of-perception-processing-limitations">
-				<h4 id="x11-2-7-effect-of-perception-processing-limitations"><span class="secno">11.2.7 </span>Effect of perception-processing limitations<span class="permalink"><a href="#effect-of-perception-processing-limitations" aria-label="Permalink for 11.2.7 Effect of perception-processing limitations" title="Permalink for 11.2.7 Effect of perception-processing limitations"><span>§</span></a></span></h4>
+				<h4 id="x11-2-7-effect-of-perception-processing-limitations"><span class="secno">11.2.7 </span>Effect of perception-processing limitations<a class="self-link" aria-label="§" href="#effect-of-perception-processing-limitations"></a></h4>
 				<p>There are several perceptual difficulties that may impact on numerical ability such sequential processing where comprehension of multiple numerical items in a process may be impacted upon such as addition and subtraction where the order of numbers is crucial. Sequencing difficulties also impact on time and the duration of time or even size of numbers. Auditory perceptual difficulties occur where numbers may appear to be misheard but actually hearing can be good and it is the comprehension that is affected so the number or numerical concept does mean anything. For example the audio <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> is read out aloud but in the time given the user is unable to process the content. </p>
 				<p>Visual perceptual difficulties may include spatial and pattern recognition where the user may have problems with diagrammatic representations of numerical and symbolic information. For example extracting information from a graph or diagram, comparing diagrammatic information or where position impacts on the concept – ¾ compared to 4/3.</p>
 			</section>
 			<section id="effect-of-reduced-knowledge-0">
-				<h4 id="x11-2-8-effect-of-reduced-knowledge"><span class="secno">11.2.8 </span>Effect of reduced knowledge<span class="permalink"><a href="#effect-of-reduced-knowledge-0" aria-label="Permalink for 11.2.8 Effect of reduced knowledge" title="Permalink for 11.2.8 Effect of reduced knowledge"><span>§</span></a></span></h4>
+				<h4 id="x11-2-8-effect-of-reduced-knowledge"><span class="secno">11.2.8 </span>Effect of reduced knowledge<a class="self-link" aria-label="§" href="#effect-of-reduced-knowledge-0"></a></h4>
 				<p>Reduced knowledge may occur where an individual has sustained a brain injury and prior understanding of numbers and numerical concepts have been lost. This may result in all the aforementioned issues occurring. </p>
 			</section>
 			<section id="effect-of-impaired-understanding-of-behaviours-or-consciousness">
-				<h4 id="x11-2-9-effect-of-impaired-understanding-of-behaviours-or-consciousness"><span class="secno">11.2.9 </span>Effect of impaired understanding of behaviours or consciousness<span class="permalink"><a href="#effect-of-impaired-understanding-of-behaviours-or-consciousness" aria-label="Permalink for 11.2.9 Effect of impaired understanding of behaviours or consciousness" title="Permalink for 11.2.9 Effect of impaired understanding of behaviours or consciousness"><span>§</span></a></span></h4>
+				<h4 id="x11-2-9-effect-of-impaired-understanding-of-behaviours-or-consciousness"><span class="secno">11.2.9 </span>Effect of impaired understanding of behaviours or consciousness<a class="self-link" aria-label="§" href="#effect-of-impaired-understanding-of-behaviours-or-consciousness"></a></h4>
 				<p>The abstract nature of numerical information may be impacted on by a lack of understanding the presentation of problems that are inappropriate to the concept of the user’s environment and lifestyle – this may include items such as examples that are given as comparisons such as weighing as much as an elephant – the user is not talking about elephants but making a comparison between heavy and light. </p>
 			</section>
 		</section>
 		<section id="proposed-solutions-4">
-			<h3 id="x11-3-proposed-solutions"><span class="secno">11.3 </span>Proposed Solutions<span class="permalink"><a href="#proposed-solutions-4" aria-label="Permalink for 11.3 Proposed Solutions" title="Permalink for 11.3 Proposed Solutions"><span>§</span></a></span></h3>
+			<h3 id="x11-3-proposed-solutions"><span class="secno">11.3 </span>Proposed Solutions<a class="self-link" aria-label="§" href="#proposed-solutions-4"></a></h3>
 			<p>Notes on proposed solutions: </p>
 			<ol>
 				<li> Use the NIDER research </li>
@@ -3584,7 +3591,7 @@ details.respec-tests-details > li {
 		
 		<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'>Acknowledgements placeholder</div>-->
         <section id="significant-contributors-to-the-issue-papers">
-          <!--OddPage--><h2 id="x12-significant-contributors-to-the-issue-papers"><span class="secno">12. </span>Significant contributors to the issue papers <span class="permalink"><a href="#significant-contributors-to-the-issue-papers" aria-label="Permalink for 12. Significant contributors to the issue papers " title="Permalink for 12. Significant contributors to the issue papers "><span>§</span></a></span></h2> 
+          <!--OddPage--><h2 id="x12-significant-contributors-to-the-issue-papers"><span class="secno">12. </span>Significant contributors to the issue papers <a class="self-link" aria-label="§" href="#significant-contributors-to-the-issue-papers"></a></h2> 
           <dl><dt>
           Boland,&nbsp;Tim</dt>
          
@@ -3667,10 +3674,10 @@ details.respec-tests-details > li {
 	
 
 <section id="references" class="appendix">
-      <!--OddPage--><h2 id="a-references"><span class="secno">A. </span>References<span class="permalink"><a href="#references" aria-label="Permalink for A. References" title="Permalink for A. References"><span>§</span></a></span></h2>
+      <!--OddPage--><h2 id="a-references"><span class="secno">A. </span>References<a class="self-link" aria-label="§" href="#references"></a></h2>
       
     <section id="informative-references">
-        <h3 id="a-1-informative-references"><span class="secno">A.1 </span>Informative references<span class="permalink"><a href="#informative-references" aria-label="Permalink for A.1 Informative references" title="Permalink for A.1 Informative references"><span>§</span></a></span></h3>
+        <h3 id="a-1-informative-references"><span class="secno">A.1 </span>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-carter-1">[Carter-1]</dt><dd><a href="https://www.youtube.com/watch?v=2QkbVr4J7CM"><cite>UltraHaptics: Multi-Point Mid-Air Haptic Feedback for Touch Surfaces</cite></a>. Carter, T.; Seah, S. A. et al. BristolIG. URL: <a href="https://www.youtube.com/watch?v=2QkbVr4J7CM">https://www.youtube.com/watch?v=2QkbVr4J7CM</a></dd><dt id="bib-coga-1">[COGA-1]</dt><dd><a href="https://www.w3.org/TR/coga-user-research/#aging-and-dementia"><cite>Cognitive Accessibility User Research; Aging and Dementia</cite></a>.  W3C. URL: <a href="https://www.w3.org/TR/coga-user-research/#aging-and-dementia">https://www.w3.org/TR/coga-user-research/#aging-and-dementia</a></dd><dt id="bib-coga-gap-analysis">[coga-gap-analysis]</dt><dd><a href="https://w3c.github.io/coga/gap-analysis/"><cite>Cognitive Accessibility Roadmap and Gap Analysis</cite></a>.  W3C. URL: <a href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd><dt id="bib-coga-user-research">[coga-user-research]</dt><dd><a href="https://www.w3.org/TR/coga-user-research/"><cite>Cognitive Accessibility User Research</cite></a>. Lisa Seeman-Kestenbaum; Michael Cooper. W3C. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/">https://www.w3.org/TR/coga-user-research/</a></dd><dt id="bib-css-2017">[CSS-2017]</dt><dd><a href="https://www.w3.org/TR/css-2017/"><cite>CSS Snapshot 2017</cite></a>. Tab Atkins Jr.; Elika Etemad; Florian Rivoal. W3C. 31 January 2017. W3C Note. URL: <a href="https://www.w3.org/TR/css-2017/">https://www.w3.org/TR/css-2017/</a></dd><dt id="bib-ecs-1">[ECS-1]</dt><dd><a href="http://access.ecs.soton.ac.uk/blog/symboldictionary/"><cite>Arab Symbol Dictionary for AAC</cite></a>.  ECS Accessibility Team. URL: <a href="http://access.ecs.soton.ac.uk/blog/symboldictionary/">http://access.ecs.soton.ac.uk/blog/symboldictionary/</a></dd><dt id="bib-etsi-1">[ETSI-1]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-2">[ETSI-2]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-3">[ETSI-3]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-4">[ETSI-4]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-gpii-1">[GPII-1]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-html5">[html5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer. W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-indie-ui-events">[indie-ui-events]</dt><dd><a href="https://www.w3.org/TR/indie-ui-events/"><cite>IndieUI: Events 1.0</cite></a>. James Craig; Michael Cooper. W3C. 30 April 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/indie-ui-events/">https://www.w3.org/TR/indie-ui-events/</a></dd><dt id="bib-noun-project-1">[Noun-Project-1]</dt><dd><a href="https://thenounproject.com/about/"><cite>undefined</cite></a>.  The Noun Project. URL: <a href="https://thenounproject.com/about/">https://thenounproject.com/about/</a></dd><dt id="bib-rdf-concepts">[rdf-concepts]</dt><dd><a href="https://www.w3.org/TR/rdf-concepts/"><cite>Resource Description Framework (RDF): Concepts and Abstract Syntax</cite></a>. Graham Klyne; Jeremy Carroll. W3C. 10 February 2004. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf-concepts/">https://www.w3.org/TR/rdf-concepts/</a></dd><dt id="bib-rdfa-core">[rdfa-core]</dt><dd><a href="https://www.w3.org/TR/rdfa-core/"><cite>RDFa Core 1.1 - Third Edition</cite></a>. Ben Adida; Mark Birbeck; Shane McCarron; Ivan Herman et al. W3C. 17 March 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdfa-core/">https://www.w3.org/TR/rdfa-core/</a></dd><dt id="bib-turingtest">[turingtest]</dt><dd><a href="https://www.w3.org/TR/turingtest/"><cite>Inaccessibility of CAPTCHA</cite></a>. Scott Hollier; Janina Sajka; Michael Cooper. W3C. 3 July 2018. W3C Working Draft. URL: <a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a></dd><dt id="bib-voicexml20">[voicexml20]</dt><dd><a href="https://www.w3.org/TR/voicexml20/"><cite>Voice Extensible Markup Language (VoiceXML) Version 2.0</cite></a>. Scott McGlashan; Daniel Burnett; Jerry Carter; Peter Danielsen; Jim Ferrans; Andrew Hunt; Bruce Lucas; Brandon Porter; Kenneth Rehor; Steph Tryphonas et al. W3C. 16 March 2004. W3C Recommendation. URL: <a href="https://www.w3.org/TR/voicexml20/">https://www.w3.org/TR/voicexml20/</a></dd><dt id="bib-voicexml21">[voicexml21]</dt><dd><a href="https://www.w3.org/TR/voicexml21/"><cite>Voice Extensible Markup Language (VoiceXML) 2.1</cite></a>. Matt Oshry; RJ Auburn; Paolo Baggia; Michael Bodell; David Burke; Daniel Burnett; Jerry Carter; Scott McGlashan; Alex Lee; Brandon Porter; Kenneth Rehor et al. W3C. 19 June 2007. W3C Recommendation. URL: <a href="https://www.w3.org/TR/voicexml21/">https://www.w3.org/TR/voicexml21/</a></dd><dt id="bib-wai-aria">[wai-aria]</dt><dd><a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al. W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al. W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></dd><dt id="bib-widgit-1">[Widgit-1]</dt><dd><a href="http://www.widgit.com/symbols/widgit_symbols.htm"><cite>Widgit Symbols</cite></a>. Widgit et al.URL: <a href="http://www.widgit.com/symbols/widgit_symbols.htm">http://www.widgit.com/symbols/widgit_symbols.htm</a></dd>
       </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
