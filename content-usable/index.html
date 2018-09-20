@@ -89,16 +89,11 @@ input.task-list-item-checkbox {
   background-color: #fff;
 }
 </style>
-		<title>Proposed Personas</title>
+		<title>Making content usable for people with cognitive and learning disabilities</title>
 		
 		
 		
-		
-	
-		<link href="../common/common.css" rel="stylesheet" type="text/css">
-		
-
-	<style id="respec-mainstyle">/*****************************************************************
+		<style id="respec-mainstyle">/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
@@ -338,33 +333,40 @@ h6>a.self-link::before {
     display: none;
   }
 }
-</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/coga-persona/"><script id="initialUserConfig" type="application/json">{
+</style>
+	
+		<link href="../common/css/common.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/coga-usable/"><script id="initialUserConfig" type="application/json">{
   "trace": true,
-  "doRDFa": "1.1",
+  "doRDFa": "1.0",
   "includePermalinks": true,
   "permalinkEdge": true,
   "permalinkHide": false,
   "tocIntroductory": true,
   "specStatus": "ED",
   "noRecTrack": true,
-  "shortName": "coga-persona",
+  "shortName": "coga-usable",
   "copyrightStart": "2017",
   "license": "document",
-  "edDraftURI": "https://w3c.github.io/coga/persona/",
+  "edDraftURI": "https://w3c.github.io/coga/gap-analysis/usable.html",
   "editors": [
     {
       "name": "Lisa Seeman",
-      "mailto": "lseeman@us.ibm.com"
+      "url": "http://athena-ict.com",
+      "mailto": "lisa.seeman@zoho.com",
+      "w3cid": 16320
     },
     {
       "name": "Michael Cooper",
-      "url": "http://www.w3.org",
+      "url": "https://www.w3.org",
       "mailto": "cooper@w3.org",
       "company": "W3C",
-      "companyURI": "http://www.w3.org"
+      "companyURI": "http://www.w3.org",
+      "w3cid": 34017
     }
   ],
   "wg": [
+    "Cognitive and Learning Disabilities Accessibility Task Force",
     "Accessible Platform Architectures Working Group",
     "Accessibility Guidelines Working Group"
   ],
@@ -2027,17 +2029,18 @@ h6>a.self-link::before {
   "publishDate": "2018-09-20",
   "publishISODate": "2018-09-20T00:00:00.000Z",
   "generatedSubtitle": "Editor's Draft 20 September 2018"
-}</script></head>
+}</script><meta name="description" content="This section is non-normative."></head>
+
 	<body class="h-entry toc-inline"><div class="head">
   <a href="https://www.w3.org/" class="logo">
       <img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C">
   </a>
-  <h1 id="title" class="title p-name">Proposed Personas</h1>
+  <h1 id="title" class="title p-name">Making content usable for people with cognitive and learning disabilities</h1>
   
   <h2><abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft <time class="dt-published" datetime="2018-09-20">20 September 2018</time></h2>
   <dl>
-    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/coga/persona/">https://w3c.github.io/coga/persona/</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/coga-persona/">https://www.w3.org/TR/coga-persona/</a></dd>
-    <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/persona/">https://w3c.github.io/coga/persona/</a></dd>
+    <dt>This version:</dt><dd><a class="u-url" href="https://w3c.github.io/coga/gap-analysis/usable.html">https://w3c.github.io/coga/gap-analysis/usable.html</a></dd><dt>Latest published version:</dt><dd><a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a></dd>
+    <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/gap-analysis/usable.html">https://w3c.github.io/coga/gap-analysis/usable.html</a></dd>
     
     
     
@@ -2045,7 +2048,7 @@ h6>a.self-link::before {
     
     
     <dt>Editors:</dt>
-    <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:lseeman@us.ibm.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd>
+    <dd class="p-author h-card vcard" data-editor-id="16320"><a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard" data-editor-id="34017"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (<abbr title="World Wide Web Consortium">W3C</abbr>)</dd>
     
     
     
@@ -2069,11 +2072,17 @@ h6>a.self-link::before {
       </p>
   <hr title="Separator for header">
 </div>
-		<section id="abstract" class="introductory"><!--OddPage--><h2>Abstract</h2>We covered all the main user needs. Also we should clarify that the challenges are examples.</section>
-		<section id="sotd" class="introductory"><!--OddPage--><h2>Status of This Document</h2><p>
+
+
+		<section class="informative respec-offending-element" id="introduction_for_usable">
+			<section id="abstract" class="introductory"><h3 id="abstract-0">Abstract<a class="self-link" aria-label="§" href="#abstract"></a></h3><p><em>This section is non-normative.</em></p>
+				<p>Making websites and applications that are friendly for people with cognitive impairments affects every part of design and development.</p>
+			</section>
+
+			<section id="sotd" class="introductory"><h2 id="status-of-this-document">Status of This Document<a class="self-link" aria-label="§" href="#sotd"></a></h2><p>
         <em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em>
       </p><p>
-          This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as an Editor's Draft.
+          This document was published by the <a href="https://www.w3.org/WAI/APA/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="https://www.w3.org/WAI/GL/">Accessible Platform Architectures Working Group</a>, and the <a href="undefined">Accessibility Guidelines Working Group</a> as an Editor's Draft.
           
           </p><p>
             
@@ -2095,7 +2104,7 @@ h6>a.self-link::before {
             <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
           
           
-          <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="https://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a> and a <a href="https://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Accessibility Guidelines Working Group)</a>
+          <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="https://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="https://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a>, and a <a href="undefined" rel="disclosure">public list of any patent disclosures  (Accessibility Guidelines Working Group)</a>
             made in connection with the deliverables of
             each group; these pages also include
             instructions for disclosing a patent. An individual who has actual knowledge of a patent
@@ -2107,202 +2116,326 @@ h6>a.self-link::before {
           
           
         </p><p>This document is governed by the <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a href="#abstract" class="tocxref">Abstract</a></li><li class="tocline"><a href="#sotd" class="tocxref">Status of This Document</a></li><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#anna-a-student-who-has-dyslexia" class="tocxref"><span class="secno">2. </span>Anna a Student who has Dyslexia</a><ol class="toc"><li class="tocline"><a href="#challenge-1-finding-technology-to-support-password-protection-and-support" class="tocxref"><span class="secno">2.1 </span>Challenge 1: Finding technology to support password protection and support.</a></li><li class="tocline"><a href="#challenge-2-knowing-documentation-is-accessible" class="tocxref"><span class="secno">2.2 </span>Challenge 2: knowing documentation is accessible</a></li><li class="tocline"><a href="#challenge-3-filling-in-a-form-to-ask-for-an-ejournal-article" class="tocxref"><span class="secno">2.3 </span>Challenge 3: Filling in a form to ask for an ejournal article</a></li></ol></li><li class="tocline"><a href="#maria-who-has-a-visual-impairment-and-memory-loss" class="tocxref"><span class="secno">3. </span>Maria who has a visual impairment and memory loss</a><ol class="toc"><li class="tocline"><a href="#challenge-1-dynamic-website-elements-make-key-website-information-difficult-to-locate" class="tocxref"><span class="secno">3.1 </span>Challenge 1: dynamic website elements make key website information difficult to locate</a></li><li class="tocline"><a href="#challenge-2-insufficient-contrast-between-background-and-content" class="tocxref"><span class="secno">3.2 </span>Challenge 2: insufficient contrast between background and content</a></li></ol></li><li class="tocline"><a href="#alison-an-aging-user-with-mild-cognitive-impairment" class="tocxref"><span class="secno">4. </span>Alison - An Aging User with Mild Cognitive Impairment</a><ol class="toc"><li class="tocline"><a href="#challenge-1-learning-how-to-use-new-technologies-and-interfaces" class="tocxref"><span class="secno">4.1 </span>Challenge 1: Learning how to use new technologies and interfaces.</a></li><li class="tocline"><a href="#challenge-2-correcting-typos-and-writing-fluently" class="tocxref"><span class="secno">4.2 </span>Challenge 2: Correcting typos and writing fluently.</a></li><li class="tocline"><a href="#challenge-3-coping-with-online-banking-and-shopping" class="tocxref"><span class="secno">4.3 </span>Challenge 3: Coping with online banking and shopping.</a></li></ol></li><li class="tocline"><a href="#jonathan-a-therapist-with-dyscalculia" class="tocxref"><span class="secno">5. </span>Jonathan – a therapist with dyscalculia</a><ol class="toc"><li class="tocline"><a href="#challenge-1-coping-with-quantities-when-shopping-online" class="tocxref"><span class="secno">5.1 </span>Challenge 1: Coping with quantities when shopping online.</a></li><li class="tocline"><a href="#challenge-2-remembering-pin-numbers-and-passwords" class="tocxref"><span class="secno">5.2 </span>Challenge 2: Remembering pin numbers and passwords.</a></li><li class="tocline"><a href="#challenge-3-sharing-online-spreadsheets-with-colleagues" class="tocxref"><span class="secno">5.3 </span>Challenge 3: Sharing online spreadsheets with colleagues.</a></li></ol></li><li class="tocline"><a href="#frank-a-retired-lawyer-with-dementia" class="tocxref"><span class="secno">6. </span>Frank – a retired lawyer with dementia</a><ol class="toc"><li class="tocline"><a href="#challenge-1-managing-dates-and-booking-holidays" class="tocxref"><span class="secno">6.1 </span>Challenge 1: Managing dates and booking holidays.</a></li><li class="tocline"><a href="#challenge-2-coping-with-icons-that-are-not-recognisable" class="tocxref"><span class="secno">6.2 </span>Challenge 2: Coping with icons that are not recognisable.</a></li><li class="tocline"><a href="#challenge-3-support-when-using-search-engines" class="tocxref"><span class="secno">6.3 </span>Challenge 3: Support when using search engines.</a></li></ol></li><li class="tocline"><a href="#george-works-in-a-supermarket-and-has-down-syndrome" class="tocxref"><span class="secno">7. </span>George – works in a supermarket and has Down syndrome</a><ol class="toc"><li class="tocline"><a href="#challenge-1-using-symbols-for-communication" class="tocxref"><span class="secno">7.1 </span>Challenge 1: Using Symbols for communication</a></li><li class="tocline"><a href="#challenge-2-understanding-netiquette-and-its-impact-on-social-media-sites" class="tocxref"><span class="secno">7.2 </span>Challenge 2: Understanding netiquette and its impact on social media sites</a></li><li class="tocline"><a href="#challenge-3-controls-on-videos-and-popup-windows" class="tocxref"><span class="secno">7.3 </span>Challenge 3: Controls on videos and popup windows.</a></li></ol></li><li class="tocline"><a href="#amy-is-a-computer-scientist-who-has-autism" class="tocxref"><span class="secno">8. </span>Amy is a Computer Scientist who has Autism</a><ol class="toc"><li class="tocline"><a href="#challenge-1-coping-with-poor-layouts-and-illogical-navigation" class="tocxref"><span class="secno">8.1 </span>Challenge 1: Coping with poor layouts and illogical navigation</a></li><li class="tocline"><a href="#challenge-2-changing-colour-schemes-flashing-blinking-and-automatic-playing-videos-or-music" class="tocxref"><span class="secno">8.2 </span>Challenge 2: Changing colour schemes, flashing, blinking and automatic playing videos or music.</a></li><li class="tocline"><a href="#challenge-3-designs-that-make-use-of-abstract-imagery-and-metaphors" class="tocxref"><span class="secno">8.3 </span>Challenge 3: Designs that make use of abstract imagery and metaphors</a></li></ol></li><li class="tocline"><a href="#tom-is-a-traumatic-brain-injury-survivor" class="tocxref"><span class="secno">9. </span>Tom is a traumatic brain injury survivor</a><ol class="toc"><li class="tocline"><a href="#challenge-1-using-speech-recognition-to-navigate-the-web" class="tocxref"><span class="secno">9.1 </span>Challenge 1: Using speech recognition to navigate the web </a></li><li class="tocline"><a href="#challenge-2-screen-glare-and-eye-problems" class="tocxref"><span class="secno">9.2 </span>Challenge 2: Screen glare and eye problems</a></li><li class="tocline"><a href="#challenge-3-finding-the-right-words-to-use-for-searching" class="tocxref"><span class="secno">9.3 </span>Challenge 3: Finding the right words to use for searching</a></li></ol></li><li class="tocline"><a href="#interesting-links" class="tocxref"><span class="secno">10. </span>Interesting links</a></li></ol></nav>
+        </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents<a class="self-link" aria-label="§" href="#introduction_for_usable"></a></h2><ol class="toc"><li class="tocline"><a href="#background" class="tocxref"><span class="secno">1. </span>Background about people with learning and cognitive disabilities and the web</a></li><li class="tocline"><a href="#user_needs" class="tocxref"><span class="secno">2. </span>User Needs</a></li><li class="tocline"><a href="#persona" class="tocxref"><span class="secno">3. </span>Use Cases / Persona</a></li><li class="tocline"><a href="#testing_groups_feedback" class="tocxref"><span class="secno">4. </span>Usability Testing, Focus Groups and Feedback</a><ol class="toc"><li class="tocline"><a href="#differences_testing" class="tocxref"><span class="secno">4.1 </span>Differences from usability testing with the general population</a></li></ol></li><li class="tocline"><a href="#design_themes" class="tocxref"><span class="secno">5. </span>Design Requirement Themes</a><ol class="toc"><li class="tocline"><a href="#design_requirements" class="tocxref"><span class="secno">5.1 </span>Design requirements</a></li><li class="tocline"><a href="#user-group-mapping" class="tocxref"><span class="secno">5.2 </span>Mapping requirements to user groups</a></li></ol></li><li class="tocline"><a href="#special_applications" class="tocxref"><span class="secno">6. </span>Special applications</a></li><li class="tocline"><a href="#issues_and_considerations" class="tocxref"><span class="secno">7. </span>Issues and considerations</a><ol class="toc"><li class="tocline"><a href="#guidance_for_policy_makers" class="tocxref"><span class="secno">7.1 </span>Guidance for policy makers</a></li></ol></li></ol></nav>
 
+			<h2 id="introduction">Introduction<a class="self-link" aria-label="§" href="#introduction_for_usable"></a></h2>
 
+			<p>Making websites and applications that are friendly for people with cognitive impairments affects every part of design and development.</p>
+			<p>Traditionally accessibility has been most focused on the interface, and making that usable for people with sensory and physical impairments in vision, hearing and/or mobility. Some accessibility features will help people with cognitive impairments, but often the issues are about context, language, usability, and other more general factors that impact everyone to some degree.</p>
+			<p>This document aims to provide guidance on how to make websites and applications that are friendly for people with cognitive impairments by providing guidance for your designs, and design process.</p>
 
-		<section class="informative" id="introduction">
+			<section id="process">
+				<h3 id="process-0">Process<a class="self-link" aria-label="§" href="#process"></a></h3>
+				<p>Some aspects of making things friendly for people with cognitive impairments are best dealt with as part of the overall design process. For most organizations there should be scope for taking a <a href="https://www.usability.gov/what-and-why/user-centered-design.html">user-centred design process</a>.</p>
+				<p>Key parts of this process for people with cognitive impairments should be:</p>
+				<p>
+					</p><ul>
+						<li>
+							Including cognitive issues in the context of use and requirements;
+						</li>
+						<li>
+							Including people with cognitive issues in research methods such as usability testing.
+						</li>
+					</ul>
+				<p></p>
+				<p>If people with cognitive impairments are included in the usability testing and their feedback is accounted for, you can be sure that the website will be easier to use for everyone. (See <a href="#testing_groups_feedback">Usability testing</a>, below)</p>
+			</section>
 
-			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
+			<section id="scale">
+				<h3 id="applicability-across-websites">Applicability across websites<a class="self-link" aria-label="§" href="#scale"></a></h3>
+				<p>How much effort an organization should expend on making a website friendly for people with cognitive impairments will vary. For organizations that provide public services, or are national (or international) private service providers and already conduct user-research, they should:</p>
+				<p>
+					</p><ul>
+						<li>
+							Include people with learning and cognitive disabilities as part of user research such as usability-testing;
+						</li>
+						<li>
+							Review designs and early stage development with the design themes in this document.
+						</li>
+					</ul>
+				<p></p>
+				<p>For organizations that do not include usability testing as part of the process, they could use this document to review designs and implementations.</p>
 
-			<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">We need to confirm that we mapped from the user-needs that the challenges below cover the user needs. </p></div>
-			<p>We covered all the main user needs. Also we should clarify that the challenges are examples.</p>
+			</section>
 		</section>
 
-		<section id="anna-a-student-who-has-dyslexia">
-			<!--OddPage--><h2 id="x2-anna-a-student-who-has-dyslexia"><span class="secno">2. </span>Anna a Student who has Dyslexia<a class="self-link" aria-label="§" href="#anna-a-student-who-has-dyslexia"></a></h2>
-			<p>Anna has been as student for the past year.  Her Fashion Design course has been challenging but fun.  She loves the creative aspect of the diploma and would rather be drawing than writing. She has moderate dyslexia, which affects her ability to read, spell and use numbers.</p>
+		<section id="background">
+			<!--OddPage--><h2 id="x1-background-about-people-with-learning-and-cognitive-disabilities-and-the-web"><span class="secno">1. </span>Background about people with learning and cognitive disabilities and the web<a class="self-link" aria-label="§" href="#background"></a></h2>
+			<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">We intend to add a short background in this section. This may be a separate document.</p></div>
+		</section>
+
+		<section id="user_needs">
+			<!--OddPage--><h2 id="x2-user-needs"><span class="secno">2. </span>User Needs<a class="self-link" aria-label="§" href="#user_needs"></a></h2>
+			<div class="ednote" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span></div><p class="">We intend to add a summary of the user need addressed in <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html"> https://rawgit.com/w3c/coga/master/gap-analysis/table.html</a></p></div>
+		</section>
+
+		<section id="persona">
+			<!--OddPage--><h2 id="x3-use-cases-persona"><span class="secno">3. </span>Use Cases / Persona<a class="self-link" aria-label="§" href="#persona"></a></h2>
+			<p>Any time there is a 'target audience', there will be people with with learning and cognitive disabilities in that audience. Cogntiive issues are often invisible in day to day life until people encounter particular challenges. To provide some context and understanding eight personas have been created which outline fictional people with various cognitive issues and the challenges they face.</p>
+			<p><a href="../persona/index.html">Personas for learning and cognitive disabilities</a>.</p>
+
+		</section>
+
+		<section id="testing_groups_feedback">
+			<!--OddPage--><h2 id="x4-usability-testing-focus-groups-and-feedback"><span class="secno">4. </span>Usability Testing, Focus Groups and Feedback<a class="self-link" aria-label="§" href="#testing_groups_feedback"></a></h2>
+			<p>Usability testing is the best way to know if your content and functionality works for real people with cognitive and learning disabilities.</p>
+			<div><img alt="aspects for providing guidance, include usability, accessibility, reliably testable accessibility and automatically testable accessibility " src="img/guidance_aspect.png" height="486" width="600"></div>
+			<p>Finding five to ten people with different learning and cognitive disabilities can be relatively easy, such as friends, colleagues, relatives or neighbors who:</p>
 			<p>
-				Anna had several projects to complete as part of her portfolio, but the one that worried her most involved a written assignment where she has to research the topic of Post-war fashions and their impact on today’s designs.
-			</p>
-			<section id="challenge-1-finding-technology-to-support-password-protection-and-support">
-				<h3 id="x2-1-challenge-1-finding-technology-to-support-password-protection-and-support"><span class="secno">2.1 </span>Challenge 1: Finding technology to support password protection and support.<a class="self-link" aria-label="§" href="#challenge-1-finding-technology-to-support-password-protection-and-support"></a></h3>
-				<p>Her use of the library catalogue from home failed at the first attempt when she could not remember her password and kept putting in ‘afib61’ rather than ‘afid16’ and could not see the mistakes. The error message on the web page had not helped by announcing that her user name or password were incorrect and she was not sure which one was incorrect. Luckily, as she was on her own laptop the browser settings allowed her to save her password and she was able to check where she had made the mistake.</p>
-			</section>
-			<section id="challenge-2-knowing-documentation-is-accessible">
-				<h3 id="x2-2-challenge-2-knowing-documentation-is-accessible"><span class="secno">2.2 </span>Challenge 2: knowing documentation is accessible<a class="self-link" aria-label="§" href="#challenge-2-knowing-documentation-is-accessible"></a></h3>
-				<p>Having navigated the online library system, Anna eventually found a paper on the subject but when she went to download the file she found it was in pdf format.  She was hoping to use her text to speech app to have the content read aloud but when she tried to highlight the text nothing happened.  She discovered the document was actually an image and yet there was no warning this was the case and she could not find an alternative accessible version of the paper.  This meant she had to use optical character recognition to virtually scan the paper. It was not totally successful and took away valuable time from her writing.</p>
-			</section>
-			<section id="challenge-3-filling-in-a-form-to-ask-for-an-ejournal-article">
-				<h3 id="x2-3-challenge-3-filling-in-a-form-to-ask-for-an-ejournal-article"><span class="secno">2.3 </span>Challenge 3: Filling in a form to ask for an ejournal article<a class="self-link" aria-label="§" href="#challenge-3-filling-in-a-form-to-ask-for-an-ejournal-article"></a></h3>
-				<p>Finally, Anna found an ejournal that had another article but there was a form that had to be completed.  Anna duly started the process but realised she did not know the author’s name.  She returned to the page where she had found the article to copy and paste the name.  Sadly when she returned to the form all that she had filled in was lost.  She had hoped to just be able to add the final bit, not have to retype the whole thing again. </p>
-				<p>(Adapted from MOOCAP Erasmus + Persona CC-BY-4.0 http://gpii.eu/moocap/?page_id=33)</p>
-			</section>
-		</section>
-
-		<section id="maria-who-has-a-visual-impairment-and-memory-loss">
-			<!--OddPage--><h2 id="x3-maria-who-has-a-visual-impairment-and-memory-loss"><span class="secno">3. </span>Maria who has a visual impairment and memory loss<a class="self-link" aria-label="§" href="#maria-who-has-a-visual-impairment-and-memory-loss"></a></h2>
-			<p>Maria is 50 years old, married, and lives with her family in Madrid, Spain. Maria has macular degeneration, a disease that mainly affects central vision by causing “blind spots” directly ahead. She is also beginning to lose her memory but still works part-time for a local company.</p>
-			<section id="challenge-1-dynamic-website-elements-make-key-website-information-difficult-to-locate">
-				<h3 id="x3-1-challenge-1-dynamic-website-elements-make-key-website-information-difficult-to-locate"><span class="secno">3.1 </span>Challenge 1: dynamic website elements make key website information difficult to locate<a class="self-link" aria-label="§" href="#challenge-1-dynamic-website-elements-make-key-website-information-difficult-to-locate"></a></h3>
-				<p>Maria needs to gather the information online: she needs to run through reports about the company and use the company’s website. As the blind spots in her vision have grown she is only able to read the headlines of web pages. She can no longer read the content without using magnification software, which enlarges a part of the screen so that she is able to read the text but the letters are so large that she often has to scroll around and then forgets what was written at the beginning of the sentence. The company’s website looks fancy, has a modern user interface and a lot of dynamic elements that change when you hover the mouse over them. For Maria this site is a total nightmare!  She finally finds the link to the data she needs as it appears when she happens to hover over a certain menu item with her mouse. The link is positioned in such a bad place that she did not notice it at first. She has found that it really helps if important interactive items are placed in the usual menu areas on a screen and the icons are clearly defined and easily recognisable.</p>
-			</section>
-			<section id="challenge-2-insufficient-contrast-between-background-and-content">
-				<h3 id="x3-2-challenge-2-insufficient-contrast-between-background-and-content"><span class="secno">3.2 </span>Challenge 2: insufficient contrast between background and content<a class="self-link" aria-label="§" href="#challenge-2-insufficient-contrast-between-background-and-content"></a></h3>
-				<p>To speed up things and to relieve her eyes, Maria uses text-to-speech software that reads the company’s balance report aloud. She has to take notes while listening to the information which can be hard and she needs to pause several times.  The site has grey text on a dark grey background and it it was not for her text to speech program she would have a hard time distinguishing between background and content, but when the text to speech says a number in an odd way she finds it extremely difficult to note down the correct figures.  She would like to be able to adjust the contrast levels or to use high contrast mode on the web page without affecting the rest of her browser and computer settings.</p>
-				<p>(Adapted from MOOCAP Erasmus + Persona CC-BY-4.0 http://gpii.eu/moocap/?page_id=33)</p>
-			</section>
-		</section>
-
-		<section id="alison-an-aging-user-with-mild-cognitive-impairment">
-			<!--OddPage--><h2 id="x4-alison-an-aging-user-with-mild-cognitive-impairment"><span class="secno">4. </span>Alison - An Aging User with Mild Cognitive Impairment<a class="self-link" aria-label="§" href="#alison-an-aging-user-with-mild-cognitive-impairment"></a></h2>
-			<p>Alison has a medical background, working in rehabilitation of physical injuries but has recently decided to work part-time to take up more hobbies and be with her grandchildren.  She want to try an online course to learn Chinese, in preparation for a special holiday. Alison considers 63 to be the new 36. However, she has difficulties in concentration and word finding often making typos and having to correct sentences when she re-reads them.  She becomes easily frustrated as she find learning new things is less intuitive and takes longer. Unfortunately, this includes learning how to use a new interface and affects the way she works when swapping between her tablet, phone and computer.</p>
-			<section id="challenge-1-learning-how-to-use-new-technologies-and-interfaces">
-				<h3 id="x4-1-challenge-1-learning-how-to-use-new-technologies-and-interfaces"><span class="secno">4.1 </span>Challenge 1: Learning how to use new technologies and interfaces.<a class="self-link" aria-label="§" href="#challenge-1-learning-how-to-use-new-technologies-and-interfaces"></a></h3>
-				<p>Alison took an evening course to learn how to use Windows and MS Word ten years ago and used to feel very comfortable with the interface.  Then she had to renew her computer and all the updates meant that most applications looked very different. Now she feels that she has lost her self-confidence and when things go wrong such selecting an incorrect button and an error occurring that she does not understand.  She tends to think she cannot cope, so gives up but with support to adapt the interface to suit her needs she could learn to use the new interface.</p>
-				<p>It was suggested that the number of menu items on the application toolbar were reduced so she could concentrate on the ones she regularly used and when searching for items on the web she made sure on a limited number appeared at one time. </p>
-				<p>She was also introduced to a de-cluttering browser extension that took away many of the advertisements and other items that cluttered her social media pages when communicating with her grandchildren.</p>
-			</section>
-			<section id="challenge-2-correcting-typos-and-writing-fluently">
-				<h3 id="x4-2-challenge-2-correcting-typos-and-writing-fluently"><span class="secno">4.2 </span>Challenge 2: Correcting typos and writing fluently.<a class="self-link" aria-label="§" href="#challenge-2-correcting-typos-and-writing-fluently"></a></h3>
-				<p>When writing letters and messages on her computer, phone and tablet Alison has got used to the need to pause every so often and check that what she is writing makes sense.  She finds it very annoying having to work so slowly, but by using text to speech to read out content she has found she can hear her mistakes more easily than notice them on the screen.  She has also discovered that this process can make reading web pages easier and less tiring.  However, she often has to go over instructions several times before completing tasks online and depends on the fact that forms do not time out or she is allowed to extend the time to fill in the edit boxes.</p>
-			</section>
-			<section id="challenge-3-coping-with-online-banking-and-shopping">
-				<h3 id="x4-3-challenge-3-coping-with-online-banking-and-shopping"><span class="secno">4.3 </span>Challenge 3: Coping with online banking and shopping.<a class="self-link" aria-label="§" href="#challenge-3-coping-with-online-banking-and-shopping"></a></h3>
-				<p>Alison knows her math skills are not as sharp as they used to be. She is worried about making mistakes that will put her financially at risk and she is not sure she should be using her credit card, especially on line. Alison wants to feel safe and supported.</p>
-				<p>She has found that autocomplete has helped with form filling, but she tends to worry that what has been entered may not be accurate so has a paper based card with some of her more usual details such as phone number, address and post code.  Secure information is held in a special folder and she has set up an agreement with the bank to limit spending on her credit card and mobile banking.</p>
-			</section>
-		</section>
-		<section id="jonathan-a-therapist-with-dyscalculia">
-			<!--OddPage--><h2 id="x5-jonathan-a-therapist-with-dyscalculia"><span class="secno">5. </span>Jonathan – a therapist with dyscalculia<a class="self-link" aria-label="§" href="#jonathan-a-therapist-with-dyscalculia"></a></h2>
-			<p>Jonathan is a massage therapist with dyscalculia. For Jonathan numbers are a foreign language. He can add simple numbers with his fingers and cope with very basic sums.  However, he has no number sense with a particular difficulty with numbers that have a series of zeros and their relationship to each other such as 10, 100, 1000 etc. Complex calculations, symbols and mathematical concepts are very problematic.</p>
-			<section id="challenge-1-coping-with-quantities-when-shopping-online">
-				<h3 id="x5-1-challenge-1-coping-with-quantities-when-shopping-online"><span class="secno">5.1 </span>Challenge 1: Coping with quantities when shopping online.<a class="self-link" aria-label="§" href="#challenge-1-coping-with-quantities-when-shopping-online"></a></h3>
-				<p>Jonathan struggles with the actual value of products, purchasing the correct quantities, for example when buying food at the supermarket and often orders far too much or too little when using online shopping carts.  He has found it is so much more helpful to have symbols representing the proportional size of items per price or to have a warning when he has ordered an item that might be very large and therefore costly.   He tends to save a shopping list that has been successful and where the amounts have been correct so that he can re-use the list on another occasion. Support has also come from his bank with restrictions on the amount he can spend whether online or using his mobile phone. This can be annoying but has stopped him becoming overdrawn.</p>
-			</section>
-			<section id="challenge-2-remembering-pin-numbers-and-passwords">
-				<h3 id="x5-2-challenge-2-remembering-pin-numbers-and-passwords"><span class="secno">5.2 </span>Challenge 2: Remembering pin numbers and passwords.<a class="self-link" aria-label="§" href="#challenge-2-remembering-pin-numbers-and-passwords"></a></h3>
-				<p>The use of pin numbers and passwords that insist on a numerical number has always been an issue and most of the time Jonathan uses a secure password application when online.  When it comes to the number on the back of his credit card (Card Verification Code) that is always required at the end of a payment exercise, he has to look it up each time but autofill has helped with the rest of the form filling.  This is once he has made sure that what he originally entered and saved in his browser is correct.  Too many times he has had to retrace his steps due to typos and not seeing that the entry was incorrect.   This is when he finds it is essential that the corrections needed are clearly highlighted and the instructions are helpful when he has to return to the form.   He also feels that it is important that not all the data has been lost, as the more often he types in numbers etc. the more likely he is to make mistakes.</p>
-			</section>
-			<section id="challenge-3-sharing-online-spreadsheets-with-colleagues">
-				<h3 id="x5-3-challenge-3-sharing-online-spreadsheets-with-colleagues"><span class="secno">5.3 </span>Challenge 3: Sharing online spreadsheets with colleagues.<a class="self-link" aria-label="§" href="#challenge-3-sharing-online-spreadsheets-with-colleagues"></a></h3>
-				<p>At work, there are times when Jonathan has to share a spreadsheet with a colleague to ensure that the group’s accounts are in order, suppliers have been correctly invoiced and fees collected.  The mass of numbers affects Jonathan’s ability to concentrate on the various areas on the spreadsheet.  He has found that it helps to use colour coding, increased spacing and larger font sizes in order to pick out the various elements.  Jonathan will often use the comment feature to add something that he feels his colleague needs to check rather than correcting the actual spreadsheet.  If the document is saved as a PDF or presented in another format, Jonathan insists that it is easy to use with his text to speech program which helps him to check how the numbers need to be said and that he can annotate the contents when using his tablet, especially if he is presenting numbers at a meeting.</p>
-			</section>
-		</section>
-		<section id="frank-a-retired-lawyer-with-dementia">
-			<!--OddPage--><h2 id="x6-frank-a-retired-lawyer-with-dementia"><span class="secno">6. </span>Frank – a retired lawyer with dementia<a class="self-link" aria-label="§" href="#frank-a-retired-lawyer-with-dementia"></a></h2>
-			<p>Frank retired from his law firm in his early 60s when he found he was forgetting important items that needed to be discussed in his complex case load.  He found that he was forgetting material that he had just read, losing and misplacing objects and having trouble planning or organizing events.</p>
-			<section id="challenge-1-managing-dates-and-booking-holidays">
-				<h3 id="x6-1-challenge-1-managing-dates-and-booking-holidays"><span class="secno">6.1 </span>Challenge 1: Managing dates and booking holidays.<a class="self-link" aria-label="§" href="#challenge-1-managing-dates-and-booking-holidays"></a></h3>
-				<p>Frank noticed that he had trouble with online calendars and booking flights and hotels when he was planning his summer holiday.  He could not work out the way the dates had to be entered into the form and made mistakes with the month and day.  If only there had been a good example or tool tip.  He also found that when he was booking a flight the table that had the various lists of airports automatically entered the initials, which was very confusing when he was checking that everything was correct.  Finally, there was the issue of making sure he booked the right number of nights for his hotel stay.  He knew his arrival time at the airport was a day later than when he has set off but it would have helped to have had a calendar with colour and clear markings for the days in the week not just numbers.</p>
-			</section>
-			<section id="challenge-2-coping-with-icons-that-are-not-recognisable">
-				<h3 id="x6-2-challenge-2-coping-with-icons-that-are-not-recognisable"><span class="secno">6.2 </span>Challenge 2: Coping with icons that are not recognisable.<a class="self-link" aria-label="§" href="#challenge-2-coping-with-icons-that-are-not-recognisable"></a></h3>
-				<p>Many web pages now have their own graphic icons and ways of indicating actions that need to be completed.  Frank was having problems searching for information about a care home that he thought might help him in the future.  He could not work out what the various options were when he came to fill out a form for his requirements.  There appeared to be a series of small images beside the edit boxes, but the minute he began to write in the form the text explanation disappeared.   He wanted the instructions to remain in place above the area where he was writing and for the box to be highlighted when he found he had missed some important sections.</p>
-			</section>
-			<section id="challenge-3-support-when-using-search-engines">
-				<h3 id="x6-3-challenge-3-support-when-using-search-engines"><span class="secno">6.3 </span>Challenge 3: Support when using search engines.<a class="self-link" aria-label="§" href="#challenge-3-support-when-using-search-engines"></a></h3>
-				<p>Frank likes to surf the web for anything to do with fishing, his favourite hobby.  However, he has found that the sheer number of items that appear when he types in a few words very confusing.  Ideally he would like the number to reduced and perhaps have some way of seeing the items categorised in groups so that he can work out which services he needs.  In this case it might also be helpful to have icons appearing when the groups are listed, so that for instance he can see articles about fly fishing in one section and sea fishing in another.  Blocks of text with more white space around them would also be helpful so that he is not having to cope with such a mass of text.</p>
-			</section>
-		</section>
-		<section id="george-works-in-a-supermarket-and-has-down-syndrome">
-			<!--OddPage--><h2 id="x7-george-works-in-a-supermarket-and-has-down-syndrome"><span class="secno">7. </span>George – works in a supermarket and has Down syndrome<a class="self-link" aria-label="§" href="#george-works-in-a-supermarket-and-has-down-syndrome"></a></h2>
-			<p>George enjoys his job and lives semi-independently in a small town, where he can easily find his way to around. He has problems using the online systems at work, and needs help to search for suitable videos or music.  However, George finds it hard to use search engines and navigate around websites.</p>
-			<section id="challenge-1-using-symbols-for-communication">
-				<h3 id="x7-1-challenge-1-using-symbols-for-communication"><span class="secno">7.1 </span>Challenge 1: Using Symbols for communication<a class="self-link" aria-label="§" href="#challenge-1-using-symbols-for-communication"></a></h3>
-				<p>George used to use <a href="https://www.makaton.org/aboutMakaton/default">Makaton symbols</a> and gestures when at school, but is able to communicate relatively easily now, although reading and writing remains a challenge. Surfing the web is hard when most interactions require text input but George likes to watch videos, find images and listen to music as well as playing games online.  Friends have set up links with recognizable icons on his tablet and this has made it easy to visit his favourite sites. If recognisable symbols or icons could be used in more situations, George feels he would be able to reach more sites independently.  There are search engines designed for children and these often use more images, but tend to be too childish for George’s taste.</p>
-			</section>
-			<section id="challenge-2-understanding-netiquette-and-its-impact-on-social-media-sites">
-				<h3 id="x7-2-challenge-2-understanding-netiquette-and-its-impact-on-social-media-sites"><span class="secno">7.2 </span>Challenge 2: Understanding netiquette and its impact on social media sites<a class="self-link" aria-label="§" href="#challenge-2-understanding-netiquette-and-its-impact-on-social-media-sites"></a></h3>
-				<p>George has been told about surfing safely and not giving out personal information and is very lucky that his family have set up his Facebook and Skype account with various privacy settings.  However, George finds the way emojis change or new icons keep appearing on his message systems rather confusing and does not always realize what some of them mean.  He has sometimes selected an inappropriate symbol and then receives a rather short message from a friend in return that is upsetting.  He finds it hard to explain what might have happened. He know there have been times when he really can’t choose the right symbol because it is too small and he finds it hard to accurately hit the spot.  George is then very worried as he does not know how to unlike or change his symbol choice.   Interacting with emojis and other symbols needs to be much easier for everyone with easy ways on enlarging these features on touch and undoing errors.</p>
-			</section>
-			<section id="challenge-3-controls-on-videos-and-popup-windows">
-				<h3 id="x7-3-challenge-3-controls-on-videos-and-popup-windows"><span class="secno">7.3 </span>Challenge 3: Controls on videos and popup windows.<a class="self-link" aria-label="§" href="#challenge-3-controls-on-videos-and-popup-windows"></a></h3>
-				<p>Using a mouse is not easy for everyone and double clicking can take time to learn.  George has worked hard to improve his mouse skills by playing many onscreen games, but he still finds it hard to move accurately enough to skip ads on videos or to track down the close/exit method offered by some popup windows.  Once again friends have come to the rescue and enabled an ad blocker extension for his browser, but this does not always capture all the ads or prevent George selecting the submit rather than a cross or exit button on a pop up.  There have been times when George has downloaded malware without any second warning appearing or been unable to reach a site because he cannot find the small cross on a transparent popup window that overlays the main page.</p>
-			</section>
-		</section>
-		<section id="amy-is-a-computer-scientist-who-has-autism">
-			<!--OddPage--><h2 id="x8-amy-is-a-computer-scientist-who-has-autism"><span class="secno">8. </span>Amy is a Computer Scientist who has Autism<a class="self-link" aria-label="§" href="#amy-is-a-computer-scientist-who-has-autism"></a></h2>
-			<p>Amy loves her computer science course and now programs in several languages. She has discovered she can visualize the outcome of her coding and is quick to find any errors even if they have not been highlighted.  Documentation writing is less fun and she tends to be rather too concise which means some users do not receive enough help using her applications.</p>
-			<section id="challenge-1-coping-with-poor-layouts-and-illogical-navigation">
-				<h3 id="x8-1-challenge-1-coping-with-poor-layouts-and-illogical-navigation"><span class="secno">8.1 </span>Challenge 1: Coping with poor layouts and illogical navigation<a class="self-link" aria-label="§" href="#challenge-1-coping-with-poor-layouts-and-illogical-navigation"></a></h3>
-				<p>Being able to code your own websites can make you very critical of others!  Amy finds that she often feels quite confused by some social media sites that have dynamically changing content with random messages and advertisements.  She either avoids these sites or tends to try to personalize them by clearing away the clutter and choosing to hide sections.  Navigation that does not follow a simple route across an entire site really annoys her, as she feels this does not help anyone.  She also finds that the habit of having too much information on some pages means that important items may be missed, if there is no clear and logical structure.</p>
-			</section>
-			<section id="challenge-2-changing-colour-schemes-flashing-blinking-and-automatic-playing-videos-or-music">
-				<h3 id="x8-2-challenge-2-changing-colour-schemes-flashing-blinking-and-automatic-playing-videos-or-music"><span class="secno">8.2 </span>Challenge 2: Changing colour schemes, flashing, blinking and automatic playing videos or music.<a class="self-link" aria-label="§" href="#challenge-2-changing-colour-schemes-flashing-blinking-and-automatic-playing-videos-or-music"></a></h3>
-				<p>When a page loads and animations or videos play automatically this causes real problems for Amy.   Sometimes, the movement can be very distracting and the sounds alarming.  She has always found that sudden noises or something happening unintentionally has been a problem.  When designing her own applications and websites she makes sure all the controls for animated objects or videos are very visible and do not start until the user has decided they wish to interact or view the object.</p>
-			</section>
-			<section id="challenge-3-designs-that-make-use-of-abstract-imagery-and-metaphors">
-				<h3 id="x8-3-challenge-3-designs-that-make-use-of-abstract-imagery-and-metaphors"><span class="secno">8.3 </span>Challenge 3: Designs that make use of abstract imagery and metaphors<a class="self-link" aria-label="§" href="#challenge-3-designs-that-make-use-of-abstract-imagery-and-metaphors"></a></h3>
-				<p>Amy is always concerned about communicating clearly and finds it hard when people ask her to create a design that includes abstract imagery.  Images that do not directly represent something make Amy feel uneasy and she tends to ask if there can be some explanatory text in case other users are confused.  On the other hand, a figure of speech where someone has written something that is not literal makes her wish that the writer would use easy to read content as it is hard to understand the concept of, for example the wheels of justice turning slowly.</p>
-			</section>
-		</section>
-		<section id="tom-is-a-traumatic-brain-injury-survivor">
-			<!--OddPage--><h2 id="x9-tom-is-a-traumatic-brain-injury-survivor"><span class="secno">9. </span>Tom is a traumatic brain injury survivor<a class="self-link" aria-label="§" href="#tom-is-a-traumatic-brain-injury-survivor"></a></h2>
-			<p>Tom was involved in a very serious car crash that left him with some physical, sensory and cognitive disabilities having sustained a brain injury.  He has now returned to his old company as a researcher and is back using the internet throughout his working day.</p>
-			<section id="challenge-1-using-speech-recognition-to-navigate-the-web">
-				<h3 id="x9-1-challenge-1-using-speech-recognition-to-navigate-the-web"><span class="secno">9.1 </span>Challenge 1: Using speech recognition to navigate the web <a class="self-link" aria-label="§" href="#challenge-1-using-speech-recognition-to-navigate-the-web"></a></h3>
-				<p>As Tom has dexterity difficulties he sometimes uses speech recognition to work through web pages as he finds this method the least tiring of all the possible input options.  Although his speech is slow, he is able to control his computer using speech commands and dictation.  It is quite easy to use simple commands to control websites, although there are times when he forgets some of the commands and has to use his cheat sheet.  Tom likes the scroll commands that allow him to read slowly down a page without using any other input device and he can often retrace his steps as he has to reread items.   However, there can be problems if the forms on the website are not labelled correctly or buttons do not have clear names. There are aspects of form filling that Tom has had help to personalize, but if an element is inaccessible via the keyboard, he has to use the mouse grid to interact with that part of the site.  This is a slow process and can be frustrating as Tom finds he loses concentration.</p>
-			</section>
-			<section id="challenge-2-screen-glare-and-eye-problems">
-				<h3 id="x9-2-challenge-2-screen-glare-and-eye-problems"><span class="secno">9.2 </span>Challenge 2: Screen glare and eye problems<a class="self-link" aria-label="§" href="#challenge-2-screen-glare-and-eye-problems"></a></h3>
-				<p>The bright white of a screen makes Tom’s eyes feel very tired and he tends to use a virtual coloured overlay at times. This can successfully dull the overall view of a website, but problems arise if the pages have insufficient contrast levels and use small text because this affects readability.  Difficulties also arise if the keyboard focus indicator is not visible as Tom moves around a site.  Tom admits that he has become a slow surfer, but if a site is well designed and accessible, he usually copes and can still gather data as part of his job.</p>
-			</section>
-			<section id="challenge-3-finding-the-right-words-to-use-for-searching">
-				<h3 id="x9-3-challenge-3-finding-the-right-words-to-use-for-searching"><span class="secno">9.3 </span>Challenge 3: Finding the right words to use for searching<a class="self-link" aria-label="§" href="#challenge-3-finding-the-right-words-to-use-for-searching"></a></h3>
-				<p>Tom finds there are times when he spells words incorrectly and he appreciates support with error corrections or a system that accepts mistakes.  He also has word finding problems when he is tired and search suggestions are welcomed, as are ideas that might be related to his search.  However, too many results can cause concern and Tom admits he really cannot work his way through very long lists that have not been broken up with headings and categories.</p>
-			</section>
-		</section>
-		<section id="interesting-links">
-			<!--OddPage--><h2 id="x10-interesting-links"><span class="secno">10. </span>Interesting links<a class="self-link" aria-label="§" href="#interesting-links"></a></h2>
-			<p><a href="http://rosenfeldmedia.com/a-web-for-everyone/meet-trevor/">http://rosenfeldmedia.com/a-web-for-everyone/meet-trevor/</a></p>
-			<p><strong>Aegis Project Personas 2008-2012</strong>: <a href="http://www.aegis-project.eu/index.php?Itemid=53&amp;id=63&amp;option=com_content&amp;view=article">http://www.aegis-project.eu/index.php?Itemid=53&amp;id=63&amp;option=com_content&amp;view=article</a> (licensed under a Creative Commons Attribution-Share Alike 3.0 License.)</p>
-			<p>Below are the personas developed for the AEGIS project.</p>
-			<p><strong>Cognitive impairment</strong>:</p>
-				<ul>
-					<li>Dementia/Alzheimer disease (<a href="http://www.aegis-project.eu/images/docs/Personas/PeterHQacc.pdf">Peter Vandezande</a> (Multiple Sclerosis - memory loss - reduced dexterity))</li>
-					<li>Dysarthria (<a href="http://www.aegis-project.eu/images/docs/Personas/EmmaHQacc.pdf">Emma Karlsson</a> (Dysarthria))</li>
-					<li>Learning disability (LD) (<a href="http://www.aegis-project.eu/images/docs/Personas/NiteshHQacc.pdf">Nitesh Sarin</a> (Dyslexic and colour blind), <a href="http://www.aegis-project.eu/images/docs/Personas/adamHQacc.pdf">Adam Ljung</a> (Learning disability))</li>
-					<li>Learning disability (LD) - Speech and language disorders (<a href="http://www.aegis-project.eu/images/docs/Personas/NiteshHQacc.pdf">Nitesh Sarin</a> (Dyslexic and colour blind), <a href="http://www.aegis-project.eu/images/docs/Personas/JaneHQacc.pdf">Jane Brown</a> (Cerebral Palsy))</li>
-					<li>Learning disability (LD) - Academic skills disorders (<a href="Learning disability (LD) - Academic skills disorders (Jane Brown (Cerebral Palsy))">Jane Brown</a> (Cerebral Palsy))</li>
-				</ul>
-			<p><strong>Hearing impairments</strong>:</p>
-				<ul>
-					<li>Conductive Hearing Loss (<a href="http://www.aegis-project.eu/images/docs/Personas/EmmaHQacc.pdf">Emma Karlsson</a> (Dysarthria), <a href="http://www.aegis-project.eu/images/docs/Personas/edwardHQacc.pdf">Edward Hodgins</a> (Hypoacusis))</li>
-					<li>Sensorineural Hearing Loss (<a href="http://www.aegis-project.eu/images/docs/Personas/edwardHQacc.pdf">Edward Hodgins</a> (Hypoacusis))</li>
-					<li>Profound hearing loss (<a href="http://www.aegis-project.eu/images/docs/Personas/edwardHQacc.pdf">Edward Hodgins</a> (Hypoacusis), <a href="http://www.aegis-project.eu/images/docs/Personas/TomasaHQacc.pdf">Tomasa Almaraz</a> (Deaf))</li>
-				</ul>
-			
-			<p><strong>Vision impairments</strong>:</p>
-				<ul>
-					<li>Low vision / Loss of central vision (<a href="http://www.aegis-project.eu/images/docs/Personas/martaHQacc.pdf">Märta Hansson</a> (Macular degeneration))</li>
-					<li>Low vision / Blurred vision (<a href="http://www.aegis-project.eu/images/docs/Personas/GertHQacc.pdf">Gert Van Dijk</a> (Partly blurred vision))</li>
-					<li>Blindness (<a href="http://www.aegis-project.eu/images/docs/Personas/PaulinaHQacc.pdf">Paulina Reyes</a> (Blind)))</li>
-					<li>Colour-blindness (<a href="http://www.aegis-project.eu/images/docs/Personas/NiteshHQacc.pdf">Nitesh Sarin</a> (Dyslexic and colour blind))</li>
-				</ul>
-			
-			<p><strong>Communication received and producing impairments</strong>:</p>
-				<ul>
-					<li>Expressive language disorder (<a href="http://www.aegis-project.eu/images/docs/Personas/carlosHQacc.pdf">Carlos Portillo</a> (Moderate Aphasia - Paraphasia), <a href="http://www.aegis-project.eu/images/docs/Personas/WayneHQacc.pdf">Wayne Edwards</a> (Global aphasia - short term memory loss), <a href="http://www.aegis-project.eu/images/docs/Personas/EmmaHQacc.pdf">Emma Karlsson</a> (Dysarthria))</li>
-					<li>Communication disability (<a href="http://www.aegis-project.eu/images/docs/Personas/TomasaHQacc.pdf">Tomasa Almaraz</a> (Deaf), <a href="http://www.aegis-project.eu/images/docs/Personas/carlosHQacc.pdf">Carlos Portillo</a> (Moderate Aphasia - Paraphasia), <a href="http://www.aegis-project.eu/images/docs/Personas/WayneHQacc.pdf">Wayne Edwards</a> (Global aphasia - short term memory loss), <a href="http://www.aegis-project.eu/images/docs/Personas/EmmaHQacc.pdf">Emma Karlsson</a> (Dysarthria), <a href="http://www.aegis-project.eu/images/docs/Personas/NiteshHQacc.pdf">Nitesh Sarin</a> (Dyslexic and colour blind), <a href="http://www.aegis-project.eu/images/docs/Personas/JaneHQacc.pdf">Jane Brown</a> (Cerebral Palsy))</li>
+				</p><ul>
+					<li>
+						Are older and struggle to use computers, or have age-related forgetfulness;
+					</li>
+					<li>
+						Are at an early stage of dementia
+					</li>
+					<li>
+						Have dyslexia, dyscalculia or ADHD
+					</li>
+					<li>
+						Have a learning or intellectual disability
+					</li>
+					<li>
+						People with acquired cognitive issues (for example, due to neurological trauma) who have the same challenges as people with other disabilities such as: 
+						<ul>
+							<li>having difficulty (asking a family member to help) with booking travel booking or hotel booking online</li>
+							<li>being unable to use online banking</li>
+							<li>coping with content forms and pop up windows when errors occur</li>
+						</ul>
+					</li>
 				</ul>
 			<p></p>
-			<p><strong>Upper limb impairment</strong>:</p>
-				<ul>
-					<li>Cerebral palsy (<a href="http://www.aegis-project.eu/images/docs/Personas/MikelHQacc.pdf">Mikel Vargas</a> (Spina bifida), <a href="http://www.aegis-project.eu/images/docs/Personas/JaneHQacc.pdf">Jane Brown</a> (Cerebral Palsy))</li>
-					<li>Multiple sclerosis (<a href="http://www.aegis-project.eu/images/docs/Personas/PeterHQacc.pdf">Peter Vandezande</a> (Multiple Sclerosis - memory loss - reduced dexterity))</li>
-					<li>Dystrophy (<a href="http://www.aegis-project.eu/images/docs/Personas/carlosHQacc.pdf">Carlos Portillo</a> (Muscular dystrophy))</li>
-					<li>Absent limb/ reduced limb function (<a href="http://www.aegis-project.eu/images/docs/Personas/PeterHQacc.pdf">Peter Vandezande</a> (Multiple Sclerosis - memory loss - reduced dexterity), Ramin El-Fassi (Dexterity problems), <a href="http://www.aegis-project.eu/images/docs/Personas/carlosHQacc.pdf">Carlos Portillo</a> (Muscular dystrophy), <a href="http://www.aegis-project.eu/images/docs/Personas/MikelHQacc.pdf">Mikel Vargas</a> (Spina bifida), <a href="http://www.aegis-project.eu/images/docs/Personas/JaneHQacc.pdf">Jane Brown</a> (Cerebral Palsy))</li>
+			<p>It is beyond the scope of this document to provide a guide to usability testing and user-research, however, there are many resources available such as:</p>
+			<p>
+				</p><ul>
+					<li>
+						<a href="https://uxmastery.com/beginners-guide-to-usability-testing/">How to Conduct Usability Testing from Start to Finish</a>, from UX Mastery.
+					</li>
+					<li>
+						<a href="https://www.usability.gov/how-to-and-tools/methods/usability-testing.html">Usability.gov usability testing resources</a>.
+					</li>
 				</ul>
-			
-			<p><strong>2 developers</strong>:</p>
-				<ul>
-					<li>Software developer - <a href="http://www.aegis-project.eu/images/docs/Personas/benoitHQacc.pdf">Benoit Dupré</a></li>
-					<li>Accessibility expert - <a href="www.aegis-project.eu/images/docs/Personas/ClydeHQacc.pdf">Clyde Channing</a></li>
-				</ul>
-			
+			<p></p>
+			<section id="differences_testing">
+				<h3 id="x4-1-differences-from-usability-testing-with-the-general-population"><span class="secno">4.1 </span>Differences from usability testing with the general population<a class="self-link" aria-label="§" href="#differences_testing"></a></h3>
+				<p>There are some differences when testing for accessibility, and that includes when testing with people who have cognitive impairments:</p>
+				<p>
+					</p><ul>
+						<li>
+							<p>Ensure that the participation forms are easy to understand, send them to the participant in advance, and allow plenty of time for the participant to ask questions and fill in forms;</p>
+						</li>
+						<li>
+							<p>Allow the participant to bring a carer, family member or friend to attend with them. If your tester has a guardian you should get informed consent from both the tester and their guardian;</p>
+						</li>
+						<li>
+							<p>It helps to provide easy methods of assessing mood, rather than asking for the participant to verbalise, try asking them to select a smiley face, such as:<br>
+							</p><figure id="fig-generatedID"><img src="img/faces-happy-to-sad.png" width="200" alt="a set of 5 smiley faces from happy, through neutral, to sad."></figure><p></p>
+						</li>
+						<li>
+							<p>Ensure the person does not feel like they are at fault for making mistakes; this is a likely scenario for people with cognitive impairments.</p>
+						</li>
+					</ul>
+				<p></p>
+				<div class="ednote" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="4"><span>Editor's note</span></div><p class="">The next few paragraphs up to the next section may be removed as it is both covered in usability guidance in the links above and significantly incomplete in comparison. We would be interested in finding out if anyone finds it useful to include.</p></div>
+				<p>Some brief guidance on usability testing:</p>
+				<p>
+					</p><ol>
+						<li>
+							Can your users ( people with learning and cognitive disabilities)  manage each task reasonably easily and fast. You can time the task taken to complete, and note any parts that where the users are slowed down or seem to struggle. Also note any errors that they making including clicking on the wrong thing.
+						</li>
+						<li>
+							Is completing the task frustrating or upsetting?
+							<ol>
+								<li>You can ask the users how they are feeling before and after the tasks (or rate their mode such as selecting the smilly which represents how they feel, such as:</li>
+								<li>ask them if anything was annoying.</li>
+							</ol>
+						</li>
+						<li>
+							<p>How can you make it better for your users ( people with learning and cognitive disabilities)</p>
+							<ol>
+								<li>You can analyze the data collected above</li>
+								<li>ask them how they feel about the system and if anything was annoying.</li>
+							</ol>
+							<p>If the user if failing blame the designer and not the user. Such as “ it is so helpful that you are doing this because our designers are not very good, or are always playing computer games so they think everyone is good at this stuff” or “you are really helping us make  this useable by real people and not just engineers” . Stop the process if users are getting distressed despite this.</p>
+						</li>
+					</ol>
+				<p></p>
+				<p>As a short overview, usability could be measured based on efficacy, efficiency and satisfaction. This can be done by measuring or tracking: </p>
+				<p>
+					</p><ul>
+						<li>successes and noting any errors to measure efficacy,</li>
+						<li>time taken per task to measure efficiency, note that the relative time between tasks is often more useful than absolute numbers. and</li>
+						<li>user’s mood and comments to measure satisfaction.</li>
+					</ul>
+				<p></p>
+				<p>At the end of the evaluation you should be able to answer:</p>
+				<p>
+					</p><ul>
+						<li>What prevents the user from completing a task?</li>
+						<li>What creates confusion? When and why do they misinterpret the interface?</li>
+						<li>What produces an error and an incorrect action?</li>
+						<li>When does the user get frustrated or upset</li>
+						<li>When does the user misunderstand navigation, menus and controls?</li>
+						<li>How can these problems be avoided?</li>
+					</ul>
+				<p></p>
+				<p>Note you will need to get informed consent from the tester before testing. Explain what they will be doing and why it is helping you. If there are any risks they need to be explained and understood. If your tester has a guardian you should get informed consent from both the tester and their guardian. Make sure potential participants are aware they can withdraw from the testing situation at any time and that their comments will be anonymised before being used in any report.</p>
+				<p>(With thanks to Smart4MD for this overview.  I SMART4MD is co-financed by the European Union under an EU Framework Programme for Research and Innovation – Horizon 2020, with grant agreement number 643399.and the European commission for this contribution.)</p>
+			</section>
 		</section>
 
+		<section id="design_themes">
+			<!--OddPage--><h2 id="x5-design-requirement-themes"><span class="secno">5. </span>Design Requirement Themes<a class="self-link" aria-label="§" href="#design_themes"></a></h2>
+			<p>To help web content providers meet the needs of people with cognitive and learning disabilities we have identified the following themes:</p>
+			<p>
+				</p><ol>
+					<li><p><strong>Design so that as many users as possible understand the site and know how to use it. </strong>This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patterns. Personalization and good use of semantics can help make the symbols and design as familiar to the user as possible. People with cognitive disabilities rely upon predictable behavior in digital content. For example, many websites do not follow the standard convention for hyperlinks: blue = unvisited; purple = visited; and underlined. </p>
+					</li>
+					<li><p><strong>Help the user find what they need. </strong>Navigating the system should be easy</p></li>
+					<li><p><strong>Use clear and understandable content</strong> This includes clear text, clear images, speech, and easy to understand video. For text, we mean understandable at an upper-primary grade reading level.</p></li>
+					<li><p><strong>Prevent the user from making mistakes and make it easy to correct mistakes when they do occur.</strong> A good design and use of scripts will make errors less likely, but when they do occur the user should know how to correct them, without having to render other data or start from the beginning.</p></li>
+					<li><p><strong>Help the user focus and restore context if attention is lost.</strong> Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.)</p></li>
+					<li><p><strong>Minimize the cognitive skills required to use the content and avoid barriers</strong> that stop people with cognitive disabilities from using content, such as hard to use security mechanisms. When possible, provide more accessible options. </p></li>
+					<li><p><strong>Provide help and support.</strong> Graphics, summaries of long documents, adding  icons to headings and links are all examples of extra help and support.</p></li>
+					<li><p><strong>Feedback is usable by everyone.</strong> If users have difficulty sending  feedback then you will not know if they are able to use the content or when they are experiencing problems. Therefore, it is essential that all the feedback mechanisms are tested by people with cognitive disabilities.</p></li>
+				</ol>
+			<p></p>
+
+			<section id="design_requirements">
+				<h3 id="x5-1-design-requirements"><span class="secno">5.1 </span>Design requirements<a class="self-link" aria-label="§" href="#design_requirements"></a></h3>
+				<div class="ednote" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="4"><span>Editor's note</span></div><p class="">The task force is taking all the design requirements and turning them into easy to read checkpoints. They will be divided by themes listed above.</p></div>
+				<p>Most of the design requirements were originally created as recommendations for WCAG, the <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To_Do_list">full list of potential requirements</a> is available, and you can also review the progress of the task force in making <a href="https://docs.google.com/document/d/1WcfVALVq8PS9CLXUuAfV9Op0wXvI2yJYedj5jO23GTk/">readable requirements geared to web developers</a>.</p>
+				<p>The task force appreciates feedback on this work.</p>
+			</section>
+			<section id="user-group-mapping">
+				<h3 id="x5-2-mapping-requirements-to-user-groups"><span class="secno">5.2 </span>Mapping requirements to user groups<a class="self-link" aria-label="§" href="#user-group-mapping"></a></h3>
+				<p>The table of design requirements and user groups maps requirements such as "User safety" and "Task completion" with the groups of users who benefit, such as those with "Memory impairments" and "Reduced focus and context".</p>
+				<p>Please review the table at <a href="../content-usable/table.html">Table of design requirements and user groups</a> </p>
+				<div class="ednote" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="4"><span>Editor's note</span></div><p class="">The task force intends to redo this table when the easy to read design recommendations are complete.</p></div>
+			</section>
+		</section>
+
+		<section id="special_applications">
+			<!--OddPage--><h2 id="x6-special-applications"><span class="secno">6. </span>Special applications<a class="self-link" aria-label="§" href="#special_applications"></a></h2>
+			<p id="ednote">We intend to add sections on GPS systems, conversational interfaces. Design patterns and gathering and analyzing user feedback and data.</p>
+		</section>
+
+		<section id="issues_and_considerations">
+			<!--OddPage--><h2 id="x7-issues-and-considerations"><span class="secno">7. </span>Issues and considerations<a class="self-link" aria-label="§" href="#issues_and_considerations"></a></h2>
+			<div class="ednote" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="3"><span>Editor's note</span></div><div class="">We intend to add additional sections on:
+				<ul>
+					<li>Items for further research</li>
+					<li>Data driven systems</li>
+					<li>Known issues (internationalization, author burden, test ability)</li>
+					<li>Guidance for assistive technologies</li>
+					<li>Guidance for Browsers</li>
+				</ul>
+			</div></div>
+
+			<section id="guidance_for_policy_makers">
+				<h3 id="x7-1-guidance-for-policy-makers"><span class="secno">7.1 </span>Guidance for policy makers<a class="self-link" aria-label="§" href="#guidance_for_policy_makers"></a></h3>
+				<div class="ednote" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><p class="">We intend to redo the introduction</p></div>
+				<p>This section provides guidance for policy makers on how to  use the design requirements to build a policy. This includes:</p>
+				<p>
+					</p><ul>
+						<li>Defining the scenarios included in your policy</li>
+						<li>Looking at the different criteria and deciding if they are important for the scenarios in your policy</li>
+						<li>Building a policy that include the important criteria for the scenarios included in your policy.</li>
+					</ul>
+				<p></p>
+				<p><u>Table of design requirements and policy criteria</u></p>
+				<table>
+					<tbody><tr>
+						<th>Number</th>
+						<th>Name</th>
+						<th>Testable</th>
+						<th>Requires user testing</th>
+						<th>Can be applied to all content</th>
+						<th>Important for conversational interfaces</th>
+						<th>Important for IOT</th>
+						<th>User need level</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>Clear purpose</td>
+						<td>yes</td>
+						<td>no</td>
+						<td>yes</td>
+						<td>yes</td>
+						<td>yes</td>
+						<td>high</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Support personalization</td>
+						<td>yes</td>
+						<td>no</td>
+						<td>yes</td>
+						<td>yes</td>
+						<td>yes</td>
+						<td>high</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Support simplification</td>
+						<td>yes</td>
+						<td>no</td>
+						<td>yes</td>
+						<td>yes</td>
+						<td>yes</td>
+						<td>high</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Familiar design</td>
+						<td>yes</td>
+						<td>sometimes</td>
+						<td>yes</td>
+						<td>no</td>
+						<td>yes</td>
+						<td>high</td>
+					</tr>
+				</tbody></table>
+				<div class="ednote" id="issue-container-generatedID-6"><div role="heading" class="ednote-title marker" id="h-ednote-6" aria-level="4"><span>Editor's note</span></div><p class="">This table needs to be completed for each design requirement. The task force would appreciate feedback on additional criteria that would be helpful for policy makers.</p></div>
+				<p><strong>Example recommendations for policies:</strong></p>
+				<p>
+					</p><ul>
+						<li>A policy for critical services might include any item with a high or medium level need</li>
+						<li>A policy for emergency services might  include all items</li>
+						<li>A policy for legislation for wide adoption for all web sites might  include any item that are testable, does not require human testing and have a high user need level.</li>
+						<li>A policy for legislation for content needed in the workplace might  include any item that are testable, and have a high or medium level user need level.</li>
+					</ul>
+				<p></p>
+				<p><strong>The following are example scenarios that may be included in a policy:</strong></p>
+				<p>
+					</p><ul>
+						<li>Critical services - such as water, health care, phone and internet services, government services</li>
+						<li>Emergency services - such as police, fire, etc</li>
+						<li>Content needed in the workplace, including professional sites</li>
+						<li>Content that helps autonomy such as apps and interfaces to run home devices, book a cab, write an email etc.</li>
+					</ul>
+				<p></p>
+				<p><strong>The following are example user considerations:</strong></p>
+				<p>
+					</p><ul>
+						<li>Safety</li>
+						<li>Autonomy and savings in care-giving</li>
+						<li>Cost associated with people leaving the work place earlier than necessary.</li>
+					</ul>
+				<p></p>
+				<p><strong>Other considerations include:</strong></p>
+				<p>
+					</p><ul>
+						<li>Does this item require user testing to conform, and is this too  expensive for the scope of sites that might be required to comply</li>
+						<li>See the issue paper on user testing for more information</li>
+					</ul>
+				<p></p>
+				<div class="ednote" id="issue-container-generatedID-7"><div role="heading" class="ednote-title marker" id="h-ednote-7" aria-level="4"><span>Editor's note</span></div><p class="">This section is incomplete. The task force would appreciate receiving feedback of such as  additional examples, scenarios and considerations.</p></div>
+			</section>
+			<div class="ednote" id="issue-container-generatedID-8"><div role="heading" class="ednote-title marker" id="h-ednote-8" aria-level="3"><span>Editor's note</span></div><p class="">We intend to add a glossary and links to our research pages</p></div>
+		</section>
+		
+	
 
 
 
@@ -2333,7 +2466,5 @@ h6>a.self-link::before {
 		</section>
 
 		-->
-
-	
 
 <p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
