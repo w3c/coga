@@ -15,7 +15,17 @@
 
 		<section class="informative" id="introduction_for_usable">
 			<section id="abstract">
-				<p>Making websites and applications that are friendly for people with cognitive impairments affects every part of design and development.</p>
+				<p>This document is for people who make Web content (Web pages) and Web applications.  It give advice on how to make content useable for  people with learning and cognitive disabilities. 
+				</p>
+				<p>This document has content about:<ul>
+				<li>About people with learning and cognitive disabilities, </li>
+<li>user needs,</li>
+<li>user testing,</li>
+<li>design requirements(ways) make content useable,</li>
+<li>advice for policy makers.</li> </ul>
+				</p>This document builds on the <a href="https://www.w3.org/TR/coga-gap-analysis/">Cognitive Accessibility Gap Analysis and Roadmap
+				 ,  <a href="https://www.w3.org/TR/coga-user-research/">Cognitive Accessibility User Research</a> [<cite><a class="bibref" href="#bib-coga-user-research">coga-user-research</a></cite>] and <a href="https://w3c.github.io/coga/issue-papers/">Cognitive Accessibility Issue Papers</a> [<cite><a class="bibref" href="#bib-coga-issue-papers">coga-issue-papers</a></cite>] to evaluate where user needs remain to be met in technologies and accessibility guidelines.
+			
 			</section>
 
 			<section id="sotd"></section>
@@ -63,12 +73,124 @@
 
 		<section id="background">
 			<h1>Background about people with learning and cognitive disabilities and the web</h1>
-			<p class="ednote">We intend to add a short background in this section. This may be a separate document.</p>
-		</section>
+			<p>People with cognitive and learning disabilities may be unable to use web content because of the design choices of the author. Examples include: </p>
+				<ul>
+					<li> People with impaired short term memory are unlikely to be able to remember passwords and access codes. They may have trouble or be unable to remember new symbols and interface paradigms. </li>
+					<li>People with language related disabilities may need simple clear language and instructions. They may also need supporting graphics and familiar symbols</li>
+					<li>People with communication disabilities may need clear literal language and may not understand metaphors or non-literal text and symbols. </li>
+					<li>People with dyscalculia may not understand numerical references such as percentages. </li>
+					<li>People who struggle with keeping and regaining focus, may be unable to focus on a task if there are lots of distractions and interruptions. They may need headers and signposts to help them regain the context after their attention has been lost (including in multi-media). </li>
+					<li>Many groups will need support to minimize errors and complete their task. They will struggle with complex, multi-stage processes that were not necessary for the task at hand such  as filling out forms or entering data correctly or finding the content or feature that they need. </li>
+			</ul>
+					</section>
 
 		<section id="user_needs">
 			<h1>User Needs</h1>
-			<p class="ednote">We intend to add a summary of the user need addressed in <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html"> https://rawgit.com/w3c/coga/master/gap-analysis/table.html</a></p>
+			<p>User needs for people with learning and cognitive disabilities (COGA) are often important for other users. 
+			 However for COGA groups they often make the difference between being able to use the site or not be able to use it at all. </p>
+			<ol>
+  <li>Authentication and Safety 
+    <ul>
+      <li>secure website authentication that is easy to use</li>
+      <li>safe way to interact online.</li>
+    </ul>
+  </li>
+  <li>Context and Distractions
+    <ul>
+      <li>consume content or complete a task without unnecessary distractions</li>
+      <li> know the context (where I am, what I just did, or what just happened)</li>
+      <li>restore context 
+        <ul>
+          <li>when I forget where I am or get distracted</li>
+          <li>in multimedia. ability to go back to what I just missed, or reorient myself if I get lost</li>
+        </ul>
+      </li>
+      <li>reminders of important information</li>
+      <li>turn off distractions by default and be a trivial option in real time</li>
+    </ul>
+  </li>
+  <li>Entering Data, Error Prevention, &amp; Recovery
+    <ul>
+      <li>help avoiding mistakes, and minimizing the mistakes I might make</li>
+      <li>know what mistake were made and how to correct a mistake. Do no cause undue alarm a mistake happens</li>
+      <li>enough time, and do not lose work</li>
+      <li>use applications or APIs that remember a lot of my information so I do not need to enter it again, and to otherwise help me, such as with spelling.</li>
+      <li>know where I am in a process, including what I have done and what my next step is.</li>
+      <li>able to check my work and go back without losing the work I have just done</li>
+    </ul>
+  </li>
+  <li>Help and support
+    <ul>
+      <li>more explanations, such as context sensitive help and short tips.</li>
+      <li> know how to get more information.</li>
+      <li>easily get human help.</li>
+      <li>symbols that help me understand content.</li>
+      <li>contextually-relevant graphs and pictures to supplement text so I can understand a point without a lot of reading.</li>
+      <li>speech support, with synchronized highlighting, so I can follow as I go.</li>
+      <li>rapid feedback.</li>
+      <li>highlight section of image, chart, or math, while the section is read.</li>
+      <li>more space between letters, words, sentences, and/or lines of text. </li>
+      <li>reminders, or I will forget appointments, and when I was meant to do things</li>
+      <li>not too many reminders, as I will be distracted.</li>
+      <li>confident that I can manage my tasks.</li>
+    </ul>
+  </li>
+  <li>Simple and Clear Interface
+    <ul>
+      <li>controls are clear</li>
+      <li>understand the menu terms so I know where to find things</li>
+      <li>find the controls that I need</li>
+      <li>a structure that is easy follow</li>
+      <li>can easily find content I need</li>
+      <li>signposts so I can find information I need</li>
+      <li>Multimedia - understandable structure. Easy to find the content needed</li>
+      <li>easily separate what I need, and do not need, and find what I need</li>
+      <li>know what an advertisement is, or one from a different website</li>
+      <li> know where to find things on a page</li>
+      <li>know the design patterns</li>
+      <li>unambiguous affordances - I know what things are and what they do</li>
+    </ul>
+  </li>
+  <li>Familiar Interface
+    <ul>
+      <li>familiar with the UI, and I know how to work it and what will happen when I work it</li>
+      <li>symbols I understand immediately</li>
+      <li>different types of messages to be consistent in different parts of the screen
+      </li>
+      <li>controls to be consistently positioned on the screen</li>
+    </ul>
+  </li>
+  <li>Clear and understandable content and text.
+    <ul>
+      <li>clear language - Understandable use of vocabulary, syntax, and other aspects of language</li>
+      <li>clarify implied information and provide unambiguous information</li>
+      <li>reduction of dependence on understanding math concepts</li>
+      <li>support for slow readers</li>
+      <li>understand (familiar) symbols</li>
+      <li>understand images and multi-media</li>
+    </ul>
+  </li>
+  <li>Navigating the system
+    <ul>
+      <li>find information I need without deciphering a lot of words or symbols</li>
+      <li>quickly identify options I need.</li>
+      <li>simple-to-navigate menu systems</li>
+      <li>simple-to-navigate voice-menu systems</li>
+      <li>find a human help</li>
+    </ul>
+  </li>
+  <li>Navigation and GPS
+    <ul>
+      <li>option for simplicity - let me balance complexity and speed</li>
+      <li>understandable terms, which make sense to users, and do not depend on knowing left and right, or on number dependence</li>
+      <li>no automatic rerouting without user consent</li>
+      <li>understandable symbols</li>
+      <li>no change of context</li>
+      <li> no change to orientation</li>
+    </ul>
+  </li>
+</ul>
+			<p class="ednote">This summary is based on the user need addressed in <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html"> https://rawgit.com/w3c/coga/master/gap-analysis/table.html</a>. We may add user needs from the design requirements</p>
 		</section>
 
 		<section id="persona">
@@ -82,7 +204,8 @@
 			<h1>Usability Testing, Focus Groups and Feedback</h1>
 			<p>Usability testing is the best way to know if your content and functionality works for real people with cognitive and learning disabilities.</p>
 			<div><img alt="aspects for providing guidance, include usability, accessibility, reliably testable accessibility and automatically testable accessibility " src="img/guidance_aspect.png" height="486" width="600"></div>
-			<p>Finding five to ten people with different learning and cognitive disabilities can be relatively easy, such as friends, colleagues, relatives or neighbors who:</p>
+			<p>Usability is a key factor for everyone, if something is difficult to use it is cannot be accessible. Automated testing for accessibility tends to focus on more technical areas of accessibility, and cannot assess how easy something is to use. It is vital for people with cognitive disabilities that teams do not rely on automated testing alone for accessibility, but incorporate <a href="#design_themes">design requirements</a>, and if possible test with people who have cognitive disabilities.</p>
+			<p>Finding people to include in usability testing who have different learning and cognitive disabilities can be relatively easy, such as friends, colleagues, relatives or neighbors who:</p>
 			<p>
 				<ul>
 					<li>
@@ -191,23 +314,19 @@
 			<p>To help web content providers meet the needs of people with cognitive and learning disabilities we have identified the following themes:</p>
 			<p>
 				<ol>
-					<li><p><strong>Design so that as many users as possible understand the site and know how to use it. </strong>This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patterns. Personalization and good use of semantics can help make the symbols and design as familiar to the user as possible. People with cognitive disabilities rely upon predictable behavior in digital content. For example, many websites do not follow the standard convention for hyperlinks: blue = unvisited; purple = visited; and underlined. </p>
-					</li>
-					<li><p><strong>Help the user find what they need. </strong>Navigating the system should be easy</p></li>
-					<li><p><strong>Use clear and understandable content</strong> This includes clear text, clear images, speech, and easy to understand video. For text, we mean understandable at an upper-primary grade reading level.</p></li>
-					<li><p><strong>Prevent the user from making mistakes and make it easy to correct mistakes when they do occur.</strong> A good design and use of scripts will make errors less likely, but when they do occur the user should know how to correct them, without having to render other data or start from the beginning.</p></li>
-					<li><p><strong>Help the user focus and restore context if attention is lost.</strong> Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.)</p></li>
-					<li><p><strong>Minimize the cognitive skills required to use the content and avoid barriers</strong> that stop people with cognitive disabilities from using content, such as hard to use security mechanisms. When possible, provide more accessible options. </p></li>
-					<li><p><strong>Provide help and support.</strong> Graphics, summaries of long documents, adding  icons to headings and links are all examples of extra help and support.</p></li>
-					<li><p><strong>Feedback is usable by everyone.</strong> If users have difficulty sending  feedback then you will not know if they are able to use the content or when they are experiencing problems. Therefore, it is essential that all the feedback mechanisms are tested by people with cognitive disabilities.</p></li>
+					<li><p><strong>Design so that as many users as possible understand the site and know how to use it. </strong>This often involves using things that are clear and familiar to the user so that they do not have to learn new symbols, terms or design patterns. Personalization and good use of semantics can help make the symbols and design as familiar to the user as possible. People with cognitive disabilities rely upon predictable behavior in digital content. For example, many websites do not follow the standard convention for hyperlinks: blue = unvisited; purple = visited; and underlined. See the <a href="coga-designrequirements.html#theme1">design requirments for understandable design</a>.</p></li>
+					<li><p><strong>Help the user find what they need. </strong>Navigating the system should be easy.  See the <a href="coga-designrequirements.html#theme2">design requirments for navigation</a>.</p></li>
+					<li><p><strong>Use clear and understandable content</strong> This includes clear text, clear images, speech, and easy to understand video.  See the <a href="coga-designrequirements.html#theme3">design requirments for understandable content.</a></p></li>
+					<li><p><strong>Prevent the user from making mistakes and make it easy to correct mistakes when they do occur.</strong> A good design and use of scripts will make errors less likely, but when they do occur the user should know how to correct them, without having to render other data or start from the beginning. See the <a href="coga-designrequirements.html#theme4">design requirments for errors.</a></p></li>
+					<li><p><strong>Help the user focus and restore context if attention is lost.</strong> Items like breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.) See the <a href="coga-designrequirements.html#theme5">design requirments for focus.</a></p></li>
+					<li><p><strong>Minimize the cognitive skills required to use the content and avoid barriers</strong> that stop people with cognitive disabilities from using content, such as hard to use security mechanisms. When possible, provide more accessible options. See the <a href="coga-designrequirements.html#theme6">design requirments for barriers.</a></p></li>
+					<li><p><strong>Provide help and support.</strong> Graphics, summaries of long documents, adding  icons to headings and links are all examples of extra help and support.  See the <a href="coga-designrequirements.html#theme7">design requirments for support.</a></p></li>
+					<li><p><strong>Feedback is usable by everyone.</strong> If users have difficulty sending  feedback then you will not know if they are able to use the content or when they are experiencing problems. Therefore, it is essential that all the feedback mechanisms are tested by people with cognitive disabilities. See the <a href="coga-designrequirements.html#theme8">design requirments for feedback.</a></p></li>
 				</ol>
 			</p>
 
-			<section id="design_requirements">
-				<h2>Design requirements</h2>
-				<p class="ednote">The task force is taking all the design requirements and turning them into easy to read checkpoints. They will be divided by themes listed above.</p>
-				<p>Most of the design requirements were originally created as recommendations for WCAG, the <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To_Do_list">full list of potential requirements</a> is available, and you can also review the progress of the task force in making <a href="https://docs.google.com/document/d/1WcfVALVq8PS9CLXUuAfV9Op0wXvI2yJYedj5jO23GTk/">readable requirements geared to web developers</a>.</p>
-				<p>The task force appreciates feedback on this work.</p>
+		
+				<p class="ednote">The task force is taking all the design requirements and turning them into easy to read checkpoints. They will be divided by themes listed above. Most of the design requirements were originally created as recommendations for WCAG, the <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To_Do_list">full list of potential requirements</a> is available, and you can also review the progress of the task force in making <a href="https://docs.google.com/document/d/1WcfVALVq8PS9CLXUuAfV9Op0wXvI2yJYedj5jO23GTk/">readable requirements geared to web developers</a>. The task force appreciates feedback on this work.</p>
 			</section>
 			<section id="user-group-mapping">
 				<h2>Mapping requirements to user groups</h2>
