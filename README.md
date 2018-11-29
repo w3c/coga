@@ -7,5 +7,5 @@ HTML snapshots of pages are taken in the gh-pages branch and are available on:
 * https://w3c.github.io/coga/techniques
 * https://w3c.github.io/coga/user-research
 * https://w3c.github.io/coga/content-usable/
-* https://w3c.github.io/coga/requirements/
+* https://w3c.github.io/coga/design/
 * https://w3c.github.io/coga/persona/
