@@ -77,7 +77,7 @@ var respecConfig = {
     // errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
 
     // name of the WG
-    wg:           ["Cognitive and Learning Disabilities Accessibility Task Force", "Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
+    wg:           ["Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
 
     // URI of the public WG page
     wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
