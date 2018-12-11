@@ -8,12 +8,6 @@
 			content="width=device-width, initial-scale=1, viewport-fit=cover"
 		/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<zscript
-			type="text/javascript"
-			async=""
-			defer="defer"
-			src="./all_files/piwik.js.download"
-		></zscript>
 		<script>
 			document.documentElement.className = document.documentElement.className.replace(
 				"no-js",
@@ -185,15 +179,15 @@
 									<button
 										class="button button-icon button-nobg button-noborder"
 									>
-										<span
-											><svg
+										<span></span>
+										<!-- prettier-ignore -->
+										<svg
 												aria-label="Submit Search"
 												class="icon-search "
 											>
 												<use
 													xlink:href="./all_files/icons.svg#icon-search"
-												></use></svg
-										></span>
+												></use></svg></span>
 									</button>
 								</div>
 							</form>
@@ -886,28 +880,6 @@
 		<script>
 			svg4everybody();
 		</script>
-		<!-- Matomo -->
-		<zscript>
-			var _paq = _paq || []; /* tracker methods like "setCustomDimension"
-			should be called before "trackPageView" */
-			_paq.push(["setDoNotTrack", true]); _paq.push(["trackPageView"]);
-			_paq.push(["enableLinkTracking"]); (function() { var u =
-			"//www.w3.org/analytics/piwik/"; _paq.push(["setTrackerUrl", u +
-			"piwik.php"]); _paq.push(["setSiteId", "328"]); var d = document, g
-			= d.createElement("script"), s =
-			d.getElementsByTagName("script")[0]; g.type = "text/javascript";
-			g.async = true; g.defer = true; g.src = u + "piwik.js";
-			s.parentNode.insertBefore(g, s); })();
-		</zscript>
-		<znoscript
-			><p>
-				<img
-					src="//www.w3.org/analytics/piwik/piwik.php?idsite=328&rec=1"
-					style="border:0;"
-					alt=""
-				/></p
-		></znoscript>
-		<!-- End Matomo Code -->
 		<script src="./all_files/main.js.download"></script>
 	</body>
 </html>
