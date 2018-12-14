@@ -13,14 +13,15 @@
 
 			function downloadJSAtOnload() {
 				var element = document.createElement("script");
-				element.src = "https://www.w3.org/WAI/assets/scripts/main.js?1544003623147732000";
+				element.src =
+					"https://www.w3.org/WAI/assets/scripts/main.js?1544003623147732000";
 				document.body.appendChild(element);
 			}
 
 			window.addEventListener("load", downloadJSAtOnload, false);
 		</script>
     <link rel="stylesheet" href="./all_files/style.css">
-    <title> Designing Cognitive Accessibility | Web Accessibility Initiative
+    <title> Ensuring Cognitive Accessibility | Web Accessibility Initiative
       (WAI) | W3C </title>
     <!-- Begin Jekyll SEO tag v2.5.0 -->
     <meta name="generator" content="Jekyll v3.7.3">
@@ -114,8 +115,8 @@
         <li><a href="https://www.w3.org/WAI/">Home</a></li>
         <li> <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Accessibility
             Fundamentals</a> </li>
-        <li> <a href="./?env=dev">Cognitive Accessibility</a> </li>
-        <li> <a href="./design.html?env=dev" aria-current="page">Design</a> </li>
+        <li><a href="./?env=dev">Cognitive Accessibility</a></li>
+        <li> <a href="./design.html?env=dev" aria-current="page">Ensuring</a> </li>
       </ul>
     </nav>
     <div class="default-grid with-gap leftcol">
@@ -178,9 +179,9 @@
           <li> <a class="page-link" aria-current="location" href="./?env=dev"><span>Cognitive
                 Accessibility</span></a>
             <ul>
-              <li> <a class="page-link" href="./ensuring.html?env=dev"><span>Ensuring</span></a>
+              <li> <a class="page-link" aria-current="page" href="./ensuring.html?env=dev"><span>Ensuring</span></a>
               </li>
-              <li> <a class="page-link" aria-current="page" href="./design.html?env=dev"><span>Design</span></a>
+              <li> <a class="page-link" href="./design.html?env=dev"><span>Design</span></a>
               </li>
               <li> <a class="page-link" href="./research.html?env=dev"><span>Research
                     and Analysis</span></a> </li>
@@ -191,176 +192,214 @@
         </ul>
       </nav>
       <main id="main">
-        <h1> Designing Cognitive Accessibility </h1>
+        <h1>Ensuring Cognitive Accessibility</h1>
         <aside class="box box-full">
           <header class="box-h  box-h-full">
             <h2>Summary</h2>
           </header>
-          <div class="box-i">This page provides Design Techniques for ensuring
-            accessibility for people with cognitive and learning Disabilities</div>
+          <div class="box-i"> This page outlines how to ensure web sites are
+            usable by people with Cognitive and Learning difficulties
+            during&nbsp; design and development. </div>
         </aside>
         <nav class="box box-simple box-full" aria-labelledby="tocheading" id="toc">
           <header id="tocheading" class="box-h box-h-simple box-h-full"> Page
             Contents </header>
           <div class="box-i">
             <ul id="markdown-toc">
+              <li><a href="https://www.w3.org/WAI/older-users/developing/#wcag"
+                  id="markdown-toc-wcag">Holistic Accessible Design and
+                  Development<br>
+                </a> </li>
               <li> <a href="https://www.w3.org/WAI/older-users/developing/#wcag"
-                  id="markdown-toc-wcag">Relationship to WCAG 2.0</a> </li>
+                  id="markdown-toc-wcag">Example Personas for Design<br>
+                </a> </li>
               <li> <a href="https://www.w3.org/WAI/older-users/developing/#wcag"
-                  id="markdown-toc-wcag">Relationship to Personalisation</a></li>
-              <li><span style="color: #003366;">Design Techniques<br>
-                </span></li>
+                  id="markdown-toc-wcag">Design For User Needs<br>
+                </a> </li>
+              <li> <a href="https://www.w3.org/WAI/older-users/developing/#wcag"
+                  id="markdown-toc-wcag"><span style="color: #1d1d1d;">Testing</span><br>
+                </a> </li>
             </ul>
           </div>
         </nav>
-        <h2 id="wcag">Relationship to WCAG 2.0</h2>
-        How WCAG applies and more of the techniques here may move over time into
-        success criteria in WCAG.<br>
-        <h2 id="wcag">Relationship to Personalisation</h2>
-        How Personalisation relates - coming soon<br>
-        <h2 id="wcag">Design Techniques</h2>
-        &nbsp; TODO - use twisties<br>
+        <h2>Holistic Accessible Design and Development</h2>
+        As with general accessibility, making websites and applications that are
+        friendly for people with cognitive impairments requires careful
+        attention at every stage of the design and development. Ideally it will
+        start even earlier, during procurement.<br>
         <br>
-        &nbsp; To help web content providers meet the needs of people with
-        cognitive and learning disabilities we have identified the following
-        themes:<br>
-        &nbsp; !!! rewrite to be techniques not requirements or maybe move the
-        text to the Ensuring page?<br>
-        <ul>
-          <li>&nbsp; Design so that as many users as possible understand the
-            site and know how to use it:</li>
+        As with fixing software bugs, the later in the process it is left the
+        more expensive it is and the hard to get a good solution. Traditionally
+        accessibility has been most focused on the interface, and making that
+        usable for people with sensory and physical impairments in vision,
+        hearing and/or mobility. Some of these accessibility features will help
+        people with cognitive impairments, but ensuring cognitive accessibility
+        introduces many requirements that must be addressed during the design
+        stages. These are often generally accepted good design practices but if
+        they are not followed will make it impossible for users to access the
+        site. For example, issues with structure, navigation, context, language
+        or dynamics.<br>
+        <br>
+        If practices such as User Centered Design or Inclusive Design are
+        followed development then the requirements of people with cognitive and
+        learning disabilities can be incorporated from the very start of a
+        project or product design.<br>
+        <br>
+        People with cognitive impairments can also be included in all stages of
+        usability testing along with users with other disabilities. This is
+        critical to ensure accessibility. Automated testing can only ever catch
+        a proportion of barriers that people might experience.<br>
+        <h2>Example Personas for Design</h2>
+        <p> Personas are a popular design tool providing useful example profiles
+          of people with a range of disabilities and impairments. A persona
+          details the likes and dislikes of the person, the barriers they
+          experience with technology and how they would like use it.<br>
+          <br>
+          Personas ""personify" a disability; providing potential to relate to
+          users with specific disabilities. Note that they are a tool and so can
+          be used inappropriately if care is not taken. That said, designers and
+          project teams do use them successfully to better understand and
+          anticipate the needs, preferences and frustrations of users. thus they
+          can keep their needs in mind throughout the design and development
+          process. </p>
+        <p> Here are a few example <a href="https://w3c.github.io/coga/persona/">Personas
+            for cognitive and learning disabilities</a>. </p>
+        <h2>Design for User Needs</h2>
+        <p> The design documentation provides a set of techniques that allow
+          websites to meet the requirements of users with Cognitive and Learning
+          Disabilities. These are built on an organized collection of user
+          needs, which in turn are created by understanding common issues that
+          user face as uncovered by research activities. </p>
+        <p> There are many cognitive users needs so they have been organized
+          into Themes. The detailed design documentation for each Theme contains
+          user needs along with design techniques to address them and also
+          testing ideas. .&nbsp; </p>
+        <p> The list of Themes with example user needs are below. Each provides
+          a link to the detailed documentation </p>
+        <ol>
+          <li>
+            <p> <strong>Design is easy to understand and use: </strong> See
+              the <a href="https://w3c.github.io/coga/design/#theme1">design
+                guide for understandable design</a>. </p>
+          </li>
           <ul>
-            <li>&nbsp;This often involves using things that are clear and
-              familiar to the user so that they do not have to learn new
-              symbols, terms or design patterns. Personalization and good use of
-              semantics can help make the symbols and design as familiar to the
-              user as possible. People with cognitive disabilities rely upon
-              predictable behavior in digital content. For example, many
-              websites do not follow the standard convention for hyperlinks:
-              blue = unvisited; purple = visited; and underlined. See the design
-              requirements for understandable design.</li>
+            <li> understand UI and I know how to work it and what will happen
+              when I work it </li>
+            <li> controls are consistently positioned on the screen </li>
           </ul>
-          <li>&nbsp; Help the user find what they need:</li>
+          <li>
+            <p> <strong>Help the user find what they need:</strong> See the <a
+                href="https://w3c.github.io/coga/design/#theme2">design guide
+                for navigation</a>. </p>
+          </li>
           <ul>
-            <li>Navigating the system should be easy. See the design
-              requirements for navigation.</li>
+            <li> find information I need without deciphering a lot of words or
+              symbols </li>
+            <li> cannot get lost and easily get back to a place I feel
+              comfortable </li>
           </ul>
-          <li>&nbsp; Use clear and understandable content: </li>
+          <li>
+            <p> <strong>Use clear and understandable content:</strong> See the
+              <a href="https://w3c.github.io/coga/design/#theme3">design guide
+                for understandable content</a> </p>
+          </li>
           <ul>
-            <li>&nbsp;&nbsp;&nbsp; This includes clear text, clear images,
-              speech, and easy to understand video. See the design requirements
-              for understandable content.</li>
+            <li> clear language - Understandable use of vocabulary, syntax, and
+              other aspects of language </li>
+            <li> reduction of dependence on understanding math concepts </li>
           </ul>
-          <li>Prevent the user from making mistakes and make it easy to correct
-            mistakes when they do occur:</li>
+          <li>
+            <p> <strong>Prevent mistakes and provide easy correction :</strong>
+              See the <a href="https://w3c.github.io/coga/design/#theme4">design
+                guide for errors.</a> </p>
+          </li>
           <ul>
-            <li>&nbsp;&nbsp; A good design and use of scripts will make errors
-              less likely, but when they do occur the user should know how to
-              correct them, without having to render other data or start from
-              the beginning. See the design requirements for errors</li>
+            <li> know where I am in a process, including what I have done and
+              what my next step is. </li>
+            <li> able to check my work and go back without losing the work I
+              have just done </li>
           </ul>
-          <li>&nbsp; Help the user focus and restore context if attention is
-            lost:</li>
+          <li>
+            <p> <strong>Help the user focus and restore context if distracted:</strong>
+              See the <a href="https://w3c.github.io/coga/design/#theme5">design
+                guide for focus.</a> </p>
+          </li>
           <ul>
-            <li>&nbsp;&nbsp;&nbsp; Items like breadcrumbs can help orientate the
-              user and help the user restore the context when it is lost.
-              (Making breadcrumbs clickable can also help the user undo
-              mistakes.) See the design requirments for focus.</li>
+            <li> know the context (where I am, what I just did, or what just
+              happened) </li>
+            <li> restore context when I forget where I am or get distracted </li>
           </ul>
-          <li>&nbsp; Minimize the cognitive skills required to use the content
-            and avoid barriers:</li>
+          <li>
+            <p> <strong>Avoid creating barriers:</strong> See the <a href="https://w3c.github.io/coga/design/#theme6">design
+                guide for barriers.</a> </p>
+          </li>
           <ul>
-            <li>&nbsp;&nbsp;&nbsp; that stop people with cognitive disabilities
-              from using content, such as hard to use security mechanisms. When
-              possible, provide more accessible options. See the design
-              requirements for barriers.</li>
+            <li> <span class="tocxref">Logging in does not rely on good memory
+                or other cognitive skill<span style="color: #1d1d1d;">s</span></span>
+            </li>
           </ul>
-          <li>&nbsp; Provide help and support:</li>
+          <li>
+            <p> <strong>Provide help and support:</strong> See the <a href="https://w3c.github.io/coga/design/#theme7">design
+                guide for support.</a> </p>
+          </li>
           <ul>
-            <li>&nbsp; Graphics, summaries of long documents, adding icons to
-              headings and links are all examples of extra help and support. See
-              the design requirments for support</li>
+            <li>easily get human help.</li>
+            <li>symbols that help me understand content</li>
           </ul>
-          <li>&nbsp; Feedback is usable by everyone:</li>
-          <ul>
-            <li>&nbsp;&nbsp;&nbsp; If users have difficulty sending feedback
-              then you will not know if they are able to use the content or when
-              they are experiencing problems. Therefore, it is essential that
-              all the feedback mechanisms are tested by people with cognitive
-              disabilities. See the design requirments for feedback.</li>
-          </ul>
-        </ul>
-        <h2 id="wcag">Example Theme: Provide help and support</h2>
-        Users with cognitive impairments may need different levels and forms of
-        help, depending on their circumstances<br>
-        <h3 id="wcag">Method: Provide human help</h3>
-        People may get stuck, confused or otherwise require easy access a human
-        who can provide help and support. Support may be required for
-        accessibility, technical, process or the domain issues.<br>
-        <h4 id="wcag">Relevent WCAG 2.0 SCs and Techniques</h4>
-        <ul>
-          <li> &nbsp;&nbsp;
-            [https://www.w3.org/TR/2008/REC-WCAG20-20081211/#minimize-error-context-help
-            3.3.5 Help: Context-sensitive help is available. (Level AAA)] Note
-            for coga global help should be provided as well as context sensitive
-            [?]</li>
-          <li> &nbsp;&nbsp;
-            [https://www.w3.org/TR/WCAG20-TECHS/complete.html#G71 G71: Providing
-            a help link on every Web page]. Note for coga help should be
-            available on every page, not just forms.</li>
-          <li> &nbsp;&nbsp; [https://www.w3.org/TR/WCAG20-TECHS/G193.html
-            Providing help by an assistant in the Web page]</li>
-          <li>NB !!! There is often a mixture of suitable WCAG links (SC, quick
-            ref, Techniques &amp; Understanding). I picked the SC plus others
-            even though they can all be found via the SC</li>
-        </ul>
-        <h4 id="wcag">Example techniques to consider</h4>
-        <ul>
-          <li> &nbsp;&nbsp; [https://example.com P101 Live chat or video call
-            help]</li>
-          <li> &nbsp;&nbsp; A phone number or link (eq VOIP phone)</li>
-          <li> &nbsp;&nbsp; A simple contact form&nbsp;&nbsp; </li>
-        </ul>
-        <h4 id="wcag">Example Personalisation techniques to consider</h4>
+          <li>
+            <p> <strong>Feedback is usable by everyone:</strong> See the <a href="https://w3c.github.io/coga/design/#theme8">design
+                guide for feedback.</a> </p>
+          </li>
+        </ol>
+        <p></p>
+        <h2>Testing</h2>
+        <p> Good usability testing is critical for any accessible design as
+          users can approach and use a design in unforeseen ways and experience
+          completely unexpected obstacles. It is even more important for user
+          with cognitive and learning disabilities. A key reason is for people
+          with cognitive disabilities will often experience obstacles as
+          complete barriers so be be unable to use a site or service if they
+          experience cognitive barriers. Another is every user will have unique
+          levels and combinations of various disabilities so will likely
+          experience different problems to others. </p>
+        <p> Meaningful user testing for accessibility is a challenge and is more
+          so when involving people with cognitive and learning disabilities.
+          They may have difficulties understanding the tasks to be performed and
+          considerable patience will be necessary. </p>
+        <p> This is a selection of ways to ensure users are comfortable and so
+          maximise the quality of results </p>
         <ul>
           <li>
-            &nbsp;&nbsp; [https://example.com P101 Select default help mode]</li>
+            <p> Ensure that the participation forms are easy to understand, send
+              them to the participant in advance, and allow plenty of time for
+              the participant to ask questions and fill in forms; </p>
+          </li>
+          <li>
+            <p> Allow the participant to bring a carer, family member or friend
+              to attend with them. If your tester has a guardian you should get
+              informed consent from both the tester and their guardian; </p>
+          </li>
+          <li>
+            <p> It helps to provide easy methods of assessing mood, rather than
+              asking for the participant to verbalise, try asking them to select
+              a smiley face, such as:<br>
+            </p>
+            <figure id="fig-generatedID"> <img src="https://www.w3.org/TR/coga-usable/img/faces-happy-to-sad.png"
+                alt="a set of 5 smiley faces from happy, through neutral, to sad."
+                width="200"> </figure>
+            <p></p>
+          </li>
+          <li>
+            <p> Ensure the person does not feel like they are at fault for
+              making mistakes; this is a likely scenario for people with
+              cognitive impairments. </p>
+          </li>
         </ul>
-        <h4 id="wcag">Further design guidance</h4>
-        <ul>
-          <li>&nbsp; [https://w3c.github.io/coga/design/#provide-human-help
-            8.3.4 Provide human help]</li>
-        </ul>
-        <br>
-        !!! maybe use this format?<br>
-        <aside class="box box-large">
-          <header class="box-h  box-h-large">
-            <h4 id="oldequip">Older equipment/software</h4>
-          </header>
-          <div class="box-i">
-            <p> Some older people will be using older browsers that might not be
-              as capable or fault tolerant as current releases. </p>
-            <p><strong>WCAG 2.0 success criteria:</strong></p>
-            <ul>
-              <li> <a href="http://www.w3.org/WAI/WCAG20/quickref/#ensure-compat-parses">4.1.1
-                  - Parsing</a> (A) requires that markup is used correctly
-                according to specification </li>
-            </ul>
-            <p><strong>Example techniques to consider:</strong></p>
-            <ul>
-              <li> <a href="http://www.w3.org/TR/WCAG20-TECHS/G134">G134:
-                  Validating Web pages</a> </li>
-              <li> <a href="http://www.w3.org/TR/WCAG20-TECHS/G192">G192: Fully
-                  conforming to specifications</a> </li>
-            </ul>
-            <p> More techniques are listed under <a href="http://www.w3.org/WAI/WCAG20/quickref/#ensure-compat-parses">4.1.1
-                - Parsing</a> in “How to Meet WCAG 2.0”. </p>
-          </div>
-        </aside>
+        <p></p>
+        <p></p>
+        <p></p>
         <aside class="box box-icon box-space-above" id="helpimprove">
           <header class="box-h  box-h-icon box-h-space-above box-h-icon">
-            <svg aria-hidden="true" class="icon-comments ">
-              <use xlink:href="./all_files/icons.svg#icon-comments"></use> </svg>
             <h2>Help improve this page</h2>
           </header>
           <div class="box-i">
@@ -377,8 +416,6 @@
               aria-hidden="true" class="icon-arrow-up ">
               <use xlink:href="./all_files/icons.svg#icon-arrow-up"></use> </svg>
             Back to Top</span></a> </main>
-      <h3><br>
-      </h3>
     </div>
     <footer class="page-footer default-grid" aria-label="Page">
       <div class="inner">
