@@ -23,6 +23,11 @@ window.addEventListener(
 	ev => {
 		const elm = ev.target;
 		if (triggers.includes(elm)) {
+			// Update the Button state
+			const expanded =
+				(elm.getAttribute("aria-expanded") || "false") != "false";
+			elm.setAttribute("aria-expanded", expanded ? "false" : "true");
+			// hide/show selected elements
 			const selector = elm.getAttribute("data-target");
 			collapse(selector, "toggle");
 		}
