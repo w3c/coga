@@ -57,9 +57,7 @@ It identifies user needs that are not currently fully addressed by accessibility
       <th scope="col"><p>WCAG  </p>
         <p>Proposed Success Criteria <a href="#WCAGex" >*</a></p></th>
       <th scope="col">Authoring Techniques<a href="#authoring" >*</a></th>
-      <th scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
-        </th>
-      <th scope="col">Personalization<a href="#personalization" >*</a></th>
+      
       <th scope="col">Operating System / Other <a href="#operating" >*</a></th>
     </tr>
     <tr>
@@ -74,8 +72,7 @@ It identifies user needs that are not currently fully addressed by accessibility
         </td>
       <td><p><a href="https://w3c.github.io/coga/techniques/index.html#Minimizethecognitiveskills"> Minimize the cognitive skills required to use the content</a> - the examples in security.</p>
         <p>Techniques should include how to have security that uses passwords or transcribing, such as biometrics and tokens.</p></td>
-      <td>None</td>
-      <td><p class="ednote"> we need to capture types of security these users can employ and, maybe, if they require the use of an API such as password storage.</p></td>
+      
       <td>Hardware and operating systems could provide authentication to websites and applications. <p class="ednote"> needs further investigation and risk analysis.</p>
         
         <p>Encourage a standardized third party sign in, which is exclusively for authentication, and helps users login anywhere. </p></td>
@@ -97,12 +94,37 @@ It identifies user needs that are not currently fully addressed by accessibility
         
         <p class="ednote"> Add: notify users when they are leaving a website if leaving it may cause them harm.</p>
         <p>Give positive and negative examples.</p></td>
-      <td></td>
-      <td>We need to ensure users are not put at risk due to personalization and storing data. Proposals include use of functional requirements and employing personalization on users' devices.</td>
+      
       <td>Tools for users to warn them when a post or an activity may expose them, or is considered inappropriate.</td>
       </tr>
     
   </tbody>
+</table>
+<p>Table for New semantics and Personalization</p>
+<table border="1">
+	<tr>
+		<th scope="col">User Needs <a href="#userneeds" >*</a></th>
+		<th scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
+        </th>
+      <th scope="col">Personalization<a href="#personalization" >*</a></th>
+	</tr>
+	<tr>
+		<th scope="row">
+      <p>I need a method of secure website authentication that I find easy to use.</p>
+      <p>(Assume I have cognitive and memory impairments.) </p>
+      <p><a href="#Discussion1">more</a> </p></th>
+      <td>None</td>
+      <td><p class="ednote"> we need to capture types of security these users can employ and, maybe, if they require the use of an API such as password storage.</p></td>
+	</tr>
+	<tr>
+		<th scope="row"> 
+        <p>I need a safe way to interact online. </p>
+        <p>(Assume I do not have the cognitive function to identify all risks.)</p>
+        <p><a href="#Discussion1">more</a>  </p></th>
+        <td></td>
+      <td>We need to ensure users are not put at risk due to personalization and storing data. Proposals include use of functional requirements and employing personalization on users' devices.</td>
+	</tr>
+
 </table>
 				<h4 id="Discussion1">Discussion</h4>
                 <p><a href="https://w3c.github.io/coga/issue-papers/privacy-security.html">Privacy and Security issue paper</a><a href="https://w3c.github.io/coga/issue-papers/security.html"></a></p>
@@ -126,9 +148,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				      <th scope="col"><p>WCAG  </p>
 				        <p>Proposed Success Criteria <a href="#WCAGex" >*</a></p></th>
 				      <th scope="col">Authoring Techniques <a href="#authoring" >*</a></th>
-				      <th scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
-				        </th>
-				      <th scope="col">Personalization<a href="#personalization" >*</a></th>
+
 				      <th scope="col">Operating System / Other <a href="#operating" >*</a></th>
 			        </tr>
 				    <tr>
@@ -144,13 +164,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			          </td>
 				      <td><p><a href="https://w3c.github.io/coga/techniques/index.html#attention-and-focus">Attention and Focus</a></p>
 			          </td>
-				      <td>
-				        <p><strong>Proposed attribute: </strong><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#distraction-explanation">aui-distraction</a></p>
 				      
-				        <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/tools/index.html#use_case_reminder">aui-reminder</a></p>
-				        <p>Enable users to turn off less-helpful reminders.</p>
-				      </td>
-				      <td><p class="ednote"> we need the formal user setting to enable  different responses to semantics.</p></td>
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -178,16 +192,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				        <p>Any choices made by users in a process are easy to review in one clearly-labeled action.</p>
 						<p>Users can get back to the place they were at in one clearly labeled action.         </p>
 			          <p>For an uncomplicated task, the website is identified (broader scope).</p></td>
-				      <td><p><strong>Proposed attribute: </strong></p>
-				        <p>aui-LOG</p>
-				        <p>Should we enable a programmable way of identifying what are normal hidden variables of:</p>
-			            <ul>
-			              <li>labels for steps in the process;</li>
-			              <li>current step;</li>
-			              <li>key selections; and </li>
-			              <li>URL to repair?</li>
-	                  </ul></td>
-				      <td>Enable users to identify what orientation tools they prefer for presentation of steps in a process, such as breadcrumbs. For example, identity an adaptable widget to interpret the crumbs.</td>
+				      
 				      <td>Adaptable widgets for context</td>
 			        </tr>
 				    <tr>
@@ -198,8 +203,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				      <td><p>As above</p>
 			            <p resource="#help-the-user-orient-themselves-and-regain-focus-when-it-is-lost" id="help-the-user-orient-themselves-and-regain-focus-when-it-is-lost2">Help users orient themselves and regain focus when it is lost.</p>
 		              </td>
-				      <td></td>
-				      <td></td>
+
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -213,8 +217,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			              Media over five minutes long are divided into programmatically determinable and logical sections. Each section must be shorter than five minutes.<br />
 			              For multimedia,  chunks may include: steps in a process, slide changes, topic  changes.</p>
 						<p resource="#help-the-user-orient-themselves-and-regain-focus-when-it-is-lost">..</p></td>
-				      <td></td>
-				      <td></td>
+
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -223,20 +226,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				      <td><p><strong>Reminders</strong></p>
 			          <p>Enable users to set a reminder for date-and-time sensitive events. Reminders should be set only at users' request. Users should be able to personalize the reminder method. </p></td>
 				      <td><p>As above. And, if there is a calendar / mail program, it could provide a feature to notify users of an impending meeting or of tasks (broader scope). </p></td>
-				      <td><p><strong>Proposed attributes:</strong></p>
-				        <p><a href="https://w3c.github.io/personalization-semantics/tools/index.html#messageimportance-explanation">aui-messageimportance</a></p>
-                        <p><a href="https://w3c.github.io/personalization-semantics/tools/index.html#messagefrom-explanation">messagefrom</a></p>
-                        <p><a href="https://w3c.github.io/personalization-semantics/tools/index.html#messagecontext-explanation">messagecontext</a></p>
-                        <p><a href="https://w3c.github.io/personalization-semantics/tools/index.html#messagetime-explanation">messagetime</a></p>
-                        <p>Enable users to turn off less-helpful reminders.</p>
-                      </td>
-				      <td><p>User settings for how reminders are handled, including preferred modalities of different levels. Examples are: email, SMS, call, pop up.</p>
-                      <p>Personalizing a reminder could include setting a type (e.g., personal, work, family). </p>
-                      <p> or </p>
-                      <p>by user-defined groups of users and sites (most important to least important).</p>
-					  <p> or </p>
-                      <p>by types users can define of reminders (e.g., office, important) and how they are handled</p>
-                      <p>Note there are also location-sensitive events (for example &quot;remind me to do x when I get home&quot;.)</p></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -252,7 +242,86 @@ It identifies user needs that are not currently fully addressed by accessibility
 			          </td>
 				      <td><a href="https://w3c.github.io/coga/techniques/index.html#alow-the-user-to-determine-levels-of-interruptions-as-easily-as-possible">Enable users to determine levels of interruptions as easily as possible.</a>
 				      	<p></p></td>
-				      <td><p>As above.</p>
+				      
+				      <td><p><a href="https://w3c.github.io/coga/issue-papers/distractions.html">Operating System Tool</a></p>
+			          <p></p>
+			          <p>See Integrated solution.</p>
+			          <p> It is based on a matrix for distractions at the operating system,   browser, or cloud level. Users can turn off  distractions, such   as Skype  and Facebook, across different devices, and then may forget   to turn them back on. This idea manages all distractions by forming a   cross-application and cross-device distraction matrix that manages all   distractions in one setting.</p></td>
+			        </tr>
+			      </tbody>
+			  </table>
+			  <p>Table for New semantics and Personalization</p>
+			  <table border="1">
+			  	<tbody>
+			  		<tr>
+			  			<th scope="col">User Needs <a href="#userneeds" >*</a></th>
+			  			<th scope="col"><p>Proposed New Semantics </p>
+				        </th>
+				      	<th scope="col">Personalization</th>
+			  		</tr>
+			  		<tr>
+			  			<th scope="row"><p>I need to consume content or complete a task without unnecessary distractions. </p>
+				        <p>(Assume I have an attention related disability.)</p>
+				        
+				        <p> <a href="#Discussion2">more</a> </p></th>
+				        <td>
+				        <p><strong>Proposed attribute: </strong><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#distraction-explanation">aui-distraction</a></p>
+				      
+				        <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/tools/index.html#use_case_reminder">aui-reminder</a></p>
+				        <p>Enable users to turn off less-helpful reminders.</p>
+				      </td>
+				      <td><p class="ednote"> we need the formal user setting to enable  different responses to semantics.</p></td>
+			  		</tr>
+			  		<tr>
+			  			<th scope="row"><p>I need to know the context, where I am, and what I just did, or what just happened to me.</p>
+				        <p> (Assume I have an attention disability and/or an impaired short-term memory.)</p>
+			          
+			          </th>
+			  			<td><p><strong>Proposed attribute: </strong></p>
+				        <p>aui-LOG</p>
+				        <p>Should we enable a programmable way of identifying what are normal hidden variables of:</p>
+			            <ul>
+			              <li>labels for steps in the process;</li>
+			              <li>current step;</li>
+			              <li>key selections; and </li>
+			              <li>URL to repair?</li>
+	                  </ul></td>
+				      <td>Enable users to identify what orientation tools they prefer for presentation of steps in a process, such as breadcrumbs. For example, identity an adaptable widget to interpret the crumbs.</td>
+			  		</tr>
+			  		<tr>
+			  			<th scope="row"><p>I need to restore context when I forget where I am or get distracted.</p>
+			          <p>(Assume I have an impaired short-term memory.)</p></th>
+			          <td></td>
+				      <td></td>
+			  		</tr>
+			  		<tr>
+			  			<th scope="row"><p>I need to restore context in multimedia. I need to go back to that bit I just missed, or reorient myself if I lost context.</p>
+			          <p>(Assume I have an attention disability and/or an impaired short-term memory.)</p></th>
+			          <td></td>
+			          <td></td>
+			  		</tr>
+			  		<tr>
+			  			<th scope="row"><p>I need reminders of important information.</p>
+			          <p>(Assume I have an attention disability and/or an impaired short-term memory.)</p></th>
+			          <td><p><strong>Proposed attributes:</strong></p>
+				        <p><a href="https://w3c.github.io/personalization-semantics/tools/index.html#messageimportance-explanation">aui-messageimportance</a></p>
+                        <p><a href="https://w3c.github.io/personalization-semantics/tools/index.html#messagefrom-explanation">messagefrom</a></p>
+                        <p><a href="https://w3c.github.io/personalization-semantics/tools/index.html#messagecontext-explanation">messagecontext</a></p>
+                        <p><a href="https://w3c.github.io/personalization-semantics/tools/index.html#messagetime-explanation">messagetime</a></p>
+                        <p>Enable users to turn off less-helpful reminders.</p>
+                      </td>
+				      <td><p>User settings for how reminders are handled, including preferred modalities of different levels. Examples are: email, SMS, call, pop up.</p>
+                      <p>Personalizing a reminder could include setting a type (e.g., personal, work, family). </p>
+                      <p> or </p>
+                      <p>by user-defined groups of users and sites (most important to least important).</p>
+					  <p> or </p>
+                      <p>by types users can define of reminders (e.g., office, important) and how they are handled</p>
+                      <p>Note there are also location-sensitive events (for example &quot;remind me to do x when I get home&quot;.)</p></td>
+			  		</tr>
+			  		<tr>
+			  			<th scope="row"><p>I need to turn off distractions 1) to be a default, and 2) to be a trivial option in real time.</p>
+			          <p>(Assume I have an attention disability, and/or an impaired short-term memory, and/or impaired executive function).</p></th>
+			          <td><p>As above.</p>
                       <p></p></td>
 				      <td><p>User settings for distractions need to be interoperable.</p>
 			          <p>Users should be able to handle:</p>
@@ -276,12 +345,8 @@ It identifies user needs that are not currently fully addressed by accessibility
                         <li>non-critical messages that can easily be turned off and on again.</li>
                       </ul>
                       </td>
-				      <td><p><a href="https://w3c.github.io/coga/issue-papers/distractions.html">Operating System Tool</a></p>
-			          <p></p>
-			          <p>See Integrated solution.</p>
-			          <p> It is based on a matrix for distractions at the operating system,   browser, or cloud level. Users can turn off  distractions, such   as Skype  and Facebook, across different devices, and then may forget   to turn them back on. This idea manages all distractions by forming a   cross-application and cross-device distraction matrix that manages all   distractions in one setting.</p></td>
-			        </tr>
-			      </tbody>
+			  		</tr>
+			  	</tbody>
 			  </table>
   <h4 id="Discussion3">Discussion</h4>
     <p><a  href="https://w3c.github.io/coga/issue-papers/distractions.html">Distractions issue paper</a></p>
@@ -320,9 +385,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				      <th scope="col"><p>WCAG  </p>
 				        <p> Proposed Success Criteria <a href="#WCAGex" >*</a></p></th>
 				      <th scope="col">Authoring Techniques <a href="#authoring" >*</a></th>
-				      <th scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
-				        </th>
-				      <th scope="col">Personalization<a href="#personalization" >*</a></th>
+				      
 				      <th scope="col">Operating System / Other <a href="#operating" >*</a></th>
 			        </tr>
 				    <tr>
@@ -359,69 +422,8 @@ It identifies user needs that are not currently fully addressed by accessibility
 			          
 			          <p resource="#provide-help">..</p>
 			          <p resource="#prevent-errors"> COGA Techniques 2.7:  aui-explain to explain any nonstandard UI where they cannot be.</p></td>
-				      <td> <strong>Explain and feedback</strong>
-				      	<p></p>
-
-<strong><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a></strong>
-		              <p>Standardize supportive syntax and terms that can be linked, for users, to associated   symbols, terms, translations, and explanations.</p>
-		              <p></p>
-		              
-		              <p><strong><a href="https://w3c.github.io/personalization-semantics/tools/index.html#all-log-explanation">Log</a> </strong></p>
-		              <p>This proposal is to track tasks users have done so they can be reminded of them; and return to or fix  a task. </p>
-		              <p></p>
-		              
-		              <p><strong>Help</strong></p>
-		              <p>Some users may need additional information, or specifically additional-help information. We request additonal attributes so an author can indicate existence of additional information.</p>
-                      <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#moreinfo-explanation">aui-moreinfo</a></p>
-                      <p><strong>Supported values: </strong>URI</p>
-                      <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#extrahelp-explanation">aui-extrahelp</a></p>
-                      <p><strong>Supported values: </strong>URI</p>
-                      <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#helptype-explanation">aui-helptype</a></p></td>
-				      <td><p>Settings for how help is handled</p>
-				        <p><strong>aui-Log</strong></p>
-				        <p>Keep login (binary)</p>
-				        <p><strong>Show log</strong></p>
-				        <p>access key</p>
-				        <p>help panel</p>
-				        <p>icon</p>
-				        
-				        <p><strong>Breadcrumbs Options:</strong></p>
-				        <p>show name  </p>
-				        <p>show action </p>
-				        <p>show clickable</p>
-				        <p>use script (URI)</p>
-				        <p>location</p>
-			          <p><strong>Help    panel</strong></p>
-			          <p>Options:</p>
-			          <p>When I    click an icon/text<br />
-Never<br />
-Always    open</p>
-			          <p>location</p>
-			          
-			          <p><strong>Help panel content</strong></p>
-			          <p> tooltips / human help / more help / topics earch</p>
-			          <p>/automated / FAQs / help form / simplified / glossary/</p>
-			          <p>dictionary / thesaurus</p>
-			          <p>explain / feedback</p>
-			          
-			          <p><strong>tooltips</strong></p>
-			          <p>on / off</p>
-			          
-			          <p><strong>chat support</strong></p>
-			          <p>When I click an icon / text<br />
-			            never / always<br />
-			          open location.</p>
-			          <p>Settings for how explain and feedback are handled:</p>
-			          
-			          <p><strong>modality </strong></p>
-			          <p>text</p>
-			          <p>text and speech</p>
-			          <p>none</p>
-			          <p><strong>positions</strong></p>
-			          <p>vertical (bottom / top in-line)</p>
-			          <p>(left, right, center?)</p>
-			          
-			          </td>
+				      
+				      
 				      <td><p>Adaptable widgets, which read help information, and create a help panel or other adaptable widget for different users.</p>
 			          
 			          <p>Login across application</p></td>
@@ -449,7 +451,153 @@ Always    open</p>
 			          </td>
 				      <td><a href="https://w3c.github.io/coga/techniques/index.html#make-it-easy-to-undo-mistakes">Make it easy to undo mistakes.</a>
 			          <p resource="#make-it-easy-to-undo-mistakes"></p></td>
-				      <td><a href="https://w3c.github.io/personalization-semantics/help/index.html#explain-explanation">Explain</a> and <a href="https://w3c.github.io/personalization-semantics/help/index.html#feedback-explanation">Feedback</a>
+				      
+				      <td></td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I need enough time, and  not lose my work. </th>
+				      <td><strong><a href="https://w3c.github.io/coga/extension/index.html#timed">Changes to timed events</a></strong>.
+		                <p ></p></td>
+				      <td><a href="https://w3c.github.io/coga/techniques/index.html#help-users-complete-and-check-their-work">Help users complete and check their work</a>.			        
+				        <p resource="#provide-help"></p>
+<a href="https://w3c.github.io/coga/techniques/index.html#enough-time">Enough Time</a>
+                      <p resource="#enough-time"></p>
+<a href="https://w3c.github.io/coga/techniques/index.html#avoid-loss-of-data">Avoid Loss of data</a>.
+                      <p resource="#avoid-loss-of-data"></p>
+                      </td>
+				      
+				      <td><p class="ednote"> issue paper may be needed to explore how to enable automatic acceptance of cookies, and stored data, to avoid data loss  for certified or safe sites; and for limited usage or time.</p></td>
+			        </tr>
+				    <tr>
+				      <th scope="row"><p>I want to use applications or APIs that help me, such as remembering my information so I do not need to enter it again, and to help me (such as spelling).</p></th>
+				      <td><p><strong>Help</strong></p>
+				        
+<a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-standardized-APIs">Support APIs</a> (may change)                      
+<h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes">..</h4></td>
+				      <td><p>Avoid form autocomplete="off"</p>
+			          
+			          <p>Correctly use tags, such as list items, so that text to speech, with synchronized text highlighting, works correctly.</p></td>
+				      
+				      <td><p>Enable users to specify API support ([[GPII]] and [[ETSI]]) for the browser and the user agent.</p>
+			          
+			          <p>Portal that matches support of an application and content; and users' needed support of features and APIs.</p></td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I want to know where I am in a process, including what I have done and what my next step is.</th>
+				      <td><p><strong>Clear Purpose </strong></p>
+				        <p>(Text: The main purpose of each page and section of content is clear. Extraneous information, not directly relevant to the main purpose of a page, is distinctly separated and programmatically determinable. For multi-step tasks, signposts should be provided to clarify the broader context, including steps completed, current step, and pending steps.)</p>
+				        
+				        <p>See also:</p>
+                      <p><strong>Clear structure </strong> and relationships</p>
+                      <p><strong>Help</strong>:</p></td>
+				      <td><a href="https://w3c.github.io/coga/techniques/index.html#help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost">Help users orient themselves, and regain focus when it is lost</a>.
+				        <p resource="#help-the-user-orient-themselves-and-regain-focus-when-it-is-lost"></p>
+			          <p resource="#help-the-user-orient-themselves-and-regain-focus-when-it-is-lost">..</p></td>
+				      
+				      <td>a cross browser, cross application login, or breadcrumb.</td>
+			        </tr>
+				    <tr>
+				      <th scope="row">I want to be able to check my work and go back without losing the work I have just done. </th>
+				      <td><p class="ednote"> change to 3.3.4 Error Prevention (Legal, Financial, Data)</p>
+				        <p><strong>Undo</strong></p>
+				        
+			          <p>See also: </p>
+			          <p><strong>Help</strong></p>
+			          <p>Change to timed events. </p>
+			          <p>The timeframe for reversing transactions is machine  readable.</p></td>
+				      <td><p><a href="https://w3c.github.io/coga/techniques/index.html#make-it-easy-to-undo-mistakes">Make it easy to undo mistakes</a>.</p>
+                        <p></p>
+                      <p></p></td>
+				      
+				      <td><p>Adaptable widgets for context</p>
+				        
+				        
+			          
+			          
+			          </td>
+			        </tr>
+				    
+			      </tbody>
+			  </table>
+			  <p>Table for New semantics and Personalization</p>
+			  <table border="1">
+	<tbody>
+		<tr>
+		<th scope="col">User Needs <a href="#userneeds" >*</a></th>
+		<th scope="col"><p>Proposed New Semantics </p>
+				        </th>
+		<th scope="col">Personalization</th>
+		</tr>
+		<tr>
+			<th scope="row"><p>I need help avoiding mistakes and minimizing the mistakes I might make. </p>
+			          <p> <a href="#Discussion3">more</a> </p></th>
+			<td> <strong>Explain and feedback</strong>
+				      	<p></p>
+
+				<strong><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a></strong>
+		              <p>Standardize supportive syntax and terms that can be linked, for users, to associated   symbols, terms, translations, and explanations.</p>
+		              <p></p>
+		              
+		              <p><strong><a href="https://w3c.github.io/personalization-semantics/tools/index.html#all-log-explanation">Log</a> </strong></p>
+		              <p>This proposal is to track tasks users have done so they can be reminded of them; and return to or fix  a task. </p>
+		              <p></p>
+		              
+		              <p><strong>Help</strong></p>
+		              <p>Some users may need additional information, or specifically additional-help information. We request additonal attributes so an author can indicate existence of additional information.</p>
+                      <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#moreinfo-explanation">aui-moreinfo</a></p>
+                      <p><strong>Supported values: </strong>URI</p>
+                      <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#extrahelp-explanation">aui-extrahelp</a></p>
+                      <p><strong>Supported values: </strong>URI</p>
+                      <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#helptype-explanation">aui-helptype</a></p></td>
+            <td><p>Settings for how help is handled</p>
+				        <p><strong>aui-Log</strong></p>
+				        <p>Keep login (binary)</p>
+				        <p><strong>Show log</strong></p>
+				        <p>access key</p>
+				        <p>help panel</p>
+				        <p>icon</p>
+				        
+				        <p><strong>Breadcrumbs Options:</strong></p>
+				        <p>show name  </p>
+				        <p>show action </p>
+				        <p>show clickable</p>
+				        <p>use script (URI)</p>
+				        <p>location</p>
+			          <p><strong>Help    panel</strong></p>
+			          <p>Options:</p>
+			          <p>When I    click an icon/text<br />
+						Never<br />
+						Always    open</p>
+			          <p>location</p>
+			          
+			          <p><strong>Help panel content</strong></p>
+			          <p> tooltips / human help / more help / topics earch</p>
+			          <p>/automated / FAQs / help form / simplified / glossary/</p>
+			          <p>dictionary / thesaurus</p>
+			          <p>explain / feedback</p>
+			          
+			          <p><strong>tooltips</strong></p>
+			          <p>on / off</p>
+			          
+			          <p><strong>chat support</strong></p>
+			          <p>When I click an icon / text<br />
+			            never / always<br />
+			          open location.</p>
+			          <p>Settings for how explain and feedback are handled:</p>
+			          
+			          <p><strong>modality </strong></p>
+			          <p>text</p>
+			          <p>text and speech</p>
+			          <p>none</p>
+			          <p><strong>positions</strong></p>
+			          <p>vertical (bottom / top in-line)</p>
+			          <p>(left, right, center?)</p>
+			          
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">I need to know what mistake I made and how to correct a mistake. It does not cause undue alarm when I make a mistake and can correct it easily. </th>
+			<td><a href="https://w3c.github.io/personalization-semantics/help/index.html#explain-explanation">Explain</a> and <a href="https://w3c.github.io/personalization-semantics/help/index.html#feedback-explanation">Feedback</a>
                         <p></p>
                         
                         <p class="ednote"> change feedback to a role.</p>
@@ -490,53 +638,25 @@ Always    open</p>
                         <li>under both icon and linked text.</li>
                       </ul>
                       <p>Help panel should have its own settings.</p></td>
-				      <td></td>
-			        </tr>
-				    <tr>
-				      <th scope="row">I need enough time, and  not lose my work. </th>
-				      <td><strong><a href="https://w3c.github.io/coga/extension/index.html#timed">Changes to timed events</a></strong>.
-		                <p ></p></td>
-				      <td><a href="https://w3c.github.io/coga/techniques/index.html#help-users-complete-and-check-their-work">Help users complete and check their work</a>.			        
-				        <p resource="#provide-help"></p>
-<a href="https://w3c.github.io/coga/techniques/index.html#enough-time">Enough Time</a>
-                      <p resource="#enough-time"></p>
-<a href="https://w3c.github.io/coga/techniques/index.html#avoid-loss-of-data">Avoid Loss of data</a>.
-                      <p resource="#avoid-loss-of-data"></p>
-                      </td>
-				      <td></td>
+		</tr>
+
+		<tr>
+			<th scope="row">I need enough time, and  not lose my work. </th>
+			<td></td>
 				      <td><p>Users can set that the data are / are not stored.</p>
 				        <p>Users can set a time minimum for  controlling how long they  see timeout messages.</p>
 			          </td>
-				      <td><p class="ednote"> issue paper may be needed to explore how to enable automatic acceptance of cookies, and stored data, to avoid data loss  for certified or safe sites; and for limited usage or time.</p></td>
-			        </tr>
-				    <tr>
-				      <th scope="row"><p>I want to use applications or APIs that help me, such as remembering my information so I do not need to enter it again, and to help me (such as spelling).</p></th>
-				      <td><p><strong>Help</strong></p>
-				        
-<a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-standardized-APIs">Support APIs</a> (may change)                      
-<h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes">..</h4></td>
-				      <td><p>Avoid form autocomplete="off"</p>
-			          
-			          <p>Correctly use tags, such as list items, so that text to speech, with synchronized text highlighting, works correctly.</p></td>
-				      <td><p>Where helpful, identify in metadata what features and APIs are supported in the content.</p>
+		</tr>
+		<tr>
+			<th scope="row"><p>I want to use applications or APIs that help me, such as remembering my information so I do not need to enter it again, and to help me (such as spelling).</p></th>
+			<td><p>Where helpful, identify in metadata what features and APIs are supported in the content.</p>
 			          </td>
-				      <td><p>Metadata that identify API and feature support that match with personalization settings.</p></td>
-				      <td><p>Enable users to specify API support ([[GPII]] and [[ETSI]]) for the browser and the user agent.</p>
-			          
-			          <p>Portal that matches support of an application and content; and users' needed support of features and APIs.</p></td>
-			        </tr>
-				    <tr>
-				      <th scope="row">I want to know where I am in a process, including what I have done and what my next step is.</th>
-				      <td><p><strong>Clear Purpose </strong></p>
-				        <p>(Text: The main purpose of each page and section of content is clear. Extraneous information, not directly relevant to the main purpose of a page, is distinctly separated and programmatically determinable. For multi-step tasks, signposts should be provided to clarify the broader context, including steps completed, current step, and pending steps.)</p>
-				        
-				        <p>See also:</p>
-                      <p><strong>Clear structure </strong> and relationships</p>
-                      <p><strong>Help</strong>:</p></td>
-				      <td><a href="https://w3c.github.io/coga/techniques/index.html#help-the-user-orientate-themselves-and-regain-focus-when-it-is-lost">Help users orient themselves, and regain focus when it is lost</a>.
-				        <p resource="#help-the-user-orient-themselves-and-regain-focus-when-it-is-lost"></p>
-			          <p resource="#help-the-user-orient-themselves-and-regain-focus-when-it-is-lost">..</p></td>
-				      <td><p>LOG</p>
+			<td><p>Metadata that identify API and feature support that match with personalization settings.</p></td>
+		</tr>
+
+		<tr>
+			<th scope="row">I want to know where I am in a process, including what I have done and what my next step is.</th>
+			<td><p>LOG</p>
 			          <p class="ednote"> add how to identify steps in a process, and current position, so users can have breadcrumbs or other mechanisms of their choice.</p>
 			          
 			          <p>There should not be more than one login per page.</p></td>
@@ -553,21 +673,10 @@ Always    open</p>
 			            <li>left / right /center.</li>
 			            </ul>
 			          </td>
-				      <td>a cross browser, cross application login, or breadcrumb.</td>
-			        </tr>
-				    <tr>
-				      <th scope="row">I want to be able to check my work and go back without losing the work I have just done. </th>
-				      <td><p class="ednote"> change to 3.3.4 Error Prevention (Legal, Financial, Data)</p>
-				        <p><strong>Undo</strong></p>
-				        
-			          <p>See also: </p>
-			          <p><strong>Help</strong></p>
-			          <p>Change to timed events. </p>
-			          <p>The timeframe for reversing transactions is machine  readable.</p></td>
-				      <td><p><a href="https://w3c.github.io/coga/techniques/index.html#make-it-easy-to-undo-mistakes">Make it easy to undo mistakes</a>.</p>
-                        <p></p>
-                      <p></p></td>
-				      <td><p>Log</p>
+		</tr>
+		<tr>
+			<th scope="row">I want to be able to check my work and go back without losing the work I have just done. </th>
+			<td><p>Log</p>
 			          
 			          
 			          </td>
@@ -582,23 +691,14 @@ Always    open</p>
 			          <p>user preferences that block websites which do not conform to the timeframe for different types of transactions (glossary or technology - different context);</p>
 			          <p>user preferences that inform a caregiver of a transaction above a specified amount in a given category (such as groceries, travel);</p>
 			          </td>
-				      <td><p>Adaptable widgets for context</p>
-				        
-				        
-			          
-			          
-			          </td>
-			        </tr>
-				    <tr>
-				      <th scope="row"></th>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-			        </tr>
-			      </tbody>
-			  </table>
+		</tr>
+
+	
+
+
+	</tbody>
+	
+</table>
 				<h4 id="Discussion3">Discussion</h4>
                 
                 <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for Personalization</a> and <a href="https://github.com/ayelet-seeman/COGA.personalisation">Example for personalization</a></p>
@@ -632,9 +732,7 @@ Always    open</p>
 				      <th scope="col"><p>WCAG  </p>
 				        <p> Proposed Success Criteria <a href="#WCAGex" >*</a></p></th>
 				      <th scope="col">Authoring Techniques <a href="#authoring" >*</a></th>
-				      <th scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p>
-				        </th>
-				      <th scope="col">Personalization<a href="#personalization" >*</a></th>
+				      
 				      <th scope="col">Operating System / Other <a href="#operating" >*</a></th>
 			        </tr>
 				    <tr>
@@ -675,13 +773,7 @@ Always    open</p>
                       <p resource="#prevent-errors">Adding context (that adds help)</p>
                       <p resource="#prevent-errors">..</p>
                       <p resource="#prevent-errors"></p><p class="ednote"> check that the way  sufficient techniques are done really meet the use cases.</p></td>
-				      <td>
-				        <strong><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a></strong>
-				        <p>Standardize supportive syntax and terms that can be linked to associated   symbols, terms, translations, and explanations for users. </p>
-				        <p></p>
-				        <p><strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#use_case_morehelp">More Help</a></strong></p>
-			          <p resource="#h-more-help"></p></td>
-				      <td>See help personalization in table above.</td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -710,39 +802,7 @@ Always    open</p>
 				        <p>---</p>
 				        <p class="ednote"> add at AAA. Provide links to more information.</p></td>
 				      <td><p resource="#prevent-errors">..</p></td>
-				      <td> <a href="https://w3c.github.io/personalization-semantics/help/index.html#explain-explanation">Explain</a> and <a href="https://w3c.github.io/personalization-semantics/help/index.html#feedback-explanation">Feedback</a>
-				        <p></p>
-				        <a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a>
-				        <p>For users, standardize supportive syntax and terms that can be linked to associated   symbols, terms, translations, and explanations</p>
-				        <p></p>
-				        <p><a href="https://w3c.github.io/personalization-semantics/help/index.html#use_case_morehelp">More Help</a> </p>
-				        <p resource="#h-more-help">..</p>
-				        <p><strong>Requirement: </strong>Some users may need additional   information, or specifically additional help information. There should be  extra attributes so an author can indicate the existence of additional information.</p>
-                        <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#moreinfo-explanation">aui-moreinfo</a></p>
-                        <p><strong>Supported values: </strong>URI</p>
-                        <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#extrahelp-explanation">aui-extrahelp</a></p>
-                        <p><strong>Supported values: </strong>URI</p>
-					      <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#helptype-explanation">aui-helptype</a></p>
-                        <p><strong>Supported values: </strong> tooltips / human help / more help / topic search / automated / faqs / help form / simplified / glossary / dictionary / thesaurus</p>
-                        <p> </p>
-                        <p><strong>Example:</strong></p>
-                        <p>&lt;button type="button" aui-extrahelp="uri2 uri3" &gt;undo&lt;/button&gt;</p>
-                        <p>URI 2 may read: </p>
-                        <pre>&lt;div id="uri2" aui-helptype="morehelp" 
-aria-hidden="true"&gt;  
-Pressing the undo button will erase
-all your work on a page. 
-Use this button with care.<br />If you press it by mistake,
-press control and z at the same time.<br />Your work will then come back.<br />&lt;/div&gt; &lt;a href="functiongethelp()"
-aui-helptype="humanhelp"
-aui-hidden="true"&gt;
-I want a person to help me&lt;/a&gt;  
-&lt;div id="uri3" aui-extrahelp="glossary"
-aui-hidden="true"&gt;</pre>
-                        <p resource="#h-more-help">..</p></td>
-				      <td><p>See help personalization in the table above, and personalization settings for the context (includes help types).</p>
-			          
-			          <p></p></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -757,11 +817,7 @@ aui-hidden="true"&gt;</pre>
                       </td>
 				      <td><a  title="expand" class="expand" aria-label="expand " href="https://w3c.github.io/coga/techniques/index.html#Providehumanhelp">Provide Human Help</a>
 			          <p resource="#Providehumanhelp"></p></td>
-				      <td><p resource="#h-more-help">..</p>
-				        <p><a href="https://w3c.github.io/personalization-semantics/help/index.html#use_case_morehelp">More Help</a></p>
-				        <p>(see above)</p>
-                      <p resource="#h-more-help"></p></td>
-				      <td></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -778,11 +834,7 @@ aui-hidden="true"&gt;</pre>
 				          <p>&lt;mysymbol scr="girlwithskirt.gif" ARIA-concept="http://wordnet.or g/somepage#girlnode" lang="en" /&gt; Note that this is not about standardizing symbols, but is instead a way of mapping them.</p>
 			            </li>
 			          </ul></td>
-				      <td><p resource="#h-more-help">..</p>
-			          <p resource="#h-more-help"><a  title="expand" class="expand" aria-label="expand example" href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a> </p>
-			          
-                      <p></p></td>
-				      <td></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -805,11 +857,7 @@ aui-hidden="true"&gt;</pre>
 				        <p></p>
 <a  title="expand" class="expand" aria-label="expand " href="https://w3c.github.io/coga/techniques/index.html#use-symbols-and-images-to-show-meaning">Use symbols and images to show meaning</a>.
 			          <p resource="#h-use-symbols-and-images-to-show-meaning"></p></td>
-				      <td><a  title="expand" class="expand" aria-label="expand example" href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a>
-                        <p></p>
-                      
-                      </td>
-				      <td></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -817,19 +865,7 @@ aui-hidden="true"&gt;</pre>
 				      <td><strong>Support known <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-standardized-APIs">standardized APIs</a> for tools that help users understand and use content. </strong> This includes:</td>
 				      <td><a  title="expand" class="expand" aria-label="expand " href="https://w3c.github.io/coga/techniques/index.html#provide-speech-support">Provide Speech Support</a>
                       <p resource="#provide-speech-support"></p></td>
-				      <td><p class="ednote"> do we need semantics that identify phrases?</p>
-				        
-			          <p>Use ARIA described to correlate pictures and focus rings (sections of pictures); and sections of math with text; or</p> <p class="ednote"> do we need a new semantic?</p></td>
-				      <td><p>Automatic speech setting for:</p>
-			          <ul>
-			            <li>all text;</li>
-			            <li>title and instructions;</li>
-			            <li>title and main content;</li>
-			            <li>title and main content and complementary content;</li>
-			            </ul>
-			          <p><strong>user driven speech</strong> in touch, click, double click, etc.;</p>
-			          <p><strong>speech with synchronized highlighting;</strong></p>
-			          <p>highlight color on / off;</p></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -838,11 +874,7 @@ aui-hidden="true"&gt;</pre>
 				        
 			                                  <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes3">..</h4></td>
 				      <td><p resource="#provide-speech-support">..</p></td>
-				      <td><a href="https://w3c.github.io/personalization-semantics/help/index.html#feedback-explanation">aui-feedback</a>
-                        <p></p>
-                      </td>
-				      <td><p>Feedback is spoken: on / off</p>
-			          </td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -853,8 +885,7 @@ aui-hidden="true"&gt;</pre>
 			          <p>Relationships need to be <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html#programmaticallydetermineddef">programmatically determined.</a></p>
 			          </td>
 				      <td></td>
-				      <td></td>
-				      <td></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -862,28 +893,14 @@ aui-hidden="true"&gt;</pre>
 			          <p>I need even word spacing or x justification.</p></th>
 				      <td><p class="ednote"> check if we have justified text. Has justification been included?</p></td>
 				      <td></td>
-				      <td></td>
-				      <td><p>space between sentences</p>
-				        <p>normal, high, very high</p>
-			          <p>space between words</p>
-			          <p>(as above)</p>
-			          <p>Space between phrases / clauses (as above)</p>
-			          
-			          <p>setting for</p>
-			          <p> even word spacing</p>
-			          <p>auto / always</p>
-			          <p>justification</p>
-			          <p>auto / right / left / center </p></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
 				      <th scope="row">I need reminders, or I will forget appointments, and when I was meant to do things. </th>
 				      <td><strong>Reminders: </strong>enable users to set a reminder for date and time sensitive events.   Reminders should be set only at users' requests. Users should be able to personalize a reminder method. Where a standard mechanism exists for the platform or technologies, it should be used.</td>
 				      <td>if there is a calendar / mail program, it could provide a feature to notify users of an impending meeting or of tasks (broader scope). </td>
-				      <td></td>
-				      <td><p>setting to personalize a reminder method, such as: </p>
-			          <p>email, pop up, SMS, phone call.</p>
-			          <p>Set importance level of reminders for each modality/method.</p></td>
+				      
 				      <td></td>
 			        </tr>
 				    <tr>
@@ -891,13 +908,7 @@ aui-hidden="true"&gt;</pre>
 				      <td><strong>Reminders: </strong>Reminders should be set only at users' requests. Users should be   able to personalize the reminder method. Where a standard mechanism   exists for the platform or technologies, it should be used.</td>
 				      <td><a title="expand" class="expand" aria-label="expand " href="https://w3c.github.io/coga/techniques/index.html#attention-and-focus">Attention and Focus</a>
 			          <p resource="#attention-and-focus"></p></td>
-				      <td><p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/tools/index.html#use_case_reminder">aui-reminder</a></p>
-                        <p>Enable users to turn off less-helpful reminders.</p>
-                      <p></p>
-                      
-                      <p>See table 2.</p></td>
-				      <td><p>See table 2.<br />
-		              </p></td>
+				      
 				      <td>See table 2.</td>
 			        </tr>
 				    <tr>
@@ -905,19 +916,162 @@ aui-hidden="true"&gt;</pre>
 				      <td><p class="ednote"> add and look at as issue.</p></td>
 				      <td></td>
 				      <td></td>
-				      <td></td>
-				      <td></td>
 			        </tr>
-				    <tr>
-				      <th scope="row"></th>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-				      <td></td>
-			        </tr>
+
 			      </tbody>
 			  </table>
+			  <p>
+			  	Table for New semantics and Personalization
+			  </p>
+
+			  <table  border="1" >
+			<tbody>
+				<tr>
+					<th scope="col">User Needs <a href="#userneeds" >*</a></th>
+					<th scope="col"><p>Proposed New Semantics <a href="#semantics" >*</a></p></th>
+					<th scope="col">Personalization<a href="#personalization" >*</a></th>
+				</tr>
+				<tr>
+					<th scope="row"><p>I need more explanations, such as  context sensitive help and short tips.</p>
+						         <p> <a href="#Discussion7">more</a> </p></th>
+					<td>
+						        <strong><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a></strong>
+						        <p>Standardize supportive syntax and terms that can be linked to associated   symbols, terms, translations, and explanations for users. </p>
+						        <p></p>
+						        <p><strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#use_case_morehelp">More Help</a></strong></p>
+					          <p resource="#h-more-help"></p></td>
+					<td>See help personalization in table above.</td>
+				</tr>
+				<tr>
+					<th scope="row"><p>I know how to get more information.</p>
+					          <p> <a href="#Discussion7">more</a> </p></th>
+					<td> <a href="https://w3c.github.io/personalization-semantics/help/index.html#explain-explanation">Explain</a> and <a href="https://w3c.github.io/personalization-semantics/help/index.html#feedback-explanation">Feedback</a>
+						        <p></p>
+						        <a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a>
+						        <p>For users, standardize supportive syntax and terms that can be linked to associated   symbols, terms, translations, and explanations</p>
+						        <p></p>
+						        <p><a href="https://w3c.github.io/personalization-semantics/help/index.html#use_case_morehelp">More Help</a> </p>
+						        <p resource="#h-more-help">..</p>
+						        <p><strong>Requirement: </strong>Some users may need additional   information, or specifically additional help information. There should be  extra attributes so an author can indicate the existence of additional information.</p>
+		                        <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#moreinfo-explanation">aui-moreinfo</a></p>
+		                        <p><strong>Supported values: </strong>URI</p>
+		                        <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#extrahelp-explanation">aui-extrahelp</a></p>
+		                        <p><strong>Supported values: </strong>URI</p>
+							      <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#helptype-explanation">aui-helptype</a></p>
+		                        <p><strong>Supported values: </strong> tooltips / human help / more help / topic search / automated / faqs / help form / simplified / glossary / dictionary / thesaurus</p>
+		                        <p> </p>
+		                        <p><strong>Example:</strong></p>
+		                        <p>&lt;button type="button" aui-extrahelp="uri2 uri3" &gt;undo&lt;/button&gt;</p>
+		                        <p>URI 2 may read: </p>
+		                        <pre>&lt;div id="uri2" aui-helptype="morehelp" 
+		aria-hidden="true"&gt;  
+		Pressing the undo button will erase
+		all your work on a page. 
+		Use this button with care.<br />If you press it by mistake,
+		press control and z at the same time.<br />Your work will then come back.<br />&lt;/div&gt; &lt;a href="functiongethelp()"
+		aui-helptype="humanhelp"
+		aui-hidden="true"&gt;
+		I want a person to help me&lt;/a&gt;  
+		&lt;div id="uri3" aui-extrahelp="glossary"
+		aui-hidden="true"&gt;</pre>
+		                        <p resource="#h-more-help">..</p></td>
+						      <td><p>See help personalization in the table above, and personalization settings for the context (includes help types).</p>
+					          
+					          <p></p></td>
+				</tr>
+				<tr>
+					<th scope="row">I need to easily get human help. </th>
+					<td><p resource="#h-more-help">..</p>
+						        <p><a href="https://w3c.github.io/personalization-semantics/help/index.html#use_case_morehelp">More Help</a></p>
+						        <p>(see above)</p>
+		                      <p resource="#h-more-help"></p></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">I need symbols that help me understand content. </th>
+					<td><p resource="#h-more-help">..</p>
+					          <p resource="#h-more-help"><a  title="expand" class="expand" aria-label="expand example" href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a> </p>
+					          
+		                      <p></p></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">I need contextually-relevant graphs and pictures to supplement text so I can understand a point without a lot of reading. </th>
+					<td><a  title="expand" class="expand" aria-label="expand example" href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a>
+		                        <p></p>
+		                      
+		                      </td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row">I need speech support, with synchronized highlighting, so I can follow as I go. </th>
+					<td><p class="ednote"> do we need semantics that identify phrases?</p>
+						        
+					          <p>Use ARIA described to correlate pictures and focus rings (sections of pictures); and sections of math with text; or</p> <p class="ednote"> do we need a new semantic?</p></td>
+					<td><p>Automatic speech setting for:</p>
+					          <ul>
+					            <li>all text;</li>
+					            <li>title and instructions;</li>
+					            <li>title and main content;</li>
+					            <li>title and main content and complementary content;</li>
+					            </ul>
+					          <p><strong>user driven speech</strong> in touch, click, double click, etc.;</p>
+					          <p><strong>speech with synchronized highlighting;</strong></p>
+					          <p>highlight color on / off;</p></td>
+				</tr>
+				<tr>
+					<th scope="row">  I need rapid feedback. </th>
+					<td><a href="https://w3c.github.io/personalization-semantics/help/index.html#feedback-explanation">aui-feedback</a>
+		                        <p></p>
+		                      </td>
+					<td><p>Feedback is spoken: on / off</p>
+					          </td>
+				</tr>
+				<tr>
+					<th scope="row">Highlight section of image, chart, or math, while the section is read.</th>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<th scope="row"><p>I need more space between letters, words, sentences, and/or lines of text.</p>
+					          <p>I need even word spacing or x justification.</p></th>
+					<td></td>
+					<td><p>space between sentences</p>
+						        <p>normal, high, very high</p>
+					          <p>space between words</p>
+					          <p>(as above)</p>
+					          <p>Space between phrases / clauses (as above)</p>
+					          
+					          <p>setting for</p>
+					          <p> even word spacing</p>
+					          <p>auto / always</p>
+					          <p>justification</p>
+					          <p>auto / right / left / center </p></td>
+				</tr>
+				<tr>
+					<th scope="row">I need reminders, or I will forget appointments, and when I was meant to do things. </th>
+					<td></td>
+					<td><p>setting to personalize a reminder method, such as: </p>
+					          <p>email, pop up, SMS, phone call.</p>
+					          <p>Set importance level of reminders for each modality/method.</p></td>
+				</tr>
+				<tr>
+					<th scope="row">I do not want too many reminders, as I will be distracted.</th>
+					<td><p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/tools/index.html#use_case_reminder">aui-reminder</a></p>
+		                        <p>Enable users to turn off less-helpful reminders.</p>
+		                      <p></p>
+		                      
+		                      <p>See table 2.</p></td>
+					<td><p>See table 2.<br />
+				              </p></td>
+				</tr>
+				<tr>
+					<th scope="row">I want to be confident that I can manage my tasks. </th>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
 				
 </section>
 			<section>
