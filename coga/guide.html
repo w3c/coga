@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)https://www.w3.org/WAI/older-users/developing/ -->
+<html class="has-js" prefix="og: http://ogp.me/ns#" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script>
+			document.documentElement.className = document.documentElement.className.replace(
+				"no-js",
+				"has-js"
+			);
+
+			function downloadJSAtOnload() {
+				var element = document.createElement("script");
+				element.src =
+					"https://www.w3.org/WAI/assets/scripts/main.js?1544003623147732000";
+				document.body.appendChild(element);
+			}
+
+			window.addEventListener("load", downloadJSAtOnload, false);
+		</script>
+    <link rel="stylesheet" href="./all_files/style.css">
+    <link rel="shortcut icon" href="./all_files/favicon.ico">
+    <title> Cognitive Accessibility Resource Guide | Web Accessibility
+      Initiative (WAI) | W3C </title>
+    <!-- Begin Jekyll SEO tag v2.5.0 -->
+    <meta name="generator" content="Jekyll v3.7.3">
+    <meta property="og:title" content="Developing Websites for Older People: How Web Content Accessibility Guidelines (WCAG) 2.0 Applies">
+    <meta name="author" content="w3c_wai">
+    <meta property="og:locale" content="en_US">
+    <meta name="description" content="Summary">
+    <meta property="og:description" content="Summary">
+    <link rel="canonical" href="https://www.w3.org/WAI/older-users/developing/">
+    <meta property="og:url" content="https://www.w3.org/WAI/older-users/developing/">
+    <meta property="og:site_name" content="Web Accessibility Initiative (WAI)">
+    <meta property="og:type" content="article">
+    <meta property="article:published_time" content="2018-12-05T10:53:43+01:00">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@w3c_wai">
+    <meta name="twitter:creator" content="@w3c_wai">
+    <script type="application/ld+json">
+			{"url":"https://www.w3.org/WAI/older-users/developing/","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.w3.org/WAI/older-users/developing/"},"author":{"@type":"Person","name":"w3c_wai"},"description":"Summary","headline":"Developing Websites for Older People: How Web Content Accessibility Guidelines (WCAG) 2.0 Applies","datePublished":"2018-12-05T10:53:43+01:00","dateModified":"2018-12-05T10:53:43+01:00","@type":"BlogPosting","@context":"http://schema.org"}
+		</script>
+    <!-- End Jekyll SEO tag -->
+    <meta name="twitter:image" property="og:image" content="https://www.w3.org/WAI/assets/images/social-sharing-default.jpg">
+    <link rel="alternate" type="application/rss+xml" href="https://www.w3.org/WAI/feed.xml">
+  </head>
+  <body id="top" class="page-developing-websites-for-older-people-how-web-content-accessibility-guidelines-wcag-2-0-applies resource-older-users">
+    <nav aria-label="Skip Link and Accessibility Options" id="controls" class="default-grid">
+      <ul>
+        <li> <a href="https://www.w3.org/WAI/older-users/developing/#main">Skip
+            to Content</a> </li>
+        <li> <a href="https://www.w3.org/WAI/meta/customize/">Change Text Size
+            or Colors</a> </li>
+      </ul>
+    </nav>
+    <header id="site-header" class="default-grid with-gap">
+      <div class="logos"> <a class="home w3c" href="https://www.w3.org/">
+          <svg role="img" aria-label="W3C" viewBox="0 0 68 34" xmlns="http://www.w3.org/2000/svg">
+            <g>
+              <path d="m16.117 1.006 5.759 19.58 5.759-19.58h4.17 11.444v1.946l-5.879 10.128c2.065.663 3.627 1.868 4.686 3.615 1.059 1.748 1.589 3.799 1.589 6.155 0 2.914-.775 5.363-2.324 7.348s-3.555 2.978-6.017 2.978c-1.854 0-3.469-.589-4.845-1.767-1.377-1.178-2.396-2.773-3.058-4.786l3.256-1.35c.477 1.218 1.106 2.178 1.887 2.879.781.702 1.701 1.052 2.76 1.052 1.112 0 2.052-.622 2.82-1.866.768-1.245 1.152-2.74 1.152-4.489 0-1.933-.411-3.429-1.231-4.488-.954-1.244-2.45-1.867-4.489-1.867h-1.588v-1.906l5.56-9.612h-6.712l-.382.65-8.163 27.548h-.397l-5.958-19.937-5.957 19.937h-.397l-9.53-32.168h4.17l5.759 19.58 3.892-13.185-1.906-6.395z"></path>
+              <path d="m64.92 1.006c-.819 0-1.554.295-2.111.861-.591.6-.92 1.376-.92 2.178s.313 1.545.887 2.128c.583.591 1.334.912 2.145.912.793 0 1.562-.321 2.161-.903.574-.557.887-1.3.887-2.136 0-.811-.321-1.57-.878-2.136-.584-.592-1.344-.904-2.171-.904zm2.643 3.065c0 .701-.271 1.351-.768 1.832-.524.507-1.174.777-1.892.777-.675 0-1.342-.278-1.84-.785s-.777-1.157-.777-1.849.287-1.368.802-1.891c.481-.49 1.131-.751 1.84-.751.726 0 1.376.271 1.883.785.49.489.752 1.147.752 1.882zm-2.559-1.807h-1.3v3.445h.65v-1.469h.642l.701 1.469h.726l-.769-1.57c.498-.102.785-.439.785-.929 0-.625-.472-.946-1.435-.946zm-.118.422c.608 0 .886.169.886.591 0 .405-.278.549-.87.549h-.549v-1.14z"></path>
+              <path d="m59.807.825.676 4.107-2.391 4.575s-.918-1.941-2.443-3.015c-1.285-.905-2.122-1.102-3.431-.832-1.681.347-3.587 2.357-4.419 4.835-.995 2.965-1.005 4.4-1.04 5.718-.056 2.113.277 3.362.277 3.362s-1.452-2.686-1.438-6.62c.009-2.808.451-5.354 1.75-7.867 1.143-2.209 2.842-3.535 4.35-3.691 1.559-.161 2.791.59 3.743 1.403 1 .854 2.01 2.721 2.01 2.721z"></path>
+              <path d="m60.102 24.063s-1.057 1.889-1.715 2.617c-.659.728-1.837 2.01-3.292 2.651s-2.218.762-3.656.624c-1.437-.138-2.772-.97-3.24-1.317s-1.664-1.369-2.34-2.322-1.733-2.859-1.733-2.859.589 1.91.958 2.721c.212.467.864 1.894 1.789 3.136.863 1.159 2.539 3.154 5.086 3.604 2.547.451 4.297-.693 4.73-.97s1.346-1.042 1.924-1.66c.603-.645 1.174-1.468 1.49-1.962.231-.36.607-1.092.607-1.092z"></path>
+            </g> </svg> </a> <a class="home" href="https://www.w3.org/WAI/">
+          <span class="wai"><span class="wa">Web&nbsp;Accessibility</span> <span
+              class="i"><span class="initieative">Initiative</span> <span>WAI</span></span></span>
+        </a>
+        <div class="claim"> <span>Strategies, standards, resources to make the
+            Web accessible to people with disabilities</span> </div>
+        <button class="button button-menu" aria-haspopup="true" aria-expanded="false"
+          id="openmenu"> <span><svg aria-hidden="true" class="icon-menu ">
+              <use xlink:href="./all_files/icons.svg#icon-menu"></use> </svg>
+            Menu</span> </button> </div>
+      <div class="navigations">
+        <nav class="metanav" aria-label="Meta &amp; Search">
+          <ul>
+            <li> <a href="https://www.w3.org/WAI/about/participating/">Get
+                Involved</a> </li>
+            <li> <a href="https://www.w3.org/WAI/about/">About W3C WAI</a> </li>
+            <li>
+              <form action="https://www.w3.org/WAI/search/" role="search">
+                <div> <label for="header-search"> <span class="visuallyhidden">Search:</span>
+                    <input id="header-search" name="q" placeholder="Search" aria-label="search"
+                      type="search"> </label> <button class="button button-icon button-nobg button-noborder">
+                    <span>
+                      <svg aria-label="Submit Search" class="icon-search ">
+                        <use xlink:href="./all_files/icons.svg#icon-search"></use>
+                      </svg> </span> </button> </div>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <nav class="mainnav" aria-label="Main">
+      <ul>
+        <li> <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"
+            aria-current="location"><span>Accessibility Fundamentals</span></a>
+        </li>
+        <li> <a href="https://www.w3.org/WAI/planning/"><span>Planning&nbsp;&amp;
+              Policies</span></a> </li>
+        <li> <a href="https://www.w3.org/WAI/design-develop/"><span>Design
+              &amp; Develop</span></a> </li>
+        <li> <a href="https://www.w3.org/WAI/test-evaluate/"><span>Test &amp;
+              Evaluate</span></a> </li>
+        <li> <a href="https://www.w3.org/WAI/teach-advocate/"><span>Teach &amp;
+              Advocate</span></a> </li>
+        <li> <a href="https://www.w3.org/WAI/standards-guidelines/"><span>Standards/<wbr>Guidelines</span></a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="breadcrumb default-grid" aria-label="Breadcrumb">
+      <ul class="default-container">
+        <li><a href="https://www.w3.org/WAI/">Home</a></li>
+        <li> <a href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Accessibility
+            Fundamentals</a> </li>
+        <li><a href="./?env=dev">Cognitive Accessibility</a></li>
+        <li> <a href="./design.html?env=dev" aria-current="page">Design</a> </li>
+      </ul>
+    </nav>
+    <div class="default-grid with-gap leftcol">
+      <nav class="sidenav sn-contents" aria-label="Secondary">
+        <div class="sidenav--head">
+          <div class="sidenav--head-title">
+            <div class="sidenav--head-subsection"> Accessibility Fundamentals </div>
+          </div>
+        </div>
+        <ul class="sidenav--list">
+          <li> <a class="page-link" href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"><span>Introduction
+                to Accessibility</span></a>
+            <ul>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/videos/standards-and-benefits/"><span>Video
+                    Introduction</span></a> </li>
+            </ul>
+          </li>
+          <li> <a class="page-link" href="https://www.w3.org/WAI/fundamentals/components/"><span>Components
+                of Web Accessibility</span></a> </li>
+          <li> <a class="page-link" href="https://www.w3.org/WAI/fundamentals/accessibility-principles/"><span>Accessibility
+                Principles</span></a> </li>
+          <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/"><span>Perspectives
+                Videos</span></a>
+            <ul>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/keyboard/"><span>Keyboard
+                    Compatibility</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/contrast/"><span>Colors
+                    with Good Contrast</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/layout/"><span>Clear
+                    Layout and Design</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/speech/"><span>Text
+                    to Speech</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/controls/"><span>Large
+                    Links, Buttons, and Controls</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/captions/"><span>Video
+                    Captions</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/customizable/"><span>Customizable
+                    Text</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/voice/"><span>Voice
+                    Recognition</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/understandable/"><span>Understandable
+                    Content</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/perspective-videos/notifications/"><span>Notifications
+                    and Feedback</span></a> </li>
+            </ul>
+          </li>
+          <li> <a class="page-link" href="https://www.w3.org/WAI/people-use-web/"><span>How
+                People with Disabilities Use the Web</span></a>
+            <ul>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/people-use-web/user-stories/"><span>Stories
+                    of Web Users</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/people-use-web/abilities-barriers/"><span>Diverse
+                    Abilities and Barriers</span></a> </li>
+              <li> <a class="page-link" href="https://www.w3.org/WAI/people-use-web/tools-techniques/"><span>Tools
+                    and Techniques</span></a> </li>
+            </ul>
+          </li>
+          <li> <a class="page-link" href="https://www.w3.org/WAI/older-users/"><span>Older
+                Users and Accessibility</span></a> </li>
+          <li> <a class="page-link" aria-current="location" href="./?env=dev"><span>Cognitive
+                and Learning Disabilities</span></a>
+            <ul>
+              <li> <a class="page-link" href="./ensuring.html?env=dev"><span>Supporting
+                    Cognitive Needs</span></a> </li>
+              <li> <a class="page-link" aria-current="page" href="./design.html?env=dev"><span>Design
+                    Techniques</span></a> </li>
+              <li> <a class="page-link" href="./research.html?env=dev"><span>Research
+                    and Analysis</span></a> </li>
+            </ul>
+          </li>
+          <li> <a class="page-link" href="https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/"><span>Accessibility,
+                Usability, Inclusion</span></a> </li>
+        </ul>
+      </nav>
+      <main id="main">
+        <h1>Cognitive Accessibility Resource Guide</h1>
+        <aside class="ednote"><bold style="font-weight: 900;color:darkgree;font-size:larger">Mock
+            Up Page</bold> For anyone wanting signposting to useful information
+          given their interests. </aside>
+        <aside class="box box-full">
+          <header class="box-h  box-h-full">
+            <h2>Summary</h2>
+          </header>
+          <div class="box-i"> This page acts as a guide to relevant coga
+            resources </div>
+        </aside>
+        <nav class="box box-simple box-full" aria-labelledby="tocheading" id="toc">
+          <header id="tocheading" class="box-h box-h-simple box-h-full"> Page
+            Contents </header>
+          <div class="box-i">
+            <ul id="markdown-toc">
+              <li> <a href="https://www.w3.org/WAI/older-users/developing/#wcag"
+                  id="markdown-toc-wcag">W3C WAI Cognitive Accessibility
+                  Resources</a> </li>
+              <li> <a href="https://www.w3.org/WAI/older-users/developing/#wcag"
+                  id="markdown-toc-wcag">Show Me</a></li>
+            </ul>
+          </div>
+        </nav>
+        <h2 id="wcag">W3C WAI Cognitive Accessibility Resources</h2>
+        Cognitive accessibility is highly personal and covers a wide range of
+        requirements and barriers. The W3C WAI have developed several large,
+        detailed resources which can be hard to navigate. This page is designed
+        to provide with pointers to topics you should find interesting according
+        to your interests.<br>
+        <br>
+        <img src="./all_files/resources.jpg" title="The main Coga resources"><br>
+        <h2 id="wcag">Show Me</h2>
+        Select the guides from below according to what you want to do:<br>
+        <br>
+        <aside class="box box-large">
+          <header class="box-h box-h-large">
+            <h3 id="wcag"> <button aria-expanded="false" data-toggle="collapse"
+                data-target="#humanhelp"> <span class="word-show"><svg aria-hidden="true"
+                    class="i-chevron-right">
+                    <use xlink:href="./all_files/icons.svg#icon-chevron-right"></use>
+                  </svg> Show</span><span class="word-hide"><svg aria-hidden="true"
+                    class="i-chevron-down">
+                    <use xlink:href="./all_files/icons.svg#icon-chevron-down"></use>
+                  </svg> Hide</span> Ensure resources for people with COGA to be
+                perfectly usable</button>
+              <div id="humanhelp" class="collapse">
+                <div style="padding:.5em">
+                  <h4 id="wcag"> Useful coga resources for resources designed
+                    for people with coga </h4>
+                  <ul>
+                    <li> &nbsp; <a href="https://www.w3.org/TR/2008/REC-WCAG20-20081211/#minimize-error-context-help">3.3.5
+                        Help: Context-sensitive help is available</a>. (Level
+                      AAA)] Note for coga global help should be provided as well
+                      as context sensitive [?] </li>
+                    <li> &nbsp; <a href="https://www.w3.org/TR/WCAG20-TECHS/complete.html#G71">G71:
+                        Providing a help link on every Web page</a>. Note for
+                      coga, help should be available on every page, not just
+                      forms. </li>
+                    <li> &nbsp; <a href="https://www.w3.org/TR/WCAG20-TECHS/G193.htmlhttps://www.w3.org/TR/WCAG20-TECHS/G193.html">G193
+                        Providing help by an assistant in the Web page</a> </li>
+                    <li> NB !!! There is often a mixture of suitable WCAG links
+                      (SC, quick ref, Techniques &amp; Understanding). I picked
+                      the SC plus others even though they can all be found via
+                      the SC </li>
+                  </ul>
+                </div>
+              </div>
+            </h3>
+            <h3> <button aria-expanded="false" data-toggle="collapse" data-target="#simple">
+                <span class="word-show"><svg aria-hidden="true" class="i-chevron-right">
+                    <use xlink:href="./all_files/icons.svg#icon-chevron-right"></use>
+                  </svg> Show</span><span class="word-hide"><svg aria-hidden="true"
+                    class="i-chevron-down">
+                    <use xlink:href="./all_files/icons.svg#icon-chevron-down"></use>
+                  </svg> Hide</span> Develop Web sites that are inclusive to
+                people with a cognitive disabilities </button>
+              <div id="simple" class="collapse">
+                <div style="padding:.5em"> </div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum. </div>
+            </h3>
+            <h3> <button aria-expanded="false" data-toggle="collapse" data-target="#miso">
+                <span class="word-show"><svg aria-hidden="true" class="i-chevron-right">
+                    <use xlink:href="./all_files/icons.svg#icon-chevron-right"></use>
+                  </svg> Show</span><span class="word-hide"><svg aria-hidden="true"
+                    class="i-chevron-down">
+                    <use xlink:href="./all_files/icons.svg#icon-chevron-down"></use>
+                  </svg> Hide</span> Develop policies that are fully inclusive
+                of people with cognitive disabilities</button>
+              <div id="miso" class="collapse">
+                <div style="padding:.5em"> </div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                <div> </div>
+              </div>
+            </h3>
+          </header>
+        </aside>
+        <aside class="box box-icon box-space-above" id="helpimprove">
+          <header class="box-h  box-h-icon box-h-space-above box-h-icon">
+            <svg aria-hidden="true" class="icon-comments ">
+              <use xlink:href="./all_files/icons.svg#icon-comments"></use> </svg>
+            <h2>Help improve this page</h2>
+          </header>
+          <div class="box-i">
+            <p> Please share your ideas, suggestions, or comments via e-mail to
+              the publicly-archived list <a href="mailto:wai-eo-editors@w3.org?subject=Developing%20Websites%20for%20Older%20People:%20How%20Web%20Content%20Accessibility%20Guidelines%20%28WCAG%29%202.0%20Applies">wai-eo-editors@w3.org</a>
+              or via GitHub. </p>
+            <div class="button-group"> <a href="mailto:wai-eo-editors@w3.org?subject=Developing%20Websites%20for%20Older%20People:%20How%20Web%20Content%20Accessibility%20Guidelines%20%28WCAG%29%202.0%20Applies"
+                class="button"><span>E-mail</span></a> <a href="https://github.com/w3c/wai-older-users/edit/master/_older-users/developing.md"
+                class="button"><span>Fork &amp; Edit on GitHub</span></a><a href="https://github.com/w3c/wai-older-users/issues/new"
+                class="button"><span>New GitHub Issue</span></a> </div>
+          </div>
+        </aside>
+        <a class="button button-backtotop" href="https://www.w3.org/WAI/older-users/developing/#top"><span><svg
+              aria-hidden="true" class="icon-arrow-up ">
+              <use xlink:href="./all_files/icons.svg#icon-arrow-up"></use> </svg>
+            Back to Top</span></a> </main>
+      <h3><br>
+      </h3>
+    </div>
+    <footer class="page-footer default-grid" aria-label="Page">
+      <div class="inner">
+        <p> <strong>Date:</strong> Reviewed January 2018. Updated 22 September
+          2010.
+          <!-- [<a href="../changelog/">changelog</a>] --> </p>
+        <p> <strong>Editors:</strong> <a href="http://www.w3.org/People/Andrew/">Andrew
+            Arch</a> and <a href="http://www.w3.org/People/shadi/">Shadi
+            Abou-Zahra</a>. Contributors: <a href="http://www.w3.org/People/Shawn/">Shawn
+            Henry</a>, Suzette Keith, Kate Roberts. </p>
+        <p> Developed with input from the Education and Outreach Working Group (<a
+            href="http://www.w3.org/WAI/EO/">EOWG</a>), with the <a href="http://www.w3.org/WAI/EO/2008/wai-age-tf.html#participants">WAI-AGE
+            Task Force</a>. Related to the <a href="https://www.w3.org/WAI/WAI-AGE/">WAI-AGE
+            Project</a> funded by the European Commission under the 6th
+          Framework. </p>
+      </div>
+    </footer>
+    <footer class="site-footer grid-4q" aria-label="Site">
+      <div class="q1-start q3-end about">
+        <div>
+          <p> <a class="largelink" href="https://w3.org/WAI/">W3C Web
+              Accessibility Initiative (WAI)</a> </p>
+          <p> Strategies, standards, and supporting resources to make the Web
+            accessible to people with disabilities. </p>
+        </div>
+        <div>
+          <p> Copyright © 2018 W3C <sup>®</sup> (<a href="http://www.csail.mit.edu/"><abbr
+                title="Massachusetts Institute of Technology">MIT</abbr></a>, <a
+              href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+            <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>)
+            <a href="https://www.w3.org/WAI/about/using-wai-material/">Permission
+              to Use WAI Material</a>. </p>
+        </div>
+      </div>
+      <div class="q4-start q4-end">
+        <ul>
+          <li> <a href="https://www.w3.org/WAI/about/contacting/">Contact WAI</a>
+          </li>
+          <li> <a href="https://www.w3.org/WAI/sitemap/">Site Map</a> </li>
+          <li><a href="https://www.w3.org/WAI/news/">News</a></li>
+          <li> <a href="https://www.w3.org/WAI/sitemap/#archive">Archive</a> </li>
+          <li> <a href="https://www.w3.org/WAI/about/accessibility-statement/">Accessibility
+              Statement</a> </li>
+          <li> <a href="https://www.w3.org/WAI/roles/">Resources for Roles</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- Details4Everybody -->
+    <script src="./all_files/details4everybody.js"></script>
+    <!-- SVG4Everybody -->
+    <script src="./all_files/svg4everybody.js"></script>
+    <script>
+			svg4everybody();
+		</script>
+    <script src="./all_files/main.js"></script>
+    <script src="./all_files/collapse.js"></script>
+  </body>
+</html>
