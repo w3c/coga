@@ -4,9 +4,9 @@
 
 These pages are hacked copies of WAI website pages. They expected to be served from `https://raw.githack.com/` which acts as a CDN
 and serves the correct mime type for a browser to display the html. The 3 pages are linked to each other and the WAI website -
-but some links in the content are spurious (this is a 'mockup'). Here isthe main coga page
+but some links in the content are spurious (this is a 'mockup'). Here is the main coga page
 
-[WAI Website Congitive pages](https://raw.githack.com/w3c/coga/doc-mock/coga/)
+[WAI Website Mock Cognitive Accessibility pages](https://raw.githack.com/w3c/coga/doc-mock/coga/)
 
 ## Testing
 
