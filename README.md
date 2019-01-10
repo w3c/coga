@@ -6,9 +6,9 @@ These pages are hacked copies of WAI website pages. They expected to be served f
 and serves the correct mime type for a browser to display the html. The 3 pages are linked to each other and the WAI website -
 but some links in the content are spurious (this is a 'mockup'). Here isthe main coga page
 
-https://raw.githack.com/w3c/coga/doc-mock/coga/
+[WAI Website Congitive pages](https://raw.githack.com/w3c/coga/doc-mock/coga/)
 
-# Testing
+## Testing
 
 With Nodejs installed
 
@@ -16,7 +16,7 @@ With Nodejs installed
 npx serve
 ```
 
-then browser to http://localhost:5000/coga/
+then browse to [http://localhost:5000/coga/](http://localhost:5000/coga/)
 
 ## Release process
 
