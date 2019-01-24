@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -14,8 +14,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -26,7 +26,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -34,11 +34,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -2150,20 +2145,20 @@ th > p:first-child, td > p:first-child {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2019-01-14",
-  "publishISODate": "2019-01-14T00:00:00.000Z",
-  "generatedSubtitle": "Working Draft 14 January 2019"
+  "publishDate": "2019-01-24",
+  "publishISODate": "2019-01-24T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 24 January 2019"
 }</script><meta name="description" content="This document is a gap analysis and roadmap for the state of accessibility for people with learning and cognitive disabilities when using the Web and information technologies. It builds on the information presented in Cognitive Accessibility User Research [coga-user-research] and Cognitive Accessibility Issue Papers [coga-issue-papers] to evaluate where user needs remain to be met in technologies and accessibility guidelines. For various accessibility issues, this document provides a summary of issues and techniques, then identifies gaps and unmet user needs and suggest ways technologies may meet these needs in the future."></head>
 <body class="h-entry"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Cognitive Accessibility Roadmap and Gap Analysis</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Working Draft
-        <time class="dt-published" datetime="2019-01-14">14 January 2019</time>
+        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
-                  <a class="u-url" href="https://www.w3.org/TR/2019/WD-coga-gap-analysis-20190114/">https://www.w3.org/TR/2019/WD-coga-gap-analysis-20190114/</a>
+                  <a class="u-url" href="https://www.w3.org/TR/2019/WD-coga-gap-analysis-20190124/">https://www.w3.org/TR/2019/WD-coga-gap-analysis-20190124/</a>
                 </dd><dt>Latest published version:</dt><dd>
                   <a href="https://www.w3.org/TR/coga-gap-analysis/">https://www.w3.org/TR/coga-gap-analysis/</a>
                 </dd>
@@ -2186,21 +2181,17 @@ th > p:first-child, td > p:first-child {
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2017-2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2017-2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
@@ -2226,57 +2217,47 @@ th > p:first-child, td > p:first-child {
 			</ul>
 			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>25 June 2018</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/gap-analysis/">publicly visible editors' draft</a>.</p>
 		<p>
-                                              This document was published by
-                                              the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as a
-                                              Working Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as a
-                                              Working Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              groups
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains
-                                                      a <a href="https://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a> and a <a href="https://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Accessibility Guidelines Working Group)</a>
-                                              made in connection with the
-                                              deliverables of
-                                              each group; these pages also include
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#importance-of-this-document"><span class="secno">1.1 </span>Importance of This Document</a></li><li class="tocline"><a class="tocxref" href="#people-with-cognitive-and-learning-disabilities-and-the-web"><span class="secno">1.2 </span>People with Cognitive and Learning Disabilities and the Web</a></li><li class="tocline"><a class="tocxref" href="#finding-your-way-around-this-document"><span class="secno">1.3 </span>Finding your way around this document</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><span class="secno">1.4 </span>Assumptions</a></li><li class="tocline"><a class="tocxref" href="#maturity-of-this-publication"><span class="secno">1.5 </span>Maturity of This Publication</a></li></ol></li><li class="tocline"><a class="tocxref" href="#summary-of-solutions"><span class="secno">2. </span>Summary of solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#overview-of-techniques"><span class="secno">2.1 </span>Overview of Techniques</a></li><li class="tocline"><a class="tocxref" href="#summary-of-technique-solutions"><span class="secno">2.2 </span>Summary of Technique Solutions </a></li></ol></li><li class="tocline"><a class="tocxref" href="#roadmap-of-solutions-against-user-needs"><span class="secno">3. </span>Roadmap of Solutions Against User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#topic-1-authentication-and-safety"><span class="secno">3.1 </span>Topic 1: Authentication and Safety</a></li><li class="tocline"><a class="tocxref" href="#topic-2-context-and-distractions"><span class="secno">3.2 </span>Topic 2: Context and Distractions</a></li><li class="tocline"><a class="tocxref" href="#table-3-entering-data-error-prevention-recovery"><span class="secno">3.3 </span>Table 3: Entering Data, Error Prevention, &amp; Recovery </a></li><li class="tocline"><a class="tocxref" href="#table-4-help-and-support"><span class="secno">3.4 </span>Table 4: Help and support</a></li><li class="tocline"><a class="tocxref" href="#table-5-simple-and-clear-interface"><span class="secno">3.5 </span>Table 5: Simple and Clear Interface </a></li><li class="tocline"><a class="tocxref" href="#table-6-familiar-interface"><span class="secno">3.6 </span>Table 6: Familiar interface</a></li><li class="tocline"><a class="tocxref" href="#table-7-clear-and-understandable-content-and-text"><span class="secno">3.7 </span>Table 7: Clear and understandable content and text.</a></li><li class="tocline"><a class="tocxref" href="#table-8-navigating-the-system"><span class="secno">3.8 </span>Table 8: Navigating the system</a></li><li class="tocline"><a class="tocxref" href="#table-9-navigation-and-gps"><span class="secno">3.9 </span>Table 9: Navigation and GPS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personalization-semantics"><span class="secno">4. </span>Personalization Semantics</a></li><li class="tocline"><a class="tocxref" href="#appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities"><span class="secno">A. </span>Appendix: Making content usable for people with cognitive and learning disabilities</a></li><li class="tocline"><a class="tocxref" href="#appendix-summary-of-issue-papers"><span class="secno">B. </span>Appendix: Summary of Issue Papers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#flat-design"><span class="secno">B.1 </span>Flat Design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problem-with-flat-design"><span class="secno">B.1.1 </span>Problem with Flat Design</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-flat-design"><span class="secno">B.1.2 </span>Solutions for Flat Design</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-flat-design"><span class="secno">B.1.3 </span>Further Work for Flat Design</a></li></ol></li><li class="tocline"><a class="tocxref" href="#web-security-and-privacy-technologies"><span class="secno">B.2 </span>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-security-and-privacy"><span class="secno">B.2.1 </span>Problems with Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-security-and-privacy"><span class="secno">B.2.2 </span>Solutions for Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-security-and-privacy"><span class="secno">B.2.3 </span>Further Work for Security and Privacy</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-safety"><span class="secno">B.3 </span>User Safety</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-user-safety"><span class="secno">B.3.1 </span>Problems with User Safety</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-user-safety"><span class="secno">B.3.2 </span>Solutions for User Safety</a></li></ol></li><li class="tocline"><a class="tocxref" href="#math"><span class="secno">B.4 </span>Math</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-math"><span class="secno">B.4.1 </span>Problems with Math</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-math"><span class="secno">B.4.2 </span>Solutions for Math</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multi-modal-content-delivery"><span class="secno">B.5 </span>Multi-modal Content Delivery</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#solutions-for-multi-modal-content-delivery"><span class="secno">B.5.1 </span>Solutions for Multi-modal Content Delivery</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-multi-modal-content-delivery"><span class="secno">B.5.2 </span>Further Work for Multi-modal Content Delivery</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personalization-and-user-preferences"><span class="secno">B.6 </span>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-personalization"><span class="secno">B.6.1 </span>Problems with Personalization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#preferences-for-cognitive-disabilities"><span class="secno">B.6.1.1 </span>Preferences for Cognitive Disabilities</a></li><li class="tocline"><a class="tocxref" href="#setting-and-gathering-preferences"><span class="secno">B.6.1.2 </span>Setting and Gathering Preferences</a></li></ol></li><li class="tocline"><a class="tocxref" href="#solutions-for-personalization"><span class="secno">B.6.2 </span>Solutions for Personalization</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-personalization"><span class="secno">B.6.3 </span>Further Work for Personalization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#end-to-end-basic-solution"><span class="secno">B.6.3.1 </span>End to End Basic Solution</a></li><li class="tocline"><a class="tocxref" href="#special-case"><span class="secno">B.6.3.2 </span>Special Case</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#distractions"><span class="secno">B.7 </span>Distractions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-distractions"><span class="secno">B.7.1 </span>Problems with Distractions</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-distractions"><span class="secno">B.7.2 </span>Solutions for Distractions</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-distractions"><span class="secno">B.7.3 </span>Further Work for Distractions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voice-menu-systems"><span class="secno">B.8 </span>Voice Menu Systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problem-with-voice-menu-systems"><span class="secno">B.8.1 </span>Problem with Voice Menu Systems</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-voice-menu-systems"><span class="secno">B.8.2 </span>Solutions for Voice Menu Systems</a></li></ol></li><li class="tocline"><a class="tocxref" href="#online-payments"><span class="secno">B.9 </span>Online Payments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-online-payments"><span class="secno">B.9.1 </span>Problems with Online Payments</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-online-payments"><span class="secno">B.9.2 </span>Solutions for Online Payments</a></li></ol></li><li class="tocline"><a class="tocxref" href="#symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">B.10 </span>Symbol Users with Speech, Language, and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">B.10.1 </span>Problems with Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">B.10.2 </span>Solutions for Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">B.10.3 </span>Further Work for Symbol Users with Speech, Language, and Literacy Difficulties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#task-completion-and-emotional-disabilities"><span class="secno">B.11 </span>Task Completion and Emotional Disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-task-completion-and-emotional-disabilities"><span class="secno">B.11.1 </span>Problems with Task Completion and Emotional Disabilities</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-task-completion-and-emotional-disabilities"><span class="secno">B.11.2 </span>Solutions for Task Completion and Emotional Disabilities</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-task-completion-and-emotional-disabilities"><span class="secno">B.11.3 </span>Further Work for Task Completion and Emotional Disabilities</a></li></ol></li><li class="tocline"><a class="tocxref" href="#graded-help"><span class="secno">B.12 </span>Graded Help</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-graded-help"><span class="secno">B.12.1 </span>Problems with Graded Help</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-graded-help"><span class="secno">B.12.2 </span>Solutions for Graded Help</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-graded-help"><span class="secno">B.12.3 </span>Further Work for Graded Help</a></li></ol></li><li class="tocline"><a class="tocxref" href="#way-finding"><span class="secno">B.13 </span>Way Finding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-way-finding"><span class="secno">B.13.1 </span>Problems with Way Finding</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-way-finding"><span class="secno">B.13.2 </span>Solutions for Way Finding</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-way-finding"><span class="secno">B.13.3 </span>Further Work for Way Finding</a></li></ol></li><li class="tocline"><a class="tocxref" href="#web-of-things-wot"><span class="secno">B.14 </span>Web of Things (WoT)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-web-of-things-wot"><span class="secno">B.14.1 </span>Problems with Web of Things (WoT)</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-web-of-things-wot"><span class="secno">B.14.2 </span>Solutions for Web of Things (WoT)</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-web-of-things-wot"><span class="secno">B.14.3 </span>Further Work for Web of Things (WoT)</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">C. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#significant-editorial-changes-since-the-first-public-working-draft"><span class="secno">C.1 </span>Significant editorial changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">D. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">D.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><span class="secno">D.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">D.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">E. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">E.1 </span>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><span class="secno">E.2 </span>Informative references</a></li></ol></li></ol></nav>
+                              This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as
+                              a Working Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+            
+    </p><p>
+                              Publication as a Working Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              groups
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="https://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a> and a <a href="https://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Accessibility Guidelines Working Group)</a>
+                              made in connection with the deliverables of
+                              each group; these pages also include
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#importance-of-this-document"><span class="secno">1.1 </span>Importance of This Document</a></li><li class="tocline"><a class="tocxref" href="#people-with-cognitive-and-learning-disabilities-and-the-web"><span class="secno">1.2 </span>People with Cognitive and Learning Disabilities and the Web</a></li><li class="tocline"><a class="tocxref" href="#finding-your-way-around-this-document"><span class="secno">1.3 </span>Finding your way around this document</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><span class="secno">1.4 </span>Assumptions</a></li><li class="tocline"><a class="tocxref" href="#maturity-of-this-publication"><span class="secno">1.5 </span>Maturity of This Publication</a></li></ol></li><li class="tocline"><a class="tocxref" href="#summary-of-solutions"><span class="secno">2. </span>Summary of solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#overview-of-techniques"><span class="secno">2.1 </span>Overview of Techniques</a></li><li class="tocline"><a class="tocxref" href="#summary-of-technique-solutions"><span class="secno">2.2 </span>Summary of Technique Solutions </a></li></ol></li><li class="tocline"><a class="tocxref" href="#roadmap-of-solutions-against-user-needs"><span class="secno">3. </span>Roadmap of Solutions Against User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#topic-1-authentication-and-safety"><span class="secno">3.1 </span>Topic 1: Authentication and Safety</a></li><li class="tocline"><a class="tocxref" href="#topic-2-context-and-distractions"><span class="secno">3.2 </span>Topic 2: Context and Distractions</a></li><li class="tocline"><a class="tocxref" href="#table-3-entering-data-error-prevention-recovery"><span class="secno">3.3 </span>Table 3: Entering Data, Error Prevention, &amp; Recovery </a></li><li class="tocline"><a class="tocxref" href="#table-4-help-and-support"><span class="secno">3.4 </span>Table 4: Help and support</a></li><li class="tocline"><a class="tocxref" href="#table-5-simple-and-clear-interface"><span class="secno">3.5 </span>Table 5: Simple and Clear Interface </a></li><li class="tocline"><a class="tocxref" href="#table-6-familiar-interface"><span class="secno">3.6 </span>Table 6: Familiar interface</a></li><li class="tocline"><a class="tocxref" href="#table-7-clear-and-understandable-content-and-text"><span class="secno">3.7 </span>Table 7: Clear and understandable content and text.</a></li><li class="tocline"><a class="tocxref" href="#table-8-navigating-the-system"><span class="secno">3.8 </span>Table 8: Navigating the system</a></li><li class="tocline"><a class="tocxref" href="#table-9-navigation-and-gps"><span class="secno">3.9 </span>Table 9: Navigation and GPS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personalization-semantics"><span class="secno">4. </span>Personalization Semantics</a></li><li class="tocline"><a class="tocxref" href="#appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities"><span class="secno">A. </span>Appendix: Making content usable for people with cognitive and learning disabilities</a></li><li class="tocline"><a class="tocxref" href="#appendix-summary-of-issue-papers"><span class="secno">B. </span>Appendix: Summary of Issue Papers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#flat-design"><span class="secno">B.1 </span>Flat Design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problem-with-flat-design"><span class="secno">B.1.1 </span>Problem with Flat Design</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-flat-design"><span class="secno">B.1.2 </span>Solutions for Flat Design</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-flat-design"><span class="secno">B.1.3 </span>Further Work for Flat Design</a></li></ol></li><li class="tocline"><a class="tocxref" href="#web-security-and-privacy-technologies"><span class="secno">B.2 </span>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-security-and-privacy"><span class="secno">B.2.1 </span>Problems with Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-security-and-privacy"><span class="secno">B.2.2 </span>Solutions for Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-security-and-privacy"><span class="secno">B.2.3 </span>Further Work for Security and Privacy</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-safety"><span class="secno">B.3 </span>User Safety</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-user-safety"><span class="secno">B.3.1 </span>Problems with User Safety</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-user-safety"><span class="secno">B.3.2 </span>Solutions for User Safety</a></li></ol></li><li class="tocline"><a class="tocxref" href="#math"><span class="secno">B.4 </span>Math</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-math"><span class="secno">B.4.1 </span>Problems with Math</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-math"><span class="secno">B.4.2 </span>Solutions for Math</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multi-modal-content-delivery"><span class="secno">B.5 </span>Multi-modal Content Delivery</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#solutions-for-multi-modal-content-delivery"><span class="secno">B.5.1 </span>Solutions for Multi-modal Content Delivery</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-multi-modal-content-delivery"><span class="secno">B.5.2 </span>Further Work for Multi-modal Content Delivery</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personalization-and-user-preferences"><span class="secno">B.6 </span>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-personalization"><span class="secno">B.6.1 </span>Problems with Personalization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#preferences-for-cognitive-disabilities"><span class="secno">B.6.1.1 </span>Preferences for Cognitive Disabilities</a></li><li class="tocline"><a class="tocxref" href="#setting-and-gathering-preferences"><span class="secno">B.6.1.2 </span>Setting and Gathering Preferences</a></li></ol></li><li class="tocline"><a class="tocxref" href="#solutions-for-personalization"><span class="secno">B.6.2 </span>Solutions for Personalization</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-personalization"><span class="secno">B.6.3 </span>Further Work for Personalization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#end-to-end-basic-solution"><span class="secno">B.6.3.1 </span>End to End Basic Solution</a></li><li class="tocline"><a class="tocxref" href="#special-case"><span class="secno">B.6.3.2 </span>Special Case</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#distractions"><span class="secno">B.7 </span>Distractions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-distractions"><span class="secno">B.7.1 </span>Problems with Distractions</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-distractions"><span class="secno">B.7.2 </span>Solutions for Distractions</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-distractions"><span class="secno">B.7.3 </span>Further Work for Distractions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voice-menu-systems"><span class="secno">B.8 </span>Voice Menu Systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problem-with-voice-menu-systems"><span class="secno">B.8.1 </span>Problem with Voice Menu Systems</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-voice-menu-systems"><span class="secno">B.8.2 </span>Solutions for Voice Menu Systems</a></li></ol></li><li class="tocline"><a class="tocxref" href="#online-payments"><span class="secno">B.9 </span>Online Payments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-online-payments"><span class="secno">B.9.1 </span>Problems with Online Payments</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-online-payments"><span class="secno">B.9.2 </span>Solutions for Online Payments</a></li></ol></li><li class="tocline"><a class="tocxref" href="#symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">B.10 </span>Symbol Users with Speech, Language, and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">B.10.1 </span>Problems with Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">B.10.2 </span>Solutions for Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-symbol-users-with-speech-language-and-literacy-difficulties"><span class="secno">B.10.3 </span>Further Work for Symbol Users with Speech, Language, and Literacy Difficulties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#task-completion-and-emotional-disabilities"><span class="secno">B.11 </span>Task Completion and Emotional Disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-task-completion-and-emotional-disabilities"><span class="secno">B.11.1 </span>Problems with Task Completion and Emotional Disabilities</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-task-completion-and-emotional-disabilities"><span class="secno">B.11.2 </span>Solutions for Task Completion and Emotional Disabilities</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-task-completion-and-emotional-disabilities"><span class="secno">B.11.3 </span>Further Work for Task Completion and Emotional Disabilities</a></li></ol></li><li class="tocline"><a class="tocxref" href="#graded-help"><span class="secno">B.12 </span>Graded Help</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-graded-help"><span class="secno">B.12.1 </span>Problems with Graded Help</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-graded-help"><span class="secno">B.12.2 </span>Solutions for Graded Help</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-graded-help"><span class="secno">B.12.3 </span>Further Work for Graded Help</a></li></ol></li><li class="tocline"><a class="tocxref" href="#way-finding"><span class="secno">B.13 </span>Way Finding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-way-finding"><span class="secno">B.13.1 </span>Problems with Way Finding</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-way-finding"><span class="secno">B.13.2 </span>Solutions for Way Finding</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-way-finding"><span class="secno">B.13.3 </span>Further Work for Way Finding</a></li></ol></li><li class="tocline"><a class="tocxref" href="#web-of-things-wot"><span class="secno">B.14 </span>Web of Things (WoT)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-web-of-things-wot"><span class="secno">B.14.1 </span>Problems with Web of Things (WoT)</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-web-of-things-wot"><span class="secno">B.14.2 </span>Solutions for Web of Things (WoT)</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-web-of-things-wot"><span class="secno">B.14.3 </span>Further Work for Web of Things (WoT)</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><span class="secno">C. </span>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#significant-editorial-changes-since-the-first-public-working-draft"><span class="secno">C.1 </span>Significant editorial changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">D. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">D.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><span class="secno">D.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">D.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">E. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">E.1 </span>Normative references</a></li><li class="tocline"><a class="tocxref" href="#informative-references"><span class="secno">E.2 </span>Informative references</a></li></ol></li></ol></nav>
 <section class="informative" id="introduction">
 			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
 			<p>The Cognitive and Learning Disabilities Accessibility Task Force's aim is to improve web accessibility for people with cognitive and learning disabilities. </p>
@@ -2373,7 +2354,7 @@ th > p:first-child, td > p:first-child {
 There is a Summary of Issue Papers that addresses some of the issues that people with learning and cognitive disabilities face, such as problems with logging on, safety, voice menu systems, and many other topics. This may be useful for anyone trying to gain more understanding of the topic. 
 </li><li>There is a section with Tables of User Needs that identify the  different needs of the community and proposes suggestions on how standards and technologies could be developed to meet these needs. This may be useful for standards’ groups and policy makers.
 </li><li>There is also an  appendix on how to make content usable for people with learning and cognitive disabilities. This section contains  a section with practical advice and content developers may prefer to start here. We hope it will also meet the needs of web developers, content creators and policy makers. 
-</li></ul>					<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span><span style="text-transform: none">: This section will added</span></div><p class="">
+</li></ul>					<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span><span style="text-transform: none">: This section will added</span></div><p class="">
 			We are aware that it is difficult to find your way around this document. We intend to add this section to help. Suggestions for other ways to improve it are welcome.
 			</p></div>
 	</section>
@@ -2484,7 +2465,7 @@ It identifies user needs that are not currently fully addressed by accessibility
   <li><a id="operating"></a>The last column describes operating system support or other support that may be required to meet user needs.</li>
 </ul>
 <p>Users needs are also represented by a few related user stories in the form of "As a <em>&lt;role&gt;,</em> I want <em>&lt;goal/desire&gt;</em> so that <em>&lt;benefit&gt;</em>".</p>
-	<div class="ednote" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span></div><div class=""><p>The task force intend to update this section with: </p>
+	<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span></div><div class=""><p>The task force intend to update this section with: </p>
 		<ul>
 			<li>Updates due to changes in the personalization specification and the web accessibility guidelines, </li>
 			<li>updates from new research, </li>
@@ -2529,12 +2510,12 @@ It identifies user needs that are not currently fully addressed by accessibility
       <td><p><strong>Accessible authentication </strong>        </p>
         <p>Level A</p>
         <p>--------</p>
-        <div class="ednote" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="4"><span>Editor's note</span></div><p class=""> does this support symbol users?</p></div>
+        <div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="4"><span>Editor's note</span></div><p class=""> does this support symbol users?</p></div>
         </td>
       <td><p><a href="https://w3c.github.io/coga/techniques/index.html#Minimizethecognitiveskills"> Minimize the cognitive skills required to use the content</a> - the examples in security.</p>
         <p>Techniques should include how to have security that uses passwords or transcribing, such as biometrics and tokens.</p></td>
       
-      <td>Hardware and operating systems could provide authentication to websites and applications. <div class="ednote" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="4"><span>Editor's note</span></div><p class=""> needs further investigation and risk analysis.</p></div>
+      <td>Hardware and operating systems could provide authentication to websites and applications. <div class="note" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="4"><span>Editor's note</span></div><p class=""> needs further investigation and risk analysis.</p></div>
         
         <p>Encourage a standardized third party sign in, which is exclusively for authentication, and helps users login anywhere.&nbsp;</p></td>
       </tr>
@@ -2553,7 +2534,7 @@ It identifies user needs that are not currently fully addressed by accessibility
       </td>
         <td><p><a href="https://w3c.github.io/coga/techniques/index.html#keep-the-user-safe"> Keep users safe</a>.</p>
         
-        <div class="ednote" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="4"><span>Editor's note</span></div><p class=""> Add: notify users when they are leaving a website if leaving it may cause them harm.</p></div>
+        <div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="4"><span>Editor's note</span></div><p class=""> Add: notify users when they are leaving a website if leaving it may cause them harm.</p></div>
         <p>Give positive and negative examples.</p></td>
       
       <td>Tools for users to warn them when a post or an activity may expose them, or is considered inappropriate.</td>
@@ -2576,7 +2557,7 @@ It identifies user needs that are not currently fully addressed by accessibility
       <p>(Assume I have cognitive and memory impairments.)&nbsp;</p>
       <p><a href="#Discussion1">more</a>&nbsp;</p></th>
       <td>None</td>
-      <td><div class="ednote" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="4"><span>Editor's note</span></div><p class=""> we need to capture types of security these users can employ and, maybe, if they require the use of an API such as password storage.</p></div></td>
+      <td><div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="4"><span>Editor's note</span></div><p class=""> we need to capture types of security these users can employ and, maybe, if they require the use of an API such as password storage.</p></div></td>
 	</tr>
 	<tr>
 		<th scope="row">&nbsp;
@@ -2601,7 +2582,7 @@ It identifies user needs that are not currently fully addressed by accessibility
   <h3 id="table2"><span class="secno">3.2 </span>Topic 2: Context and Distractions<a class="self-link" aria-label="§" href="#topic-2-context-and-distractions"></a></h3>
 				<p><strong>About users:</strong> distractions can cause users with cognitive disabilities to lose focus on the current action being performed; or draw attention away from primary content; and can be difficult for some users to know how to understand, avoid, and/or stop them.</p>
 				<p>Once users become distracted, it can be difficult for them to remember what they were doing. This is especially problematic for users with both low attention and impaired memory, such as users with dementia.</p>
-				<p>This leads to the following user stories.</p><div class="ednote" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><p class=""> The task force intends to add user stories.</p></div>
+				<p>This leads to the following user stories.</p><div class="note" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><p class=""> The task force intends to add user stories.</p></div>
 				<p><strong>User needs</strong></p>
 				<table border="1">
 				  <tbody>
@@ -2622,7 +2603,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				        
 				        <p>Level A</p>
 				        <p>--------</p>
-				        <div class="ednote" id="issue-container-generatedID-6"><div role="heading" class="ednote-title marker" id="h-ednote-6" aria-level="4"><span>Editor's note</span></div><p class=""> this was accepted into WCAG 2.1 at level AAA.</p></div>
+				        <div class="note" id="issue-container-generatedID-6"><div role="heading" class="ednote-title marker" id="h-ednote-6" aria-level="4"><span>Editor's note</span></div><p class=""> this was accepted into WCAG 2.1 at level AAA.</p></div>
 			          </td>
 				      <td><p><a href="https://w3c.github.io/coga/techniques/index.html#attention-and-focus">Attention and Focus</a></p>
 			          </td>
@@ -2732,7 +2713,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				        <p><strong>Proposed attribute: </strong><a href="https://w3c.github.io/personalization-semantics/tools/index.html#use_case_reminder">aui-reminder</a></p>
 				        <p>Enable users to turn off less-helpful reminders.</p>
 				      </td>
-				      <td><div class="ednote" id="issue-container-generatedID-7"><div role="heading" class="ednote-title marker" id="h-ednote-7" aria-level="4"><span>Editor's note</span></div><p class=""> we need the formal user setting to enable  different responses to semantics.</p></div></td>
+				      <td><div class="note" id="issue-container-generatedID-7"><div role="heading" class="ednote-title marker" id="h-ednote-7" aria-level="4"><span>Editor's note</span></div><p class=""> we need the formal user setting to enable  different responses to semantics.</p></div></td>
 			  		</tr>
 			  		<tr>
 			  			<th scope="row"><p>I need to know the context, where I am, and what I just did, or what just happened to me.</p>
@@ -2854,12 +2835,12 @@ It identifies user needs that are not currently fully addressed by accessibility
 				      <th scope="row"><p>I need help avoiding mistakes and minimizing the mistakes I might make. </p>
 			          <p>&nbsp;<a href="#Discussion3">more</a>&nbsp;</p></th>
 				      <td><p>3.3.3<strong> Minimize user errors&nbsp;</strong></p>
-					       <div class="ednote" id="issue-container-generatedID-8"><div role="heading" class="ednote-title marker" id="h-ednote-8" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be adressed in WCAG 2.1 at level AA by 1.3.4 on autofill.</p></div>
-				        <div class="ednote" id="issue-container-generatedID-9"><div role="heading" class="ednote-title marker" id="h-ednote-9" aria-level="4"><span>Editor's note</span></div><p class=""> change&nbsp;to 3.3.2 Labels or Instructions.</p></div>
-				        <div class="ednote" id="issue-container-generatedID-10"><div role="heading" class="ednote-title marker" id="h-ednote-10" aria-level="4"><span>Editor's note</span></div><p class=""> add and identify changes.</p></div>
+					       <div class="note" id="issue-container-generatedID-8"><div role="heading" class="ednote-title marker" id="h-ednote-8" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be adressed in WCAG 2.1 at level AA by 1.3.4 on autofill.</p></div>
+				        <div class="note" id="issue-container-generatedID-9"><div role="heading" class="ednote-title marker" id="h-ednote-9" aria-level="4"><span>Editor's note</span></div><p class=""> change&nbsp;to 3.3.2 Labels or Instructions.</p></div>
+				        <div class="note" id="issue-container-generatedID-10"><div role="heading" class="ednote-title marker" id="h-ednote-10" aria-level="4"><span>Editor's note</span></div><p class=""> add and identify changes.</p></div>
 				        
 				        <p><strong>Undo</strong></p>
-				        <div class="ednote" id="issue-container-generatedID-11"><div role="heading" class="ednote-title marker" id="h-ednote-11" aria-level="4"><span>Editor's note</span></div><p class=""> change to 3.3.4 Error Prevention.</p></div>
+				        <div class="note" id="issue-container-generatedID-11"><div role="heading" class="ednote-title marker" id="h-ednote-11" aria-level="4"><span>Editor's note</span></div><p class=""> change to 3.3.4 Error Prevention.</p></div>
                         <p><strong>Safe</strong></p>
                         <p>and</p>
                         <p><strong>3.3.5 Help: (AA)</strong></p>
@@ -2897,16 +2878,16 @@ It identifies user needs that are not currently fully addressed by accessibility
 			          <p><strong><a href="https://w3c.github.io/coga/extension/index.html#support">Undo</a></strong></p>
 			          <p>A simple mechanism is provided to enable users to undo mistakes. Users can repair information via clearly-labeled actions. Users can get back to   the place they were at in one clearly-labeled action with unwanted loss   of data. </p>
 			          <p></p>
-			          <div class="ednote" id="issue-container-generatedID-12"><div role="heading" class="ednote-title marker" id="h-ednote-12" aria-level="4"><span>Editor's note</span></div><p class=""> also covered in WCAG in 3.3.1.</p></div>
-			          <div class="ednote" id="issue-container-generatedID-13"><div role="heading" class="ednote-title marker" id="h-ednote-13" aria-level="4"><span>Editor's note</span></div><p class=""> making error-message text understandable is covered in WCAG in
+			          <div class="note" id="issue-container-generatedID-12"><div role="heading" class="ednote-title marker" id="h-ednote-12" aria-level="4"><span>Editor's note</span></div><p class=""> also covered in WCAG in 3.3.1.</p></div>
+			          <div class="note" id="issue-container-generatedID-13"><div role="heading" class="ednote-title marker" id="h-ednote-13" aria-level="4"><span>Editor's note</span></div><p class=""> making error-message text understandable is covered in WCAG in
                       <strong>Understandable language</strong>.</p></div>
                       <p><span><em><a href="https://w3c.github.io/coga/extension/index.html#instructions">Instructions, labels, navigation ..</a></em></span>
                       </p>
                       <p></p>
-			          <div class="ednote" id="issue-container-generatedID-14"><div role="heading" class="ednote-title marker" id="h-ednote-14" aria-level="4"><span>Editor's note</span></div><p class=""> also see WCAG 3.3.4 Error Prevention (Legal, Financial, Data) (financial legal and user data) and 3.3.6 (All).</p></div>
-			          <div class="ednote" id="issue-container-generatedID-15"><div role="heading" class="ednote-title marker" id="h-ednote-15" aria-level="4"><span>Editor's note</span></div><p class=""> change to 3.3.4 Error Prevention.</p></div>
-			          <div class="ednote" id="issue-container-generatedID-16"><div role="heading" class="ednote-title marker" id="h-ednote-16" aria-level="4"><span>Editor's note</span></div><p class=""> WCAG 3.3.4 to include important information (such as health).</p></div>
-			          <div class="ednote" id="issue-container-generatedID-17"><div role="heading" class="ednote-title marker" id="h-ednote-17" aria-level="4"><span>Editor's note</span></div><p class=""> add/check?</p></div>
+			          <div class="note" id="issue-container-generatedID-14"><div role="heading" class="ednote-title marker" id="h-ednote-14" aria-level="4"><span>Editor's note</span></div><p class=""> also see WCAG 3.3.4 Error Prevention (Legal, Financial, Data) (financial legal and user data) and 3.3.6 (All).</p></div>
+			          <div class="note" id="issue-container-generatedID-15"><div role="heading" class="ednote-title marker" id="h-ednote-15" aria-level="4"><span>Editor's note</span></div><p class=""> change to 3.3.4 Error Prevention.</p></div>
+			          <div class="note" id="issue-container-generatedID-16"><div role="heading" class="ednote-title marker" id="h-ednote-16" aria-level="4"><span>Editor's note</span></div><p class=""> WCAG 3.3.4 to include important information (such as health).</p></div>
+			          <div class="note" id="issue-container-generatedID-17"><div role="heading" class="ednote-title marker" id="h-ednote-17" aria-level="4"><span>Editor's note</span></div><p class=""> add/check?</p></div>
 			          <p>Error messaging should be clear, concise, and reassuring. </p>
 			          
 			          
@@ -2928,7 +2909,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p resource="#avoid-loss-of-data"></p>
                       </td>
 				      
-				      <td><div class="ednote" id="issue-container-generatedID-18"><div role="heading" class="ednote-title marker" id="h-ednote-18" aria-level="4"><span>Editor's note</span></div><p class=""> issue paper may be needed to explore how to enable automatic acceptance of cookies, and stored data, to avoid data loss  for certified or safe sites; and for limited usage or time.</p></div></td>
+				      <td><div class="note" id="issue-container-generatedID-18"><div role="heading" class="ednote-title marker" id="h-ednote-18" aria-level="4"><span>Editor's note</span></div><p class=""> issue paper may be needed to explore how to enable automatic acceptance of cookies, and stored data, to avoid data loss  for certified or safe sites; and for limited usage or time.</p></div></td>
 			        </tr>
 				    <tr>
 				      <th scope="row"><p>I want to use applications or APIs that help me, such as remembering my information so I do not need to enter it again, and to help me (such as spelling).</p></th>
@@ -2960,7 +2941,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			        </tr>
 				    <tr>
 				      <th scope="row">I want to be able to check my work and go back without losing the work I have just done. </th>
-				      <td><div class="ednote" id="issue-container-generatedID-19"><div role="heading" class="ednote-title marker" id="h-ednote-19" aria-level="4"><span>Editor's note</span></div><p class=""> change to 3.3.4 Error Prevention (Legal, Financial, Data)</p></div>
+				      <td><div class="note" id="issue-container-generatedID-19"><div role="heading" class="ednote-title marker" id="h-ednote-19" aria-level="4"><span>Editor's note</span></div><p class=""> change to 3.3.4 Error Prevention (Legal, Financial, Data)</p></div>
 				        <p><strong>Undo</strong></p>
 				        
 			          <p>See also: </p>
@@ -3062,7 +3043,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			<td><a href="https://w3c.github.io/personalization-semantics/help/index.html#explain-explanation">Explain</a> and <a href="https://w3c.github.io/personalization-semantics/help/index.html#feedback-explanation">Feedback</a>
                         <p></p>
                         
-                        <div class="ednote" id="issue-container-generatedID-20"><div role="heading" class="ednote-title marker" id="h-ednote-20" aria-level="4"><span>Editor's note</span></div><p class=""> change feedback to a role.</p></div>
+                        <div class="note" id="issue-container-generatedID-20"><div role="heading" class="ednote-title marker" id="h-ednote-20" aria-level="4"><span>Editor's note</span></div><p class=""> change feedback to a role.</p></div>
                         
                         <p><strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#moreinfo-explanation">aui-moreinfo</a></strong></p>
                         <p>This supports a URI where more help is provided (often with an aui-extrahelp support).</p>
@@ -3074,7 +3055,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                         <p>The attribute defines which type of help it is:  tooltips / human help / more help.</p>
                         <p>/glossary / dictionary / thesaurus</p>
                         
-                        <div class="ednote" id="issue-container-generatedID-21"><div role="heading" class="ednote-title marker" id="h-ednote-21" aria-level="4"><span>Editor's note</span></div><p class=""> add the use case of an error message with aui-moreinfo, and aui-extrahelp to the semantics document.</p></div>
+                        <div class="note" id="issue-container-generatedID-21"><div role="heading" class="ednote-title marker" id="h-ednote-21" aria-level="4"><span>Editor's note</span></div><p class=""> add the use case of an error message with aui-moreinfo, and aui-extrahelp to the semantics document.</p></div>
                                               </td>
 				      <td><p>See <em>Settings for how Explain and feedback</em> above.</p>
 			          
@@ -3119,7 +3100,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 		<tr>
 			<th scope="row">I want to know where I am in a process, including what I have done and what my next step is.</th>
 			<td><p>LOG</p>
-			          <div class="ednote" id="issue-container-generatedID-22"><div role="heading" class="ednote-title marker" id="h-ednote-22" aria-level="4"><span>Editor's note</span></div><p class=""> add how to identify steps in a process, and current position, so users can have breadcrumbs or other mechanisms of their choice.</p></div>
+			          <div class="note" id="issue-container-generatedID-22"><div role="heading" class="ednote-title marker" id="h-ednote-22" aria-level="4"><span>Editor's note</span></div><p class=""> add how to identify steps in a process, and current position, so users can have breadcrumbs or other mechanisms of their choice.</p></div>
 			          
 			          <p>There should not be more than one login per page.</p></td>
 				      <td><p>Enable users to specify the mechanism that they understand.</p>
@@ -3144,7 +3125,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			          </td>
 				      <td><p>Enable users to identify orientation tools they prefer for the presentation of steps in a process, such as breadcrumbs. For example, identity an adaptable widget to interpret the breadcrumbs.</p>
 			          
-			          <div class="ednote" id="issue-container-generatedID-23"><div role="heading" class="ednote-title marker" id="h-ednote-23" aria-level="4"><span>Editor's note</span></div><p class=""> add at phase 2?</p></div>
+			          <div class="note" id="issue-container-generatedID-23"><div role="heading" class="ednote-title marker" id="h-ednote-23" aria-level="4"><span>Editor's note</span></div><p class=""> add at phase 2?</p></div>
 					  <p>People with bipolar illness and others can be supported for easy retracting of orders within a set timeframe; and </p>
 			          <p>metadata to support the site identifying which timeframe transactions can be undone;</p>
 			          <p>metadata to support site identification of context, or support transactions, such as groceries and travel;</p>
@@ -3171,7 +3152,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 </section>
 			<section id="table-4-help-and-support">
 			  <h3 id="table4"><span class="secno">3.4 </span>Table 4: Help and support<a class="self-link" aria-label="§" href="#table-4-help-and-support"></a></h3>
-				<p>About Users </p><div class="ednote" id="issue-container-generatedID-24"><div role="heading" class="ednote-title marker" id="h-ednote-24" aria-level="4"><span>Editor's note</span></div><p class=""> To be completed.</p></div>
+				<p>About Users </p><div class="note" id="issue-container-generatedID-24"><div role="heading" class="ednote-title marker" id="h-ednote-24" aria-level="4"><span>Editor's note</span></div><p class=""> To be completed.</p></div>
 				<p>This leads to the following user stories. </p>
 				
 			  <ul>
@@ -3234,7 +3215,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p resource="#prevent-errors">..</p>
                       <p resource="#prevent-errors">Adding context (that adds help)</p>
                       <p resource="#prevent-errors">..</p>
-                      <p resource="#prevent-errors"></p><div class="ednote" id="issue-container-generatedID-25"><div role="heading" class="ednote-title marker" id="h-ednote-25" aria-level="4"><span>Editor's note</span></div><p class=""> check that the way  sufficient techniques are done really meet the use cases.</p></div></td>
+                      <p resource="#prevent-errors"></p><div class="note" id="issue-container-generatedID-25"><div role="heading" class="ednote-title marker" id="h-ednote-25" aria-level="4"><span>Editor's note</span></div><p class=""> check that the way  sufficient techniques are done really meet the use cases.</p></div></td>
 				      
 				      <td></td>
 			        </tr>
@@ -3242,7 +3223,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				      <th scope="row"><p>I know how to get more information.</p>
 			          <p>&nbsp;<a href="#Discussion7">more</a>&nbsp;</p></th>
 				      <td><p><strong><a href="https://w3c.github.io/coga/extension/index.html#semantics">Support Personalization</a>.</strong></p>
-					     <div class="ednote" id="issue-container-generatedID-26"><div role="heading" class="ednote-title marker" id="h-ednote-26" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be adressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
+					     <div class="note" id="issue-container-generatedID-26"><div role="heading" class="ednote-title marker" id="h-ednote-26" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be adressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
 				        
                         <p></p>
                         <h5 id="semantics3">..<a class="self-link" aria-label="§" href="#table-4-help-and-support"></a></h5>
@@ -3262,7 +3243,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				        <p>a familiar interface to identify help and contact us;</p>
 						<p>search and critical information have a familiar  interface.</p>
 				        <p>---</p>
-				        <div class="ednote" id="issue-container-generatedID-27"><div role="heading" class="ednote-title marker" id="h-ednote-27" aria-level="4"><span>Editor's note</span></div><p class=""> add at AAA. Provide links to more information.</p></div></td>
+				        <div class="note" id="issue-container-generatedID-27"><div role="heading" class="ednote-title marker" id="h-ednote-27" aria-level="4"><span>Editor's note</span></div><p class=""> add at AAA. Provide links to more information.</p></div></td>
 				      <td><p resource="#prevent-errors">..</p></td>
 				      
 				      <td></td>
@@ -3290,7 +3271,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				        <p resource="#h-use-symbols-and-images-to-show-meaning"></p>
 				        
 				        
-				        <div class="ednote" id="issue-container-generatedID-28"><div role="heading" class="ednote-title marker" id="h-ednote-28" aria-level="4"><span>Editor's note</span></div><p class=""> add technique to enable interoperable symbol mapping for products for nonverbal users. Part of this could be adressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
+				        <div class="note" id="issue-container-generatedID-28"><div role="heading" class="ednote-title marker" id="h-ednote-28" aria-level="4"><span>Editor's note</span></div><p class=""> add technique to enable interoperable symbol mapping for products for nonverbal users. Part of this could be adressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
 				        <p>In the Web Content: Syntax: ARIA-concept = "URI". Example (Pseudo-code): &lt;img ARIA-concept=http://wordnet.org/somepage#girlnode" scr="girlwithbow.gif" /&gt;</p>			            <ul>
 				        <li>Add technique at a user-agent symbol file end:
 				          <p>&lt;mysymbol scr="girlwithskirt.gif" ARIA-concept="http://wordnet.or g/somepage#girlnode" lang="en" /&gt; Note that this is not about standardizing symbols, but is instead a way of mapping them.</p>
@@ -3308,7 +3289,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                         <p>(See COGA Techniques 2.7.) </p>
                         <p>For icons and jargon:</p>
                         <ul>
-                          <li> All icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> have a short explanation available. Where a standard mechanism exists   for a platform or technologies, it should be used. (COGA Techniques 2.7.) <div class="ednote" id="issue-container-generatedID-29"><div role="heading" class="ednote-title marker" id="h-ednote-29" aria-level="4"><span>Editor's note</span></div><p class="">removed to technique: Short tooltips on all icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon,</a> which clarify the meaning, are provided.</p></div></li>
+                          <li> All icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> have a short explanation available. Where a standard mechanism exists   for a platform or technologies, it should be used. (COGA Techniques 2.7.) <div class="note" id="issue-container-generatedID-29"><div role="heading" class="ednote-title marker" id="h-ednote-29" aria-level="4"><span>Editor's note</span></div><p class="">removed to technique: Short tooltips on all icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon,</a> which clarify the meaning, are provided.</p></div></li>
                         </ul>
                         <p>For content relating to numbers and complex information:</p>
                         <ul>
@@ -3353,7 +3334,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				    <tr>
 				      <th scope="row"><p>I need more space between letters, words, sentences, and/or lines of text.</p>
 			          <p>I need even word spacing or x justification.</p></th>
-				      <td><div class="ednote" id="issue-container-generatedID-30"><div role="heading" class="ednote-title marker" id="h-ednote-30" aria-level="4"><span>Editor's note</span></div><p class=""> check if we have justified text. Has justification been included?</p></div></td>
+				      <td><div class="note" id="issue-container-generatedID-30"><div role="heading" class="ednote-title marker" id="h-ednote-30" aria-level="4"><span>Editor's note</span></div><p class=""> check if we have justified text. Has justification been included?</p></div></td>
 				      <td></td>
 				      
 				      <td></td>
@@ -3375,7 +3356,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			        </tr>
 				    <tr>
 				      <th scope="row">I want to be confident that I can manage my tasks. </th>
-				      <td><div class="ednote" id="issue-container-generatedID-31"><div role="heading" class="ednote-title marker" id="h-ednote-31" aria-level="4"><span>Editor's note</span></div><p class=""> add and look at as issue.</p></div></td>
+				      <td><div class="note" id="issue-container-generatedID-31"><div role="heading" class="ednote-title marker" id="h-ednote-31" aria-level="4"><span>Editor's note</span></div><p class=""> add and look at as issue.</p></div></td>
 				      <td></td>
 				      <td></td>
 			        </tr>
@@ -3470,9 +3451,9 @@ It identifies user needs that are not currently fully addressed by accessibility
 				</tr>
 				<tr>
 					<th scope="row">I need speech support, with synchronized highlighting, so I can follow as I go. </th>
-					<td><div class="ednote" id="issue-container-generatedID-32"><div role="heading" class="ednote-title marker" id="h-ednote-32" aria-level="4"><span>Editor's note</span></div><p class=""> do we need semantics that identify phrases?</p></div>
+					<td><div class="note" id="issue-container-generatedID-32"><div role="heading" class="ednote-title marker" id="h-ednote-32" aria-level="4"><span>Editor's note</span></div><p class=""> do we need semantics that identify phrases?</p></div>
 						        
-					          <p>Use ARIA described to correlate pictures and focus rings (sections of pictures); and sections of math with text; or</p> <div class="ednote" id="issue-container-generatedID-33"><div role="heading" class="ednote-title marker" id="h-ednote-33" aria-level="4"><span>Editor's note</span></div><p class=""> do we need a new semantic?</p></div></td>
+					          <p>Use ARIA described to correlate pictures and focus rings (sections of pictures); and sections of math with text; or</p> <div class="note" id="issue-container-generatedID-33"><div role="heading" class="ednote-title marker" id="h-ednote-33" aria-level="4"><span>Editor's note</span></div><p class=""> do we need a new semantic?</p></div></td>
 					<td><p>Automatic speech setting for:</p>
 					          <ul>
 					            <li>all text;</li>
@@ -3544,7 +3525,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				<p><strong>About users:</strong> many users cannot easily learn new design metaphors, or remember things they learned, such as users with mild cognitive impairment or dementia. Without these skills, it can be much harder or impossible to locate desired items to interact with, and to know what interactions may do.</p>
 			  <p>Many users can be overwhelmed by too many options, or too much information. If reading is slow, then too much information mixed together will make it difficult or impossible to find the information needed.</p>
 				<p>This leads to the following user stories. </p>
-				<div class="ednote" id="issue-container-generatedID-34"><div role="heading" class="ednote-title marker" id="h-ednote-34" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
+				<div class="note" id="issue-container-generatedID-34"><div role="heading" class="ednote-title marker" id="h-ednote-34" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
 				<table border="1">
 				  <tbody>
 				    <tr>
@@ -3562,7 +3543,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 <p></p>
 				        <p>Level A</p>
 				        <p>--------</p>
-				        <div class="ednote" id="issue-container-generatedID-35"><div role="heading" class="ednote-title marker" id="h-ednote-35" aria-level="4"><span>Editor's note</span></div><p class=""> to add</p></div>
+				        <div class="note" id="issue-container-generatedID-35"><div role="heading" class="ednote-title marker" id="h-ednote-35" aria-level="4"><span>Editor's note</span></div><p class=""> to add</p></div>
 			          </td>
 				      <td><a href="https://w3c.github.io/coga/techniques/index.html#use-clear-visual-affordances.x">Use clear visual affordances</a>.
 			          <p></p></td>
@@ -3615,7 +3596,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			            
 		                <p id="critical4"><strong>Critical features and important information</strong></p>
 	                  				        <h4 resource="#h-provide-a-clear-structure-that-includes" id="h-provide-a-clear-structure-that-includes">..<a class="self-link" aria-label="§" href="#table-5-simple-and-clear-interface"></a></h4></td>
-				      <td><div class="ednote" id="issue-container-generatedID-36"><div role="heading" class="ednote-title marker" id="h-ednote-36" aria-level="4"><span>Editor's note</span></div><p class=""> add a technique on how to mark up a site map so it is adaptable.</p></div></td>
+				      <td><div class="note" id="issue-container-generatedID-36"><div role="heading" class="ednote-title marker" id="h-ednote-36" aria-level="4"><span>Editor's note</span></div><p class=""> add a technique on how to mark up a site map so it is adaptable.</p></div></td>
 				      
 				      <td></td>
 			        </tr>
@@ -3637,7 +3618,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 <strong><em>Critical features </em></strong>
 <h4 resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x" id="h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x2">3.3.5 Help: (AA)<a class="self-link" aria-label="§" href="#table-5-simple-and-clear-interface"></a></h4>
                         <p resource="#h-provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost.x">Sufficient techniques for long documents include keywords.</p>
-                      <div class="ednote" id="issue-container-generatedID-37"><div role="heading" class="ednote-title marker" id="h-ednote-37" aria-level="4"><span>Editor's note</span></div><p class=""> change to &nbsp;2.4.10 &nbsp;to AA, with the addition that headings are  available, and a technique that headings are shown via personalization.</p></div></td>
+                      <div class="note" id="issue-container-generatedID-37"><div role="heading" class="ednote-title marker" id="h-ednote-37" aria-level="4"><span>Editor's note</span></div><p class=""> change to &nbsp;2.4.10 &nbsp;to AA, with the addition that headings are  available, and a technique that headings are shown via personalization.</p></div></td>
 				      <td><p>use of headings </p>
 			          </td>
 				      
@@ -3650,7 +3631,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			          <p>Clear headings include multimedia.</p>
 			          
 			          </td>
-				      <td><div class="ednote" id="issue-container-generatedID-38"><div role="heading" class="ednote-title marker" id="h-ednote-38" aria-level="4"><span>Editor's note</span></div><p class=""> add TOC in the summary with a TOC tag.</p></div>
+				      <td><div class="note" id="issue-container-generatedID-38"><div role="heading" class="ednote-title marker" id="h-ednote-38" aria-level="4"><span>Editor's note</span></div><p class=""> add TOC in the summary with a TOC tag.</p></div>
 				        
 				        <p>Use of SMIL.</p>
 			          </td>
@@ -3668,10 +3649,10 @@ It identifies user needs that are not currently fully addressed by accessibility
 				        <p><strong>Consistent cues</strong> are provided that identify&nbsp;&nbsp;different content types; and   the&nbsp;status of elements and regions that help users understand their   roles or states.</p>
 				        
 			          <h4 resource="#h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes" id="h-support-is-provided-that-help-users-complete-and-check-their-task-that-includes">..<a class="self-link" aria-label="§" href="#table-5-simple-and-clear-interface"></a></h4></td>
-				      <td><div class="ednote" id="issue-container-generatedID-39"><div role="heading" class="ednote-title marker" id="h-ednote-39" aria-level="4"><span>Editor's note</span></div><p class=""> make technique for the following.</p></div>
+				      <td><div class="note" id="issue-container-generatedID-39"><div role="heading" class="ednote-title marker" id="h-ednote-39" aria-level="4"><span>Editor's note</span></div><p class=""> make technique for the following.</p></div>
                         <ol>
                           <li>Non-native content and sponsored content are clearly marked, and are visually differentiated by standardized techniques. </li>
-                          <li> Clearly differentiate between facts and less-substantiated opinions. <div class="ednote" id="issue-container-generatedID-40"><div role="heading" class="ednote-title marker" id="h-ednote-40" aria-level="4"><span>Editor's note</span></div><p class=""> was rewritten from "Clearly differentiate between opinions and facts. "</p></div></li>
+                          <li> Clearly differentiate between facts and less-substantiated opinions. <div class="note" id="issue-container-generatedID-40"><div role="heading" class="ednote-title marker" id="h-ednote-40" aria-level="4"><span>Editor's note</span></div><p class=""> was rewritten from "Clearly differentiate between opinions and facts. "</p></div></li>
                       </ol></td>
 				      
 				      <td></td>
@@ -3680,7 +3661,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				      <th scope="row">I know what an advertisement is, or one from a different website. </th>
 				      <td><strong>consistent cues</strong>
                         <p>sufficient technique for third party content</p>
-                      <p><strong><a href="https://w3c.github.io/coga/extension/index.html#semantics">support personalization</a></strong></p><div class="ednote" id="issue-container-generatedID-41"><div role="heading" class="ednote-title marker" id="h-ednote-41" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be adressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
+                      <p><strong><a href="https://w3c.github.io/coga/extension/index.html#semantics">support personalization</a></strong></p><div class="note" id="issue-container-generatedID-41"><div role="heading" class="ednote-title marker" id="h-ednote-41" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be adressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
 				        </td>
 				      <td>Non-native content and sponsored content are clearly marked, and are visually differentiated by standardized techniques. </td>
 				      
@@ -3693,8 +3674,8 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p>and </p>
                       
                       <p><strong>Changes to 3.2.2 - 3.2.4</strong></p></td>
-				      <td><div class="ednote" id="issue-container-generatedID-42"><div role="heading" class="ednote-title marker" id="h-ednote-42" aria-level="4"><span>Editor's note</span></div><p class=""> techniques to include - making common components and icons programmatically determinable enables their positions to be   standardized via <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-personalization">personalization</a>. </p></div>
-                        <div><div class="ednote" id="issue-container-generatedID-43"><div role="heading" class="ednote-title marker" id="h-ednote-43" aria-level="4"><span>Editor's note</span></div><p class=""> techniques to include: example of COGA-WCAG technique.</p></div> In 2015, in websites with English text, a standard layout includes:
+				      <td><div class="note" id="issue-container-generatedID-42"><div role="heading" class="ednote-title marker" id="h-ednote-42" aria-level="4"><span>Editor's note</span></div><p class=""> techniques to include - making common components and icons programmatically determinable enables their positions to be   standardized via <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-personalization">personalization</a>. </p></div>
+                        <div><div class="note" id="issue-container-generatedID-43"><div role="heading" class="ednote-title marker" id="h-ednote-43" aria-level="4"><span>Editor's note</span></div><p class=""> techniques to include: example of COGA-WCAG technique.</p></div> In 2015, in websites with English text, a standard layout includes:
                           <ul>
                             <li>a search box in the upper0right corner;</li>
                             <li>a link to the home page in the upper-left corner;</li>
@@ -3779,7 +3760,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 					<td><a title="expand" class="expand" aria-label="expand example" href="https://www.w3.org/TR/personalization-semantics-content-1.0/#use_case_adding_context">Adding Context</a>
                         
                       <p></p></td>
-				    <td><div class="ednote" id="issue-container-generatedID-44"><div role="heading" class="ednote-title marker" id="h-ednote-44" aria-level="4"><span>Editor's note</span></div><p class=""> add new text on known elements.</p></div>
+				    <td><div class="note" id="issue-container-generatedID-44"><div role="heading" class="ednote-title marker" id="h-ednote-44" aria-level="4"><span>Editor's note</span></div><p class=""> add new text on known elements.</p></div>
 			          <p>See table 6 row 1</p></td>
 				</tr>
 				<tr>
@@ -3795,7 +3776,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				<tr>
 					<th scope="row">I need a structure that is easy follow. </th>
 					<td><p>Log</p>
-			          <div class="ednote" id="issue-container-generatedID-45"><div role="heading" class="ednote-title marker" id="h-ednote-45" aria-level="4"><span>Editor's note</span></div><p class=""> add semantics for a sitemap page.</p></div>
+			          <div class="note" id="issue-container-generatedID-45"><div role="heading" class="ednote-title marker" id="h-ednote-45" aria-level="4"><span>Editor's note</span></div><p class=""> add semantics for a sitemap page.</p></div>
 			          <p>(heading structure)</p></td>
 				    <td><p>log customizable breadcrumbs</p>
 			          
@@ -3829,7 +3810,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                         
 			          </td>
 				      <td><p>Settings needed for headings should always be shown.</p>
-				        <div class="ednote" id="issue-container-generatedID-46"><div role="heading" class="ednote-title marker" id="h-ednote-46" aria-level="4"><span>Editor's note</span></div><p class=""> how should parts of a page, landmarks, ePub, and COGA roles be handled?</p></div>
+				        <div class="note" id="issue-container-generatedID-46"><div role="heading" class="ednote-title marker" id="h-ednote-46" aria-level="4"><span>Editor's note</span></div><p class=""> how should parts of a page, landmarks, ePub, and COGA roles be handled?</p></div>
 				        <p>options;</p>
 				        <p>call out box (CSS reference);</p>
 				        <p>symbol;</p>
@@ -3864,7 +3845,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                       
 
                       
-                      <div class="ednote" id="issue-container-generatedID-47"><div role="heading" class="ednote-title marker" id="h-ednote-47" aria-level="4"><span>Editor's note</span></div><p class=""> add opinion</p></div></td>
+                      <div class="note" id="issue-container-generatedID-47"><div role="heading" class="ednote-title marker" id="h-ednote-47" aria-level="4"><span>Editor's note</span></div><p class=""> add opinion</p></div></td>
 				    <td></td>
 				</tr>
 				<tr>
@@ -3946,7 +3927,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				  <li>Simple content with few options and consistent text . </li>
 				  <li>I find the content easy to understand. </li>
   </ul>
-				<div class="ednote" id="issue-container-generatedID-48"><div role="heading" class="ednote-title marker" id="h-ednote-48" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
+				<div class="note" id="issue-container-generatedID-48"><div role="heading" class="ednote-title marker" id="h-ednote-48" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
 				<table border="1">
 				  <tbody>
 				    <tr>
@@ -3962,7 +3943,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				        <p>&nbsp;<a href="#Discussion7">more</a>&nbsp;</p></th>
 				      <td><p><strong>Support personalization</strong>.</p>
 				        <p>Level A</p>
-					      <div class="ednote" id="issue-container-generatedID-49"><div role="heading" class="ednote-title marker" id="h-ednote-49" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be addressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
+					      <div class="note" id="issue-container-generatedID-49"><div role="heading" class="ednote-title marker" id="h-ednote-49" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be addressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
 				        
 				        <p>--------</p>
 				        <h4 id="familiar2">Familiar layout: <a class="self-link" aria-label="§" href="#table-6-familiar-interface"></a></h4>
@@ -4027,7 +4008,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                         <p>aui-destination="home"</p>
                         <p>and additional landmarks or regions, such as </p>
                       <p>role="warning"</p>
-					     <div class="ednote" id="issue-container-generatedID-50"><div role="heading" class="ednote-title marker" id="h-ednote-50" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be addressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
+					     <div class="note" id="issue-container-generatedID-50"><div role="heading" class="ednote-title marker" id="h-ednote-50" aria-level="4"><span>Editor's note</span></div><p class=""> part of this could be addressed in WCAG 2.1 at level AAA by 1.3.5.</p></div>
 				        
                       
                       <p></p></td>
@@ -4044,7 +4025,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p>(and any other attribute) </p>
                       <p>to add : location)</p>
                       
-                      <div class="ednote" id="issue-container-generatedID-51"><div role="heading" class="ednote-title marker" id="h-ednote-51" aria-level="4"><span>Editor's note</span></div><p class=""> also add for other COGA attributes.</p></div>
+                      <div class="note" id="issue-container-generatedID-51"><div role="heading" class="ednote-title marker" id="h-ednote-51" aria-level="4"><span>Editor's note</span></div><p class=""> also add for other COGA attributes.</p></div>
                       <p>"@aui-simplification": [{         "critical": {             "settings": [{                 "@ARIA-hidden": "false",                 "CSS": "visibility:visible;"             }]         }</p>
                       <p><strong>designs that are familiar</strong></p>
                       <p>A vocabulary of design elements, such as hamburger menus, pop-ups, help swipe right, setting swipe left, etc., is needed.</p>
@@ -4110,9 +4091,9 @@ It identifies user needs that are not currently fully addressed by accessibility
 					<li> Personalization <a rel="nofollow" href="https://w3c.github.io/coga/issue-papers/personalization.html">https://w3c.github.io/coga/issue-papers/personalization.html</a></li>
 					<li> Providing graded help <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Providing_graded_help">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Providing_graded_help</a></li>
 					<li> Interoperable preference <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Interoperable_preference">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Interoperable_preference</a></li>
-					<li> <div class="ednote" id="issue-container-generatedID-52"><div role="heading" class="ednote-title marker" id="h-ednote-52" aria-level="4"><span>Editor's note</span></div><p class=""> metadata support - to be added <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support</a></p></div> </li>
+					<li> <div class="note" id="issue-container-generatedID-52"><div role="heading" class="ednote-title marker" id="h-ednote-52" aria-level="4"><span>Editor's note</span></div><p class=""> metadata support - to be added <a rel="nofollow" href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support">https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Meta_data_support</a></p></div> </li>
 				</ul>
-				<div class="ednote" id="issue-container-generatedID-53"><div role="heading" class="ednote-title marker" id="h-ednote-53" aria-level="4"><span>Editor's note</span></div><p class=""> clarify the following user needs and add them to the above table.</p></div>
+				<div class="note" id="issue-container-generatedID-53"><div role="heading" class="ednote-title marker" id="h-ednote-53" aria-level="4"><span>Editor's note</span></div><p class=""> clarify the following user needs and add them to the above table.</p></div>
 				<ul>
 					<li>Content delivered in an easy-to-understand mode. </li>
 					<li>Simple content with few options and customizable text. </li>
@@ -4124,11 +4105,11 @@ It identifies user needs that are not currently fully addressed by accessibility
 					<li>Links and buttons that are context sensitive and localized. </li>
 					<li>Deployment of capability for familiar symbol sets to personalize websites (content, features, elements). </li>
 				</ul>
-				<div class="ednote" id="issue-container-generatedID-54"><div role="heading" class="ednote-title marker" id="h-ednote-54" aria-level="4"><span>Editor's note</span></div><p class=""> add the above user needs to the table, mapping user needs to solutions.</p></div>
+				<div class="note" id="issue-container-generatedID-54"><div role="heading" class="ednote-title marker" id="h-ednote-54" aria-level="4"><span>Editor's note</span></div><p class=""> add the above user needs to the table, mapping user needs to solutions.</p></div>
 </section>
 			<section id="table-7-clear-and-understandable-content-and-text">
 			  <h3 id="table7"><span class="secno">3.7 </span>Table 7: Clear and understandable content and text.<a class="self-link" aria-label="§" href="#table-7-clear-and-understandable-content-and-text"></a></h3>
-				<p>About Users </p><div class="ednote" id="issue-container-generatedID-55"><div role="heading" class="ednote-title marker" id="h-ednote-55" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
+				<p>About Users </p><div class="note" id="issue-container-generatedID-55"><div role="heading" class="ednote-title marker" id="h-ednote-55" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
 				<p>This leads to the following user stories. </p>
 				<p>User needs for understandable text:</p>
 				<ul>
@@ -4196,7 +4177,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p><strong><a href="https://w3c.github.io/coga/extension/index.html#semantics">Support personalization</a>.</strong></p>
                       <p></p>
                       
-                      <div class="ednote" id="issue-container-generatedID-56"><div role="heading" class="ednote-title marker" id="h-ednote-56" aria-level="4"><span>Editor's note</span></div><p class=""> add to AAA.</p></div>
+                      <div class="note" id="issue-container-generatedID-56"><div role="heading" class="ednote-title marker" id="h-ednote-56" aria-level="4"><span>Editor's note</span></div><p class=""> add to AAA.</p></div>
                       <p>Clarify implied information and clarify the emotional content. </p></td>
                     <td><p>Use a clear <a href="https://w3c.github.io/coga/techniques/index.html#writing-style">Writing style</a>.</p>
                       <p></p>
@@ -4223,7 +4204,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p>Where an understanding of math is not a primary requirement for using content, &nbsp;reinforce numbers with non-numerical values.&nbsp;</p>
                       <p>Simple search forms are excluded.</p>
                       
-                      <div class="ednote" id="issue-container-generatedID-57"><div role="heading" class="ednote-title marker" id="h-ednote-57" aria-level="4"><span>Editor's note</span></div><p class=""> make sure there are sufficient techniques for <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-complex-information">complex information</a> and numbers.</p></div>
+                      <div class="note" id="issue-container-generatedID-57"><div role="heading" class="ednote-title marker" id="h-ednote-57" aria-level="4"><span>Editor's note</span></div><p class=""> make sure there are sufficient techniques for <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-complex-information">complex information</a> and numbers.</p></div>
                       
                       <ul>
                         <li> Charts or graphics are provided to aid comprehension of <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-complex-information">complex information</a> (COGA Techniques 2.7.3 ) </li>
@@ -4241,7 +4222,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p>Use of synchronized highlighting of complex graphics and formula with speech. </p>
                       <p>Associate maths, sections of math, and sections of complex items, with explanations.</p>
                       <h5 resource="#h-relative-values" id="h-relative-values2"><a href="https://w3c.github.io/coga/techniques/index.html#relative-values">2.6.3.5 Relative values</a><a class="self-link" aria-label="§" href="#table-7-clear-and-understandable-content-and-text"></a></h5>
-                      <div class="ednote" id="issue-container-generatedID-58"><div role="heading" class="ednote-title marker" id="h-ednote-58" aria-level="4"><span>Editor's note</span></div><p class=""> this is not clear.</p></div>
+                      <div class="note" id="issue-container-generatedID-58"><div role="heading" class="ednote-title marker" id="h-ednote-58" aria-level="4"><span>Editor's note</span></div><p class=""> this is not clear.</p></div>
                       <p></p>
                       <p><a href="https://w3c.github.io/coga/techniques/index.html#relative-values">Use semantics to provide extra help</a>.</p>
                       <p></p>
@@ -4267,16 +4248,16 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p><strong>Help: (AA)</strong></p>
                       <p>Provide content and information that help users understand&nbsp;<a href="https://w3c.github.io/coga/extension/index.html#dfn-complex-information">complex information</a>, long documents,&nbsp;numerical information,&nbsp;forms, and nonstandard controls.&nbsp;</p>
                       <p>Where an understanding of math is not a primary requirement for using content, reinforce numbers with non-numerical values.&nbsp;</p>
-                      <div class="ednote" id="issue-container-generatedID-59"><div role="heading" class="ednote-title marker" id="h-ednote-59" aria-level="4"><span>Editor's note</span></div><p class=""> ensure sufficient techniques, as in the next volume.</p></div></td>
+                      <div class="note" id="issue-container-generatedID-59"><div role="heading" class="ednote-title marker" id="h-ednote-59" aria-level="4"><span>Editor's note</span></div><p class=""> ensure sufficient techniques, as in the next volume.</p></div></td>
                     <td><p>Use a clear <a href="https://w3c.github.io/coga/techniques/index.html#writing-style">writing style</a>.</p>
                       <p>Use a<strong><a href="https://w3c.github.io/coga/extension/index.html#Providea%20clearstructureandlayout"> clear structure</a></strong>.</p>
                       <p></p>
                       <p><a href="https://w3c.github.io/coga/techniques/index.html#help-meaning">2.5 Help meaning</a></p>
                       <p></p>
-                      <div class="ednote" id="issue-container-generatedID-60"><div role="heading" class="ednote-title marker" id="h-ednote-60" aria-level="4"><span>Editor's note</span></div><p class=""> ensure sufficient techniques.</p></div>
+                      <div class="note" id="issue-container-generatedID-60"><div role="heading" class="ednote-title marker" id="h-ednote-60" aria-level="4"><span>Editor's note</span></div><p class=""> ensure sufficient techniques.</p></div>
                       <p>For icons and jargon:</p>
                       <ul>
-                        <li>All icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> have short explanations available. Where a standard mechanism exists for the platform or technologies, it should be used (COGA Techniques 2.7.) <div class="ednote" id="issue-container-generatedID-61"><div role="heading" class="ednote-title marker" id="h-ednote-61" aria-level="4"><span>Editor's note</span></div><p class="">removed to technique: Short tooltips on all icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> that clarify the meaning are provided.</p></div></li>
+                        <li>All icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> have short explanations available. Where a standard mechanism exists for the platform or technologies, it should be used (COGA Techniques 2.7.) <div class="note" id="issue-container-generatedID-61"><div role="heading" class="ednote-title marker" id="h-ednote-61" aria-level="4"><span>Editor's note</span></div><p class="">removed to technique: Short tooltips on all icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> that clarify the meaning are provided.</p></div></li>
                       </ul>
                       <p>For content with more than 200 words, provide a summary. </p>
                       <ol>
@@ -4307,9 +4288,9 @@ It identifies user needs that are not currently fully addressed by accessibility
                   <tr>
                     <th scope="row">I need to understand (familiar) symbols.</th>
                     <td><p><strong>New technique for 1.3.1</strong></p>
-                      <div class="ednote" id="issue-container-generatedID-62"><div role="heading" class="ednote-title marker" id="h-ednote-62" aria-level="4"><span>Editor's note</span></div><p class=""> under 1.3.1, add technique to enable interoperable symbol mapping for products for nonverbal users. </p></div>
+                      <div class="note" id="issue-container-generatedID-62"><div role="heading" class="ednote-title marker" id="h-ednote-62" aria-level="4"><span>Editor's note</span></div><p class=""> under 1.3.1, add technique to enable interoperable symbol mapping for products for nonverbal users. </p></div>
                       <p>In the Web Content: Syntax: ARIA-concept = "URI". Example (Pseudo-code): &lt;img ARIA-concept=http://wordnet.org/somepage#girlnode" scr="girlwithbow.gif" /&gt;</p>
-                      <div class="ednote" id="issue-container-generatedID-63"><div role="heading" class="ednote-title marker" id="h-ednote-63" aria-level="4"><span>Editor's note</span></div><p class=""> make sure this is proposed.</p></div>
+                      <div class="note" id="issue-container-generatedID-63"><div role="heading" class="ednote-title marker" id="h-ednote-63" aria-level="4"><span>Editor's note</span></div><p class=""> make sure this is proposed.</p></div>
                       <p>-----------</p>
                     <p><strong>Support    personalization.</strong></p>
                     
@@ -4330,12 +4311,12 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p>with sufficient techniques </p>
                       <p>For icons and jargon:</p>
                       <ul>
-                        <li>All icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> have short explanations available. Where a standard mechanism exists for the platform or technologies, it should be used. (COGA Techniques 2.7.)  <div class="ednote" id="issue-container-generatedID-64"><div role="heading" class="ednote-title marker" id="h-ednote-64" aria-level="4"><span>Editor's note</span></div><p class="">removed to technique: Short tooltips on all icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> that clarify the meaning are provided..  </p></div></li>
+                        <li>All icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> have short explanations available. Where a standard mechanism exists for the platform or technologies, it should be used. (COGA Techniques 2.7.)  <div class="note" id="issue-container-generatedID-64"><div role="heading" class="ednote-title marker" id="h-ednote-64" aria-level="4"><span>Editor's note</span></div><p class="">removed to technique: Short tooltips on all icons and <a data-link-type="dfn" href="https://w3c.github.io/coga/extension/index.html#dfn-jargon">jargon</a> that clarify the meaning are provided..  </p></div></li>
                       </ul>
                     <p>multimedia - See table 2 and 5 above. </p>
-                    <div class="ednote" id="issue-container-generatedID-65"><div role="heading" class="ednote-title marker" id="h-ednote-65" aria-level="4"><span>Editor's note</span></div><p class="">To do: ensure multimedia headings have sufficient techniques.</p></div>
+                    <div class="note" id="issue-container-generatedID-65"><div role="heading" class="ednote-title marker" id="h-ednote-65" aria-level="4"><span>Editor's note</span></div><p class="">To do: ensure multimedia headings have sufficient techniques.</p></div>
                     
-                    <div class="ednote" id="issue-container-generatedID-66"><div role="heading" class="ednote-title marker" id="h-ednote-66" aria-level="4"><span>Editor's note</span></div><p class=""> add emotional clarity. Clarify implicit information in  pictures and multimedia, such as sarcasm and mood - AAA.</p></div>
+                    <div class="note" id="issue-container-generatedID-66"><div role="heading" class="ednote-title marker" id="h-ednote-66" aria-level="4"><span>Editor's note</span></div><p class=""> add emotional clarity. Clarify implicit information in  pictures and multimedia, such as sarcasm and mood - AAA.</p></div>
                     </td>
                     <td></td>
                     
@@ -4365,12 +4346,12 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p></p>
                       <p><strong><a href="">Alternative is to use of EMMA</a></strong></p>
                       <p></p>
-                      <div class="ednote" id="issue-container-generatedID-67"><div role="heading" class="ednote-title marker" id="h-ednote-67" aria-level="4"><span>Editor's note</span></div><p class=""> we still need to standardize the terms, such as for complexity.</p></div>
+                      <div class="note" id="issue-container-generatedID-67"><div role="heading" class="ednote-title marker" id="h-ednote-67" aria-level="4"><span>Editor's note</span></div><p class=""> we still need to standardize the terms, such as for complexity.</p></div>
                       <p><strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#literal-explanation">aui-literal</a></strong></p>
                       <p></p>
                       <p><strong><a href="">Emotional ML</a></strong> can also be used to identify emotions in content (also for multimedia).</p>
                       <p></p>
-                      	<div class="ednote" id="issue-container-generatedID-68"><div role="heading" class="ednote-title marker" id="h-ednote-68" aria-level="4"><span>Editor's note</span></div><p class=""> do we need another way of adding emotions or sarcasm into content?</p></div></td>
+                      	<div class="note" id="issue-container-generatedID-68"><div role="heading" class="ednote-title marker" id="h-ednote-68" aria-level="4"><span>Editor's note</span></div><p class=""> do we need another way of adding emotions or sarcasm into content?</p></div></td>
                     <td><p>We need  user settings for:</p>
                       <p> 1. What type of COGA alternative text, e.g., <em>easylang numberfree vocab1000</em>.</p>
                       <p>2. Type of COGA alternative non-text.</p>
@@ -4394,7 +4375,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 					</th><td><p><strong><a href="https://w3c.github.io/personalization-semantics/help/index.html#literal-explanation">aui-literal</a></strong></p>
                       <p></p>
                       <p><strong>Emotional ML</strong> can also be used to identify emotions in content (also for multimedia).</p>
-                      <div class="ednote" id="issue-container-generatedID-69"><div role="heading" class="ednote-title marker" id="h-ednote-69" aria-level="4"><span>Editor's note</span></div><p class=""> do we need another way of adding the emotions or sarcasm into content?</p></div>
+                      <div class="note" id="issue-container-generatedID-69"><div role="heading" class="ednote-title marker" id="h-ednote-69" aria-level="4"><span>Editor's note</span></div><p class=""> do we need another way of adding the emotions or sarcasm into content?</p></div>
                       <p>[<cite><a class="bibref" href="#bib-emma">EMMA</a></cite>] can also be used in content.</p></td>
                     <td>User settings must be available to identify when a user prefers literal content without implicit content.</td>
 				</tr>
@@ -4452,10 +4433,10 @@ It identifies user needs that are not currently fully addressed by accessibility
 					<th scope="row">I need to understand images and multi-media.</th>
 					<td><p>as above</p>
                     
-                    <div class="ednote" id="issue-container-generatedID-70"><div role="heading" class="ednote-title marker" id="h-ednote-70" aria-level="4"><span>Editor's note</span></div><p class=""> how to clarify information (mood and literal) in media?</p></div></td>
+                    <div class="note" id="issue-container-generatedID-70"><div role="heading" class="ednote-title marker" id="h-ednote-70" aria-level="4"><span>Editor's note</span></div><p class=""> how to clarify information (mood and literal) in media?</p></div></td>
                     <td><p>as above </p>
                     
-                    <div class="ednote" id="issue-container-generatedID-71"><div role="heading" class="ednote-title marker" id="h-ednote-71" aria-level="4"><span>Editor's note</span></div><p class="">To do: add user settings to clarify information (mood and literal) in media.</p></div></td>
+                    <div class="note" id="issue-container-generatedID-71"><div role="heading" class="ednote-title marker" id="h-ednote-71" aria-level="4"><span>Editor's note</span></div><p class="">To do: add user settings to clarify information (mood and literal) in media.</p></div></td>
 				</tr>
 			</tbody>
 		</table>
@@ -4493,7 +4474,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                 <li>As a user who has weak executive       function, I need a process to get help       to be simple, and not multi-step, so I can use it.</li>
                 <li>Users can have trouble identifying the right words to say in a voice menu.</li>
               </ol>
-              <div class="ednote" id="issue-container-generatedID-72"><div role="heading" class="ednote-title marker" id="h-ednote-72" aria-level="4"><span>Editor's note</span></div><p class="">To do: integrate the  issue paper on Voice ML.</p></div>
+              <div class="note" id="issue-container-generatedID-72"><div role="heading" class="ednote-title marker" id="h-ednote-72" aria-level="4"><span>Editor's note</span></div><p class="">To do: integrate the  issue paper on Voice ML.</p></div>
               <table border="1">
                 <tbody>
                   <tr>
@@ -4512,7 +4493,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                     </th>
                     <td><p><strong><a href="https://w3c.github.io/coga/extension/index.html#barrier">Accessible authentication</a></strong></p>
                     <p></p>
-                    <p>and voice over IP criteria on barriers </p><div class="ednote" id="issue-container-generatedID-73"><div role="heading" class="ednote-title marker" id="h-ednote-73" aria-level="4"><span>Editor's note</span></div><p class=""> to be added</p></div>
+                    <p>and voice over IP criteria on barriers </p><div class="note" id="issue-container-generatedID-73"><div role="heading" class="ednote-title marker" id="h-ednote-73" aria-level="4"><span>Editor's note</span></div><p class=""> to be added</p></div>
                     
                     <p>----------------------------</p>
                     <p>See also</p>
@@ -4540,9 +4521,9 @@ It identifies user needs that are not currently fully addressed by accessibility
                     <p><strong>Help</strong></p>
                     <p><strong><a href="https://w3c.github.io/coga/extension/index.html#semantics">Support personalization</a>:&nbsp; </strong></p>
                     <p>Where the number of steps in a process can be reduced, users can control the tradeoff between function and simplification.</p></td>
-                    <td><div class="ednote" id="issue-container-generatedID-74"><div role="heading" class="ednote-title marker" id="h-ednote-74" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
+                    <td><div class="note" id="issue-container-generatedID-74"><div role="heading" class="ednote-title marker" id="h-ednote-74" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
                     
-                    <td><div class="ednote" id="issue-container-generatedID-75"><div role="heading" class="ednote-title marker" id="h-ednote-75" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
+                    <td><div class="note" id="issue-container-generatedID-75"><div role="heading" class="ednote-title marker" id="h-ednote-75" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
                   </tr>
                   <tr>
                     <th scope="row"><p>I need simple-to-navigate menu systems. </p>
@@ -4562,8 +4543,8 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p> </p>
                       <h4 resource="#h-support-is-provided-that-help-users-understand-the-content-that-includes" id="h-support-is-provided-that-help-users-understand-the-content-that-includes4">..<a class="self-link" aria-label="§" href="#table-8-navigating-the-system"></a></h4>
                       
-                    <div class="ednote" id="issue-container-generatedID-76"><div role="heading" class="ednote-title marker" id="h-ednote-76" aria-level="4"><span>Editor's note</span></div><p class=""> further work?</p></div></td>
-                    <td><div class="ednote" id="issue-container-generatedID-77"><div role="heading" class="ednote-title marker" id="h-ednote-77" aria-level="4"><span>Editor's note</span></div><p class=""> needs further investigation.</p></div></td>
+                    <div class="note" id="issue-container-generatedID-76"><div role="heading" class="ednote-title marker" id="h-ednote-76" aria-level="4"><span>Editor's note</span></div><p class=""> further work?</p></div></td>
+                    <td><div class="note" id="issue-container-generatedID-77"><div role="heading" class="ednote-title marker" id="h-ednote-77" aria-level="4"><span>Editor's note</span></div><p class=""> needs further investigation.</p></div></td>
                     
                     <td></td>
                   </tr>
@@ -4572,11 +4553,11 @@ It identifies user needs that are not currently fully addressed by accessibility
                       <p><a href="#Discussion8">more</a></p></th>
                     <td><p><a href="https://w3c.github.io/coga/extension/index.html#barrier">1.4.4 When there is a barrier between content and users, which requires additional abilities, an alternative is provided that does not require additional abilities</a>.</p>
                       <p></p>
-                    <div class="ednote" id="issue-container-generatedID-78"><div role="heading" class="ednote-title marker" id="h-ednote-78" aria-level="4"><span>Editor's note</span></div><p class=""> add best practices?</p></div>
+                    <div class="note" id="issue-container-generatedID-78"><div role="heading" class="ednote-title marker" id="h-ednote-78" aria-level="4"><span>Editor's note</span></div><p class=""> add best practices?</p></div>
                     </td>
                     <td><p><a href="https://w3c.github.io/coga/techniques/index.html#Providehumanhelp">Human help</a></p>
                       <p></p>
-                      <div class="ednote" id="issue-container-generatedID-79"><div role="heading" class="ednote-title marker" id="h-ednote-79" aria-level="4"><span>Editor's note</span></div><p class=""> can we add a method to repeat a last option?</p></div>
+                      <div class="note" id="issue-container-generatedID-79"><div role="heading" class="ednote-title marker" id="h-ednote-79" aria-level="4"><span>Editor's note</span></div><p class=""> can we add a method to repeat a last option?</p></div>
                       
                       <p><a href="https://w3c.github.io/coga/techniques/index.html#Minimizethecognitiveskills">Minimize the cognitive skills required to use content when there is a known alternative</a>.</p>
                       <p></p>
@@ -4585,7 +4566,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                     
                     <td><p>Integration with standards. (Which are relevant?)</p>
                       <p>Best practices in Voice ML need to consider cognitive disabilities.</p>
-                    <div class="ednote" id="issue-container-generatedID-80"><div role="heading" class="ednote-title marker" id="h-ednote-80" aria-level="4"><span>Editor's note</span></div><p class=""> also added to open issues: how difficulty with speech could affect voice systems.</p></div>
+                    <div class="note" id="issue-container-generatedID-80"><div role="heading" class="ednote-title marker" id="h-ednote-80" aria-level="4"><span>Editor's note</span></div><p class=""> also added to open issues: how difficulty with speech could affect voice systems.</p></div>
                     </td>
                   </tr>
                   <tr>
@@ -4628,7 +4609,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 						<td><a href="https://www.w3.org/TR/personalization-semantics-content-1.0/#simplification-explanation">Simplification</a>
                     <p></p></td>
                     <td>&nbsp;Support for simplification as above, 
-                                        <div class="ednote" id="issue-container-generatedID-81"><div role="heading" class="ednote-title marker" id="h-ednote-81" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
+                                        <div class="note" id="issue-container-generatedID-81"><div role="heading" class="ednote-title marker" id="h-ednote-81" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
 					</tr>
 					<tr>
 						<th scope="row"><p>I need simple-to-navigate menu systems. </p>
@@ -4660,7 +4641,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 </section>
 <section id="table-9-navigation-and-gps">
 <h3 id="table9"><span class="secno">3.9 </span>Table 9: Navigation and GPS<a class="self-link" aria-label="§" href="#table-9-navigation-and-gps"></a></h3>
-<p>About Users </p><div class="ednote" id="issue-container-generatedID-82"><div role="heading" class="ednote-title marker" id="h-ednote-82" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
+<p>About Users </p><div class="note" id="issue-container-generatedID-82"><div role="heading" class="ednote-title marker" id="h-ednote-82" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
 <p>This leads to the following user stories. </p>
 <p>User needs for understandable navigation:</p>
 <ul>
@@ -4670,7 +4651,7 @@ It identifies user needs that are not currently fully addressed by accessibility
   <li>understandable symbols;</li>
   <li>no change of context;</li>
 </ul>
-<div class="ednote" id="issue-container-generatedID-83"><div role="heading" class="ednote-title marker" id="h-ednote-83" aria-level="4"><span>Editor's note</span></div><p class="">The task force intends to add more user needs.</p></div>
+<div class="note" id="issue-container-generatedID-83"><div role="heading" class="ednote-title marker" id="h-ednote-83" aria-level="4"><span>Editor's note</span></div><p class="">The task force intends to add more user needs.</p></div>
 
 <table border="1">
   <tbody>
@@ -4689,7 +4670,7 @@ It identifies user needs that are not currently fully addressed by accessibility
         <p>&nbsp;</p>
         <p>Where the number of steps in a process can be reduced, enable users to control the trade off between function and simplification.</p>
         <p></p></td>
-      <td><div class="ednote" id="issue-container-generatedID-84"><div role="heading" class="ednote-title marker" id="h-ednote-84" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
+      <td><div class="note" id="issue-container-generatedID-84"><div role="heading" class="ednote-title marker" id="h-ednote-84" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
       
       <td></td>
     </tr>
@@ -4725,7 +4706,7 @@ It identifies user needs that are not currently fully addressed by accessibility
     </tr>
     <tr>
       <th scope="row">No change to orientation. </th>
-      <td><div class="ednote" id="issue-container-generatedID-85"><div role="heading" class="ednote-title marker" id="h-ednote-85" aria-level="4"><span>Editor's note</span></div><p class=""> add to 
+      <td><div class="note" id="issue-container-generatedID-85"><div role="heading" class="ednote-title marker" id="h-ednote-85" aria-level="4"><span>Editor's note</span></div><p class=""> add to 
       3.2.5 Change on Request</p></div></td>
       <td></td>
       
@@ -4748,14 +4729,14 @@ It identifies user needs that are not currently fully addressed by accessibility
 				<tr>
 					<th scope="row"><p>root option for simplicity - let me balance complexity and speed.</p>
       				<p>&nbsp;<a href="#Discussion7">more</a>&nbsp;</p></th>
-      				<td><div class="ednote" id="issue-container-generatedID-86"><div role="heading" class="ednote-title marker" id="h-ednote-86" aria-level="4"><span>Editor's note</span></div><p class=""> add for GPS.</p></div></td>
+      				<td><div class="note" id="issue-container-generatedID-86"><div role="heading" class="ednote-title marker" id="h-ednote-86" aria-level="4"><span>Editor's note</span></div><p class=""> add for GPS.</p></div></td>
       				<td><p>User settings must be available to identify preferences.</p>
-      				<div class="ednote" id="issue-container-generatedID-87"><div role="heading" class="ednote-title marker" id="h-ednote-87" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
+      				<div class="note" id="issue-container-generatedID-87"><div role="heading" class="ednote-title marker" id="h-ednote-87" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div></td>
 				</tr>
 				<tr>
 					<th scope="row">Understandable terms, which make sense to users, and do not depend on knowing left and right, or on number dependence.&nbsp;</th>
-					<td><div class="ednote" id="issue-container-generatedID-88"><div role="heading" class="ednote-title marker" id="h-ednote-88" aria-level="4"><span>Editor's note</span></div><p class=""> add for GPS.</p></div></td>
-      				<td><div class="ednote" id="issue-container-generatedID-89"><div role="heading" class="ednote-title marker" id="h-ednote-89" aria-level="4"><span>Editor's note</span></div><p class=""> add for GPS.</p></div></td>
+					<td><div class="note" id="issue-container-generatedID-88"><div role="heading" class="ednote-title marker" id="h-ednote-88" aria-level="4"><span>Editor's note</span></div><p class=""> add for GPS.</p></div></td>
+      				<td><div class="note" id="issue-container-generatedID-89"><div role="heading" class="ednote-title marker" id="h-ednote-89" aria-level="4"><span>Editor's note</span></div><p class=""> add for GPS.</p></div></td>
 				</tr>
 				<tr>
 					<th scope="row"> No automatic rerouting without user consent. </th>
@@ -4765,7 +4746,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				<tr>
 					<th scope="row">understandable symbols</th>
 					<td><p>Adding context</p>
-      				<div class="ednote" id="issue-container-generatedID-90"><div role="heading" class="ednote-title marker" id="h-ednote-90" aria-level="4"><span>Editor's note</span></div><p class=""> add terms for GPS.</p></div></td>
+      				<div class="note" id="issue-container-generatedID-90"><div role="heading" class="ednote-title marker" id="h-ednote-90" aria-level="4"><span>Editor's note</span></div><p class=""> add terms for GPS.</p></div></td>
       				<td></td>
 				</tr>
 				<tr>

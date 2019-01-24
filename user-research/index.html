@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -14,8 +14,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -26,7 +26,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -34,11 +34,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -2154,16 +2149,16 @@ h6>a.self-link::before {
       "id": "wockl-1"
     }
   },
-  "publishDate": "2019-01-14",
-  "publishISODate": "2019-01-14T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 14 January 2019"
+  "publishDate": "2019-01-24",
+  "publishISODate": "2019-01-24T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 24 January 2019"
 }</script><meta name="description" content="Cognitive Accessibility User Research describes the challenges of using web technologies for people with learning disabilities or cognitive disabilities. The research describes challenges in the areas of attention, executive function, knowledge, language, literacy, memory, perception, and reasoning. It is organized by user groups of the following disabilities: Aging-Related Cognitive Decline, Aphasia, Attention Deficit Hyperactivity Disorder, Autism, Intellectual Disability, Dyscalculia, Dyslexia, and Non-Verbal. Additional user groups may be added to future versions. This document provides a basis for subsequent work to identify gaps in current technologies, suggest strategies to improve accessibility for these user groups, and develop guidance and techniques for web authors."></head>
 	<body class="h-entry toc-inline"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Cognitive Accessibility User Research</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-14">14 January 2019</time>
+        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -2190,21 +2185,17 @@ h6>a.self-link::before {
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2014-2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2014-2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
@@ -2212,57 +2203,47 @@ h6>a.self-link::before {
 			<!-- Todo: the commented out items above need to be messaged in a different way, they are not comprehensively covered even though listed -->
 		</section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p><p>
-                                              This document was published by
-                                              the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a>, and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as an
-                                              Editor's Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as an
-                                              Editor's Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              groups
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains
-                                                      a <a href="" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="http://www.w3.org/2004/01/pp-impl/35422/status" rel="disclosure">public list of any patent disclosures  (Protocols and Formats Working Group)</a>, and a <a href="http://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Web Content Accessibility Guidelines Working Group)</a>
-                                              made in connection with the
-                                              deliverables of
-                                              each group; these pages also include
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#importance-of-this-document"><span class="secno">1.1 </span>Importance of This Document</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><span class="secno">1.2 </span>Assumptions</a></li><li class="tocline"><a class="tocxref" href="#comments"><span class="secno">1.3 </span>Comments</a></li></ol></li><li class="tocline"><a class="tocxref" href="#summary-of-user-groups-and-cognitive-function"><span class="secno">2. </span>Summary of User Groups and Cognitive Function</a></li><li class="tocline"><a class="tocxref" href="#research-on-user-groups"><span class="secno">3. </span>Research on User Groups</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dyslexia"><span class="secno">3.1 </span>Dyslexia</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#aphasia"><span class="secno">3.2 </span>Aphasia</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#non-verbal-severe-speech-and-language-impairments"><span class="secno">3.3 </span>Non-verbal - Severe Speech and Language impairments</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#mild-cognitive-impairment-mci-and-dementia"><span class="secno">3.4 </span><strong>Mild Cognitive Impairment (MCI) and Dementia</strong></a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#intellectual-disability"><span class="secno">3.5 </span>Intellectual Disability</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#attention-deficit-hyperactivity-disorder-adhd"><span class="secno">3.6 </span>Attention deficit hyperactivity disorder (ADHD)</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#autism"><span class="secno">3.7 </span>Autism</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#dyscalculia"><span class="secno">3.8 </span>Dyscalculia</a><ol class="toc"></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#research-on-cognitive-function"><span class="secno">4. </span>Research on Cognitive Function</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#reasoning-and-executive-functions"><span class="secno">4.1 </span>Reasoning and Executive Functions</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#memory-1"><span class="secno">4.2 </span>Memory</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#language"><span class="secno">4.3 </span>Language</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#perception"><span class="secno">4.4 </span>Perception</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#speed"><span class="secno">4.5 </span>Speed</a></li><li class="tocline"><a class="tocxref" href="#knowledge"><span class="secno">4.6 </span>Knowledge</a></li><li class="tocline"><a class="tocxref" href="#not-yet-fully-addressed"><span class="secno">4.7 </span>Not (Yet) Fully Addressed:</a></li><li class="tocline"><a class="tocxref" href="#areas-of-the-brain"><span class="secno">4.8 </span>Areas of the Brain</a></li><li class="tocline"><a class="tocxref" href="#sources-on-cognitive-functions"><span class="secno">4.9 </span>Sources on Cognitive Functions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#methodology-in-user-research"><span class="secno">5. </span>Methodology in User Research</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#asking-users"><span class="secno">5.1 </span>Asking Users</a></li><li class="tocline"><a class="tocxref" href="#addressing-specific-topics"><span class="secno">5.2 </span>Addressing Specific Topics</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#cross-cutting-concerns"><span class="secno">5.3 </span>Cross-Cutting Concerns</a></li></ol></li><li class="tocline"><a class="tocxref" href="#potential-for-inclusion"><span class="secno">6. </span>Potential for Inclusion</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proposed-directions"><span class="secno">6.1 </span>Proposed Directions</a><ol class="toc"></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><span class="secno">A.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">A.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">B. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">B.1 </span>Normative references</a></li></ol></li></ol></nav>
+                              This document was published by the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a>, and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as
+                              an Editor's Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+            
+    </p><p>
+                              Publication as an Editor's Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              groups
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="http://www.w3.org/2004/01/pp-impl/35422/status" rel="disclosure">public list of any patent disclosures  (Protocols and Formats Working Group)</a>, and a <a href="http://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Web Content Accessibility Guidelines Working Group)</a>
+                              made in connection with the deliverables of
+                              each group; these pages also include
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#importance-of-this-document"><span class="secno">1.1 </span>Importance of This Document</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><span class="secno">1.2 </span>Assumptions</a></li><li class="tocline"><a class="tocxref" href="#comments"><span class="secno">1.3 </span>Comments</a></li></ol></li><li class="tocline"><a class="tocxref" href="#summary-of-user-groups-and-cognitive-function"><span class="secno">2. </span>Summary of User Groups and Cognitive Function</a></li><li class="tocline"><a class="tocxref" href="#research-on-user-groups"><span class="secno">3. </span>Research on User Groups</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dyslexia"><span class="secno">3.1 </span>Dyslexia</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#aphasia"><span class="secno">3.2 </span>Aphasia</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#non-verbal-severe-speech-and-language-impairments"><span class="secno">3.3 </span>Non-verbal - Severe Speech and Language impairments</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#mild-cognitive-impairment-mci-and-dementia"><span class="secno">3.4 </span><strong>Mild Cognitive Impairment (MCI) and Dementia</strong></a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#intellectual-disability"><span class="secno">3.5 </span>Intellectual Disability</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#attention-deficit-hyperactivity-disorder-adhd"><span class="secno">3.6 </span>Attention deficit hyperactivity disorder (ADHD)</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#autism"><span class="secno">3.7 </span>Autism</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#dyscalculia"><span class="secno">3.8 </span>Dyscalculia</a><ol class="toc"></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#research-on-cognitive-function"><span class="secno">4. </span>Research on Cognitive Function</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#reasoning-and-executive-functions"><span class="secno">4.1 </span>Reasoning and Executive Functions</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#memory-1"><span class="secno">4.2 </span>Memory</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#language"><span class="secno">4.3 </span>Language</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#perception"><span class="secno">4.4 </span>Perception</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#speed"><span class="secno">4.5 </span>Speed</a></li><li class="tocline"><a class="tocxref" href="#knowledge"><span class="secno">4.6 </span>Knowledge</a></li><li class="tocline"><a class="tocxref" href="#not-yet-fully-addressed"><span class="secno">4.7 </span>Not (Yet) Fully Addressed:</a></li><li class="tocline"><a class="tocxref" href="#areas-of-the-brain"><span class="secno">4.8 </span>Areas of the Brain</a></li><li class="tocline"><a class="tocxref" href="#sources-on-cognitive-functions"><span class="secno">4.9 </span>Sources on Cognitive Functions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#methodology-in-user-research"><span class="secno">5. </span>Methodology in User Research</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#asking-users"><span class="secno">5.1 </span>Asking Users</a></li><li class="tocline"><a class="tocxref" href="#addressing-specific-topics"><span class="secno">5.2 </span>Addressing Specific Topics</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#cross-cutting-concerns"><span class="secno">5.3 </span>Cross-Cutting Concerns</a></li></ol></li><li class="tocline"><a class="tocxref" href="#potential-for-inclusion"><span class="secno">6. </span>Potential for Inclusion</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proposed-directions"><span class="secno">6.1 </span>Proposed Directions</a><ol class="toc"></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><span class="secno">A.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">A.3 </span>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">B. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">B.1 </span>Normative references</a></li></ol></li></ol></nav>
 		<section class="informative" id="introduction">
 			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
 			<p>This document provides background research on user groups with learning disabilities and cognitive disabilities; and  challenges they face when using Web technologies. We aim to identify and describe the current situation so  subsequent publications can contrast it to what we want to happen.</p>

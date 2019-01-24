@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -14,8 +14,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -26,7 +26,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -34,11 +34,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -2030,16 +2025,16 @@ h6>a.self-link::before {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2019-01-14",
-  "publishISODate": "2019-01-14T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 14 January 2019"
+  "publishDate": "2019-01-24",
+  "publishISODate": "2019-01-24T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 24 January 2019"
 }</script><meta name="description" content="This is a draft of additions for WCAG 2.0 to address the needs of users with cognitive and learning disabilities."></head>
 	<body class="h-entry"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Cognitive and Learning Disabilities and WCAG</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-14">14 January 2019</time>
+        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -2066,78 +2061,64 @@ h6>a.self-link::before {
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2016-2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2016-2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
 			<p>This is a draft of additions for WCAG 2.0 to address the needs of users with cognitive and learning disabilities.</p>
 		</section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p><p>
-                                              This document was published by
-                                              the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>, and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as an
-                                              Editor's Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as an
-                                              Editor's Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              groups
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains
-                                                      a <a href="" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="http://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a>, and a <a href="http://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Web Content Accessibility Guidelines Working Group)</a>
-                                              made in connection with the
-                                              deliverables of
-                                              each group; these pages also include
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#terms"><span class="secno">2. </span>Terms</a></li><li class="tocline"><a class="tocxref" href="#new-success-criteria"><span class="secno">3. </span>New success criteria</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#under-wcag-2-2-provide-users-enough-time-to-read-and-use-content"><span class="secno">3.1 </span>Under WCAG 2.2 Provide users enough time to read and use content.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#timed-event-are-not-used-except-for-the-situations-listed-below"><span class="secno">3.1.1 </span>Timed event are not used except for the situations listed below.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-2-3"><span class="secno">3.2 </span>Under WCAG 2.3</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent"><span class="secno">3.2.1 </span>Do not expose user information in a way that can be exploited without informed consent</a></li><li class="tocline"><a class="tocxref" href="#do-not-add-mechanisms-that-are-likely-to-confuse-the-user-in-a-way-that-may-do-them-harm-and-use-known-techniques-to-keep-the-user-safe"><span class="secno">3.2.2 </span>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-3-1"><span class="secno">3.3 </span>Under WCAG 3.1</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes"><span class="secno">3.3.1 </span>Instructions, labels, navigation and <span class="formerLink" data-link-type="dfn">important information</span> are provided with a clear writing style that includes:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#provide-a-clear-structure-and-layout-new-guidline"><span class="secno">3.4 </span><strong>Provide a clear structure and layout</strong> (new guidline)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#information-is-provided-in-manageable-chunks-that-include"><span class="secno">3.4.1 </span>Information is provided in manageable chunks,  that include: <p></p>
+                              This document was published by the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a>, and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as
+                              an Editor's Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+            
+    </p><p>
+                              Publication as an Editor's Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              groups
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="http://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a>, and a <a href="http://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Web Content Accessibility Guidelines Working Group)</a>
+                              made in connection with the deliverables of
+                              each group; these pages also include
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#terms"><span class="secno">2. </span>Terms</a></li><li class="tocline"><a class="tocxref" href="#new-success-criteria"><span class="secno">3. </span>New success criteria</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#under-wcag-2-2-provide-users-enough-time-to-read-and-use-content"><span class="secno">3.1 </span>Under WCAG 2.2 Provide users enough time to read and use content.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#timed-event-are-not-used-except-for-the-situations-listed-below"><span class="secno">3.1.1 </span>Timed event are not used except for the situations listed below.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-2-3"><span class="secno">3.2 </span>Under WCAG 2.3</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent"><span class="secno">3.2.1 </span>Do not expose user information in a way that can be exploited without informed consent</a></li><li class="tocline"><a class="tocxref" href="#do-not-add-mechanisms-that-are-likely-to-confuse-the-user-in-a-way-that-may-do-them-harm-and-use-known-techniques-to-keep-the-user-safe"><span class="secno">3.2.2 </span>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-3-1"><span class="secno">3.3 </span>Under WCAG 3.1</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes"><span class="secno">3.3.1 </span>Instructions, labels, navigation and <span class="formerLink" data-link-type="dfn">important information</span> are provided with a clear writing style that includes:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#provide-a-clear-structure-and-layout-new-guidline"><span class="secno">3.4 </span><strong>Provide a clear structure and layout</strong> (new guidline)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#information-is-provided-in-manageable-chunks-that-include"><span class="secno">3.4.1 </span>Information is provided in manageable chunks,  that include: <p></p>
                     </a></li><li class="tocline"><a class="tocxref" href="#add-to-wcag-3-2-4"><span class="secno">3.4.2 </span><strong>Add to WCAG 3.2.4 </strong></a></li><li class="tocline"><a class="tocxref" href="#the-main-purpose-of-each-page-and-section-of-content-is-obvious-extraneous-information-that-is-not-relevant-to-the-main-purpose-of-each-page-is-separated-in-the-modality-of-the-user-and-pragmatically-determinable"><span class="secno">3.4.3 </span><strong>The main purpose of each page and section of content is <em>obvious</em>. </strong> Extraneous information that is not relevant to the  main purpose of each page is separated in the modality of the user and pragmatically determinable.
                 </a></li><li class="tocline"><a class="tocxref" href="#provide-a-clear-and-understandable-layout-that-includes"><span class="secno">3.4.4 </span><strong>Provide a clear and understandable layout  that includes:</strong></a></li><li class="tocline"><a class="tocxref" href="#interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><span class="secno">3.4.5 </span>Interactive controls are visually clear or visually clear controls are <span class="formerLink" data-link-type="dfn">easily available</span> that conform to the following:</a></li><li class="tocline"><a class="tocxref" href="#a-familiar-design-layout-and-common-icons-are-easily-available"><span class="secno">3.4.6 </span><strong>A familiar   design, layout and common icons are easily available</strong>. </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#critical-features-and-important-information-for-the-user-is-easy-to-find-such-that"><span class="secno">3.4.6.1 </span><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> </a></li><li class="tocline"><a class="tocxref" href="#all-information-is-easy-to-find-aaa"><span class="secno">3.4.6.2 </span><strong>All information is easy to find (AAA )</strong></a></li></ol></li><li class="tocline"><a class="tocxref" href="#when-there-is-a-barrier-between-the-content-and-the-user-that-requires-additional-abilities-an-alternative-is-provided-that-does-not-require-additional-abilities"><span class="secno">3.4.7 </span>When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</a></li><li class="tocline"><a class="tocxref" href="#provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost"><span class="secno">3.4.8 </span>Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-3-3-help-users-avoid-and-correct-mistakes"><span class="secno">3.5 </span>Under WCAG 3.3 Help users avoid and correct mistakes.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available-spoken-feedback-should-be-a-user-selectable-option"><span class="secno">3.5.1 </span>The success or failure of every action should be <span class="formerLink" data-link-type="dfn">clearly indicated</span> to the user and visual <span class="formerLink" data-link-type="dfn">rapid feedback</span> should be available. <span class="formerLink" data-link-type="dfn">Spoken feedback</span> should be a user selectable option.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#items-where-new-techniques-are-wcag-2-0-required"><span class="secno">3.6 </span>Items where new techniques are WCAG 2.0 required</a></li><li class="tocline"><a class="tocxref" href="#items-where-wcag-2-0-sc-levels-should-be-changed"><span class="secno">3.7 </span>Items where WCAG 2.0 SC levels should be changed</a></li><li class="tocline"><a class="tocxref" href="#edits-to-wcag"><span class="secno">3.8 </span>Edits to WCAG</a></li><li class="tocline"><a class="tocxref" href="#additional-notes"><span class="secno">3.9 </span>Additional notes</a></li><li class="tocline"><a class="tocxref" href="#significant-contributors-this-section"><span class="secno">3.10 </span>Significant contributors this section </a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><span class="secno">A. </span>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><span class="secno">A.1 </span>Normative references</a></li></ol></li></ol></nav>
 		<h1>Cognitive and Learning Disabilities and WCAG</h1>
@@ -2230,7 +2211,7 @@ h6>a.self-link::before {
               <dd>definition</dd>
               
               <dt><dfn data-dfn-type="dfn" id="dfn-non-trivial-information">non-trivial information</dfn></dt>
-              <dd>Information the user may find important or need to know , such as infromation that the user may have searched to find. <span class="ednote">- coment - may be to vage. information can be non trivial but noone NEEDS to know it </span></dd>
+              <dd>Information the user may find important or need to know , such as infromation that the user may have searched to find. <span class="note">- coment - may be to vage. information can be non trivial but noone NEEDS to know it </span></dd>
               
               <dt><dfn id="dfn-personalization" data-dfn-type="dfn">personalization</dfn></dt>
               <dd>User interface that is driven by the individual user's preferences.</dd>
@@ -2239,7 +2220,7 @@ h6>a.self-link::before {
               <dd>less then 200 ms (from etsi) </dd>
               
               <dt><dfn data-lt="standardized techniques|safe standardized techniques" data-dfn-type="dfn" id="dfn-standardized-techniques">safe standardized techniques</dfn></dt>
-              <dd>standardized by wcag, other w3c groups, or by the platform, browser or operating system where user vulnerabilities are not exposed without informed consent <span class="ednote">this will be a discussion and is not yet finalized</span>
+              <dd>standardized by wcag, other w3c groups, or by the platform, browser or operating system where user vulnerabilities are not exposed without informed consent <span class="note">this will be a discussion and is not yet finalized</span>
                 </dd>
               
               <dt><dfn data-dfn-type="dfn" id="dfn-same-type-of-information">same type of information</dfn></dt>
@@ -2252,7 +2233,7 @@ h6>a.self-link::before {
               <dd>an immediately perceptible indicator or obvious clue, that gives information or direction</dd>
               
               <dt><dfn data-dfn-type="dfn" id="dfn-sensitive-information">sensitive information</dfn></dt>
-              <dd>information that can put people at risk or information the user wishes to protect <span class="ednote">To do - add examples including the user sets the time out</span></dd>
+              <dd>information that can put people at risk or information the user wishes to protect <span class="note">To do - add examples including the user sets the time out</span></dd>
               
               <dt><dfn data-dfn-type="dfn" id="dfn-spoken-feedback">spoken feedback</dfn></dt>
               <dd>Spoken feedback is often more effective then written feedback. However having both spoken feedback and longer lasting written and visual feedback helps the user know where they are and restores the context if attention is lost. Spoken feedback can annoy and distract some people so spoken feedback should be available as an option and in response to a user preference setting when available. </dd>
@@ -2279,7 +2260,7 @@ h6>a.self-link::before {
 		</section>
 		<section id="new-success-criteria">
 	<!--OddPage--><h2 id="x3-new-success-criteria"><span class="secno">3. </span>New success criteria<a class="self-link" aria-label="§" href="#new-success-criteria"></a></h2>
-			<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">We will be adding a simple language equivalent for this page when we have agreed on the content </p></div>
+			<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">We will be adding a simple language equivalent for this page when we have agreed on the content </p></div>
 			<section class="respec-offending-element" title="Linter (no-headingless-sections): All sections must start with a `h2-6` element. Add a `h2-6` to the offending section or use a `<div>`. See developer console. Occured" id="respec-offender-linter-no-headingless-sections-all-sections-must-start-with-a-h2-6-element-add-a-h2-6-to-the-offending-section-or-use-a-div-see-developer-console-occured">
 				<p>We suggest adding the following as success criteria: </p><section>
 				<h4 id="under-wcag-1-3-create-content-that-can-be-presented-in-different-ways-for-example-simpler-layout-without-losing-information-or-structure">Under WCAG 1.3 - Create content that can be presented in different ways (for example simpler layout) without losing information or structure.<a class="self-link" aria-label="§" href="#new-success-criteria"></a></h4>
@@ -2383,7 +2364,7 @@ In menus :
 						<li>There are times when passive voicing or other tense can be clearer. Other voicing may be used when it has been shown via user test to be easier to understand, more friendly or appropriate. </li>
 						<li>The present tense is not required when describing or discussing past or future events. </li>
 						<li>If the writing style is an essential part of the main function of the site, such as a literary work. </li>
-						<li>Where less common words are found in user testing to be easier to understand for the audience <span class="ednote">(user testing should included people with cognitive disabilities that could e in the target audience - need further definition ) </span></li>
+						<li>Where less common words are found in user testing to be easier to understand for the audience <span class="note">(user testing should included people with cognitive disabilities that could e in the target audience - need further definition ) </span></li>
 						<li>The writing style items may be replaced for a location or type of content were user testing has shown a more effective writing style to aid comprehension for people with cognitive disabilities. Such as for content written in a specific language. </li>
 						<li>The content will be penalized for not conforming to a given writing style (such as a dissertation or PHD proposal) </li>
 					</ol>
@@ -2692,13 +2673,13 @@ In menus :
 					<div class="technique"> Techniques to include:Technique to include: personalization used to remove extraneous information and reduce the clicks.</div>
 					<div class="technique"> Techniques to include: 1,use testing to find what helps, 2, identifying any words that may make the user realize this is relevant content, 3, identifying that there are no <a href="#dfn-keywords-that-aid-comprehension" class="internalDFN" data-link-type="dfn">keywords that aid comprehension</a> for example, when all keywords short sections are used under clear headings.</div>
 					<p class="technique">Techniques include: using see also to alow a user to reach related content that is not in this path. A link to a site map which has all the content in it can also be sufficient</p>
-					<div class="ednote" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="6"><span>Editor's note</span></div><div class="">
+					<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="6"><span>Editor's note</span></div><div class="">
 						<p>To define: (MC: this does not make sense as a candidate term)</p>
 						<ul>
 							<li> api's that help the user: api's ,must be included as a technique and include E-Wallets &amp; password management, text to speak with synchronized highlighting - Use of synchronized highlighting, of complex graphics and formula with speech (COGA Techniques 2.7.3 ) </li>
 						</ul>
 					</div></div>
-					<div class="ednote" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="6"><span>Editor's note</span></div><p class="">Note WCAG/COGA will develop clear guidelines for acceptance criteria, such as backed up by research - similar to the COGA criteria for research. </p></div>
+					<div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="6"><span>Editor's note</span></div><p class="">Note WCAG/COGA will develop clear guidelines for acceptance criteria, such as backed up by research - similar to the COGA criteria for research. </p></div>
 				</section>
 				<section>
 					<h5 id="prevent"><strong>Prevent the user from making errors</strong><a class="self-link" aria-label="§" href="#under-wcag-3-3-help-users-avoid-and-correct-mistakes"></a></h5>
@@ -2722,7 +2703,7 @@ In menus :
                     <p>For all content</p>
                   <ol>
                       <li>Non native content and sponsored content are clearly marked and visually differentiated by standardized techniques </li>
-                      <li> Clearly differentiate between facts and less substantiated opinions. <span class="ednote">Was rewritten from "Clearly differentiate between opinions and facts "</span></li>
+                      <li> Clearly differentiate between facts and less substantiated opinions. <span class="note">Was rewritten from "Clearly differentiate between opinions and facts "</span></li>
                   </ol>
                     
 					<p class="technique">Techniques to include: common controls includes just adding a attribute such as coga-action="undo" to enable extra support automatically</p>
@@ -2851,7 +2832,7 @@ In menus :
 		<section id="edits-to-wcag">
 			<h3 id="x3-8-edits-to-wcag"><span class="secno">3.8 </span>Edits to WCAG<a class="self-link" aria-label="§" href="#edits-to-wcag"></a></h3>
 			<p>Contrast The visual presentation of text and images of text AND ICONS have a contrast ratio of at least </p>
-			<div class="ednote" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="4"><span>Editor's note</span></div><p class=""> Add dyscalculia examples!!!</p></div>
+			<div class="note" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="4"><span>Editor's note</span></div><p class=""> Add dyscalculia examples!!!</p></div>
 		</section>
         <section id="additional-notes">
         <h3 id="x3-9-additional-notes"><span class="secno">3.9 </span>Additional notes<a class="self-link" aria-label="§" href="#additional-notes"></a></h3>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -14,8 +14,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -26,7 +26,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -34,11 +34,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -2025,9 +2020,9 @@ h6>a.self-link::before {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2019-01-14",
-  "publishISODate": "2019-01-14T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 14 January 2019"
+  "publishDate": "2019-01-24",
+  "publishISODate": "2019-01-24T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 24 January 2019"
 }</script><meta name="description" content="This document is for people who make Web content (Web pages) and Web applications.  It give advice on how to make content useable for  people with learning and cognitive disabilities."></head>
 
 	<body class="h-entry toc-inline"><div class="head">
@@ -2035,7 +2030,7 @@ h6>a.self-link::before {
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-14">14 January 2019</time>
+        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -2062,21 +2057,17 @@ h6>a.self-link::before {
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2018-2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2018-2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
 
@@ -2097,57 +2088,47 @@ h6>a.self-link::before {
 
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
 		<p>
-                                              This document was published by
-                                              the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as an
-                                              Editor's Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as an
-                                              Editor's Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              groups
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains
-                                                      a <a href="https://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a> and a <a href="https://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Accessibility Guidelines Working Group)</a>
-                                              made in connection with the
-                                              deliverables of
-                                              each group; these pages also include
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction_for_usable"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#process"><span class="secno">2. </span>Process</a></li><li class="tocline"><a class="tocxref" href="#scale"><span class="secno">3. </span>Applicability across websites</a></li><li class="tocline"><a class="tocxref" href="#background"><span class="secno">4. </span>Background about people with learning and cognitive disabilities and the web</a></li><li class="tocline"><a class="tocxref" href="#user_needs"><span class="secno">5. </span>User Needs</a></li><li class="tocline"><a class="tocxref" href="#persona"><span class="secno">6. </span>Use Cases / Persona</a></li><li class="tocline"><a class="tocxref" href="#testing_groups_feedback"><span class="secno">7. </span>Usability Testing, Focus Groups and Feedback</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#differences_testing"><span class="secno">7.1 </span>Differences from usability testing with the general population</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design_themes"><span class="secno">8. </span>Design Themes</a></li><li class="tocline"><a class="tocxref" href="#user-group-mapping"><span class="secno">9. </span>Mapping requirements to user groups</a></li><li class="tocline"><a class="tocxref" href="#special_applications"><span class="secno">10. </span>Special applications</a></li><li class="tocline"><a class="tocxref" href="#issues_and_considerations"><span class="secno">11. </span>Issues and considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guidance_for_policy_makers"><span class="secno">11.1 </span>Guidance for policy makers</a></li></ol></li><li class="tocline"><a class="tocxref" href="#appendix1"><span class="secno">A. </span>Appendix - Guide Details </a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">B.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><span class="secno">B.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">B.3 </span>Enabling funders</a></li></ol></li></ol></nav>
+                              This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as
+                              an Editor's Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+            
+    </p><p>
+                              Publication as an Editor's Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              groups
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="https://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a> and a <a href="https://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Accessibility Guidelines Working Group)</a>
+                              made in connection with the deliverables of
+                              each group; these pages also include
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction_for_usable"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#process"><span class="secno">2. </span>Process</a></li><li class="tocline"><a class="tocxref" href="#scale"><span class="secno">3. </span>Applicability across websites</a></li><li class="tocline"><a class="tocxref" href="#background"><span class="secno">4. </span>Background about people with learning and cognitive disabilities and the web</a></li><li class="tocline"><a class="tocxref" href="#user_needs"><span class="secno">5. </span>User Needs</a></li><li class="tocline"><a class="tocxref" href="#persona"><span class="secno">6. </span>Use Cases / Persona</a></li><li class="tocline"><a class="tocxref" href="#testing_groups_feedback"><span class="secno">7. </span>Usability Testing, Focus Groups and Feedback</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#differences_testing"><span class="secno">7.1 </span>Differences from usability testing with the general population</a></li></ol></li><li class="tocline"><a class="tocxref" href="#design_themes"><span class="secno">8. </span>Design Themes</a></li><li class="tocline"><a class="tocxref" href="#user-group-mapping"><span class="secno">9. </span>Mapping requirements to user groups</a></li><li class="tocline"><a class="tocxref" href="#special_applications"><span class="secno">10. </span>Special applications</a></li><li class="tocline"><a class="tocxref" href="#issues_and_considerations"><span class="secno">11. </span>Issues and considerations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#guidance_for_policy_makers"><span class="secno">11.1 </span>Guidance for policy makers</a></li></ol></li><li class="tocline"><a class="tocxref" href="#appendix1"><span class="secno">A. </span>Appendix - Guide Details </a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">B. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">B.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><span class="secno">B.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">B.3 </span>Enabling funders</a></li></ol></li></ol></nav>
 
 		<section class="informative" id="introduction_for_usable">
 
@@ -2311,7 +2292,7 @@ h6>a.self-link::before {
  			   		</ul>
  			 	</li>
  			 </ol>
-			<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">This summary is based on the user need addressed in <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html"> https://rawgit.com/w3c/coga/master/gap-analysis/table.html</a>. We may add user needs from the design requirements</p></div>
+			<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class="">This summary is based on the user need addressed in <a href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html"> https://rawgit.com/w3c/coga/master/gap-analysis/table.html</a>. We may add user needs from the design requirements</p></div>
 		</section>
 
 		<section id="persona">
@@ -2382,7 +2363,7 @@ h6>a.self-link::before {
 						</li>
 					</ul>
 				<p></p>
-				<div class="ednote" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="4"><span>Editor's note</span></div><p class="">The next few paragraphs up to the next section may be removed as it is both covered in usability guidance in the links above and significantly incomplete in comparison. We would be interested in finding out if anyone finds it useful to include.</p></div>
+				<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="4"><span>Editor's note</span></div><p class="">The next few paragraphs up to the next section may be removed as it is both covered in usability guidance in the links above and significantly incomplete in comparison. We would be interested in finding out if anyone finds it useful to include.</p></div>
 				<p>Some brief guidance on usability testing:</p>
 				<p>
 					</p><ol>
@@ -2447,13 +2428,13 @@ h6>a.self-link::before {
 			<p></p>
 
 		
-				<div class="ednote" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="3"><span>Editor's note</span></div><p class="">The task force is taking all the design requirements and turning them into easy to read checkpoints. They will be divided by themes listed above. Most of the design requirements were originally created as recommendations for WCAG, the <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To_Do_list">full list of potential requirements</a> is available, and you can also review the progress of the task force in making <a href="https://docs.google.com/document/d/1WcfVALVq8PS9CLXUuAfV9Op0wXvI2yJYedj5jO23GTk/">readable requirements geared to web developers</a>. The task force appreciates feedback on this work.</p></div>
+				<div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="3"><span>Editor's note</span></div><p class="">The task force is taking all the design requirements and turning them into easy to read checkpoints. They will be divided by themes listed above. Most of the design requirements were originally created as recommendations for WCAG, the <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/SC_To_Do_list">full list of potential requirements</a> is available, and you can also review the progress of the task force in making <a href="https://docs.google.com/document/d/1WcfVALVq8PS9CLXUuAfV9Op0wXvI2yJYedj5jO23GTk/">readable requirements geared to web developers</a>. The task force appreciates feedback on this work.</p></div>
 			</section>
 			<section id="user-group-mapping">
 				<!--OddPage--><h2 id="x9-mapping-requirements-to-user-groups"><span class="secno">9. </span>Mapping requirements to user groups<a class="self-link" aria-label="§" href="#user-group-mapping"></a></h2>
 				<p>The table of design requirements and user groups maps requirements such as "User safety" and "Task completion" with the groups of users who benefit, such as those with "Memory impairments" and "Reduced focus and context".</p>
 				<p>Please review the table at <a href="../content-usable/table.html">Table of design requirements and user groups</a> </p>
-				<div class="ednote" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="3"><span>Editor's note</span></div><p class="">The task force intends to redo this table when the easy to read design recommendations are complete.</p></div>
+				<div class="note" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="3"><span>Editor's note</span></div><p class="">The task force intends to redo this table when the easy to read design recommendations are complete.</p></div>
 			</section>
 		
 
@@ -2464,7 +2445,7 @@ h6>a.self-link::before {
 
 		<section id="issues_and_considerations">
 			<!--OddPage--><h2 id="x11-issues-and-considerations"><span class="secno">11. </span>Issues and considerations<a class="self-link" aria-label="§" href="#issues_and_considerations"></a></h2>
-			<div class="ednote" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="3"><span>Editor's note</span></div><div class="">We intend to add additional sections on:
+			<div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote-3" aria-level="3"><span>Editor's note</span></div><div class="">We intend to add additional sections on:
 				<ul>
 					<li>Items for further research</li>
 					<li>Data driven systems</li>
@@ -2476,7 +2457,7 @@ h6>a.self-link::before {
 
 			<section id="guidance_for_policy_makers">
 				<h3 id="x11-1-guidance-for-policy-makers"><span class="secno">11.1 </span>Guidance for policy makers<a class="self-link" aria-label="§" href="#guidance_for_policy_makers"></a></h3>
-				<div class="ednote" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="4"><span>Editor's note</span></div><p class="">We intend to redo the introduction</p></div>
+				<div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-4" aria-level="4"><span>Editor's note</span></div><p class="">We intend to redo the introduction</p></div>
 				<p>This section provides guidance for policy makers on how to  use the design requirements to build a policy. This includes:</p>
 				<p>
 					</p><ul>
@@ -2538,7 +2519,7 @@ h6>a.self-link::before {
 						<td>high</td>
 					</tr>
 				</tbody></table>
-				<div class="ednote" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><p class="">This table needs to be completed for each design requirement. The task force would appreciate feedback on additional criteria that would be helpful for policy makers.</p></div>
+				<div class="note" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><p class="">This table needs to be completed for each design requirement. The task force would appreciate feedback on additional criteria that would be helpful for policy makers.</p></div>
 				<p><strong>Example recommendations for policies:</strong></p>
 				<p>
 					</p><ul>
@@ -2572,13 +2553,13 @@ h6>a.self-link::before {
 						<li>See the issue paper on user testing for more information</li>
 					</ul>
 				<p></p>
-				<div class="ednote" id="issue-container-generatedID-6"><div role="heading" class="ednote-title marker" id="h-ednote-6" aria-level="4"><span>Editor's note</span></div><p class="">This section is incomplete. The task force would appreciate receiving feedback of such as  additional examples, scenarios and considerations.</p></div>
+				<div class="note" id="issue-container-generatedID-6"><div role="heading" class="ednote-title marker" id="h-ednote-6" aria-level="4"><span>Editor's note</span></div><p class="">This section is incomplete. The task force would appreciate receiving feedback of such as  additional examples, scenarios and considerations.</p></div>
 			</section>
-			<div class="ednote" id="issue-container-generatedID-7"><div role="heading" class="ednote-title marker" id="h-ednote-7" aria-level="3"><span>Editor's note</span></div><p class="">We intend to add a glossary and links to our research pages</p></div>
+			<div class="note" id="issue-container-generatedID-7"><div role="heading" class="ednote-title marker" id="h-ednote-7" aria-level="3"><span>Editor's note</span></div><p class="">We intend to add a glossary and links to our research pages</p></div>
 		</section>
 <section class="appendix" id="appendix1">
 			<!--OddPage--><h2 id="a-appendix-guide-details"><span class="secno">A. </span>Appendix - Guide Details <a class="self-link" aria-label="§" href="#appendix1"></a></h2>
-	<div class="ednote" id="issue-container-generatedID-8"><div role="heading" class="ednote-title marker" id="h-ednote-8" aria-level="3"><span>Editor's note</span></div><p class=""> This section will have a detailed design guide. We are considering publishing it as a separate document. </p></div>
+	<div class="note" id="issue-container-generatedID-8"><div role="heading" class="ednote-title marker" id="h-ednote-8" aria-level="3"><span>Editor's note</span></div><p class=""> This section will have a detailed design guide. We are considering publishing it as a separate document. </p></div>
 	<div>
 The group is working on a design guide to help make Web Content more usable for people with cognitive and learning disabilities (COGA).The guide is divided into themes. There are also user stories and testing methodologies for each theme. Just understanding the themes and user stories may help make your content more accessible to some users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.
 		<p>The themes are:</p> <ol>

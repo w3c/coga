@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 div.issue-title, div.note-title , div.ednote-title, div.warning-title {
     padding-right:  1em;
     min-width: 7.5em;
@@ -14,8 +14,8 @@ div.note, div.issue, div.ednote, div.warning {
     margin-top: 1em;
     margin-bottom: 1em;
 }
-.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
-.issue, .note, .ednote, .warning {
+.warning > p:first-child { margin-top: 0 }
+.warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
@@ -26,7 +26,7 @@ div.issue, div.note , div.ednote,  div.warning {
     position: relative;
     clear: both;
 }
-span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+span.warning { padding: .1em .5em .15em; }
 
 .issue {
     border-color: #e05252;
@@ -34,11 +34,6 @@ span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
 }
 .issue.closed span.issue-number {
     text-decoration: line-through;
-}
-
-.note, .ednote {
-    border-color: #52e052;
-    background: #e9fbe9;
 }
 
 .warning {
@@ -2027,16 +2022,16 @@ h6>a.self-link::before {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2019-01-14",
-  "publishISODate": "2019-01-14T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 14 January 2019"
+  "publishDate": "2019-01-24",
+  "publishISODate": "2019-01-24T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 24 January 2019"
 }</script><meta name="description" content="This is a set of papers that describe accessibility issues for users with various cognitive or learning disabilities. Each issue paper takes information from Cognitive Accessibility User Research [coga-user-research] and distills it into a description of the challenges for a specific user group or web usage pattern, and suggests ways to address those challenges. This information informs the Cognitive Accessibility Roadmap and Gap analysis [coga-gap-analysis] in its identification of which solutions remain unmet at this time. The set of issue papers in this publication is not comprehensive and additional ones may be added to future publications of this document."></head>
 	<body class="h-entry"><div class="head">
       <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Cognitive Accessibility Issue Papers</h1>
       
       <h2>
         <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-14">14 January 2019</time>
+        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -2063,21 +2058,17 @@ h6>a.self-link::before {
       
       
       <p class="copyright">
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-                        ©
-                        2017-2019
-                        
-                        <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-                        <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-                        <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-                        
-                        <abbr title="World Wide Web Consortium">W3C</abbr>
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-                        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
-                        and
-                        <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-                        rules apply.
-                      </p>
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+      ©
+      2017-2019
+      
+      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+      apply.
+    </p>
       <hr title="Separator for header">
     </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
@@ -2093,57 +2084,47 @@ h6>a.self-link::before {
 			</ul>
 			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-coga-comments@w3.org?subject=[Issue%20Papers]">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>16 June 2017</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
 		<p>
-                                              This document was published by
-                                              the <a href="https://www.w3.org/WAI/APA/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="https://www.w3.org/WAI/GL/">Accessible Platform Architectures Working Group</a>, and the <a href="undefined">Accessibility Guidelines Working Group</a> as an
-                                              Editor's Draft.
-                                              
-                                            </p><p>
-                                                      
-                                                      Comments regarding this document are welcome.
-                                                              Please send them
-                                                              to
-                                                              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-                                                              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-                                                            
-                                                    </p><p>
-                                              Publication as an
-                                              Editor's Draft does not imply
-                                              endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                                              This is a draft document and may
-                                              be updated, replaced or obsoleted
-                                              by other documents at any time. It
-                                              is inappropriate to cite this
-                                              document as other than work in
-                                              progress.
-                                            </p><p>
-                                      
-                                              This document was produced by
-                                              groups
-                                              operating under the
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                                            
-                                      
-                                      
-                                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains
-                                                      a <a href="https://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="https://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a>, and a <a href="undefined" rel="disclosure">public list of any patent disclosures  (Accessibility Guidelines Working Group)</a>
-                                              made in connection with the
-                                              deliverables of
-                                              each group; these pages also include
-                                              instructions for disclosing a
-                                              patent. An individual who has
-                                              actual knowledge of a patent which
-                                              the individual believes contains
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                                              must disclose the information in
-                                              accordance with
-                                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent
-                                                Policy</a>.
-                                            
-                                      
-                                    </p><p>
-                                      This document is governed by the
-                                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#list-of-issue-papers"><span class="secno">2. </span>List of Issue Papers</a></li><li class="tocline"><a class="tocxref" href="#personalization-and-user-preferences"><span class="secno">3. </span>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-0"><span class="secno">3.1 </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#examples-of-what-we-may-want-personalization-to-do"><span class="secno">3.2 </span>Examples of what we may want personalization to do</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#adding-content-and-features"><span class="secno">3.2.1 </span>Adding content and features</a></li><li class="tocline"><a class="tocxref" href="#removing-content-and-features"><span class="secno">3.2.2 </span>Removing content and features</a></li><li class="tocline"><a class="tocxref" href="#changing-content-and-features"><span class="secno">3.2.3 </span>Changing content and features</a></li><li class="tocline"><a class="tocxref" href="#addressing-key-issues"><span class="secno">3.2.4 </span>Addressing key issues</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-preferences"><span class="secno">3.3 </span>User preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#challenges-of-user-preferences-for-people-with-cognitive-disabilities"><span class="secno">3.3.1 </span>Challenges of user preferences for people with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#templates-for-preferences"><span class="secno">3.3.2 </span>Templates for preferences</a></li><li class="tocline"><a class="tocxref" href="#inferring-preferences"><span class="secno">3.3.3 </span>Inferring preferences </a></li><li class="tocline"><a class="tocxref" href="#managing-user-preferences"><span class="secno">3.3.4 </span>Managing user preferences </a></li></ol></li><li class="tocline"><a class="tocxref" href="#potential-solutions"><span class="secno">3.4 </span>Potential solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#potential-solutions-for-user-preferences"><span class="secno">3.4.1 </span>Potential solutions for user preferences </a></li><li class="tocline"><a class="tocxref" href="#potential-solutions-for-personalization"><span class="secno">3.4.2 </span>Potential solutions for personalization </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ways-that-personalization-is-currently-addressed"><span class="secno">3.4.2.1 </span>Ways that personalization is currently addressed </a></li><li class="tocline"><a class="tocxref" href="#limitations-of-current-personalization-implementations"><span class="secno">3.4.2.2 </span>Limitations of current personalization implementations </a></li><li class="tocline"><a class="tocxref" href="#adding-to-ways-we-can-address-personalization"><span class="secno">3.4.2.3 </span>Adding to ways we can address personalization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#strategies"><span class="secno">3.4.3 </span>Strategies</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-personalization"><span class="secno">3.4.4 </span>Further work for personalization</a></li><li class="tocline"><a class="tocxref" href="#end-to-end-basic-solution"><span class="secno">3.4.5 </span>End to end basic solution</a></li><li class="tocline"><a class="tocxref" href="#special-case"><span class="secno">3.4.6 </span>Special case</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#web-security-and-privacy-technologies"><span class="secno">4. </span>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#description-of-the-technologies"><span class="secno">4.1 </span>Description of the technologies</a></li><li class="tocline"><a class="tocxref" href="#challenges-of-security-and-privacy-for-people-with-cognitive-disabilities"><span class="secno">4.2 </span>
+                              This document was published by the <a href="https://www.w3.org/WAI/APA/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="https://www.w3.org/WAI/GL/">Accessible Platform Architectures Working Group</a>, and the <a href="undefined">Accessibility Guidelines Working Group</a> as
+                              an Editor's Draft.
+                              
+                            </p><p>
+      
+      Comments regarding this document are welcome.
+              Please send them to
+              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+            
+    </p><p>
+                              Publication as an Editor's Draft
+                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+                              This is a draft document and may be updated,
+                              replaced or obsoleted by other documents at any
+                              time. It is inappropriate to cite this document as
+                              other than work in progress.
+                            </p><p>
+                      
+                              This document was produced by
+                              groups
+                              operating under the
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                      
+                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="https://www.w3.org/2004/01/pp-impl/83907/status" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="https://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Accessible Platform Architectures Working Group)</a>, and a <a href="undefined" rel="disclosure">public list of any patent disclosures  (Accessibility Guidelines Working Group)</a>
+                              made in connection with the deliverables of
+                              each group; these pages also include
+                              instructions for disclosing a patent. An
+                              individual who has actual knowledge of a patent
+                              which the individual believes contains
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+                              must disclose the information in accordance with
+                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+                            
+                      
+                    </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#list-of-issue-papers"><span class="secno">2. </span>List of Issue Papers</a></li><li class="tocline"><a class="tocxref" href="#personalization-and-user-preferences"><span class="secno">3. </span>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-0"><span class="secno">3.1 </span>Introduction</a></li><li class="tocline"><a class="tocxref" href="#examples-of-what-we-may-want-personalization-to-do"><span class="secno">3.2 </span>Examples of what we may want personalization to do</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#adding-content-and-features"><span class="secno">3.2.1 </span>Adding content and features</a></li><li class="tocline"><a class="tocxref" href="#removing-content-and-features"><span class="secno">3.2.2 </span>Removing content and features</a></li><li class="tocline"><a class="tocxref" href="#changing-content-and-features"><span class="secno">3.2.3 </span>Changing content and features</a></li><li class="tocline"><a class="tocxref" href="#addressing-key-issues"><span class="secno">3.2.4 </span>Addressing key issues</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-preferences"><span class="secno">3.3 </span>User preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#challenges-of-user-preferences-for-people-with-cognitive-disabilities"><span class="secno">3.3.1 </span>Challenges of user preferences for people with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#templates-for-preferences"><span class="secno">3.3.2 </span>Templates for preferences</a></li><li class="tocline"><a class="tocxref" href="#inferring-preferences"><span class="secno">3.3.3 </span>Inferring preferences </a></li><li class="tocline"><a class="tocxref" href="#managing-user-preferences"><span class="secno">3.3.4 </span>Managing user preferences </a></li></ol></li><li class="tocline"><a class="tocxref" href="#potential-solutions"><span class="secno">3.4 </span>Potential solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#potential-solutions-for-user-preferences"><span class="secno">3.4.1 </span>Potential solutions for user preferences </a></li><li class="tocline"><a class="tocxref" href="#potential-solutions-for-personalization"><span class="secno">3.4.2 </span>Potential solutions for personalization </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ways-that-personalization-is-currently-addressed"><span class="secno">3.4.2.1 </span>Ways that personalization is currently addressed </a></li><li class="tocline"><a class="tocxref" href="#limitations-of-current-personalization-implementations"><span class="secno">3.4.2.2 </span>Limitations of current personalization implementations </a></li><li class="tocline"><a class="tocxref" href="#adding-to-ways-we-can-address-personalization"><span class="secno">3.4.2.3 </span>Adding to ways we can address personalization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#strategies"><span class="secno">3.4.3 </span>Strategies</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-personalization"><span class="secno">3.4.4 </span>Further work for personalization</a></li><li class="tocline"><a class="tocxref" href="#end-to-end-basic-solution"><span class="secno">3.4.5 </span>End to end basic solution</a></li><li class="tocline"><a class="tocxref" href="#special-case"><span class="secno">3.4.6 </span>Special case</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#web-security-and-privacy-technologies"><span class="secno">4. </span>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#description-of-the-technologies"><span class="secno">4.1 </span>Description of the technologies</a></li><li class="tocline"><a class="tocxref" href="#challenges-of-security-and-privacy-for-people-with-cognitive-disabilities"><span class="secno">4.2 </span>
             Challenges of security and privacy for people with cognitive disabilities
         </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#memory"><span class="secno">4.2.1 </span>
                 Memory 
@@ -2806,7 +2787,7 @@ h6>a.self-link::before {
         <h3 id="supplement-with-consistent-icons-and-graphics">Supplement with consistent icons and graphics <a class="self-link" aria-label="§" href="#ways-to-enhance-text-with-multi-modal-content"></a></h3>
         <p>An icon is a small image or drawing that commonly represents a function. A graphic is a drawing of a visual perception or an abstract concept, or is otherwise a representation of an object or an idea.</p>
         <p>Text accompanied by consistent iconography helps convey meaning, such as by associating discrete textual passages with each other. Similarly, a pie-chart graphic may help convey meaning easier to comprehend than a table of statistics.</p>
-			<div class="ednote" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">What is "consistent" in this context?</p></div>
+			<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span></div><p class="">What is "consistent" in this context?</p></div>
         <h3 id="replace-or-augment-by-symbol-sets">Replace or augment by symbol sets <a class="self-link" aria-label="§" href="#ways-to-enhance-text-with-multi-modal-content"></a></h3>
         <p>A symbol is a sign that represents or suggests an idea, an object, an action, or a belief.</p>
         <p>Symbol sets can be used for augmentative and alternative communication (AAC) to support people with cognitive disabilities who have severe speech and/or language difficulties. This can include those who may understand speech, but who are unable to express what they wish to say, perhaps because of a physical disability. (It is common for people with cognitive disabilities to also have physical disabilities.) Ideally, <a href="https://w3c.github.io/coga/issue-papers/symbols-non-verbal.html">interoperable symbol sets could be used to replace or to augment web-based text</a>.</p>
