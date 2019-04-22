@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Design Guide For Making Content For People With Cognitive Learning Disabilities</title>
+		<meta charset="utf-8"/>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<script src="../common/biblio.js" class="remove"></script>
+		<script src="respec-config.js" class="remove"></script>
+	
+		<link href="../common/css/common.css" rel="stylesheet" type="text/css" />
+	</head>
+
+	<body>
+		<section class="informative"id="abstract">
+			
+				<p>This document is a design guide to help make Web Content more usable for people with cognitive and learning disabilities (COGA).The guide is divided into themes. </p>
+			<p>There are also user stories and testing methodologies for each theme. Just understanding the themes and user stories may help make your content more accessible to some users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
+			
+				<P>If you are a person with a learning or cognitive challenge and have found other problems that we have not covered please let us know! You can email us with your comments and ideas at public-comments-wcag20@w3.org. </p>
+			
+			<div class="ednote">This document is an appendix for <a href="https://w3c.github.io/coga/gap-analysis/usable.html" >Making content usable for people with cognitive and learning disabilities</a>. We are considering publishing it as a separate note.</a>
+			
+		</section>
+		<section id="sotd"></section>
+
+		<section class="informative" id="introduction">
+			<h1>Introduction</h1>
+
+			<p>Making websites and applications that are friendly for people with cognitive impairments affects every part of design and development.</p>
+			<p>Traditionally accessibility has been most focused on the interface, and making that usable for people with sensory and physical impairments in vision, hearing and/or mobility. Some accessibility features will help people with cognitive impairments, but often the issues are about context, language, usability, and other more general factors that impact everyone to some degree.</p>
+			<p>This document aims to provide guidance on how to make websites and applications that are friendly for people with cognitive impairments by providing guidance for your designs, and design process.</p>
+			<p>This guide is divided into design themes. There are also user stories, testing methodologies, and design checkpoints for each theme. Just understanding the themes and user stories may help make your content more accessible to some users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
+			<p class="ednote">EDITOR’S note: This is an early draft. We expect many editorial changes to make the content more clear and easy to understand. We will also change the format along the lines of https://www.w3.org/WAI/WCAG21/quickref/</p>
+		</section>
+
+		<section id="objective-1">
+			<h2>Objective 1: Help users understand what things  are and how to use them</h2>
+			<section>
+				<h3>Make the purpose of your page clear</h3>
+				<p>Use a  clear title or heading that summarizes the purpose of a page, or other clear signposts that have been tested by users with cognitive disabilities.</p>
+				<section>
+					<h4>How it helps </h4>
+					<p>This helps many people, including those with poor memory, attention, or anyone who is easily distracted. This includes people with age-appropriate forgetfulness, or Attention-Deficit/Hyperactivity Disorder.</p>
+					<p>For example, someone with mild dementia is using online shopping. They get distracted and then when they look at the screen again they have forgotten what they were doing. Put a clear heading at the top of each page that shows clearly <strong>what the page is about and what they are doing</strong>.</p>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<p>Heading need to clarify the purpose of this specific page</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> example:  Headings tell me exactly where I am</p>
+					<!-- <div><img alt="Headings tell me exactly where I am" src="img/tell-me-where-success.png" height="486" width="700"></div> -->
+					<p><strong>Failure </strong>example: Heading that doesn't clarify the step in a form</p>
+					<p><strong>Todo: add this example </strong></p>
+					<p><strong>Failure </strong>example: Service not available…. what service? </p>
+					<p>I have to remember what I was doing to know what service this is about.</p>
+					<!-- <div><img alt="Service not available" src="service-not-available-failure.png" height="486" width="600"></div> -->
+				</section>
+				<section>
+					<h4>Technical Resources and History: </h4>
+					<p>More technical details and testable wording proposals are available at: </p>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/clear-purpose.html">coga github: clear purpose</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/55">WCAG issue 55</a></p>
+					<p><a href="https://github.com/w3c/wcag21/pull/10">Pull request</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Make Each Step Clear</h3>
+				<p>In a multistep process, clearly indicate the steps completed, the current step and the steps pending. Ensure the user can quickly determine the current location and progress within a sequence.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Clearly indicating the current location and progress helps a user who loses focus or gets distracted reorient to their current activity without reading a great deal of content or restarting.  Providing information about the steps that need to be completed ensures that a user who may find a process difficult to complete can determine if they can successfully finish. </p>
+					<p>Examples include:</p>
+					<ul>
+						<li>someone with dementia loses focus and then can not remember what they were doing</li>
+						<li>someone with an attention disability gets distracted and then needs to pick up were they left off</li>
+						<li>someone with a learning disability is not sure if this application has too many steps and if they will manage. By seeing they are half-way through they can gauge if they can cope with the entire process.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> example: Using breadcrumbs to indicate the current step in the process as well as past and future steps. </p>
+					<p><strong>Failure</strong> example:</p>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://www.google.com/url?q=https://rawgit.com/w3c/coga/master/extension/clear-purpose.html&sa=D&ust=1554766212519000&usg=AFQjCNGJ_LQBFclVgWOf1XGIVGB9v8ebgQ">Clear Purpose</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Use Graphical indicators to group and highlight information</h3>
+				<p>Use graphical indicators to help people identify when items that are associated with each other or have a different purpose to surrounding information.</p>
+				<p>Examples of common graphical indicators are:</p>
+				<ul>
+					<li>Group summaries of content with images, such as using a card design</li>
+					<li>Flag importing important information, such as using call out boxes</li>
+					<li>Indicate different types as information, such as placing quotes in speech bubbles.</li>
+				</ul>
+				<section>
+					<h4>How it helps</h4>
+					<p>Visual of grouping of information is based on the psychological principle of <a href="https://www.sciencedirect.com/science/article/pii/001002859290014S">Common Regions</a>. It has been found that the grouping information using a border or colour shading makes it easier for people to identify groups, even if the content of the group is not similar.</p>
+					<img src="">
+					<img src="">
+					<p>Figures: Example of the Common Regions grouping principle.</p>
+					<p>These graphical indicators allow people to identify structure and information types without reading text or have problems distinguishing groups of information. Using the graphical indicators consistently to indicate similar types of items aids with navigating content and reduces the cognitive load.</p>
+					<p>People who have difficulty with recognising or comprehending written language, having difficulties with concentration or memory can find it easier to process graphical cues.</p>
+					<p>People on the autism spectrum are more likely to identify graphical indicators and the use of colour for grouping content than other approaches.</p>
+
+				</section>
+				<section>
+					<h4>More details</h4>
+					<p>Graphical indicators should also be presented programmatically to enable assistive technologies to interpret the graphical indicators. It is also important the graphical indicators do not clutter the interface and are used consistently as that can add an additional cognitive load for users to process.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success </strong>example:</p>
+					<p><strong>Failure </strong>example:</p>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p>ISO/FDIS 9241-112 [i.23]</p>
+					<p>ETSI 203 350 Guidelines for the design of mobile ICT devices and their related applications for people with cognitive disabilities: 12.4.2, 12.4.16, 12.4.16, 12.4.18, 12.4.21</p>
+				</section>
+			</section>
+			<section>
+				<h3>Chunk Media</h3>
+				<p>Long pieces of media are divided into logical segments with a description of each segment.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Providing shorter logical segments allows a person to find and review a specific topic.  If that person loses concentration or steps away, clear segmentation allows them to easily find their place in the material and start again. This is especially important for educational style content where review is often necessary.</p>
+					<p>Chunking media also allows for each segment to be given a unique URL and so easily referenced and shared.</p>
+					<p>For example:</p>
+					<ul>
+						<li>Some videos can be naturally organized into chapters or segments</li>
+						<li>A podcast can be split into segments rather than a single one hour recording</li>
+					</ul>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<ul>
+						<li><strong>Six minutes or less</strong>: Media should typically be divided into segments that are 6 minutes or less in duration.</li>
+						<li><strong>Navigable</strong>: Navigation to each media segment, and a unique, descriptive label must be provided.</li>
+						<li><strong>Logical order</strong>: Navigation to media segments are presented in a logical order.</li>
+						<li><strong>Exception</strong>: Media that has no logical breaking points, do not need to be subdivided.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<ul>
+						<li><strong>Success </strong>example: A 30 minute video is divided into 5 sections, each with a descriptive link to play from that point onwards.</li>
+						<li><strong>Failure </strong>example: A 30 minute video contains no subdivisions or descriptions of sections, forcing the user to play it from the beginning or guess starting locations within the video.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/clear-purpose.html">coga github: clear purpose</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/55">WCAG issue 55</a></p>
+					<p><a href="https://github.com/w3c/wcag21/pull/10">Pull request 10</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/40">WCAG issue 40</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Make the purpose of each section clear</h3>
+				<p>Make the purpose of each section clear. Often this involves providing clear headings that briefly defines the purpose of each section. Extraneous information that is not directly relevant to the main purpose of a page should be distinctly separated and programmatically determinable.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Each page or section of content should be organised and marked so that its purpose is obvious. This might be through the use of headings or labels or even a pyramid style of writing or even non textual markers (with suitable alternatives). A clear organisation of content into pages and sections with obvious purpose allows users to more easily locate relevant sections and to be confident that those they read in detail will match their purposes. There will also be no need to read all the content in case something important is missed. For example, Ads that appear in-line in a section of content are rarely related to the purpose of a section and can be placed in a separate clearly delimited section.</p>
+					<p>Here are some examples of how this will help people:</p>
+					<ul>
+						<li>A person with memory issues may need a clear heading structure to stay focused.</li>
+						<li>Someone with an attention disability gets distracted and then needs to pick up where they left off and headings help</li>
+						<li>A slow reader may depend on a heading structure to find important information they need without forcing them to read the whole document.</li>
+						<li>Someone with dementia loses focus and then can not remember what they were doing</li>
+						<li>Someone with a learning disability is not sure if this application has too many steps and if they will manage. By seeing they are halfway though they can gauge if they can cope with the entire process.</li>
+					</ul>
+					<p>For example, An elementary school publishes a weekly newsletter with interesting stories about activities and important announcements. Important announcements include early school dismissal. If the newsletter has a good heading structure, it will be easier for a parent who is a slow reader to find the important announcements about early school dismissal. Without a good heading structure, the important early dismissal information can be easily missed. </p>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<ul>
+						<li>The heading structure should create an outline of the document that could serve as an abstract of the whole document.</li>
+						<li>Heading structure makes the content easier to scan and find more detailed information that a person needs at a moment.</li>
+						<li>Want to know more:  See articles by Ginny Redish including: <a href="http://www.redish.net/images/stories/PDF/AARP Audience-Centered Heuristics.pdf">AARP Audience-Centered Heuristics: Older Adults</a>.
+							<li>“Clearly label content categories; assist recognition and retrieval rather than recall.“</li>
+							<li>“If pages are dense with content, is content grouped or otherwise clustered to show what is related?” </li>
+
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success </strong>example:</p>
+					<ul>
+						<li>(find from bbc gel)</li>
+						<li>Show an excellent example with headings in html</li>
+						<li>Section Abstract - one sentence that describes the purpose of this section.</li>
+						<li>Collapsable sections</li>
+					</ul>
+					<p><strong>Failure </strong>example:</p>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://w3c.github.io/coga/design/#make-the-purpose-of-each-section-clear and isue 40"></a>WCAG issue 40</p>
+				</section>
+			</section>
+
+			<section>
+				<h3>Make it clear what are controls and how they should be used</h3>
+				<p>Use a clear design for controls by:</p>
+				<ul>
+					<li>Using a common style on controls (for example:  links being underlined)</li>
+					<li>Using common  design pattern on links and controls  (for example: clicking on a link takes you to the page)</li>
+					<li>Make all the borders of controls clear other than textual links  (for example: a help icon has a border)</li>
+				</ul>
+				<p>When this is not possible, provide instructions that explain their use. Instructions should be on the same page or one click away and written in plain language. </p>
+				<section>
+					<h4>How It Helps</h4>
+					<p>Using common style and design pattern on controls makes it easier to recognise and understand how to use it. Controls are parts of web pages that do something, e.g. a link, button, checkbox. The goal of these controls is to have someone use them. </p>
+					<p>Some users have trouble when controls have a different look, color or shape than they have used before. For example, when links do not have underlines and blue or purple text (even if this appears with focus) some users will not know there is a link.</p>
+					<p>If you have difficulty with memory, it can be harder to use unique controls. It may be slower to find them on the page. And even if they work just a little differently than similar ones, some may need to relearn how to use them each time they need to use them.</p>
+					<p>Using typical controls on the page will help people know how to use them. When using more unique controls, include easy to follow instructions and make them easy to find. Regardless of how a user uses the page (vision, auditory, voice input) it should be easy to identify, understand and use the controls.</p>
+					<p>If you are designing a new control, make them easy to identify (I know they are there), understand (I know what they do), and use (I know how to use them). Test with people with different cognitive and learning disabilities.  Use a simple style or have easy to follow instructions that explain their use.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Good Examples</strong>:</p>
+					<p>Links with an underline and/or blue text color (or purple for already visited links), or both clearly identify links. Once a color is selected to be the primary link text color, other text on the page does not use this.</p>
+					<p>In the example below, the links have an underline and are blue, or they are blue. There is no text that is blue that is not a link.</p>
+					<!-- <div>
+						<img alt="Links with an underline and/or blue text color" src="img/link-with-underline.png" height="486" width="700">
+					</div> -->
+					<p><strong>Poor Examples</strong></p>
+					<p>Links without an underline or usual blue text color (or purple for already visited links), even those that become clear when they receive focus are more difficult to use. Some users may not know they are there. </p>
+					<p>In the example below, the links do not have an underline, and they are not blue. Also, this page lacks a consistent link text color so easy to follow instructions would not be helpful.</p>
+					<p>The black rectangles are around text that is a link, some of which has green text, others with black. The red circles are around green text which is not a link. </p>
+					<!-- <div>
+						<img alt="Links without an underline or usual blue text color " src="img/link-without-underline.png" height="486" width="700">
+					</div> -->
+				</section>
+				<section>
+					<h4>Technical Resources and History</h4>
+					<p>Questions raised in the <a href="https://github.com/w3c/wcag21/issues/36">github </a>discussion:</p>
+					<ul>
+						<li>Defining controls</li>
+						<li>
+							2.4.4 Link purpose. "The purpose of each link can be determined from the link text alone or..."
+							<ul>
+								<li>
+									Difference: how do I know it is a link?
+									<ul>
+										<li>E.g. can I ask all links to be underlined and blue if this is not their automatic state?</li>
+										<li>
+											I know something is a link because:
+											<ul>
+												<li>Underlined and blue (or purple if a visited link) – if I have vision</li>
+												<li>Announces as link – if using text to speech tool</li>
+												<li>Cursor change</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>3.2.4 Consistent Identification. Components that have the same functionality within a set of content are identified consistently.
+							<ul>
+								<li>If unusual, even if consistent, this does not make it easy to identify</li>
+							</ul>
+						</li>
+						<li>3.2.2 Labels or instructions are provided when content requires user input.
+							<ul>
+								<li>If style selected requires instructions, slows down person using them.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<h3>Each region and its controls can be clearly recognized</h3>
+				<p>Make the relationship between different parts of the page clear by:</p>
+				<ul>
+					<li>Use clear dividers between different sections in a page that may have separate controls or a scroll bar </li>
+					<li>Use clear dividers around areas in a page with different functions, such as call out boxes, navigation bars, and advertisements.</li>
+				</ul>
+				<p>Avoiding multiple scrolling areas/regions in a page will also help.</p>
+				<section>
+					<h4>More details</h4>
+					<ul>
+						<li>Examples of clear dividers include high contrast borders or white space. A change in background color can be a clear divider if the contrast is strong enough.</li>
+						<li>Sometimes the structure and relationships can be made clear through personalization or user agents and good use of semantics in the code  (see WCAG 2.0  SC 1.3.1).</li>
+					</ul>
+				</section>
+				<section>
+					<h4>How it helps</h4>
+					<p>Controls that affect only one section of a page can be confusing. Having a border around the controls and the relevant page section is helpful.  If the controls cannot be next to the area they affect, check with user testing that the users find all the page relationships clear and immediately know how to use the controls. </p>
+					<p>For example, consider someone with dementia trying to work out which scrollbar to use if there are more than one embedded in scrollable regions. When users try the wrong scrollbar, they do not get the effect they desire. Many users will look again at the content, try and work out what they are supposed to do, and discover the correct scrollbar. However, many people with cognitive disabilities will not be able to work out what they did incorrectly. Others will feel cognitive overload, and will give up before they try. They may assume the application is broken, or that it is just too complicated for them. For all of these users, the application will not be usable.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Failures Examples</strong></p>
+					<ul>
+						<li>When scrollbars are embedded in scrollable regions, and it is unclear which scrollbar to use.</li>
+						<li>The search box relates to one area of a page, and not for another area. It is unclear which area the search is for.</li>
+						<li>Controls act on one region and t is not clear which areas are acted on.</li>	
+					</ul>
+					<!-- <div>
+						<img alt="Failures Examples Each region and its controls can be clearly recognized" src="img/region-controls-recognized-failure.png" height="486" width="600">
+					</div> -->
+					<p><strong>Pass Examples</strong></p>
+					<p><a href="https://usercontent.irccloud-cdn.com/file/Zv08pNWw/gov-uk-sections.png"></a>GOV.UK</p>
+				</section>
+				<section>
+					<h4>Technical References </h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html"> On coga github: clear-structure-and-relationships.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/26">wcag issue 26</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Clear Structure and Relationships</h3>
+				<p>Structure, content and controls must be easy to identify and understand.</p>
+				<p>The user should not experience difficulty identifying which control to use with specific parts of the content, or how to use the controls. The user should be provided visual cues and text that communicate the structure and layout of the page.</p>
+				<section>
+					<h4>How It Helps</h4>
+					<p>This helps many people, including those with cognitive disabilities that impact problem solving skills, those that get overwhelmed when presented with a lot of text, and those with difficulties with more complicated tasks. This can include some individuals with early stages of dementia, people who have had a concussion or a stroke, people with intellectual disabilities, and others. Those impacted may not complete tasks, miss key information, and not return to pages that are complicated to use and understand.</p>
+					<p>By creating clear layouts, with easy to use controls, a greater number of individuals can focus on the task instead of spending time figuring out how to use the controls and information. They easily find key information, and are more likely to return to the page.</p>
+					<p>One example: do not have two scroll bars close together. Some users may find it difficult to determine which one to use with a particular section of content. Instead, use clear visual layout and placement of the scroll bars, break the content into two separate pages, or consider removing unnecessary information from the page.</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+					<p>Some people with disabilities need a clear layout to help them know how to use the information. When structure and relationships are unclear, end users may need to experiment with different layouts and structures until they work out how to use them. However, people with cognitive disabilities may not be able to do so, and may not be able to use the content or application.</p>
+					<p><strong>Example 1: </strong>A website has 2 scroll bars, each operates a different section. When users try the wrong scroll bar, they do not get the effect they desire. Many users will look again at the content; try and work out what they are supposed to do; and discover the correct scroll bar. However, many people with cognitive disabilities will not be able to work out what they did incorrectly. Others will feel cognitive overload, and will give up before they try. They may assume the application is broken, or that it is just too complicated for them. For all of these users, the application will not be usable.</p>
+					<p><strong>Example 2: </strong>Chunks of content run into each other with a "flat design". Whereas some users can work out which chunks belong together, many users with cognitive disabilities will find it challenging or impossible. Thus, all the benefits of chunking content are lost.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples include:</p>
+					<ul>
+						<li><strong>Using Summary Content</strong> - Placing an outline of content at the top of the page, and/or key information and elements “above the fold” will provide greater access. For example, in an email application, the send button should be near the top so it is easy to find and use.</li>
+						<li><strong>Separating Content</strong> - White space, call outs, and other methods should be used in addition to headings to help define sections of content. This organizes the information on the page so it is easier to determine layout and find specific information.</li>
+						<li><strong>Separating Interactive Elements </strong>- Place interactive elements like scroll bars and buttons close to the content they can impact. Also, keep interactive elements further from content to which they do not apply. This makes it easier to identify which elements will impact each section of content.</li>
+					</ul>
+					<p><strong>Failure</strong> examples include:</p>
+					<ul>
+						<li>Users may not be easily able to find features that do not display in their initial view of the page (items “under the fold”). For example, in an email application, the send button being located under the email’s body text.</li>
+						<li>Dense text, with little white space, no call outs, and a lack of visually differentiated headings to define sections.</li>
+						<li>Pages with scroll bars close together that impact different content areas. </li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html">On coga github: clear-structure-and-relationships.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a> and <a href="https://github.com/w3c/wcag21/issues/39">WCAG issue 39</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Sub-menu items that are clearly associated with the main menu items under which they fall</h3>
+				<section>
+					<h4>How it helps</h4>
+					<p>Confusion can occur when visual hierarchy of information is not immediately apparent to the user.  Distinction between levels in content hierarchy may be difficult to understand or perceive due to minimal type size or type weight differences or color differences that are not easily perceived or understood.  Furthermore hierarchy solely dependent on small unique design elements [s.a. rotating chevrons unique similar sized icons] may create confusion.  </p>
+					<p>For example a drop down accordion menu of additional submenu items may not be viewable without understanding it needs to be clicked (or ‘rolled over’)  as indicated by  a small unique design element.</p>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<p>Small design elements that indicate submenu items will be presented that aren’t always readily apparent or meaningful to the user and not universally adopted. </p>
+					<p>Examples include a chevron (triangle). In different designs It can be either left facing right facing, up facing or down facing depending on state and the unique design standard affecting interpretation of state. </p>
+					<p>Confusion can occur when a right facing chevron can indicate that more information will be presented on the current page when clicked or it may mean that information is currently being presented, or it may indicate that it takes the user to a new page.  Consistent and general best practices should be used to make it understandable to the user. </p>
+					<p>Furthermore a series of these nested elements on a long page can create visual hierarchy confusion if dependent solely on interpretation of design elements.</p>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<p>Create a visually clear hierarchy of in-line information in either a revealed or hidden state. Clearly indicate when text is hidden or when it can be hidden or revealed.</p>
+				</section>
+				<section>
+					<h4>Examples </h4>
+					<p>An example of consistent “+” sign to show that additional information will be shown when pressed.</p>
+					<p><strong>Success</strong> example: “+”</p>
+					<p><strong>Failure</strong> example: “<”</p>
+					<p>If there is no clear indication that more information will or will not be revealed when clicked on. Inconsistent styles or left right arrow directions can confuse user to differentiate between revealed state and hidden state.</p>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html">On coga github: clear-structure-and-relationships.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Use a design that the user is likely to recognise and understand</h3>
+				<p>Use common design elements, affordances, and patterns that are familiar to most users.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Many users, such as those with mild cognitive impairment or dementia, cannot easily learn and remember new design metaphors. Without these skills, it can be much harder or impossible to locate desired items to interact with, and to know what interactions may do. Users can feel lost or overwhelmed.</p>
+					<p>Because common design elements are repeated often over a long period of use across many sites, users are more likely to recognize the interactions needed.</p>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<p>Common design elements, affordances and patterns include:</p>
+					<ul>
+						<li>Links that look like links and buttons look and act like buttons
+							<li>For example, underline links with a standard style throughout a page</li>
+							<li>Links general navigate to a new page</li>
+							<li>Buttons general perform an action</li>
+						</li>
+						<li>
+							Uses common design patterns, such as are documented in the ARIA authoring best practices or are used in the most popular sites
+							<li>Very common navigation design patterns and common icons.</li>
+							<li>A platform specific user interface design for navigation mechanisms and icons</li>
+							<li>An adaptive user interface design that can be personalized (see above).</li>
+						</li>
+						<li>
+							Create a standard Visual Hierarchy - Place elements where the user is expecting them, such as
+							<li>Putting the search in the top right hand corner in a website</li>
+							<li>The link to the home page is in the top left hand corner</li>
+							<li>Link to ‘contact us’ is in the top navigation</li>
+							<li>Link to the site map is in the footer area</li>
+							<li>Submit button is at the bottom right for a form</li>
+						</li>
+						<li>
+							User interface (design) from a prior version: Allow users to revert back to a prior version of the application that they are familiar with.
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<p>When deciding pages, select standard components that look and behave the way users expect. Use standard conventions for layout such as the home link in the upper left corner, navigation at the top, search in the upper right, etc. and create an obvious visual hierarchy in the page. </p>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p>On coga github: familiar-design-a.html</p>
+					<p><a href="https://github.com/w3c/wcag21/issues/49">wcag issue 49</a>, <a href="https://github.com/w3c/wcag21/pull/121">pull request 121</a></p>
+					<p>On coga github: familiar-design-aa.html</p>
+					<p><a href="https://github.com/w3c/wcag21/issues/35">wcag issue 35</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Use a consistent visual design</h3>
+				<p>Use a consistent visual design with a stable look and feel.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Those with difficulty understanding how to interact with information need to use cues like color, layout and other visual information to help them know where to look, what they should do and how they should complete that task. </p>
+					<ul>
+						<li>Ensures consistent user experience by providing familiarity and building confidence</li>
+						<li>Makes it possible to easily use and interact with content</li>
+						<li>Aids the completion of tasks</li>
+					</ul>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<p>This includes:</p>
+					<ul>
+						<li>Design themes, including heading styles, font choices, symbols, colors, visual appearance of controls, buttons and links should be consistent.</li>
+						<li>Headings with the same structural level have the same font and visual style.</li>
+						<li>Icons, controls and menu items that have same function and role have the same look and style</li>
+						<li>State and focus for elements with similar function and roles have the same style used consistently across a site.</li>
+						<li>Layout should be consistent, including position of interactive elements and navigational controls.</li>
+						<li>Structure of content and style of presenting information should be consistent throughout, such as organization of block text, images and bullet points.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<p>Plan the design for your information before adding content. Think about the colours, font choices and areas where text and images will appear. </p>
+				</section>
+				<section>
+					<h4>Examples </h4>
+					<p><strong>Success</strong> examples:</p>
+					<p>A web page has two submit buttons, both should visually look and function the same way.</p>
+					<p>All selected radio buttons on the site look the same.</p>
+					<p>When all links on a page have keyboard focus the focus indicator looks the same.</p>
+					<p><strong>Failure</strong> examples:</p>
+					<p>3 pages have a submit button, but each one is located in a different place on the page.</p>
+					<p>There are 6 heading level 2s on a page. 4 are styled using Times New Roman, and 2 use Helvetica.</p>
+				</section>
+				<section>
+					<h4>On coga github: consistent-identification-and-styles.html</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/consistent-identification-and-styles.html">On coga github: consistent-identification-and-styles.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/28">wcag issue 28</a></p>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/consistent-cues.html">On coga github: consistent-cues.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/31">wcag issue 31</a></p>
+					<p><a href="https://github.com/w3c/wcag21/pull/108">wcag pull request 108</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Use symbols that help the user</h3>
+				<p>Add familiar images and pictographics with a single meaning to aid understanding.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>People who have language comprehension difficulties who may be able to mechanically read but not understand the content or those who have learning and/or reading difficulties may rely on symbols to understand content and navigate to content they need.</p>
+					<p>For example, a person with aphasia, has the intellectual ability to understand concepts, but struggles with language. They may be dependent on the use of symbols to browse pages for information.</p>
+					<p>It can also help the elderly population who can find cluttered pages with dense text hard to read on a screen. Clear symbols and images that act as signposts to the text content can be very helpful.</p>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<ul>
+						<li>Use personalization semantics  (add link)</li>
+						<li>Use clear and unambiguous symbols that can easily be seen and made larger</li>
+						<li>Be aware of cultural differences</li>
+						<li>In left-to-right languages, place the image to the left of the text</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<p>Provide symbols besides key texts, headings, contact us  and  help</p>
+					<p>Find the common symbol used</p>
+				</section>
+				<section>
+					<h4>Examples </h4>
+					<p><strong>Success</strong> example:</p>
+					<p>A set of instructions where the bullet points are symbols relating to the content within the text.</p>
+					<p><strong>Failure</strong> example:</p>
+					<p>A page with important instructions and no symbols or images to guide the reader or a very cluttered page of symbols that confuses. </p>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://www.w3.org/TR/WCAG20-TECHS/G103.html">G103:</a> Providing visual illustrations, pictures, and symbols to help explain ideas, events, and processes</p>
+					<p>Additional Resources:</p>
+					<ul>
+						<li><a href="https://rawgit.com/w3c/coga/master/extension/extra-symbols.html">More technical details with regards to Symbols.</a></li>
+						<li><a href="https://www.widgit.com/about-symbols/how-symbols-are-used/index.htm">How Symbols are used</a></li>
+					</ul>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/extra-symbols.html">On coga github: extra-symbols.html</a>, and <a href="https://github.com/w3c/wcag21/issues/50">wcag issue 50</a>, PR # 115</p>
+				</section>
+			</section>
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</section>
+
+			
+		</body>
+	</html>
