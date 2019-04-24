@@ -64,7 +64,7 @@
 			<section>
 				<h3>Patterns</h3>
 				<section>
-					<h4>Build forms so that people make less mistakes</h4>
+					<h4>Pattern: Build forms so that people make less mistakes</h4>
 					<ul>
 						<p><a href="https://www.w3.org/TR/WCAG20/#input-errordef">Input errors</a> should be automatic corrected (where the correction is reliable) if suggestions for corrections are known, the suggestions are provided to the user</p><li>In a text field, accept as many formats as possible. For example accept different formats of  phone numbers and correct <a href="https://www.w3.org/TR/WCAG20/#input-errordef">Input errors</a> automatically</li>
 						<li>Use an interface were only valid  input can be selected</li>
@@ -125,7 +125,143 @@
 					</section>
 					<section>
 						<h5>Technical details</h5>
-						<p>The following are proposals for WCAG. They experiment with more testable language. <a href="https://rawgit.com/w3c/coga/master/extension/minimize-errors.html">coga on github: minimize-errors.html</a></p>
+						<p>The following are proposals for WCAG. They experiment with more testable language.</p>
+						<p><a href="https://rawgit.com/w3c/coga/master/extension/minimize-errors.html">coga on github: minimize-errors.html</a></p>
+					</section>
+				</section>
+				<section>
+					<h4>Pattern: Make it easy to undo errors</h4>
+					<p>Allow the user to check their work before submitting a form so that they can correct any mistakes.Once they have fixed their mistake it should be easy to get back to the place they were at (without redoing extra steps).</p>
+					<p><strong>For financial transactions and important information: </strong>Allow the user to easily cancel the transactions and provide simple instructions including the amount of time the user has to cancel a transaction.</p>
+					<section>
+						<h5>How it helps</h5>
+						<p>People with cognitive and learning impairments make many more mistakes in filling out forms than the general population. When mistakes cannot be easily corrected they can not complete the task.</p>
+						<p>This helps people with cognitive disabilities for safely using forms and reduces the consequences that are the result of a mistake.</p>
+						<p>For example, a user with a memory impairment may not remember that they have already added an item to their shopping cart and may add the item a second time. They may confused the dates when booking a trip, and many other mistakes. </p>
+						<p>It is essential that people with cognitive impairments have the opportunity to check their work AND can fix their mistakes easily.</p>
+						<p>For people with cognitive disabilities, mistakes being theoretically reversible is not enough. Often the process of reversing a transaction is too complex for them to manage without help. They may not have access to that help meaning they have to live with all the mistakes they have made. For example, when inputting credit card information incorrectly these mistakes can be devastating. In addition if the process of correcting mistakes is too difficult, users may give up, either losing the transaction or buying unwanted items because of the one required item.</p>
+						<p>The effect of this happening multiple times is devastating and can result in a large number of users with disabilities stopping to use the Internet for many tasks.</p>
+						<p>Allowing the user to change the number of items in the shopping cart at any time can significantly reduce the chances of these mistakes. </p>
+						<p>A summary of the order, including product quantities and other costs before the final submission, gives the user the chance to identify any errors and make changes to the order.In this example given, a summary of the purchase helps the user  see the error in quantity as well as a higher than expected order total.</p>
+						<p> In some cases a user may realize that a mistake has been made after the final submission of data. Simple language instructions on how to cancel transactions and  helping  the user understanding the amount of time the user has to cancel a transaction and makes them less susceptible to scams</p>
+						<p>In another example, a user with Attention-Deficit/Hyperactivity Disorder purchasing a travel ticket on a website may struggle with details and may have a low attention span. The successful completion of the order relies on the information provided at multiple steps in the process.An error due to lack of accuracy or attention to detail such as an incorrect street number or zip code in the billing address will result in the order not going though. If a summary is not provided before submitting the final order or is not clear the user may not understand the reason for the declined payment and give up on the order. The user may also give up if there is not an easy way to make correction, and all the order needs to be redone.</p>
+					</section>
+					<section>
+						<h5>More details</h5>
+						<p>This typically includes:</p>
+						<ul>
+							<li>Change: It is simple for the user to review all the data and correct mistakes, including mistakes that might not be automatically identified. The user can change information via clearly labeled actions and get back to the place they were at, in one clearly labeled action without unwanted loss of data. (Some data may need to be entered if it is dependent on the item that was changed.)</li>
+							<li>Confirmed: A summary is provided before submitting important information and the user is told when they are about to submit the final information.</li>
+							<li>Time frames and instruction for cancelling transactions are clear and easy to follow.</li>
+						</ul>
+					</section>
+					<section>
+						<h5>Getting started</h5>
+						<p>Start with forms were a mistake can have serious consequences such as financial loss or vulnerability.</p>
+					</section>
+					<section>
+						<h5>Examples </h5>
+						<p><strong>Success </strong>examples:</p>
+						<ul>
+							<li>Provide a summary before submitting important information. Make it clearly labelled to repair information and one click to return to the summary</li>
+							<li>Provide clickable breadcrumbs that allow users to see the previous steps, go back, and change them</li>
+						</ul>
+						<p><strong>Failure </strong>examples:</p>
+						<ul>
+							<li>Provide a summary before submitting important information. But it is hard to repair the information</li>
+							<li>Provide a summary before submitting important information. But then you have to redo a lot of other non-dependent information </li>
+						</ul>
+					</section>
+					<section>
+						<h4>Technical details</h4>
+						<p>The following are proposals for WCAG. They experiment with more testable language.</p>
+						<p><a href="https://rawgit.com/w3c/coga/master/extension/error-prevention-legal.html">On coga github: error-prevention-legal.html</a></p>
+						<p><a href="https://github.com/w3c/wcag21/issues/33">wcag issue 33</a></p>
+						<p><a href="https://github.com/w3c/wcag21/pull/104">pull request 104</a></p>
+					</section>
+				</section>
+				<section>
+				<section>
+					<h3>Pattern: Use clear labels and instructions</h3>
+					<p>Provide clear instructions up front when appropriate that is clear, concise, and accessible. Ensure labels are also clear.</p>
+					<section>
+						<h4>How it helps </h4>
+						<p>Clear instructions help prevent user errors up front. This reduces frustration and enhances the user’s autonomy and independence because they can avoid asking for help. This helps anybody with memory issues, people new to culture, people on autism spectrum who may miss cultural context.</p>
+					</section>
+					<section>
+						<h4>More details [optional]</h4>
+						<p>Provide instructions at the start of the process, not simply in an error message.</p>
+					</section>
+					<section>
+						<h4>Getting started [optional]</h4>
+						<p>In a system with common errors, tackle the most impactful errors first and add additional guidance.</p>
+					</section>
+					<section>
+						<h4>Examples</h4>
+						<p><strong>Success</strong> examples</p>
+						<ul>
+							<li>Provide an image of a passport with the number highlighted to indicate where the number is that the user should enter.</li>
+							<li>Explicitly say which day of the week is the start (e.g., Sunday or Monday) in calendar control when booking a hotel.</li>
+						</ul>
+						<p><strong>Failure </strong> examples</p>
+						<ul>
+							<li>Request a passport number, but the passport may have several numbers and the user is uncertain which is requested.</li>
+							<li>Site does not clarify start of week, and user reads calendar control wrong and books hotel for wrong day.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Technical Resources</h4>
+						<p>...</p>
+					</section>
+				</section>
+				<section>
+					<h3>Avoid data loss and “time outs”</h3>
+					<p>Avoid timeouts. When this is not possible inform user of the amount of time required to complete the process (before timeout) and if user will lose entered data if a timeout occurs. </p>
+					<section>
+						<h4>How it helps </h4>
+						<p>The use of timed events can present significant barriers for users with cognitive disabilities, as these users may require more time to read content or to perform functions, such as completing an online form.</p>
+						<p>During the completion of an online process for reserving a hotel room and purchasing a plane ticket, a user with a cognitive impairment may become overwhelmed with the amount of instruction and data input required to complete the process. The user may not be able to complete the process in one sitting, and may need to take a break. Users should be able to leave a process without losing their current place within the process, and without losing data that have already been entered. If users cannot take a break and check their work, many will often be unable to complete a task correctly.</p>
+						<p>While making a purchase on an e-commerce Web site, a user with a cognitive disability may not remember required information (e.g., a phone number or a zip code) that may seem easy to remember for users without a cognitive impairment. Users with cognitive disabilities may need additional time to look up the information required to complete a transaction, without losing their place in the process, and without losing data that have already been entered.</p>
+						<p>In another example, users’ cognitive skills may temporarily diminish as they get tired. They then must stop the task for that day, and continue it when they are feeling better, and when their reading or processing skills are back to their higher levels.</p>
+						<p>For situations where the absence of a timed event would significantly change the intended functionality of an application (e.g., an auction or another real-time event), it is important to ensure that users with disabilities are properly notified. Notifications should include information about timed events, and an indication of the duration of the time given. As well, they should include mechanisms clearly labeled to adjust, extend, or stop the duration of an event, to allow users to fully engage and interact with Web content and functionality. For example, if an e-commerce Web site's checkout process provides secure credit card transactions, the user is notified of the timeout, and is given at least 120 seconds to extend it.</p>
+						<p>These experiences have been reported by members of the task force who have various cognitive impairments. There is significant user research indicating that timed events rarely help anyone; and can cause stress and frustration.</p>
+						<p>It should be noted that many users, within 20 seconds, cannot read instructions to extend a time limit. We thus extended the time limit to 120 seconds.</p>
+						<p>We also require simple text conforming to the understandable language design requirement.</p>
+						<p>This helps users who need additional time performing tasks or reading content. This can include the following:</p>
+						<ul>
+							<li>A Web site uses a client-side time limit to help protect users who may step away from their computers. After a period of inactivity, the Web page asks if the user needs more time. If the user does not respond within 120 seconds, a timeout occurs. The user is able to request more time at least 10 times.</li>
+							<li>A Web page has a section that automatically updates with the latest headlines in a rotating fashion. There is an interactive control that is easy to activate and is labeled with simple text. It allows the user to extend the length of time, between each update, to as much as ten times the default. The control can be operated by mouse, keyboard, or touch.</li>
+							<li>A ticket-purchasing web site allows users two minutes to confirm purchase of selected seats, but warns users when their time is almost out. It allows users to extend this time limit at least 10 times using a simple action, which is labeled with simple text, such as a button labeled "Extend time limit".</li>
+							<li>In an auction, there is a time limit on the amount of time a user has to submit a bid. Because the time limit applies to all users who want to bid on an item, it would be unfair to extend the time limit for one user. Therefore, a time limit is required for this type of activity. No extension, adjustment, or deactivation of such a time limit is required by this design requirement.</li>
+						</ul>
+						<p>This pattern helps people with a variety of disabilities including the following:</p>
+						<ul>
+							<li>People with physical disabilities, who often need more time to react, to type, and to complete activities. - People with low vision need more time to locate things on screen, and to read. People who are blind, and who use screen readers, may need more time to understand screen layouts, to find information, and to operate controls. People, who have cognitive or language limitations, need more time to read and to understand. People who are deaf, and who communicate in sign language, may need more time to read textual information (which may be a second language for some).</li>
+							<li>In circumstances where a sign-language interpreter may be relating audio content to a user who is deaf, control over time limits is also important.</li>
+							<li>People with reading disabilities, cognitive limitations, and learning disabilities, who may need more time to read or to comprehend information, can pause content to have additional time to read it.</li>
+						</ul>
+					</section>
+					<section>
+						<h4>More details [optional]</h4>
+						<p>...</p>
+					</section>
+					<section>
+						<h4>Getting started [optional]</h4>
+						<p>...</p>
+					</section>
+					<section>
+						<div class="ednote">TODO add examples</div>
+						<h4>Examples</h4>
+						<p><strong>Success</strong> example</p>
+						<p>...</p>
+						<p><strong>Failure </strong> example</p>
+						<p>...</p>
+					</section>
+					<section>
+						<h4>Technical Resources</h4>
+						<p> <a href="https://rawgit.com/w3c/coga/master/extension/timed-events.html">On coga github: timed-events.html</a></p>
+						<p><a href="https://github.com/w3c/wcag21/issues/14">wcag issue 14</a></p>
+						<p><a href="https://github.com/w3c/wcag21/pull/116">pull request 116</a></p>
 					</section>
 				</section>
 			</section>
