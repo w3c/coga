@@ -16,7 +16,7 @@
 			<p>This document is a design guide to help make Web Content more usable for people with cognitive and learning disabilities (COGA).The guide is divided into themes. </p>
 			<p>There are also user stories and testing methodologies for each theme. Just understanding the themes and user stories may help make your content more accessible to some users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
 			
-				<P>If you are a person with a learning or cognitive challenge and have found other problems that we have not covered please let us know! You can email us with your comments and ideas at public-comments-wcag20@w3.org. </p>
+			<p>If you are a person with a learning or cognitive challenge and have found other problems that we have not covered please let us know! You can email us with your comments and ideas at public-comments-wcag20@w3.org. </p>
 			
 			<div class="ednote">This document is an appendix for <a href="https://w3c.github.io/coga/gap-analysis/usable.html" >Making content usable for people with cognitive and learning disabilities</a>. We are considering publishing it as a separate note.</a>
 			
@@ -33,44 +33,100 @@
 			<p class="ednote">EDITOR’S note: This is an early draft. We expect many editorial changes to make the content more clear and easy to understand. We will also change the format along the lines of https://www.w3.org/WAI/WCAG21/quickref/</p>
 		</section>
 
+		<h1>[... TODO Objectives 1 - 3 go here ...]</h1>
+		
 		<section id="objective-4">
-			<h2>Objective 4: Prevent the user from making mistakes and make it easy to correct mistakes when they do occur.</h2>
-			<p></p>
+			<h2>Objective: Prevent the user from making mistakes and make it easy to correct mistakes when they do occur.</h2>
+			<p>A good design and use of scripts will make errors less likely, but when they do occur the user should know how to correct them easily without stess or extra steps.</p>
+			<p>Completing forms and similar tasks is often overwhelming for most users with cognitive and learning disabilities. This includes relatively minor learning disabilities, such as Dyslexia, or attention related disabilities. </p>
+			<p>Many users with learning disabilities cannot remember numbers, such as those for their post/zip code, Social Security, or credit card. Many users even need to check their phone numbers. This makes entering information slow, and they may need to leave their desks or take breaks. </p>
+			<p>Also many users have short term memory issues that can make copying text difficult or impossible. For example, if you can remember 7 letters in your head at the same time. They may be able to remember one or two. This makes them much more likely to make mistakes copying as it requires you to remember the numbers or letter accurately.</p>
+			<p>Note that a lot can be achieved through supporting personalization.</p>
 			<section>
 				<h3>User testing</h3>
+				<ul>
+					<li>Can they easily fill in the form without making mistakes?</li>
+					<li>Was it pleasant to fill out the form? How is their mood changed?</li>
+					<li>Ask the users if they would find this easy to do if under stress or tiered?</li>
+					<li>Ask the user if anything was hard.</li>
+					<li>Ask the user how the form could be easier to fill out. Suggest some of the relevant design techniques bellow and ask if it would help them with this form </li>
+				</ul>
 			</section>
 			<section>
 				<h3>User stories</h3>
+				<ul>
+					<li>As a user who needs to look up my postal/zip code, I do not want a session to time out while I try to find the information needed.</li>
+					<li>As a user who needs to take breaks during tasks, such as completing a form, I want to be sure all my work is saved automatically if my computer crashes. I do not want to have to start over again, which can create a cycle of reentering my data; and making me more tired and more likely to make mistakes.</li>
+					<li>As a user with difficulty typing numbers in the right order, I want an interface that makes mistakes less likely.</li>
+					<li>As a user who finds entering information stressful, I want to enter as little information as I can so the task is more manageable.</li>
+				</ul>
 			</section>
-			<p></p>TODO - Patterns section missing?</p>
 			<section>
-				<h3>Make the purpose of your page clear</h3>
-				<p>Use a  clear title or heading that summarizes the purpose of a page, or other clear signposts that have been tested by users with cognitive disabilities.</p>
+				<h3>Patterns</h3>
 				<section>
-					<h4>How it helps </h4>
-					<p>This helps many people, including those with poor memory, attention, or anyone who is easily distracted. This includes people with age-appropriate forgetfulness, or Attention-Deficit/Hyperactivity Disorder.</p>
-					<p>For example, someone with mild dementia is using online shopping. They get distracted and then when they look at the screen again they have forgotten what they were doing. Put a clear heading at the top of each page that shows clearly <strong>what the page is about and what they are doing</strong>.</p>
-				</section>
-				<section>
-					<h4>More details</h4>
-					<p>Heading need to clarify the purpose of this specific page</p>
-				</section>
-				<section>
-					<h4>Examples</h4>
-					<p><strong>Success</strong> example:  Headings tell me exactly where I am</p>
-					<!-- <div><img alt="Headings tell me exactly where I am" src="img/tell-me-where-success.png" height="486" width="700"></div> -->
-					<p><strong>Failure </strong>example: Heading that doesn't clarify the step in a form</p>
-					<p><strong>Todo: add this example </strong></p>
-					<p><strong>Failure </strong>example: Service not available…. what service? </p>
-					<p>I have to remember what I was doing to know what service this is about.</p>
-					<!-- <div><img alt="Service not available" src="service-not-available-failure.png" height="486" width="600"></div> -->
-				</section>
-				<section>
-					<h4>Technical Resources and History: </h4>
-					<p>More technical details and testable wording proposals are available at: </p>
-					<p><a href="https://rawgit.com/w3c/coga/master/extension/clear-purpose.html">coga github: clear purpose</a></p>
-					<p><a href="https://github.com/w3c/wcag21/issues/55">WCAG issue 55</a></p>
-					<p><a href="https://github.com/w3c/wcag21/pull/10">Pull request</a></p>
+					<h4>Build forms so that people make less mistakes</h4>
+					<ul>
+						<p><a href="https://www.w3.org/TR/WCAG20/#input-errordef">Input errors</a> should be automatic corrected (where the correction is reliable) if suggestions for corrections are known, the suggestions are provided to the user</p><li>In a text field, accept as many formats as possible. For example accept different formats of  phone numbers and correct <a href="https://www.w3.org/TR/WCAG20/#input-errordef">Input errors</a> automatically</li>
+						<li>Use an interface were only valid  input can be selected</li>
+						<li>Accept voice prompts for people with a speech impairment</li>
+						<li>Use the default format of the users  location such as currency and temperature </li>
+						<li>Use autocomplete and personalization of form controls</li>
+					</ul>
+					<section>
+						<h5>How it helps</h5>
+						<p>People with cognitive or learning disabilities and aging users often abandon tasks and believe they cannot complete them if they receive too many errors. Error messages may be confusing.  Correcting errors is often difficult and frustrating for the user. Many users give up when they get successive errors</p>
+						<p>For example, while registering for an online banking account a form requires the input of the user's birthdate. The required input format is xx/xx/xxxx with a leading zero for single digits. If a single input field with no input correction is presented, a user with a cognitive disability may enter 1/3/1996 thus triggering an error notification. It may not be clear to the user that the required format is 01/03/1996 even if an example for instance, xx/xx/xxxx, is shown below the input field or in the error notification. </p>
+						<p>However a well designed form will make it easier to fill in the information and prevent the user from making mistakes.</p>
+						<p>Image of options being restricted to valid inputs</p>
+						<!-- <div>
+							<img alt="Image of options being restricted to valid inputs" src="img/restricted-to-valid-inputs.png" width="200" height="150">
+						</div> -->
+						<p>Autocomplete </p>
+						<!-- <div>
+							<img alt="Autocomplete" src="img/site-using-autocomplete.png" height="500" width="600">
+						</div> -->
+						<p>Minimizing user generated errors by automatically correcting them will also minimize error notifications. Error notifications may be distracting taking focus away from tasks and task completion. </p>
+					</section>
+					<section>
+						<h5>More details</h5>
+						<ul>
+							<li>Only correct errors if the correction is reliable. Otherwise, if suggestions for corrections are known, give the suggestions to the user. 
+								<ul>
+									<li>For example, “did you mean the first of February (01/02) or the second of January (02/01)</li>
+								</ul>
+							</li>
+							<li>
+								Calendars and dates
+								<ul>
+									<li>Calendars should default to the first relevant day. Work calendars should default to first working day of a user's locale.</li>
+									<li>Calendar based booking systems must avoid ability to book return date before departure date.</li>
+								</ul>
+							</li>
+							<li>
+								Temperature
+								<ul>
+									</li>Use the default temperature format of location. </li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h5>Examples</h5>
+						<p><strong>Success </strong>Example:</p>
+						<ul>
+							<li>Correct errors of the post code being written in the text field with the city or state information</li>
+							<li>User is unable to select inappropriate dates and a simple explanation provided should he/she try to do so.</li>
+						</ul>
+						<p><strong>Failure </strong>Examples:</p>
+						<ul>
+							<li>The booking form provides two calendars without clear labels and instruction and user is able to select dates without warning as to whether they are possible e.g. flight out on June 1st - flight return May 30th</li>
+							<li>User can select inappropriate dates without warning. Calendar merely grays out inappropriate dates which may not be noticed. No warnings provided.</li>
+						</ul>
+					</section>
+					<section>
+						<h5>Technical details</h5>
+						<p>The following are proposals for WCAG. They experiment with more testable language. <a href="https://rawgit.com/w3c/coga/master/extension/minimize-errors.html">coga on github: minimize-errors.html</a></p>
+					</section>
 				</section>
 			</section>
 		</section>
