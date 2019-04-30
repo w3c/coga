@@ -211,15 +211,52 @@
 				</section>
 			</section>
 			<section>
-				<h3>Avoid data loss and “time outs”</h3>
-				<p>Avoid timeouts. When this is not possible inform user of the amount of time required to complete the process (before timeout) and if user will lose entered data if a timeout occurs. </p>
+				<h3>Pattern: Provide flexibility in form inputs</h3>
+				<p class="ednote">This is a new Pattern added by Gareth, Jamie, Michael during the face to face. It was inspied by "Use clear labels and instructions"</p>
+				<p>Be forgiving of contextual variations in user input such as currency, time zone, and locale.</p>
+				<section>
+					<h4>How it helps </h4>
+					<p>Forgiving form entry processes help prevent user errors up front. This reduces frustration and enhances the user’s autonomy and independence because they can avoid asking for help. This helps anybody with memory issues, people new to culture, people on the autism spectrum who may miss cultural context.</p>
+				</section>
+				<section>
+					<h4>More details [optional]</h4>
+					<p></p>
+				</section>
+				<section>
+					<h4>Getting started [optional]</h4>
+					<p>For inputs that collect known data types, such as credit card or telephone numbers or geography names, accept common variations on the input format so users don’t have to convert or receive avoidable error messages.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>User inputting a financial value can specify the currency used, even if different from the site’s.</li>
+						<li>User inputs a credit card number with or without spaces, and the information is accepted.</li>
+						<li>User inputs telephone number as written including country code, region code, and number using brackets.</li>
+					</ul>
+					<p><strong>Failure </strong> examples</p>
+					<ul>
+						<li>User inputs value thinking it is US dollars, but the web site processes in Euros.</li>
+						<li>User inputs credit number with spaces only to be told it must include numbers only.</li>
+						<li>User inputs telephone number but is told it must include numbers only.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical Resources</h4>
+					<p>...</p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Avoid data loss and "time outs"</h3>
+				<p class="ednote">This needs reworking, including extracting the examples from the text</p>
+				<p>Avoid timeouts. When this is not possible, inform user of the amount of time required to complete the process (before timeout) and if user will lose entered data if a timeout occurs. </p>
 				<section>
 					<h3>How it helps </h3>
 					<p>The use of timed events can present significant barriers for users with cognitive disabilities, as these users may require more time to read content or to perform functions, such as completing an online form.</p>
 					<p>During the completion of an online process for reserving a hotel room and purchasing a plane ticket, a user with a cognitive impairment may become overwhelmed with the amount of instruction and data input required to complete the process. The user may not be able to complete the process in one sitting, and may need to take a break. Users should be able to leave a process without losing their current place within the process, and without losing data that have already been entered. If users cannot take a break and check their work, many will often be unable to complete a task correctly.</p>
 					<p>While making a purchase on an e-commerce Web site, a user with a cognitive disability may not remember required information (e.g., a phone number or a zip code) that may seem easy to remember for users without a cognitive impairment. Users with cognitive disabilities may need additional time to look up the information required to complete a transaction, without losing their place in the process, and without losing data that have already been entered.</p>
 					<p>In another example, users’ cognitive skills may temporarily diminish as they get tired. They then must stop the task for that day, and continue it when they are feeling better, and when their reading or processing skills are back to their higher levels.</p>
-					<p>For situations where the absence of a timed event would significantly change the intended functionality of an application (e.g., an auction or another real-time event), it is important to ensure that users with disabilities are properly notified. Notifications should include information about timed events, and an indication of the duration of the time given. As well, they should include mechanisms clearly labeled to adjust, extend, or stop the duration of an event, to allow users to fully engage and interact with Web content and functionality. For example, if an e-commerce Web site's checkout process provides secure credit card transactions, the user is notified of the timeout, and is given at least 120 seconds to extend it.</p>
+					<p>For situations where the absence of a timed event would significantly change the intended functionality of an application (e.g., an auction or another real-time event), it is important to ensure that users with disabilities are properly notified. Notifications should include information about timed events, and an indication of the duration of the time given. As well, they should include mechanisms clearly labelled to adjust, extend, or stop the duration of an event, to allow users to fully engage and interact with Web content and functionality. For example, if an e-commerce Web site's checkout process provides secure credit card transactions, the user is notified of the timeout, and is given at least 120 seconds to extend it.</p>
 					<p>These experiences have been reported by members of the task force who have various cognitive impairments. There is significant user research indicating that timed events rarely help anyone; and can cause stress and frustration.</p>
 					<p>It should be noted that many users, within 20 seconds, cannot read instructions to extend a time limit. We thus extended the time limit to 120 seconds.</p>
 					<p>We also require simple text conforming to the understandable language design requirement.</p>
@@ -247,7 +284,6 @@
 				</section>
 				<section>
 					<h3>Examples</h3>
-					<p class="ednote">TODO add examples</p>
 					<p><strong>Success</strong> example</p>
 					<p>...</p>
 					<p><strong>Failure </strong> example</p>
@@ -259,6 +295,164 @@
 					<p><a href="https://github.com/w3c/wcag21/issues/14">wcag issue 14</a></p>
 					<p><a href="https://github.com/w3c/wcag21/pull/116">pull request 116</a></p>
 				</section>
+			</section>
+			<section>
+				<h3>Pattern: Provide feedback</h3>
+				<p>For each step in a process let the user know of its status and if it was successfully completed.</p>
+				<section>
+					<h3>How it helps </h3>
+					Making the result of each user action clear helps people with a variety of cognitive disabilities:
+					<ul>
+						<li>understand that their actions were processed (e.g., the click did something) </li>
+						<li>prevent uncertainty or doubt regarding the outcome</li>
+						<li>remember what they just did</li>
+					</ul>
+					<p>For example, a user with age appropriate forgetfulness, may have difficulty remembering how the interface worked. So when they press the send button that may not feel confident that the form was submitted. Feedback, such as a thank you message, will tell them and make them feel confident in the process.</p>
+					<p>During a multi-step task this feedback (user-action feedback)  can also assist people, with attention or short-term cognitive disabilities remember what they are doing . For example, a user with early dementia may get distracted and then forget exactly were they were in the task. This user-action feedback helps re-orientate them. It also helps avoid them leaving a task by reminding them that they are in a process, and where in the process they currently are.</p>
+					<p>Provide easily-recognizable success or failure feedback with every user action. When possible the feedback should use a consistent and familiar design patterns. For example:</p>
+					<ul>
+						<li>After a step in a multi-step task is completed, breadcrumbs display a tick or a checkmark next to that step's name; and, if applicable, the title or the name of the next step is readily apparent.
+						<li>After a button is clicked, it should look depressed. (Note that if it is a toggle button, the state should also be programmatically determinable).
+						<li>After a form is submitted or an email message is sent, feedback communicating what just happened, such as "Your application was submitted, thank you" or "Your email message was sent" is provided.
+					</ul>
+				</section>
+				<section>
+					<h3>More details</h3>
+					<p>The success or failure of every user initiated action is clearly indicated to the user by visual, programmatically-determinable, rapid feedback in the primary modalities of the content. Audio feedback is supported.</p>
+				</section>
+				<section>
+					<h3>Examples</h3>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>WAI-ARIA states are used to provide state feedback for a toggle button with an animation showing the state (such as a button was pushed )</li>
+						<li>Use ARIA-pressed with a visual or a checkbox is checked/unchecked</li>
+						<li>Provide a confirmation message when an email message is successfully sent, or a form is successfully submitted</li>
+						<li>Provide visible and programmatically-determinable information to indicate a new password satisfies security requirements</li>
+					</ul>>
+					<p><strong>Failure </strong> examples</p>
+					<ul>
+						<li>There is no progress-indicator (e.g., breadcrumbs) to communicate completed and current steps in a multi-step process</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Technical Resources</h3>
+					<p> <a href="https://rawgit.com/w3c/coga/master/extension/feedback.html">On coga github: feedback.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/54">wcag issue 54</a></p>
+					<p><a href="https://github.com/w3c/wcag21/pull/109">pull request 109</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Tell the users about fees and charges at the beginning of a task</h3>
+				<p>Tell the user about all charges at the start of a transaction including typical values. Any conditions and terms should also be available at the start of the transaction in easy language.</p>
+				<section>
+					<h3>How it helps </h3>
+					<p>Users with cognitive disabilities who have trouble with memory, attention to detail or reading comprehension may not be aware of charges unless they are explicitly noted at the start of a transaction task. Terms and conditions can be under a link but charges must be clearly displayed and available in plain language.</p>
+					<p>Clearly identifying charges at the start of a sale benefits all users. Those with cognitive disabilities will particularly benefit because some groups are less likely to have inferred or guessed the charges would be included.  They may not know to look in other locations in the user flow or in another location, for example on the homepage, or on a rates page.</p>
+					<p>People with impaired Executive Function or memory need to have all the consequences presented in an orderly form to be able to make an informed decision. When charges are not clear, the consent of the transaction is unclear.</p>
+					<p>It also can take much longer for users with disabilities to go through the process of making a purchase. If a person has spent hours making an online purchase, it is much more difficult and upsetting to find out that they cannot afford it. They will often blame themselves for not understanding the price and may experience a loss of confidence. They may stop trusting themselves for day-to-day activities.</p>
+					<p>For example a person with Executive Function challenges may be trying to order a plane ticket, and not realize that there are extra fees not quoted in the original price, such as taxes, international fees, baggage fees, etc. They may spend hours booking a holiday only to find that they can’t afford it. Or, they end up purchasing something they cannot afford. And even if they have completed this process in the past, they are not able to bring their experience into future purchases to anticipate the final price. The result is the user loses confidence in their ability to independently purchase a holiday online, may have incurred a debt they are unable to pay, may not attempt again, or only with the help of a hired professional (e.g. travel agent or assistant).</p>
+
+				</section>
+				<section>
+					<h3>Examples</h3>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>There are no surprise charges or conditions.</li>
+						<li>Users are aware of all charges (including hidden fees) and can make an informed decision when they decide to purchase an item and put it in a shopping cart.</li>
+						<li>For items that shipping charges vary, the range of shipping charges and the issues that change the rate would be listed, along with a link to where more details can be found. For example, weight and speed of shipping my impact your shipping fees which can be between $4 and $400 depending on location.</li>
+					</ul>>
+					<p><strong>Failure </strong> examples</p>
+					<ul>
+						<li>Final transaction includes unknown charges that result in higher-than-expected total charges.</li>
+						<li>Final transactions include conditions of purchase that are not clear to users from the beginning of the task.</li>
+						<li>Transactions contain charges or conditions that the user did not know about until they have invested a lot of effort into the sale.<li>
+						<li>Final transaction is completed and users are surprised by the total they receive.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Technical Resources</h3>
+					<p> <a href="https://rawgit.com/w3c/coga/master/extension/identify-charges.html">On coga github: identify-charges.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/54">wcag issue 54</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/37">WCAG issue 37</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: The user knows when the content changes</h3>
+				<p class="ednote">This is missing from the google doc, though Rachael is marked as having reviewed. Text here is the original doc contents. Needs examples and technical resources.</p>
+				<p>Ensure that changes of context, functionality, settings, route and orientation are initiated only by user request or an easily available mechanism is available to turn off such changes. An easily available mechanism is also available to go to previous context, functionality, settings, route and orientation.</p>
+				<section>
+					<h3>How it helps </h3>
+					<p>Any content, settings or functionality which changes unexpectedly, without user initiation can result in significant barriers for users with cognitive disabilities. Unexpected changes in any of these areas can result in loss of focus, anxiety, or confusion in understanding or using a user interface (such as menus, buttons and design components). Examples include but are not limited to:</p>
+					<ul>
+						</li>Automatic launching of new windows or pop-ups</li>
+						<li>Submission of forms through mechanisms other than a button that is clearly labelled using simple language to submit the form</li>
+						<li>Rerouting automatically by a GPS</li>
+						<li>Changing the direction of a map in a GPS</li>
+					</ul>
+					<p>For example, a user may not have a sense of direction or know their left and right. Before using a GPS they may study the route so that they know approximately what they are doing and can augment the directions of the GPS with their own context, using the GPS for cues. The GPS automatically reroutes them because of a small traffic delay. They become completely lost and disorientated and can no longer use the application.</p>
+					<p>This give users with cognitive disabilities more control over how Websites and applications behave and display information giving them the opportunity to make choices that enable them to use the content and complete the task.</p>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<p>Exception: The changes are part of an activity where it is essential (e.g. a game)</p>
+					<p>route: Directions and flow such as a GPS route</p>
+					<p>orientation: perspective or view such as map direction</p>
+					<p>easily available (or easily available mode or setting): one or more of the following is true:</p>
+					<ul>
+						<li>can be set one time with as a wide a scope as possible (such as using the standards of the OS, From ISO 9241-112 or GPII when available);</li>
+						<li>with the option to save or to change the setting, were available interoperably, but also for the scope of the set of web pages;</li>
+						<li>is reachable from each screen where it may be needed, and the path and the control conforms to all of this document.</li>
+						<li>can be set one time with as wide a scope as possible (such as using the standards of the OS, ETSI or GPII when available); and</li>
+						<li>with the option to save or to change the setting, were available interoperably, but also for the scope of the set of Web pages<li>
+						<li>is reachable from each screen where it may be needed, and the path and the control conforms to all of the document.</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Examples</h3>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+					</ul>>
+					<p><strong>Failure </strong> examples</p>
+					<ul>
+					</ul>
+				</section>
+				<section>
+					<h3>Technical Resources</h3>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Keep the user information safe</h3>
+				Keep the user's information safe. This includes:
+				<ul>
+					<li>Checking how safety and security techniques work with a wide range of customized profile including aging, learning and cognitive disabilities.</li>
+					<li>Using known techniques to keep sensitive user information safe.</li>
+					<li>Ensuring all users understand known risk.</li>
+				</ul>
+				<section>
+					<h4>How it helps</h4>
+					<p>It is vital that users stay safe on the internet. Information which suggests a user has Dementia or an intellectual disability allows predatory companies and individuals to target that user for scams or other risky activity. For example, a predatory company could send requests for money, saying “you haven’t made your donation” despite the user having made one. Avoid storing information that implies this or, if you do store it, provide strong security for that information.</p>
+					<p>Users with weak executive functioning are less likely to identify risks correctly so clearly identifying potential risks helps the user stay safe. Add helpful tips for staying safe while using your content and provide help in case of problems.</p>
+					<p>To help identify risks, we suggest holding research and focus groups with people with cognitive and learning disabilities and to work with people with disabilities to solve potential and existing problems.</p>
+					<p>For example, many people who can not copy and paste passwords or use two-step authorization codes ask a caregiver to help them. As caregivers are often just temporary employees, this leaves the user completely exposed. Making passwords longer or requiring users change them regularly increases these unsafe practices and actually makes the application less secure for many people. This type of design error is common because people with cognitive and learning disabilities are left out of the user research and analysis.</p>
+				</section>
+				<section>
+						<p><strong>Success</strong> examples</p>
+						<ul>
+							<li>Providing alternative login options that have been tested with people who have learning or cognitive disabilities that are approved security techniques, in your jurisdiction, for sensitive data</li>
+							<li>Working with a wide range of people with learning and cognitive disabilities</li>
+							<li>Using industry best practices for storing and securing user information</li>
+							<li>Using consent forms in plain language that have been tested with people with learning and cognitive disabilities to ensure they understand the risks</li>
+						</ul>>
+						<p><strong>Failure </strong> examples</p>
+						<ul>
+						</ul>
+					</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/user-information.html">On coga github: user-information.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/25">wcag issue 25</a></p>
+				</section>
+			</section>
 			</section>
 		</section>
 	</body>
