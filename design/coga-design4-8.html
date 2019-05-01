@@ -422,7 +422,7 @@
 			</section>
 			<section>
 				<h3>Pattern: Keep the user information safe</h3>
-				Keep the user's information safe. This includes:
+				<p>Keep the user's information safe. This includes:</p>
 				<ul>
 					<li>Checking how safety and security techniques work with a wide range of customized profile including aging, learning and cognitive disabilities.</li>
 					<li>Using known techniques to keep sensitive user information safe.</li>
@@ -436,23 +436,778 @@
 					<p>For example, many people who can not copy and paste passwords or use two-step authorization codes ask a caregiver to help them. As caregivers are often just temporary employees, this leaves the user completely exposed. Making passwords longer or requiring users change them regularly increases these unsafe practices and actually makes the application less secure for many people. This type of design error is common because people with cognitive and learning disabilities are left out of the user research and analysis.</p>
 				</section>
 				<section>
-						<p><strong>Success</strong> examples</p>
-						<ul>
-							<li>Providing alternative login options that have been tested with people who have learning or cognitive disabilities that are approved security techniques, in your jurisdiction, for sensitive data</li>
-							<li>Working with a wide range of people with learning and cognitive disabilities</li>
-							<li>Using industry best practices for storing and securing user information</li>
-							<li>Using consent forms in plain language that have been tested with people with learning and cognitive disabilities to ensure they understand the risks</li>
-						</ul>>
-						<p><strong>Failure </strong> examples</p>
-						<ul>
-						</ul>
-					</section>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>Providing alternative login options that have been tested with people who have learning or cognitive disabilities that are approved security techniques, in your jurisdiction, for sensitive data</li>
+						<li>Working with a wide range of people with learning and cognitive disabilities</li>
+						<li>Using industry best practices for storing and securing user information</li>
+						<li>Using consent forms in plain language that have been tested with people with learning and cognitive disabilities to ensure they understand the risks</li>
+					</ul>>
+					<p><strong>Failure </strong> examples</p>
+					<ul>
+					</ul>
+				</section>
 				<section>
 					<h4>Technical details</h4>
 					<p><a href="https://rawgit.com/w3c/coga/master/extension/user-information.html">On coga github: user-information.html</a></p>
 					<p><a href="https://github.com/w3c/wcag21/issues/25">wcag issue 25</a></p>
 				</section>
 			</section>
+		</section>
+
+		<section id="objective-5">
+			<h2>Objective: Help the user focus and restore context if attention is lost.</h2>
+			<p>Distractions can cause users with cognitive disabilities problems such as: </p>
+			<ul>
+				<li>They can lose focus on the current action; </li>
+				<li>draw attention away from the task they are trying to do; and </li>
+				<li>can be difficult for some users to know how to understand, avoid, and/or stop them.</li>
+			</ul>
+			<p>Once users become distracted, it can be <strong>difficult for them to remember what they were doing</strong>. Then they can no longer complete their task at all.  This is especially problematic for users with both low attention and impaired memory, such as users with dementia.</p>
+			<p>Items like bread crumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.)</p>
+			<section>
+				<h3>User testing </h3>
+				<p>Make sure your user testing has all the different cognitive disabilities represented. Test for the following:</p>
+				<p>Identify the different tasks:</p>
+				<ul>
+					<li>Can they achieve the activities easily without losing focus?</li>
+					<li>Distract the user for a minute so that they lose focus. Can they get easily back to the task?</li>
+					<li>Ask the users if they would find this easy to do if under stress or tiered </li>
+					<li>Ask the user what would help them remember what they are doing such as headers or breadcrumbs.</li>
+					<li>Ask the user if anything was distracting.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>User stories</h3>
+				<p>As a user who is easily distracted I need less distractions from my task.</p>
+				<p>As a user with a poor memory I need easy sign posts about what is on the screen, where I am in a process and what i am doing, incase I get distracted in the middle of a task.</p>
+			</section>
+			<section>
+				<h3>Pattern: Avoid interruptions</h3>
+				<p>If you can not avoid them, make an easy way to delay and control interruptions and changes in content, unless they are started by the user or involve an emergency.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>For people with memory or attention challenges, interruptions can make completing a task very difficult or impossible. This can include individuals with Dementia, those that have had a stroke or brain injury, and those taking medications with side effects impacting memory and/or attention. Certain types of interruptions or a certain number may cause them to give up, even if the task is very important. Interruptions can include sounds, content that visually appears or changes (e.g. ads on a page). It can be as simple as text notifications about the presence of new changes while working in a shared online document.</p>
+					<p>A site will work best for those with memory or attention challenges if they:</p>
+					<ul>
+						<li>Have no interruptions at all,</li>
+						<li>Have an easy to use pause option so interruptions can be viewed later, or</li>
+						<li>Have a setting where users can select which types of interruptions they prefer.</li>
+					</ul>
+					<p>Many news websites have a lot of interruptions that can cause challenges for people needing to read important information, such as school closures due to bad weather. They may encounter breaking news text, advertisements, and pop-up windows. For those with difficulty focusing and sifting through the school names, or have two or three they need to check, these distractions may make the task impossible. By letting the user pause these distractions, and ideally temporarily remove them from the page, they will better be able to complete the task. </p>
+					<p>Where standard techniques exists for the above, they should be used.</p>
+				</section>
+				<section>
+						<p><strong>Success</strong> examples</p>
+						<ul>
+							<li>Microsoft Office 365 lets the user decide how they want to be notified about reminders and emails. Users can choose visual reminders and/or sounds, or none. For some users, not having any notifications enables them to focus on a task and then go to their emails or calendar when the task is completed.</li>
+						</ul>>
+						<p><strong>Failure </strong> examples</p>
+						<ul>
+							<li>There are advertisements on a Magazine article pages that interrupt a reader’s focus. In the example below, the ad just under the banner changes (black oval) and the ad below the first article photo (navy rectangle) change every 20 seconds. </li>
+						</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Avoid too much content on the page.</h3>
+				<p>Provide users with less than five choices on each screen. This can be a simplified version or have extra choices linked from clear and descriptive titles.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Too much text, too many images and too much other content can cause overload, anxiety and distraction.  Keeping content down to a small number of important points reduces the clutter, calms the mind and allows for better understanding whilst aiding memory.  In particular, it helps those with a short attention span who will leave the page if it appears complex.</p>
+				</section>
+				<section>
+						<h4>More details</h4>
+						<p>Avoiding long paragraphs and non-meaningful imagery ensures those with cognitive impairments can concentrate on the important points being made. </p>
+						<p>Keeping to a few short bullet points and limiting to one or two images related to the main subject areas of a website or service allows the user to choose whether to explore the site further.</p>
+					</section>
+				<section>
+						<p><strong>Success</strong> examples</p>
+						<ul>
+							<li>Google has one of the simplest yet easiest sites to use and this has been copied by companies such as trivago with a simple search box and some clear statements followed by some meaningful images as links to other pages</li>
+						</ul>>
+						<p><strong>Failure </strong> examples</p>
+						<ul>
+							<li>A page with too much content, long menus and images set around long paragraphs of dense text does not help anyone but more importantly the message is lost in an overload of information</li>
+						</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p>[WCAG SC 3.3.2](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)</p>
+					<p>"The intent of this Success Criterion is not to clutter the page with unnecessary information but to provide important cues and instructions that will benefit people with disabilities. Too much information or instruction can be just as much of a hindrance as too little. The goal is to make certain that enough information is provided for the user to accomplish the task without undue confusion or navigation."			</p>
+				</section>
+			</section>	
+		</section>
+
+		<section id="objective-6">
+			<h2>Objective: Processes do not rely on memory.</h2>
+			<p class="ednote">This has been renamed form "Avoid barriers" and the text needs a review.</p>
+			<p>Do not put barriers that stop people with cognitive disabilities from using or getting to content. </p>
+			<p>Many users have memory issues and/or language issues that can make remembering passwords or remembering numbers, while processing words, difficult or impossible. That can make transcribing text or remembering passwords difficult or impossible.</p>
+			<p>Sometimes security and authentication put a barrier between users and the tasks they are doing. For example, requiring remembering and/or transcribing passwords often blocks users with cognitive disabilities from accessing content or using a service.</p>
+			<p>Sometimes developers put a menu barrier between users and the task they are doing so users cannot use the content or service.</p>
+			<p>Voice XML enables voice dialog systems and voice browsers. An example might be a phone menu system that ask you “dial 1 for internal services, dial 2 for external services, .dial 9 for billing services “. Sometimes users need to hold multiple pieces of transitory information in their minds, such as a number being presented as an option, while processing terms that follow. Many people with impaired short term memory can not hold more than two or three pieces of information in their  at the same time so they can not do this task and can not get to the place they need to be. </p>
+			<p>When possible, provide easy-to-use options.</p>
+			<p>Note that a lot can be achieved through supporting personalization.</p>
+			<section>
+				<h3>User testing</h3>
+				<p>Make sure your user testing has all the different cognitive disabilities represented. Test for the following:</p>
+				<p>Identify the different activities that the user may want to complete on the page:</p>
+				<ul>
+					<li>Can they achieve the activities without asking for help </li>
+					<li>Does the user make errors trying to achieve the activities</li>
+					<li>Does the user find the activities easy to achieve</li>
+					<li>Can the user do the same thing later (the password may have been forgotten)</li>
+					<li>Ask the users if they would find this easy to do if under stress or tiered </li>
+					<li>Ask the user were they might have trouble if they are under stress</li>
+				</ul>
+			</section>
+			<section>
+				<h3>User stories</h3>
+				<p>This leads to the following user stories for logging in:</p>
+				<ul>
+					<li>As a user who has memory impairments and often forgets passwords, I need to be able to use a site, without remembering or transcribing passwords and user names, so I can use its service.</li>
+					<li>As a user who has impairments, I need to use a site without being required to transcribe items in the correct sequence.</li>
+					<li>As a user who has weak executive function, I need the login process to be simple, and not multi-step, so I can use it.</li>
+					<li>As a symbol user, I need a login process I can use.</li>
+				</ul>
+				<p>This leads to the following user stories for voice menus:</p>
+				<ul>
+					<li>As a user who has memory impairments and weak language processing skills, I want to get help, without going through a Voice-ML menu system, so I can set an appointment or find out some information.</li>
+					<li>As a user who has weak executive function, I need a process to get help to be simple, and not multi-step, so I can use it.</li>
+					<li>Users can have trouble identifying the right words to say in a voice menu.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Pattern: Logging in does not rely on good memory or other cognitive skills</h3>
+				<p>Users can login and register without having more cognitive abilities then they need to use a simple web page. This includes:</p>
+				<ul>
+					<li>memorizing character strings,</li>
+					<li>perform calculations, or</li>
+					<li>coping; or</li>
+					<li>Answer puzzles; or </li>
+					<li>reliably produce gestures; or</li>
+					<li>recognize characters presented on screen, and then enter them into an input field.</li>
+				</ul>
+				<section>
+					<h4>How it helps</h4>
+					<p>Many people with week memory often lose the password and not be able to login and use their applications. Their solutions often are only sometimes helpful and have security risks:</p>
+					<ul>
+						<li>may have to look at or listen to text several times to copy or type it into a form field;</li>
+						<li>may reuse a single passwords; or a simple-to-remember passwords, which they can remember. This is a security risk</li>
+						<li>If they need to change their password or use a complicated password they may keep passwords insecurely, such as written on pieces of paper which people can see.</li>
+					</ul>
+					<p>The may also struggle with other steps of login</p>
+					<ul>
+						<li>enter characters in the correct order;</li>
+						<li>enter characters correctly on the first try (resulting in being locked out).Some people with cognitive disabilities may not be able to:</li>
+						<li>find a PIN;</li>
+						<li>work out puzzles or distorted letters
+							<!-- <div>
+								<img alt="puzzles or distorted letters" src="puzzles-distorted-letters.gif" height="200" width="300">
+							</div> -->
+						</li>
+						<li>They can also give up after getting frustrated with time-limited procedures or presentations of digital security tokens;</li>
+					</ul>
+					<p>Without this design requirement, many people cannot use an application or content at all. See <a href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">Security and Privacy Technologies</a> issue paper for the full description of this issue, and how it stops people from using web services that are often critical. Many people cannot make doctors’ appointments, etc., by themselves. This may be partly responsible for the reduced life expectancy of people with learning and cognitive disabilities.</p>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<p>There are many ways to meet this design guidance item.  </p>
+					<ul>
+						<li>Use <a href="https://www.w3.org/TR/webauthn/">Web Authentication: An API for accessing Public Key Credentials</a></li>
+						<li>Automatic user authentication based upon the use of a trusted device (to which the user has already logged in with their own identity);</li>
+						<li>Biometrics </li>
+						<li>being already logged in to third-party authentication services (e.g., OAuth, Facebook, etc.).</li>
+						<li>Methods of meeting requirements for alternative user authentication would include:
+							<ul>
+								<li>Clicking a link sent to an email address or a phone number; (Note that this is easy to implement and may be useful for minimal security, such as allowing comments on a blog)</li>
+								<li>Logging in by using information present in users' personal documentation, such as the total number of a current account balance, with explanation on how to find this information.</li>
+							</ul>
+				</section>
+				<section>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li><a href="https://www.w3.org/TR/webauthn/">Web Authentication: An API for accessing Public Key Credentials</a></li>
+						<li>Logging in via google or Facebook (federated login)</li>
+						<li>Two step authentication and Bluetooth link</li>
+						<li>>Using a QRC</li>
+					</ul>
+					<p><strong>Failure </strong> examples</p>
+					<ul>
+						<li>Two step authentication that requires coping</li>
+						<li>Using a password and not allowing pasting into the field</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p>The following are proposals for WCAG. They experiment with more testable language.</p>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/accessible-authentication.html">On coga github: accessible-authentication.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/23">wcag issue 23</a></p>
+					<p><a href="https://github.com/w3c/wcag21/pull/91">pull request 91</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Let people avoid navigating voice menus.</h3>
+				<p class="ednote">This should probably be reworded as voice menus have very little to do with Web UIs. Perhaps merge with provide help?</p>
+				<p>Let people easily reach an operator without going through multiple steps.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Many people cannot use voice menu systems and other complex systems. This often stops people from critical tasks by themselves. Often this can include: making doctors' appointments, getting health insurance, reaching social services, get their water turned back on, etc.. </p>
+					<p>If people can not manage menus by themselves they have to ask someone else to help them. For example they may delay making a doctor’s appointment or other critical task as not to bother their helper. This is a huge problem and means people often do not get the help they need or get it too late. This may be partly responsible for the lower life expectancy of people with learning and cognitive disabilities.</p>
+					<p>See <a href="https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html">Voice Menu Systems</a>issue paper for a full discussion. </p>
+					<p><strong>Why can’t people use complex menus?</strong></p>
+					<p>A good short term memory (several seconds) is essential so that the user can remember the number or the term for the menu. Without these functions the user is likely to select the wrong number.  </p>
+					<p>Many users have a small short term memory. For example, if you can remember 7 letters or items in your head at the same time they may be able to remember one or two. This makes them less likely to manage a menu system correctly. For example a phone menu system (voice ML system) may have an option: </p>
+					<p>"Press 3 for internal services" To use this option the user must remember a digit 3 whilst figuring out if they need an internal service. Many people can not do this. It also requires them to press the correct digit. </p>
+					<p>When a lot of irrelevant information is given before the correct option the user may give up, especially if they did not understand all the earlier options and information</p>
+					<p>Allowing the 0 digit to get to a person, or having the first option "to weight for an person who can help you press 0" can consistently help</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+					<p>Considerations for Speech Recognition</p>
+					<ul>
+						<li>For speech recognition based systems, an existing ETSI standard for voice commands for many European languages exists and should be used where possible [ETSI 202 076], keeping in mind that expecting people to learn more than a few commands places a burden on the user.</li>
+						<li>Natural language understanding systems allow users to state their requests in their own words, and can be useful for users who have difficulty remembering menu options, or who have difficulty mapping the offered menu options to their goals. However, natural language interfaces can be difficult to use for users who have difficulty producing speech or language. Directed dialog (menu-based) fallback or transfer to an agent should be provided.</li>
+					</ul>
+					<p>Follow requirements of legislation</p>
+					<p>For example, the U.S. Telecommunications Act Section 255 Accessibility Guidelines [Section255] paragraph 1193.41 Input, control, and mechanical functions, clauses (g), (h) and (i) apply to cognitive disabilities and require that equipment should be operable without time-dependent controls, the ability to speak, and should be operable by persons with limited cognitive skills.</p>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<p>This is essential for critical systems such as health, finance, communication, water and government services. </p>
+					<p>Not important systems might only use the design requirement bellow (XX)</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>Using user interaction dialogs in which the first option "to weight for a person who can help you press 0”.</li>
+						<li>Using a user-interaction dialog, such as the standard "0" from any point, where there is easy access to a human operator who can help users achieve their goals.</li>
+						<li>Advisory technique: Cue users to write something that may be useful at a later point, and give them time to do so.</li>
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+						<li>Long menu systems that make it hard to find a person</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p>The following are proposals for WCAG. They experiment with more testable language.</p>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/task-completion.html">On coga github: task-completion.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/21">wcag issue 21</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Do not rely on users memorizing information.</h3>
+				<p class="ednote">Missing - waiting.</p>
+				<section>
+					<h4>How it helps</h4>
+				</section>
+				<section>
+					<h4>More Details</h4>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+				</section>
+			</section>
+		</section>
+
+		<section id="objective-7">
+			<h2>Objective: Provide help and support</h2>
+			<section>
+				<h3>User testing</h3>
+				<p>Make sure your user testing has all the different cognitive disabilities represented. (Make sure people don't just ask these as questions, but ask something that demonstrates it.)</p>
+				<p>Test for the following:</p>
+				<ul>
+					<li>
+						Identify the different activities 
+						<ul>
+							<li>Test that the users can achieve the activities without asking for help</li>
+							<li>Does the user make errors trying to achieve the activities</li>
+							<li>Does the user find them easy to achieve</li>
+							<li>Ask the users if they would find this easy to do if under stress or tiered </li>
+							<li>Ask the user what might help if they were stressed or tired. If they do not have ideas ask them about the design guidance bellow and if any of them would help them for this content. Ask them for other idea</li>
+						</ul>
+					</li>
+					<li>
+						Can the user find help? 
+						<ul>
+							<li>Does the user make errors trying to find help?</li>
+							<li>Does the user find them easy to achieve?</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section>
+				<h3>User stories</h3>
+				<p>This leads to the following user stories.</p>
+				<ul>
+					<li>I know how to find out more, such as context-sensitive help or tooltips.</li>
+					<li>I need to easily get human help.</li>
+					<li>I need symbols that help me understand.</li>
+					<li>Help and main content should be clearly differentiated so I do not confuse them.</li>
+					<li>I need contextually-relevant graphs and pictures to supplement text so I can understand a point without a lot of reading.</li>
+					<li>I need speech support, with synchronized highlighting, so I can follow as I go.</li>
+					<li>I need rapid feedback.</li>
+					<li>I need more space between letters, words, sentences, and/or lines of text.</li>
+					<li>I need more space between letters, words, sentences, and/or lines of text.●	I need more space between letters, words, sentences, and/or lines of text.</li>
+					<li>I need reminders, or I will forget appointments and when I was meant to do things.</li>
+					<li>I do not want too many reminders as I will be distracted.</li>
+					<li>I want to be confident that I can manage my tasks.</li>
+				</ul>
+			</section>
+			<section>
+				<h3>Pattern: Provide help for complex information and tasks</h3>
+				<p>Provide explanatory content for complex information and tasks, especially if it is important for successful completion of a task.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>The use of complex information, long documents and data in a particular format can present significant barriers to users with cognitive accessibility needs. Users should be able to understand the information and successfully complete described tasks without requiring further external assistance as much as possible. If content is sufficiently complex to cause barrier, it may be inaccessible and then additional supporting help should be provided.</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+					<p>The complexity of information may be inherent in the information itself, for example the language used, the quantity of information, or the subject matter. In this case, it is likely to need careful explanation, organisation and presentation for all users to be able to understand without any mistakes, confusion or need of assistance.</p>
+					<p>In addition, the presentation mode of information, such as a graph, diagram or table, may obscure its meaning through complexity. Here, a supporting description and guided interpretation will highlight the the key features the user needs to understand.</p>
+					<p>Help may be provided in various forms, for example</p>					
+					<ul>
+						<li>Text "asides" providing explanation and help for diagrams</li>						
+						<li>A supporting chart or graph to illuminate text content</li>
+						<li>A supplemental table – as long as it is not itself complex</li>
+						<li>Popup on hover explanations of keywords - possibly linked to a glossary</li>
+						<li>A flow chart of steps in a process</li>
+					</ul>						
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>The explanation of a medical procedure and success rate statistics is amplified through the use of an additional text aside, a diagram and a graph.</li>
+						<li>The multi step process for applying for a visa is made made easier to use by adding flow chart of all the steps that is always visible. Each step in the flowchart has links to extra help and the current step is clearly highlighted</li>
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+						<li>A graph and data table of sales figures is shown without any explanation of the key features that relate to the content.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p>This Pattern builds on help related WCAG Success Criteria to ensure users are effectively supported in understanding complex content.</p>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/help.html">On coga github: help.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/32">wcag issue 32</a></p>
+					<p><a href="https://github.com/w3c/wcag21/pull/118">pull request 118</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Provide help with directions</h3>
+				<p>Help is provided help with navigational systems and directions.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Some people confuse their left with their right and so will may be unable will be unable to use navigation systems. Others may experience difficulty recognising relative and cardinal directions such as North, South, East, and West,</p>
+					<p>Extra help with these ensures navigational systems and directions can easily be used without constant reminders being needed. Especially if it built in directly to the system or directions.</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+					<p>Providing alternative terms relative and cardinal directions if possible, for example “the drivers side”. This is helped with personalization.</p>
+					<p>Consider using sing any standard mechanism for the platform or technologies that provide for personalization of relative and cardinal directions and terms.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>Simple personalised disambiguation of left and right is always available</li>
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+						<li>Consistent reference to points of the compass including less well known ones (eg N by NE)</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/help.html">On coga github: help.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/32">wcag issue 32</a></p>
+					<p><a href="https://github.com/w3c/wcag21/pull/118">pull request 118</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Provide help for forms and non-standard controls</h3>
+				<p>Provide help for any complex forms, particularly when there are multiple steps, unusual interactions or non-standard controls.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Users often find forms and related tasks to be the most complex experience with web sites and can easily become confused, unsure, or even completely lost. Providing extra help can make the difference between being able to successfully complete a task and giving up. This is especially true if any part of the form is complex or provides non standard interactions.</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+					<p>The standard HTML forms and controls have been carefully specified for maximum usability and accessibility. They are usually understood by users, especially if they are familiar with web interactions. However, users are likely to experience difficulties if the standard form behaviour has been altered or completely new controls are provided. Assuming the new behaviours have been carefully designed and user tested, users may still require help in order to successfully use them.</p>
+					<p>Examples of forms and controls that are likely to require additional help </p>
+					<ul>
+						<li>New behaviours like bank sort code fields where there is auto tabbing between the 3 boxes as digits are entered</li>
+						<li><li>Password fields that require certain character types of characters to be entered</li>
+						<li>Surveys with complex interactions, for example where buttons only appear depending on previous answers</li>
+						<li>Date entry where there could be some ambiguity about the required format.</li>
+						<li>Brand new controls like date pickers</li>
+					</ul>
+					<p>Help can be provided via various mechanisms, perhaps with an accessible help button next to a non standard control.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>A help button next to date picker provides accessible pop-up help for using the control.</li>
+						<li>A form has multiple steps. Users are informed on their progress through the stages.</li>
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+						<li>A form has complex mechanism for enabling and disabling sections as you scroll or tab between them but no help is provided.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Provide human help</h3>
+				<p>Ensure easy access to a human who can provide help and support. Support can be on accessibility, technical, process or domain based.</p>
+				<p>Access to human help should never require the user to manage complex menu systems such as voice menus with different options. </p>
+				<section>
+					<h4>How it helps</h4>
+					<p>In cases where the user gets stuck or confused for any reason, contact with a human is usually the most effective and suitable solution. Otherwise the user may abandon the process and be left with negative attitude towards the service or supplier.</p>
+					<p>One or more contact mechanisms should be easy to locate and use from any page or any step in a process. </p>
+				</section>
+				<section>
+					<h4>More details</h4>
+					<p>Examples include</p>
+					<ul>
+						<li>An option for live chat or video call help. Note: It must be full accessible and easy to close new windows that open as part of live help functionality.</li>
+						<li>A phone number, ideally with a feature to automatically call via an interoperable Voice over IP specification.</li>
+						<li>A simple site contact form.</li>
+						<li>An email link using the ‘mailto’ protocol with prefilled “to” and “subject” fields. Note will not work on all platforms or depending of the users mail client </li>
+						<li>Use available standards to get human help for example, using the 0 digit on voice menu systems</li>
+					</ul>
+					<p>It is important that voice communication is easy and this implies the person providing help can both be easily understood and is able to understand others, allowing for a range of vocal and verbal characteristics. Sensitivity to the requirements of people with learning cognitive disabilities is also important.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p class="ednote">Need examples</p>
+					<p><strong>Success </strong>example:</p>
+					<!-- <div>
+						<img alt="a login page" src="img/login-page.png" height="400" width="250">
+					</div> -->
+					<p><strong>Failure </strong>example:</p>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p>The following are proposals for WCAG.</p>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/extra-help-aaa.html">On coga github: extra-help-aaa.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/52">wcag issue 52</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Provide reminders</h3>
+				<p>Make it easy for the user to set a reminder for date and time sensitive events. Use standard API’s when possible.</p>
+				<p>Reminders must be set only at the user’s request and the user must be able to personalize the reminder method.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>People with cognitive and learning difficulties often have challenges managing events and time. In fact, being unable to correctly manage events and time without support is a diagnostic criteria for some groups of disabilities. This results in missing meetings, not submitting a request by a certain date or a form within a specified time period.
+					<ul>
+						<li>Using calendar APIs (or task manager)  that allow the user to automatically add events and deadlines to their own calendar can help in many cases, for example:</p>
+						</li>When the user copies information into a calendar they often copy the day or time incorrectly.</li>
+						</li>The user is challenged processing and retaining time based information.</li>
+						</li>The user is challenged in sequencing time bound events.</li>
+						<li>The user's skills decrease when tired to such an extent that they have to stop a task. They may wish to reschedule the task.</li>
+					</ul>
+					<p>For example, a user with a learning disability set a doctors appointment online. Often they copy the detailing incorrectly onto their calendar. However, the website gives them an option to add the appointment to the calendar and sets a reminder an hour before. The user now comes to the correct place at the correct time.</p>
+					<p>The benefit to users with cognitive accessibility needs is that they can independently manage appointments, deadlines and schedules. The ability to set reminders can reduce the cognitive load associated when processing time bound tasks. Time dependent activities may be monitored and tracked by the user to ensure that they are completed in a timely manner.</p> 
+					<p>Always give the option to set a reminder at the end of the task so that the user does not get interrupted. </p>
+					<p>It is essential not to add unwanted reminders as this makes the users calendar too full. This can even prevent them from being able to use their calendar at all. The user is the best person to know how many reminders, and which type, will best meet their needs.</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+					<p>Where a standard mechanism exists for the platform or technologies, it must be used. See:</p>
+					<ul>
+						<li>[https://developer.mozilla.org/en/docs/Web/API/notification](https://developer.mozilla.org/en/docs/Web/API/notification)</li>
+						<li>[https://www.html5rocks.com/en/tutorials/notifications/quick/](https://www.html5rocks.com/en/tutorials/notifications/quick/)</li>
+						<li>[https://developers.google.com/google-apps/calendar/concepts/reminders](https://developers.google.com/google-apps/calendar/concepts/reminders)</li>
+						<li>[https://docs.api.ai/docs/reminders-and-notifications](https://docs.api.ai/docs/reminders-and-notifications)</li>
+					</ul>
+					<p>Date and time sensitive events are any event that has to be completed by a certain time. The time constraints on such an event may be defined by a calendar date and time or by the total elapsed time.</p>
+					<p>Variables that could be considered on 'when to supply a reminder' include:</p>
+					<ul>
+						<li>Time - at a logical time</li>
+						<li>Location - prompted when at an appropriate location</li>
+						<li>Context - on computer vs. mobile, on specific site, etc</li>
+					</ul>
+					<p>This design  pattern addresses two broad classes of issues associated with this type of information:</p>
+					<ul>
+						<li>If the user perceives the activity to be too complex the user may decide to abandon the activity and therefore be excluded from the information and/or services derived from the completion of the activity.</li>
+						<li>If the activity relies on a number of distinct events being carried out sequentially over an extended period of time or if a single event must be completed by a specified date and time then the likelihood of errors being made during the activity increases, particularly for users with cognitive accessibility needs. Activities are often missed because the date and time is confused.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<p class="ednote">Examples need fixing</p>
+					<ul>
+						<li>A health care site allows you to set a local medical appointment. Once the appointment is set the user is given the option to add it to their calendar (automatically) with a reminder three hours before. They are also given the option to add or edit the reminder.</li>
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/reminders.html">On coga github: reminders.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/34">wcag issue 34</a></p>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Make it easy to find help and feedback channels</h3>
+				<p>Make it easy for the user to ask for help or  report issues. This includes:</p>
+				<ul>
+					<li>Easy to Use: Feedback information and forms are simple and clear. (User testing with different user groups is highly recommended.)</li>
+					<li>Easy to Find: Available from any place where the user may get stuck</li>
+				</ul>
+				<p>The option to provide feedback should never require the user to manage complex menu systems such as Integrated Voice Menus (IVR) with many different options.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>Providing an easy way for users to give feedback will help people be able to share problems, ask for help, make suggestions and positive comments. If users cannot give feedback easily, problems will continue to exist without the site owner being aware of the problems. Ideas for improvements and positive feedback will also be missed.</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+					<p>Make sure the feedback option is:</p>
+					<ul>
+						<ul>simple to use</ul>
+						<ul>available in all stages of the process</ul>
+						<ul>has a process in place to respond helpfully to any feedback submitted</ul>
+						<ul>does not make the user provide unnecessary information</ul>
+						<ul>does not rely on complex menu systems</ul>
+					</ul>
+					<p>Providing multiple methods for gathering feedback is recommended.  For example, on a website, consider providing all 4 options for feedback including live chat, a phone number, a web form and a feedback email address. </p>
+					<p>Note that chat bots may not be appropriate for this particular type of feedback other than to start the feedback process.  These can be extremely frustrating if you cannot easily get to the area you are trying to reach.</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p class="ednote">Examples not in correct format</p>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+					</ul>
+					<p>A banking website had a major accessibility problem. This problem blocked some customers from paying their bills online. One of these customers found a feedback form on the page where they got stuck. The customer was able to report the problem. A help desk employee reached out to the customer and helped them complete their bill payment successfully. That help desk employee also reported the accessibility problem to the software team. The software team corrected the problem in the next software release.  The new design was easier for all users and resulted in more customers successfully paying their bills on time.</p>
+					<ul>
+						<li>Web Chat or Web Call - An option to provide feedback using live chat or a video call. Note: The live chat or video call feature must be fully accessible. Web chat should not be a distraction and easy to close. Check usability with user testing. </li>
+						<li>Phone - A feedback phone number, ideally with a feature to automatically call via Voice over IP.  Make sure there are no complex voice menus. </li>
+						<li>Web Form - A simple site contact form with no more than 3  required fields</li>
+						<li>Email - An email link using the ‘mailto’ protocol with prefilled “to” and “subject” fields. Note will not work on all platforms or all mail clients. </li>
+						<li>Interactive Voice Response (IVR) - Provide an automatic option at the end of a IVR to give feedback by pressing a specific digit on the phone.</li>
+					</ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+				</section>
+			</section>
+		</section>
+
+		<section id="objective-8">
+			<h2>Objective: Adapt and Personalize</h2>
+			<p class="ednote">Need objective content</p>
+			<section>
+				<h3>User testing</h3>
+			</section>
+			<section>
+				<h3>User stories</h3>
+			</section>
+			<section>
+				<h3>Pattern: Enable APIs and extensions</h3>
+				<p>Allow supporting APIs and extensions  to work with your content.</p>
+				<section>
+					<h4>How it helps</h4>
+					<p>People with cognitive disabilities are often using add-ons or extensions as assistive technology. This includes:</p>
+					<ul>
+						<li>Reading of the long form of acronyms
+						<li>Support for text-to-speech with synchronized highlighting of the phrase being read</li>
+						<li>Content simplification</li>
+						<li>Creating mind maps out of the heading structure</li>
+						<li>Support for retaining content that has already been entered</li>
+						<li>Password management</li>
+						<li>Spell checking</li>
+						<li>Changing the symbols or the interface</li>
+					</ul>
+				<p>If these functions are not supported, the author should provide all support all the functions of the add-ons in use as assistive technology.</p>
+				<p>For example , a user with traumatic brain injury has executive function and memory impairments impacting their ability to remember details such as:</p>
+				<ul>
+					<li>The Internet of Things (IoT) interface<
+					</li>Their user name and password/<li>
+					</li>What an acronym stands for</li>
+					<li>A phone number</section>li>
+					</li>The meaning of uncommon words</li>
+				</ul>
+				<p>Supporting the use of an add on that simplifies content and adds help (such as the long form of acronyms, and a popup dictionary) enables them to understand most content.</p>
+				<p>Supporting password management tools enables him to successfully login and avoid being locked out of secure sites.</p>
+				<p>Storing non-sensitive information and auto complete helps them fill out a form. This suggests common information, like a person's phone number or address. It also helps them avoid making mistakes. It eliminates the need for accurately recalling this information from memory or having to copy and paste it, which is a task that often prevent them from successfully using a form.</p>
+				<p>When overwhelmed by textual content, they have an extension that inserts symbols that they are familiar with that helps them find the content they need.</p>
+				<p>However, sometimes a web site stops their extensions and API’s from working. The result is that the use can not use this web site.</p>
+				<h5>>The Internet of Things (IoT) and the Web of things.</h5>
+				<p>Another example is a person that has a language related disability (e.g. Dyslexia) which may cause them to read at a slower rate. They often miss objects and information that they did not know they needed to read. While high-literacy readers scan text, low-literacy users may read the text “word-for-word.” This means they only know what is written when they have intentionally read out. This is similar to having a narrow field of view and they can be unaware of other items not directly in the flow of text that they are reading.They may also miss things on the page that help them understand what to do. For example, there may be a side bar or call out box which helps make decisions about which link to go to that matches their particular needs. These readers may select the earlier option they encounter, because they may not have noticed (or prioritized) reading that side bar content. They also might miss information that is essential for successfully completing an interaction.</p>
+				<p>Too many options may add to the complexity of interacting with IoT devices. Additional options should be easy to ignore and not require a lot of reading to understand that they are additional, as well as how to skip them.</p>
+				<p>Sometimes IoT interfaces may confuse the user, such as a default "reading" on a meter being set to “2” and not “1.” The user would then need to reset it to “1.”</p>
+				<p>It is important in any proposed solution to make operational tasks, such as interacting with the IoT, as transparent as possible so that users can focus their attention on the functional aspects, such as relating to content..</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<p>This includes: </p>
+					<ul>
+						<li>Support of standards for the Internet of Things that allow for simplified and personalized interfaces such as the ISO/IEC 24752 “Universal Remote Console Framework” standard, URC</li>
+						<li>Standardized techniques to support interoperable symbol sets that are used when available.</li>
+					</ul>
+					<p>Exceptions:</p>
+					<ul>
+						<li>When there is a security or safety requirement, these API's may be disabled for the relevant field</li>
+						<li>If it breaks the main function of the site, such as evaluation and testing applications</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<p>Content can be used with APIs and extensions that support those with cognitive disabilities.</p>
+					<ul>
+						<li>Testing verified through the use of some of the  APIs appropriate for the content. For example:</li>
+						<li>Testing with spell checker and password storage apps or extensions</li>
+						<li>Test with an extension that add to the left click</li>
+						<li>Test with a toolbar that enables simplification or personalization and is designed for people with cognitive disabilities </li>
+					</ul>								
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>Browser extension and personalization tool bars work. User is able to apply their settings from a personalization toolbar to improve the useability for them of the page.</li>
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+						<li>Password storage applications do not work. </li>
+						<li>Distraction removing extension does not work</li>
+						<li>Spell checker extension does not add options to the right click menu, or does not underline mistakes made by the user</li>
+						<li>The correct symbols can not be added by a simplification toolbar </li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/standardized-apis">On coga github: standardized-apis</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/46">wcag issue 46</a></p>	
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Support simplification</h3>
+				<p>Support simplification of your content. Often this includes:</p>
+				<ul>
+					<li>Allowing the user to remove or hide features that most users do not use or that are not essential. </li>
+					<li>Allowing the user to get less test or more simple text</li>
+				</ul>		
+				<section>
+					<h4>How it helps</h4>
+					<p>A user who has difficulty reading or using  Web content can be easily overwhelmed with too much information on a web page. They need to simplify the page to just the critical information that they need and not spend all their energy reading and understanding other content and features.  This is also true for users who are easily distracted.</p>
+					<p>For example, an email program has lots of features and formatting options when drafting an email. This makes it t to complex for a lot of people. With personalization the user can have a simple options with only send and cancel options. There is a “to” and subject line but no cc or bcc options. In this setting there is a clear heading (write an email) and they have icons that the user understands.</p>
+				</section>
+				<section>
+					<h4>More Details</h4>
+					<p>Note that: </p>
+					<ul><li>
+						<li>Typically a simple application has 3 to 6 functions.</li>
+						<li>Make sure it is easy to get back to the full featured version</li>
+						<li>You can meet this design pattern by:</li>
+						<li>Use aui-simplification on regions and controls</li>
+						<li>Use other attributes in personalization semantics</li>
+						<li>Add a simplification toolbar</li>
+						<li>Provide an alternative version</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<p>Add aui-simplification=”critical” on content that is in any critical user testing paths</p>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>Simplified “reading” view is available and easy to close.</li>
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+						<li>A busy email program with lots of regions with different controls bars and features such as tagging, group tagging, start a new thread etc. There is no easy way to simplify the page.</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+				</section>
+			</section>
+			<section>
+				<h3>Pattern: Support personalization of symbols and controls</h3>
+					<p>Add semantics on control links and symbols that  allows extra support that is appropriate for each user. For example:</p>
+					<ul>
+						<li>Html 5 autocomplete on common fields</li>
+						<li>Adding a toolbar that adds personalized images</li>
+						<li>Use attributes in personalization semantics</li>
+					</ul>
+					<p class="ednote">Personalization technology is still young. At the of publication HTML autocorrect on fields was the best supported.</p>
+					<section>
+						<h4>How it helps</h4>
+						<p>Personalization changes the interface to meet the needs of the user.</p>
+						<p>Having familiar terms and symbols is key to many users being able to use the web. However, what is familiar for one user may be unfamiliar to another requiring them to learn new symbols. Adding semantics allow symbols and support to be added by an extension or browser that is familiar to the individual user.</p>
+						<p>A stronger example is people using Alternative and Augmentative Communication (AAC) systems. AAC systems designed for people who are non-verbal often use symbols with or without text.</p>
+						<p>These users usually only learn one symbol set. They cannot easily communicate with other symbol users in a written format or may struggle to understand different symbols used in different applications. Some symbols are subject to copyright and cannot be shared across applications.</p>
+						<p>If users' symbols are mapped to the same concepts, then user agents can load the symbols that are understandable by the user and they user can access the web and other applications.</p>
+						<p>Other support include autocomplete and extension that help the user fill out forms and understand the content. Many users with memory or executive functions  impairments could not fill in forms without asking someone to help copy over information or check their work. Autocomplete, many more users to manage  forms by themselves. </p>						</section>
+				<section>
+					<h4>More Details</h4>
+				</section>
+				<section>
+					<h4>Getting started</h4>
+					<ul>
+						<li>Use Html 5 autocomplete on all common fields</li>
+						<li>Add a toolbar that adds personalized images or</li>
+						<li>Add the semantics that can work with a toolbar for personalized images</li>
+					</ul>
+				</section>
+				<section>
+					<h4>Examples</h4>
+					<p><strong>Success</strong> examples</p>
+					<ul>
+						<li>Example taken from <a href="https://a11y-resources.com/developer/adaptable-ui-personalisation">adaptable UI personalisation</a> aui-action="compose"</li>
+						<li>A page working with autocorrect: Examples of working pages can be found <a href="https://github.com/w3c/personalization-semantics/wiki/Implementations-of-Semantics">Implementations of Semantics</a>, also see <a href="https://github.com/w3c/personalization-semantics/wiki/Getting-started-with-personalization-semantics">Getting started with personalization semantics</a></li>	
+					</ul>
+					<ul>
+					<p><strong>Failure</strong> examples</p>
+					<ul>
+					</ul>
+				</section>
+				<section>
+					<h4>Technical details</h4>
+				</section>
 			</section>
 		</section>
 	</body>
