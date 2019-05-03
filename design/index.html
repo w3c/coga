@@ -1787,28 +1787,86 @@
 			</section>
 			<section>
 				<h3>Pattern: Do not rely on users memorizing information.</h3>
-				<p class="ednote">Missing - waiting.</p>
+				<ul>
+					<li>Each step in a sequential process must contain the information necessary to allow a user to proceed (and so must not rely on memory from prior steps, and would benefit from a summary of info, or a mechanism for traversing the process.</li>
+					<li>Labels are before the activation mechanism</li>
+				</ul>
 				<section>
 					<h4>How it helps</h4>
+					<p>Often content has barrier which prevent users with learning disability from completing a step, and as a result, which prevents them from achieving whatever they wished to achieve. </p>
+						<p>This often happens in multi-step user-interaction dialogs, such as voice-menu systems, but it can happen in any task including online shopping or forms. </p>
+						<ul>
+							<li>Some systems assume that all users have a good working memory. They present several choices to the user and ask them to select one choice, whether by speaking or through a key press. The user needs hold multiple pieces of transitory information in the mind. For example many users have a small short term memory. For example a phone menu system (voice ML system) may have an option: "press 3 for internal services" To use this option the user must remember a digit 3 whilst figuring out if they need an internal service. Many people can not do this. It also requires them to press the correct digit.</li>
+							<li>Reduced executive function may also cause problems. Sometime the user needs more time to complete a task. But she can be problems also if when the system response is too slow. The user may not know whether their input has registered with the system, and consequently may press the key or speak again.</li>
+							<li>The use needs may need to compare similar options such as "billing", "accounts", "sales" and decide which is the service that is best suited to solve the issue at hand. Without strong reasoning skills the user is likely to select the wrong menu option.</li>
+							<li>Advertisements and additional, unrequested information also increase the amount of processing required.</li>
+							<li>The use needs to focus on the different options and select the correct one. A person with impaired attention may have not be able to focus for a long or multi level menu. Advertising and additional, unrequested information also make it harder to retain attention.</li>
+							<li>The user needs to interpret the correct terms and match them to their needs within a certain time limit. This involves speech perception and language understanding: sounds of language are heard, interpreted and understood, within a given time.</li>
+							<li>The user needs to understand the terms used in the menu, even if they are not relevant to the service options required.</li>
+							<li>When a lot of irrelevant information is given before the correct option the user may give up, especially if they did not understand all the earlier options and information. </li>
+						</ul>
+						<p>Allowing the 0 digit to get to a person, or having the first option "to weight for an person who can help you press 0" can consistently help.</p>
 				</section>
 				<section>
 					<h4>More Details</h4>
+					<p>Follow best practices in general VUI design</p>
+					<p>Standard best practices in voice user interface apply to users with cognitive disabilities, and should be followed. A good reference is published by The Association for Voice Interaction Design Wiki [AVIxD]. Another good reference is [ETSI ETR 096]. Some examples of generally accepted best practices in voice user interface design:</p>
+					<ul>
+						<li>Pauses are important between phrases in order to allow processing time of language and options.</li>
+						<li>Options in text should be given before the digit to select, or the instruction to select that option. This will mean that the user does not need to remember the digit or instruction whilst processing the term. For example: The prompt "press 1 for the the secretary," requires the user to remember the digit 1 while interpreting the term "secretary". A better prompt is "for the secretary (pause): press 1" or " for the secretary (pause) or for more help (pause): press 1"</li>
+						<li>Error recovery should be simple, and take the user to a human operator if the error persists. Error responses should not end the call or send the user to a more complex menu.</li>
+						<li>Advertisements and other extraneous information should not be read as it can confuse the user and can make it harder to retain attention.</li>
+						<li>Terms used should be as simple and jargon-free as possible.</li>
+						<li>Tapered prompts should be used to increase the level of prompt detail when the user does not respond as expected.</li>
+					</ul>
+					<p>See the AVIxD wiki cited above for additional recommendation and detail.</p>
+					<p><strong>User settings</strong></p>
+					<p>User-specific settings can be used to customize the voice user interface (such as menus, and options) , keeping in mind that the available mechanisms for invoking user-specific settings are minimal in a voice interface (speech or DTMF tones). If it is difficult to set user preferences, they won't be used. Setting preferences by natural language is the most natural ("slow down!") but is not currently very common.</p>
+					<ul>
+						<li>Extra time should be a user setting for both the speed of speech and ability for the user to define if they need a slower speech or more input time etc.</li>
+						<li>Timed text should be adjustable (as with all accessible media).</li>
+						<li>The user should be able to extend or disable time out as a system default on their device</li>
+						<li>Error recovery should be simple, and take you to a human operator. Error response should not though the user off the line or send them to a more complex menu. Preferably they should use a reserved digit.</li>
+						<li>Timed text should be adjustable (as with all accessible media).</li>
+						<li>Advertisement and other information should not be read as it can confuse the user and can make it harder to retain attention.</li>
+						<li>Terms used should be as simple as possible.</li>
+						<li>Examples and advice should be given on how to build a prompt that reduces the cognitive load
+							<ul>
+								<li>Example 1: Reducing cognitive load: The prompt "press 1 for the the secretary," requires the user to remember the digit 1 while interpreting the term secretary. It is less good then the prompt "for the secretary (pause): press 1" or " for the secretary (pause) or for more help (pause): press 1"</li>
+								<li>Example 2: Setting a default for a human operator as the number 0</li>
+							</ul>
+						</li>
+					</ul>
+					<p>Considerations for Speech Recognition</p>
+					<ul>
+						<li>For speech recognition based systems, an existing ETSI standard for voice commands for many European languages exists and should be used where possible [ETSI 202 076], keeping in mind that expecting people to learn more than a few commands places a burden on the user.</li>
+						<li>Natural language understanding systems allow users to state their requests in their own words, and can be useful for users who have difficulty remembering menu options, or who have difficulty mapping the offered menu options to their goals. However, natural language interfaces can be difficult to use for users who have difficulty producing speech or language. Directed dialog (menu-based) fallback or transfer to an agent should be provided.</li>
+					</ul>
+					<p>Follow requirements of legislation</p>
+					<p>For example, the U.S. Telecommunications Act Section 255 Accessibility Guidelines [Section255] paragraph 1193.41 Input, control, and mechanical functions, clauses (g), (h) and (i) apply to cognitive disabilities and require that equipment should be operable without time-dependent controls, the ability to speak, and should be operable by persons with limited cognitive skills.</p>
 				</section>
 				<section>
 					<h4>Getting started</h4>
+					<p>This is essential for critical systems such as health, finance, communication, water and government services. </p>
+					<p>Not important systems might only use the design requirement bellow (XX)</p>
 				</section>
 				<section>
 					<h4>Examples</h4>
 					<p><strong>Success</strong> examples</p>
 					<ul>
-					</ul>
+						<li>Using user interaction dialogs in which the first option "to weight for a person who can help you press 0”.</li>
+						<li>Using a user-interaction dialog, such as the standard "0" from any point, where there is easy access to a human operator who can help users achieve their goals.</li>
+						<li>p>Advisory technique: Cue users to write something that may be useful at a later point, and give them time to do so.</li>
 					<ul>
 					<p><strong>Failure</strong> examples</p>
 					<ul>
+						<li>Long menu systems that make it hard to find a person more requirement. The user can figure it out and then hears the digit they need</li>
 					</ul>
 				</section>
 				<section>
 					<h4>Technical details</h4>
+					<p><a href="https://rawgit.com/w3c/coga/master/extension/task-completion.html">On coga github: task-completion.html</a></p>
+					<p><a href="https://github.com/w3c/wcag21/issues/21">wcag issue 21</a></p>
 				</section>
 			</section>
 		</section>
