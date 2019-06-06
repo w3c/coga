@@ -1,37 +1,16 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.2.3"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-div.issue-title, div.note-title , div.ednote-title, div.warning-title {
-    padding-right:  1em;
-    min-width: 7.5em;
-    color: #b9ab2d;
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.23.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+.issue-label {
+    text-transform: initial;
 }
-div.issue-title { color: #e05252; }
-div.note-title, div.ednote-title { color: #2b2; }
-div.warning-title { color: #f22; }
-div.issue-title span, div.note-title span, div.ednote-title span, div.warning-title span {
-    text-transform: uppercase;
-}
-div.note, div.issue, div.ednote, div.warning {
-    margin-top: 1em;
-    margin-bottom: 1em;
-}
+
 .warning > p:first-child { margin-top: 0 }
 .warning {
     padding: .5em;
     border-left-width: .5em;
     border-left-style: solid;
 }
-div.issue, div.note , div.ednote,  div.warning {
-    padding: 1em 1.2em 0.5em;
-    margin: 1em 0;
-    position: relative;
-    clear: both;
-}
 span.warning { padding: .1em .5em .15em; }
 
-.issue {
-    border-color: #e05252;
-    background: #fbe9e9;
-}
 .issue.closed span.issue-number {
     text-decoration: line-through;
 }
@@ -72,6 +51,7 @@ input.task-list-item-checkbox {
   border-radius: 4px;
   position: relative;
   bottom: 2px;
+  border: none;
 }
 
 .issue a.respec-label-dark {
@@ -89,6 +69,19 @@ input.task-list-item-checkbox {
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
+
+@keyframes pop {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1.25, 1.25);
+    opacity: 0.75;
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
 
 /* Override code highlighter background */
 .hljs {
@@ -126,8 +119,34 @@ a.bibref {
   text-decoration: none;
 }
 
+.respec-offending-element:target {
+  animation: pop 0.25s ease-in-out 0s 1;
+}
+
+/* TODO: Remove once https://github.com/w3c/tr-design/pull/176 is merged. */
+.respec-offending-element a[href] {
+  margin: 0;
+}
+
+.respec-offending-element {
+  display: inline-block;
+  position: relative;
+  /* Red squiggly line */
+  background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
+    bottom repeat-x;
+}
+@supports (text-decoration-style: wavy) {
+  .respec-offending-element {
+    background: none;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+  }
+}
+
 #references :target {
   background: #eaf3ff;
+  animation: pop 0.4s ease-in-out 0s 1;
 }
 
 cite .bibref {
@@ -140,6 +159,15 @@ code {
 
 th code {
   color: inherit;
+}
+
+a[href].orcid {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+a[href].orcid > svg {
+    margin-bottom: -2px;
 }
 
 /* --- TOC --- */
@@ -196,11 +224,11 @@ table.simple {
 
 /* --- DL --- */
 
-.section dd>p:first-child {
+.section dd > p:first-child {
   margin-top: 0;
 }
 
-.section dd>p:last-child {
+.section dd > p:last-child {
   margin-bottom: 0;
 }
 
@@ -213,7 +241,7 @@ table.simple {
   margin-bottom: 0;
 }
 
-#issue-summary>ul,
+#issue-summary > ul,
 .respec-dfn-list {
   column-count: 2;
 }
@@ -229,7 +257,7 @@ details.respec-tests-details {
   vertical-align: top;
 }
 
-details.respec-tests-details>* {
+details.respec-tests-details > * {
   padding-right: 2em;
 }
 
@@ -242,19 +270,19 @@ details.respec-tests-details[open] {
   padding-bottom: 0.5em;
 }
 
-details.respec-tests-details[open]>summary {
+details.respec-tests-details[open] > summary {
   border-bottom: thin solid #cad3e2;
   padding-left: 1em;
   margin-bottom: 1em;
   line-height: 2em;
 }
 
-details.respec-tests-details>ul {
+details.respec-tests-details > ul {
   width: 100%;
   margin-top: -0.3em;
 }
 
-details.respec-tests-details>li {
+details.respec-tests-details > li {
   padding-left: 1em;
 }
 
@@ -276,30 +304,30 @@ aside.example .marker > a.self-link {
   color: inherit;
 }
 
-h2>a.self-link,
-h3>a.self-link,
-h4>a.self-link,
-h5>a.self-link,
-h6>a.self-link {
+h2 > a.self-link,
+h3 > a.self-link,
+h4 > a.self-link,
+h5 > a.self-link,
+h6 > a.self-link {
   border: none;
   color: inherit;
   font-size: 83%;
   height: 2em;
   left: -1.6em;
-  opacity: .5;
+  opacity: 0.5;
   position: absolute;
   text-align: center;
   text-decoration: none;
   top: 0;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
   width: 2em;
 }
 
-h2>a.self-link::before,
-h3>a.self-link::before,
-h4>a.self-link::before,
-h5>a.self-link::before,
-h6>a.self-link::before {
+h2 > a.self-link::before,
+h3 > a.self-link::before,
+h4 > a.self-link::before,
+h5 > a.self-link::before,
+h6 > a.self-link::before {
   content: "§";
   display: block;
 }
@@ -310,11 +338,11 @@ h6>a.self-link::before {
   }
 
   /* Don't position self-link in headings off-screen */
-  h2>a.self-link,
-  h3>a.self-link,
-  h4>a.self-link,
-  h5>a.self-link,
-  h6>a.self-link {
+  h2 > a.self-link,
+  h3 > a.self-link,
+  h4 > a.self-link,
+  h5 > a.self-link,
+  h6 > a.self-link {
     left: auto;
     top: auto;
   }
@@ -325,7 +353,10 @@ h6>a.self-link::before {
     display: none;
   }
 }
-</style><style>/*
+</style>
+		
+		
+	<link rel="canonical" href="https://www.w3.org/TR/coga-techniques/"><style>/*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
@@ -424,10 +455,52 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 .hljs-strong {
   font-weight: bold;
 }
-</style>
-		
-		
-	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"><link rel="canonical" href="https://www.w3.org/TR/coga-techniques/"><script id="initialUserConfig" type="application/json">{
+</style><style>var {
+  position: relative;
+  cursor: pointer;
+}
+
+var[data-type]::before,
+var[data-type]::after {
+  position: absolute;
+  left: 50%;
+  top: -6px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+/* the triangle or arrow or caret or whatever */
+var[data-type]::before {
+  content: "";
+  transform: translateX(-50%);
+  border-width: 4px 6px 0 6px;
+  border-style: solid;
+  border-color: transparent;
+  border-top-color: #000;
+}
+
+/* actual text */
+var[data-type]::after {
+  content: attr(data-type);
+  transform: translateX(-50%) translateY(-100%);
+  background: #000;
+  text-align: center;
+  /* additional styling */
+  font-family: "Dank Mono", "Fira Code", monospace;
+  font-style: normal;
+  padding: 6px;
+  border-radius: 3px;
+  color: #daca88;
+  text-indent: 0;
+  font-weight: normal;
+}
+
+var[data-type]:hover::after,
+var[data-type]:hover::before {
+  opacity: 1;
+}
+</style><script id="initialUserConfig" type="application/json">{
   "trace": true,
   "doRDFa": "1.1",
   "includePermalinks": true,
@@ -2117,23 +2190,23 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       "publishDate": "2012"
     }
   },
-  "publishDate": "2019-01-24",
-  "publishISODate": "2019-01-24T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 24 January 2019"
-}</script><meta name="description" content="@@"></head>
-	<body class="h-entry toc-inline"><div class="head">
-      <a href="https://www.w3.org/" class="logo"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</h1>
+  "publishDate": "2019-06-06",
+  "publishISODate": "2019-06-06T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 06 June 2019"
+}</script><meta name="description" content="@@"><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
+	<body class="h-entry informative toc-inline"><div class="head">
+      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</h1>
       
       <h2>
-        <abbr title="World Wide Web Consortium">W3C</abbr> Editor's Draft
-        <time class="dt-published" datetime="2019-01-24">24 January 2019</time>
+        W3C Editor's Draft
+        <time class="dt-published" datetime="2019-06-06">06 June 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
-                  <a class="u-url" href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a>
-                </dd><dt>Latest published version:</dt><dd>
-                  <a href="https://www.w3.org/TR/coga-techniques/">https://www.w3.org/TR/coga-techniques/</a>
-                </dd>
+                <a class="u-url" href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a>
+              </dd><dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/coga-techniques/">https://www.w3.org/TR/coga-techniques/</a>
+              </dd>
         <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a></dd>
         
         
@@ -2143,7 +2216,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         
         <dt>Editors:</dt>
         <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
-            (<abbr title="World Wide Web Consortium">W3C</abbr>)
+            (W3C)
           </dd>
         
         
@@ -2159,8 +2232,8 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-      <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
-      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+      W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
       apply.
     </p>
@@ -2170,55 +2243,50 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<p>@@</p>
 		</section>
 		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p> <p>
-                              This document was published by the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a>, and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as
-                              an Editor's Draft.
-                              
-                            </p><p>
+                        This document was published by the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a>, and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as
+                        an Editor's Draft.
+                        
+                      </p><p>
       
       Comments regarding this document are welcome.
-              Please send them to
-              <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-              (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-            
+            Please send them to
+            <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+            (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+          
     </p><p>
-                              Publication as an Editor's Draft
-                              does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-                              This is a draft document and may be updated,
-                              replaced or obsoleted by other documents at any
-                              time. It is inappropriate to cite this document as
-                              other than work in progress.
-                            </p><p>
-                      
-                              This document was produced by
-                              groups
-                              operating under the
-                              <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                            
-                      
-                      
-                                      <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="http://www.w3.org/2004/01/pp-impl/35422/status" rel="disclosure">public list of any patent disclosures  (Protocols and Formats Working Group)</a>, and a <a href="http://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Web Content Accessibility Guidelines Working Group)</a>
-                              made in connection with the deliverables of
-                              each group; these pages also include
-                              instructions for disclosing a patent. An
-                              individual who has actual knowledge of a patent
-                              which the individual believes contains
-                              <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-                              must disclose the information in accordance with
-                              <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-                            
-                      
-                    </p><p>
-                      This document is governed by the
-                      <a id="w3c_process_revision" href="https://www.w3.org/2018/Process-20180201/">1 February 2018 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#summary"><span class="secno">1.1 </span>Summary </a></li><li class="tocline"><a class="tocxref" href="#document-structure"><span class="secno">1.2 </span>Document structure</a></li><li class="tocline"><a class="tocxref" href="#exemptions"><span class="secno">1.3 </span>Exemptions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#general-techniques"><span class="secno">2. </span>General techniques </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#provide-a-clear-structure"><span class="secno">2.1 </span>Provide a clear structure </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#break-your-content-into-manageable-chunks"><span class="secno">2.1.1 </span>Break your content into manageable chunks</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps"><span class="secno">2.1.1.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research"><span class="secno">2.1.1.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#help-the-user-find-information"><span class="secno">2.1.2 </span>Help the user find information</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-0"><span class="secno">2.1.2.1 </span>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-0"><span class="secno">2.1.2.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-headings-and-labels-to-describe-topic-or-purpose"><span class="secno">2.1.3 </span>Use headings and labels to describe topic or purpose.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-1"><span class="secno">2.1.3.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-1"><span class="secno">2.1.3.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-consistent-styles"><span class="secno">2.1.4 </span>Use consistent styles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-2"><span class="secno">2.1.4.1 </span>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-2"><span class="secno">2.1.4.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-presentation-color-and-symbols-to-show-structure-and-relationships"><span class="secno">2.1.5 </span>Use presentation, color and symbols to show structure and relationships</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-3"><span class="secno">2.1.5.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-3"><span class="secno">2.1.5.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-lists-and-tables"><span class="secno">2.1.6 </span>Use lists and tables</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-4"><span class="secno">2.1.6.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-4"><span class="secno">2.1.6.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-clear-presentation"><span class="secno">2.1.7 </span>Use a clear presentation </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-5"><span class="secno">2.1.7.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-5"><span class="secno">2.1.7.2 </span>Sources/research:</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#be-predictable"><span class="secno">2.2 </span>Be predictable</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-6"><span class="secno">2.2.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-6"><span class="secno">2.2.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#writing-style"><span class="secno">2.3 </span>Writing style</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#be-clear-and-to-the-point"><span class="secno">2.3.1 </span>Be clear and to the point</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-7"><span class="secno">2.3.1.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-7"><span class="secno">2.3.1.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#give-instructions-clearly"><span class="secno">2.3.2 </span>Give instructions clearly</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-8"><span class="secno">2.3.2.1 </span>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-8"><span class="secno">2.3.2.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-simple-tense-and-active-rather-than-passive-voice"><span class="secno">2.3.3 </span>Use a simple tense and active rather than passive voice.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-9"><span class="secno">2.3.3.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-9"><span class="secno">2.3.3.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#avoid-double-negatives"><span class="secno">2.3.4 </span>Avoid double negatives.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-10"><span class="secno">2.3.4.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-10"><span class="secno">2.3.4.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#checking-readability"><span class="secno">2.3.5 </span>Checking Readability </a></li></ol></li><li class="tocline"><a class="tocxref" href="#provide-rapid-and-direct-feedback"><span class="secno">2.4 </span>Provide rapid and direct feedback.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-11"><span class="secno">2.4.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-11"><span class="secno">2.4.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#help-meaning"><span class="secno">2.5 </span>Help meaning</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#include-short-tooltips-on-all-icons-jargon"><span class="secno">2.5.1 </span>Include short tooltips on all icons, jargon</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-12"><span class="secno">2.5.1.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-12"><span class="secno">2.5.1.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-of-charts-and-graphs"><span class="secno">2.5.2 </span>Use of charts and graphs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-13"><span class="secno">2.5.2.1 </span>Explanation and who it helps:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-symbols-and-images-to-show-meaning"><span class="secno">2.5.3 </span>Use symbols and images to show meaning</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-14"><span class="secno">2.5.3.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-13"><span class="secno">2.5.3.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-of-synchronized-highlighting-of-complex-graphics-and-formula-with-speech"><span class="secno">2.5.4 </span>Use of synchronized highlighting, of complex graphics and formula with speech</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sources-research-14"><span class="secno">2.5.4.1 </span>Sources/research: </a></li></ol></li><li class="tocline"><a class="tocxref" href="#temperature"><span class="secno">2.5.5 </span>Temperature</a></li><li class="tocline"><a class="tocxref" href="#calculations"><span class="secno">2.5.6 </span>Calculations</a></li><li class="tocline"><a class="tocxref" href="#currency"><span class="secno">2.5.7 </span>Currency</a></li><li class="tocline"><a class="tocxref" href="#buying-and-selling-online-quantities-and-size"><span class="secno">2.5.8 </span>Buying and Selling Online (Quantities and Size)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"><span class="secno">2.5.8.1 </span>Do not rely on numbers alone when describing goods. Provide a hint or additional information to aid users.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#buying-selling-online-payments"><span class="secno">2.5.9 </span>Buying &amp; Selling Online (Payments)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-clear-design"><span class="secno">2.6 </span> Use a clear design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#use-clear-visual-affordances"><span class="secno">2.6.1 </span>Use clear visual affordances.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-15"><span class="secno">2.6.1.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-15"><span class="secno">2.6.1.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#have-a-clean-and-uncluttered-design"><span class="secno">2.6.2 </span>Have a clean  and uncluttered design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-16"><span class="secno">2.6.2.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-16"><span class="secno">2.6.2.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#formats-for-numbers-and-time"><span class="secno">2.6.3 </span>Formats for Numbers and Time</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#time"><span class="secno">2.6.3.1 </span>Time</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-17"><span class="secno">2.6.3.1.1 </span>Explanation and who it helps:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#layout-for-numbers"><span class="secno">2.6.3.2 </span>Layout for Numbers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-18"><span class="secno">2.6.3.2.1 </span>Explanation and who it helps</a></li></ol></li><li class="tocline"><a class="tocxref" href="#roman-numerals"><span class="secno">2.6.3.3 </span>Roman Numerals</a></li><li class="tocline"><a class="tocxref" href="#use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"><span class="secno">2.6.3.4 </span> Use linear horizontal text based scales for questionnaires and surveys rather than numbers.</a></li><li class="tocline"><a class="tocxref" href="#relative-values"><span class="secno">2.6.3.5 </span>Relative values</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#techniques-for-specific-groups"><span class="secno">3. </span>Techniques for specific groups</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#limit-the-number-of-features-and-choices-on-the-same-screen"><span class="secno">3.1 </span>Limit the number of features and choices on the same screen.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-19"><span class="secno">3.1.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-17"><span class="secno">3.1.2 </span>Sources/research:</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#techniques-under-development"><span class="secno">4. </span>Techniques under development</a></li><li class="tocline"><a class="tocxref" href="#provide-symbols-on-key-content"><span class="secno">5. </span>Provide symbols on key content </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-20"><span class="secno">5.1 </span>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-18"><span class="secno">5.2 </span>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-semantics-to-provide-extra-help"><span class="secno">6. </span>Use semantics to provide extra help</a></li><li class="tocline"><a class="tocxref" href="#augmentative-with-signs"><span class="secno">7. </span>Augmentative with signs </a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><span class="secno">A. </span>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><span class="secno">A.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><span class="secno">A.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><span class="secno">A.3 </span>Enabling funders</a></li></ol></li></ol></nav>
+      Publication as an Editor's Draft does not imply endorsement by the
+      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
+      obsoleted by other documents at any time. It is inappropriate to cite this
+      document as other than work in progress.
+    </p><p>
+      
+        This document was produced by groups
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+       The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+      
+                  <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a href="" rel="disclosure">public list of any patent disclosures  (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="http://www.w3.org/2004/01/pp-impl/35422/status" rel="disclosure">public list of any patent disclosures  (Protocols and Formats Working Group)</a>, and a <a href="http://www.w3.org/2004/01/pp-impl/32212/status" rel="disclosure">public list of any patent disclosures  (Web Content Accessibility Guidelines Working Group)</a>
+            made in connection with the deliverables of
+            each group; these pages also include
+            instructions for disclosing a patent. An individual who has actual
+            knowledge of a patent which the individual believes contains
+            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+            must disclose the information in accordance with
+            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+          
+      
+    </p><p>
+                  This document is governed by the
+                  <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#summary"><bdi class="secno">1.1 </bdi>Summary </a></li><li class="tocline"><a class="tocxref" href="#document-structure"><bdi class="secno">1.2 </bdi>Document structure</a></li><li class="tocline"><a class="tocxref" href="#exemptions"><bdi class="secno">1.3 </bdi>Exemptions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#general-techniques"><bdi class="secno">2. </bdi>General techniques </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#provide-a-clear-structure"><bdi class="secno">2.1 </bdi>Provide a clear structure </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#break-your-content-into-manageable-chunks"><bdi class="secno">2.1.1 </bdi>Break your content into manageable chunks</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps"><bdi class="secno">2.1.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research"><bdi class="secno">2.1.1.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#help-the-user-find-information"><bdi class="secno">2.1.2 </bdi>Help the user find information</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-0"><bdi class="secno">2.1.2.1 </bdi>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-0"><bdi class="secno">2.1.2.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-headings-and-labels-to-describe-topic-or-purpose"><bdi class="secno">2.1.3 </bdi>Use headings and labels to describe topic or purpose.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-1"><bdi class="secno">2.1.3.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-1"><bdi class="secno">2.1.3.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-consistent-styles"><bdi class="secno">2.1.4 </bdi>Use consistent styles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-2"><bdi class="secno">2.1.4.1 </bdi>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-2"><bdi class="secno">2.1.4.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-presentation-color-and-symbols-to-show-structure-and-relationships"><bdi class="secno">2.1.5 </bdi>Use presentation, color and symbols to show structure and relationships</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-3"><bdi class="secno">2.1.5.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-3"><bdi class="secno">2.1.5.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-lists-and-tables"><bdi class="secno">2.1.6 </bdi>Use lists and tables</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-4"><bdi class="secno">2.1.6.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-4"><bdi class="secno">2.1.6.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-clear-presentation"><bdi class="secno">2.1.7 </bdi>Use a clear presentation </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-5"><bdi class="secno">2.1.7.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-5"><bdi class="secno">2.1.7.2 </bdi>Sources/research:</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#be-predictable"><bdi class="secno">2.2 </bdi>Be predictable</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-6"><bdi class="secno">2.2.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-6"><bdi class="secno">2.2.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#writing-style"><bdi class="secno">2.3 </bdi>Writing style</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#be-clear-and-to-the-point"><bdi class="secno">2.3.1 </bdi>Be clear and to the point</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-7"><bdi class="secno">2.3.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-7"><bdi class="secno">2.3.1.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#give-instructions-clearly"><bdi class="secno">2.3.2 </bdi>Give instructions clearly</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-8"><bdi class="secno">2.3.2.1 </bdi>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-8"><bdi class="secno">2.3.2.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-simple-tense-and-active-rather-than-passive-voice"><bdi class="secno">2.3.3 </bdi>Use a simple tense and active rather than passive voice.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-9"><bdi class="secno">2.3.3.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-9"><bdi class="secno">2.3.3.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#avoid-double-negatives"><bdi class="secno">2.3.4 </bdi>Avoid double negatives.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-10"><bdi class="secno">2.3.4.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-10"><bdi class="secno">2.3.4.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#checking-readability"><bdi class="secno">2.3.5 </bdi>Checking Readability </a></li></ol></li><li class="tocline"><a class="tocxref" href="#provide-rapid-and-direct-feedback"><bdi class="secno">2.4 </bdi>Provide rapid and direct feedback.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-11"><bdi class="secno">2.4.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-11"><bdi class="secno">2.4.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#help-meaning"><bdi class="secno">2.5 </bdi>Help meaning</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#include-short-tooltips-on-all-icons-jargon"><bdi class="secno">2.5.1 </bdi>Include short tooltips on all icons, jargon</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-12"><bdi class="secno">2.5.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-12"><bdi class="secno">2.5.1.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-of-charts-and-graphs"><bdi class="secno">2.5.2 </bdi>Use of charts and graphs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-13"><bdi class="secno">2.5.2.1 </bdi>Explanation and who it helps:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-symbols-and-images-to-show-meaning"><bdi class="secno">2.5.3 </bdi>Use symbols and images to show meaning</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-14"><bdi class="secno">2.5.3.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-13"><bdi class="secno">2.5.3.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-of-synchronized-highlighting-of-complex-graphics-and-formula-with-speech"><bdi class="secno">2.5.4 </bdi>Use of synchronized highlighting, of complex graphics and formula with speech</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sources-research-14"><bdi class="secno">2.5.4.1 </bdi>Sources/research: </a></li></ol></li><li class="tocline"><a class="tocxref" href="#temperature"><bdi class="secno">2.5.5 </bdi>Temperature</a></li><li class="tocline"><a class="tocxref" href="#calculations"><bdi class="secno">2.5.6 </bdi>Calculations</a></li><li class="tocline"><a class="tocxref" href="#currency"><bdi class="secno">2.5.7 </bdi>Currency</a></li><li class="tocline"><a class="tocxref" href="#buying-and-selling-online-quantities-and-size"><bdi class="secno">2.5.8 </bdi>Buying and Selling Online (Quantities and Size)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"><bdi class="secno">2.5.8.1 </bdi>Do not rely on numbers alone when describing goods. Provide a hint or additional information to aid users.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#buying-selling-online-payments"><bdi class="secno">2.5.9 </bdi>Buying &amp; Selling Online (Payments)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-clear-design"><bdi class="secno">2.6 </bdi> Use a clear design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#use-clear-visual-affordances"><bdi class="secno">2.6.1 </bdi>Use clear visual affordances.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-15"><bdi class="secno">2.6.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-15"><bdi class="secno">2.6.1.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#have-a-clean-and-uncluttered-design"><bdi class="secno">2.6.2 </bdi>Have a clean  and uncluttered design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-16"><bdi class="secno">2.6.2.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-16"><bdi class="secno">2.6.2.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#formats-for-numbers-and-time"><bdi class="secno">2.6.3 </bdi>Formats for Numbers and Time</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#time"><bdi class="secno">2.6.3.1 </bdi>Time</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-17"><bdi class="secno">2.6.3.1.1 </bdi>Explanation and who it helps:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#layout-for-numbers"><bdi class="secno">2.6.3.2 </bdi>Layout for Numbers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-18"><bdi class="secno">2.6.3.2.1 </bdi>Explanation and who it helps</a></li></ol></li><li class="tocline"><a class="tocxref" href="#roman-numerals"><bdi class="secno">2.6.3.3 </bdi>Roman Numerals</a></li><li class="tocline"><a class="tocxref" href="#use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"><bdi class="secno">2.6.3.4 </bdi> Use linear horizontal text based scales for questionnaires and surveys rather than numbers.</a></li><li class="tocline"><a class="tocxref" href="#relative-values"><bdi class="secno">2.6.3.5 </bdi>Relative values</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#techniques-for-specific-groups"><bdi class="secno">3. </bdi>Techniques for specific groups</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#limit-the-number-of-features-and-choices-on-the-same-screen"><bdi class="secno">3.1 </bdi>Limit the number of features and choices on the same screen.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-19"><bdi class="secno">3.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-17"><bdi class="secno">3.1.2 </bdi>Sources/research:</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#techniques-under-development"><bdi class="secno">4. </bdi>Techniques under development</a></li><li class="tocline"><a class="tocxref" href="#provide-symbols-on-key-content"><bdi class="secno">5. </bdi>Provide symbols on key content </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-20"><bdi class="secno">5.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-18"><bdi class="secno">5.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-semantics-to-provide-extra-help"><bdi class="secno">6. </bdi>Use semantics to provide extra help</a></li><li class="tocline"><a class="tocxref" href="#augmentative-with-signs"><bdi class="secno">7. </bdi>Augmentative with signs </a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">A.1 </bdi>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><bdi class="secno">A.2 </bdi>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">A.3 </bdi>Enabling funders</a></li></ol></li></ol></nav>
 	<section id="introduction">
-			<!--OddPage--><h2 id="x1-introduction"><span class="secno">1. </span>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
+			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 			<p>This document is to help us gather techniques and strategies as we come across them, so that they do not get forgotten or are hard to find later when we are finished the gap analysis.</p>
 			<p>Larger scale, engineering solutions can also be added to the issue papers.</p>
             
             <p>Editors Note: We intend to add more  examples to each technique and provide some example pages </p>
 			<section id="summary">
-			  <h3 id="x1-1-summary"><span class="secno">1.1 </span>Summary <a class="self-link" aria-label="§" href="#summary"></a></h3>
+			  <h3 id="x1-1-summary"><bdi class="secno">1.1 </bdi>Summary <a class="self-link" aria-label="§" href="#summary"></a></h3>
 			  <p>Most designers want people to be able to use their site. However designs that might be difficult for some people to use can actually bar people with cognitive and learning disabilities from using the content at all. Typically this happens because content providers may not be familiar with the needs of different people. </p>
 			  <p>This document contains detailed techniques that should enable content to be usable by people with cognitive and learning disabilities. </p>
 			  <p>We have identified the following <strong>themes</strong> though the techniques.</p>
@@ -2246,7 +2314,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			  <p>&nbsp;</p>
             
             </section>
-			<section id="document-structure"><h3 id="x1-2-document-structure"><span class="secno">1.2 </span>Document structure<a class="self-link" aria-label="§" href="#document-structure"></a></h3> The top level headings are who the techniques and strategies are for, such as general techniques that help most people with Cognitive and Learning Disabilities, techniques that help for attention, techniques that help people with difficulty processing language etc. The sections are based on function and not disability names. <p></p>
+			<section id="document-structure"><h3 id="x1-2-document-structure"><bdi class="secno">1.2 </bdi>Document structure<a class="self-link" aria-label="§" href="#document-structure"></a></h3> The top level headings are who the techniques and strategies are for, such as general techniques that help most people with Cognitive and Learning Disabilities, techniques that help for attention, techniques that help people with difficulty processing language etc. The sections are based on function and not disability names. <p></p>
 			<p>The document is the divided into topics (such as E<em>mphasis Structure</em>) at heading level 3, and then into individual techniques at heading level 4. Each topic also has a "see also" section where you can put WCAG mappings. Where appropriate the techniques can labeled for localization. </p>
 			<p>Each technique is divided into: </p>
 			<ul>
@@ -2276,7 +2344,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<p>Feel free to put in a technique even if you do not have all this information. However try to provide any research that you know of - even if it is just your own personal experience. If you add a localization category, please also add it to this introduction.</p></section>
 			
 			<section id="exemptions">
-			<h3 id="x1-3-exemptions"><span class="secno">1.3 </span>Exemptions<a class="self-link" aria-label="§" href="#exemptions"></a></h3>
+			<h3 id="x1-3-exemptions"><bdi class="secno">1.3 </bdi>Exemptions<a class="self-link" aria-label="§" href="#exemptions"></a></h3>
       <p>The group feel the following situations can create exceptions to parts of techniques</p>
             <ul>
               <li>When techniques about writing styles detract from&nbsp;a key role of the text you can use a modified writing style guide instead. The modified writing style guide&nbsp;that the page conforms to, should be made public. &nbsp;Examples include content where the main role is &nbsp;artistic or literary (and not to pass on information, social, enable the user to complete a task or other role)</li>
@@ -2287,12 +2355,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			
 	  </section>
 		<section id="general-techniques">
-		  <!--OddPage--><h2 id="x2-general-techniques"><span class="secno">2. </span>General techniques <a class="self-link" aria-label="§" href="#general-techniques"></a></h2>
+		  <h2 id="x2-general-techniques"><bdi class="secno">2. </bdi>General techniques <a class="self-link" aria-label="§" href="#general-techniques"></a></h2>
 			<p>General techniques are useful for most people with Cognitive and Learning Disabilities</p>
 			<section id="provide-a-clear-structure">
-				<h3 id="x2-1-provide-a-clear-structure"><span class="secno">2.1 </span>Provide a clear structure <a class="self-link" aria-label="§" href="#provide-a-clear-structure"></a></h3>
+				<h3 id="x2-1-provide-a-clear-structure"><bdi class="secno">2.1 </bdi>Provide a clear structure <a class="self-link" aria-label="§" href="#provide-a-clear-structure"></a></h3>
 				<section id="break-your-content-into-manageable-chunks">
-					<h4 id="x2-1-1-break-your-content-into-manageable-chunks"><span class="secno">2.1.1 </span>Break your content into manageable chunks<a class="self-link" aria-label="§" href="#break-your-content-into-manageable-chunks"></a></h4>
+					<h4 id="x2-1-1-break-your-content-into-manageable-chunks"><bdi class="secno">2.1.1 </bdi>Break your content into manageable chunks<a class="self-link" aria-label="§" href="#break-your-content-into-manageable-chunks"></a></h4>
 					
 					<ul>
 						<li>Identify 1-3 main tasks that covers most of what users want to do. Make sure it is obvious how to do them as soon as the content loads. </li>
@@ -2302,20 +2370,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ul>
 					<p>When personalization is supported, you can also divide content using  the  section tags. The user who prefer less content per page, could then see each section as a  separate page  with a next  button.</p>
 <section id="explanation-and-who-it-helps">
-	    <h5 id="x2-1-1-1-explanation-and-who-it-helps"><span class="secno">2.1.1.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps"></a></h5>
+	    <h5 id="x2-1-1-1-explanation-and-who-it-helps"><bdi class="secno">2.1.1.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps"></a></h5>
 		  <p> This brakes the content into digestible pieces that the user can cope with. </p>
 		</section>
 					 
 					 
 				  <section id="sources-research">
-						<h5 id="x2-1-1-2-sources-research"><span class="secno">2.1.1.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research"></a></h5>
+						<h5 id="x2-1-1-2-sources-research"><bdi class="secno">2.1.1.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research"></a></h5>
 						<p> https://www.mencap.org.uk/sites/default/files/documents/2008-04/make%20it%20clear%20apr09.pdf</p>
 						<p>The Aphasia Alliance's Top Tips for 'Aphasia Friendlier' Communication taken from http://www.buryspeakeasy.org.uk/documents/Aphasia%20Alliance%20Aphasia%20Friendier%20Communication.pdf</p>
 						<p> Phiriyapkanon. Is big button interface enough for elderly users, P34, Malardardalen University Press Sweden 2011.</p>
 				  </section>
 				</section>
                 <section id="help-the-user-find-information">
-				<h4 id="x2-1-2-help-the-user-find-information"><span class="secno">2.1.2 </span>Help the user find information<a class="self-link" aria-label="§" href="#help-the-user-find-information"></a></h4>
+				<h4 id="x2-1-2-help-the-user-find-information"><bdi class="secno">2.1.2 </bdi>Help the user find information<a class="self-link" aria-label="§" href="#help-the-user-find-information"></a></h4>
                 
                 Having a clear path to content helps all users. Also note that personalization can be used to remove  extraneous information.
 				<ul>
@@ -2325,31 +2393,31 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<li><strong>Limit the number of links in each area</strong>. 
 &nbsp; Have no more then seven  links in any one navigation section or under any one subheading. </li>
     <li>Make clickable areas obvious, such as links&nbsp;and buttons</li></ul>
-				    <section id="explanation-and-who-it-helps-0"><h5 id="x2-1-2-1-explanation-and-who-it-helps"><span class="secno">2.1.2.1 </span>Explanation and who it helps: <a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-0"></a></h5>
+				    <section id="explanation-and-who-it-helps-0"><h5 id="x2-1-2-1-explanation-and-who-it-helps"><bdi class="secno">2.1.2.1 </bdi>Explanation and who it helps: <a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-0"></a></h5>
 				    <p>Some people can get overwhelmed by too much information and may give up when it takes too long to find information<br>
 			        </p>
 				    
 			</section>	    
 				    <section id="sources-research-0">
-				      <h5 id="x2-1-2-2-sources-research"><span class="secno">2.1.2.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-0"></a></h5>
+				      <h5 id="x2-1-2-2-sources-research"><bdi class="secno">2.1.2.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-0"></a></h5>
 				      <p>http://www.autism.org.uk/working-with/autism-friendly-places/designing-websites-suitable-for-people-with-autism-spectrum-disorders.aspx (08/2015)</p>
                       
 			        </section></section>
 				<section id="use-headings-and-labels-to-describe-topic-or-purpose">
-					<h4 id="x2-1-3-use-headings-and-labels-to-describe-topic-or-purpose"><span class="secno">2.1.3 </span>Use headings and labels to describe topic or purpose.<a class="self-link" aria-label="§" href="#use-headings-and-labels-to-describe-topic-or-purpose"></a></h4>
+					<h4 id="x2-1-3-use-headings-and-labels-to-describe-topic-or-purpose"><bdi class="secno">2.1.3 </bdi>Use headings and labels to describe topic or purpose.<a class="self-link" aria-label="§" href="#use-headings-and-labels-to-describe-topic-or-purpose"></a></h4>
 					<p>Simple colored headings with fonts two size larger than general content to aid navigation skills. </p>
 					<section id="explanation-and-who-it-helps-1">
-						<h5 id="x2-1-3-1-explanation-and-who-it-helps"><span class="secno">2.1.3.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-1"></a></h5>
+						<h5 id="x2-1-3-1-explanation-and-who-it-helps"><bdi class="secno">2.1.3.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-1"></a></h5>
 						<p>This supports those who have reading and some visual perceptual difficulties due to Receptive Aphasia (Wernicke's Aphasia) and acquired dyslexia as well as those with general cognitive learning disabilities, where long sentences and complex words can cause difficulties. [EDN1</p>
 					</section>
 					
 				  <section id="sources-research-1">
-						<h5 id="x2-1-3-2-sources-research"><span class="secno">2.1.3.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-1"></a></h5>
+						<h5 id="x2-1-3-2-sources-research"><bdi class="secno">2.1.3.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-1"></a></h5>
 						<p>Rose, T.A., Worrall, L.E., Hickson, L.M., Hoffmann, T.C. (2011). Aphasia friendly written health information: Content and design characteristics. International Journal of Speech-Language Pathology, 13(4), 335-47.</p>
 				  </section>
 				</section>
 				<section id="use-consistent-styles">
-					<h4 id="x2-1-4-use-consistent-styles"><span class="secno">2.1.4 </span>Use consistent styles<a class="self-link" aria-label="§" href="#use-consistent-styles"></a></h4>
+					<h4 id="x2-1-4-use-consistent-styles"><bdi class="secno">2.1.4 </bdi>Use consistent styles<a class="self-link" aria-label="§" href="#use-consistent-styles"></a></h4>
 					<p>Ensure:</p>
 					<ul>
 						<li>All headings with the same role have the same style,</li>
@@ -2358,7 +2426,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 						<li>icons, controls and menus are used consistently across your site.</li>
 					</ul>
 					<section id="explanation-and-who-it-helps-2">
-					  <h5 id="x2-1-4-1-explanation-and-who-it-helps"><span class="secno">2.1.4.1 </span>Explanation and who it helps: <a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-2"></a></h5>
+					  <h5 id="x2-1-4-1-explanation-and-who-it-helps"><bdi class="secno">2.1.4.1 </bdi>Explanation and who it helps: <a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-2"></a></h5>
 						<p>This supports those who have reading and some visual perceptual difficulties due to Receptive Aphasia and acquired dyslexia as well as those with general cognitive learning disabilities. It also helps those with visual acuity difficulties where stroke and age related disabilities co-occur. </p>
 					
 					 
@@ -2367,12 +2435,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 							<strong>Avoid for tags: </strong></p>
 				  </section>
 					<section id="sources-research-2">
-						<h5 id="x2-1-4-2-sources-research"><span class="secno">2.1.4.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-2"></a></h5>
+						<h5 id="x2-1-4-2-sources-research"><bdi class="secno">2.1.4.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-2"></a></h5>
 						<p>The Aphasia Alliance's Top Tips for 'Aphasia Friendlier' Communication taken from http://www.buryspeakeasy.org.uk/documents/Aphasia%20Alliance%20Aphasia%20Friendier%20Communication.pdf</p>
 					</section>
 				</section>
 				<section id="use-presentation-color-and-symbols-to-show-structure-and-relationships">
-					<h4 id="x2-1-5-use-presentation-color-and-symbols-to-show-structure-and-relationships"><span class="secno">2.1.5 </span>Use presentation, color and symbols to show structure and relationships<a class="self-link" aria-label="§" href="#use-presentation-color-and-symbols-to-show-structure-and-relationships"></a></h4>
+					<h4 id="x2-1-5-use-presentation-color-and-symbols-to-show-structure-and-relationships"><bdi class="secno">2.1.5 </bdi>Use presentation, color and symbols to show structure and relationships<a class="self-link" aria-label="§" href="#use-presentation-color-and-symbols-to-show-structure-and-relationships"></a></h4>
 					<p>Ensure that </p>
 					<ul>
 						<li>icons, controls and menus are located in consistent and non- distracting areas.</li>
@@ -2380,20 +2448,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 						<li>text boxes to highlight important information</li>
 					</ul>
 					<section id="explanation-and-who-it-helps-3">
-						<h5 id="x2-1-5-1-explanation-and-who-it-helps"><span class="secno">2.1.5.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-3"></a></h5>
+						<h5 id="x2-1-5-1-explanation-and-who-it-helps"><bdi class="secno">2.1.5.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-3"></a></h5>
 						<p>“People with aphasia post-stroke have also been reported to have more specific design preferences compared to people without aphasia, preferring written stroke information to contain color and text supported with diagrams” (Eames et al., 2003)ii </p>
 					</section>
 					 
 					 
 				  <section id="sources-research-3">
-						<h5 id="x2-1-5-2-sources-research"><span class="secno">2.1.5.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-3"></a></h5>
+						<h5 id="x2-1-5-2-sources-research"><bdi class="secno">2.1.5.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-3"></a></h5>
 						<p>The Aphasia Alliance's Top Tips for 'Aphasia Friendlier' Communication taken from http://www.buryspeakeasy.org.uk/documents/Aphasia%20Alliance%20Aphasia%20Friendier%20Communication.pdf</p>
 						<p>Eames, S., McKenna, K., Worrall, L., &amp; Read, S. (2003). The suitability of written education materials for stroke survivors and their carers. Topics in Stroke Rehabilitation, 10(3), 70-83.</p>
 						<p> Phiriyapkanon. Is big button interface enough for elderly users, P34, Malardardalen University Press Sweden 2011.</p>
 				  </section>
 				</section>
 				<section id="use-lists-and-tables">
-					<h4 id="x2-1-6-use-lists-and-tables"><span class="secno">2.1.6 </span>Use lists and tables<a class="self-link" aria-label="§" href="#use-lists-and-tables"></a></h4>
+					<h4 id="x2-1-6-use-lists-and-tables"><bdi class="secno">2.1.6 </bdi>Use lists and tables<a class="self-link" aria-label="§" href="#use-lists-and-tables"></a></h4>
 					<p>Ensure that:</p>
 					<ul>
 						<li>bullet points are well spaced</li>
@@ -2403,20 +2471,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					</ul>
 					<p>Tables can also be used to clearly show the relationship between data.</p>
 					<section id="explanation-and-who-it-helps-4">
-						<h5 id="x2-1-6-1-explanation-and-who-it-helps"><span class="secno">2.1.6.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-4"></a></h5>
+						<h5 id="x2-1-6-1-explanation-and-who-it-helps"><bdi class="secno">2.1.6.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-4"></a></h5>
 						<p>This supports people who have reading difficulties. It includes many people with intellectual disabilities, due to Receptive Aphasia and acquired dyslexia as well as those with general cognitive learning disabilities. </p>
 					</section>
 					 
 					 
 				  <section id="sources-research-4">
-						<h5 id="x2-1-6-2-sources-research"><span class="secno">2.1.6.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-4"></a></h5>
+						<h5 id="x2-1-6-2-sources-research"><bdi class="secno">2.1.6.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-4"></a></h5>
 						<p>"Top Five Instructional Tips for Students with Down syndrome" http://specialedpost.org/2013/01/31/top-five-instructional-strategies-for-students-with-down-syndrome/</p>
 						<p>"Down syndrome and Learning" http://inclusive.tki.org.nz/guides/down-syndrome-and-learning/ </p>
 						<p>Stroke Association Accessible Information Guidelines http://www.stroke.org.uk/professionals/accessible-information-guidelines</p>
 				  </section>
 				</section>
 				<section id="use-a-clear-presentation">
-					<h4 id="x2-1-7-use-a-clear-presentation"><span class="secno">2.1.7 </span>Use a clear presentation <a class="self-link" aria-label="§" href="#use-a-clear-presentation"></a></h4>
+					<h4 id="x2-1-7-use-a-clear-presentation"><bdi class="secno">2.1.7 </bdi>Use a clear presentation <a class="self-link" aria-label="§" href="#use-a-clear-presentation"></a></h4>
 					<ul>
 					  <li>Identify the main task or information and keep it easy to find, e.g. to the top left where the eye goes first in English (consider localization for right to left languages such as Arabic). </li>
 						<li>use visual grouping with subheading to enable filtering of content without overwhelming</li>
@@ -2426,13 +2494,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 						<li>for long or complex content include a short introduction to summarize content </li>
 				  </ul>
 					<section id="explanation-and-who-it-helps-5">
-						<h5 id="x2-1-7-1-explanation-and-who-it-helps"><span class="secno">2.1.7.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-5"></a></h5>
+						<h5 id="x2-1-7-1-explanation-and-who-it-helps"><bdi class="secno">2.1.7.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-5"></a></h5>
 						<p>This supports people with intellectual disabilities those who have any type of Aphasia, specific learning difficulties as well as those with general cognitive learning disabilities. This supports those who have Dementia and/or acquire cognitive disabilities as they Age. </p>
 					</section>
 					 
 					 
 				  <section id="sources-research-5">
-						<h5 id="x2-1-7-2-sources-research"><span class="secno">2.1.7.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-5"></a></h5>
+						<h5 id="x2-1-7-2-sources-research"><bdi class="secno">2.1.7.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-5"></a></h5>
 						<p>"Top Five Instructional Tips for Students with Down syndrome" http://specialedpost.org/2013/01/31/top-five-instructional-strategies-for-students-with-down-syndrome/ "Down syndrome and Learning" http://inclusive.tki.org.nz/guides/down-syndrome-and-learning/ </p>
 						<p>iBrennan, A., Worrall, L., &amp; McKenna, K. (2005). The relationship between specific features of aphasia-friendly written material and comprehension of written material for people with aphasia: An exploratory study. <em>Aphasiology</em>, <em>19</em>(8), 693-711. doi:10.1080/02687030444000958</p>
 						<p>Phiriyapkanon. Is big button interface enough for elderly users, P34, Malardardalen University Press Sweden 2011.</p>
@@ -2442,7 +2510,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	</section>
 				
 				<section id="be-predictable">
-					<h3 id="x2-2-be-predictable"><span class="secno">2.2 </span>Be predictable<a class="self-link" aria-label="§" href="#be-predictable"></a></h3>
+					<h3 id="x2-2-be-predictable"><bdi class="secno">2.2 </bdi>Be predictable<a class="self-link" aria-label="§" href="#be-predictable"></a></h3>
 					<p>The more predictable your content is the easier it is to know how to use it. </p>
 					<ul>
 						<li>Use a consistent layout for all your content</li>
@@ -2456,12 +2524,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 						</li>
 					</ul>
 					<section id="explanation-and-who-it-helps-6">
-						<h4 id="x2-2-1-explanation-and-who-it-helps"><span class="secno">2.2.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-6"></a></h4>
+						<h4 id="x2-2-1-explanation-and-who-it-helps"><bdi class="secno">2.2.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-6"></a></h4>
 						<p>All but especially those with some forms of autism</p>
 					</section>
 					
 				  <section id="sources-research-6">
-						<h4 id="x2-2-2-sources-research"><span class="secno">2.2.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-6"></a></h4>
+						<h4 id="x2-2-2-sources-research"><bdi class="secno">2.2.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-6"></a></h4>
 						<p>Neilson-aging</p>
 						<p>Computers helping people with special needed, 14 international conference ICCHP 2014 Eds. Miesenberger, Fels, Archambault, Et. Al. Springer (pages 401). Paper: Tablets in the rehabilitation of memory impairment, K Dobsz et. al.</p>
 				  </section>
@@ -2470,9 +2538,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	
 		
 		<section id="writing-style">
-			<h3 id="x2-3-writing-style"><span class="secno">2.3 </span>Writing style<a class="self-link" aria-label="§" href="#writing-style"></a></h3>
+			<h3 id="x2-3-writing-style"><bdi class="secno">2.3 </bdi>Writing style<a class="self-link" aria-label="§" href="#writing-style"></a></h3>
 			<section id="be-clear-and-to-the-point">
-				<h4 id="x2-3-1-be-clear-and-to-the-point"><span class="secno">2.3.1 </span>Be clear and to the point<a class="self-link" aria-label="§" href="#be-clear-and-to-the-point"></a></h4>
+				<h4 id="x2-3-1-be-clear-and-to-the-point"><bdi class="secno">2.3.1 </bdi>Be clear and to the point<a class="self-link" aria-label="§" href="#be-clear-and-to-the-point"></a></h4>
 				<p>Making your   message clear. The first step is to identify what your main message is. Then ensure that: </p>
 				<ul>
 					<li>Extraneous information is separated (preferably removed)</li>
@@ -2489,14 +2557,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			  <p>In cases where there is a lot of information provide a clear and simple summary of the content.</p>
 			  <p>&nbsp;</p>
 				<section id="explanation-and-who-it-helps-7">
-					<h5 id="x2-3-1-1-explanation-and-who-it-helps"><span class="secno">2.3.1.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-7"></a></h5>
+					<h5 id="x2-3-1-1-explanation-and-who-it-helps"><bdi class="secno">2.3.1.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-7"></a></h5>
 					<p>This supports those who have reading difficulties and some visual perceptual difficulties. It can include people with intellectual disabilities, Receptive Aphasia and acquired dyslexia as well as those with general cognitive learning disabilities, where long sentences and complex words can cause difficulties. This supports those who have Dementia and/or acquire cognitive disabilities as they Age.</p>
 					<p>Additionally it supports persons with general cognitive learning disabilities, where long sentences and complex words can cause difficulties.</p>
 				</section>
 				 
 				 
 				<section id="sources-research-7">
-					<h5 id="x2-3-1-2-sources-research"><span class="secno">2.3.1.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-7"></a></h5>
+					<h5 id="x2-3-1-2-sources-research"><bdi class="secno">2.3.1.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-7"></a></h5>
 					<p>i Stroke Association Accessible Information Guidelines http://www.stroke.org.uk/professionals/accessible-information-guidelines</p>
 					<p> Computers helping people with special needs, 14 international conference ICCHP 2014 Eds. Miesenberger, Fels, Archambault, et. al. Springer (pages 401). Paper: Never Too old to use a tablets, L. Muskens et. al. pages 392 - 393. </p>
 					<p>Phiriyapkanon. Is big button interface enough for elderly users, P34, Malardardalen University Press Sweden 2011.</p>
@@ -2507,7 +2575,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</section>
 			</section>
 			<section id="give-instructions-clearly">
-				<h4 id="x2-3-2-give-instructions-clearly"><span class="secno">2.3.2 </span>Give instructions clearly<a class="self-link" aria-label="§" href="#give-instructions-clearly"></a></h4>
+				<h4 id="x2-3-2-give-instructions-clearly"><bdi class="secno">2.3.2 </bdi>Give instructions clearly<a class="self-link" aria-label="§" href="#give-instructions-clearly"></a></h4>
 				<ul>
 					<li>use short clear sentences</li>
 					<li>use simple, clear words </li>
@@ -2518,13 +2586,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</ul>
 				<p>Note that many users find it easier if you limit decisions/options for user. However other users find it easier to see all related options at the same time. Providing a consistent "more options" mechanism can help. Personalization can also help address conflicting needs.</p>
 				<section id="explanation-and-who-it-helps-8">
-				  <h5 id="x2-3-2-1-explanation-and-who-it-helps"><span class="secno">2.3.2.1 </span>Explanation and who it helps: <a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-8"></a></h5>
+				  <h5 id="x2-3-2-1-explanation-and-who-it-helps"><bdi class="secno">2.3.2.1 </bdi>Explanation and who it helps: <a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-8"></a></h5>
 					<p>This supports those who have Dementia and/or acquire cognitive disabilities as they Age.</p>
 				</section>
 				 
 				 
 				<section id="sources-research-8">
-					<h5 id="x2-3-2-2-sources-research"><span class="secno">2.3.2.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-8"></a></h5>
+					<h5 id="x2-3-2-2-sources-research"><bdi class="secno">2.3.2.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-8"></a></h5>
 					<p>The Aphasia Alliance's Top Tips for 'Aphasia Friendlier' Communication taken from http://www.buryspeakeasy.org.uk/documents/Aphasia%20Alliance%20Aphasia%20Friendier%20Communication.pdf</p>
 					<p>Phiriyapkanon. Is big button interface enough for elderly users, P34, Malardardalen University Press Sweden 2011.</p>
 					<p>Computers helping people with special needed, 14 international conference ICCHP 2014 Eds. Miesenberger, Fels, Archambault, Et. Al. Springer (pages 401). Paper: Tablets in the rehabilitation of memory impairment, K Dobsz et. al.</p>
@@ -2534,7 +2602,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			</section>
 			
 			<section id="use-a-simple-tense-and-active-rather-than-passive-voice">
-				<h4 id="x2-3-3-use-a-simple-tense-and-active-rather-than-passive-voice"><span class="secno">2.3.3 </span>Use a simple tense and active rather than passive voice.<a class="self-link" aria-label="§" href="#use-a-simple-tense-and-active-rather-than-passive-voice"></a></h4>
+				<h4 id="x2-3-3-use-a-simple-tense-and-active-rather-than-passive-voice"><bdi class="secno">2.3.3 </bdi>Use a simple tense and active rather than passive voice.<a class="self-link" aria-label="§" href="#use-a-simple-tense-and-active-rather-than-passive-voice"></a></h4>
 				<p>Simple present tense is usually easier to understand then other tenses</p>
 				<p><strong>Example:</strong> "I am using the present tense"  as appose to "the present tense  was used"</p>
 				<p>With  the&nbsp;<em>active voice,</em> the subject of sentence performs the action. Passive voice&nbsp;the subject receives the action. For example </p>
@@ -2551,31 +2619,31 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			  <p>There are times when passive voicing or other tense can be clearer.  In these cases, there is an exemption if active voicing has been shown in a user test to be harder to understand, less friendly or  inappropriate.</p>
 				<p>For example: The sentence <em>"You many not eat here"</em> may be considered aggressive. <em>"Eating is not allowed in this room"</em> is just as clear and is less aggressive.</p>
 				<section id="explanation-and-who-it-helps-9">
-					<h5 id="x2-3-3-1-explanation-and-who-it-helps"><span class="secno">2.3.3.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-9"></a></h5>
+					<h5 id="x2-3-3-1-explanation-and-who-it-helps"><bdi class="secno">2.3.3.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-9"></a></h5>
 					<p>Those with Expressive Aphasia may ?and the use of passive voice “di?cult due to problems with retrieving the relevant grammatical morphemes” and those with receptive Aphasia may also find it hard to automatically understand the meaning of passive voice . This supports those who have Dementia and/or acquire cognitive disabilities as they Age. </p>
 				</section>
 				 
 				 
 				<section id="sources-research-9">
-					<h5 id="x2-3-3-2-sources-research"><span class="secno">2.3.3.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-9"></a></h5>
+					<h5 id="x2-3-3-2-sources-research"><bdi class="secno">2.3.3.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-9"></a></h5>
 					<p>iFaroqi-Shah Y, Thompson CK. Effect of lexical cues on the production of active and passive sentences in Broca's and Wernicke's aphasia. Brain and Language. 2003;85:409-426. <a href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3034248/">http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3034248/</a>
 						<br> iiStroke Association Accessible Information Guidelines http://www.stroke.org.uk/professionals/accessible-information-guidelines</p>
 					<p>Computers helping people with special needs, 14 international conference ICCHP 2014 Eds. Miesenberger, Fels, Archambault, et. al. Springer (pages 401). Paper: Never Too old to use a tablets, L. Muskens et. al. pages 392 - 393. </p>
 				</section>
 			</section>
 			<section id="avoid-double-negatives">
-				<h4 id="x2-3-4-avoid-double-negatives"><span class="secno">2.3.4 </span>Avoid double negatives.<a class="self-link" aria-label="§" href="#avoid-double-negatives"></a></h4>
+				<h4 id="x2-3-4-avoid-double-negatives"><bdi class="secno">2.3.4 </bdi>Avoid double negatives.<a class="self-link" aria-label="§" href="#avoid-double-negatives"></a></h4>
 				<ul>
 					<li>It is important to avoid sentences that contain double negatives or dependent clauses for example <em>“</em><em>He doesn't have nothing but the clothes on his back.”</em></li>
 				</ul>
 				<section id="explanation-and-who-it-helps-10">
-					<h5 id="x2-3-4-1-explanation-and-who-it-helps"><span class="secno">2.3.4.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-10"></a></h5>
+					<h5 id="x2-3-4-1-explanation-and-who-it-helps"><bdi class="secno">2.3.4.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-10"></a></h5>
 					<p>These sentences tend to be grammatically incorrect and confusing - their use should be avoided for those who have intellectual disabilities, any type of Aphasia, specific learning difficulties as well as those with general cognitive learning disabilities. This supports those who have Dementia and/or acquire cognitive disabilities as they Age.</p>
 				</section>
 				 
 				 
 				<section id="sources-research-10">
-					<h5 id="x2-3-4-2-sources-research"><span class="secno">2.3.4.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-10"></a></h5>
+					<h5 id="x2-3-4-2-sources-research"><bdi class="secno">2.3.4.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-10"></a></h5>
 					<p> iSarno, M.T(1998) (ed) Acquired Aphasia. San Diego : Academic Press, 1998, <br> — id: 1029, year: 1998, vol: 1, page: 28</p>
 					<p>Phiriyapkanon. Is big button interface enough for elderly users, P34, Malardardalen University Press Sweden 2011.</p>
 					<p>"Down Syndrome Issues and Information: Speech and Language" (http://www.down-syndrome.org/information/language/) </p>
@@ -2584,7 +2652,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</section>
 			</section>
 			<section id="checking-readability">
-				<h4 id="x2-3-5-checking-readability"><span class="secno">2.3.5 </span>Checking Readability <a class="self-link" aria-label="§" href="#checking-readability"></a></h4>
+				<h4 id="x2-3-5-checking-readability"><bdi class="secno">2.3.5 </bdi>Checking Readability <a class="self-link" aria-label="§" href="#checking-readability"></a></h4>
 				<p>Check long documents in sections to determine which parts are too hard to read. </p>
 				<p>One way to do this is to use the Flesch Reading Ease score which rates text on a 100-point scale. The higher the score, the easier it is to understand the document. For most standard documents, aim for a score of approximately 70 to 80. </p>
 				<p>The Flesch-Kincaid Grade Level score rates text on a U.S. grade-school level. For example, a score of 5.0 means that a fifth grader, i.e., a Year 6, average 10 years old, can understand the document. For most standard documents, aim for a score of approximately 5.0 by using short sentences, not by simplifying vocabulary.</p>
@@ -2592,7 +2660,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			</section>
 		</section>
     <section id="provide-rapid-and-direct-feedback">
-				<h3 id="x2-4-provide-rapid-and-direct-feedback"><span class="secno">2.4 </span>Provide rapid and direct feedback.<a class="self-link" aria-label="§" href="#provide-rapid-and-direct-feedback"></a></h3>
+				<h3 id="x2-4-provide-rapid-and-direct-feedback"><bdi class="secno">2.4 </bdi>Provide rapid and direct feedback.<a class="self-link" aria-label="§" href="#provide-rapid-and-direct-feedback"></a></h3>
 				<p>Applications should continuously provide easily-recognizable feedback of success or failure with every action. Confirm that after a user action the user known that the action was successful or not. Applications should also let the user know what just happened and where they are in a process. </p>
 				<p>Spoken feedback is often more effective then written feedback. However having both spoken feedback and longer lasting written and visual feedback helps the user know where they are and restores the context if attention is lost.</p>
 				<p><strong>For example: </strong></p>
@@ -2603,31 +2671,31 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	  </ul>
 				<p>&nbsp;</p>
 				<section id="explanation-and-who-it-helps-11">
-					<h4 id="x2-4-1-explanation-and-who-it-helps"><span class="secno">2.4.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-11"></a></h4>
+					<h4 id="x2-4-1-explanation-and-who-it-helps"><bdi class="secno">2.4.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-11"></a></h4>
 					<p>This supports those who have Dementia and/or acquire cognitive disabilities as they Age. It also helps anyone with impaired short term memory remember what they just did.</p>
 				</section>
 				 
 				
 				<section id="sources-research-11">
-					<h4 id="x2-4-2-sources-research"><span class="secno">2.4.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-11"></a></h4>
+					<h4 id="x2-4-2-sources-research"><bdi class="secno">2.4.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-11"></a></h4>
 					<p>Phiriyapkanon. Is big button interface enough for elderly users, P34, Malardardalen University Press Sweden 2011.</p>
 					<p>Neilson- aging</p>
 				</section>
 	</section>
 		<section id="help-meaning">
-			<h3 id="x2-5-help-meaning"><span class="secno">2.5 </span>Help meaning<a class="self-link" aria-label="§" href="#help-meaning"></a></h3>
+			<h3 id="x2-5-help-meaning"><bdi class="secno">2.5 </bdi>Help meaning<a class="self-link" aria-label="§" href="#help-meaning"></a></h3>
 			<section id="include-short-tooltips-on-all-icons-jargon">
-				<h4 id="x2-5-1-include-short-tooltips-on-all-icons-jargon"><span class="secno">2.5.1 </span>Include short tooltips on all icons, jargon<a class="self-link" aria-label="§" href="#include-short-tooltips-on-all-icons-jargon"></a></h4>
+				<h4 id="x2-5-1-include-short-tooltips-on-all-icons-jargon"><bdi class="secno">2.5.1 </bdi>Include short tooltips on all icons, jargon<a class="self-link" aria-label="§" href="#include-short-tooltips-on-all-icons-jargon"></a></h4>
 				<p> Tooltips should be precise and relate directly to the object.</p>
 				<p>When possible  tooltips should be able to be turned off via personalization. This is because  they may not be noticed by some who have severe aphasia and a visual agnosia and could add clutter and even confuse if they are read out by a screen reader or text to speech support. But for those with less severe difficulties they can be helpful.</p>
 				<section id="explanation-and-who-it-helps-12">
-				<h5 id="x2-5-1-1-explanation-and-who-it-helps"><span class="secno">2.5.1.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-12"></a></h5>
+				<h5 id="x2-5-1-1-explanation-and-who-it-helps"><bdi class="secno">2.5.1.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-12"></a></h5>
 				<p>The amount of help offered by tooltips very much depends on the ability of the user as do many of the techniques above. </p>
 				<p> These is helpful to most persons with intellectual disabilities. Sometimes a person with an intellectual disability can get confused and distracted. If tooltips are to be used they must precise and relate directly to the object.</p>
 			  </section>
 				 
 				<section id="sources-research-12">
-					<h5 id="x2-5-1-2-sources-research"><span class="secno">2.5.1.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-12"></a></h5>
+					<h5 id="x2-5-1-2-sources-research"><bdi class="secno">2.5.1.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-12"></a></h5>
 					<p>From WCAG:</p>
 					<ul>
 						<li>Guideline 3.1 Readable: Make text content readable and understandable.</li>
@@ -2639,14 +2707,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</section>
 			</section>
 			<section id="use-of-charts-and-graphs">
-				<h4 id="x2-5-2-use-of-charts-and-graphs"><span class="secno">2.5.2 </span>Use of charts and graphs<a class="self-link" aria-label="§" href="#use-of-charts-and-graphs"></a></h4>
+				<h4 id="x2-5-2-use-of-charts-and-graphs"><bdi class="secno">2.5.2 </bdi>Use of charts and graphs<a class="self-link" aria-label="§" href="#use-of-charts-and-graphs"></a></h4>
 				<p> Where appropriate, create charts and graphics to provide additional ways to reinforce important concepts. Typically, if something can be shown in a chart or a graphic, it will help many users if it is provided.</p>
 				<p>However, graphics should be clear and easy to identify what is going on</p>
 				<p> The ability to “read between the lines” of a text, graphic, or lecture may seem like an exercise in “common sense,” but it may create barriers for students with autism, who may not be able to readily discern the intended relevance of graphical data.</p>
 				<p> Clear explanations may reduce undue cognitive loads for all users.</p>
 				<p>Further use aria-describedby to associate the graphic or sections of a graphic or chart and the text that describes it can be read by a screen reader whilst the right section of the chart is highlighted.</p>
 				<section id="explanation-and-who-it-helps-13">
-				<h5 id="x2-5-2-1-explanation-and-who-it-helps"><span class="secno">2.5.2.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-13"></a></h5>
+				<h5 id="x2-5-2-1-explanation-and-who-it-helps"><bdi class="secno">2.5.2.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-13"></a></h5>
 				<p>People  who find reading or language difficult can be helped by a chart or graph</p>
 				
 				</section>
@@ -2654,11 +2722,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				
 					<h5 id="sources-research-19">Sources/research:<a class="self-link" aria-label="§" href="#use-of-charts-and-graphs"></a></h5>
 					<p>“Accommodating-ASD-In-STEM.pdf”. Nathan W . Moon, PhD Robert L. T odd, M S David L. Morton, PhD Emily Ivey, M S (You can download it from John's Dropbox account at http://bit.ly/18wev76.) </p>
-					<div class="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="5"><span>Note</span></div><p class="">Make sure there isn't a copyright violation here.</p></div>
+					<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="5"><span>Note</span></div><p class="">Make sure there isn't a copyright violation here.</p></div>
 		  </section>
 				<section id="use-symbols-and-images-to-show-meaning">
-					<h4 id="x2-5-3-use-symbols-and-images-to-show-meaning"><span class="secno">2.5.3 </span>Use symbols and images to show meaning<a class="self-link" aria-label="§" href="#use-symbols-and-images-to-show-meaning"></a></h4><section id="explanation-and-who-it-helps-14">
-					<h5 id="x2-5-3-1-explanation-and-who-it-helps"><span class="secno">2.5.3.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-14"></a></h5>
+					<h4 id="x2-5-3-use-symbols-and-images-to-show-meaning"><bdi class="secno">2.5.3 </bdi>Use symbols and images to show meaning<a class="self-link" aria-label="§" href="#use-symbols-and-images-to-show-meaning"></a></h4><section id="explanation-and-who-it-helps-14">
+					<h5 id="x2-5-3-1-explanation-and-who-it-helps"><bdi class="secno">2.5.3.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-14"></a></h5>
 					<p>Symbols as an addition to short sentences and phrases can understanding. </p>
 					<p>However as some people have difficulty remembering symbols, use text with the symbol.</p>
 					<ul>
@@ -2669,7 +2737,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<p>In the future we intend to enable semantics that will add symbols that are easy to use by the individual user.</p>
 				</section>	 
 				  <section id="sources-research-13">
-						<h5 id="x2-5-3-2-sources-research"><span class="secno">2.5.3.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-13"></a></h5>
+						<h5 id="x2-5-3-2-sources-research"><bdi class="secno">2.5.3.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-13"></a></h5>
 						<p>See http://www.bdadyslexia.org.uk/about-dyslexia/further-information/dyslexia-style-guide.html</p>
 						<p>Garrett, K. L., Beukelman, D. R., &amp; Low-Morrow, D. (1989). A comprehensive augmentative communication system for an adult with Broca's aphasia. Augmentative &amp; Alternative Communication, 5(1), 55.</p>
 						<p>Top Five Instructional Tips for Students with Down syndrome" http://specialedpost.org/2013/01/31/top-five-instructional-strategies-for-students-with-down-syndrome/ </p>
@@ -2684,20 +2752,20 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 						</ul>
 				  </section></section>
           <section id="use-of-synchronized-highlighting-of-complex-graphics-and-formula-with-speech">
-              <h4 id="x2-5-4-use-of-synchronized-highlighting-of-complex-graphics-and-formula-with-speech"><span class="secno">2.5.4 </span>Use of synchronized highlighting, of complex graphics and formula with speech<a class="self-link" aria-label="§" href="#use-of-synchronized-highlighting-of-complex-graphics-and-formula-with-speech"></a></h4>
+              <h4 id="x2-5-4-use-of-synchronized-highlighting-of-complex-graphics-and-formula-with-speech"><bdi class="secno">2.5.4 </bdi>Use of synchronized highlighting, of complex graphics and formula with speech<a class="self-link" aria-label="§" href="#use-of-synchronized-highlighting-of-complex-graphics-and-formula-with-speech"></a></h4>
               <p> Associate maths, sections of math and sections of complex items with explanations. </p>
               <p>Provide text or speech explanations for sections of   charts, mathematical formula and graphics, so that the section of the   formula or graphic being discussed can be highlighted at the same time   as the explanatory text is being read. </p>
               <p>For example, when the text is describing the denominator of a formula, that denominator should be highlighted. </p>
               <p>Note that this requires an accessible format for math such as MathML used with  aria-describedby and CSS.</p>
               <p>This has been shown to increase math comprehension by 10%
               </p>
-              <p></p><section id="sources-research-14"><h5 id="x2-5-4-1-sources-research"><span class="secno">2.5.4.1 </span>Sources/research: <a class="self-link" aria-label="§" href="#sources-research-14"></a></h5>
+              <p></p><section id="sources-research-14"><h5 id="x2-5-4-1-sources-research"><bdi class="secno">2.5.4.1 </bdi>Sources/research: <a class="self-link" aria-label="§" href="#sources-research-14"></a></h5>
             <p>Lewis et al. (2012) </p>
           </section></section>
             
             <section id="temperature">
-              <!--Start Technique-->
-              <h4 id="x2-5-5-temperature"><span class="secno">2.5.5 </span>Temperature<a class="self-link" aria-label="§" href="#temperature"></a></h4>
+              
+              <h4 id="x2-5-5-temperature"><bdi class="secno">2.5.5 </bdi>Temperature<a class="self-link" aria-label="§" href="#temperature"></a></h4>
               <ul>
                 <li>Use the default temperature format of locale </li>
                 <li>Allow reading of long form temperature. </li>
@@ -2725,7 +2793,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           
           <section id="calculations">
          
-            <h4 id="x2-5-6-calculations"><span class="secno">2.5.6 </span>Calculations<a class="self-link" aria-label="§" href="#calculations"></a></h4>
+            <h4 id="x2-5-6-calculations"><bdi class="secno">2.5.6 </bdi>Calculations<a class="self-link" aria-label="§" href="#calculations"></a></h4>
              
               <h4 id="ability-to-have-mathematical-notation-read-out-with-text-to-speech-to-aid-understanding">Ability to have mathematical notation read out with text to speech to aid understanding.<a class="self-link" aria-label="§" href="#calculations"></a></h4>
               <p>Explanation and who it helps</p>
@@ -2740,13 +2808,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               <p>Making Mathematics Accessible <a href="http://ww.dessci.com/en/reference/accessibility/">http://www.dessci.com/en/reference/accessibility/</a></p>
               <p>Math on the web <a href="http://www.dessci.com/en/reference/webmath/">http://www.dessci.com/en/reference/webmath/</a></p>
           </section>
-            <!--End Technique-->
+            
        
           <section id="currency">
-            <!--Start Topic-->
-            <h4 id="x2-5-7-currency"><span class="secno">2.5.7 </span>Currency<a class="self-link" aria-label="§" href="#currency"></a></h4>
             
-              <!--Start Technique-->
+            <h4 id="x2-5-7-currency"><bdi class="secno">2.5.7 </bdi>Currency<a class="self-link" aria-label="§" href="#currency"></a></h4>
+            
+              
               <h4 id="localisation-and-sequence-of-symbols-and-numbers">Localisation and sequence of symbols and numbers<a class="self-link" aria-label="§" href="#currency"></a></h4>
               <ul>
                 <li>Consider placement of currency symbols related to locale and offer acronym with explanation or full text </li>
@@ -2768,14 +2836,14 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               <p>ISO 4217 Currency Codes <a href="http://www.xe.com/iso4217.php">http://www.xe.com/iso4217.php</a></p>
               <p>1.3.1 Info and Relationships: Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A) WCAG advises providing symbol before the number as part of the <abbr title="World Wide Web Consortium">W3C</abbr> working draft on <a href="http://www.w3.org/TR/2013/NOTE-UNDERSTANDING-WCAG20-20130905/content-structure-separation-programmatic#content-structure-separation-programmatic-intent-head">http://www.w3.org/TR/2013/NOTE-UNDERSTANDING-WCAG20-20130905/content-structure-separation-programmatic#content-structure-separation-programmatic-intent-head</a></p>
           </section>
-            <!--End Technique-->
+            
           
           <section id="buying-and-selling-online-quantities-and-size">
-            <!--Start Topic-->
-            <h4 id="x2-5-8-buying-and-selling-online-quantities-and-size"><span class="secno">2.5.8 </span>Buying and Selling Online (Quantities and Size)<a class="self-link" aria-label="§" href="#buying-and-selling-online-quantities-and-size"></a></h4>
+            
+            <h4 id="x2-5-8-buying-and-selling-online-quantities-and-size"><bdi class="secno">2.5.8 </bdi>Buying and Selling Online (Quantities and Size)<a class="self-link" aria-label="§" href="#buying-and-selling-online-quantities-and-size"></a></h4>
             <section id="do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users">
-              <!--Start Technique-->
-              <h5 id="x2-5-8-1-do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"><span class="secno">2.5.8.1 </span>Do not rely on numbers alone when describing goods. Provide a hint or additional information to aid users.<a class="self-link" aria-label="§" href="#do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"></a></h5>
+              
+              <h5 id="x2-5-8-1-do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"><bdi class="secno">2.5.8.1 </bdi>Do not rely on numbers alone when describing goods. Provide a hint or additional information to aid users.<a class="self-link" aria-label="§" href="#do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"></a></h5>
               <p>Explanation and who it helps</p>
               <p>People with dyscalculia frequently struggle with the concept of quantities, this presents challenges when buying goods. In the failure example below it would be easy for someone with dyscalculia to think that the 25Kg was the smaller of the two.</p>
               <h5 id="examples-2">Examples<a class="self-link" aria-label="§" href="#do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"></a></h5>
@@ -2790,30 +2858,30 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               <h5 id="sources-research-21">Sources/research<a class="self-link" aria-label="§" href="#do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"></a></h5>
               <p>Research carried out by Neil Milliken with web users who have dyscalculia - case studies.</p>
             </section>
-            <!--End Technique-->
+            
           </section>
-          <!--End Topic-->
+          
           <section id="buying-selling-online-payments">
-            <!--Start Topic-->
-            <h4 id="x2-5-9-buying-selling-online-payments"><span class="secno">2.5.9 </span>Buying &amp; Selling Online (Payments)<a class="self-link" aria-label="§" href="#buying-selling-online-payments"></a></h4>
+            
+            <h4 id="x2-5-9-buying-selling-online-payments"><bdi class="secno">2.5.9 </bdi>Buying &amp; Selling Online (Payments)<a class="self-link" aria-label="§" href="#buying-selling-online-payments"></a></h4>
             <section class="respec-offending-element" title="Linter (no-headingless-sections): All sections must start with a `h2-6` element. Add a `h2-6` to the offending section or use a `<div>`. See developer console. Occured" id="respec-offender-linter-no-headingless-sections-all-sections-must-start-with-a-h2-6-element-add-a-h2-6-to-the-offending-section-or-use-a-div-see-developer-console-occured-0">
-              <!--Start Technique-->
+              
               <p>See also: <a href="https://rawgit.com/w3c/coga/master/issue-papers/privacy-security.html">Web Security and Privacy Technologies</a></p>
-              <h5 id="functions">Functions<a class="self-link" aria-label="§" href="#buying-selling-online-payments"></a></h5>
+              <h5 id="functions">Functions<a class="self-link" aria-label="§" href="#functions"></a></h5>
               <ul>
                 <li>Allow use of E-Wallets  and password management tools.</li>
                 <li>Avoid asking people to enter credit card details.</li>
                 <li>Allow pasting of password and payment details into form fields.</li>
                 <li>Avoid additional layers of password authentication (e.g., verified by Visa or time sensitive random security numbers).</li>
               </ul>
-              <h4 id="format">Format<a class="self-link" aria-label="§" href="#buying-selling-online-payments"></a></h4>
+              <h4 id="format">Format<a class="self-link" aria-label="§" href="#format"></a></h4>
               <ul>
                 <li>Break up card input forms to match credit cards, e.g., 4x4 numbers.</li>
                 <li>Different cards have different patterns of numbers e.g. Amex may have more numbers than Standard Cards.  Payment forms usually ask the user for the type of card. The card input form should reflect the payment card type.</li>
               </ul>
               <p>Explanation and who it helps</p>
               <p>People may struggle remembering card numbers or may have difficulty entering numbers in the correct order due to sequencing issues. Multiple layers of authentication compound problems and many banks require two-factor authentication that uses pass codes that time out after 30 seconds.  Reducing the requirement for this will be of great benefit to people with dyslexia, dyscalculia, anyone who has poor working memory or issues with sequencing.</p>
-              <h5 id="examples-3">Examples<a class="self-link" aria-label="§" href="#buying-selling-online-payments"></a></h5>
+              <h5 id="examples-3">Examples<a class="self-link" aria-label="§" href="#examples-3"></a></h5>
               <p></p>
               <p><strong>Pass examples</strong></p>
               <p>Allows user to utilize digital wallet to enter payment details - user choses payment card and details are entered automatically.</p>
@@ -2824,7 +2892,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
               <p>Form fields do not match the numbers on the payment card.</p>
               <p>The user is asked for additional authentication which asks requires remembering password fragments e.g. the first second and penultimate characters of a password.</p>
               <p>Use for tags: Dyscalculia, dyslexia, Attention Deficit Disorder.</p>
-              <h5 id="sources-research-22">Sources/research<a class="self-link" aria-label="§" href="#buying-selling-online-payments"></a></h5>
+              <h5 id="sources-research-22">Sources/research<a class="self-link" aria-label="§" href="#sources-research-22"></a></h5>
               <p>Research carried out by Neil Milliken with web users who have dyscalculia - case studies.</p>
             </section>
           </section>
@@ -2833,21 +2901,21 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           </section>
 		</section>
 		<section id="use-a-clear-design">
-		  <h3 id="x2-6-use-a-clear-design"><span class="secno">2.6 </span> Use a clear design<a class="self-link" aria-label="§" href="#use-a-clear-design"></a></h3>
+		  <h3 id="x2-6-use-a-clear-design"><bdi class="secno">2.6 </bdi> Use a clear design<a class="self-link" aria-label="§" href="#use-a-clear-design"></a></h3>
 		  <section id="use-clear-visual-affordances">
-					<h4 id="x2-6-1-use-clear-visual-affordances"><span class="secno">2.6.1 </span>Use clear visual affordances.<a class="self-link" aria-label="§" href="#use-clear-visual-affordances"></a></h4>
+					<h4 id="x2-6-1-use-clear-visual-affordances"><bdi class="secno">2.6.1 </bdi>Use clear visual affordances.<a class="self-link" aria-label="§" href="#use-clear-visual-affordances"></a></h4>
 					<p>Actions and actionable items that can be interacted with should have a clear visual style to indicate this e.g. buttons should look like buttons. Use techniques like 'flat design' with great care as they have much reduced affordances.</p>
 					<section id="explanation-and-who-it-helps-15">
-					<h5 id="x2-6-1-1-explanation-and-who-it-helps"><span class="secno">2.6.1.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-15"></a></h5>
+					<h5 id="x2-6-1-1-explanation-and-who-it-helps"><bdi class="secno">2.6.1.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-15"></a></h5>
 					<p>All but especially those with some forms of autism</p></section>
 					
 				  <section id="sources-research-15">
-						<h5 id="x2-6-1-2-sources-research"><span class="secno">2.6.1.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-15"></a></h5>
+						<h5 id="x2-6-1-2-sources-research"><bdi class="secno">2.6.1.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-15"></a></h5>
 						<p>Citations needed - see <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Flat_Design">flat design page</a> on our wiki and <a href="http://jkg3.com/Journal/cognitive-accessibility-101-part-1-what-is-cognitive-accessibility">Jamie Knight's blog posts</a></p>
 						<p>Computers helping people with special needed, 14 international conference ICCHP 2014 Eds. Miesenberger, Fels, Archambault, Et. Al. Springer (pages 401). Paper: Tablets in the rehabilitation of memory impairment, K Dobsz et. al.</p>
 				  </section>
 		  </section><section id="have-a-clean-and-uncluttered-design">
-		  <h4 id="x2-6-2-have-a-clean-and-uncluttered-design"><span class="secno">2.6.2 </span>Have a clean  and uncluttered design<a class="self-link" aria-label="§" href="#have-a-clean-and-uncluttered-design"></a></h4>
+		  <h4 id="x2-6-2-have-a-clean-and-uncluttered-design"><bdi class="secno">2.6.2 </bdi>Have a clean  and uncluttered design<a class="self-link" aria-label="§" href="#have-a-clean-and-uncluttered-design"></a></h4>
 		  This typically involves:		  <p></p>
 				<ul>
 					<li>Use a plain, evenly spaced sans serif font such as Arial</li>
@@ -2870,11 +2938,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<li>Avoid using non standard font alternatives such as Cufo'n </li>
 					
 				</ul>
-                	<section id="explanation-and-who-it-helps-16"><h5 id="x2-6-2-1-explanation-and-who-it-helps"><span class="secno">2.6.2.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-16"></a></h5><p></p>
+                	<section id="explanation-and-who-it-helps-16"><h5 id="x2-6-2-1-explanation-and-who-it-helps"><bdi class="secno">2.6.2.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-16"></a></h5><p></p>
 				<p> These are sensible clear reading guidelines for all and can support those with a wide range of disabilities and reading difficulties including those with cognitive learning disabilities. </p></section>
 				
 				<section id="sources-research-16">
-					<h5 id="x2-6-2-2-sources-research"><span class="secno">2.6.2.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-16"></a></h5>
+					<h5 id="x2-6-2-2-sources-research"><bdi class="secno">2.6.2.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-16"></a></h5>
 					<p>"Am I making myself clear? Mencap's guidelines for accessible writing http://www.easy-read-online.co.uk/media/10609/making-myself-clear.pdf </p>
 					<p>"Top Five Instructional Tips for Students with Down syndrome" http://specialedpost.org/2013/01/31/top-five-instructional-strategies-for-students-with-down-syndrome/</p>
 					<p>"Down syndrome and Learning" http://inclusive.tki.org.nz/guides/down-syndrome-and-learning/ </p>
@@ -2887,30 +2955,30 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 					<p>Accessibility of text replacements using Canvas (custom fonts) </p>
 					<p><a href="http://www.paciellogroup.com/blog/2009/06/notes-accessibility-of-text-replacement-using-html5-canvas/">http://www.paciellogroup.com/blog/2009/06/notes-accessibility-of-text-replacement-using-html5-canvas/</a>
 					</p>
-				</section></section><section id="formats-for-numbers-and-time"><!--Start numbers-->
-                <h4 id="x2-6-3-formats-for-numbers-and-time"><span class="secno">2.6.3 </span>Formats for Numbers and Time<a class="self-link" aria-label="§" href="#formats-for-numbers-and-time"></a></h4> <section id="time">
-                <h5 id="x2-6-3-1-time"><span class="secno">2.6.3.1 </span>Time<a class="self-link" aria-label="§" href="#time"></a></h5>
+				</section></section><section id="formats-for-numbers-and-time">
+                <h4 id="x2-6-3-formats-for-numbers-and-time"><bdi class="secno">2.6.3 </bdi>Formats for Numbers and Time<a class="self-link" aria-label="§" href="#formats-for-numbers-and-time"></a></h4> <section id="time">
+                <h5 id="x2-6-3-1-time"><bdi class="secno">2.6.3.1 </bdi>Time<a class="self-link" aria-label="§" href="#time"></a></h5>
         
             Check use of appropriate punctuation between numbers when providing times as these may be read inappropriately by text to speech engines. 
-            <section id="explanation-and-who-it-helps-17"><h6 id="x2-6-3-1-1-explanation-and-who-it-helps"><span class="secno">2.6.3.1.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-17"></a></h6>
+            <section id="explanation-and-who-it-helps-17"><h6 id="x2-6-3-1-1-explanation-and-who-it-helps"><bdi class="secno">2.6.3.1.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-17"></a></h6>
             <p>Being able to hear the numbers for time repeatedly read out aloud accurately with 'text to speech' technologies can help comprehension and memory.  Developers need to be aware of how these technologies react to time formats.  This feature can provide those with dyscalculia, dyslexia and attention deficit disorder and those who may be under high cognitive load or situationally disabled with a better understanding of the concepts. </p></section>
             <h5 id="example">Example<a class="self-link" aria-label="§" href="#time"></a></h5>
             <p>The international standard notation for the time of day is hh:mm:ss but this can be hard for those with cognitive impairments to fully comprehend - 10:30:10  may be read out as 10 hours, thirty minutes and 10 seconds by most text to speech engines but may be too long to remember.  The ISO advises the 24 hour clock for example 13:30 as opposed to 01.30pm - the latter is localized for English speakers but may help those with learning disabilities along with symbols to represent the period in the day such as suggest under calendars. </p>
             <p><strong>Pass example:</strong> Numbers representing time can be read out accurately by text to speech engines.</p>
             <p><strong>Failure examples:</strong>Numbers fail to be read out accurately by text to speech engines. </p>
             
-        </section><!--End Technique-->
+        </section>
   
     
     <section id="layout-for-numbers">
     
-    <!--Start Topic-->
-    <h5 id="x2-6-3-2-layout-for-numbers"><span class="secno">2.6.3.2 </span>Layout for Numbers<a class="self-link" aria-label="§" href="#layout-for-numbers"></a></h5>
+    
+    <h5 id="x2-6-3-2-layout-for-numbers"><bdi class="secno">2.6.3.2 </bdi>Layout for Numbers<a class="self-link" aria-label="§" href="#layout-for-numbers"></a></h5>
     
     <p>
           Check use of white space and punctuation characters between numbers. Use of spaces and commas within numbers can confuse and text to speech engines cope in different ways.
     </p><section id="explanation-and-who-it-helps-18">
-    <h6 id="x2-6-3-2-1-explanation-and-who-it-helps"><span class="secno">2.6.3.2.1 </span>Explanation and who it helps<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-18"></a></h6>Where any numbers are presented their use needs to be considered.  If they are representing dates, time, references, telephone numbers or mathematical notation their layout impacts on users' understanding.  Users need to not only recognize standardised layouts but also to be able to understand the meaning as the numbers are read aloud by text to speech engines. This feature can provide those with dyscalculia, dyslexia and attention deficit disorder and those who may be under high cognitive load or situationally disabled with a better understanding of the concepts.<p></p></section>
+    <h6 id="x2-6-3-2-1-explanation-and-who-it-helps"><bdi class="secno">2.6.3.2.1 </bdi>Explanation and who it helps<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-18"></a></h6>Where any numbers are presented their use needs to be considered.  If they are representing dates, time, references, telephone numbers or mathematical notation their layout impacts on users' understanding.  Users need to not only recognize standardised layouts but also to be able to understand the meaning as the numbers are read aloud by text to speech engines. This feature can provide those with dyscalculia, dyslexia and attention deficit disorder and those who may be under high cognitive load or situationally disabled with a better understanding of the concepts.<p></p></section>
             <h5 id="example-0">Example<a class="self-link" aria-label="§" href="#layout-for-numbers"></a></h5>
             <ul>
                 <li>Reference numbers compared to a quantity or value e.g.  Ref: 7241500 as opposed to 7,241,500 chickens </li>
@@ -2920,7 +2988,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             <p><strong>Failure example: </strong>Numbers fail to conform to recognised layouts and are not read out accurately by text to speech engines. </p>
    </section><section id="roman-numerals">
         
-          <h5 id="x2-6-3-3-roman-numerals"><span class="secno">2.6.3.3 </span>Roman Numerals<a class="self-link" aria-label="§" href="#roman-numerals"></a></h5> 
+          <h5 id="x2-6-3-3-roman-numerals"><bdi class="secno">2.6.3.3 </bdi>Roman Numerals<a class="self-link" aria-label="§" href="#roman-numerals"></a></h5> 
           Roman Numerals should be presented in upper case if used in isolation.
             <p><strong>Explanation and who it helps</strong></p>
             <p>Roman Numerals can be presented as lower case or upper case especially when used with musical notation but these may not always be recognised by text to speech engines or may be confused with other navigational elements such as numerical bullet points. Use of Roman Numerals are not always easily understood.  The use of this format for isolated numbers impacts on comprehension for those with dyscalculia, dyslexia and attention deficit disorder and should be avoided if possible. </p>
@@ -2930,10 +2998,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             <p><strong>Failure example: </strong>Roman Numerals presented in lower case in isolation.</p>
             <p>Use for tags: dyscalculia, dyslexia and attention deficit disorder.</p>
             <p> Sources/research</p>
-    <p>Are there any guidelines for the presentation of numbers?</p></section><!--End Technique-->
+    <p>Are there any guidelines for the presentation of numbers?</p></section>
  
-        <section id="use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"><!--Start Technique-->
-            <h5 id="x2-6-3-4-use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"><span class="secno">2.6.3.4 </span> Use linear horizontal text based scales for questionnaires and surveys rather than numbers.<a class="self-link" aria-label="§" href="#use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"></a></h5>
+        <section id="use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers">
+            <h5 id="x2-6-3-4-use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"><bdi class="secno">2.6.3.4 </bdi> Use linear horizontal text based scales for questionnaires and surveys rather than numbers.<a class="self-link" aria-label="§" href="#use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"></a></h5>
             <p>Explanation and who it helps</p>
             <p>It has been found that using linear text positioned horizontally on a page can enhance the results where numerical like rating scales are used to carry out research into people's views on a subject.  Using simple text is also important as this can help those with dementia and cognitive learning disabilities as well as those with dyscalculia, dyslexia, attention deficit disorder. </p>
             <h5 id="examples-5">Examples<a class="self-link" aria-label="§" href="#use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"></a></h5>
@@ -2952,10 +3020,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
             <p>University of Loughborough DDIG - personal perceptions of dyscalculia and Dyspraxia <a href="http://www.lboro.ac.uk/departments/mec/activities/maths-statistics-support/thedyscalculiaanddyslexiainterestgroup/personalperspectives/">http://www.lboro.ac.uk/departments/mec/activities/maths-statistics-support/thedyscalculiaanddyslexiainterestgroup/personalperspectives/</a>.</p>
             <p>Toepoel, V., Das, M. and van Soest, A. 2006. Design of web questionnaires: The effect of layout in rating scales, Tilberg, , The Netherlands: Tilburg University. (Discussion Paper No. 2006‐30, CentERdta) <a href="https://www.researchgate.net/profile/Vera_Toepoel/publication/4784408_Design_of_Web_Questionnaires_The_Effect_of_Layout_in_Rating_Scales/links/0deec520de9f388043000000.pdf">https://www.researchgate.net/profile/Vera_Toepoel/publication/4784408_Design_of_Web_Questionnaires_The_Effect_of_Layout_in_Rating_Scales/links/0deec520de9f388043000000.pdf</a> (accessed 5th june, 2015)</p>
         <p>Hartley, J. and Betts, L. 2010. Four layouts and a finding: the effects of changes in the order of the verbal labels and the numerical values on Likert‐type scale scores. International Journal of Social Research Methodology, 13: 17-27 </p>
-        </section><!--End Technique-->
+        </section>
 
-        <section id="relative-values"><!--Start Technique-->
-            <h5 id="x2-6-3-5-relative-values"><span class="secno">2.6.3.5 </span>Relative values<a class="self-link" aria-label="§" href="#relative-values"></a></h5>
+        <section id="relative-values">
+            <h5 id="x2-6-3-5-relative-values"><bdi class="secno">2.6.3.5 </bdi>Relative values<a class="self-link" aria-label="§" href="#relative-values"></a></h5>
             <p>Note: This is not clear.</p>
             <ul>
               <li>Relate percentages to part of a set and avoid comparing percentages to fractions. </li>
@@ -2976,7 +3044,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                 <a href="http://ictedusrv.cumbria.ac.uk/maths/pgdl/unit7/unit7/page_55.htm">http://ictedusrv.cumbria.ac.uk/maths/pgdl/unit7/unit7/page_55.htm</a> (accessed 05 /&gt;06/2015)</p>
             <p>Relative Value v. Absolute Value - Cheng, L (2009) blog Thinking about Thinking
                 <a href="http://larrycheng.com/2009/06/24/relative-value-v-absolute-value/">http://larrycheng.com/2009/06/24/relative-value-v-absolute-value/</a> (Accessed 05/06/2015)</p>
-    </section><!--End Technique-->
+    </section>
 </section></section></section>
        <section class="respec-offending-element" title="Linter (no-headingless-sections): All sections must start with a `h2-6` element. Add a `h2-6` to the offending section or use a `<div>`. See developer console. Occured" id="respec-offender-linter-no-headingless-sections-all-sections-must-start-with-a-h2-6-element-add-a-h2-6-to-the-offending-section-or-use-a-div-see-developer-console-occured-2">		<section>
 			<h3 id="help-users-complete-and-check-their-work">Help users complete and check their work<a class="self-link" aria-label="§" href="#help-users-complete-and-check-their-work"></a></h3>
@@ -3278,10 +3346,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		      <p>Techneques can be used in any media such as dividing your content into sections, and using a clear heading for each section. For multi media check that it is easy for the user to go back to each section using techniques such as  indexing and bookmarks. </p>
 		      <h4 id="failure-example">Failure example <a class="self-link" aria-label="§" href="#failure-example"></a></h4>
 		      <p>The following breadcrumbs do not help adequately the user know what they are doing</p>
-		      <pre aria-busy="false" class="hljs">step 1 &gt;&gt;  step 2 &gt;&gt; step 3</pre>
+		      <pre aria-busy="false"><code class="hljs">step 1 &gt;&gt;  step 2 &gt;&gt; step 3</code></pre>
 		      <h4 id="pass-example">Pass example <a class="self-link" aria-label="§" href="#pass-example"></a></h4>
               <p>The following breadcrumbs reminds the user  what they are doing</p>
-              <pre aria-busy="false" class="hljs">step 1 - ordered 15 products &gt;&gt;  step 2 -  payment information &gt;&gt; step 3 - shipping information</pre>
+              <pre aria-busy="false"><code class="hljs">step 1 - ordered 15 products &gt;&gt;  step 2 -  payment information &gt;&gt; step 3 - shipping information</code></pre>
 		      
 		      <p>Make the  breadcrumbs clickable so the user can click on them to find out more, such as what products were bought. Also this should allow the user to undo any errors and check their work. (See techniques on preventing errors.) The user must  then be able to jump back to the current page without having to redo additional steps.</p>
 		      <p>&nbsp;</p>
@@ -3396,22 +3464,22 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section></section>
         
         <section id="techniques-for-specific-groups">
-        <!--OddPage--><h2 id="x3-techniques-for-specific-groups"><span class="secno">3. </span>Techniques for specific groups<a class="self-link" aria-label="§" href="#techniques-for-specific-groups"></a></h2>
+        <h2 id="x3-techniques-for-specific-groups"><bdi class="secno">3. </bdi>Techniques for specific groups<a class="self-link" aria-label="§" href="#techniques-for-specific-groups"></a></h2>
         <section id="limit-the-number-of-features-and-choices-on-the-same-screen">
-				<h3 id="x3-1-limit-the-number-of-features-and-choices-on-the-same-screen"><span class="secno">3.1 </span>Limit the number of features and choices on the same screen.<a class="self-link" aria-label="§" href="#limit-the-number-of-features-and-choices-on-the-same-screen"></a></h3>
+				<h3 id="x3-1-limit-the-number-of-features-and-choices-on-the-same-screen"><bdi class="secno">3.1 </bdi>Limit the number of features and choices on the same screen.<a class="self-link" aria-label="§" href="#limit-the-number-of-features-and-choices-on-the-same-screen"></a></h3>
 				<p>Do not provide many features, choices and options on the same screen. Limit to around 2 -5 key options. Put additional options under a "more options" sub-menu or enable them to be hidden.</p>
 				<p>One technique will be to use   aria attribute of aria-importance. This allows the user agent to remove unwanted features.</p>
 				<p>For example:  &lt;button aria-importance= "critical"&gt;send&lt;/button&gt;</p>
 				<p>This content is essential for the key function of the page. </p>
 				<p>For a more broad audience,  reduce the number of links and options to  seven  in any one section.</p>
 				<section id="explanation-and-who-it-helps-19">
-				  <h4 id="x3-1-1-explanation-and-who-it-helps"><span class="secno">3.1.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-19"></a></h4>
+				  <h4 id="x3-1-1-explanation-and-who-it-helps"><bdi class="secno">3.1.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-19"></a></h4>
 					<p>This is another way to reduce complexity. This supports those who have intellectual disabilities,  Dementia and/or acquire cognitive disabilities as they Age.</p>
 				</section>
 				 
 				 
 				<section id="sources-research-17">
-					<h4 id="x3-1-2-sources-research"><span class="secno">3.1.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-17"></a></h4>
+					<h4 id="x3-1-2-sources-research"><bdi class="secno">3.1.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-17"></a></h4>
 					<p>Computers helping people with special needed, 14 international conference ICCHP 2014 Eds. Miesenberger, Fels, Archambault, Et. Al. Springer (pages 401). Paper: Tablets in the rehabilitation of memory impairment, K Dobsz et. al.</p>
 					<p>http://www.autism.org.uk/working-with/autism-friendly-places/designing-websites-suitable-for-people-with-autism-spectrum-disorders.aspx</p>
 				</section>
@@ -3423,10 +3491,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
     </section>
     
 		<section id="techniques-under-development">
-		  <!--OddPage--><h2 id="x4-techniques-under-development"><span class="secno">4. </span>Techniques under development<a class="self-link" aria-label="§" href="#techniques-under-development"></a></h2>
+		  <h2 id="x4-techniques-under-development"><bdi class="secno">4. </bdi>Techniques under development<a class="self-link" aria-label="§" href="#techniques-under-development"></a></h2>
    	</section>
 			<section id="provide-symbols-on-key-content">
-			  <!--OddPage--><h2 id="x5-provide-symbols-on-key-content"><span class="secno">5. </span>Provide symbols on key content <a class="self-link" aria-label="§" href="#provide-symbols-on-key-content"></a></h2>
+			  <h2 id="x5-provide-symbols-on-key-content"><bdi class="secno">5. </bdi>Provide symbols on key content <a class="self-link" aria-label="§" href="#provide-symbols-on-key-content"></a></h2>
 				<p>Add symbols to key content that help the user understand the meaning. </p>
 				<p>See also: <a href="https://rawgit.com/w3c/coga/master/issue-papers/multi-modal.html">Multi-Modal Content Delivery</a></p>
 				<h5 id="calendar">Calendar<a class="self-link" aria-label="§" href="#provide-symbols-on-key-content"></a></h5>
@@ -3444,15 +3512,15 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
                 <p>For example: &lt;button&nbsp;type="button" aria-function="undo" &gt;default&lt;/button&gt;</p>
                 
 				<section id="explanation-and-who-it-helps-20">
-				  <h3 id="x5-1-explanation-and-who-it-helps"><span class="secno">5.1 </span>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-20"></a></h3>
+				  <h3 id="x5-1-explanation-and-who-it-helps"><bdi class="secno">5.1 </bdi>Explanation and who it helps:<a class="self-link" aria-label="§" href="#explanation-and-who-it-helps-20"></a></h3>
 					<p>see http://aac.unl.edu/vocabulary.html</p>
 				</section>
 				
 			  <section id="sources-research-18">
-					<h3 id="x5-2-sources-research"><span class="secno">5.2 </span>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-18"></a></h3>
+					<h3 id="x5-2-sources-research"><bdi class="secno">5.2 </bdi>Sources/research:<a class="self-link" aria-label="§" href="#sources-research-18"></a></h3>
 			  </section>
 			</section><section id="use-semantics-to-provide-extra-help">
-				<!--OddPage--><h2 id="x6-use-semantics-to-provide-extra-help"><span class="secno">6. </span>Use semantics to provide extra help<a class="self-link" aria-label="§" href="#use-semantics-to-provide-extra-help"></a></h2>
+				<h2 id="x6-use-semantics-to-provide-extra-help"><bdi class="secno">6. </bdi>Use semantics to provide extra help<a class="self-link" aria-label="§" href="#use-semantics-to-provide-extra-help"></a></h2>
 				<p>One technique will be to use   aria attribute of aria-function. This allows the user agent to add symbols and extra help.</p>
                 <p>For example: &lt;button&nbsp;type="button" aria-function="undo" &gt;default&lt;/button&gt;</p>
                 <p>Other aria semantics can be used to provide direct help:</p>
@@ -3468,7 +3536,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 				</section>
 	
 			<section id="augmentative-with-signs">
-				<!--OddPage--><h2 id="x7-augmentative-with-signs"><span class="secno">7. </span>Augmentative with signs <a class="self-link" aria-label="§" href="#augmentative-with-signs"></a></h2>
+				<h2 id="x7-augmentative-with-signs"><bdi class="secno">7. </bdi>Augmentative with signs <a class="self-link" aria-label="§" href="#augmentative-with-signs"></a></h2>
 				<p>An overview of Signing and Lexical development in children with intellectual disabilities, as well as its effects on cognitive understanding.</p>
 				
 					<h4 id="sources-research-41">Sources/research:<a class="self-link" aria-label="§" href="#augmentative-with-signs"></a></h4>
@@ -3477,29 +3545,11 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	</section>
 			
 		
-	<!--
-		<section class="appendix" id="changelog">
-			<h2>Change Log</h2>
-			<section>
-				<h2>Substantive changes since the <a href="@@">last public working draft</a></h2>
-				<ul>
-					<li>@@</li>
-					<!- EdNote: After each WD publish, move contents of this list into the next one below. ->
-				</ul>
-			</section>
-			<section>
-				<h2>Other substantive changes since the <a href="@@">First Public Working Draft</a></h2>
-				<ul>
-					<li>@@</li>
-					<!- EdNote: After each WD publish, move previous list into this one. ->
-				</ul>
-			</section>
-		</section>
-		-->
+	
 	<section class="appendix informative section" id="acknowledgements">
-	<!--OddPage--><h2 id="a-acknowledgments"><span class="secno">A. </span>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
+	<h2 id="a-acknowledgments"><bdi class="secno">A. </bdi>Acknowledgments<a class="self-link" aria-label="§" href="#acknowledgements"></a></h2><p><em>This section is non-normative.</em></p>
 	<section class="section" id="ack_group">
-			<h3 id="a-1-participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><span class="secno">A.1 </span>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication<a class="self-link" aria-label="§" href="#ack_group"></a></h3>
+			<h3 id="a-1-participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><bdi class="secno">A.1 </bdi>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication<a class="self-link" aria-label="§" href="#ack_group"></a></h3>
 			<ul>
 				<li>Renaldo Bernard (University of Southampton)</li>
 				<li>Shari Butler (Pearson plc) </li>
@@ -3526,7 +3576,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 	</section>
 
 	<section class="section" id="ack_others">
-		<h3 id="a-2-other-cognitive-and-learning-disabilities-task-force-contributors-commenters-and-previously-active-participants"><span class="secno">A.2 </span>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants<a class="self-link" aria-label="§" href="#ack_others"></a></h3>
+		<h3 id="a-2-other-cognitive-and-learning-disabilities-task-force-contributors-commenters-and-previously-active-participants"><bdi class="secno">A.2 </bdi>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants<a class="self-link" aria-label="§" href="#ack_others"></a></h3>
 		<ul>
 			<li>Jim Allan (Invited Expert)</li>
 			<li>Tim Boland (National Institute of Standards and Technology (NIST))</li>
@@ -3534,7 +3584,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 			<li>Anthony Doran (Invited Expert)</li>
 			<li>Michel Fitos (Invited Expert)</li>
 			<li>John Foliot (Invited Expert)</li>
-			<!-- <li>Karl Groves (The Paciello Group, LLC)</li> -->
+			
 			<li>Barry Johnson (Deque Systems, Inc.)</li>
 			<li>Susann Keohane (IBM Corporation)</li>
 			<li>Dr Kinshuk (Invited Expert)</li>
@@ -3551,16 +3601,9 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 		</ul>
 	</section>
 
-	<!--
-	<section class="section" id="ack_others">
-		<h4>Other contributors, commenters, and previously active task force participants</h4>
-		<ul>
-			<li>@@</li>
-		</ul>
-	</section>
-	-->
+	
 	<section class="section" id="ack_funders">
-		<h3 id="a-3-enabling-funders"><span class="secno">A.3 </span>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
+		<h3 id="a-3-enabling-funders"><bdi class="secno">A.3 </bdi>Enabling funders<a class="self-link" aria-label="§" href="#ack_funders"></a></h3>
 		<p>This publication has been funded in part with Federal funds from the U.S. Department of Health and Human Services, National Institute on Disability Independent Living and Rehabilitation Research (NIDILRR) under contract HHSP23301500054. The content of this publication does not necessarily reflect the views or official policies of the U.S. Department of Health and Human Services, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
 	</section>
 </section>
