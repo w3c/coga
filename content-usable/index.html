@@ -2093,9 +2093,9 @@ var[data-type]:hover::before {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2019-06-15",
-  "publishISODate": "2019-06-15T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 15 June 2019"
+  "publishDate": "2019-06-18",
+  "publishISODate": "2019-06-18T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 18 June 2019"
 }</script><meta name="description" content="This document is for people who make Web content (Web pages) and Web applications.  It gives advice on how to make content usable for  people with learning and cognitive disabilities."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 
 	<body class="h-entry informative"><div class="head">
@@ -2103,7 +2103,7 @@ var[data-type]:hover::before {
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-06-15">15 June 2019</time>
+        <time class="dt-published" datetime="2019-06-18">18 June 2019</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -2637,10 +2637,10 @@ var[data-type]:hover::before {
 	
 		<section class="informative" id="abstract">
 			
-				<p>This document is a design guide to help make Web Content more usable for people with cognitive and learning disabilities (COGA).The guide is divided into themes. </p>
-			<p>There are also user stories and testing methodologies for each theme. Just understanding the themes and user stories may help make your content more accessible to some users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
+				<p>This document is a design guide to help make Web Content more usable for people with cognitive and learning disabilities (COGA). The guide is divided into Objectives, each of which contains a number of Patterns that can be applied to a design. </p>
+			<p>Each Objective also includes user stories and testing methodologies. Understanding the Objectives, user stories and Patterns will help you create content that is more accessible to users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
 			
-				<p>If you are a person with a learning or cognitive challenge and have found other problems that we have not covered please let us know! You can email us with your comments and ideas at public-comments-wcag20@w3.org. </p>
+				<p>If you are a person with a learning or cognitive challenge and would like to recommend an Objective or Pattern that we have not covered or have another recommendation please let us know! You can email us with your comments and ideas at public-comments-wcag20@w3.org. </p>
 			
 			<div class="note" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><div class="">This document is an appendix for <a href="https://w3c.github.io/coga/gap-analysis/usable.html">Making content usable for people with cognitive and learning disabilities</a>. We are considering publishing it as a separate note.
 			
@@ -2651,40 +2651,40 @@ var[data-type]:hover::before {
 			<h3 id="a-1-introduction"><bdi class="secno">A.1 </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h3><p><em>This section is non-normative.</em></p>
 
 			<p>Making websites and applications that are friendly for people with cognitive impairments affects every part of design and development.</p>
-			<p>Traditionally accessibility has been most focused on the interface, and making that usable for people with sensory and physical impairments in vision, hearing and/or mobility. Some accessibility features will help people with cognitive impairments, but often the issues are about context, language, usability, and other more general factors that impact everyone to some degree.</p>
-			<p>This document aims to provide guidance on how to make websites and applications that are friendly for people with cognitive impairments by providing guidance for your designs, and design process.</p>
-			<p>This guide is divided into design themes. There are also user stories, testing methodologies, and design checkpoints for each theme. Just understanding the themes and user stories may help make your content more accessible to some users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
+			<p>Traditionally accessibility has focused on the making the user interface usable for people with sensory and physical impairments in vision, hearing and/or mobility. Some accessibility features also help people with cognitive impairments, but often the issues that help people with cognitive impairments are about context, language, usability, and other more general factors that impact everyone to some degree. As a result they do not fit well into traditional accessibility standards.</p>
+			<p>This document aims to provide guidance on how to make websites and applications that are friendly for people with cognitive impairments by providing guidance for your designs and design process.</p>
+			<p>This guide is divided into design Objectives. Each Objective also includes user stories, testing methodologies, and design Patterns. Understanding the Objectives, user stories and Patterns will help you create content that is more accessible to users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
 			</section>
 
 		<section id="objective-help-users-understand-what-things-are-and-how-to-use-them">
 			<h3 id="a-2-objective-help-users-understand-what-things-are-and-how-to-use-them"><bdi class="secno">A.2 </bdi>Objective: Help users understand what things are and how to use them<a class="self-link" aria-label="§" href="#objective-help-users-understand-what-things-are-and-how-to-use-them"></a></h3>
-			<p>To be able to use a site or application, people need to know what all controls and element  are  on your page and how to use them.</p>
+			<p>To be able to use a site or application, people need to know what all controls and element are on your page and how to use them.</p>
 			<p>Not everyone finds learning new things easy, and not everyone can remember new designs.</p>
 			<p>The more people need to figure things out, the less people can use your site.</p>
 			<p>Many users cannot easily learn new design metaphors, or remember things they learned, such as users with mild cognitive impairment or dementia. Without these skills, it can be much harder or impossible to find what they need, work out what the items do and how to use them.</p>
-			<p>Many users can be overwhelmed by too many options, or too much information. If reading is slow, then too much information mixed together will make it difficult or impossible to use the site.</p>
+			<p>Many users can be overwhelmed by too many options, or too much information. If the individual's reading is slow, then too much information mixed together will make it difficult or impossible to use the site.</p>
 			<p>Using familiar design, familiar terms and familiar symbols are key to being able to use the web for users who will struggle to remember new symbols and design. Users need the following to be familiar: </p>
 			<ul>
-				<li>Where to find  elements: For example, people may look for the search on the top right hand corner of a page. If it is somewhere else it will be hard to find.</li>
-				<li>Symbols: For example, people may look for a question mark for help. If you use a different symbol less people will know what it is. </li>
-				<li>Text: Use text people know, including people with a limited vocabulary.</li>
-				<li>How to get help: Always make it easy to find the help.</li>
+				<li>Element location: Place elements in expected locations. For example, people may look for the search on the top right hand corner of a page. If it is somewhere else it will be hard to find.</li>
+				<li>Symbols: Use familiar symbols. For example, people may look for a question mark for help. If you use a different symbol fewer people will find help. </li>
+				<li>Text: Use familiar terms. For example, some people have a limited vocabulary. Uncommon terms may cause them difficulty.</li>
+				<li>Getting help: Always make it easy to find the help. </li>
 			</ul>
-			<p>The use of personalization can be extremely useful in offering both familiarity as well as other benefits for users with cognitive and learning disabilities. This is important as what is familiar for one user may not be familiar to another. Familiarity is often based on the needs of the individual user.</p>
+			<p>Personalization can be extremely useful for designers who want to offer familiarity and flexibility. Familiarity  helpsusers with cognitive and learning disabilities but is often based on the needs of the individual user. Personalization allows users to customize their interface, which is important as what is familiar for one user may not be familiar to another. </p>
 			<section id="user-testing">
                 <h4 id="a-2-1-user-testing"><bdi class="secno">A.2.1 </bdi>User testing<a class="self-link" aria-label="§" href="#user-testing"></a></h4>
-                <p>Make sure your user testing has all the different cognitive disabilities represented. Do not just ask questions, but ask the user to do an action that demonstrates usability.</p>
-				<p>Test for the following:</p>
+                <p>Make sure your user testing includes users with diverse cognitive abilities. Ideally, user testing should include users who represent  all the different cognitive disabilities </p>
+				<p>Test for the following but set up the tests so that the user demonstrates their knowledge and understanding rather than answers a simple question::</p>
 				<ul>
-					<li>Does the user know what the page is about;</li>
-					<li>Does the user know what actions they can take on a page</li>
-					<li>Does the user know where they are in a website, an application or a multistep process;</li>
-					<li>Can the user easily find the different sections of content;</li>
+					<li>Does the user know what the page is about?</li>
+					<li>Does the user know what actions they can take on a page?</li>
+					<li>Does the user know where they are in a website, an application or a multi-step process?</li>
+					<li>Can the user easily find the different sections of content?</li>
 					<li>Identify the different activities that the user may want to complete on the page:
 						<ul>
-							<li>Can they achieve the activities without asking for help;</li>
-							<li>Does the user make errors trying to achieve the activities;</li>
-							<li>Does they user find them easy to achieve.</li>
+							<li>Can they achieve the activities without asking for help?</li>
+							<li>Does the user make errors trying to achieve the activities?</li>
+							<li>Does they user find them easy to achieve?</li>
 						</ul>
 
 					</li>
@@ -2704,15 +2704,15 @@ var[data-type]:hover::before {
             </section>
 			<section id="pattern-make-the-purpose-of-your-page-clear">
 				<h4 id="a-2-3-pattern-make-the-purpose-of-your-page-clear"><bdi class="secno">A.2.3 </bdi>Pattern: Make the purpose of your page clear<a class="self-link" aria-label="§" href="#pattern-make-the-purpose-of-your-page-clear"></a></h4>
-				<p>Use a  clear title or heading that summarizes the purpose of a page, or other clear signposts that have been tested by users with cognitive disabilities.</p>
+				<p>Use a clear title or heading that summarizes the purpose of a page, or other clear signposts that have been tested by users with cognitive disabilities.</p>
 				<section id="how-it-helps">
 					<h5 id="a-2-3-1-how-it-helps"><bdi class="secno">A.2.3.1 </bdi>How it helps <a class="self-link" aria-label="§" href="#how-it-helps"></a></h5>
-					<p>This helps many people, including those with poor memory, attention, or anyone who is easily distracted. This includes people with age-appropriate forgetfulness, or Attention-Deficit/Hyperactivity Disorder.</p>
-					<p>For example, someone with mild dementia is using online shopping. They get distracted and then when they look at the screen again they have forgotten what they were doing. Put a clear heading at the top of each page that shows clearly <strong>what the page is about and what they are doing</strong>.</p>
+					<p>This helps many people, including those with poor memory and attention as well as anyone who is easily distracted due to age-appropriate forgetfulness and  Attention-Deficit/Hyperactivity Disorder.</p>
+					<p>For example,someone with mild dementia is using online shopping. They get distracted and then when they look at the screen again they have forgotten what they were doing. A clear heading at the top of each page shows clearly <strong>what the page is about and what they are doing</strong>.</p>
 				</section>
 				<section id="more-details">
 					<h5 id="a-2-3-2-more-details"><bdi class="secno">A.2.3.2 </bdi>More details<a class="self-link" aria-label="§" href="#more-details"></a></h5>
-					<p>Heading need to clarify the purpose of this specific page.</p>
+					<p>Headings need to clarify the purpose of this specific page.</p>
 				</section>
 				<section id="examples">
 					<h5 id="a-2-3-3-examples"><bdi class="secno">A.2.3.3 </bdi>Examples<a class="self-link" aria-label="§" href="#examples"></a></h5>
@@ -2720,7 +2720,7 @@ var[data-type]:hover::before {
 					
 					<p><strong>Failure </strong>example: </p>
 						<ul>
-							<li>Heading that doesn't clarify the step in a form;</li>
+							<li>Headings do not clarify the steps in a form;</li>
 							<li>Service not available... what service? I have to remember what I was doing to know what service this is about.</li>
 						</ul>
 					
@@ -2735,15 +2735,15 @@ var[data-type]:hover::before {
 			</section>
 			<section id="pattern-make-each-step-clear">
 				<h4 id="a-2-4-pattern-make-each-step-clear"><bdi class="secno">A.2.4 </bdi>Pattern: Make Each Step Clear<a class="self-link" aria-label="§" href="#pattern-make-each-step-clear"></a></h4>
-				<p>In a multistep process, clearly indicate the steps completed, the current step and the steps pending.</p>
+				<p>In a multi-step process, clearly indicate the steps completed, the current step and the steps pending.</p>
 				<p>Make sure the current location and progress within a sequence is clear.</p>
 				<section id="how-it-helps-0">
 					<h5 id="a-2-4-1-how-it-helps"><bdi class="secno">A.2.4.1 </bdi>How it helps<a class="self-link" aria-label="§" href="#how-it-helps-0"></a></h5>
 					<p>Clearly indicating the current location and progress helps a user who loses focus or gets distracted reorient to their current activity without reading a great deal of content or restarting.  Providing information about the steps that need to be completed ensures that a user who may find a process difficult to complete can determine if they can successfully finish. </p>
 					<p>Examples include:</p>
 					<ul>
-						<li>someone with dementia loses focus and then cannot remember what they were doing</li>
-						<li>someone with an attention disability gets distracted and then needs to pick up were they left off</li>
+						<li>someone with dementia loses focus and then cannot remember what they were doing;</li>
+						<li>someone with an attention disability gets distracted and then needs to pick up were they left off;</li>
 						<li>someone with a learning disability is not sure if this application has too many steps and if they will manage. By seeing they are half-way through they can gauge if they can cope with the entire process.</li>
 					</ul>
 				</section>
@@ -2760,10 +2760,10 @@ var[data-type]:hover::before {
 			</section>
 			<section id="pattern-use-graphical-indicators-to-group-and-highlight-information">
 				<h4 id="a-2-5-pattern-use-graphical-indicators-to-group-and-highlight-information"><bdi class="secno">A.2.5 </bdi>Pattern: Use Graphical indicators to group and highlight information<a class="self-link" aria-label="§" href="#pattern-use-graphical-indicators-to-group-and-highlight-information"></a></h4>
-				<p>Use graphical indicators to help people identify</p>
+				<p>Use graphical indicators to help people identify:</p>
 				<ul>
-					<li>items that are associated with each other or</li>
-					<li>items that have a different purpose to surrounding information</li>
+					<li>items that are associated with each other;</li>
+					<li>items that have a different purpose to surrounding information; or</li>
 					<li>key terms and critical information.</li>
 				</ul>
 				
@@ -2786,8 +2786,8 @@ var[data-type]:hover::before {
 					<h5 id="a-2-5-3-examples"><bdi class="secno">A.2.5.3 </bdi>Examples<a class="self-link" aria-label="§" href="#examples-1"></a></h5>
 					<p>Examples of common graphical indicators are:</p>
 						<ul>
-							<li>Group summaries of content with images, such as using a card design</li>
-							<li>Flag importing important information, such as using call out boxes</li>
+							<li>Group summaries of content with images, such as using a card design;</li>
+							<li>Flag importing important information, such as using call out boxes;</li>
 							<li>Indicate different types as information, such as placing quotes in speech bubbles.</li>
 						</ul>
 				</section>
@@ -2801,8 +2801,8 @@ var[data-type]:hover::before {
 				<h4 id="a-2-6-pattern-chunk-media"><bdi class="secno">A.2.6 </bdi>Pattern: Chunk Media<a class="self-link" aria-label="§" href="#pattern-chunk-media"></a></h4>
 				<p>Long pieces of media are divided into logical segments that are:</p>
 				<ul>
-					<li>short</li>
-					<li>labeled</li>
+					<li>short,</li>
+					<li>labeled, and</li>
 					<li>easy to reach or jump to.</li>
 				</ul>
 				<section id="how-it-helps-2">
@@ -2865,7 +2865,6 @@ var[data-type]:hover::before {
 						<li>Want to know more:  See articles by Ginny Redish including: <a href="http://www.redish.net/images/stories/PDF/AARP Audience-Centered Heuristics.pdf">AARP Audience-Centered Heuristics: Older Adults</a>.
 							</li><li>“Clearly label content categories; assist recognition and retrieval rather than recall.”</li>
 							<li>“If pages are dense with content, is content grouped or otherwise clustered to show what is related?” </li>
-
 						
 					</ul>
 				</section>
@@ -2891,10 +2890,10 @@ var[data-type]:hover::before {
 				<h4 id="a-2-8-pattern-make-it-clear-what-are-controls-and-how-they-should-be-used"><bdi class="secno">A.2.8 </bdi>Pattern: Make it clear what are controls and how they should be used<a class="self-link" aria-label="§" href="#pattern-make-it-clear-what-are-controls-and-how-they-should-be-used"></a></h4>
 				<p>Use a clear design for controls by:</p>
 				<ul>
-					<li>Using a common style on controls (for example:  links being underlined)</li>
-					<li>Using common  design pattern on links and controls  (for example: clicking on a link takes you to the page)</li>
-					<li>Make all the borders of controls clear other than textual links  (for example: a help icon has a border)</li>
-					<li>Items that are not clickable do not look like links or controls</li>
+					<li>Using a common style on controls (for example:  links being underlined);</li>
+					<li>Using common  design pattern on links and controls  (for example: clicking on a link takes you to the page);</li>
+					<li>Making all the borders of controls clear other than textual links  (for example: a help icon has a border);</li>
+					<li>Ensuring items that are not clickable do not look like links or controls.</li>
 				</ul>
 				<p>When this is not possible, provide instructions that explain their use. Instructions should be on the same page or one click away and written in plain language. </p>
 				<section id="how-it-helps-4">
@@ -2933,7 +2932,7 @@ var[data-type]:hover::before {
 											I know something is a link because:
 											<ul>
 												<li>Underlined and blue (or purple if a visited link) – if I have vision.</li>
-												<li>Announces as link – if using text to speech tool.</li>
+												<li>Announces as link – if using text-to-speech tool.</li>
 												<li>Cursor change.</li>
 											</ul>
 										</li>
@@ -3166,11 +3165,12 @@ var[data-type]:hover::before {
 				<section id="how-it-helps-10">
 					<h5 id="a-2-14-1-how-it-helps"><bdi class="secno">A.2.14.1 </bdi>How it helps<a class="self-link" aria-label="§" href="#how-it-helps-10"></a></h5>
 					<p>Those with difficulty understanding how to interact with information need to use cues like color, layout and other visual information to help them know where to look, what they should do and how they should complete that task. </p>
-					<p>For example, an older user with age appropriate forgetfulness takes a long time to learn new designs. When they come to a site the first page takes time to understand, but then they know what to do on the next screen. If the next screen is also difficult to learn, they become tiered and make more mistakes, as they move to a third page the cognitive load becomes too much and they cannot complete the task.</p>
+					<p>For example, an older user with age appropriate forgetfulness takes a long time to learn new designs. When they come to a site, the first page takes time to understand, but then they know what to do on the next page. If the next page is different from the first and also difficult to learn, they become tired and make more mistakes, as they move to a third page the cognitive load becomes too much and they cannot complete the task. This pattern helps by:</p>
+
 					<ul>
-						<li>Ensures consistent user experience by providing familiarity and building confidence</li>
-						<li>Makes it possible to easily use and interact with content</li>
-						<li>Aids the completion of tasks</li>
+						<li>Ensuring a consistent user experience by providing familiarity and building confidence;</li>
+						<li>Making it possible to easily use and interact with content;</li>
+						<li>Aiding the completion of tasks.</li>
 					</ul>
 				</section>
 				<section id="more-details-6">
@@ -3266,7 +3266,7 @@ var[data-type]:hover::before {
             </section>
             <section id="pattern-make-it-easy-to-find-the-most-important-things-on-the-page">
             	<h4 id="a-3-3-pattern-make-it-easy-to-find-the-most-important-things-on-the-page"><bdi class="secno">A.3.3 </bdi>Pattern: Make it easy to find the most important things on the page<a class="self-link" aria-label="§" href="#pattern-make-it-easy-to-find-the-most-important-things-on-the-page"></a></h4>
-            	<p>Key content must visually stand out and be visible to users without needing to scroll the page. This included:</p>
+            	<p>Key content must visually stand out and be visible to users without needing to scroll the page. This includes:</p>
             	<ul>
             		<li>Interactions for critical features (e.g login forms, send buttons)</li>
             		<li>Important information (e.g health warnings or information that can affect safety)</li>
@@ -3295,7 +3295,7 @@ var[data-type]:hover::before {
             		<h5 id="a-3-3-4-examples"><bdi class="secno">A.3.3.4 </bdi>Examples<a class="self-link" aria-label="§" href="#examples-11"></a></h5>
             		<ol>
             			<li>A login form is visible without the need to scroll the page.</li>
-            			<li>A login form submit button stands out from other links and buttons on the page</li>
+            			<li>A login form submit button stands out from other links and buttons on the page.</li>
             			<li>Critical health and safety information regarding medication is highlighted is visible without scrolling.</li>
             			<li>Critical health and safety information regarding medication visually stands out from other less important information on the page due to the use of color, boldness and layout.</li>
             		</ol>
@@ -3392,14 +3392,14 @@ var[data-type]:hover::before {
                 <p>Make sure your user testing has all the different cognitive disabilities represented. Do not just ask questions, but ask the user to do an action that demonstrates usability.</p>
                 <p>Test for the following:</p>
 				<ul>
-					<li>Does the user understandable use of text;</li>
-					<li>Does the user understand text immediately;</li>
-					<li>Does the user know unambiguous language;</li>
-					<li>Is there any content usable without understanding math concepts;</li>
-					<li>Is there any representation of math by words instead of numbers;</li>
-					<li>Is there any support for slow readers.</li>
-					<li>Does the user understand use of (familiar) symbols;</li>
-					<li>Does the user understand use of images and multi-media.</li>
+					<li>Does the user understandable use of text?</li>
+					<li>Does the user understand text immediately?</li>
+					<li>Does the user know unambiguous language?</li>
+					<li>Is there any content usable without understanding math concepts?</li>
+					<li>Is there any representation of math by words instead of numbers?</li>
+					<li>Is there any support for slow readers?</li>
+					<li>Does the user understand use of (familiar) symbols?</li>
+					<li>Does the user understand use of images and multi-media?</li>
 				</ul>
             </section>
             <section id="user-stories-1">
@@ -3559,11 +3559,11 @@ var[data-type]:hover::before {
 
 			<section id="pattern-separate-each-instruction">
 				<h4 id="a-4-7-pattern-separate-each-instruction"><bdi class="secno">A.4.7 </bdi>Pattern: Separate each instruction<a class="self-link" aria-label="§" href="#pattern-separate-each-instruction"></a></h4>
-				<p>In Instructions, separate each step. It makes it much easier to follow. </p>
+				<p>In Instructions, separate each step. Separate steps make instructions much easier to follow. </p>
 				<ul>
-					<li>Using numbers and lists can also help</li>
-					<li>Sometimes complex instructions can be easier to follow in an If/Then table</li>
-					<li>Using a friendly graphics can help make instructions less scary</li>
+					<li>Using numbers and lists can also help;</li>
+					<li>Sometimes complex instructions can be easier to follow in an If/Then table;</li>
+					<li>Using a friendly graphics can help make instructions less scary;</li>
 				</ul>
 				<section id="how-it-helps-19">
 					<h5 id="a-4-7-1-how-it-helps"><bdi class="secno">A.4.7.1 </bdi>How it helps<a class="self-link" aria-label="§" href="#how-it-helps-19"></a></h5>
@@ -3579,28 +3579,28 @@ var[data-type]:hover::before {
 							<th><strong>Then</strong></th>
 						</tr>
 						<tr>
-							<td>If you want to work in programing</td>
+							<td>If you want to work in programing:</td>
 							<td>
 								<ul>
-									<li>Make a resume</li>
-									<li>Get some sample code that you wrote</li>
+									<li>Make a resume.</li>
+									<li>Get some sample code that you wrote.</li>
 									<li>Send them to programing@example.com.</li>
 								</ul>
 							</td>
 						</tr>
 						<tr>
-							<td>If you want to work in design</td>
+							<td>If you want to work in design:</td>
 							<td>
 								<ul>
-									<li>Make a resume</li>
-									<li>Get some sample pages that you designed</li>
-									<li>Send them to design@examle.com.</li>
+									<li>Make a resume.</li>
+									<li>Get some sample pages that you designed.</li>
+									<li>Send them to design@example.com.</li>
 								</ul>
 							</td>
 						</tr>
 					</tbody></table>
 					<p><strong>Failure </strong>example: separate each step</p>
-					<p>If you want to work in programing, write to programing@example.com with a resume and sample code that you wrote. If you want to work in design write to design@examle.com with a resume and sample pages. </p>
+					<p>If you want to work in programing, write to programing@example.com with a resume and sample code that you wrote. If you want to work in design write to design@example.com with a resume and sample pages. </p>
 				</section>
 				<section id="technical-details-19">
 					<h5 id="a-4-7-3-technical-details"><bdi class="secno">A.4.7.3 </bdi>Technical details<a class="self-link" aria-label="§" href="#technical-details-19"></a></h5>
@@ -3684,7 +3684,7 @@ var[data-type]:hover::before {
 				<p>Use the correct punctuation for text, numbers and symbols to improve readability and comprehension.</p>
 				<section id="how-it-helps-22">
 					<h5 id="a-4-10-1-how-it-helps"><bdi class="secno">A.4.10.1 </bdi>How it helps<a class="self-link" aria-label="§" href="#how-it-helps-22"></a></h5>
-					<p>For some readers, decoding words, numbers and symbols is not an automatic task and can be demanding on working memory and executive functions. If they find content too demanding they are at risk of losing its meaning and the overall context of the message that is being conveyed. Some users may use assistive technology or personalization tools to reduce the cognitive demands of decoding content. An example would be text to speech that reads aloud content allowing for the use of auditory and visual channels.</p>
+					<p>For some readers, decoding words, numbers and symbols is not an automatic task and can be demanding on working memory and executive functions. If they find content too demanding they are at risk of losing its meaning and the overall context of the message that is being conveyed. Some users may use assistive technology or personalization tools to reduce the cognitive demands of decoding content. An example would be text-to-speech that reads aloud content allowing for the use of auditory and visual channels.</p>
 					<p>Users should not need to be distracted from their task in order to decipher letters, numbers, and words. They should be able to focus on understanding the meaning of the content, especially when they are using assistive technology or personalizing content. It is important that the content is created with these adaptations in mind, to ensure that all users gain the experience you want them to achieve. Content creators should ensure that information is provided in a way that can be read accurately by assistive technology. It may have to be personalized to suit certain users, but this can be achieved when all the elements are accessible.</p>
 					<p>Use cases:</p>
 					<ul>
@@ -3696,19 +3696,19 @@ var[data-type]:hover::before {
 				<section id="more-details-16">
 					<h5 id="a-4-10-2-more-details"><bdi class="secno">A.4.10.2 </bdi>More details<a class="self-link" aria-label="§" href="#more-details-16"></a></h5>
 					<p><strong>Use punctuation correctly</strong> for the language you are writing in, as it will affect how the stress and intonation (known as prosody) patterns from the text are heard, when converted into speech. For example, in English, commas and semicolons will result in a short pause in the speech, whereas a hyphen – will generally be ignored. Question marks, exclamation marks and speech marks can result in changes in intonation,  such as a rise in the pitch of the voice.</p>
-					<p><strong>Avoid the use of Roman Numerals and unfamiliar symbols</strong> in text were possible. These can confuse readers and are likely to be read incorrectly by text to speech tools. If these symbols are necessary then ensure they are marked up correctly, using techniques such as MathML and abbreviation expansions to provide additional support. Roman Numerals should be presented in upper case if used in isolation as they are likely to be read as individual letters</p>
+					<p><strong>Avoid the use of Roman Numerals and unfamiliar symbols</strong> in text were possible. These can confuse readers and are likely to be read incorrectly by text-to-speech tools. If these symbols are necessary then ensure they are marked up correctly, using techniques such as MathML and abbreviation expansions to provide additional support. Roman Numerals should be presented in upper case if used in isolation as they are likely to be read as individual letters</p>
 					<p>Be aware that long numbers may be read as single digits or phrased as a single number. This is a particular problem for phone numbers or zip codes. While it is difficult to control exactly how these numbers are read aloud, content creators can help by:</p>
 					<ul>
-						<li>Displaying the content of the number and using HTML semantics to ensure users and assistive technologies are aware of the number’s purpose. In addition the following recommendations can assist with improving text to speech rendering:</li>
-						<li>For phone numbers, use the correct layout for the locality of the phone number and ensure users can select the whole phone number (including area code), so that text to speech voices can recognize the format and phrase it correctly.</li>
+						<li>Displaying the content of the number and using HTML semantics to ensure users and assistive technologies are aware of the number’s purpose. In addition the following recommendations can assist with improving text-to-speech rendering:</li>
+						<li>For phone numbers, using the correct layout for the locality of the phone number and ensure users can select the whole phone number (including area code), so that text-to-speech voices can recognize the format and phrase it correctly.</li>
 						<li>For Zip / Postal codes, including state or address information close to the number so that speech voices can expand known abbreviations (such as state names) and listeners can perceive the context.</li>
-						<li>When writing long numbers, consider what separators will be familiar to your readers and how it will be read aloud. In general, English speaking countries will use commas between thousands and a period as the decimal separator whereas German and other European countries do the opposite. For example, 1,245 would represent one thousand two hundred and forty five in English, but one point two four five in German. Text to speech output will assume the separators are being used in the format of the language of its voice. If this does not match the content then listeners can become easily confused. While replacing thousand separators with a space has become a common convention to avoid confusion, it leads to difficulties with text to speech with long numbers being read out in a disjointed fashion. For example, 120 034 943 can be read as one hundred and twenty, zero three four, nine hundred and forty three.</li>
+						<li>When writing long numbers, considering what separators will be familiar to your readers and how it will be read aloud. In general, English speaking countries will use commas between thousands and a period as the decimal separator whereas German and other European countries do the opposite. For example, 1,245 would represent one thousand two hundred and forty five in English, but one point two four five in German. Text-to-speech output will assume the separators are being used in the format of the language of its voice. If this does not match the content then listeners can become easily confused. While replacing thousand separators with a space has become a common convention to avoid confusion, it leads to difficulties with text-to-speech with long numbers being read out in a disjointed fashion. For example, 120 034 943 can be read as one hundred and twenty, zero three four, nine hundred and forty three.</li>
 					</ul>
 					
 				</section>
 				<section id="examples-19">
 					<h5 id="a-4-10-3-examples"><bdi class="secno">A.4.10.3 </bdi>Examples <a class="self-link" aria-label="§" href="#examples-19"></a></h5>
-					<p>Consider how you write dates, because once again the text to speech will use the format associated with the language of the voice. A date such as 04/03/2019 will be read as “April 3rd 2019” by a US English voice and “4th of March 2019” by a British English voice. Writing out the month in words can avoid confusion.</p>
+					<p>Consider how you write dates, because once again the text-to-speech will use the format associated with the language of the voice. A date such as 04/03/2019 will be read as “April 3rd 2019” by a US English voice and “4th of March 2019” by a British English voice. Writing out the month in words can avoid confusion.</p>
 				</section>
 				<section id="technical-details-22">
 					<h5 id="a-4-10-4-technical-details"><bdi class="secno">A.4.10.4 </bdi>Technical details<a class="self-link" aria-label="§" href="#technical-details-22"></a></h5>
@@ -3805,9 +3805,9 @@ var[data-type]:hover::before {
 				<p>Test for the following:</p>
 
 				<ul>
-					<li>Can they easily fill in the form without making mistakes?</li>
+					<li>Can the user easily fill in the form without making mistakes?</li>
 					<li>Was it pleasant to fill out the form? How is their mood changed?</li>
-					<li>Ask the users if they would find this easy to do if under stress or tiered?</li>
+					<li>Ask the users if they would find this easy to do if under stress or tired.</li>
 					<li>Ask the user if anything was hard.</li>
 					<li>Ask the user how the form could be easier to fill out. Suggest some of the relevant design techniques bellow and ask if it would help them with this form.</li>
 				</ul>
@@ -3920,13 +3920,13 @@ var[data-type]:hover::before {
 					<h5 id="a-5-4-4-examples"><bdi class="secno">A.5.4.4 </bdi>Examples <a class="self-link" aria-label="§" href="#examples-22"></a></h5>
 					<p><strong>Success </strong>examples:</p>
 					<ul>
-						<li>Provide a summary before submitting important information. Make it clearly labeled to repair information and one click to return to the summary</li>
-						<li>Provide clickable breadcrumbs that allow users to see the previous steps, go back, and change them</li>
+						<li>Provide a summary before submitting important information. Make it clearly labeled to repair information and one click to return to the summary.</li>
+						<li>Provide clickable breadcrumbs that allow users to see the previous steps, go back, and change them.</li>
 					</ul>
 					<p><strong>Failure </strong>examples:</p>
 					<ul>
-						<li>Provide a summary before submitting important information. But it is hard to repair the information</li>
-						<li>Provide a summary before submitting important information. But then you have to redo a lot of other non-dependent information </li>
+						<li>Provide a summary before submitting important information. But it is hard to repair the information.</li>
+						<li>Provide a summary before submitting important information. But then you have to redo a lot of other non-dependent information. </li>
 					</ul>
 				</section>
 				<section id="technical-details-26">
@@ -4023,7 +4023,7 @@ var[data-type]:hover::before {
 					<ul>
 						<li>A Web site uses a client-side time limit to help protect users who may step away from their computers. After a period of inactivity, the Web page asks if the user needs more time. If the user does not respond within 120 seconds, a timeout occurs. The user is able to request more time at least 10 times.</li>
 						<li>A Web page has a section that automatically updates with the latest headlines in a rotating fashion. There is an interactive control that is easy to activate and is labeled with simple text. It allows the user to extend the length of time, between each update, to as much as ten times the default. The control can be operated by mouse, keyboard, or touch.</li>
-						<li>A ticket-purchasing web site allows users two minutes to confirm purchase of selected seats, but warns users when their time is almost out. It allows users to extend this time limit at least 10 times using a simple action, which is labeled with simple text, such as a button labeled "Extend time limit".</li>
+						<li>A ticket-purchasing web site allows users two minutes to confirm purchase of selected seats, but warns users when their time is almost out. It allows users to extend this time limit at least 10 times using a simple action, which is labeled with simple text, such as a button labeled "Extend time limit."</li>
 						<li>In an auction, there is a time limit on the amount of time a user has to submit a bid. Because the time limit applies to all users who want to bid on an item, it would be unfair to extend the time limit for one user. Therefore, a time limit is required for this type of activity. No extension, adjustment, or deactivation of such a time limit is required by this design requirement.</li>
 					</ul>
 					<p>This pattern helps people with a variety of disabilities including the following:</p>
@@ -4080,9 +4080,9 @@ var[data-type]:hover::before {
 					<h5 id="a-5-8-3-examples"><bdi class="secno">A.5.8.3 </bdi>Examples<a class="self-link" aria-label="§" href="#examples-26"></a></h5>
 					<p><strong>Success</strong> examples</p>
 					<ul>
-						<li>WAI-ARIA states are used to provide state feedback for a toggle button with an animation showing the state (such as a button was pushed )</li>
-						<li>Use ARIA-pressed with a visual or a checkbox is checked/unchecked</li>
-						<li>Provide a confirmation message when an email message is successfully sent, or a form is successfully submitted</li>
+						<li>WAI-ARIA states are used to provide state feedback for a toggle button with an animation showing the state (such as a button was pushed).</li>
+						<li>Use ARIA-pressed with a visual or a checkbox is checked/unchecked.</li>
+						<li>Provide a confirmation message when an email message is successfully sent, or a form is successfully submitted.</li>
 						<li>Provide visible and programmatically-determinable information to indicate a new password satisfies security requirements.</li>
 					</ul>
 					<p><strong>Failure </strong>examples</p>
@@ -4181,11 +4181,11 @@ var[data-type]:hover::before {
 				<ul>
 					<li>Checking how safety and security techniques work with a wide range of customized profile including aging users and users with learning and cognitive disabilities.</li>
 					<li>Using known techniques to keep sensitive user information safe.</li>
-					<li>Help all users understand any relevant known risks.</li>
+					<li>Helping all users understand any relevant known risks.</li>
 				</ul>
 				<section id="how-it-helps-33">
 					<h5 id="a-5-11-1-how-it-helps"><bdi class="secno">A.5.11.1 </bdi>How it helps<a class="self-link" aria-label="§" href="#how-it-helps-33"></a></h5>
-					<p>It is vital that users stay safe on the internet. Information which suggests a user has Dementia or an intellectual disability allows predatory companies and individuals to target that user for scams or other risky activity. For example, a predatory company could send requests for money, saying “you haven’t made your donation” despite the user having made one. Avoid storing information that implies this or, if you do store it, provide strong security for that information.</p>
+					<p>It is vital that users stay safe on the Internet. Information which suggests a user has Dementia or an intellectual disability allows predatory companies and individuals to target that user for scams or other risky activity. For example, a predatory company could send requests for money, saying “you haven’t made your donation” despite the user having made one. Avoid storing information that implies this or, if you do store it, provide strong security for that information.</p>
 					<p>Users with weak executive functioning are less likely to identify risks correctly so clearly identifying potential risks helps the user stay safe. Add helpful tips for staying safe while using your content and provide help in case of problems.</p>
 					<p>To help identify risks, we suggest holding research and focus groups with people with cognitive and learning disabilities and to work with people with disabilities to solve potential and existing problems.</p>
 					<p>For example, many people who cannot copy and paste passwords or use two-step authorization codes ask a caregiver to help them. As caregivers are often just temporary employees, this leaves the user completely exposed. Making passwords longer or requiring users change them regularly increases these unsafe practices and actually makes the application less secure for many people. This type of design error is common because people with cognitive and learning disabilities are left out of the user research and analysis.</p>
@@ -4226,7 +4226,7 @@ var[data-type]:hover::before {
 				<ul>
 					<li>Can they achieve the activities easily without losing focus?</li>
 					<li>Distract the user for a minute so that they lose focus. Can they get easily back to the task?</li>
-					<li>Ask the users if they would find this easy to do if under stress or tiered </li>
+					<li>Ask the users if they would find this easy to do if under stress or tired? </li>
 					<li>Ask the user what would help them remember what they are doing such as headers or breadcrumbs.</li>
 					<li>Ask the user if anything was distracting.</li>
 				</ul>
@@ -4279,7 +4279,7 @@ var[data-type]:hover::before {
 						<p>Avoiding long paragraphs and non-meaningful imagery ensures those with cognitive impairments can concentrate on the important points being made. </p>
 						<p>Keeping to a few short bullet points and limiting to one or two images related to the main subject areas of a website or service allows the user to choose whether to explore the site further.</p>
 
-						<p>The intent of this Success Criterion is not to clutter the page with unnecessary information but to provide important cues and instructions that will benefit people with disabilities. Too much information or instruction can be just as much of a hindrance as too little. The goal is to make certain that enough information is provided for the user to accomplish the task without undue confusion or navigation.</p>
+						<p>The intent of this Pattern is not to clutter the page with unnecessary information but to provide important cues and instructions that will benefit people with disabilities. Too much information or instruction can be just as much of a hindrance as too little. The goal is to make certain that enough information is provided for the user to accomplish the task without undue confusion or navigation.</p>
 					</section>
 				<section>
 						<p><strong>Success</strong> examples</p>
@@ -4314,11 +4314,11 @@ var[data-type]:hover::before {
 				<p>Make sure your user testing has all the different cognitive disabilities represented. Test for the following:</p>
 				<p>Identify the different activities that the user may want to complete on the page:</p>
 				<ul>
-					<li>Can they achieve the activities without asking for help;</li>
-					<li>Does the user make errors trying to achieve the activities;</li>
-					<li>Does the user find the activities easy to achieve;</li>
-					<li>Can the user do the same thing later (the password may have been forgotten);</li>
-					<li>Ask the users if they would find this easy to do if under stress or tiered; </li>
+					<li>Can they achieve the activities without asking for help?</li>
+					<li>Does the user make errors trying to achieve the activities?</li>
+					<li>Does the user find the activities easy to achieve?</li>
+					<li>Can the user do the same thing later (the password may have been forgotten)?</li>
+					<li>Ask the users if they would find this easy to do if under stress or tired.</li>
 					<li>Ask the user were they might have trouble if they are under stress.</li>
 				</ul>
 			</section>
@@ -4342,12 +4342,12 @@ var[data-type]:hover::before {
 				<h4 id="a-7-3-pattern-logging-in-does-not-rely-on-good-memory-or-other-cognitive-skills"><bdi class="secno">A.7.3 </bdi>Pattern: Logging in does not rely on good memory or other cognitive skills<a class="self-link" aria-label="§" href="#pattern-logging-in-does-not-rely-on-good-memory-or-other-cognitive-skills"></a></h4>
 				<p>Users can login and register without having more cognitive abilities then they need to use a simple web page. This includes:</p>
 				<ul>
-					<li>memorizing character strings,</li>
-					<li>perform calculations, or</li>
-					<li>coping; or</li>
-					<li>Answer puzzles; or </li>
-					<li>reliably produce gestures; or</li>
-					<li>recognize characters presented on screen, and then enter them into an input field.</li>
+					<li>Memorizing character strings;</li>
+					<li>Performing calculations;</li>
+					<li>Coping;</li>
+					<li>Answering puzzles;</li>
+					<li>reliably producing gestures; or</li>
+					<li>recognizing characters presented on screen, and then entering them into an input field.</li>
 				</ul>
 				<section id="how-it-helps-36">
 					<h5 id="a-7-3-1-how-it-helps"><bdi class="secno">A.7.3.1 </bdi>How it helps<a class="self-link" aria-label="§" href="#how-it-helps-36"></a></h5>
@@ -4409,7 +4409,7 @@ var[data-type]:hover::before {
 				<p>Let people easily reach an operator without:</p>
 				<ul>
 					<li>Memorizing character strings, including remembering digits to select for a short time, or pin numbers;</li>
-					<li>Perform calculations;</li>
+					<li>Performing calculations;</li>
 					<li>Coping;</li>
 					<li>Using their executive function to work out the category of the service they need;</li>
 					<li>Going through multiple steps.</li>
@@ -4557,9 +4557,9 @@ var[data-type]:hover::before {
 				<p>Make sure your user testing has a wide range of different cognitive disabilities represented.</p>
 				<p>Test for the following:</p>
 				<ul>
-					<li>Are enough user groups represented</li>
+					<li>Are enough user groups represented?</li>
 					<li>For example a typical project may wish to include: People living with early stage dementia, age appropriate forgetfulness, intellectual disabilities, different specific learning disabilities and communication disorders.</li>
-					<li>Identify the different ways a user may “Report Issues and Problems”</li>
+					<li>Identify the different ways a user may “Report Issues and Problems.”</li>
 					<li>Can the user find a way to submit their feedback without asking for help?</li>
 					<li>Can the user submit their feedback at each stage of the process including from the home page and any place they may get stuck?</li>
 					<li>Does the user make errors trying to submit their feedback?</li>
@@ -4568,8 +4568,8 @@ var[data-type]:hover::before {
 					<li>Ask the users if they would find this easy to do if under stress or tired.</li>
 					<li>Ask the user where they might have trouble if they were under stress.</li>
 					<li>Does the user understand the feedback process and are they able to complete the task? Use  concrete ways to check that the user understands. For example: Is the user able to identify if/when they will receive a response back? The method a response back may come (e.g. email, phone). Where the feedback goes/what happens to the feedback?</li>
-					<li>make sure it is simple to use , and does not require a lot of information that will prevent !people from giving feedback</li>
-					<li>Confirm it is available at different stages in the process and is  one click away</li>
+					<li>Make sure it is simple to use and does not require a lot of information that will prevent !people from giving feedback.</li>
+					<li>Confirm it is available at different stages in the process and is one click away.</li>
 					<li>Confirm that when feedback is given and a process is in place for acting on it! </li>
 				</ul>
 							</section>
@@ -4590,13 +4590,13 @@ var[data-type]:hover::before {
 					<p>The use of complex information, long documents and data in a particular format can present significant barriers to users with cognitive accessibility needs. Users should be able to understand the information and successfully complete described tasks without requiring further external assistance as much as possible. If content is sufficiently complex to cause barrier, it may be inaccessible and then additional supporting help should be provided.</p>
 					<p>The complexity of information may be inherent in the information itself, for example the language used, the quantity of information, or the subject matter. In this case, it is likely to need careful explanation, organization and presentation for all users to be able to understand without any mistakes, confusion or need of assistance.</p>
 					<p>In addition, the presentation mode of information, such as a graph, diagram or table, may obscure its meaning through complexity. Here, a supporting description and guided interpretation will highlight the key features the user needs to understand.</p>
-					<p>Help may be provided in various forms, for example</p>					
+					<p>Help may be provided in various forms, for example:</p>					
 					<ul>
-						<li>Text "asides" providing explanation and help for diagrams</li>						
-						<li>A supporting chart or graph to illuminate text content</li>
-						<li>A supplemental table – as long as it is not itself complex</li>
-						<li>Popup on hover explanations of keywords - possibly linked to a glossary</li>
-						<li>A flow chart of steps in a process</li>
+						<li>Text "asides" providing explanation and help for diagrams.</li>						
+						<li>A supporting chart or graph to illuminate text content.</li>
+						<li>A supplemental table – as long as it is not itself complex.</li>
+						<li>Popup on hover explanations of keywords - possibly linked to a glossary.</li>
+						<li>A flow chart of steps in a process.</li>
 					</ul>
 				</section>
 				<section id="more-details-29">
@@ -4620,9 +4620,9 @@ var[data-type]:hover::before {
 									<li>
 										However as some people have difficulty remembering symbols, use text with the symbol.
 										<ul>
-											<li>Use clear symbols that can easily be seen and expanded</li>
-											<li>Use images understood by different users</li>
-											<li>In left to right languages place the image to the left of the text</li>
+											<li>Use clear symbols that can easily be seen and expanded.</li>
+											<li>Use images understood by different users.</li>
+											<li>In left to right languages place the image to the left of the text.</li>
 										</ul>
 									</li>
 								</ul>
@@ -4708,25 +4708,25 @@ var[data-type]:hover::before {
 				<section id="more-details-30">
 					<h5 id="a-8-5-2-more-details"><bdi class="secno">A.8.5.2 </bdi>More Details<a class="self-link" aria-label="§" href="#more-details-30"></a></h5>
 					<p>The standard HTML forms and controls have been carefully specified for maximum usability and accessibility. They are usually understood by users, especially if they are familiar with web interactions. However, users are likely to experience difficulties if the standard form behavior has been altered or completely new controls are provided. Assuming the new behaviors have been carefully designed and user tested, users may still require help in order to successfully use them.</p>
-					<p>Examples of forms and controls that are likely to require additional help </p>
+					<p>Examples of forms and controls that are likely to require additional help: </p>
 					<ul>
-						<li>New behaviors like bank sort code fields where there is auto tabbing between the 3 boxes as digits are entered</li>
-						<li>Password fields that require certain character types of characters to be entered</li>
-						<li>Surveys with complex interactions, for example where buttons only appear depending on previous answers</li>
-						<li>Date entry where there could be some ambiguity about the required format.</li>
-						<li>custom controls like date pickers</li>
+						<li>New behaviors like bank sort code fields where there is auto tabbing between the 3 boxes as digits are entered;</li>
+						<li>Password fields that require certain character types of characters to be entered;</li>
+						<li>Surveys with complex interactions, for example where buttons only appear depending on previous answers;</li>
+						<li>Date entry where there could be some ambiguity about the required format;</li>
+						<li>custom controls like date pickers.</li>
 					</ul>
 					<p>Help can be provided via various mechanisms, perhaps with an accessible help button next to a nonstandard control.</p>
 					<p>Sufficient techniques for forms</p>
 					<ul>
-							<li>Using a standard mechanism for the platform or technologies exists for context sensitive help</li>
-							<li>Using COGA semantics for context sensitive help</li>
+							<li>Using a standard mechanism for the platform or technologies exists for context sensitive help;</li>
+							<li>Using COGA semantics for context sensitive help;</li>
 							<li>Semantic headings are used to provide a logical structure to a form adding both the understanding of the form layout and the information required. This will also benefit users of Assistive Technology.</li>
 					</ul>
 					<p>Sufficient techniques for non-standard controls</p>
 					<ul>
 							<li>Clear and non-ambiguous instructions should be available for non-standard controls.</li>
-							<li>Using Personalization semantics for instructions should be available for non-standard controls</li>
+							<li>Using Personalization semantics for instructions should be available for non-standard controls.</li>
 					</ul>
 
 				</section>
@@ -4914,14 +4914,14 @@ var[data-type]:hover::before {
 					<h5 id="a-9-3-1-how-it-helps"><bdi class="secno">A.9.3.1 </bdi>How it helps<a class="self-link" aria-label="§" href="#how-it-helps-45"></a></h5>
 					<p>People with cognitive disabilities are often using add-ons or extensions as assistive technology. This includes:</p>
 					<ul>
-						<li>Reading of the long form of acronyms</li>
-						<li>Support for text-to-speech with synchronized highlighting of the phrase being read</li>
-						<li>Content simplification</li>
-						<li>Creating mind maps out of the heading structure</li>
-						<li>Support for retaining content that has already been entered</li>
-						<li>Password management</li>
-						<li>Spell checking</li>
-						<li>Changing the symbols or the interface</li>
+						<li>Reading of the long form of acronyms;</li>
+						<li>Support for text-to-speech with synchronized highlighting of the phrase being read;</li>
+						<li>Content simplification;</li>
+						<li>Creating mind maps out of the heading structure;</li>
+						<li>Support for retaining content that has already been entered;</li>
+						<li>Password management;</li>
+						<li>Spell checking;</li>
+						<li>Changing the symbols or the interface.</li>
 					</ul>
 					<p>If these functions are not supported, the author should provide all support all the functions of the add-ons in use as assistive technology.</p>
 					<p>For example, a user with traumatic brain injury has executive function and memory impairments impacting their ability to remember details such as:</p>
@@ -4959,9 +4959,9 @@ var[data-type]:hover::before {
 					<p>Content can be used with APIs and extensions that support those with cognitive disabilities.</p>
 					<p>Testing verified through the use of some of the  APIs appropriate for the content. For example:</p>
 					<ul>
-						<li>Testing with spell checker and password storage apps or extensions</li>
-						<li>Test with an extension that add to the left click</li>
-						<li>Test with a toolbar that enables simplification or personalization and is designed for people with cognitive disabilities </li>
+						<li>Testing with spell checker and password storage apps or extensions.</li>
+						<li>Test with an extension that add to the left click.</li>
+						<li>Test with a toolbar that enables simplification or personalization and is designed for people with cognitive disabilities. </li>
 					</ul>								
 				</section>
 				<section id="examples-37">
@@ -5008,7 +5008,7 @@ var[data-type]:hover::before {
 						<li>Use aui-simplification on regions and controls;</li>
 						<li>Use other attributes in personalization semantics;</li>
 						<li>Add a simplification toolbar;</li>
-						<li>Provide an alternative version;</li>
+						<li>Provide an alternative version.</li>
 					</ul>
 				</section>
 				<section id="getting-started-14">
