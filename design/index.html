@@ -13,10 +13,10 @@
 	<body>
 		<section class="informative"id="abstract">
 			
-				<p>This document is a design guide to help make Web Content more usable for people with cognitive and learning disabilities (COGA). The guide is divided into Objectives, each of which contains a number of Patterns that can be applied to a design. </p>
+			<p>This document is a design guide to help make Web Content more usable for people with cognitive and learning disabilities (COGA). The guide is divided into Objectives, each of which contains a number of Patterns that can be applied to a design. </p>
 			<p>Each Objective also includes user stories and testing methodologies. Understanding the Objectives, user stories and Patterns will help you create content that is more accessible to users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
 			
-				<P>If you are a person with a learning or cognitive challenge and would like to recommend an Objective or Pattern that we have not covered or have another recommendation please let us know! You can email us with your comments and ideas at public-comments-wcag20@w3.org. </p>
+			<P>If you are a person with a learning or cognitive challenge and would like to recommend an Objective or Pattern that we have not covered or have another recommendation please let us know! You can email us with your comments and ideas at public-comments-wcag20@w3.org. </p>
 			
 			<div class="ednote">This document is an appendix for <a href="https://w3c.github.io/coga/gap-analysis/usable.html" >Making content usable for people with cognitive and learning disabilities</a>. We are considering publishing it as a separate note.</a>
 			
@@ -30,7 +30,21 @@
 			<p>Traditionally accessibility has focused on the making the user interface usable for people with sensory and physical impairments in vision, hearing and/or mobility. Some accessibility features also help people with cognitive impairments, but often the issues that help people with cognitive impairments are about context, language, usability, and other more general factors that impact everyone to some degree. As a result they do not fit well into traditional accessibility standards.</p>
 			<p>This document aims to provide guidance on how to make websites and applications that are friendly for people with cognitive impairments by providing guidance for your designs and design process.</p>
 			<p>This guide is divided into design Objectives. Each Objective also includes user stories, testing methodologies, and design Patterns. Understanding the Objectives, user stories and Patterns will help you create content that is more accessible to users with cognitive and learning disabilities. Please see the section on user testing for guidance on how to perform COGA user testing.</p>
-			</section>
+			<div class="ednote"><p>Please note this document is not the final draft. 
+				We are still working on harmonizing the content and the internal consistency of the terms and style.
+				The task force also intends to redo the tables to make them consistent with the design patterns (such as in 5.1 and 6.1). 
+				In addition, design patterns 2.8, 2.9, 2.6 and 2.10 2.13 and 5.3 and 5.6 need to be checked for overlap.
+				In addition we are exploring the addition of these sections:</p>
+				<ul>
+					<li>Items for further research;</li>
+					<li>Data driven systems - gathering and analyzing user feedback and data;</li>
+					<li>Special applications such as sections on GPS systems, conversational interfaces.</li>
+				</ul>
+				
+				<p>Comments and feedback are most welcome.</p>
+			</div>
+
+		</section>
 
 		<section>
 			<h2>Objective: Help users understand what things are and how to use them</h2>
@@ -331,7 +345,6 @@
 			</section>
 			<section>
 				<h3>Pattern: Each region and its controls can be clearly recognized</h3>
-				<p class="ednote">this pattern may be merged with 2.6</p>
 				<p>Make the relationship between different parts of the page clear:</p>
 				<ul>
 					<li>Use clear dividers between different sections in a page that may have separate controls or a scroll bar;</li>
@@ -372,7 +385,6 @@
 			</section>
 			<section>
 				<h3>Pattern: Clear Structure and Relationships</h3>
-				<p class="ednote">This pattern may be merged with 2.6.</p>
 				<p>Structure, content and controls must be easy to identify and understand.</p>
 				<p>The user should not experience difficulty identifying which control to use with specific parts of the content, or how to use the controls. The user should be provided visual cues and text that communicate the structure and layout of the page.</p>
 				<section>
@@ -481,7 +493,6 @@
 			</section>
 			<section>
 				<h3>Pattern: Use a design that the user is likely to recognize and understand</h3>
-				<p class="ednote">We intend to remove aspects from this pattern that are repeated in 2.8 or merge the two patterns.</p>
 				<p>Use common design elements, affordances, and patterns that are familiar to most users.</p>
 				<section>
 					<h4>How it helps</h4>
@@ -1228,8 +1239,7 @@
 						<li>When possible input errors should be automatic corrected (where the correction is reliable);</li>
 						<li>If suggestions for corrections are known, the suggestions are provided to the user.</li>
 					</ul>
-					<p class="ednote">items may be moved to 5.6</p>
-				
+					
 				<section>
 					<h4>How it helps</h4>
 					<p>People with cognitive or learning disabilities and aging users often abandon tasks and believe they cannot complete them if they receive too many errors. Error messages may be confusing.  Correcting errors is often difficult and frustrating for the user. Many users give up when they get successive errors</p>
@@ -1373,7 +1383,6 @@
 			</section>
 			<section>
 				<h3>Pattern: Provide flexibility in form inputs</h3>
-				<p class="ednote">this pattern will be reviewed with 5.3 to remove any overlap</p>
 				<p>Accept contextual variations in user input such as currency, time zone, and locale.</p>
 				<section>
 					<h4>How it helps </h4>
@@ -1696,7 +1705,6 @@
 
 		<section>
 			<h2>Objective: Processes do not rely on memory.</h2>
-			<p class="ednote">This has been renamed form "Avoid barriers" and the text needs a review.</p>
 			<p>Do not put barriers that stop people with cognitive disabilities from using or getting to content. </p>
 			<p>Many users have memory issues and/or language issues that can make remembering passwords or remembering numbers, while processing words, difficult or impossible. That can make transcribing text or remembering passwords difficult or impossible.</p>
 			<p>Sometimes security and authentication put a barrier between users and the tasks they are doing. For example, requiring remembering and/or transcribing passwords often blocks users with cognitive disabilities from accessing content or using a service.</p>
@@ -2271,7 +2279,6 @@
 				</section>
 				<section>
 					<h4>Examples</h4>
-					<p class="ednote">Examples not in correct format</p>
 					<p><strong>Success</strong> examples</p>
 				
 					<p>A banking website had a major accessibility problem. This problem blocked some customers from paying their bills online. One of these customers found a feedback form on the page where they got stuck. The customer was able to report the problem. A help desk employee reached out to the customer and helped them complete their bill payment successfully. That help desk employee also reported the accessibility problem to the software team. The software team corrected the problem in the next software release.  The new design was easier for all users and resulted in more customers successfully paying their bills on time.</p>
@@ -2476,7 +2483,8 @@
 						<li>Adding a toolbar that adds personalized images;</li>
 						<li>Use attributes in personalization semantics.</li>
 					</ul>
-					<p class="ednote">Personalization technology is still young. At the of publication HTML autocorrect on fields was the best supported.</p>
+					<p>Personalization technology is still young and is developing rapidly. 
+						At the time of publication HTML autocorrect on fields was the best supported.</p>
 					<section>
 						<h4>How it helps</h4>
 						<p>Personalization changes the interface to meet the needs of the user.</p>
