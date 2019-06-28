@@ -1,5 +1,5 @@
 # Preview
 
-NB this is out of date. The Design Guide is currently an included file as the [Appendix of Content Usable](../content-usable/design.html).
+NB this is out of date. 
 
-- [Design Guide preview](https://raw.githack.com/w3c/coga/design-doc-transfer/design/index.html)
+The Design Guide is currently an included file of the [Appendix of Content Usable](../content-usable/design.html).
