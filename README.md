@@ -1,4 +1,4 @@
-# coga
+#coga
 Cognitive and Learning Disabilities Accessibility Task Force deliverables
 
 HTML snapshots of pages are taken in the gh-pages branch and are available on:
