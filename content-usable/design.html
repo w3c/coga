@@ -181,7 +181,7 @@
             This helps many people, including those with poor memory and
             attention as well as anyone who is easily distracted due to
             age-appropriate forgetfulness and Attention-Deficit/Hyperactivity
-            Disorder.
+            Disorder. 
           </p>
           <p>
             For example,someone with mild dementia is using online shopping.
@@ -190,6 +190,8 @@
             each page shows clearly
             <strong>what the page is about and what they are doing</strong>.
           </p>
+		  <p> In another example, a user with Attention-Deficit/Hyperactivity
+            Disorder is looking for information in a video. They can tell by the video title that this video is has the information they need.</p>
         </section>
         <section>
           <h4>More details</h4>
@@ -496,6 +498,8 @@
             a separate delimited section. Sometimes symbols (with alt text) can
             be used to make the sections purpose clear.
           </p>
+		  <p>For multimedia, each section should have a clear and descriptive heading. 
+		     The user should be able to jump to each section.
           <p>Here are some examples of how this will help people:</p>
           <ul>
             <li>
@@ -521,6 +525,10 @@
               halfway though they can gauge if they can cope with the entire
               process.
             </li>
+			<li> In another example, a user with Attention-Deficit/Hyperactivity
+            Disorder is watching an instructional video. They lose focus and need to rewatch a section. 
+            Clearly labeled sections helps them jump back to the section they need without having to watch the whole video again. 
+			If they have to watch the video again, they will likely lose focus before they reach the section they need.</li>
           </ul>
           <p>
             For example, an elementary school publishes a weekly newsletter with
@@ -972,17 +980,36 @@
         </section>
       </section>
       <section>
-        <h3>Pattern: Sub-menu items are able to easily identify</h3>
+        <h3>Pattern: The hierarchy of the site and menu structure is logical, easy to identify and navigate</h3>
         <p>
-          It is easy to know that sub-menu items are there and how to get to
+          It is easy to understand and use the site hierarchy and the overall menu structure. Sub-menu items are clearly associated with the main menu items under
+          which they fall.
+		  It is easy to know that sub-menu items are there and how to get to
           them. Users should be able to easily identify:
         </p>
         <ul>
-          <li>That there are sub-menus and;</li>
+          <li>The site organization,</li>
+		  <li>The menu and content structure,</li>
+		  <li>That there are sub-menus and, if there are,</li>
           <li>How to reach sub-menu items.</li>
+		     
         </ul>
         <section>
           <h4>How it helps</h4>
+         <p>
+            Confusion can occur when visual hierarchy of information is not
+            immediately apparent to the user. Distinction between levels in
+            content hierarchy may be difficult to understand or perceive due to
+            minimal type size or type weight differences or color differences
+            that are not easily perceived or understood. Furthermore hierarchy
+            solely dependent on small unique design elements may create
+            confusion.
+          </p>
+          <p>
+            For example a drop down accordion menu of additional sub-menu items
+            may not be viewable without understanding it needs to be clicked (or
+            ‘rolled over’) as indicated by a small unique design element.
+          </p>
           <p>
             When opening a web page for the first time, the sub-menus are
             typically collapsed and their design may make it difficult to even
@@ -1003,9 +1030,59 @@
             a menu that expands only after moving the mouse over a particular
             side of the menu text.
           </p>
+		  
+        <section>
+          <h4>More details</h4>
+          <p>
+            Small design elements that indicate sub-menu items will be presented
+            that aren’t always readily apparent or meaningful to the user and
+            not universally adopted.
+          </p>
+          <p>
+            Examples include a chevron (triangle). In different designs it can
+            be either left facing right facing, up facing or down facing
+            depending on state and the unique design standard affecting
+            interpretation of state.
+          </p>
+          <p>
+            Confusion can occur when a right facing chevron can indicate that
+            more information will be presented on the current page when clicked
+            or it may mean that information is currently being presented, or it
+            may indicate that it takes the user to a new page. Consistent and
+            general best practices should be used to make it understandable to
+            the user.
+          </p>
+          <p>
+            Furthermore a series of these nested elements on a long page can
+            create visual hierarchy confusion if dependent solely on
+            interpretation of design elements.
+          </p>
+        </section>		  
+		  
+		  
         </section>
         <section>
           <h4>Getting started</h4>
+		            <p>
+            Create a visually clear hierarchy of in-line information in either a
+            revealed or hidden state. Clearly indicate when text is hidden or
+            when it can be hidden or revealed.
+          </p>
+        </section>
+        <section>
+          <h4>Examples</h4>
+          <p>
+            An example of consistent “+” sign to show that additional
+            information will be shown when pressed.
+          </p>
+          <p><strong>Success</strong> example: “+”.</p>
+          <p><strong>Failure</strong> example: “<”.</p>
+          <p>
+            If there is no clear indication that more information will or will
+            not be revealed when clicked on. Inconsistent styles or left right
+            arrow directions can confuse user to differentiate between revealed
+            state and hidden state.
+          </p>
           <ul>
             <li>
               All menu items which have a sub-menu have a clear visual indicator
@@ -1051,6 +1128,19 @@
         </section>
         <section>
           <h4>Technical details</h4>
+			<p>
+            The following are proposals for WCAG. They experiment with more
+            testable language.
+          </p>
+          <p>
+            <a
+              href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html"
+              >On coga github: clear-structure-and-relationships.html</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a>
+          </p>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -1066,97 +1156,7 @@
           </p>
         </section>
       </section>
-      <section>
-        <h3>Pattern: Sub-menu items are logical</h3>
-        <p>
-          Sub-menu items are clearly associated with the main menu items under
-          which they fall.
-        </p>
-        <section>
-          <h4>How it helps</h4>
-          <p>
-            Confusion can occur when visual hierarchy of information is not
-            immediately apparent to the user. Distinction between levels in
-            content hierarchy may be difficult to understand or perceive due to
-            minimal type size or type weight differences or color differences
-            that are not easily perceived or understood. Furthermore hierarchy
-            solely dependent on small unique design elements may create
-            confusion.
-          </p>
-          <p>
-            For example a drop down accordion menu of additional sub-menu items
-            may not be viewable without understanding it needs to be clicked (or
-            ‘rolled over’) as indicated by a small unique design element.
-          </p>
-        </section>
-        <section>
-          <h4>More details</h4>
-          <p>
-            Small design elements that indicate sub-menu items will be presented
-            that aren’t always readily apparent or meaningful to the user and
-            not universally adopted.
-          </p>
-          <p>
-            Examples include a chevron (triangle). In different designs it can
-            be either left facing right facing, up facing or down facing
-            depending on state and the unique design standard affecting
-            interpretation of state.
-          </p>
-          <p>
-            Confusion can occur when a right facing chevron can indicate that
-            more information will be presented on the current page when clicked
-            or it may mean that information is currently being presented, or it
-            may indicate that it takes the user to a new page. Consistent and
-            general best practices should be used to make it understandable to
-            the user.
-          </p>
-          <p>
-            Furthermore a series of these nested elements on a long page can
-            create visual hierarchy confusion if dependent solely on
-            interpretation of design elements.
-          </p>
-        </section>
-        <section>
-          <h4>Getting started</h4>
-          <p>
-            Create a visually clear hierarchy of in-line information in either a
-            revealed or hidden state. Clearly indicate when text is hidden or
-            when it can be hidden or revealed.
-          </p>
-        </section>
-        <section>
-          <h4>Examples</h4>
-          <p>
-            An example of consistent “+” sign to show that additional
-            information will be shown when pressed.
-          </p>
-          <p><strong>Success</strong> example: “+”.</p>
-          <p><strong>Failure</strong> example: “<”.</p>
-          <p>
-            If there is no clear indication that more information will or will
-            not be revealed when clicked on. Inconsistent styles or left right
-            arrow directions can confuse user to differentiate between revealed
-            state and hidden state.
-          </p>
-        </section>
-        <section>
-          <h4>Technical details</h4>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html"
-              >On coga github: clear-structure-and-relationships.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a>
-          </p>
-        </section>
-      </section>
-      <section>
+
         <h3>
           Pattern: Use a design that the user is likely to recognize and
           understand
@@ -1565,6 +1565,9 @@
           needing to scroll the page. This includes:
         </p>
         <ul>
+		   <li>
+            Critical tasks and the controls needed to complete them
+          </li>
           <li>
             Interactions for critical features (e.g login forms, send buttons)
           </li>
@@ -1674,7 +1677,12 @@
       </section>
       <section>
         <h3>Pattern: Add search</h3>
-        <p>Provide a search capability.</p>
+        <p>Provide a friendly search capability. Ideally search should include:</p>
+		<ul><li>Autocomplete</li>
+			<li>Grouping of results when appropriate with headings for each group</li>
+			<li>Ability to easily find previous searches<li>
+			<li>Spell-checking<li>
+		</ul>
         <section>
           <h4>How it helps</h4>
           <p>
