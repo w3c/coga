@@ -2777,11 +2777,12 @@
         </section>
       </section>
       <section>
-        <h3>Pattern: Provide summary of long documents</h3>
+        <h3>Pattern: Provide summary of long documents and media</h3>
         <p>
           Provide a brief summary for a long document and emphasize any import
           keywords to help people understand the purpose and contents of the
-          document, and if it might contain information they need.
+          document, and if it might contain information they need.  
+		  Also, provide a summary of media files so that users can identify the content they need.
         </p>
         <p>
           Summaries should use common words, short sentences and be written in
@@ -2797,6 +2798,9 @@
             usually much longer and more detailed as they are designed to
             summarize the entire document.
           </p>
+		  <p>For media, summaries help users with short attention 
+			span  find the exact file they need and jump to correct content. 
+		  </p>
         </section>
         <section>
           <h4>More details</h4>
@@ -2806,8 +2810,10 @@
             more manageable size and provide structure to the information being
             presented. This particularly benefits users of Assistive Technology.
             The first section should be a text summary of the document. It may
-            include links to other sections if appropriate.
+            include links to other sections if appropriate. 
           </p>
+		  <p>In media, summaries of each segment should include the main points included in the content. 
+		     Users should be able to use the summary to uniquely identify the content and know what it will contain.</p>
           <p>
             Providing a text summary that can be understood by people with lower
             secondary education level reading ability. For pieces of content
@@ -2817,6 +2823,7 @@
             See the theme in understandable text for the minimum on how to write
             an understandable summary. User testing is recommended.
           </p>
+		  <p>
         </section>
         <section>
           <h4>Examples</h4>
@@ -2827,6 +2834,8 @@
               >GOV.UK</a
             >
           </p>
+		  <p>Failure example: In multimedia, the segments are summarized as Chapter 1, part 1. Chapter 1, part 2, etc.
+		  </p>
         </section>
         <section>
           <h4>Technical details</h4>
@@ -3046,6 +3055,8 @@
           mistake. This includes:
         </p>
         <ul>
+		  <li>Design the form so that the user needs to enter as little information as possible;</li>
+		  <li>Clearly indicate required fields;</li>
           <li>
             In a text field, accept as many formats as possible. For example
             accept different formats of phone numbers and correct
@@ -3054,6 +3065,8 @@
             >
             automatically;
           </li>
+		  <li>Divide long numbers into chunks (support autocomplete across fields);</li>
+		  <li>
           <li>Use an interface were only valid input can be selected;</li>
           <li>Use autocomplete and personalization of form controls;</li>
           <li>Accept voice prompts when supported by the operating system;</li>
@@ -3338,11 +3351,14 @@
         </section>
       </section>
       <section>
-        <h3>Pattern: Use clear labels and instructions</h3>
-        <p>Provide clear labels and instructions that are:</p>
+        <h3>Pattern: Use clear step-by-step instructions</h3>
+        <p>Write clear instructions that are:</p>
         <ul>
-          <li>Before the field or activity;</li>
-          <li>Clear, concise, and accessible.</li>
+          <li>Located before the field or activity;</li>
+		  <li>broken down by steps;</li>
+          <li>Clear, concise, and accessible;</li>
+		  <li>Include examples that make it easy to understand what to do;</li>
+		  <li>Let the user know how long a task might take.</li>
         </ul>
         <section>
           <h4>How it helps</h4>
@@ -3485,7 +3501,7 @@
         <h3>Pattern: Avoid data loss and "time outs"</h3>
 
         <p>
-          Avoid timeouts. When this is not possible, inform user of the amount
+          Avoid timeouts and save the user's work as they go. When this is not possible, inform the user of the amount
           of time required to complete the process (before timeout) and if user
           will lose entered data if a timeout occurs.
         </p>
@@ -5325,7 +5341,8 @@
         <p>
           Provide help for any complex forms, particularly when there are
           multiple steps, unusual interactions, non-standard controls and
-          required fields that do not support autocomplete.
+          required fields that do not support autocomplete. Give examples 
+		  that make it easy to understand what to do.
         </p>
         <section>
           <h4>How it helps</h4>
