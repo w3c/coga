@@ -196,6 +196,7 @@
         <section>
           <h4>More details</h4>
           <p>Headings need to clarify the purpose of this specific page.</p>
+		  <p>When possible, provide information to help users understand how they got to the page.  For example: breadcrumbs, clearly indicated on main navigation, highlighting currently selected tab, etc)</p>
         </section>
         <section>
           <h4>Examples</h4>
@@ -237,7 +238,8 @@
         <h3>Pattern: Make Each Step Clear</h3>
         <p>
           In a multi-step process, clearly indicate the steps completed, the
-          current step and the steps pending.
+          current step and the steps pending. 
+		  Make it clear what the user did to reach the current step, including important choices.
         </p>
         <p>
           Make sure the current location and progress within a sequence is
@@ -251,7 +253,7 @@
             activity without reading a great deal of content or restarting.
             Providing information about the steps that need to be completed
             ensures that a user who may find a process difficult to complete can
-            determine if they can successfully finish.
+            determine if they can successfully finish. 
           </p>
           <p>Examples include:</p>
           <ul>
@@ -275,7 +277,10 @@
           <h4>Examples</h4>
           <p>
             <strong>Success</strong> example: Using breadcrumbs to indicate the
-            current step in the process as well as past and future steps.
+            current steps in the process, important choices, as well as past and future steps.
+          </p>
+		  <p>
+            <strong>Failure</strong> example: Completed steps and choices the user has made are hard to find without relying on memory (example: hidden behind accordians or a previous page).
           </p>
         </section>
         <section>
@@ -483,7 +488,7 @@
           Make the purpose of each section clear. Often this involves providing
           clear headings that briefly defines the purpose of each section.
           Content that is not directly relevant to the main purpose of a page
-          should be distinctly separated and programmatically determinable.
+          should be distinctly separated and programmatically determinable. 
         </p>
         <section>
           <h4>How it helps</h4>
@@ -554,6 +559,7 @@
               Heading structure makes the content easier to scan and find more
               detailed information that a person needs at a moment.
             </li>
+			<li>When possible, provide information to help users understand how they got to the section.  For example: breadcrumbs, clearly indicated on main navigation, highlighting currently selected tab, etc)</li>
             <li>
               Want to know more: See articles by Ginny Redish including:
               <a
@@ -4151,7 +4157,7 @@
         <h3>Pattern: Avoid interruptions</h3>
         <p>
           Avoid interruptions. If you cannot avoid them, make an easy way to
-          control interruptions and changes in content, unless they are started
+          control interruptions, reminders, and changes in content, unless they are started
           by the user or involve an emergency.
         </p>
         <section>
@@ -4444,8 +4450,7 @@
           <li>Coping;</li>
           <li>Answering puzzles;</li>
           <li>reliably producing gestures; or</li>
-          <li>
-            recognizing characters presented on screen, and then entering them
+          <li>recognizing characters presented on screen, and then entering them
             into an input field.
           </li>
         </ul>
@@ -4583,22 +4588,33 @@
         </section>
       </section>
       <section>
-        <h3>Pattern: Let people avoid navigating voice menus.</h3>
+        <h3>Pattern: Let people avoid navigating voice menus to reach a human.</h3>
 
-        <p>Let people easily reach an operator without:</p>
+        <p>Let people easily reach a human who can help.</p>
+		<p>Design helpful voice menus by:</p>
+		<ul>
+			<li>Providing a reserved digit that can be used at any time, usually 0, to skip the voice menu and go directly to a person</li>
+			<li>Providing simple-to-navigate voice-menu systems with limited options that make sense</li>
+			<li>Stating the option before the number to selected</li>
+			<li>Pausing between each option</li>
+			<li>Waiting for a slow speaker's to respond</li>
+			<li>Providing a simple way to go back without having to start at the beginning</li>
+			<li>Following usability best practices</li>
+			<li>Avoiding unnecessary steps or options</li>
+			<li>Avoiding unnecesary or distracting information such as promotional information</li>
+		</ul>
+
+		<p>Create a process that does not require:</p>
         <ul>
-          <li>
-            Memorizing character strings, including remembering digits to select
-            for a short time, or pin numbers;
-          </li>
-          <li>Performing calculations;</li>
-          <li>Coping;</li>
-          <li>
-            Using their executive function to work out the category of the
-            service they need;
-          </li>
-          <li>Going through multiple steps.</li>
+          <li>Memorizing character strings or pin numbers</li>
+		  <li>Remembering digits to select for a short time </li>
+          <li>Performing calculations</li>
+          <li>Copying</li>
+		  <li>Clear speech or fast responses</li>
+          <li>Using  executive function to work out the category of the service they need </li>
+          <li>Going through multiple steps</li>
         </ul>
+		
         <section>
           <h4>How it helps</h4>
           <p>
@@ -5097,10 +5113,20 @@
         </ul>
       </section>
       <section>
-        <h3>Pattern: Provide help for complex information and tasks</h3>
+        <h3>Pattern: Provide help and alternative content for complex information and tasks</h3>
         <p>
-          Content is provided that helps users understand complex information
+          Provide content that helps users understand complex information. </p>
+		  <p>This should include redundant information for different user groups such as:</p>
+		  <ul>
+			  <li>Summaries and step-by-step information</li>
+			  <li>Explanation of choices and any disadvantages</li>
+			  <li>Tables and charts</li>
+			  <li>Symbols familiar to the user</li>
+			  <li>Well structured video content</li>
+			  <li>Pictures and informational graphics</li>
+			  <li>Alternatives for numeric content</li>
         </p>
+		<p>Dedicated help and alternative content should be clearly differentiated from primary content.</p>
         <section>
           <h4>How it helps</h4>
           <p>
@@ -5733,7 +5759,7 @@
       <section>
         <h3>Pattern: Make it easy to find help and feedback channels</h3>
         <p>
-          Make it easy for the user to ask for help or report issues. This
+          Make it easy for the user to ask for help or report issues at any point in the process. This
           includes:
         </p>
         <ul>
@@ -5744,6 +5770,7 @@
           <li>
             Easy to Find: Available from any place where the user may get stuck
           </li>
+		  <li>Using a preferred communication method such as a form, email, chat, or phone support</li>
         </ul>
         <p>
           The option to provide feedback should never require the user to manage
@@ -5757,7 +5784,8 @@
             able to share problems, ask for help, make suggestions and positive
             comments. If users cannot give feedback easily, problems will
             continue to exist without the site owner being aware of the
-            problems. Ideas for improvements and positive feedback will also be
+            problems. It is important to allow users to provide feedback from any point in the process so that people do not get lost when trying to explain why they are stuck.
+			Ideas for improvements and positive feedback will also be
             missed.
           </p>
         </section>
@@ -5986,6 +6014,9 @@
             <li>Spell checking;</li>
             <li>Changing the symbols or the interface.</li>
 			<li>Changing numbers from digits to words and words to digits</li> 
+			<li>Adding white space between lines, sentences, phrases, and chunks</li>
+			<li>Alternative ways to input the content such as speech recognition</li>
+			<li>Adding pictures</li>
           </ul>
           <p>
             If these functions are not supported, the author should provide all
@@ -6158,13 +6189,15 @@
       </section>
       <section>
         <h3>Pattern: Support simplification</h3>
-        <p>Support simplification of your content. Often this includes:</p>
+        <p>Support simplification of your content. Often this includes allowing the user to:</p>
         <ul>
           <li>
-            Allowing the user to remove or hide features that most users do not
+            Remove or hide features that most users do not
             use or that are not essential;
           </li>
-          <li>Allowing the user to get less test or more simple text.</li>
+          <li>Get less test or more simple text.</li>
+		  <li>Select the content format or version of the content that is easiest for me to understand </li>
+		  <li>Find the extra features when I want them.</li>
         </ul>
         <section>
           <h4>How it helps</h4>
@@ -6240,16 +6273,17 @@
         </section>
       </section>
       <section>
-        <h3>Pattern: Support personalization of symbols and controls</h3>
-        <p>
-          Add semantics on control links and symbols that allows extra support
-          that is appropriate for each user. For example:
-        </p>
+        <h3>Pattern: Support a personalized and familiar interface</h3>
+        <p>Provide users with a way to personalize their interface to make it familiar. </p>
+		<p>This can be done by:</p>
+		<ol><li>Allowing a rollback to a previous interface that the user is familiar with and knows how to use</li>
+		<li>Adding semantics on controls, links and symbols that allows the user to control the experience. For example:
         <ul>
           <li>Html 5 autocomplete on common fields;</li>
           <li>Adding a toolbar that adds personalized images;</li>
           <li>Use attributes in personalization semantics.</li>
-        </ul>
+		</ul> </li>
+		</ol>
         <p>
           Personalization technology is still young and is developing rapidly.
           At the time of publication HTML autocorrect on fields was the best
