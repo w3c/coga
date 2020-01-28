@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.38.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.1.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -132,10 +132,8 @@ dfn {
 
 		<title>Cognitive Accessibility Roadmap and Gap Analysis </title>
 		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec 3 CSS
- * Robin Berjon - http://berjon.com/
+ * ReSpec specific CSS
  *****************************************************************/
-
 @keyframes pop {
   0% {
     transform: scale(1, 1);
@@ -444,95 +442,85 @@ th > p:first-child, td > p:first-child {
 }
         </style>
 	<meta name="description" content="This document is a gap analysis and roadmap for the state of accessibility for people with learning and cognitive disabilities when using the Web and information technologies. It builds on the information presented in Cognitive Accessibility User Research [coga-user-research] and Cognitive Accessibility Issue Papers [coga-issue-papers] to evaluate where user needs remain to be met in technologies and accessibility guidelines. For various accessibility issues, this document provides a summary of issues and techniques, then identifies gaps and unmet user needs and suggest ways technologies may meet these needs in the future."><link rel="canonical" href="https://www.w3.org/TR/coga-gap-analysis/"><style>/*
-
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-
+Atom One Light by Daniel Gamage
+Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+base:    #fafafa
+mono-1:  #383a42
+mono-2:  #686b77
+mono-3:  #a0a1a7
+hue-1:   #0184bb
+hue-2:   #4078f2
+hue-3:   #a626a4
+hue-4:   #50a14f
+hue-5:   #e45649
+hue-5-2: #c91243
+hue-6:   #986801
+hue-6-2: #c18401
 */
 
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  color: #333;
-  background: #f8f8f8;
+  color: #383a42;
+  background: #fafafa;
 }
 
 .hljs-comment,
 .hljs-quote {
-  color: #998;
+  color: #a0a1a7;
   font-style: italic;
 }
 
+.hljs-doctag,
 .hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
-  color: #333;
-  font-weight: bold;
+.hljs-formula {
+  color: #a626a4;
 }
 
-.hljs-number,
-.hljs-literal,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
-  color: #008080;
+.hljs-section,
+.hljs-name,
+.hljs-selector-tag,
+.hljs-deletion,
+.hljs-subst {
+  color: #e45649;
+}
+
+.hljs-literal {
+  color: #0184bb;
 }
 
 .hljs-string,
-.hljs-doctag {
-  color: #d14;
-}
-
-.hljs-title,
-.hljs-section,
-.hljs-selector-id {
-  color: #900;
-  font-weight: bold;
-}
-
-.hljs-subst {
-  font-weight: normal;
-}
-
-.hljs-type,
-.hljs-class .hljs-title {
-  color: #458;
-  font-weight: bold;
-}
-
-.hljs-tag,
-.hljs-name,
-.hljs-attribute {
-  color: #000080;
-  font-weight: normal;
-}
-
 .hljs-regexp,
-.hljs-link {
-  color: #009926;
-}
-
-.hljs-symbol,
-.hljs-bullet {
-  color: #990073;
+.hljs-addition,
+.hljs-attribute,
+.hljs-meta-string {
+  color: #50a14f;
 }
 
 .hljs-built_in,
-.hljs-builtin-name {
-  color: #0086b3;
+.hljs-class .hljs-title {
+  color: #c18401;
 }
 
-.hljs-meta {
-  color: #999;
-  font-weight: bold;
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-type,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-number {
+  color: #986801;
 }
 
-.hljs-deletion {
-  background: #fdd;
-}
-
-.hljs-addition {
-  background: #dfd;
+.hljs-symbol,
+.hljs-bullet,
+.hljs-link,
+.hljs-meta,
+.hljs-selector-id,
+.hljs-title {
+  color: #4078f2;
 }
 
 .hljs-emphasis {
@@ -541,6 +529,10 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 .hljs-strong {
   font-weight: bold;
+}
+
+.hljs-link {
+  text-decoration: underline;
 }
 </style><style>var {
   position: relative;
@@ -929,20 +921,20 @@ var[data-type]:hover::before {
       "date": "20 March 2014"
     }
   },
-  "publishDate": "2019-12-19",
-  "publishISODate": "2019-12-19T00:00:00.000Z",
-  "generatedSubtitle": "Working Draft 19 December 2019"
+  "publishDate": "2020-01-28",
+  "publishISODate": "2020-01-28T00:00:00.000Z",
+  "generatedSubtitle": "Working Draft 28 January 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-WD"></head>
 <body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Cognitive Accessibility Roadmap and Gap Analysis</h1>
       
       <h2>
         W3C Working Draft
-        <time class="dt-published" datetime="2019-12-19">19 December 2019</time>
+        <time class="dt-published" datetime="2020-01-28">28 January 2020</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
-                <a class="u-url" href="https://www.w3.org/TR/2019/WD-coga-gap-analysis-20191219/">https://www.w3.org/TR/2019/WD-coga-gap-analysis-20191219/</a>
+                <a class="u-url" href="https://www.w3.org/TR/2020/WD-coga-gap-analysis-20200128/">https://www.w3.org/TR/2020/WD-coga-gap-analysis-20200128/</a>
               </dd><dt>Latest published version:</dt><dd>
                 <a href="https://www.w3.org/TR/coga-gap-analysis/">https://www.w3.org/TR/coga-gap-analysis/</a>
               </dd>
@@ -966,7 +958,7 @@ var[data-type]:hover::before {
       <p class="copyright">
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
       ©
-      2017-2019
+      2017-2020
       
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
@@ -1035,7 +1027,7 @@ var[data-type]:hover::before {
     </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#importance-of-this-document"><bdi class="secno">1.1 </bdi>Importance of This Document</a></li><li class="tocline"><a class="tocxref" href="#people-with-cognitive-and-learning-disabilities-and-the-web"><bdi class="secno">1.2 </bdi>People with Cognitive and Learning Disabilities and the Web</a></li><li class="tocline"><a class="tocxref" href="#finding-your-way-around-this-document"><bdi class="secno">1.3 </bdi>Finding your way around this document</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><bdi class="secno">1.4 </bdi>Assumptions</a></li><li class="tocline"><a class="tocxref" href="#maturity-of-this-publication"><bdi class="secno">1.5 </bdi>Maturity of This Publication</a></li></ol></li><li class="tocline"><a class="tocxref" href="#summary-of-solutions"><bdi class="secno">2. </bdi>Summary of solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#overview-of-techniques"><bdi class="secno">2.1 </bdi>Overview of Techniques</a></li><li class="tocline"><a class="tocxref" href="#summary-of-technique-solutions"><bdi class="secno">2.2 </bdi>Summary of Technique Solutions </a></li></ol></li><li class="tocline"><a class="tocxref" href="#roadmap-of-solutions-against-user-needs"><bdi class="secno">3. </bdi>Roadmap of Solutions Against User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#topic-1-authentication-and-safety"><bdi class="secno">3.1 </bdi>Topic 1: Authentication and Safety</a></li><li class="tocline"><a class="tocxref" href="#topic-2-context-and-distractions"><bdi class="secno">3.2 </bdi>Topic 2: Context and Distractions</a></li><li class="tocline"><a class="tocxref" href="#table-3-entering-data-error-prevention-recovery"><bdi class="secno">3.3 </bdi>Table 3: Entering Data, Error Prevention, &amp; Recovery </a></li><li class="tocline"><a class="tocxref" href="#table-4-help-and-support"><bdi class="secno">3.4 </bdi>Table 4: Help and support</a></li><li class="tocline"><a class="tocxref" href="#table-5-simple-and-clear-interface"><bdi class="secno">3.5 </bdi>Table 5: Simple and Clear Interface </a></li><li class="tocline"><a class="tocxref" href="#table-6-familiar-interface"><bdi class="secno">3.6 </bdi>Table 6: Familiar interface</a></li><li class="tocline"><a class="tocxref" href="#table-7-clear-and-understandable-content-and-text"><bdi class="secno">3.7 </bdi>Table 7: Clear and understandable content and text.</a></li><li class="tocline"><a class="tocxref" href="#table-8-navigating-the-system"><bdi class="secno">3.8 </bdi>Table 8: Navigating the system</a></li><li class="tocline"><a class="tocxref" href="#table-9-navigation-and-gps"><bdi class="secno">3.9 </bdi>Table 9: Navigation and GPS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personalization-semantics"><bdi class="secno">4. </bdi>Personalization Semantics</a></li><li class="tocline"><a class="tocxref" href="#appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities"><bdi class="secno">A. </bdi>Appendix: Making content usable for people with cognitive and learning disabilities</a></li><li class="tocline"><a class="tocxref" href="#appendix-summary-of-issue-papers"><bdi class="secno">B. </bdi>Appendix: Summary of Issue Papers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#flat-design"><bdi class="secno">B.1 </bdi>Flat Design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problem-with-flat-design"><bdi class="secno">B.1.1 </bdi>Problem with Flat Design</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-flat-design"><bdi class="secno">B.1.2 </bdi>Solutions for Flat Design</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-flat-design"><bdi class="secno">B.1.3 </bdi>Further Work for Flat Design</a></li></ol></li><li class="tocline"><a class="tocxref" href="#web-security-and-privacy-technologies"><bdi class="secno">B.2 </bdi>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-security-and-privacy"><bdi class="secno">B.2.1 </bdi>Problems with Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-security-and-privacy"><bdi class="secno">B.2.2 </bdi>Solutions for Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-security-and-privacy"><bdi class="secno">B.2.3 </bdi>Further Work for Security and Privacy</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-safety"><bdi class="secno">B.3 </bdi>User Safety</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-user-safety"><bdi class="secno">B.3.1 </bdi>Problems with User Safety</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-user-safety"><bdi class="secno">B.3.2 </bdi>Solutions for User Safety</a></li></ol></li><li class="tocline"><a class="tocxref" href="#math"><bdi class="secno">B.4 </bdi>Math</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-math"><bdi class="secno">B.4.1 </bdi>Problems with Math</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-math"><bdi class="secno">B.4.2 </bdi>Solutions for Math</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multi-modal-content-delivery"><bdi class="secno">B.5 </bdi>Multi-modal Content Delivery</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#solutions-for-multi-modal-content-delivery"><bdi class="secno">B.5.1 </bdi>Solutions for Multi-modal Content Delivery</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-multi-modal-content-delivery"><bdi class="secno">B.5.2 </bdi>Further Work for Multi-modal Content Delivery</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personalization-and-user-preferences"><bdi class="secno">B.6 </bdi>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-personalization"><bdi class="secno">B.6.1 </bdi>Problems with Personalization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#preferences-for-cognitive-disabilities"><bdi class="secno">B.6.1.1 </bdi>Preferences for Cognitive Disabilities</a></li><li class="tocline"><a class="tocxref" href="#setting-and-gathering-preferences"><bdi class="secno">B.6.1.2 </bdi>Setting and Gathering Preferences</a></li></ol></li><li class="tocline"><a class="tocxref" href="#solutions-for-personalization"><bdi class="secno">B.6.2 </bdi>Solutions for Personalization</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-personalization"><bdi class="secno">B.6.3 </bdi>Further Work for Personalization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#end-to-end-basic-solution"><bdi class="secno">B.6.3.1 </bdi>End to End Basic Solution</a></li><li class="tocline"><a class="tocxref" href="#special-case"><bdi class="secno">B.6.3.2 </bdi>Special Case</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#distractions"><bdi class="secno">B.7 </bdi>Distractions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-distractions"><bdi class="secno">B.7.1 </bdi>Problems with Distractions</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-distractions"><bdi class="secno">B.7.2 </bdi>Solutions for Distractions</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-distractions"><bdi class="secno">B.7.3 </bdi>Further Work for Distractions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voice-menu-systems"><bdi class="secno">B.8 </bdi>Voice Menu Systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problem-with-voice-menu-systems"><bdi class="secno">B.8.1 </bdi>Problem with Voice Menu Systems</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-voice-menu-systems"><bdi class="secno">B.8.2 </bdi>Solutions for Voice Menu Systems</a></li></ol></li><li class="tocline"><a class="tocxref" href="#online-payments"><bdi class="secno">B.9 </bdi>Online Payments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-online-payments"><bdi class="secno">B.9.1 </bdi>Problems with Online Payments</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-online-payments"><bdi class="secno">B.9.2 </bdi>Solutions for Online Payments</a></li></ol></li><li class="tocline"><a class="tocxref" href="#symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">B.10 </bdi>Symbol Users with Speech, Language, and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">B.10.1 </bdi>Problems with Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">B.10.2 </bdi>Solutions for Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">B.10.3 </bdi>Further Work for Symbol Users with Speech, Language, and Literacy Difficulties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#task-completion-and-emotional-disabilities"><bdi class="secno">B.11 </bdi>Task Completion and Emotional Disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-task-completion-and-emotional-disabilities"><bdi class="secno">B.11.1 </bdi>Problems with Task Completion and Emotional Disabilities</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-task-completion-and-emotional-disabilities"><bdi class="secno">B.11.2 </bdi>Solutions for Task Completion and Emotional Disabilities</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-task-completion-and-emotional-disabilities"><bdi class="secno">B.11.3 </bdi>Further Work for Task Completion and Emotional Disabilities</a></li></ol></li><li class="tocline"><a class="tocxref" href="#graded-help"><bdi class="secno">B.12 </bdi>Graded Help</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-graded-help"><bdi class="secno">B.12.1 </bdi>Problems with Graded Help</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-graded-help"><bdi class="secno">B.12.2 </bdi>Solutions for Graded Help</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-graded-help"><bdi class="secno">B.12.3 </bdi>Further Work for Graded Help</a></li></ol></li><li class="tocline"><a class="tocxref" href="#way-finding"><bdi class="secno">B.13 </bdi>Way Finding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-way-finding"><bdi class="secno">B.13.1 </bdi>Problems with Way Finding</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-way-finding"><bdi class="secno">B.13.2 </bdi>Solutions for Way Finding</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-way-finding"><bdi class="secno">B.13.3 </bdi>Further Work for Way Finding</a></li></ol></li><li class="tocline"><a class="tocxref" href="#web-of-things-wot"><bdi class="secno">B.14 </bdi>Web of Things (WoT)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-web-of-things-wot"><bdi class="secno">B.14.1 </bdi>Problems with Web of Things (WoT)</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-web-of-things-wot"><bdi class="secno">B.14.2 </bdi>Solutions for Web of Things (WoT)</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-web-of-things-wot"><bdi class="secno">B.14.3 </bdi>Further Work for Web of Things (WoT)</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">C. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#significant-editorial-changes-since-the-first-public-working-draft"><bdi class="secno">C.1 </bdi>Significant editorial changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">D.1 </bdi>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><bdi class="secno">D.2 </bdi>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">D.3 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#importance-of-this-document"><bdi class="secno">1.1 </bdi>Importance of This Document</a></li><li class="tocline"><a class="tocxref" href="#people-with-cognitive-and-learning-disabilities-and-the-web"><bdi class="secno">1.2 </bdi>People with Cognitive and Learning Disabilities and the Web</a></li><li class="tocline"><a class="tocxref" href="#finding-your-way-around-this-document"><bdi class="secno">1.3 </bdi>Finding your way around this document</a></li><li class="tocline"><a class="tocxref" href="#assumptions"><bdi class="secno">1.4 </bdi>Assumptions</a></li><li class="tocline"><a class="tocxref" href="#maturity-of-this-publication"><bdi class="secno">1.5 </bdi>Maturity of This Publication</a></li></ol></li><li class="tocline"><a class="tocxref" href="#summary-of-solutions"><bdi class="secno">2. </bdi>Summary of solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#overview-of-techniques"><bdi class="secno">2.1 </bdi>Overview of Techniques</a></li><li class="tocline"><a class="tocxref" href="#summary-of-technique-solutions"><bdi class="secno">2.2 </bdi>Summary of Technique Solutions </a></li></ol></li><li class="tocline"><a class="tocxref" href="#roadmap-of-solutions-against-user-needs"><bdi class="secno">3. </bdi>Roadmap of Solutions Against User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#table1"><bdi class="secno">3.1 </bdi>Topic 1: Authentication and Safety</a></li><li class="tocline"><a class="tocxref" href="#table2"><bdi class="secno">3.2 </bdi>Topic 2: Context and Distractions</a></li><li class="tocline"><a class="tocxref" href="#table3"><bdi class="secno">3.3 </bdi>Table 3: Entering Data, Error Prevention, &amp; Recovery </a></li><li class="tocline"><a class="tocxref" href="#table4"><bdi class="secno">3.4 </bdi>Table 4: Help and support</a></li><li class="tocline"><a class="tocxref" href="#table5"><bdi class="secno">3.5 </bdi>Table 5: Simple and Clear Interface </a></li><li class="tocline"><a class="tocxref" href="#table6"><bdi class="secno">3.6 </bdi>Table 6: Familiar interface</a></li><li class="tocline"><a class="tocxref" href="#table7"><bdi class="secno">3.7 </bdi>Table 7: Clear and understandable content and text.</a></li><li class="tocline"><a class="tocxref" href="#table8"><bdi class="secno">3.8 </bdi>Table 8: Navigating the system</a></li><li class="tocline"><a class="tocxref" href="#table9"><bdi class="secno">3.9 </bdi>Table 9: Navigation and GPS</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personalization-semantics"><bdi class="secno">4. </bdi>Personalization Semantics</a></li><li class="tocline"><a class="tocxref" href="#appendix-making-content-usable-for-people-with-cognitive-and-learning-disabilities"><bdi class="secno">A. </bdi>Appendix: Making content usable for people with cognitive and learning disabilities</a></li><li class="tocline"><a class="tocxref" href="#appendix-summary-of-issue-papers"><bdi class="secno">B. </bdi>Appendix: Summary of Issue Papers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#flat-design"><bdi class="secno">B.1 </bdi>Flat Design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problem-with-flat-design"><bdi class="secno">B.1.1 </bdi>Problem with Flat Design</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-flat-design"><bdi class="secno">B.1.2 </bdi>Solutions for Flat Design</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-flat-design"><bdi class="secno">B.1.3 </bdi>Further Work for Flat Design</a></li></ol></li><li class="tocline"><a class="tocxref" href="#web-security-and-privacy-technologies"><bdi class="secno">B.2 </bdi>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-security-and-privacy"><bdi class="secno">B.2.1 </bdi>Problems with Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-security-and-privacy"><bdi class="secno">B.2.2 </bdi>Solutions for Security and Privacy</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-security-and-privacy"><bdi class="secno">B.2.3 </bdi>Further Work for Security and Privacy</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-safety"><bdi class="secno">B.3 </bdi>User Safety</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-user-safety"><bdi class="secno">B.3.1 </bdi>Problems with User Safety</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-user-safety"><bdi class="secno">B.3.2 </bdi>Solutions for User Safety</a></li></ol></li><li class="tocline"><a class="tocxref" href="#math"><bdi class="secno">B.4 </bdi>Math</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-math"><bdi class="secno">B.4.1 </bdi>Problems with Math</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-math"><bdi class="secno">B.4.2 </bdi>Solutions for Math</a></li></ol></li><li class="tocline"><a class="tocxref" href="#multi-modal-content-delivery"><bdi class="secno">B.5 </bdi>Multi-modal Content Delivery</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#solutions-for-multi-modal-content-delivery"><bdi class="secno">B.5.1 </bdi>Solutions for Multi-modal Content Delivery</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-multi-modal-content-delivery"><bdi class="secno">B.5.2 </bdi>Further Work for Multi-modal Content Delivery</a></li></ol></li><li class="tocline"><a class="tocxref" href="#personalization-and-user-preferences"><bdi class="secno">B.6 </bdi>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-personalization"><bdi class="secno">B.6.1 </bdi>Problems with Personalization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#preferences-for-cognitive-disabilities"><bdi class="secno">B.6.1.1 </bdi>Preferences for Cognitive Disabilities</a></li><li class="tocline"><a class="tocxref" href="#setting-and-gathering-preferences"><bdi class="secno">B.6.1.2 </bdi>Setting and Gathering Preferences</a></li></ol></li><li class="tocline"><a class="tocxref" href="#solutions-for-personalization"><bdi class="secno">B.6.2 </bdi>Solutions for Personalization</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-personalization"><bdi class="secno">B.6.3 </bdi>Further Work for Personalization</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#end-to-end-basic-solution"><bdi class="secno">B.6.3.1 </bdi>End to End Basic Solution</a></li><li class="tocline"><a class="tocxref" href="#special-case"><bdi class="secno">B.6.3.2 </bdi>Special Case</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#distractions"><bdi class="secno">B.7 </bdi>Distractions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-distractions"><bdi class="secno">B.7.1 </bdi>Problems with Distractions</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-distractions"><bdi class="secno">B.7.2 </bdi>Solutions for Distractions</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-distractions"><bdi class="secno">B.7.3 </bdi>Further Work for Distractions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voice-menu-systems"><bdi class="secno">B.8 </bdi>Voice Menu Systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problem-with-voice-menu-systems"><bdi class="secno">B.8.1 </bdi>Problem with Voice Menu Systems</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-voice-menu-systems"><bdi class="secno">B.8.2 </bdi>Solutions for Voice Menu Systems</a></li></ol></li><li class="tocline"><a class="tocxref" href="#online-payments"><bdi class="secno">B.9 </bdi>Online Payments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-online-payments"><bdi class="secno">B.9.1 </bdi>Problems with Online Payments</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-online-payments"><bdi class="secno">B.9.2 </bdi>Solutions for Online Payments</a></li></ol></li><li class="tocline"><a class="tocxref" href="#symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">B.10 </bdi>Symbol Users with Speech, Language, and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">B.10.1 </bdi>Problems with Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">B.10.2 </bdi>Solutions for Symbol Users with Speech, Language, and Literacy Difficulties</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">B.10.3 </bdi>Further Work for Symbol Users with Speech, Language, and Literacy Difficulties</a></li></ol></li><li class="tocline"><a class="tocxref" href="#task-completion-and-emotional-disabilities"><bdi class="secno">B.11 </bdi>Task Completion and Emotional Disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-task-completion-and-emotional-disabilities"><bdi class="secno">B.11.1 </bdi>Problems with Task Completion and Emotional Disabilities</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-task-completion-and-emotional-disabilities"><bdi class="secno">B.11.2 </bdi>Solutions for Task Completion and Emotional Disabilities</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-task-completion-and-emotional-disabilities"><bdi class="secno">B.11.3 </bdi>Further Work for Task Completion and Emotional Disabilities</a></li></ol></li><li class="tocline"><a class="tocxref" href="#graded-help"><bdi class="secno">B.12 </bdi>Graded Help</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-graded-help"><bdi class="secno">B.12.1 </bdi>Problems with Graded Help</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-graded-help"><bdi class="secno">B.12.2 </bdi>Solutions for Graded Help</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-graded-help"><bdi class="secno">B.12.3 </bdi>Further Work for Graded Help</a></li></ol></li><li class="tocline"><a class="tocxref" href="#way-finding"><bdi class="secno">B.13 </bdi>Way Finding</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-way-finding"><bdi class="secno">B.13.1 </bdi>Problems with Way Finding</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-way-finding"><bdi class="secno">B.13.2 </bdi>Solutions for Way Finding</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-way-finding"><bdi class="secno">B.13.3 </bdi>Further Work for Way Finding</a></li></ol></li><li class="tocline"><a class="tocxref" href="#web-of-things-wot"><bdi class="secno">B.14 </bdi>Web of Things (WoT)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#problems-with-web-of-things-wot"><bdi class="secno">B.14.1 </bdi>Problems with Web of Things (WoT)</a></li><li class="tocline"><a class="tocxref" href="#solutions-for-web-of-things-wot"><bdi class="secno">B.14.2 </bdi>Solutions for Web of Things (WoT)</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-web-of-things-wot"><bdi class="secno">B.14.3 </bdi>Further Work for Web of Things (WoT)</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#changelog"><bdi class="secno">C. </bdi>Change Log</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#significant-editorial-changes-since-the-first-public-working-draft"><bdi class="secno">C.1 </bdi>Significant editorial changes since the <span class="formerLink">First Public Working Draft</span></a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">D. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">D.1 </bdi>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><bdi class="secno">D.2 </bdi>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">D.3 </bdi>Enabling funders</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">E. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">E.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 <section class="informative" id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2><p><em>This section is non-normative.</em></p>
 			<p>The Cognitive and Learning Disabilities Accessibility Task Force's aim is to improve web accessibility for people with cognitive and learning disabilities. </p>
@@ -1254,7 +1246,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 	<p>There is also an <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Gap_Analysis_Summary#Summary_of_Issues">issue summary</a>.</p></div></div>
 <p><strong>Please note this table is incomplete, and is a work in progress.</strong>) </p>
 <section id="topic-1-authentication-and-safety">
-				<h3 id="table1"><bdi class="secno">3.1 </bdi>Topic 1: Authentication and Safety<a class="self-link" aria-label="§" href="#topic-1-authentication-and-safety"></a></h3>
+				<h3 id="table1"><bdi class="secno">3.1 </bdi>Topic 1: Authentication and Safety<a class="self-link" aria-label="§" href="#table1"></a></h3>
 				<p><strong>About users:</strong> People with cognitive and learning disabilities may be not able use a Web site becuse they can not use the login or authenitification process.</p>
 	
 				<p>Many users (most COGA groups) have memory issues that can make transcribing text or remembering passwords difficult or impossible. Other contributing issues include impaired executive function. </p>
@@ -1346,7 +1338,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 	</tr>
 
 </tbody></table>
-				<h4 id="Discussion1">Discussion<a class="self-link" aria-label="§" href="#topic-1-authentication-and-safety"></a></h4>
+				<h4 id="Discussion1">Discussion<a class="self-link" aria-label="§" href="#Discussion1"></a></h4>
                 <p><a href="https://w3c.github.io/coga/issue-papers/privacy-security.html">Privacy and Security issue paper</a><a href="https://w3c.github.io/coga/issue-papers/security.html"></a></p>
                 <p><a href="https://w3c.github.io/coga/issue-papers/safety.html">Online Safety issue paper</a></p>
                 <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for Personalization</a> and <a href="https://github.com/ayelet-seeman/COGA.personalisation">example for personalization</a></p>
@@ -1356,7 +1348,7 @@ It identifies user needs that are not currently fully addressed by accessibility
   
 </section>
 <section id="topic-2-context-and-distractions">
-  <h3 id="table2"><bdi class="secno">3.2 </bdi>Topic 2: Context and Distractions<a class="self-link" aria-label="§" href="#topic-2-context-and-distractions"></a></h3>
+  <h3 id="table2"><bdi class="secno">3.2 </bdi>Topic 2: Context and Distractions<a class="self-link" aria-label="§" href="#table2"></a></h3>
 				<p><strong>About users:</strong> distractions can cause users with cognitive disabilities to lose focus on the current action being performed; or draw attention away from primary content; and can be difficult for some users to know how to understand, avoid, and/or stop them.</p>
 				<p>Once users become distracted, it can be difficult for them to remember what they were doing. This is especially problematic for users with both low attention and impaired memory, such as users with dementia.</p>
 				<p>This leads to the following user stories.</p><div class="note" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote-5" aria-level="4"><span>Editor's note</span></div><p class=""> The task force intends to add user stories.</p></div>
@@ -1568,7 +1560,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 			  		</tr>
 			  	</tbody>
 			  </table>
-  <h4 id="Discussion3">Discussion<a class="self-link" aria-label="§" href="#topic-2-context-and-distractions"></a></h4>
+  <h4 id="Discussion3">Discussion<a class="self-link" aria-label="§" href="#Discussion3"></a></h4>
     <p><a href="https://w3c.github.io/coga/issue-papers/distractions.html">Distractions issue paper</a></p>
     <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and
     <a href="https://github.com/ayelet-seeman/COGA.personalisation">Example for personalization</a></p>
@@ -1578,7 +1570,7 @@ It identifies user needs that are not currently fully addressed by accessibility
     
 </section>
 			<section id="table-3-entering-data-error-prevention-recovery">
-			  <h3 id="table3"><bdi class="secno">3.3 </bdi>Table 3: Entering Data, Error Prevention, &amp; Recovery <a class="self-link" aria-label="§" href="#table-3-entering-data-error-prevention-recovery"></a></h3>
+			  <h3 id="table3"><bdi class="secno">3.3 </bdi>Table 3: Entering Data, Error Prevention, &amp; Recovery <a class="self-link" aria-label="§" href="#table3"></a></h3>
 				<p>About users: Completing forms and similar tasks can be overwhelming for most users with cognitive and learning disabilities. This includes relatively minor learning disabilities, such as Dyslexia, or attention related disabilities. Many users (most COGA groups) have memory issues that can make transcribing text difficult or impossible. Other contributing issues include impaired executive function. </p>
 				<p>Many  users with learning disabilities cannot  remember numbers, such as those for their post/zip code, Social Security, or credit card. Many users even need  to  check their phone numbers. This makes  entering information slow, and they may need to leave their desks or take breaks.</p>
 				<p>Many users find it very difficult to transcribe information due to low visual memory or impaired executive function.</p>
@@ -1919,7 +1911,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 	</tbody>
 	
 </table>
-				<h4 id="Discussion3">Discussion<a class="self-link" aria-label="§" href="#table-3-entering-data-error-prevention-recovery"></a></h4>
+				<h4 id="Discussion3">Discussion<a class="self-link" aria-label="§" href="#Discussion3"></a></h4>
                 
                 <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for Personalization</a> and <a href="https://github.com/ayelet-seeman/COGA.personalisation">Example for personalization</a></p>
                 <p><a href="https://www.w3.org/TR/personalization-semantics-1.0/">Semantics</a></p>
@@ -1928,7 +1920,7 @@ It identifies user needs that are not currently fully addressed by accessibility
                 
 </section>
 			<section id="table-4-help-and-support">
-			  <h3 id="table4"><bdi class="secno">3.4 </bdi>Table 4: Help and support<a class="self-link" aria-label="§" href="#table-4-help-and-support"></a></h3>
+			  <h3 id="table4"><bdi class="secno">3.4 </bdi>Table 4: Help and support<a class="self-link" aria-label="§" href="#table4"></a></h3>
 				<p>About Users </p><div class="note" id="issue-container-generatedID-24"><div role="heading" class="ednote-title marker" id="h-ednote-24" aria-level="4"><span>Editor's note</span></div><p class=""> To be completed.</p></div>
 				<p>This leads to the following user stories. </p>
 				
@@ -2301,7 +2293,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				
 </section>
 			<section id="table-5-simple-and-clear-interface">
-				<h3 id="table5"><bdi class="secno">3.5 </bdi>Table 5: Simple and Clear Interface <a class="self-link" aria-label="§" href="#table-5-simple-and-clear-interface"></a></h3>
+				<h3 id="table5"><bdi class="secno">3.5 </bdi>Table 5: Simple and Clear Interface <a class="self-link" aria-label="§" href="#table5"></a></h3>
 				<p><strong>About users:</strong> many users cannot easily learn new design metaphors, or remember things they learned, such as users with mild cognitive impairment or dementia. Without these skills, it can be much harder or impossible to locate desired items to interact with, and to know what interactions may do.</p>
 			  <p>Many users can be overwhelmed by too many options, or too much information. If reading is slow, then too much information mixed together will make it difficult or impossible to find the information needed.</p>
 				<p>This leads to the following user stories. </p>
@@ -2690,7 +2682,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				
 			</section>
 <section id="table-6-familiar-interface">
-  <h3 id="table6"><bdi class="secno">3.6 </bdi>Table 6: Familiar interface<a class="self-link" aria-label="§" href="#table-6-familiar-interface"></a></h3>
+  <h3 id="table6"><bdi class="secno">3.6 </bdi>Table 6: Familiar interface<a class="self-link" aria-label="§" href="#table6"></a></h3>
 				<p><strong>About users:</strong> many users cannot easily learn new design metaphors, or remember things they learned, such as users with mild cognitive impairment or dementia. Without these skills, it can be much harder or impossible to locate desired items to interact with, and to know what interactions may do. Users can feel lost or overwhelmed. </p>
 				<p>Using a familiar design, terms and symbols are key to being able to use the web for users who cannot remember new symbols (such as some users with memory related impairments like dementia). Therefore, users need things to be familiar including:</p>
 				<ul>
@@ -2888,7 +2880,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				<div class="note" id="issue-container-generatedID-54"><div role="heading" class="ednote-title marker" id="h-ednote-54" aria-level="4"><span>Editor's note</span></div><p class=""> add the above user needs to the table, mapping user needs to solutions.</p></div>
 </section>
 			<section id="table-7-clear-and-understandable-content-and-text">
-			  <h3 id="table7"><bdi class="secno">3.7 </bdi>Table 7: Clear and understandable content and text.<a class="self-link" aria-label="§" href="#table-7-clear-and-understandable-content-and-text"></a></h3>
+			  <h3 id="table7"><bdi class="secno">3.7 </bdi>Table 7: Clear and understandable content and text.<a class="self-link" aria-label="§" href="#table7"></a></h3>
 				<p>About Users </p><div class="note" id="issue-container-generatedID-55"><div role="heading" class="ednote-title marker" id="h-ednote-55" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
 				<p>This leads to the following user stories. </p>
 				<p>User needs for understandable text:</p>
@@ -3242,7 +3234,7 @@ It identifies user needs that are not currently fully addressed by accessibility
               </p>
 </section>
             <section id="table-8-navigating-the-system">
-              <h3 id="table8"><bdi class="secno">3.8 </bdi>Table 8: Navigating the system<a class="self-link" aria-label="§" href="#table-8-navigating-the-system"></a></h3>
+              <h3 id="table8"><bdi class="secno">3.8 </bdi>Table 8: Navigating the system<a class="self-link" aria-label="§" href="#table8"></a></h3>
               <p>About  users: Many users (most COGA groups) have memory issues and/or language issues that can make remembering numbers, while  processing words, difficult or impossible. Other contributing issues include  impaired executive function. </p>
               <p>Sometimes developers put a barrier between users and the task they are doing so users cannot use the content or service.</p>
               <ul>
@@ -3411,7 +3403,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 				</tbody>
 			</table>
 
-<h4 id="Discussion8">Discussion<a class="self-link" aria-label="§" href="#table-8-navigating-the-system"></a></h4>
+<h4 id="Discussion8">Discussion<a class="self-link" aria-label="§" href="#Discussion8"></a></h4>
             <p><a href="https://w3c.github.io/coga/issue-papers/voice-menus.html">Voice ML Issue Paper</a></p>
             <p><a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/2016Mar/0001.html">EMMA examples</a> </p>
             <p><a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Easy_Personalization">Script for personalization</a> and <a href="https://github.com/ayelet-seeman/COGA.personalisation">Example for personalization</a> </p>
@@ -3420,7 +3412,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 <p><a href="https://w3c.github.io/coga/techniques/index.html ">Techniques</a></p>
 </section>
 <section id="table-9-navigation-and-gps">
-<h3 id="table9"><bdi class="secno">3.9 </bdi>Table 9: Navigation and GPS<a class="self-link" aria-label="§" href="#table-9-navigation-and-gps"></a></h3>
+<h3 id="table9"><bdi class="secno">3.9 </bdi>Table 9: Navigation and GPS<a class="self-link" aria-label="§" href="#table9"></a></h3>
 <p>About Users </p><div class="note" id="issue-container-generatedID-82"><div role="heading" class="ednote-title marker" id="h-ednote-82" aria-level="4"><span>Editor's note</span></div><p class=""> to be completed.</p></div>
 <p>This leads to the following user stories. </p>
 <p>User needs for understandable navigation:</p>
@@ -4200,10 +4192,7 @@ It identifies user needs that are not currently fully addressed by accessibility
 
 	
 
-<section id="references" class="appendix">
-      <h2 id="e-references"><bdi class="secno">E. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2>
-      
-    <section id="informative-references">
+<section id="references" class="appendix"><h2 id="e-references"><bdi class="secno">E. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
         <h3 id="e-1-informative-references"><bdi class="secno">E.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-coga-issue-papers">[coga-issue-papers]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-coga-user-research">[coga-user-research]</dt><dd><a href="https://www.w3.org/TR/coga-user-research/"><cite>Cognitive Accessibility User Research</cite></a>. Lisa Seeman-Kestenbaum; Michael Cooper.  W3C. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/">https://www.w3.org/TR/coga-user-research/</a></dd><dt id="bib-emma">[EMMA]</dt><dd><a href="https://www.w3.org/TR/emma/"><cite>EMMA: Extensible MultiModal Annotation markup language</cite></a>. Michael Johnston.  W3C. 10 February 2009. W3C Recommendation. URL: <a href="https://www.w3.org/TR/emma/">https://www.w3.org/TR/emma/</a></dd><dt id="bib-etsi">[ETSI]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-eg-202-325">[ETSI-EG-202-325]</dt><dd><a href="http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf"><cite>ETSI EG 202 325 V1.1.1 (2005-10): Human Factors (HF); User Profile Management</cite></a>.  ETSI. October 2005. Published. URL: <a href="http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf">http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf</a></dd><dt id="bib-etsi-es-202-642">[ETSI-ES-202-642]</dt><dd><a href="http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf"><cite>ETSI ES 202 642 V1.1.1 (2010-09): Human Factors (HF); Personalization of eHealth systems by using eHealth user profiles (eHealth)</cite></a>.  ETSI. September 2010. Published. URL: <a href="http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf">http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf</a></dd><dt id="bib-etsi-es-202-746">[ETSI-ES-202-746]</dt><dd><a href="http://www.etsi.org/deliver/etsi_es/202700_202799/202746/01.01.01_60/es_202746v010101p.pdf"><cite>ETSI ES 202 746 V1.1.1 (2010-02): Human Factors (HF); Personalization and User Profile Management; User Profile Preferences and Information</cite></a>.  ETSI. February 2010. Published. URL: <a href="http://www.etsi.org/deliver/etsi_es/202700_202799/202746/01.01.01_60/es_202746v010101p.pdf">http://www.etsi.org/deliver/etsi_es/202700_202799/202746/01.01.01_60/es_202746v010101p.pdf</a></dd><dt id="bib-etsi-ts-102-747">[ETSI-TS-102-747]</dt><dd><a href="http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf"><cite>ETSI TS 102 747 V1.1.1 (2009-12): Human Factors (HF); Personalization and User Profile Management; Architectural Framework</cite></a>.  ETSI. December 2009. Published. URL: <a href="http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf">http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf</a></dd><dt id="bib-gpii">[GPII]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-personalization-semantics-1.0">[personalization-semantics-1.0]</dt><dd><a href="https://www.w3.org/TR/personalization-semantics-1.0/"><cite>Personalization Semantics Explainer 1.0</cite></a>. Lisa Seeman-Kestenbaum; Charles LaPierre; Michael Cooper; Ruoxi Ran; Richard Schwerdtfeger.  W3C. 11 July 2019. W3C Working Draft. URL: <a href="https://www.w3.org/TR/personalization-semantics-1.0/">https://www.w3.org/TR/personalization-semantics-1.0/</a></dd><dt id="bib-wai-aria">[wai-aria]</dt><dd><a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al.  W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a></dd><dt id="bib-wcag">[WCAG]</dt><dd><a href="https://www.w3.org/TR/WAI-WEBCONTENT/"><cite>Web Content Accessibility Guidelines 1.0</cite></a>. Wendy Chisholm; Gregg Vanderheiden; Ian Jacobs.  W3C. 5 May 1999. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WAI-WEBCONTENT/">https://www.w3.org/TR/WAI-WEBCONTENT/</a></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al.  W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></dd>

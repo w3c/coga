@@ -1,4 +1,4 @@
-<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 24.38.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.1.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
 .issue-label {
     text-transform: initial;
 }
@@ -132,10 +132,8 @@ dfn {
 	
 		<title>Cognitive and Learning Disabilities and WCAG</title>
 		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec 3 CSS
- * Robin Berjon - http://berjon.com/
+ * ReSpec specific CSS
  *****************************************************************/
-
 @keyframes pop {
   0% {
     transform: scale(1, 1);
@@ -583,16 +581,16 @@ var[data-type]:hover::before {
       "date": "15 January 2015"
     }
   },
-  "publishDate": "2019-12-19",
-  "publishISODate": "2019-12-19T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 19 December 2019"
+  "publishDate": "2020-01-28",
+  "publishISODate": "2020-01-28T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 28 January 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title p-name">Cognitive and Learning Disabilities and WCAG</h1>
       
       <h2>
         W3C Editor's Draft
-        <time class="dt-published" datetime="2019-12-19">19 December 2019</time>
+        <time class="dt-published" datetime="2020-01-28">28 January 2020</time>
       </h2>
       <dl>
         <dt>This version:</dt><dd>
@@ -620,7 +618,7 @@ var[data-type]:hover::before {
       <p class="copyright">
       <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
       ©
-      2016-2019
+      2016-2020
       
       <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
       <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
@@ -670,9 +668,9 @@ var[data-type]:hover::before {
     </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
-                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">2. </bdi>Terms</a></li><li class="tocline"><a class="tocxref" href="#new-success-criteria"><bdi class="secno">3. </bdi>New success criteria</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#under-wcag-2-2-provide-users-enough-time-to-read-and-use-content"><bdi class="secno">3.1 </bdi>Under WCAG 2.2 Provide users enough time to read and use content.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#timed-event-are-not-used-except-for-the-situations-listed-below"><bdi class="secno">3.1.1 </bdi>Timed event are not used except for the situations listed below.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-2-3"><bdi class="secno">3.2 </bdi>Under WCAG 2.3</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent"><bdi class="secno">3.2.1 </bdi>Do not expose user information in a way that can be exploited without informed consent</a></li><li class="tocline"><a class="tocxref" href="#do-not-add-mechanisms-that-are-likely-to-confuse-the-user-in-a-way-that-may-do-them-harm-and-use-known-techniques-to-keep-the-user-safe"><bdi class="secno">3.2.2 </bdi>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-3-1"><bdi class="secno">3.3 </bdi>Under WCAG 3.1</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes"><bdi class="secno">3.3.1 </bdi>Instructions, labels, navigation and <span class="formerLink" data-link-type="dfn">important information</span> are provided with a clear writing style that includes:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#provide-a-clear-structure-and-layout-new-guidline"><bdi class="secno">3.4 </bdi><strong>Provide a clear structure and layout</strong> (new guidline)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#information-is-provided-in-manageable-chunks-that-include"><bdi class="secno">3.4.1 </bdi>Information is provided in manageable chunks,  that include: <p></p>
-                    </a></li><li class="tocline"><a class="tocxref" href="#add-to-wcag-3-2-4"><bdi class="secno">3.4.2 </bdi><strong>Add to WCAG 3.2.4 </strong></a></li><li class="tocline"><a class="tocxref" href="#the-main-purpose-of-each-page-and-section-of-content-is-obvious-extraneous-information-that-is-not-relevant-to-the-main-purpose-of-each-page-is-separated-in-the-modality-of-the-user-and-pragmatically-determinable"><bdi class="secno">3.4.3 </bdi><strong>The main purpose of each page and section of content is <em>obvious</em>. </strong> Extraneous information that is not relevant to the  main purpose of each page is separated in the modality of the user and pragmatically determinable.
-                </a></li><li class="tocline"><a class="tocxref" href="#provide-a-clear-and-understandable-layout-that-includes"><bdi class="secno">3.4.4 </bdi><strong>Provide a clear and understandable layout  that includes:</strong></a></li><li class="tocline"><a class="tocxref" href="#interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"><bdi class="secno">3.4.5 </bdi>Interactive controls are visually clear or visually clear controls are <span class="formerLink" data-link-type="dfn">easily available</span> that conform to the following:</a></li><li class="tocline"><a class="tocxref" href="#a-familiar-design-layout-and-common-icons-are-easily-available"><bdi class="secno">3.4.6 </bdi><strong>A familiar   design, layout and common icons are easily available</strong>. </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#critical-features-and-important-information-for-the-user-is-easy-to-find-such-that"><bdi class="secno">3.4.6.1 </bdi><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> </a></li><li class="tocline"><a class="tocxref" href="#all-information-is-easy-to-find-aaa"><bdi class="secno">3.4.6.2 </bdi><strong>All information is easy to find (AAA )</strong></a></li></ol></li><li class="tocline"><a class="tocxref" href="#when-there-is-a-barrier-between-the-content-and-the-user-that-requires-additional-abilities-an-alternative-is-provided-that-does-not-require-additional-abilities"><bdi class="secno">3.4.7 </bdi>When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</a></li><li class="tocline"><a class="tocxref" href="#provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost"><bdi class="secno">3.4.8 </bdi>Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-3-3-help-users-avoid-and-correct-mistakes"><bdi class="secno">3.5 </bdi>Under WCAG 3.3 Help users avoid and correct mistakes.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available-spoken-feedback-should-be-a-user-selectable-option"><bdi class="secno">3.5.1 </bdi>The success or failure of every action should be <span class="formerLink" data-link-type="dfn">clearly indicated</span> to the user and visual <span class="formerLink" data-link-type="dfn">rapid feedback</span> should be available. <span class="formerLink" data-link-type="dfn">Spoken feedback</span> should be a user selectable option.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#items-where-new-techniques-are-wcag-2-0-required"><bdi class="secno">3.6 </bdi>Items where new techniques are WCAG 2.0 required</a></li><li class="tocline"><a class="tocxref" href="#items-where-wcag-2-0-sc-levels-should-be-changed"><bdi class="secno">3.7 </bdi>Items where WCAG 2.0 SC levels should be changed</a></li><li class="tocline"><a class="tocxref" href="#edits-to-wcag"><bdi class="secno">3.8 </bdi>Edits to WCAG</a></li><li class="tocline"><a class="tocxref" href="#additional-notes"><bdi class="secno">3.9 </bdi>Additional notes</a></li><li class="tocline"><a class="tocxref" href="#significant-contributors-this-section"><bdi class="secno">3.10 </bdi>Significant contributors this section </a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+                </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">2. </bdi>Terms</a></li><li class="tocline"><a class="tocxref" href="#new-success-criteria"><bdi class="secno">3. </bdi>New success criteria</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#under-wcag-2-2-provide-users-enough-time-to-read-and-use-content"><bdi class="secno">3.1 </bdi>Under WCAG 2.2 Provide users enough time to read and use content.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#timed"><bdi class="secno">3.1.1 </bdi>Timed event are not used except for the situations listed below.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-2-3"><bdi class="secno">3.2 </bdi>Under WCAG 2.3</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#do-not-expose-user-information-in-a-way-that-can-be-exploited-without-informed-consent"><bdi class="secno">3.2.1 </bdi>Do not expose user information in a way that can be exploited without informed consent</a></li><li class="tocline"><a class="tocxref" href="#semantics"><bdi class="secno">3.2.2 </bdi>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-3-1"><bdi class="secno">3.3 </bdi>Under WCAG 3.1</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#instructions"><bdi class="secno">3.3.1 </bdi>Instructions, labels, navigation and <span class="formerLink" data-link-type="dfn">important information</span> are provided with a clear writing style that includes:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#Providea clearstructureandlayout"><bdi class="secno">3.4 </bdi><strong>Provide a clear structure and layout</strong> (new guidline)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#chunks"><bdi class="secno">3.4.1 </bdi>Information is provided in manageable chunks,  that include: <p></p>
+                    </a></li><li class="tocline"><a class="tocxref" href="#324"><bdi class="secno">3.4.2 </bdi><strong>Add to WCAG 3.2.4 </strong></a></li><li class="tocline"><a class="tocxref" href="#obvious"><bdi class="secno">3.4.3 </bdi><strong>The main purpose of each page and section of content is <em>obvious</em>. </strong> Extraneous information that is not relevant to the  main purpose of each page is separated in the modality of the user and pragmatically determinable.
+                </a></li><li class="tocline"><a class="tocxref" href="#layout"><bdi class="secno">3.4.4 </bdi><strong>Provide a clear and understandable layout  that includes:</strong></a></li><li class="tocline"><a class="tocxref" href="#controls"><bdi class="secno">3.4.5 </bdi>Interactive controls are visually clear or visually clear controls are <span class="formerLink" data-link-type="dfn">easily available</span> that conform to the following:</a></li><li class="tocline"><a class="tocxref" href="#familiar"><bdi class="secno">3.4.6 </bdi><strong>A familiar   design, layout and common icons are easily available</strong>. </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#critical"><bdi class="secno">3.4.6.1 </bdi><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> </a></li><li class="tocline"><a class="tocxref" href="#allinformation"><bdi class="secno">3.4.6.2 </bdi><strong>All information is easy to find (AAA )</strong></a></li></ol></li><li class="tocline"><a class="tocxref" href="#barrier"><bdi class="secno">3.4.7 </bdi>When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.</a></li><li class="tocline"><a class="tocxref" href="#focus"><bdi class="secno">3.4.8 </bdi>Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#under-wcag-3-3-help-users-avoid-and-correct-mistakes"><bdi class="secno">3.5 </bdi>Under WCAG 3.3 Help users avoid and correct mistakes.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#the-success-or-failure-of-every-action-should-be-clearly-indicated-to-the-user-and-visual-rapid-feedback-should-be-available-spoken-feedback-should-be-a-user-selectable-option"><bdi class="secno">3.5.1 </bdi>The success or failure of every action should be <span class="formerLink" data-link-type="dfn">clearly indicated</span> to the user and visual <span class="formerLink" data-link-type="dfn">rapid feedback</span> should be available. <span class="formerLink" data-link-type="dfn">Spoken feedback</span> should be a user selectable option.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#items-where-new-techniques-are-wcag-2-0-required"><bdi class="secno">3.6 </bdi>Items where new techniques are WCAG 2.0 required</a></li><li class="tocline"><a class="tocxref" href="#changedlevels"><bdi class="secno">3.7 </bdi>Items where WCAG 2.0 SC levels should be changed</a></li><li class="tocline"><a class="tocxref" href="#edits-to-wcag"><bdi class="secno">3.8 </bdi>Edits to WCAG</a></li><li class="tocline"><a class="tocxref" href="#additional-notes"><bdi class="secno">3.9 </bdi>Additional notes</a></li><li class="tocline"><a class="tocxref" href="#significant-contributors-this-section"><bdi class="secno">3.10 </bdi>Significant contributors this section </a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>Informative references</a></li></ol></li></ol></nav>
 		<h1>Cognitive and Learning Disabilities and WCAG</h1>
 		<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
@@ -835,7 +833,7 @@ var[data-type]:hover::before {
 				<h3 id="x3-1-under-wcag-2-2-provide-users-enough-time-to-read-and-use-content"><bdi class="secno">3.1 </bdi>Under WCAG 2.2 Provide users enough time to read and use content.<a class="self-link" aria-label="§" href="#under-wcag-2-2-provide-users-enough-time-to-read-and-use-content"></a></h3>
 				<p>We suggest adding the following as success criteria: </p>
 				<section id="timed-event-are-not-used-except-for-the-situations-listed-below">
-					<h4 id="timed"><bdi class="secno">3.1.1 </bdi>Timed event are not used except for the situations listed below.<a class="self-link" aria-label="§" href="#timed-event-are-not-used-except-for-the-situations-listed-below"></a></h4>
+					<h4 id="timed"><bdi class="secno">3.1.1 </bdi>Timed event are not used except for the situations listed below.<a class="self-link" aria-label="§" href="#timed"></a></h4>
 					<p>(See COGA Techniques 2.9.1 ) </p>
 					<ol>
 						<li>Sessions time out after 20 hours have elapsed </li>
@@ -869,7 +867,7 @@ var[data-type]:hover::before {
 					<p class="technique">Techniques to include: using functional requirements for personlzation that do not suggest that the majority of users are disabled. Failure technique to be added of identifying a user to a code that is used mainly for people with dyscalculia. </p>
 				</section>
 				<section id="do-not-add-mechanisms-that-are-likely-to-confuse-the-user-in-a-way-that-may-do-them-harm-and-use-known-techniques-to-keep-the-user-safe">
-					<h4 id="semantics"><bdi class="secno">3.2.2 </bdi>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.<a class="self-link" aria-label="§" href="#do-not-add-mechanisms-that-are-likely-to-confuse-the-user-in-a-way-that-may-do-them-harm-and-use-known-techniques-to-keep-the-user-safe"></a></h4>
+					<h4 id="semantics"><bdi class="secno">3.2.2 </bdi>Do not add mechanisms that are likely to confuse the user in a way that may do them harm and use known techniques to keep the user safe.<a class="self-link" aria-label="§" href="#semantics"></a></h4>
 					<p>Note that  this does not include selling products know to be harmful. </p>
 					<p class="technique">Techniques to include: not adding automatically incrementing the number of items selected without warning the use . </p>
 					<p class="technique">Techniques to include: Where leaving  the site or task is likely to cause harm, ensure that the user is aware of the  change and risks. For example, in a health care site when looking for one drug,  and an advert takes the user to by a different drug</p>
@@ -878,7 +876,7 @@ var[data-type]:hover::before {
 			<section id="under-wcag-3-1">
     <h3 id="x3-3-under-wcag-3-1"><bdi class="secno">3.3 </bdi>Under WCAG 3.1<a class="self-link" aria-label="§" href="#under-wcag-3-1"></a></h3>
 				<section id="instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes">
-				  <h4 id="instructions"><bdi class="secno">3.3.1 </bdi>Instructions, labels, navigation and <a href="#dfn-important-information" class="internalDFN" data-link-type="dfn">important information</a> are provided with a clear writing style that includes:<a class="self-link" aria-label="§" href="#instructions-labels-navigation-and-important-information-are-provided-with-a-clear-writing-style-that-includes"></a></h4>
+				  <h4 id="instructions"><bdi class="secno">3.3.1 </bdi>Instructions, labels, navigation and <a href="#dfn-important-information" class="internalDFN" data-link-type="dfn">important information</a> are provided with a clear writing style that includes:<a class="self-link" aria-label="§" href="#instructions"></a></h4>
 					<p>(simple text version: Use a clear writing style) </p>
 					<p>For all wording (other then exceptions): </p>
                     <ol>
@@ -932,7 +930,7 @@ In menus :
 	
 
 				<section id="provide-a-clear-structure-and-layout-new-guidline">
-				<h3 id="Providea clearstructureandlayout"><bdi class="secno">3.4 </bdi><strong>Provide a clear structure and layout</strong> (new guidline)<a class="self-link" aria-label="§" href="#provide-a-clear-structure-and-layout-new-guidline"></a></h3>	<p>We suggest adding the following a new guidline</p>
+				<h3 id="Providea clearstructureandlayout"><bdi class="secno">3.4 </bdi><strong>Provide a clear structure and layout</strong> (new guidline)<a class="self-link" aria-label="§" href="#Providea clearstructureandlayout"></a></h3>	<p>We suggest adding the following a new guidline</p>
 			  <p>(See COGA Techniques 2.1) </p>
 			  <p>&nbsp;</p>
 				<p>Exception: If a specific structure is an essential part of the main function of the site. </p>
@@ -944,7 +942,7 @@ In menus :
 				<p>&nbsp;</p>
 			  <section id="information-is-provided-in-manageable-chunks-that-include">
 					<h4 id="chunks"><bdi class="secno">3.4.1 </bdi>Information is provided in manageable chunks,  that include: <p></p>
-                    <a class="self-link" aria-label="§" href="#information-is-provided-in-manageable-chunks-that-include"></a></h4>
+                    <a class="self-link" aria-label="§" href="#chunks"></a></h4>
 					<ol>
                       <li>One idea per paragraph. (One sentence is enough for a paragraph.) </li>
                       <li>Have one point per sentence. Long sentences can often be broken up into short sentences or lists. If a sentence can use more than two clauses, it typically can be broken up.</li>
@@ -957,7 +955,7 @@ In menus :
                     <p class="technique">Techniques will include:  For multi media  chunks may include: steps in a process,  slide changes, topic changes. </p>
                     <p></p>
                     <p>&nbsp;</p></section><section id="add-to-wcag-3-2-4">
-                    <h4 id="324"><bdi class="secno">3.4.2 </bdi><strong>Add to WCAG 3.2.4 </strong><a class="self-link" aria-label="§" href="#add-to-wcag-3-2-4"></a></h4>
+                    <h4 id="324"><bdi class="secno">3.4.2 </bdi><strong>Add to WCAG 3.2.4 </strong><a class="self-link" aria-label="§" href="#324"></a></h4>
                     <ul>
                       <li>Consistent styles are used for the <a href="#dfn-same-type-of-information" class="internalDFN" data-link-type="dfn">same type of information</a> and control (COGA Techniques 2.1.1). (see COGA Techniques 2.4) </li>
                       <li>(removed - 
@@ -974,7 +972,7 @@ In menus :
                         <p></p>
                     </section><section id="the-main-purpose-of-each-page-and-section-of-content-is-obvious-extraneous-information-that-is-not-relevant-to-the-main-purpose-of-each-page-is-separated-in-the-modality-of-the-user-and-pragmatically-determinable">
                     <h4 id="obvious"><bdi class="secno">3.4.3 </bdi><strong>The main purpose of each page and section of content is <em>obvious</em>. </strong> Extraneous information that is not relevant to the  main purpose of each page is separated in the modality of the user and pragmatically determinable.
-                <a class="self-link" aria-label="§" href="#the-main-purpose-of-each-page-and-section-of-content-is-obvious-extraneous-information-that-is-not-relevant-to-the-main-purpose-of-each-page-is-separated-in-the-modality-of-the-user-and-pragmatically-determinable"></a></h4>
+                <a class="self-link" aria-label="§" href="#obvious"></a></h4>
                   
                     <p>(Techniques Headings  are provided that describe the topic or purpose of each section and are <em>easy to find</em>. </p>
                     <p>also see COGA2.1.2) and wcag </p>
@@ -988,7 +986,7 @@ In menus :
                     </ul>
                     </section>
                     <section id="provide-a-clear-and-understandable-layout-that-includes">
-                      <h4 id="layout"><bdi class="secno">3.4.4 </bdi><strong>Provide a clear and understandable layout  that includes:</strong><a class="self-link" aria-label="§" href="#provide-a-clear-and-understandable-layout-that-includes"></a></h4>
+                      <h4 id="layout"><bdi class="secno">3.4.4 </bdi><strong>Provide a clear and understandable layout  that includes:</strong><a class="self-link" aria-label="§" href="#layout"></a></h4>
                       <ul>
                         <li>Structure and relationships are  obvious such that over 95% of users can immediately identity the structure and relationships (COGA Techniques 2.1.1) </li>
                         <li>Paragraphs are clearly separated  (white space in text or by a pause in speech content)</li>
@@ -1011,7 +1009,7 @@ In menus :
                       <p>&nbsp;</p>
                     </section>
 				    <section id="interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following">
-				      <h4 id="controls"><bdi class="secno">3.4.5 </bdi>Interactive controls are visually clear or visually clear controls are <a href="#dfn-easily-available" class="internalDFN" data-link-type="dfn">easily available</a> that conform to the following:<a class="self-link" aria-label="§" href="#interactive-controls-are-visually-clear-or-visually-clear-controls-are-easily-available-that-conform-to-the-following"></a></h4>
+				      <h4 id="controls"><bdi class="secno">3.4.5 </bdi>Interactive controls are visually clear or visually clear controls are <a href="#dfn-easily-available" class="internalDFN" data-link-type="dfn">easily available</a> that conform to the following:<a class="self-link" aria-label="§" href="#controls"></a></h4>
 				      <p>(See COGA Techniques 2.3) </p>
 				      <ol>
 				        <li>Interactive controls are persivable in the modality of the user</li>
@@ -1028,7 +1026,7 @@ In menus :
 				        </div>
 				      </section>
 				    <section id="a-familiar-design-layout-and-common-icons-are-easily-available">
-				      <h4 id="familiar"><bdi class="secno">3.4.6 </bdi><strong>A familiar   design, layout and common icons are easily available</strong>. <a class="self-link" aria-label="§" href="#a-familiar-design-layout-and-common-icons-are-easily-available"></a></h4>
+				      <h4 id="familiar"><bdi class="secno">3.4.6 </bdi><strong>A familiar   design, layout and common icons are easily available</strong>. <a class="self-link" aria-label="§" href="#familiar"></a></h4>
 				      <p>A familiar design can be  the user platform standard design or  the design of a previous versions of this product that the user is familiar with and has successfully used. </p>
 				      <p>
 				        </p><section class="respec-offending-element" title="Linter (no-headingless-sections): All sections must start with a `h2-6` element. Add a `h2-6` to the offending section or use a `<div>`. See developer console. Occured" id="respec-offender-linter-no-headingless-sections-all-sections-must-start-with-a-h2-6-element-add-a-h2-6-to-the-offending-section-or-use-a-div-see-developer-console-occured-1"></section>
@@ -1052,7 +1050,7 @@ In menus :
 				          </div>
 				        </section>
 				      <section id="critical-features-and-important-information-for-the-user-is-easy-to-find-such-that">
-				        <h5 id="critical"><bdi class="secno">3.4.6.1 </bdi><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> <a class="self-link" aria-label="§" href="#critical-features-and-important-information-for-the-user-is-easy-to-find-such-that"></a></h5>
+				        <h5 id="critical"><bdi class="secno">3.4.6.1 </bdi><strong><em>Critical features and important information </em> for the user is easy to find, such that:</strong> <a class="self-link" aria-label="§" href="#critical"></a></h5>
 				        
 				        <ol>
 				          <li><em>Critical features</em> and <em>important information </em>can be used without use of a scroll bar. (Example -above the scroll or a clear link to it is above the scroll )</li>
@@ -1069,7 +1067,7 @@ In menus :
 				        <p>define: <strong><em>content most likely to be important to the user</em></strong></p>     
 				        </section>
 				      <section id="all-information-is-easy-to-find-aaa">
-				        <h5 id="allinformation"><bdi class="secno">3.4.6.2 </bdi><strong>All information is easy to find (AAA )</strong><a class="self-link" aria-label="§" href="#all-information-is-easy-to-find-aaa"></a></h5>
+				        <h5 id="allinformation"><bdi class="secno">3.4.6.2 </bdi><strong>All information is easy to find (AAA )</strong><a class="self-link" aria-label="§" href="#allinformation"></a></h5>
 				        <ol>
 				          <li>Where there are more then five links directly under any one navigation heading or subheading it is examined to see if adding additional category would be helpful. (AAA) </li>
 				          <li>There are no more then no more than three clicks to get to information from a landing page or portal. (AAA) </li>
@@ -1079,7 +1077,7 @@ In menus :
 				      </section>
 				
 				    <section id="when-there-is-a-barrier-between-the-content-and-the-user-that-requires-additional-abilities-an-alternative-is-provided-that-does-not-require-additional-abilities">
-				      <h4 id="barrier"><bdi class="secno">3.4.7 </bdi>When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.<a class="self-link" aria-label="§" href="#when-there-is-a-barrier-between-the-content-and-the-user-that-requires-additional-abilities-an-alternative-is-provided-that-does-not-require-additional-abilities"></a></h4>
+				      <h4 id="barrier"><bdi class="secno">3.4.7 </bdi>When there is a barrier between the content and the user that requires additional abilities an alternative is provided that does not require additional abilities.<a class="self-link" aria-label="§" href="#barrier"></a></h4>
 				      <p>Additional abilities include <a href="#dfn-cognitive-functions" class="internalDFN" data-link-type="dfn">cognitive functions</a> that are required, but are not necessary to achieve the main task for which the content was designed. Such as: </p>
 				      <ul>
 				        <li> Capture or security mechanisms that require copying, spelling or memory skills, </li>
@@ -1110,7 +1108,7 @@ In menus :
 				      </section>
 				    <section id="provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost">
 				      
-				      <h4 id="focus"><bdi class="secno">3.4.8 </bdi>Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.<a class="self-link" aria-label="§" href="#provide-mechanisms-that-help-the-user-focus-and-maintain-or-restore-context-if-the-context-is-lost"></a></h4>
+				      <h4 id="focus"><bdi class="secno">3.4.8 </bdi>Provide mechanisms that help the user focus  and  maintain or restore  context if the context is lost.<a class="self-link" aria-label="§" href="#focus"></a></h4>
 				      <p>(Remove uncertainty and help the user maintain context) </p>
 				      <p>This includes: </p>
 				      <ol>
@@ -1355,7 +1353,7 @@ In menus :
 			</ul>
 	</section>
 		<section id="items-where-wcag-2-0-sc-levels-should-be-changed">
-			<h3 id="changedlevels"><bdi class="secno">3.7 </bdi>Items where WCAG 2.0 SC levels should be changed<a class="self-link" aria-label="§" href="#items-where-wcag-2-0-sc-levels-should-be-changed"></a></h3>
+			<h3 id="changedlevels"><bdi class="secno">3.7 </bdi>Items where WCAG 2.0 SC levels should be changed<a class="self-link" aria-label="§" href="#changedlevels"></a></h3>
 			<p>We recommend the following level AAA are considered more important for COGA </p>
 			<ul>
 				<li>1.4.7 Low or No Background Audio No Background: The audio does not contain background sounds or Turn Off: The background sounds can be turned off. </li>
@@ -1401,10 +1399,7 @@ User preferences can be transfered to a carer where the carer has guardianship o
 </section>
 	
 
-</section><section id="references" class="appendix">
-      <h2 id="a-references"><bdi class="secno">A. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2>
-      
-    <section id="informative-references">
+</section><section id="references" class="appendix"><h2 id="a-references"><bdi class="secno">A. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
         <h3 id="a-1-informative-references"><bdi class="secno">A.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
       <dl class="bibliography">
         <dt id="bib-coga-issue-papers">[coga-issue-papers]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-coga-user-research">[coga-user-research]</dt><dd><a href="https://www.w3.org/TR/coga-user-research/"><cite>Cognitive Accessibility User Research</cite></a>. Lisa Seeman-Kestenbaum; Michael Cooper.  W3C. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/">https://www.w3.org/TR/coga-user-research/</a></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al.  W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></dd>
