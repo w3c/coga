@@ -1134,129 +1134,255 @@ Being able to find the extra features when I want them </li></ul>
       
     </section>
     <section class="appendix">
-        <h2>Guidance for policy makers</h2>
-        <p>
-          This section provides guidance for policy makers on how to use the
-          design patterns to build a policy. This includes:
-        </p>
-        <ul>
-          <li>Defining the scenarios included in your policy</li>
-          <li>
-            Looking at the different criteria and deciding if they are important
-            for the scenarios in your policy
-          </li>
-          <li>
-            Building a policy that include the important criteria for the
-            scenarios included in your policy.
-          </li>
-        </ul>
-        <p><u>Table of design patterns and policy criteria</u></p>
-        <table>
-          <tr>
-            <th>Number</th>
-            <th>Name</th>
-            <th>Testable</th>
-            <th>Requires user testing</th>
-            <th>Can be applied to all content</th>
-            <th>Important for conversational interfaces</th>
-            <th>Important for IOT</th>
-            <th>User need level</th>
-          </tr>
-          <tr>
-            <td>1</td>
-            <td>Clear purpose</td>
-            <td>yes</td>
-            <td>no</td>
-            <td>yes</td>
-            <td>yes</td>
-            <td>yes</td>
-            <td>high</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Support personalization</td>
-            <td>yes</td>
-            <td>no</td>
-            <td>yes</td>
-            <td>yes</td>
-            <td>yes</td>
-            <td>high</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>Support simplification</td>
-            <td>yes</td>
-            <td>no</td>
-            <td>yes</td>
-            <td>yes</td>
-            <td>yes</td>
-            <td>high</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>Familiar design</td>
-            <td>yes</td>
-            <td>sometimes</td>
-            <td>yes</td>
-            <td>no</td>
-            <td>yes</td>
-            <td>high</td>
-          </tr>
-        </table>
-
-        <p><strong>Example recommendations for policies:</strong></p>
-        <ul>
-          <li>
-            A policy for critical services might include any item with a high or
-            medium level need
-          </li>
-          <li>A policy for emergency services might include all items</li>
-          <li>
-            A policy for legislation for wide adoption for all web sites might
-            include any item that are testable, does not require human testing
-            and have a high user need level.
-          </li>
-          <li>
-            A policy for legislation for content needed in the workplace might
-            include any item that are testable, and have a high or medium level
-            user need level.
-          </li>
-        </ul>
-        <p>
-          <strong
-            >The following are example scenarios that may be included in a
-            policy:</strong
-          >
-        </p>
-        <ul>
-          <li>
-            Critical services - such as water, health care, phone and internet
-            services, government services
-          </li>
-          <li>Emergency services - such as police, fire, etc</li>
-          <li>Content needed in the workplace, including professional sites</li>
-          <li>
-            Content that helps autonomy such as apps and interfaces to run home
-            devices, book a cab, write an email etc.
-          </li>
-        </ul>
-        <p><strong>The following are example user considerations:</strong></p>
-        <ul>
-          <li>Safety</li>
-          <li>Autonomy and savings in care-giving</li>
-          <li>
-            Cost associated with people leaving the work place earlier than
-            necessary.
-          </li>
-        </ul>
-        <p><strong>Other considerations include:</strong></p>
-        <ul>
-          <li>
-            Does this item require user testing to conform, and is this too
-            expensive for the scope of sites that might be required to comply
-          </li>
-          <li>See the issue paper on user testing for more information</li>
-        </ul>
+      <h2>Guidance for policy makers</h2>
+<p>This section provides guidance for policy makers on how to use the design patterns (general, repeatable solutions to commonly occurring problems) to build a policy regarding web content to ensure that the needs of individuals with learning or cognitive disabilities are addressed. Web content designed without consideration for the needs of individuals with learning or cognitive disabilities may create accessibility barriers to the needs of the end-user. Development of a policy includes the following steps which are discussed in this section:</p>
+<ol>
+<li><strong>Define the scenarios</strong> to be included in the policy (i.e., address the environments or situations in which the policy will apply)</li>
+<li><strong>Review the different design pattern criteria</strong>, which are listed in the following table, and decide if they are relevant to the environmental or situational scenarios.</li>
+<ul>
+<li>Note that the design patterns in the following table are linked to their respective areas of the Design Guide which contains detailed information about getting started, implementation, and technical details.</li>
+</ul>
+<li><strong>Develop a policy</strong> with requirements based on an analysis of the environmental or situational scenarios and the design pattern criteria</li>
+</ol>
+<p>Table of design patterns and policy criteria</p>
+<table>
+<tbody>
+<tr>
+<th scope="col">Design Guide Number</th>
+<th scope="col">Name</th>
+<th scope="col">Testable through automated mechanism or user testing</th>
+<th scope="col">Requires user testing with individuals with cognitive disabilities</th>
+<th scope="col">Can be applied to all content</th>
+<th scope="col">Important for conversational interfaces</th>
+<th scope="col">Important for IoT (Internet if Things)</th>
+<th scope="col">User need level&lt;</th>
+</tr>
+<tr>
+<td>
+<p>A.2</p>
+</td>
+<td>
+<p>Clear design</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>high</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>A.3</p>
+</td>
+<td>
+<p>Simplify navigation</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>high</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>A.4</p>
+</td>
+<td>
+<p>Clear content</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>high</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>A.5</p>
+</td>
+<td>
+<p>Prevent errors and simplify corrections</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>sometimes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>high</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>A.6</p>
+</td>
+<td>
+<p>Support focus</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>sometimes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>high</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>A.7</p>
+</td>
+<td>
+<p>Do not rely on memory</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>no</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>high</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>A.8</p>
+</td>
+<td>
+<p>Provide help</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>no</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>high</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>A.9</p>
+</td>
+<td>
+<p>Support simplification</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>no</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>yes</p>
+</td>
+<td>
+<p>high</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Policy makers should familiarize themselves with the design patterns as they relate to the environmental or situational scenarios for which they are responsible. Determine if user testing is needed or desired, with regard to the scope or expense for the affected sites. Refer to the issue paper on user testing for additional information.</p>
+<p>User considerations must also be taken into account when developing scenario-based policies, such as individual safety concerns, autonomy and savings in care-giving, and the cost of individuals with cognitive or learning disabilities leaving the workplace earlier than necessary due to lack of appropriately designed content or interfaces.</p>
+<p><strong>The following are examples of scenarios that may be covered by a policy:</strong></p>
+<ul>
+<li>Emergency services - police, fire, emergency medical services, etc.</li>
+<li>Critical services - water, health care, phone and internet services, government services</li>
+<li>Workplace content - including but not limited to professional sites and productivity tools</li>
+<li>Individual content - apps, interfaces to run home devices, book a cab, write an email; any content or functionality that facilitates autonomy</li>
+</ul>
+<p><strong>Examples of scenario-based policies:</strong></p>
+<ul>
+<li><strong>Emergency Services:</strong> A policy for emergency services might require the inclusion of all design patterns. The inclusion of all design patterns would help to ensure that individuals, regardless of learning or cognitive disability, can quickly access and interpret emergency information and respond appropriately.&nbsp;</li>
+<li><strong>Critical Services:</strong> A policy for critical services might require any design pattern with a medium to high user need level, as reflected in the <a href="https://docs.google.com/document/d/1rZss28td0Kyf70CEubbu-slin7CkftA7Vn_h28Hnwi0/edit#bookmark=id.ed1feaccv76l">table of design patterns and policy criteria</a>. A robust system for inclusion of most design patterns would ensure that individuals can quickly access and interpret information that directly impacts them.</li>
+<li><strong>General Legislative Policy: </strong>A legislative policy for widespread adoption on website design might include any items that do not require human testing and have a high user need level.</li>
+</ul>
+<p><strong>Workplace Legislative Policy: </strong>A legislative policy that applies to content in the workplace might include any items that are optionally testable and have a medium to high user need level.</p>
       
     </section>
     <section class="appendix">
