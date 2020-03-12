@@ -91,7 +91,7 @@ var respecConfig = {
     // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
     // Team Contact.
     wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
-    //maxTocLevel: 2,
+    maxTocLevel: 4,
 
     localBiblio: biblio,
 
