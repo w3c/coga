@@ -20,8 +20,8 @@ var respecConfig = {
 
     // if you wish the publication date to be other than today, set this
     //publishDate:  "2017-05-09",
-    copyrightStart:  "2018",
-    license: "document",
+    copyrightStart:  "2020",
+   
 
     // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
     // and its maturity status
@@ -91,7 +91,7 @@ var respecConfig = {
     // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
     // Team Contact.
     wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
-    //maxTocLevel: 2,
+    maxTocLevel: 4,
 
     localBiblio: biblio,
 

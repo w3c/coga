@@ -3,6 +3,7 @@
   <body>
     <section id="introduction">
       <h1>Introduction</h1>
+	    
 
       <p>
         Making websites and applications friendly for people with
@@ -16,7 +17,6 @@
         cognitive and learning disabilities also need improvements to context, language, usability, and other
         more general factors that impact everyone to some degree. As a result,
         they do not fit well into traditional accessibility standards.
-		
       </p>
       <p>
         This document provides assistance making websites and
@@ -57,7 +57,7 @@
 
     <section>
       <h2>
-        Objective: Help users understand what things are and how to use them
+        Objective: Help Users Understand What Things are and How to Use Them
       </h2>
       <p>
         Not everyone finds learning new things easy, and not everyone can
@@ -107,7 +107,7 @@
         another.
       </p>
       <section>
-        <h3>User testing</h3>
+        <h3>User Testing</h3>
         <p>
           Make sure your user testing includes individuals with a range of
           cognitive disabilities. Do not just ask questions, but ask the user to
@@ -139,32 +139,21 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h3>User stories</h3>
-        <p>This leads to the following user stories:</p>
-        <ul>
-          <li>
-            I am familiar with the user interface (such as menus, buttons and
-            design components) where everything happens, and I know how to work
-            it and what will happen when I work it.
-          </li>
-          <li>I know what to click to make things happen.</li>
-          <li>I like content delivered in an easy-to-understand mode.</li>
-          <li>I like simple content with few options and consistent text.</li>
-          <li>I know what this page does.</li>
-          <li>I know how to do each task.</li>
-        </ul>
-      </section>
+     
+      <section> 
+        <h3>Pattern: Make the Purpose of Your Page Clear</h3>
+          <h4>User Need</h4>
+          <blockquote><p>I can easily see the context and purpose of the page.</p></blockquote>
+          <p>Related User Story: <a href="#user-story-clear-purpose" aria-label="Clear Purpose User Story">Clear Purpose</a>.</p>
+          <h4>Description</h4>
+          <p>
+            Use a clear title or heading that summarizes the purpose of a page, or
+            other clear signposts that have been tested by users with cognitive
+            disabilities.
+          </p>
 
-      <section>
-        <h3>Pattern: Make the purpose of your page clear</h3>
-        <p>
-          Use a clear title or heading that summarizes the purpose of a page, or
-          other clear signposts that have been tested by users with cognitive
-          disabilities.
-        </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             This helps many people, including those with poor memory and
             attention as well as anyone who is easily distracted due to
@@ -182,7 +171,7 @@
             Disorder is looking for information in a video. They can tell by the video title that this video is has the information they need.</p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>Headings need to clarify the purpose of this specific page.</p>
 		  <p>When possible, provide information to help users understand how they got to the page.  For example: breadcrumbs, clearly indicated on main navigation, highlighting currently selected tab, etc.)</p>
         </section>
@@ -203,7 +192,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -222,8 +211,12 @@
           </p>
         </section>
       </section>
+      
       <section>
-        <h3>Pattern: Make each step clear</h3>
+        <h3>Pattern: Make Each Step Clear</h3>
+          <h4>User Need</h4>
+          <blockquote><p>I always recognize where I am in the architecture of the website, application or multi-step process, even after I get distracted.</p></blockquote>
+          <p>Related User Story: <a href="#user-story-clear-purpose" aria-label="Clear Purpose User Story">Clear Purpose</a>.</p>          <h4>Description</h4>
         <p>
           In a multi-step process, clearly indicate the steps completed, the
           current step and the steps pending. 
@@ -233,8 +226,9 @@
           Make sure the current location and progress within a sequence is
           clear.
         </p>
-        <section>
-          <h4>How it helps</h4>
+
+      <section>
+          <h4>How it Helps</h4>
           <p>
             Clearly indicating the current location and progress helps a user
             who loses focus or gets distracted reorient to their current
@@ -272,7 +266,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -290,8 +284,12 @@
 
       <section>
         <h3>
-          Pattern: Clearly identify controls and their use
+          Pattern: Clearly Identify Controls and Their Use
         </h3>
+          <h4>User Need</h4>
+        <blockquote><p>I understand my options and the tasks I can perform and I can identify the controls I can interact with in order to complete actions.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        <h4>Description</h4>
         <p>Use a clear and recognizable design for controls. Make it clear what controls are and how to use them.</p>
 		
 		<p>Use a clear design for controls by:</p>
@@ -318,8 +316,9 @@
           use. Instructions should be on the same page or one click away and
           written in plain language.
         </p>
-        <section>
-          <h4>How it helps</h4>
+        
+       <section>
+          <h4>How it Helps</h4>
           <p>
             Using common style and design pattern on controls makes it easier to
             recognize and understand how to use it. Controls are parts of web
@@ -378,7 +377,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -446,12 +445,16 @@
 	  
 	 <section>
         <h3>
-          Pattern: Ensure controls and content do not move unexpectedly
+          Pattern: Ensure Controls and Content Do Not Move Unexpectedly
         </h3>
-        <p>Make sure controls and content remain in place and do not move, unless the user initiates the movement. </p>
-		
+          <h4>User Need</h4>
+          <blockquote><p>Controls do not move unexpectedly as I am using them.</p></blockquote>
+          <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+          <h4>Description</h4>
+          <p>Make sure controls and content remain in place and do not move, unless the user initiates the movement. </p>
+
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Sometimes users are about to press a control and the control moves.  As a result, users with slow hand-eye coordination and
 			processing speed may hit the wrong control causing an unwanted action and 
@@ -466,10 +469,9 @@
 			and the application becomes very hard to use or understand.
 
           </p>
-        </section>
-		
-		<section>
-          <h4>More details</h4>
+        </section>	
+        <section>
+          <h4>More Details</h4>
 		      <p>Controls moving unexpectedly includes:</p>
 				<ul><li>Links in a list shifting positions</li>
 					<li>Orientation changes</li>
@@ -495,10 +497,12 @@
  
       </section>
  
-	  
-	  
       <section>
-        <h3>Pattern: Make the  relationship clear  between controls and what they affect</h3>
+        <h3>Pattern: Make the Relationship Clear Between Controls and What They Affect</h3>
+          <h4>User Need</h4>
+        <blockquote><p>I know how to use all the controls and the effects of each action.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        <h4>Description</h4>
         <p>
           When controls affect a part of the content, the relationship between controls and affected content should be completely clear and unambiguous.  
         </p>
@@ -507,9 +511,8 @@
 			<li>Using clear dividers and/or white space between region in a page that may have separate controls or a scroll bar;</li>
 			<li>Avoiding multiple or nested scrolling areas;</li></ul>
 
-        
-        <section>
-          <h4>How it helps</h4>
+      <section>
+          <h4>How it Helps</h4>
           <p>
             Controls that affect only one section of a page is confusing. Many users will look again at the content, try and work out what they are supposed to do, and discover the correct controls or scrollbar. However, many people with cognitive or learning disabilities will not be able to work out what they did incorrectly. Others will feel cognitive overload, and will give up as a result. They may assume the application is broken, or that it is just too complicated for them. For all of these users, the application will not be usable.   
           </p>
@@ -528,7 +531,7 @@
 
         </section>
 		<section>
-		<h4>More details</h4>
+		<h4>More Details</h4>
 	          <ul>
             <li>
               <strong>Separating Interactive Elements</strong> - Place interactive elements like scroll bars and buttons close to the content they can impact. Also, keep interactive elements further from content to which they do not apply. This makes it easier to identify which elements will impact each section of content.
@@ -568,7 +571,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -589,14 +592,19 @@
 
 	 <section>
         <h3>
-          Pattern: Use a design that the user is likely to recognize and understand
+          Pattern: Use a Design that the User is Likely to Recognize and Understand
         </h3>
+          <h4>User Need</h4>
+        <blockquote><p>I've used other websites that look like this so I know how to use it.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        <h4>Description</h4>
         <p>
           Use common design elements, affordances, and patterns that are
           familiar to most users.
         </p>
+ 
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Many users, such as those with mild cognitive impairment or
             dementia, cannot easily learn and remember new design metaphors.
@@ -611,7 +619,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>Common design elements, affordances and patterns include:</p>
           <ul>
             <li>
@@ -665,7 +673,7 @@
           </ul>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             When deciding pages, select standard components that look and behave
             the way users expect. Use standard conventions for layout such as
@@ -675,7 +683,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -695,10 +703,15 @@
       </section>
 
       <section>
-        <h3>Pattern: Use a consistent visual design</h3>
+        <h3>Pattern: Use a Consistent Visual Design</h3>
+          <h4>User Need</h4>
+        <blockquote><p>I find the design familiar such that user interface elements such as menus, buttons and design components as well as elements common to many websites such as help and search are where I expect them to be and do not move unexpectedly.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        <h4>Description</h4>
         <p>Use a consistent visual design across groups of pages.</p>
+
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Those with difficulty understanding how to interact with information
             need to use cues like color, layout and other visual information to
@@ -724,7 +737,7 @@
           </ul>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>This includes:</p>
           <ul>
             <li>
@@ -758,7 +771,7 @@
         </section>
 
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             Plan the design for your information before adding content. Think
             about the colors, font choices and areas where text and images will
@@ -790,7 +803,7 @@
 
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -823,13 +836,18 @@
       </section>
 
       <section>
-        <h3>Pattern: Use symbols that help the user</h3>
+        <h3>Pattern: Use Symbols that Help the User</h3>
+          <h4>User Need</h4>
+        <blockquote><p>Familiar symbols help me understand controls and content which would otherwise be difficult.</p></blockquote>
+        <p>Related User Story: <a href="user-story-symbols-pictographic-or-ideographic-that-represent-concepts" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        <h4>Description</h4>
         <p>
           Add familiar symbols (icons, images and pictographs) to important content such as controls and section headings.
           Each symbol should convey a single meaning and be adjacent to the content it relates to.
         </p>
+
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             People who have language comprehension difficulties who may be able
             to mechanically read but not understand the content or those who
@@ -849,7 +867,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <ul>
             <li>
               Use
@@ -870,7 +888,7 @@
           </ul>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             Provide symbols besides key texts, headings, media sections, contact us and help
           </p>
@@ -890,7 +908,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -928,9 +946,9 @@
     </section>
 
     <section>
-      <h2>Objective: Help users find what they need</h2>
+      <h2>Objective: Help Users Find What They Need</h2>
       <section>
-        <h3>User testing</h3>
+        <h3>User Testing</h3>
         <p>
           Make sure your user testing includes individuals with a range of
           cognitive disabilities. Do not just ask questions, but ask the user to
@@ -951,51 +969,13 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h3>User stories</h3>
-        <p>
-          This leads to the following user stories:</p>
-		  <p>As a user who has memory
-          impairments, weak executive function and/or weak language processing
-          skills:
-        </p>
-        <ul>
-          <li>
-            I want to know what important information and functions are on a
-            page, quickly and easily.
-          </li>
-          <li>
-            I can find the content I am looking for, without looking in the
-            wrong places.
-          </li>
-          <li>
-            I can easily understand, navigate and browse both the site structure
-            and individual pages.
-          </li>
-          <li>
-            I do not get lost in a complex information architecture when I want
-            to find something.
-          </li>
-          <li>
-            I can easily work out how to get to what I want when it requires
-            navigation from where I am.
-          </li>
-          <li>
-            I can see all important features without them being hidden off
-            screen and requiring scrolling.
-          </li>
-          <li>
-            I can easily search for anything I want or have searched for before.
-          </li>
-          <li>
-            Since I often touch or click on the wrong item, I am easily able to go back or undo
-            so I'm exactly where I was previously. I'd like a simple,
-            familiar action that I can use every time it is needed.
-          </li>
-        </ul>
-      </section>
+      
 	  <section>
-        <h3>Pattern: Ensure the hierarchy of the site and menu structure is logical, easy to identify and navigate</h3>
+        <h3>Pattern: Ensure the Hierarchy of the Site and Menu Structure is Logical, Easy to Identify and Navigate</h3>
+          <h4>User Need</h4>
+        <blockquote><p>The structure and menu categories make sense to me, so that I find what I am looking for, without looking in the wrong place.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-findable" aria-label="Findable User Story">Findable</a>.</p>
+        <h4>Description</h4>
         <p>
           It is easy to understand and use the site hierarchy and the overall menu structure. Sub-menu items are clearly associated with the main menu items under
           which they fall.
@@ -1008,8 +988,9 @@
 		  <li>That there are sub-menus and, if there are,</li>
           <li>How to reach sub-menu items.</li>		     
         </ul>
+
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
          <p>
             Confusion can occur when visual hierarchy of information is not
             immediately apparent to the user. Distinction between levels in
@@ -1043,9 +1024,10 @@
             to expand the sub-menu and may abandon the task. An example would be
             a menu that expands only after moving the mouse over a particular
             side of the menu text.
-          </p>		  
+          </p>
+		</section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Small design elements that indicate sub-menu items will be presented
             that aren’t always readily apparent or meaningful to the user and
@@ -1072,7 +1054,7 @@
           </p>
         </section>		 		  
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
 		            <p>
             Create a visually clear hierarchy of in-line information in either a
             revealed or hidden state. Clearly indicate when text is hidden or
@@ -1108,7 +1090,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
 			<p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -1123,10 +1105,6 @@
             <a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a>
           </p>
           <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
             <a
               href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html"
               >On coga github: clear-structure-and-relationships.html</a
@@ -1137,8 +1115,13 @@
           </p>
         </section>
       </section>
-	        <section>
-        <h3>Pattern:  Use a clear and understandable page structure</h3>
+
+      <section>
+        <h3>Pattern: Use a Clear and Understandable Page Structure</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I can easily understand, navigate and browse both the site and page structure.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-navigation" aria-label="Findable User Story">Findable</a>.</p>
+        <h4>Description</h4>
         <p>The structure and hierarchy of the page must be  easy to follow.  Often this involves: </p>
         <ul>
           <li>
@@ -1160,7 +1143,7 @@
         </ul>
 
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             By creating clear layouts, with easy to use controls, users can focus on the task instead of spending time figuring out how to use the controls and information. They easily find key information, and are more likely to return to the page. Clear layout helps people with cognitive and learning  disabilities that  impact problem solving skills, get overwhelmed when presented with a lot of text,  impact problem solving skills, those that and those with difficulties with more complicated tasks
           </p>
@@ -1168,7 +1151,7 @@
            Some people with disabilities need a clear layout to help them know how to use the information. When structure and relationships are unclear, users may need to experiment with different layouts and structures until they work out how to use them. However, people with cognitive disabilities may not be able to do so, and may not be able to use the content or application. Those impacted may not complete tasks, miss key information, and not return to pages that are complicated to use and understand.
           </p>
 		  
-		  <h5>A good structure</h5>
+		  <h5>A Good Structure</h5>
 			<p>
 			A clear organization of content into pages and sections with obvious purpose allows users to more easily locate relevant sections and to be confident that those they read in detail will match their purposes. Each page or section of content should be organized and marked so that its purpose is obvious. This might be through the use of visual cues, headings or labels or even a pyramid style of writing. Sometimes symbols (with alt text) can be used to make the sections purpose clear. 
 			</p>
@@ -1176,7 +1159,7 @@
 			Content that is not directly relevant to the main purpose of a page should be distinctly separated and programmatically determinable. There should be no need to read all the content in case something important is missed. For example, ads that appear in-line in a section of content are rarely related to the purpose of a section and can be placed in a separate delimited section. 
 			</p>
 
-		  <h5>Visual cues</h5>
+		  <h5>Visual Cues</h5>
 			<p>
 			People who have difficulty with recognizing or comprehending written language, having difficulties with concentration or memory can find it easier to process graphical cues.
 			</p>
@@ -1218,7 +1201,7 @@
 			</ul>
         </section>
 		        <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
 			<p>Making regions and a good page structure can include:</p>
 				<ul><li>If pages are dense with content, check that  content is grouped  and you can see what is related.</li>
 					<li>Clearly label content categories, and use visual cues and symbols which will be familiar.  This will help recognition and retrieval rather than rely on memory of your site.</li>
@@ -1247,7 +1230,7 @@
           <p>Dense text, with little white space, no call outs, and a lack of visually differentiated headings to define sections;</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -1272,8 +1255,13 @@
 			<p>ETSI 203 350 Guidelines for the design of mobile ICT devices and their related applications for people with cognitive disabilities: 12.4.2, 12.4.16, 12.4.16, 12.4.18, 12.4.21</p>  
         </section>
       </section>
+      
 	        <section>
-        <h3>Pattern: Break media into chunks</h3>
+        <h3>Pattern: Break Media into Chunks</h3>
+          <h4>User Need</h4>
+        <blockquote><p>I like small segments of multimedia that have navigable text or labels that describes the segment so I can easily navigate to what I want, take breaks and easily jump back a step if I do not follow or get distracted.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-findable" aria-label="Findable User Story">Media</a>.</p>
+        <h4>Description</h4>
         <p>Divide long pieces of media into segments that are:</p>
         <ul>
           <li>logical</li>
@@ -1282,8 +1270,9 @@
           <li>easy to reach or jump to.</li>
         </ul>
 		<p>Provide a logical organization and structure that is easy to navigate.</p>
-        <section>
-          <h4>How it helps</h4>
+
+      <section>
+          <h4>How it Helps</h4>
           <p>
             Providing shorter logical segments allows a person to find and
             review a specific topic. If that person loses concentration or steps
@@ -1308,7 +1297,7 @@
           </ul>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <ul>
             <li>
               <strong>Six minutes or less</strong>: Media should typically be
@@ -1345,7 +1334,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -1367,11 +1356,15 @@
           </p>
         </section>
       </section>
+
       <section>
         <h3>
-          Pattern: Ensure the most important things are easy to find 
+          Pattern: Ensure the Most Important Things are Easy to Find 
         </h3>
-
+        <h4>User Need</h4>
+        <blockquote><p>I can reach important information and the controls I need without scrolling or carrying out other actions. They are not hidden or off screen.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-findable" aria-label="Findable User Story">Findable</a>.</p>
+        <h4>Description</h4>
         <p>
           Design key content to visually stand out and be visible to users without
           needing to scroll the page or hover over content. This includes:
@@ -1390,7 +1383,7 @@
         </ul>
 
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             People with low executive function, impaired memory, and other
             cognitive and learning disabilities may not be able to find features
@@ -1403,7 +1396,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             The amount of page visible before scrolling is dependent on a wide
             range of factors such as physical device size, resolution, pixel
@@ -1431,7 +1424,7 @@
           </p>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             Make it easy to find the most important things on the page. Identify
             key content and its placement early in the design process.
@@ -1475,7 +1468,7 @@
           </ol>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language:
@@ -1486,10 +1479,15 @@
           </p>
         </section>
       </section>
+
  <section>
         <h3>
-          Pattern: Make it easy to identify the most important tasks and features of the site 
+          Pattern: Make it Easy to Identify the Most Important Tasks and Features of the Site 
         </h3>
+        <h4>User Need</h4>
+        <blockquote><p>I can easily identify content that I need, and do not need. Information I need to know and important information stands out, or is the first thing I read and does not get lost in the noise of less important information.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-findable" aria-label="Findable User Story">Findable</a>.</p>
+        <h4>Description</h4>
         <p>Make important tasks and features on the site visually and programmatically prominent.  Techniques to do so include:</p>
 		   <ul>
 			<li>Calling out key tasks for the website on the home page</li>
@@ -1503,7 +1501,7 @@
 		   </ul>
 
 		<section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             People with low executive function, impaired memory, and other cognitive and learning disabilities may have difficulty 
 			determining what they can do on a site. By calling out important tasks and features, people can more quickly determine 
@@ -1515,7 +1513,7 @@
 
         </section>
 		<section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
 		<p>The most important tasks and features are:</p>
 		<ul><li>The three tasks the users want to perform</li>
 			<li>The three most common tasks (from the users' perspective)</li>
@@ -1537,8 +1535,13 @@
 			</p>
         </section>
       </section>   
+
       <section>
-        <h3>Pattern: Provide search</h3>
+        <h3>Pattern: Provide Search</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I can easily search for what I want.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-findable" aria-label="Findable User Story">Findable</a>.</p>
+        <h4>Description</h4>
         <p>Provide a friendly search capability. Ideally search should include:</p>
 		<ul><li>Autocomplete</li>
 			<li>Grouping of results when appropriate with headings for each group</li>
@@ -1546,7 +1549,7 @@
 			<li>Spell-checking</li>
 		</ul>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Having a search capability allows users to find the content they
             need even if they cannot find the content using the site menus
@@ -1581,7 +1584,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Search is less important on small sites where every page is no more than
             two clicks away from the main page.
@@ -1592,7 +1595,7 @@
 		  <p><strong>Success</strong> example: A site has a search.</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -1605,7 +1608,11 @@
       </section>
 
       <section>
-        <h3>Pattern: Let users go back</h3>
+        <h3>Pattern: Let Users Go Back</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I want predictable back or undo features so I'm exactly where I was previously, before I made a mistake.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-undo" aria-label="Undo User Story">Undo</a>.</p>
+        <h4>Description</h4>
         <p>Always let the user return to a previous point.</p>
         <p>
           The standard back button is the best way to do this as it is familiar
@@ -1613,7 +1620,7 @@
         </p>
         <p>The user should never lose their work if they press back.</p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Allowing users to return to a previous point helps prevent mistakes and makes it easy to
             correct mistakes when they happen.
@@ -1668,7 +1675,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>Options for supporting users going back include:</p>
 		  <ul>
             <li>
@@ -1709,7 +1716,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language:
@@ -1746,13 +1753,17 @@
 	  
 	      <section>
         <h3>
-          Pattern: Make short critical paths 
+          Pattern: Make Short Critical Paths 
         </h3>
+        <h4>User Need</h4>
+        <blockquote><p>I need to be able to find features and content easily.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <h4>Description</h4>
         <p>Streamline processes and workflows so that they include only the minimally 
 		necessary steps. Separate out optional steps that are supplemental but not required. Do not 
 		require the user to go through optional steps.</p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Streamlining processes and workflows reduces distractions, mistakes, and mental fatigue. 
 			Using short critical paths increases the chance that users with cognitive disabilities can successfully and accurately 
@@ -1811,13 +1822,13 @@
 
         </section>
       </section> 
-	  
+	   </section> 
     </section>
  
     <section>
-      <h2>Objective: Use clear and understandable content</h2>
+      <h2>Objective: Use Clear and Understandable Content</h2>
       <section>
-        <h3>User testing</h3>
+        <h3>User Testing</h3>
         <p>
           Make sure your user testing includes individuals with a range of
           cognitive disabilities. Do not just ask questions, but ask the user to
@@ -1831,7 +1842,7 @@
           <li>
             Is there any content usable without understanding math concepts?
           </li>
-          <li>
+          <li>#
             Is there any representation of math by words instead of numbers?
           </li>
           <li>Is there any support for slow readers?</li>
@@ -1839,27 +1850,13 @@
           <li>Does the user understand use of images and multi-media?</li>
         </ul>
       </section>
+
       <section>
-        <h3>User stories</h3>
-        <p>This leads to the following user stories:</p>
-        <ul>
-          <li>
-            I want the language used to be clear and easy for me to understand.
-          </li>
-          <li>I want no unexplained, implied or ambiguous information.</li>
-          <li>
-            I want no complex math concepts and I find words easier to
-            understand than digits.
-          </li>
-          <li>I want content written and structured for slower readers.</li>
-          <li>
-            I want the text to be supported by symbols that are familiar to me.
-          </li>
-          <li>I want help with understanding images and multi-media.</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Pattern: Use clear words</h3>
+        <h3>Pattern: Use Clear Words</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I understand the language used including vocabulary, syntax, tense and other aspects of language.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        <h4>Description</h4>
         <ul>
           <li>
             Use common and clear words in all content. Look at the most common 1500 words or
@@ -1875,7 +1872,7 @@
           </li>
         </ul>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             This benefits many people including those with language impairments,
             learning disabilities and a poor memory. Using uncommon words can make text and media difficult to understand.
@@ -1896,7 +1893,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             When using uncommon words, provide an explanation by:
           </p>
@@ -1913,7 +1910,7 @@
           </ul>
         </section>
 		<section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             Start using clear words in headings, labels, navigational
              elements, instructions, and error messages. This will increase the
@@ -1954,7 +1951,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -1986,14 +1983,18 @@
       </section>
 
       <section>
-        <h3>Pattern: Use a simple tense and voice</h3>
+        <h3>Pattern: Use a Simple Tense and Voice</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I understand the language used including vocabulary, syntax, tense and other aspects of language</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        <h4>Description</h4>
         <p>
           Use the tense and the voice that is easiest to understand. In English, this
           is usually the present tense and active voice. Speak directly to the
           user, and use the simplest form of verbs.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Using simple tense and voice benefits many people including those with language impairments,
             learning disabilities or a poor memory. For example, more people
@@ -2007,7 +2008,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <ul>
             <li>
               Use other voices or tenses when they will be easier to understand or friendlier.
@@ -2034,7 +2035,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2067,7 +2068,11 @@
       </section>
 
       <section>
-        <h3>Pattern: Avoid double negatives or nested clauses</h3>
+        <h3>Pattern: Avoid Double Negatives or Nested Clauses</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I understand the language used including vocabulary, syntax, tense and other aspects of language.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        <h4>Description</h4>
         <p>
           Use a simple sentence structure. Do not use a double negative to
           express a positive. Do not use clauses inside clauses. Both double negatives
@@ -2075,7 +2080,7 @@
         </p>
 
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Simple sentence structure benefits many people including those with language impairments,
             learning disabilities or a poor memory. For example, a person with
@@ -2099,7 +2104,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2132,7 +2137,11 @@
       </section>
 
       <section>
-        <h3>Pattern: Use literal language</h3>
+        <h3>Pattern: Use Literal Language</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I do not want unexplained, implied or ambiguous information because I may misunderstand jokes and metaphors.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        <h4>Description</h4>
         <p>
           Use literal and concrete language. When possible, use concrete terms
           and examples that refer to objects or events that you can see, hear or
@@ -2143,7 +2152,7 @@
         </p>
 
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Many people do not understand non-literal content. For example, a
             programmer with autism spectrum disorder may not understand jokes
@@ -2169,7 +2178,7 @@
 		  <div class="note">Should there be a special media track with explanations? Can we explore this and coordinate it?</div>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Make sure the meaning remains clear when you replace non-literal text with
 			literal text. Check this when providing literal text
@@ -2177,7 +2186,7 @@
           </p>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             Start by putting clear literal text on headings, labels,
             navigational elements, instructions, error messages and any content
@@ -2204,7 +2213,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2237,7 +2246,11 @@
       </section>
 
       <section>
-        <h3>Pattern: Separate each instruction</h3>
+        <h3>Pattern: Separate Each Instruction</h3>
+        <h4>User Need</h4>
+        <blockquote><p>There is support and instructions that I understand to help me organize the time and steps.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <h4>Description</h4>
         <p>
           In instructions, separate each step. Separate steps make instructions
           much easier to follow. Consider:
@@ -2253,7 +2266,7 @@
           </li>
         </ul>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Step-by-step instructions benefits many people including those with language impairments,
             learning disabilities or a poor memory.
@@ -2301,7 +2314,7 @@
           </table>
 
           <p><strong>Failure </strong>example: </p>
-		  <p>Do not separate each step</p>
+		      <p>Do not separate each step</p>
           <p>
             If you want to work in programing, write to programing@example.com
             with a resume and sample code that you wrote. If you want to work in
@@ -2309,7 +2322,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2342,7 +2355,11 @@
       </section>
 
       <section>
-        <h3>Pattern: Keep text succinct</h3>
+        <h3>Pattern: Keep Text Succinct</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I understand the language used including vocabulary, syntax, tense and other aspects of language.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        <h4>Description</h4>
         <p>Use short blocks of text:</p>
         <ul>
           <li>Keep paragraphs short. Have only one topic in each paragraph.</li>
@@ -2350,7 +2367,7 @@
           <li>Use bulleted or numbered lists.</li>
         </ul>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             <a href="https://en.wikipedia.org/wiki/Chunking_(psychology)"
               >Chunking</a
@@ -2369,7 +2386,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <ul>
             <li>
               <strong>What is a short paragraph? </strong>In English, if you
@@ -2444,7 +2461,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2473,13 +2490,17 @@
       </section>
 
       <section>
-        <h3>Pattern: Use white spacing</h3>
+        <h3>Pattern: Use White Spacing</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I can read easily when there is a good use of white space.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-visual-presentation" aria-label="Visual Presentation User Story">Visual Presentation</a>.</p>
+        <h4>Description</h4>
         <p>
           Put white space around objects and text, including boxes, paragraph
           headings, and content, so that each section is clearly separated.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             White space (also called negative space or the background color)
             reduces clutter and provides definition to content. This gives the
@@ -2500,7 +2521,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Use clear spacing between letters, words, sentences lines,
             paragraphs and blocks of text.
@@ -2518,7 +2539,7 @@
         </section>
 
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2537,13 +2558,17 @@
       </section>
 
       <section>
-        <h3>Pattern: Use clear, accurate text formatting and punctuation</h3>
+        <h3>Pattern: Use Clear, Accurate Text Formatting and Punctuation</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I need words to include accents, characters and diacritics that are necessary to phonetically read the words.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Need">Clear Language</a>.</p>
+        <h4>Description</h4>
         <p>
           Use the correct punctuation for text, numbers and symbols to improve
           readability and comprehension.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             For some readers, decoding words, numbers and symbols does not happen 
             automatically and can be demanding on working memory and executive
@@ -2583,7 +2608,7 @@
           </ul>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             <strong>Use punctuation correctly</strong> for the language you are
             writing in, as it will affect how the stress and intonation (known
@@ -2660,7 +2685,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2676,20 +2701,25 @@
           </ul>
         </section>
       </section>
+      
       <section>
-        <h3>Pattern: Provide summary of long documents and media</h3>
+        <h3>Pattern: Provide Summary of Long Documents and Media</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I want an easy to understand, short summary for long pieces of content or an option for an easy to read version.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        <h4>Description</h4>
         <p>
           Provide a brief summary for a long document. Emphasize any important
           keywords to help people understand the purpose and contents of the
           document, and determine if it might contain information they need.  
-		  Also, provide a summary of media files so that users can identify the content they need.
+    		  Also, provide a summary of media files so that users can identify the content they need.
         </p>
         <p>
           Summaries should use common words, short sentences and be written in
           an easy to understand style and tense.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Providing an easy-to-understand summary helps many people to quickly
             decide if the document is relevant to them and their current goal.
@@ -2703,7 +2733,7 @@
 		  </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>Long Documents have 300 words or more.</p>
           <p>
             In general headings are used to break the information down into a
@@ -2721,7 +2751,7 @@
           </p>
           <p>
             See the theme in understandable text for the minimum on how to write
-            an understandable summary. User testing is recommended.
+            an understandable summary. User Testing is recommended.
           </p>
 		  <p>
         </section>
@@ -2739,7 +2769,7 @@
 		  </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2758,11 +2788,15 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Provide alternatives for numbers</h3>
+        <h3>Pattern: Provide Alternatives for Numbers</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I find words easier to understand than digits.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-math-concepts" aria-label="Math Concepts User Story">Math Concepts Language</a>.</p>
         <p>Provide alternatives for numbers and numerical concepts.</p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>Not all people can understand numbers and numerical concepts.</p>
           <p>
             For example, some people have dyscalculia, a learning disability
@@ -2792,7 +2826,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Where an understanding of mathematics is not a primary requirement
             for using this content use one of the following:
@@ -2854,7 +2888,7 @@
 		  <p>For these, consider providing a description or representation of what the number means as a concept.</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -2865,8 +2899,13 @@
           </p>
         </section>
       </section>
+
     <section>
-        <h3>Pattern: Ensure foreground content is not obscured by background</h3>
+        <h3>Pattern: Ensure Foreground Content is not Obscured by Background</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I can easily perceive the text as the background is plain.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>       
+        <h4>Description</h4>
         <p>
           Do not overlay words on busy background.  Provide an option to remove background 
 		  noise behind auditory content or ensure background sounds do not interfere with 
@@ -2883,7 +2922,7 @@
 			</ul>
 			
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Reading a sentence phrase by phrase conveys more meaning than reading individual words. 
 			Phrases are also easier to comprehend. The more words an individual can process in one glance, 
@@ -2909,13 +2948,18 @@
           <div style="background-image: repeating-linear-gradient(black, gray 10%, white 30%);"><p>It is much more difficult to recognize words and process text when the background has a lot of noise.</p> </div>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>None</p>
         </section>
       </section>
+
     <section>
-        <h3>Pattern: Explain implied content</h3>
-        <p>Provide definitions or explanations for implied content such:  </p>
+        <h3>Pattern: Explain Implied Content</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I do not want unexplained, implied or ambiguous information because I may misunderstand jokes and metaphors..</p></blockquote>
+         <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>       
+         <h4>Description</h4>
+         <p>Provide definitions or explanations for implied content such:  </p>
 		<ul><li>Body gestures</li>
 		<li>Emotions</li>
 		<li>Sarcasm</li>
@@ -2923,7 +2967,7 @@
 		<li>Facial expressions</li></ul>
 		<p>These definitions and explanations should be provided in text close to the implied content or in the markup.</p>	
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
  		<p>Implied content can be difficult for some users because it requires them to:</p>
 			<ul><li>Know where to look to get the information, and</li>
 			<li>Understand the meaning behind what is being implied.</li></ul>
@@ -2941,7 +2985,7 @@
 		understand. One way this can be done is through supplementary text.</p>
          </section>
 		 <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>This includes:</p>
           <ul><li>Graphics used alone to identify that something is important, or should be remembered;</li>
           <li>Sarcasm in text; and</li>
@@ -2955,19 +2999,24 @@
 		  <p>Once it is mature you can also use personalization semantics to add non-literal text alternatives.</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>None</p>
         </section>
       </section>
+
     <section>
-        <h3>Pattern: Include symbols and letters necessary to decipher the words</h3>
+        <h3>Pattern: Include Symbols and Letters Necessary to Decipher the Words</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I need words to include accents, characters and diacritics that are necessary to phonetically read the words (this is often needed for speech synthesis and phonetic readers in languages like Arabic and Hebrew).</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio"" aria-label="Clear Language User Story">Clear Language</a>.</p>       
+        <h4>Description</h4>
         <p>
           Include vowels, letters or diacritic marks that users need to decipher words. 
 		  This is often needed in languages like Arabic and Hebrew.
         </p>
 	
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
  		<p>Some languages, such as Hebrew and Arabic, have optional vowels and diacritic marks. 
 		Without these marks, many words with the same characters have between two (Hebrew) and 
 		seven (Arabic) different ways of being pronounced with different meanings. Most readers 
@@ -2986,7 +3035,7 @@
 		letters and diacritic marks that are necessary for the unambiguous pronunciation need to be included.</p>
          </section>
 		  <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             In Hebrew add additional Yud (י) and Vav (ו) that enables correct pronunciation.
           </p>
@@ -3006,7 +3055,7 @@
           <p>كتب</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>Words can be deciphered and pronounced to have the correct meaning</p>
         </section>
       </section>
@@ -3014,7 +3063,7 @@
 
     <section>
       <h2>
-        Objective: Help users avoid mistakes or correct them
+        Objective: Help Users Avoid Mistakes or Correct Them 
       </h2>
       <p>
         A good design and use of scripts will make errors less likely, but when
@@ -3042,7 +3091,7 @@
       </p>
       <p>Note that a lot can be achieved through supporting personalization.</p>
       <section>
-        <h3>User testing</h3>
+        <h3>User Testing</h3>
         <p>
           Make sure your user testing includes individuals with a range of
           cognitive disabilities. Do not just ask questions, but ask the user to
@@ -3067,34 +3116,13 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h3>User stories</h3>
-        <p>This leads to the following user stories:</p>
-        <ul>
-          <li>
-            As a user who needs to look up my postal/zip code, I do not want a
-            session to time out while I try to find the information needed.
-          </li>
-          <li>
-            As a user who needs to take breaks during tasks, such as completing
-            a form, I want to be sure all my work is saved automatically if my
-            computer crashes. I do not want to have to start over again, which
-            can create a cycle of reentering my data; and making me more tired
-            and more likely to make mistakes.
-          </li>
-          <li>
-            As a user with difficulty typing numbers in the right order, I want
-            an interface that makes mistakes less likely.
-          </li>
-          <li>
-            As a user who finds entering information stressful, I want to enter
-            as little information as I can so the task is more manageable.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Pattern: Design forms to prevent mistakes</h3>
 
+      <section>
+        <h3>Pattern: Design Forms to Prevent Mistakes</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I want an interface that makes mistakes less likely by helping me avoid mistakes, as well as minimize the mistakes I might make</p></blockquote>
+        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <h4>Description</h4>
         <p>
           Choose a form design that reduces the chance that the user will make a
           mistake. This includes:
@@ -3122,7 +3150,7 @@
         </ul>
 
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             People with cognitive or learning disabilities and aging users often
             abandon tasks and believe they cannot complete them if they receive
@@ -3152,7 +3180,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <ul>
             <li>
               Only correct errors if the correction is reliable. Otherwise, if
@@ -3216,7 +3244,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -3229,8 +3257,13 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Make it easy to undo errors</h3>
+        <h3>Pattern: Make it Easy to Undo Errors</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I want to be able to check my work and go back without losing the work I have just done.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-undo" aria-label="Undo User Story">Undo</a>.</p>
+        <h4>Description</h4>
         <p>
           Always allow the user to check their work and correct any mistakes.
           Once the user has fixed their mistake it should be easy to get back to
@@ -3243,7 +3276,7 @@
           time the user has to cancel a transaction.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             People with cognitive and learning impairments make many more
             mistakes filling out forms than the general population. When
@@ -3311,7 +3344,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>This typically includes:</p>
           <ul>
             <li>
@@ -3335,7 +3368,7 @@
           </ul>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             Start with forms were a mistake can have serious consequences such
             as financial loss or vulnerability.
@@ -3362,7 +3395,7 @@
           </ul>
         </section>
         <section>
-          <h3>Technical details</h3>
+          <h3>Technical Details</h3>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -3385,8 +3418,12 @@
       </section>
 	  
 	      <section>
-        <h3>Pattern: Use clear labels</h3>
-        <p>Use clear labels. Labels should:</p>
+        <h3>Pattern: Use Clear Labels</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I want clear labels, step-by-step instructions and clear error messages</p></blockquote>
+        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <h4>Description</h4>
+      <p>Use clear labels. Labels should:</p>
 			<ul><li>Use common words and plain text,</li> 
 			<li>Be visible and next to the relevant control, and </li>
 			<li>Be readable by assistive technologies made for people with cognitive disabilities.</li>
@@ -3394,7 +3431,7 @@
 
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
 			<p>When labels are  missing or unclear, users often do not know that the feature 
 			is available or what the control is. Although many users can guess what a control 
 			is for users with cognitive disabilities or impaired memory or executive function 
@@ -3418,7 +3455,7 @@
 			<p>Labels need to be visible, readable by AT, and be nearby the labeled content</p>
          </section>
 		  <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Many people with learning and cognitive disabilities use web extension and simple screenreaders. 
 			These assistive technologies often do not read ARIA or titles. Until that changes, or an extension displays them, 
@@ -3437,13 +3474,17 @@
 		  <p>given name ___________________</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>None</p>
         </section>
       </section>
 	  
       <section>
-        <h3>Pattern: Use clear step-by-step instructions</h3>
+        <h3>Pattern: Use Clear Step-by-step Instructions</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I want step-by-step instructions, so I know exactly what to do.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <h4>Description</h4>
         <p>Write clear instructions that are:</p>
         <ul>
           <li>Located before the field or activity;</li>
@@ -3453,7 +3494,7 @@
 		  <li>Let the user know how long a task might take.</li>
         </ul>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Clear instructions help prevent user errors. This reduces
             frustration and enhances the user’s autonomy and independence
@@ -3463,14 +3504,14 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Provide instructions at the start of the process, not simply in an
             error message.
           </p>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             In a system with common errors, tackle the most impactful errors
             first and add guidance as needed.
@@ -3502,7 +3543,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -3517,14 +3558,19 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Provide flexible form inputs</h3>
-        <p>
+        <h3>Pattern: Provide Flexible Form Inputs</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I want inputs to accept different formats and not mark them as mistakes.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label=""Assistance and Support User Story">"Assistance and Support</a>.</p>
+        <h4>Description</h4>
+         <p>
           Accept contextual variations in user input such as currency, time
           zone, and locale.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Forgiving form entry processes help prevent user errors up front.
             This reduces frustration and enhances the user’s autonomy and
@@ -3534,7 +3580,7 @@
           </p>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             For inputs that collect known data types, such as credit card or
             telephone numbers or geography names, accept common variations on
@@ -3576,7 +3622,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -3589,15 +3635,20 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Avoid data loss and "time outs"</h3>
+        <h3>Pattern: Avoid Data Loss and "Time Outs""</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I do not want a session to time out while I try to find the information needed, such as my postal/zip code or social security number.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label=""Assistance and Support User Story">"Assistance and Support</a>.</p>
+        <h4>Description</h4>
         <p>
           Avoid timeouts and save users' work as they go. When this is not possible, inform the user of the amount
           of time required to complete the process (before timeout) and if user
           will lose entered data if a timeout occurs.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             The use of timed events can present significant barriers for users
             with cognitive disabilities, as these users may require more time to
@@ -3665,7 +3716,7 @@
           </ul>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             For situations where the absence of a timed event would
             significantly change the intended functionality of an application
@@ -3729,7 +3780,7 @@
           </li>          </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -3750,14 +3801,18 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Provide feedback</h3>
+        <h3>Pattern: Provide Feedback</h3>
+        <h4>User Need</h4>
+        <blockquote><p>As a user who struggles with web content, I need rapid feedback or visual cues to indicate an event was successfully triggered. For example, I need to know when an email has been sent, otherwise it looks as if it has just disappeared.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
         <p>
           For each step in a process let the user know of its status and if it
           was successfully completed.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           Making the result of each user action clear helps people with a
           variety of cognitive disabilities:
           <ul>
@@ -3810,7 +3865,7 @@
           </ul>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             The success or failure of every user initiated action is clearly
             indicated to the user by visual, programmatically-determinable,
@@ -3848,7 +3903,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -3868,17 +3923,21 @@
           </p>
         </section>
       </section>
+
       <section>
         <h3>
-          Pattern: Notify users of fees and charges at the start of a task
+          Pattern: Notify Users of Fees and Charges at the Start of a Task
         </h3>
+        <h4>User Need</h4>
+        <blockquote><p>I know how to start a task, and what is involved. </p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
         <p>
           Tell the user about all charges at the start of a transaction
           including typical values. Any conditions and terms should also be
           available at the start of the transaction in easy language.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Users with cognitive disabilities who have trouble with memory,
             attention to detail or reading comprehension may not be aware of
@@ -3963,7 +4022,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -3982,9 +4041,14 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Let users control when the content changes</h3>
-        <p>
+        <h3>Pattern: Let Users Control When the Content Changes</h3>
+        <h4>User Need</h4>
+        <blockquote><p>Controls do not move unexpectedly as I am using them.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        <h4>Description</h4>
+         <p>
           Ensure that changes of context, functionality, settings, route and
           orientation are initiated only by user request or an easily available
           mechanism is available to turn off such changes. Also provide an easily available
@@ -3992,7 +4056,7 @@
           settings, route and orientation.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Any content, settings or functionality which changes unexpectedly,
             without user initiation can result in significant barriers for users
@@ -4027,7 +4091,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Exception: The changes are part of an activity where it is essential
             (e.g. a game).
@@ -4067,7 +4131,7 @@
           </p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -4079,8 +4143,13 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Keep users' information safe and help users understand known risks</h3>
+        <h3>Pattern: Keep Users' Information Safe and Help Users Understand Known Risks</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I need to feel safe. I need to feel safe and secure when using a website, especially if providing information or communicating with others.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <h4>Description</h4>
         <p>Keep the user's information safe. This includes:</p>
         <ul>
           <li>
@@ -4095,7 +4164,7 @@
 		  This help them make an informed decision and stay in control. </li>
         </ul>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             It is vital that users stay safe on the Internet. Information which
             suggests a user has Dementia or an intellectual disability allows
@@ -4155,7 +4224,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -4173,10 +4242,14 @@
       </section>
  
     <section>
-        <h3>Pattern: Use familiar metrics and units</h3>
+        <h3>Pattern: Use Familiar Metrics and Units</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I want interfaces to use metrics I know, and that are common in my location (such as feet or meters) or I get confused. I do not always know what metric they are talking about or notice the number looks wrong.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <h4>Description</h4>
         <p>Provide metrics in units that users will be familiar with.</p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
  		<p>Most people are familiar with a single set of units that are commonly 
 		used for metrics in their location or culture. When presented with metrics 
 		in other units they are required to perform a conversion in order to 
@@ -4187,14 +4260,14 @@
 		units used for distance, meters, currency and temperature.</p>
          </section>
 		 <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>Sometimes metrics are commonly declared in a specific unit even when 
 		  localized alternatives are available. For example, TV or monitor sizes are 
 		  usually given in inches even when meters are the common unit. However, even, 
 		  in these cases providing alternatives is still useful as  users may not be familiar with the metrics given.</p>
         </section>
 		 <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>Provide a mechanism to select a different set of metrics that are more meaningful to the user, or provide common alternatives in the text</p>
         </section>				
         <section>
@@ -4205,7 +4278,7 @@
 		  <p>The Eiffel Tower is 1,063 feet tall.</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>None</p>
         </section>
       </section>
@@ -4213,7 +4286,7 @@
 	  
     <section>
       <h2>  
-        Objective: Help users to maintain focus
+        Objective: Help Users to Maintain Focus
       </h2>
       <p>
         Distractions can cause users with cognitive disabilities problems such
@@ -4239,7 +4312,7 @@
         also help the user undo mistakes.
       </p>
       <section>
-        <h3>User testing</h3>
+        <h3>User Testing</h3>
         <p>
           Make sure your user testing includes individuals with a range of
           cognitive disabilities. Do not just ask questions, but ask the user to
@@ -4263,29 +4336,21 @@
           <li>Ask the user if anything was distracting.</li>
         </ul>
       </section>
-      <section>
-        <h3>User stories</h3>
-        <p>This leads to the following user stories:</p>
 
-        <p>
-          As a user who is easily distracted I need less distractions from my
-          task.
-        </p>
-        <p>
-          As a user with a poor memory I need easy sign posts about what is on
-          the screen, where I am in a process and what I am doing, in case I get
-          distracted in the middle of a task.
-        </p>
-      </section>
+
       <section>
-        <h3>Pattern: Limit interruptions</h3>
+        <h3>Pattern: Limit Interruptions</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I can concentrate on what I'm doing as there are no unexpected noises or movements.</p></blockquote>
+         <p>Related User Story: <a href="#user-story-distractions" aria-label="Distractions User Story">Distractions</a>.</p>
+         <h4>Description</h4>
         <p>
           Avoid interruptions. If you cannot avoid them, provide an easy way to
           control interruptions, reminders, and changes in content, unless they are started
           by the user or involve an emergency.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             For people with memory or attention challenges, interruptions can
             make completing a task very difficult or impossible. This can
@@ -4334,7 +4399,7 @@
           <p><strong>Success</strong> examples:</p>
           <ul>
             <li>
-              Microsoft Office 365 lets the user decide how they want to be
+              Ap application lets the user decide how they want to be
               notified about reminders and emails. Users can choose visual
               reminders and/or sounds, or none. For some users, not having any
               notifications enables them to focus on a task and then go to their
@@ -4352,7 +4417,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -4371,8 +4436,13 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Avoid too much content</h3>
+        <h3>Pattern: Avoid Too Much Content</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I can easily identify content that I need, and do not need. Information I need to know and important information stands out, or is the first thing I read and does not get lost in the noise of less important information</p></blockquote>
+        <p>Related User Story: <a href="#user-story-findable" aria-label="Findable User Story">Findable</a>.</p>
+        <h4>Description</h4>
         <p>
           Provide users with five or less choices on each screen and remove
           unnecessary content. This can be provided via a simplified version
@@ -4389,7 +4459,7 @@
           generated in real time from the same code base as the main content.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Too much text, too many images and too much other content can cause
             cognitive overload, anxiety and loss of focus. Keeping content down
@@ -4400,7 +4470,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Avoiding long paragraphs and non-meaningful imagery ensures those
             with cognitive impairments can concentrate on the important points
@@ -4444,7 +4514,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -4457,10 +4527,15 @@
           </p>
         </section>
       </section>
+
 	       <section>
         <h3>
-          Pattern: Provide information so a user can prepare for and complete a task with estimated effort
+          Pattern: Provide Information So a User Can Prepare For and Complete a Task with Estimated Effort
         </h3>
+        <h4>User Need</h4>
+        <blockquote><p>I know how to start a task, and what is involved.</p></blockquote>
+            <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+            <h4>Description</h4>
         <p>Emphasize the start of important tasks.</p>
 		<p>Before a user performs a task consisting of multiple steps, ensure they have an estimate of the 
 		amount of effort required to complete the task. This should include:</p>
@@ -4469,7 +4544,7 @@
 		<p>Once the user starts the task, ensure the use clearly understands when the task is still “in-process” and when it has been completed.</p>
 
 		<section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Some users find distractions difficult especially when the distractions cause them to switch focus mid-task and 
 			subsequently return where they left off. For example, a web site may have a large arrow pointing the 
@@ -4485,7 +4560,7 @@
 		  </p>
 		  </section>
 		  <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
 			Provide an estimate of time required and a  list of all required resources at the start of a multi-step 
 			task or form. Break the task into steps.
@@ -4503,18 +4578,14 @@
 		  the user is trying to find their passport number. The user needs to start over or will abandon the booking.</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>None</p>
         </section>
       </section>
-	  
-	  
-	  
-	  
     </section>
 
     <section>
-      <h2>Objective: Ensure processes do not rely on memory</h2>
+      <h2>Objective: Ensure Processes Do Not Rely on Memory</h2>
       <p>
         Do not put barriers that stop people with cognitive disabilities from
         using or getting to content.
@@ -4549,7 +4620,7 @@
       <p>When possible, provide easy-to-use options.</p>
       <p>Note that a lot can be achieved through supporting personalization.</p>
       <section>
-        <h3>User testing</h3>
+        <h3>User Testing</h3>
         <p>
           Make sure your user testing includes individuals with a range of
           cognitive disabilities. Do not just ask questions, but ask the user to
@@ -4576,48 +4647,16 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h3>User stories</h3>
-        <p>This leads to the following user stories:</p>
-
-        <ul>
-          <li>
-            As a user who has memory impairments and often forgets passwords, I
-            need to be able to use a site, without remembering or transcribing
-            passwords and user names, so I can use its service.
-          </li>
-          <li>
-            As a user who has impairments, I need to use a site without being
-            required to transcribe items in the correct sequence.
-          </li>
-          <li>
-            As a user who has weak executive function, I need the login process
-            to be simple, and not multi-step, so I can use it.
-          </li>
-          <li>As a symbol user, I need a login process I can use.</li>
-        </ul>
-        <p>This leads to the following user stories for voice menus:</p>
-        <ul>
-          <li>
-            As a user who has memory impairments and weak language processing
-            skills, I want to get help, without going through a Voice-ML menu
-            system, so I can set an appointment or find out some information.
-          </li>
-          <li>
-            As a user who has weak executive function, I need a process to get
-            help to be simple, and not multi-step, so I can use it.
-          </li>
-          <li>
-            Users can have trouble identifying the right words to say in a voice
-            menu.
-          </li>
-        </ul>
-      </section>
+     
       <section>
         <h3>
-          Pattern: Provide a login that does not rely on memory or other cognitive
-          skills
+          Pattern: Provide a Login that Does Not Rely on Memory or Other Cognitive
+          Skills
         </h3>
+        <h4>User Need</h4>
+        <blockquote><p>I need to be able to use a site without remembering or transcribing passwords and usernames.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-accessible-authentication" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
+        <h4>Description</h4>
         <p>
           Users can login and register without having more cognitive abilities
           then they need to use a simple web page. This includes:
@@ -4633,7 +4672,7 @@
           </li>
         </ul>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Many people with week memory often lose the password and not be able
             to login and use their applications. Their solutions often are only
@@ -4683,7 +4722,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>There are many ways to meet this design pattern:</p>
           <ul>
             <li>
@@ -4745,7 +4784,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -4764,10 +4803,15 @@
           </p>
         </section>
       </section>
+
 	      <section>
-        <h3>Pattern: Allow the user a simple, single step, login </h3>
-        <section>
-          <h4>How it helps</h4>
+        <h3>Pattern: Allow the User a Simple, Single Step, Login</h3>
+        <blockquote><p>I need the login process to be simple, and not multi-step.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-accessible-authentication" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
+        <h4>Description</h4>
+        <p>Provide a simple, single-step alternative for logins</p>
+    <section>
+          <h4>How it Helps</h4>
  		<p>This allows people with impaired executive function or impaired working memory 
 		to login. This is especially important for users who become confused or overwhelmed 
 		with multi step processes.  For example, a use with traumatic brain injury wishes
@@ -4786,16 +4830,20 @@
           <p>All login methods involve multiple steps</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>None</p>
         </section>
       </section>
 
     <section>
-        <h3>Pattern: Provide at least one login alternative does not require reading or writing a lot of words</h3>
-		<p>******</p>
+        <h3>Pattern: Login Alternative with Less Words</h3>
+        <h4>User Need</h4>
+        <blockquote><p>As a symbol user, I need a login process I can use that does not rely on a lot of words</p></blockquote>
+        <p>Related User Story: <a href="#user-story-accessible-authentication" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
+        <h4>Description</h4>
+        <p>Provide at least one login alternative that does not require reading or writing a lot of words</p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
  		<p>This allows people with language and communication disabilities to login without being overwhelmed
 		large blocks of text. </p>
          </section>
@@ -4807,14 +4855,17 @@
           <p>Login requires answering security questions. No simple, word free, login alternative is provided.</p>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>None</p>
         </section>
       </section>
 
        <section>
-        <h3>Pattern: Let users avoid navigating voice menus</h3>
-
+        <h3>Pattern: Let Users Avoid Navigating Voice Menus</h3>
+        <h4>User Need</h4>
+        <blockquote><p>If I get stuck I want to be able to find a human by pressing a reserved digit (typically the number 0).</p></blockquote>
+        <p>Related User Story: <a href="#user-story-voice-menus" aria-label="Voice Menus User Story">Voice Menus</a>.</p>
+        <h4>Description</h4>
         <p>Let people easily reach a human who can help.</p>
 		<p>Design helpful voice menus by:</p>
 		<ul>
@@ -4841,7 +4892,7 @@
         </ul>
 		
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Many people cannot use voice menu systems and other complex systems.
             This often stops people from completing critical tasks by themselves. Often
@@ -4898,7 +4949,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>Considerations for Speech Recognition</p>
           <ul>
             <li>
@@ -4929,7 +4980,7 @@
           </p>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             Ensure this pattern is included in important systems that affect health, finance,
             communication, water and government services. Unimportant systems, that do not affect the users' health, safety,
@@ -4960,7 +5011,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -4976,8 +5027,13 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Do not rely on users memorizing information</h3>
+        <h3>Pattern: Do Not Rely on Users Memorizing Information</h3>
+        <h4>User Need</h4>
+        <blockquote><p>As a user with short-term and working memory difficulties, I need access to information I entered during previous steps in a process.</p></blockquote>
+        <p>Related User Story: <a href="#objective-6-ensure-processes-do-not-rely-on-memory" aria-label="Processes do not rely on memory User Story.">Memory</a>.</p>
+        <h4>Description</h4>
         <p>
           Each step in a sequential process must contain the information
           necessary to allow a user to proceed. They must rely on memory from
@@ -4987,7 +5043,7 @@
         <p>Labels are before the activation mechanism.</p>
 
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Often content has barrier which prevent users with learning
             disability from completing a step, and as a result, prevents them
@@ -5066,7 +5122,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Follow best practices in general
             <abbr title="voice user interfaces">VUI</abbr> design
@@ -5198,7 +5254,7 @@
           </p>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             This is essential for critical systems such as health, finance,
             communication, water and government services.
@@ -5232,7 +5288,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -5251,9 +5307,9 @@
     </section>
 
     <section>
-      <h2>Objective: Provide help and support</h2>
+      <h2>Objective: Provide Help and Support</h2>
       <section>
-        <h3>User testing</h3>
+        <h3>User Testing</h3>
         <p>
           Make sure your user testing includes individuals with a range of
           cognitive disabilities. Do not just ask questions, but ask the user to
@@ -5315,24 +5371,13 @@
           </li>
         </ul>
       </section>
+
       <section>
-        <h3>User stories</h3>
-        <p>This leads to the following user stories.</p>
-        <ul>
-          <li>I want to be able to give feedback easily.</li>
-          <li>
-            I want to be able to give feedback as soon as I get stuck from any
-            part in the process.
-          </li>
-          <li>
-            I want to be able to give feedback in any form that other people
-            can. When I try and give feedback and cannot manage I feel excluded
-            and think the organization does not care about me.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Pattern: Provide help and alternative content for complex information and tasks</h3>
+        <h3>Pattern: Provide Help and Alternative Content for Complex Information and Tasks</h3>
+        <h4>User Need</h4>
+        <blockquote><p>As a user who struggles with text and words, I need contextually-relevant graphs and pictures to supplement text so I can understand a point without a lot of reading. For example, I find graphs much easier to understand than the same information in an article or academic paper.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <h4>Description</h4>
         <p>
           Provide content that helps users understand complex information. </p>
 		  <p>This should include redundant information for different user groups such as:</p>
@@ -5348,7 +5393,7 @@
         </p>
 		<p>Dedicated help and alternative content should be clearly differentiated from primary content.</p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             The use of complex information, long documents and data in a
             particular format can present significant barriers to users with
@@ -5385,7 +5430,7 @@
           </ul>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             Sufficient techniques for content relating to numbers and complex
             information. (use whichever apply)
@@ -5464,7 +5509,7 @@
           </ul>
         </section>
         <section>
-          <h4>Getting started</h4>
+          <h4>Getting Started</h4>
           <p>
             Provide explanatory content for complex information that is
             important for successful completion of a task including tasks in the
@@ -5496,7 +5541,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -5516,14 +5561,19 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Provide help with directions</h3>
+        <h3>Pattern: Provide Help with Directions</h3>
+        <h4>User Need</h4>
+        <blockquote><p>$$$.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <h4>Description</h4>
         <p>
           Content is provided that helps users understand directions and
           navigational systems.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Some people confuse their left with their right and so will may be
             unable will be unable to use navigation systems. Others may
@@ -5562,7 +5612,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -5582,8 +5632,13 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Provide help for forms and non-standard controls</h3>
+        <h3>Pattern: Provide Help for Forms and Non-standard Controls</h3>
+        <h4>User Need</h4>
+        <blockquote><p>Explanations for unusual controls in a form I find easy to use (such as a video or text).</p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <h4>Description</h4>
         <p>
           Provide help for any complex forms, particularly when there are
           multiple steps, unusual interactions, non-standard controls and
@@ -5591,7 +5646,7 @@
 		  that make it easy to understand what to do.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Users often find forms and related tasks to be the most complex
             experience with web sites and can easily become confused, unsure, or
@@ -5617,7 +5672,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>
             The standard HTML forms and controls have been carefully specified
             for maximum usability and accessibility. They are usually understood
@@ -5704,7 +5759,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -5724,15 +5779,20 @@
           </p>
         </section>
       </section>
+
 	  <section>
-        <h3>Pattern: Clearly state the results and disadvantages of actions, options, and selections</h3>
+        <h3>Pattern: Clearly State the Results and Disadvantages of Actions, Options, and Selections</h3>
+        <h4>User Need</h4>
+        <blockquote><p>The advantages or disadvantages of the options are clear to me and I understand the effects of the choice I might make. For example, when choosing a cheaper airline ticket you often have to pay for a meal.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <h4>Description</h4>
         <p>
           When presenting users with actions and selections, clearly explain the benefits, risks and consequences of each option. This includes any:</p> 
 			<ul><li>Changes from what the user asked for,</li>
 			<li>Disadvantages from the standard product or offering,</li>
 			<li>Features that may be a  risk to the users wellbeing or finances.</li></ul>       
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Clearly stating benefits and consequences of each action and selection option helps individuals avoid mistakes. 
 			This is particularly important when the results cannot be easily corrected, lead to safety risks, or may never be known.
@@ -5750,7 +5810,7 @@
           </p>
         </section>
 		<section>
-		<h4>Getting started</h4>
+		<h4>Getting Started</h4>
 		<ol><li>Whenever you ask the user to make a selection or take an action, consider whether there are any implied or hidden results that the user should be aware of.</li>
 		<li>If so, clearly indicate those results within the UI and confirm the user is aware of them.</li></ol> 
 		</section>
@@ -5777,7 +5837,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -5788,7 +5848,11 @@
       </section>
 	  
       <section>
-        <h3>Pattern: Provide human help</h3>
+        <h3>Pattern: Provide Human Help</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I know how to get human help and can manage the process easily.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-feedback" aria-label="Feedback User Story">Feedback</a>.</p>
+        <h4>Description</h4>
         <p>
           Ensure easy access to a human who can provide help and support.
           Support can be on accessibility, technical, process or domain based.
@@ -5798,7 +5862,7 @@
           menu systems such as voice menus with different options.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             In cases where the user gets stuck or confused for any reason,
             contact with a human is usually the most effective and suitable
@@ -5811,7 +5875,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>Examples include</p>
           <ul>
             <li>
@@ -5859,7 +5923,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -5875,8 +5939,13 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Provide reminders</h3>
+        <h3>Pattern: Provide Reminders</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I need reminders integrated into my calendar, otherwise I will forget appointments and when I am meant to do things. Sometimes I need reminders to revisit a web site to complete the next task.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <h4>Description</h4>
         <p>
           Make it easy for the user to set a reminder for date and time
           sensitive events. Use standard API’s when possible.
@@ -5886,7 +5955,7 @@
           able to personalize the reminder method.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             People with cognitive and learning difficulties often have
             challenges managing events and time. In fact, being unable to
@@ -6023,7 +6092,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -6039,8 +6108,13 @@
           </p>
         </section>
       </section>
+
       <section>
-        <h3>Pattern: Make it easy to find help and give feedback</h3>
+        <h3>Pattern: Make It Easy to Find Help and Give Feedback</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I can give feedback, ask questions and get feedback.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-feedback" aria-label="Feedback User Story">Feedback</a>.</p>
+        <h4>Description</h4>
         <p>
           Make it easy for the user to ask for help or report issues at any point in the process. This
           includes:
@@ -6048,7 +6122,7 @@
         <ul>
           <li>
             Easy to Use: Feedback information and forms are simple and clear.
-            (User testing with different user groups is highly recommended.)
+            (User Testing with different user groups is highly recommended.)
           </li>
           <li>
             Easy to Find: Available from any place where the user may get stuck
@@ -6061,7 +6135,7 @@
           different options.
         </p>
         <section>
-          <h4>How it helps</h4>
+          <h4>How it Helps</h4>
           <p>
             Providing an easy way for users to give feedback will help people be
             able to share problems, ask for help, make suggestions and positive
@@ -6073,7 +6147,7 @@
           </p>
         </section>
         <section>
-          <h4>More details</h4>
+          <h4>More Details</h4>
           <p>Make sure the feedback option is:</p>
           <ul>
             <li>Simple to use;</li>
@@ -6144,7 +6218,7 @@
           </ul>
         </section>
         <section>
-          <h4>Technical details</h4>
+          <h4>Technical Details</h4>
           <p>
             The following are proposals for WCAG. They experiment with more
             testable language.
@@ -6221,7 +6295,7 @@
         interoperable.
       </p>
       <section>
-        <h3>User testing</h3>
+        <h3>User Testing</h3>
         <p>
           Make sure your user testing includes individuals with a range of
           cognitive disabilities. Do not just ask questions, but ask the user to
@@ -6246,414 +6320,402 @@
           </li>
         </ul>
       </section>
+        
       <section>
-        <h3>User stories</h3>
-        <p>This leads to the following user stories:</p>
-        <ul>
-          <li>
-            I am able to select a version of the content that is easier for me
-            to understand.
-          </li>
-          <li>
-            I am able to display the main content only with extra options and
-            features removed.
-          </li>
-          <li>
-            I am able to have the main content presented in easy to understand
-            language.
-          </li>
-          <li>
-            I am able to view the content supported by symbols that I find help
-            understanding.
-          </li>
-          <li>
-            I can enable additional support features such as widgets or keyboard
-            shortcuts.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h3>Pattern: Enable APIs and extensions</h3>
-
+        <h3>Pattern: Enable APIs and Extensions</h3>
+        <h4>User Need</h4>
+        <blockquote><p>I have an extension that helps me correctly enter words, grammar and use punctuation as well as read the page to me.</p></blockquote>
+        <p>Related User Story: <a href="#user-story-adapt" aria-label="Adapt User Story">Adapt</a>.</p>
+        <h4>Description</h4>
         <p>Allow supporting APIs and extensions to work with your content.</p>
         <section>
-          <h4>How it helps</h4>
-          <p>
-            People with cognitive disabilities are often using add-ons or
-            extensions as assistive technology. This includes:
-          </p>
-          <ul>
-            <li>Reading of the long form of acronyms;</li>
-            <li>
-              Support for text-to-speech with synchronized highlighting of the
-              phrase being read;
-            </li>
-            <li>Content simplification;</li>
-            <li>Creating mind maps out of the heading structure;</li>
-            <li>
-              Support for retaining content that has already been entered;
-            </li>
-            <li>Password management;</li>
-            <li>Spell checking;</li>
-            <li>Changing the symbols or the interface.</li>
-			<li>Changing numbers from digits to words and words to digits</li> 
-			<li>Adding white space between lines, sentences, phrases, and chunks</li>
-			<li>Alternative ways to input the content such as speech recognition</li>
-			<li>Adding pictures</li>
-          </ul>
-          <p>
-            If these functions are not supported, the author should provide all
-            support all the functions of the add-ons in use as assistive
-            technology.
-          </p>
-          <p>
-            For example, a user with traumatic brain injury has executive
-            function and memory impairments impacting their ability to remember
-            details such as:
-          </p>
-          <ul>
-            <li>The Internet of Things (IoT) interface</li>
-            <li>Their user name and password</li>
-            <li>What an acronym stands for</li>
-            <li>A phone number</li>
-            <li>The meaning of uncommon words</li>
-          </ul>
-          <p>
-            Supporting the use of an add-on that simplifies content and adds
-            help (such as the long form of acronyms, and a popup dictionary)
-            enables them to understand most content.
-          </p>
-          <p>
-            Supporting password management tools enables him to successfully
-            login and avoid being locked out of secure sites.
-          </p>
-          <p>
-            Storing non-sensitive information and auto complete helps them fill
-            out a form. This suggests common information, like a person's phone
-            number or address. It also helps them avoid making mistakes. It
-            eliminates the need for accurately recalling this information from
-            memory or having to copy and paste it, which is a task that often
-            prevent them from successfully using a form.
-          </p>
-          <p>
-            When overwhelmed by textual content, they have an extension that
-            inserts symbols that they are familiar with that helps them find the
-            content they need.
-          </p>
-          <p>
-            However, sometimes a web site stops their extensions and API’s from
-            working. The result is that the use cannot use this web site.
-          </p>
+                  <h4>How it Helps</h4>
+                  <p>
+                    People with cognitive disabilities are often using add-ons or
+                    extensions as assistive technology. This includes:
+                  </p>
+                  <ul>
+                    <li>Reading of the long form of acronyms;</li>
+                    <li>
+                      Support for text-to-speech with synchronized highlighting of the
+                      phrase being read;
+                    </li>
+                    <li>Content simplification;</li>
+                    <li>Creating mind maps out of the heading structure;</li>
+                    <li>
+                      Support for retaining content that has already been entered;
+                    </li>
+                    <li>Password management;</li>
+                    <li>Spell checking;</li>
+                    <li>Changing the symbols or the interface.</li>
+        			<li>Changing numbers from digits to words and words to digits</li> 
+        			<li>Adding white space between lines, sentences, phrases, and chunks</li>
+        			<li>Alternative ways to input the content such as speech recognition</li>
+        			<li>Adding pictures</li>
+                  </ul>
+                  <p>
+                    If these functions are not supported, the author should provide all
+                    support all the functions of the add-ons in use as assistive
+                    technology.
+                  </p>
+                  <p>
+                    For example, a user with traumatic brain injury has executive
+                    function and memory impairments impacting their ability to remember
+                    details such as:
+                  </p>
+                  <ul>
+                    <li>The Internet of Things (IoT) interface</li>
+                    <li>Their user name and password</li>
+                    <li>What an acronym stands for</li>
+                    <li>A phone number</li>
+                    <li>The meaning of uncommon words</li>
+                  </ul>
+                  <p>
+                    Supporting the use of an add-on that simplifies content and adds
+                    help (such as the long form of acronyms, and a popup dictionary)
+                    enables them to understand most content.
+                  </p>
+                  <p>
+                    Supporting password management tools enables him to successfully
+                    login and avoid being locked out of secure sites.
+                  </p>
+                  <p>
+                    Storing non-sensitive information and auto complete helps them fill
+                    out a form. This suggests common information, like a person's phone
+                    number or address. It also helps them avoid making mistakes. It
+                    eliminates the need for accurately recalling this information from
+                    memory or having to copy and paste it, which is a task that often
+                    prevent them from successfully using a form.
+                  </p>
+                  <p>
+                    When overwhelmed by textual content, they have an extension that
+                    inserts symbols that they are familiar with that helps them find the
+                    content they need.
+                  </p>
+                  <p>
+                    However, sometimes a web site stops their extensions and API’s from
+                    working. The result is that the use cannot use this web site.
+                  </p>
 
-          <p>
-            Another example is a person that has a language related disability
-            (e.g. Dyslexia) which may cause them to read at a slower rate. They
-            often miss objects and information that they did not know they
-            needed to read. While high-literacy readers scan text, low-literacy
-            users may read the text “word-for-word.” This means they only know
-            what is written when they have intentionally read out. This is
-            similar to having a narrow field of view and they can be unaware of
-            other items not directly in the flow of text that they are reading.
-            They may also miss things on the page that help them understand what
-            to do. For example, there may be a side bar or call out box which
-            helps make decisions about which link to go to that matches their
-            particular needs. These readers may select the earlier option they
-            encounter, because they may not have noticed (or prioritized)
-            reading that side bar content. They also might miss information that
-            is essential for successfully completing an interaction.
-          </p>
+                  <p>
+                    Another example is a person that has a language related disability
+                    (e.g. Dyslexia) which may cause them to read at a slower rate. They
+                    often miss objects and information that they did not know they
+                    needed to read. While high-literacy readers scan text, low-literacy
+                    users may read the text “word-for-word.” This means they only know
+                    what is written when they have intentionally read out. This is
+                    similar to having a narrow field of view and they can be unaware of
+                    other items not directly in the flow of text that they are reading.
+                    They may also miss things on the page that help them understand what
+                    to do. For example, there may be a side bar or call out box which
+                    helps make decisions about which link to go to that matches their
+                    particular needs. These readers may select the earlier option they
+                    encounter, because they may not have noticed (or prioritized)
+                    reading that side bar content. They also might miss information that
+                    is essential for successfully completing an interaction.
+                  </p>
 
-          <p>
-            Too many options may add to the complexity of interacting with IoT
-            devices. Additional options should be easy to ignore and not require
-            a lot of reading to understand that they are additional, as well as
-            how to skip them.
-          </p>
-          <p>
-            Sometimes IoT interfaces may confuse the user, such as a default
-            "reading" on a meter being set to “2” and not “1.” The user would
-            then need to reset it to “1.”
-          </p>
-          <p>
-            It is important in any proposed solution to make operational tasks,
-            such as interacting with the IoT, as transparent as possible so that
-            users can focus their attention on the functional aspects, such as
-            relating to content.
-          </p>
-        </section>
-        <section>
-          <h4>More details</h4>
-          <p>
-            Support compatibility with assistive technology and standardized
-            personalization. The definition of standardized API's is identified
-            in the native platform's documentation or in a WCAG technique. This
-            is important as the design requirement is not open ended.
-          </p>
-          <p>
-            People with cognitive disabilities are often using add-ons as
-            assistive technology. It is essential that add-ons and similar tools
-            work. Otherwise, we need to make the author support all the
-            functions of the add-ons in use as assistive technology.
-          </p>
-          <p>Exceptions:</p>
-          <ul>
-            <li>
-              When there is a security or safety requirement, these API's may be
-              disabled for the relevant field
-            </li>
-            <li>
-              If it breaks the main function of the site, such as evaluation and
-              testing applications
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Getting started</h4>
-          <p>
-            Content can be used with APIs and extensions that support those with
-            cognitive disabilities.
-          </p>
-          <p>
-            Testing verified through the use of some of the APIs appropriate for
-            the content. For example:
-          </p>
-          <ul>
-            <li>
-              Testing with spell checker and password storage apps or
-              extensions.
-            </li>
-            <li>Test with an extension that add to the left click.</li>
-            <li>
-              Test with a toolbar that enables simplification or personalization
-              and is designed for people with cognitive disabilities.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Examples</h4>
-          <p><strong>Success</strong> example:</p>
-          <ul>
-            <li>
-              Browser extension and personalization tool bars work. User is able
-              to apply their settings from a personalization toolbar to improve
-              the usability for them of the page.
-            </li>
-          </ul>
+                  <p>
+                    Too many options may add to the complexity of interacting with IoT
+                    devices. Additional options should be easy to ignore and not require
+                    a lot of reading to understand that they are additional, as well as
+                    how to skip them.
+                  </p>
+                  <p>
+                    Sometimes IoT interfaces may confuse the user, such as a default
+                    "reading" on a meter being set to “2” and not “1.” The user would
+                    then need to reset it to “1.”
+                  </p>
+                  <p>
+                    It is important in any proposed solution to make operational tasks,
+                    such as interacting with the IoT, as transparent as possible so that
+                    users can focus their attention on the functional aspects, such as
+                    relating to content.
+                  </p>
+          </section>
+                <section>
+                  <h4>More Details</h4>
+                  <p>
+                    Support compatibility with assistive technology and standardized
+                    personalization. The definition of standardized API's is identified
+                    in the native platform's documentation or in a WCAG technique. This
+                    is important as the design requirement is not open ended.
+                  </p>
+                  <p>
+                    People with cognitive disabilities are often using add-ons as
+                    assistive technology. It is essential that add-ons and similar tools
+                    work. Otherwise, we need to make the author support all the
+                    functions of the add-ons in use as assistive technology.
+                  </p>
+                  <p>Exceptions:</p>
+                  <ul>
+                    <li>
+                      When there is a security or safety requirement, these API's may be
+                      disabled for the relevant field
+                    </li>
+                    <li>
+                      If it breaks the main function of the site, such as evaluation and
+                      testing applications
+                    </li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Getting Started</h4>
+                  <p>
+                    Content can be used with APIs and extensions that support those with
+                    cognitive disabilities.
+                  </p>
+                  <p>
+                    Testing verified through the use of some of the APIs appropriate for
+                    the content. For example:
+                  </p>
+                  <ul>
+                    <li>
+                      Testing with spell checker and password storage apps or
+                      extensions.
+                    </li>
+                    <li>Test with an extension that add to the left click.</li>
+                    <li>
+                      Test with a toolbar that enables simplification or personalization
+                      and is designed for people with cognitive disabilities.
+                    </li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Examples</h4>
+                  <p><strong>Success</strong> example:</p>
+                  <ul>
+                    <li>
+                      Browser extension and personalization tool bars work. User is able
+                      to apply their settings from a personalization toolbar to improve
+                      the usability for them of the page.
+                    </li>
+                  </ul>
 
-          <p><strong>Failure</strong> examples:</p>
-          <ul>
-            <li>Password storage applications do not work;</li>
-            <li>Distraction removing extension does not work;</li>
-            <li>
-              Spell checker extension does not add options to the right click
-              menu, or does not underline mistakes made by the user;
-            </li>
-            <li>
-              The correct symbols cannot be added by a simplification toolbar.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Technical details</h4>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/standardized-apis"
-              >On coga github: standardized-apis</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/46">wcag issue 46</a>
-          </p>
-        </section>
+                  <p><strong>Failure</strong> examples:</p>
+                  <ul>
+                    <li>Password storage applications do not work;</li>
+                    <li>Distraction removing extension does not work;</li>
+                    <li>
+                      Spell checker extension does not add options to the right click
+                      menu, or does not underline mistakes made by the user;
+                    </li>
+                    <li>
+                      The correct symbols cannot be added by a simplification toolbar.
+                    </li>
+                  </ul>
+                </section>
+                <section>
+                  <h4>Technical Details</h4>
+                  <p>
+                    The following are proposals for WCAG. They experiment with more
+                    testable language.
+                  </p>
+                  <p>
+                    <a
+                      href="https://rawgit.com/w3c/coga/master/extension/standardized-apis"
+                      >On coga github: standardized-apis</a
+                    >
+                  </p>
+                  <p>
+                    <a href="https://github.com/w3c/wcag21/issues/46">wcag issue 46</a>
+                  </p>
+                </section>
       </section>
+
       <section>
-        <h3>Pattern: Support simplification</h3>
-        <p>Support simplification of your content. Often this includes allowing the user to:</p>
-        <ul>
-          <li>
-            Remove or hide features that most users do not
-            use or that are not essential;
-          </li>
-          <li>Get less test or more simple text;</li>
-		  <li>Select the content format or version of the content that is easiest for me to understand; or </li>
-		  <li>Find the extra features when wanted.</li>
-        </ul>
-        <section>
-          <h4>How it helps</h4>
-          <p>
-            A user who has difficulty reading or using Web content can be easily
-            overwhelmed with too much information on a web page. They need to
-            simplify the page to just the critical information that they need
-            and not spend all their energy reading and understanding other
-            content and features. This is also true for users who are easily
-            distracted.
-          </p>
-          <p>
-            For example, an email program has lots of features and formatting
-            options when drafting an email. This makes it too complex for a lot
-            of people. With personalization the user can have a simple option
-            with only send and cancel options. There is a “to” and subject line
-            but no cc or bcc options. In this setting there is a clear heading
-            (write an email) and they have icons that the user understands.
-          </p>
-        </section>
-        <section>
-          <h4>More Details</h4>
-          <p>Note that:</p>
-          <uld
-            <li>Typically, a simple application has 3 to 6 functions;</li>
-            <li>
-              Make sure it is easy to get back to the full featured version;
-            </li>
-            <li>You can meet this design pattern by;</li>
-            <li>Use aui-simplification on regions and controls;</li>
-            <li>Use other attributes in personalization semantics;</li>
-            <li>Add a simplification toolbar;</li>
-            <li>Provide an alternative version.</li>
-          </ul>
-        </section>
-        <section>
-          <h4>Getting started</h4>
-          <p>
-            Add aui-simplification=”critical” on content that is in any critical
-            user testing paths.
-          </p>
-        </section>
-        <section>
-          <h4>Examples</h4>
-          <p><strong>Success</strong> example:</p>
-          <ul>
-            <li>Simplified “reading” view is available and easy to close.</li>
-          </ul>
-          <p><strong>Failure</strong> example:</p>
-          <ul>
-            <li>
-              A busy email program with lots of regions with different controls
-              bars and features such as tagging, group tagging, start a new
-              thread etc. There is no easy way to simplify the page.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Technical details</h4>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/support-personalization.html"
-              >On coga github: support-personalization.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/6">wcag issue 6</a>
-          </p>
-        </section>
+            <h3>Pattern: Support Simplification</h3>
+            <h4>User Need</h4>
+            <blockquote><p>I can convert the content into easily understood language and layout.</p></blockquote>
+            <p>Related User Story: <a href="#user-story-adapt" aria-label="Adapt User Story">Adapt</a>.</p>
+            <h4>Description</h4>
+                <p>Support simplification of your content. Often this includes allowing the user to:</p>
+            <ul>
+              <li>
+                Remove or hide features that most users do not
+                use or that are not essential;
+              </li>
+                <li>Get less test or more simple text;</li>
+    		       <li>Select the content format or version of the content that is easiest for me to understand; or </li>
+    		       <li>Find the extra features when wanted.</li>
+            </ul>
+            <section>
+              <h4>How it Helps</h4>
+              <p>
+                A user who has difficulty reading or using Web content can be easily
+                overwhelmed with too much information on a web page. They need to
+                simplify the page to just the critical information that they need
+                and not spend all their energy reading and understanding other
+                content and features. This is also true for users who are easily
+                distracted.
+              </p>
+              <p>
+                For example, an email program has lots of features and formatting
+                options when drafting an email. This makes it too complex for a lot
+                of people. With personalization the user can have a simple option
+                with only send and cancel options. There is a “to” and subject line
+                but no cc or bcc options. In this setting there is a clear heading
+                (write an email) and they have icons that the user understands.
+              </p>
+            </section>
+            <section>
+              <h4>More Details</h4>
+              <p>Note that:</p>
+              <ul>
+                <li>Typically, a simple application has 3 to 6 functions;</li>
+                <li>
+                  Make sure it is easy to get back to the full featured version;
+                </li>
+                <li>You can meet this design pattern by;</li>
+                <li>Use aui-simplification on regions and controls;</li>
+                <li>Use other attributes in personalization semantics;</li>
+                <li>Add a simplification toolbar;</li>
+                <li>Provide an alternative version.</li>
+              </ul>
+            </section>
+            <section>
+              <h4>Getting Started</h4>
+              <p>
+                Add aui-simplification=”critical” on content that is in any critical
+                user testing paths.
+              </p>
+            </section>
+            <section>
+              <h4>Examples</h4>
+              <p><strong>Success</strong> example:</p>
+              <ul>
+                <li>Simplified “reading” view is available and easy to close.</li>
+              </ul>
+              <p><strong>Failure</strong> example:</p>
+              <ul>
+                <li>
+                  A busy email program with lots of regions with different controls
+                  bars and features such as tagging, group tagging, start a new
+                  thread etc. There is no easy way to simplify the page.
+                </li>
+              </ul>
+            </section>
+            <section>
+              <h4>Technical Details</h4>
+              <p>
+                The following are proposals for WCAG. They experiment with more
+                testable language.
+              </p>
+              <p>
+                <a
+                  href="https://rawgit.com/w3c/coga/master/extension/support-personalization.html"
+                  >On coga github: support-personalization.html</a
+                >
+              </p>
+              <p>
+                <a href="https://github.com/w3c/wcag21/issues/6">wcag issue 6</a>
+              </p>
+            </section>
       </section>
+
       <section>
-        <h3>Pattern: Support a personalized and familiar interface</h3>
-        <p>Provide users with a way to personalize their interface to make it familiar. </p>
-		<p>This can be done by:</p>
-		<ol><li>Allowing a rollback to a previous interface that the user is familiar with and knows how to use</li>
-		<li>Adding semantics on controls, links and symbols that allows the user to control the experience. For example:
-        <ul>
-          <li>Html 5 autocomplete on common fields;</li>
-          <li>Adding a toolbar that adds personalized images;</li>
-          <li>Use attributes in personalization semantics.</li>
-		</ul> </li>
-		</ol>
-        <p>
-          Personalization technology is still young and is developing rapidly.
-          At the time of publication HTML autocorrect on fields was the best
-          supported.
-        </p>
-        <section>
-          <h4>How it helps</h4>
-          <p>
-            Personalization changes the interface to meet the needs of the user.
-          </p>
-          <p>
-            Having familiar terms and symbols is key to many users being able to
-            use the web. However, what is familiar for one user may be
-            unfamiliar to another requiring them to learn new symbols. Adding
-            semantics allow symbols and support to be added by an extension or
-            browser that is familiar to the individual user.
-          </p>
-          <p>
-            A stronger example is people using Alternative and Augmentative
-            Communication (AAC) systems. AAC systems designed for people who are
-            non-verbal often use symbols with or without text.
-          </p>
-          <p>
-            These users usually only learn one symbol set. They cannot easily
-            communicate with other symbol users in a written format or may
-            struggle to understand different symbols used in different
-            applications. Some symbols are subject to copyright and cannot be
-            shared across applications.
-          </p>
-          <p>
-            If users' symbols are mapped to the same concepts, then user agents
-            can load the symbols that are understandable by the user and they
-            user can access the web and other applications.
-          </p>
-          <p>
-            Other support includes autocomplete and extension that help the user
-            fill out forms and understand the content. Many users with memory or
-            executive functions impairments could not fill in forms without
-            asking someone to help copy over information or check their work.
-            Autocomplete, many more users to manage forms by themselves.
-          </p>
-        </section>
-        <section>
-          <h4>Getting started</h4>
-          <ul>
-            <li>Use Html 5 autocomplete on all common fields;</li>
-            <li>Add a toolbar that adds personalized images or;</li>
-            <li>
-              Add the semantics that can work with a toolbar for personalized
-              images.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Examples</h4>
-          <p><strong>Success</strong> examples:</p>
-          <ul>
-            <li>Install a personalization toolbar;</li>
-            <li>
-              Examples of working pages can be found
-              <a
-                href="https://github.com/w3c/personalization-semantics/wiki/Implementations-of-Semantics"
-                >Implementations of Semantics</a
-              >, also see
-              <a
-                href="https://github.com/w3c/personalization-semantics/wiki/Getting-started-with-personalization-semantics"
-                >Getting started with personalization semantics</a
-              >.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Technical details</h4>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/support-personalization.html"
-              >On coga github: support-personalization.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/6"></a>wcag issue 6
-          </p>
-        </section>
+              <h3>Pattern: Support a Personalized and Familiar Interface</h3>
+              <h4>User Need</h4>
+              <blockquote><p>I can change to a version of the interface that is familiar to me, that I recognize and know what will happen.</p></blockquote>
+              <p>Related User Story: <a href="#user-story-adapt" aria-label="Adapt User Story">Adapt</a>.</p>
+              <h4>Description</h4>
+              <p>Provide users with a way to personalize their interface to make it familiar. </p>
+        		  <p>This can be done by:</p>
+        		  <ol><li>Allowing a rollback to a previous interface that the user is familiar with and knows how to use</li>
+        		  <li>Adding semantics on controls, links and symbols that allows the user to control the experience. For example:
+                <ul>
+                  <li>Html 5 autocomplete on common fields;</li>
+                  <li>Adding a toolbar that adds personalized images;</li>
+                  <li>Use attributes in personalization semantics.</li>
+        		  </ul> </li>
+        		  </ol>
+                <p>
+                  Personalization technology is still young and is developing rapidly.
+                  At the time of publication HTML autocorrect on fields was the best
+                  supported.
+                </p>
+          <section>
+            <h4>How it Helps</h4>
+            <p>
+              Personalization changes the interface to meet the needs of the user.
+            </p>
+            <p>
+              Having familiar terms and symbols is key to many users being able to
+              use the web. However, what is familiar for one user may be
+              unfamiliar to another requiring them to learn new symbols. Adding
+              semantics allow symbols and support to be added by an extension or
+              browser that is familiar to the individual user.
+            </p>
+            <p>
+              A stronger example is people using Alternative and Augmentative
+              Communication (AAC) systems. AAC systems designed for people who are
+              non-verbal often use symbols with or without text.
+            </p>
+            <p>
+              These users usually only learn one symbol set. They cannot easily
+              communicate with other symbol users in a written format or may
+              struggle to understand different symbols used in different
+              applications. Some symbols are subject to copyright and cannot be
+              shared across applications.
+            </p>
+            <p>
+              If users' symbols are mapped to the same concepts, then user agents
+              can load the symbols that are understandable by the user and they
+              user can access the web and other applications.
+            </p>
+            <p>
+              Other support includes autocomplete and extension that help the user
+              fill out forms and understand the content. Many users with memory or
+              executive functions impairments could not fill in forms without
+              asking someone to help copy over information or check their work.
+              Autocomplete, many more users to manage forms by themselves.
+            </p>
+          </section>
+          <section>
+            <h4>Getting Started</h4>
+            <ul>
+              <li>Use Html 5 autocomplete on all common fields;</li>
+              <li>Add a toolbar that adds personalized images or;</li>
+              <li>
+                Add the semantics that can work with a toolbar for personalized
+                images.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>Examples</h4>
+            <p><strong>Success</strong> examples:</p>
+            <ul>
+              <li>Install a personalization toolbar;</li>
+              <li>
+                Examples of working pages can be found
+                <a
+                  href="https://github.com/w3c/personalization-semantics/wiki/Implementations-of-Semantics"
+                  >Implementations of Semantics</a
+                >, also see
+                <a
+                  href="https://github.com/w3c/personalization-semantics/wiki/Getting-started-with-personalization-semantics"
+                  >Getting Started with personalization semantics</a
+                >.
+              </li>
+            </ul>
+          </section>
+          <section>
+              <h4>Technical Details</h4>
+              <p>
+                The following are proposals for WCAG. They experiment with more
+                testable language.
+              </p>
+              <p>
+                <a
+                  href="https://rawgit.com/w3c/coga/master/extension/support-personalization.html"
+                  >On coga github: support-personalization.html</a
+                >
+              </p>
+              <p>
+                <a href="https://github.com/w3c/wcag21/issues/6"></a>wcag issue 6
+              </p>
+          </section>
       </section>
     </section>
   </body>
