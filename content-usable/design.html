@@ -2654,142 +2654,6 @@
       </section>
  
       <section>
-        <h3>Pattern: Design Forms to Prevent Mistakes</h3>
-        <h5 class="coga-5">User Need</h5>
-        <blockquote><p>I want an interface that makes mistakes less likely by helping me avoid mistakes, as well as minimize the mistakes I might make</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
-        <h5 class="coga-5">Description</h5>
-        <p>
-          Choose a form design that reduces the chance that the user will make a
-          mistake. This includes:
-        </p>
-        <ul>
-		  <li>Design the form so that the user needs to enter as little information as possible;</li>
-		  <li>Clearly indicate required fields;</li>
-          <li>
-            In a text field, accept as many formats as possible. For example
-            accept different formats of phone numbers and correct
-            <a href="https://www.w3.org/TR/WCAG20/#input-errordef"
-              >Input errors</a
-            >
-            automatically;
-          </li>
-		  <li>Divide long numbers into chunks (support autocomplete across fields);</li>
-          <li>Use an interface were only valid input can be selected;</li>
-          <li>Use autocomplete and personalization of form controls;</li>
-          <li>Accept voice prompts when supported by the operating system;</li>
-          <li>
-            Automatically correct input errors when possible and the correction is reliable; and
-          </li>
-          <li>Provide the user with any known suggestions and corrections.
-          </li>
-        </ul>
-
-          <h5 class="coga-5">How it Helps</h5>
-          <p>
-            People with cognitive or learning disabilities and aging users often
-            abandon tasks and believe they cannot complete them if they receive
-            too many errors. Error messages may be confusing. Correcting errors
-            is often difficult and frustrating for users. Many users give up
-            when they get successive errors.
-          </p>
-          <p>
-            For example, while registering for an online banking account a form
-            requires the input of the user's birthdate. The required input
-            format is xx/xx/xxxx with a leading zero for single digits. If a
-            single input field with no input correction is presented, a user
-            with a cognitive disability may enter 1/3/1996 triggering an
-            error notification. It may not be clear to the user that the
-            required format is 01/03/1996 even if the format is shown below the input field or in the error
-            notification.
-          </p>
-          <p>
-            However, a well-designed form makes it easier to fill in the
-            information and prevent the user from making mistakes by automatically correcting or suggesting the correct date format. 
-          </p>
-
-          <p>
-            Minimizing user generated errors by automatically correcting them
-            will also minimize error notifications. Error notifications may be
-            distracting, taking focus away from tasks and task completion.
-          </p>
-
-          <h5 class="coga-5">More Details</h5>
-          <ul>
-            <li>
-              Only correct errors if the correction is reliable. Otherwise, if
-              suggestions for corrections are known, give the suggestions to the
-              user.
-              <ul>
-                <li>
-                  For example, “Did you mean the first of February (01/02) or
-                  the second of January (02/01)?"
-                </li>
-              </ul>
-            </li>
-            <li>
-              Calendars and dates.
-              <ul>
-                <li>
-                  Calendars should default to the first relevant day. Work
-                  calendars should default to first working day of a user's
-                  locale;
-                </li>
-                <li>
-                  Calendar-based booking systems must prevent the user from booking the
-                  return date before the departure date.
-                </li>
-              </ul>
-            </li>
-            <li>
-              Temperature.
-              <ul>
-                <li>Use the default temperature format of location.</li>
-              </ul>
-            </li>
-          </ul>
-
-          <h5 class="coga-5">Examples</h5>
-          <p><strong>Success </strong>examples:</p>
-          <ul>
-            <li>
-              Correct errors of the post code being written in the text field
-              with the city or state information;
-            </li>
-            <li>
-              The system prevents the user from selecting inappropriate dates and provides  provides a simple
-              explanation if the user attempts to do so. 
-            </li>
-          </ul>
-          <p><strong>Failure </strong>examples:</p>
-          <ul>
-            <li>
-              The booking form provides two calendars without clear labels and
-              instructions. The form allows the user to select dates without warning as to
-              whether they are possible e.g. flight out on June 1st - flight
-              return May 30th;
-            </li>
-            <li>
-              The system allows the user to select inappropriate dates without warning. The calendar
-              merely grays out inappropriate dates which may not be noticed. No
-              warnings are provided.
-            </li>
-          </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/minimize-errors.html"
-              >coga on github: minimize-errors.html</a
-            >
-          </p>
-      </section>
-
-      <section>
         <h3>Pattern: Let Users Go Back</h3>
         <h5 class="coga-5">User Need</h5>
         <blockquote><p>I want predictable back or undo features so I'm exactly where I was previously, before I made a mistake.</p></blockquote>
@@ -2926,6 +2790,257 @@
               >
             </li>
           </ul>
+      </section>
+
+      <section>
+        <h3>
+          Pattern: Notify Users of Fees and Charges at the Start of a Task
+        </h3>
+        <h5 class="coga-5">User Need</h5>
+        <blockquote><p>I want to know what information I will need (credit card, full address etc) before I start. </p></blockquote>
+        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <p>
+          Tell the user about all charges at the start of a transaction
+          including typical values. Any conditions and terms should also be
+          available at the start of the transaction in easy language.
+        </p>
+
+          <h5 class="coga-5">How it Helps</h5>
+          <p>
+            Users with cognitive disabilities who have trouble with memory,
+            attention to detail or reading comprehension may not be aware of
+            charges unless they are explicitly noted at the start of a
+            transaction task. Terms and conditions can be under a link but
+            charges must be clearly displayed and available in plain language.
+          </p>
+          <p>
+            Clearly identifying charges at the start of a sale benefits all
+            users. Those with cognitive disabilities will particularly benefit
+            because some groups are less likely to have inferred or guessed the
+            charges would be included. They may not know to look in other
+            locations in the user flow or in another location, for example on
+            the homepage, or on a rates page.
+          </p>
+          <p>
+            People with impaired Executive Function or memory need to have all
+            the consequences presented in an orderly form to be able to make an
+            informed decision. When charges are not clear, the consent of the
+            transaction is unclear.
+          </p>
+          <p>
+            It also can take much longer for users with disabilities to go
+            through the process of making a purchase. If a person has spent
+            hours making an online purchase, it is much more difficult and
+            upsetting to find out that they cannot afford it. They will often
+            blame themselves for not understanding the price and may experience
+            a loss of confidence. They may stop trusting themselves for
+            day-to-day activities.
+          </p>
+          <p>
+            For example, a person with Executive Function challenges may be
+            trying to order a plane ticket, and not realize that there are extra
+            fees not quoted in the original price, such as taxes, international
+            fees, baggage fees, etc. They may spend hours booking a holiday only
+            to find that they can’t afford it. Alternatively, sometimes they end
+            up purchasing something they cannot afford. And even if they have
+            completed this process in the past, they are not able to bring their
+            experience into future purchases to anticipate the final price. The
+            result is the user loses confidence in their ability to
+            independently purchase a holiday online, may have incurred a debt
+            they are unable to pay, may not attempt again, or only with the help
+            of a hired professional (e.g. travel agent or assistant).
+          </p>
+
+          <h5 class="coga-5">Examples</h5>
+          <p><strong>Success</strong> examples:</p>
+          <ul>
+            <li>There are no surprise charges or conditions.</li>
+            <li>
+              Users are aware of all charges (including hidden fees) and can
+              make an informed decision when they decide to purchase an item and
+              put it in a shopping cart.
+            </li>
+            <li>
+              For items that shipping charges vary, the range of shipping
+              charges and the issues that change the rate would be listed, along
+              with a link to where more details can be found. For example,
+              weight and speed of shipping my impact your shipping fees which
+              can be between $4 and $400 depending on location.
+            </li>
+          </ul>
+          <p><strong>Failure </strong>examples:</p>
+          <ul>
+            <li>
+              Final transaction includes unknown charges that result in
+              higher-than-expected total charges.
+            </li>
+            <li>
+              Final transactions include conditions of purchase that are not
+              clear to users from the beginning of the task.
+            </li>
+            <li>
+              Transactions contain charges or conditions that the user did not
+              know about until they have invested a lot of effort into the sale.
+            </li>
+            <li>
+              Final transaction is completed and users are surprised by the
+              total they receive.
+            </li>
+          </ul>
+
+          <h5 class="coga-5">Technical Details</h5>
+          <p>
+            The following are proposals for WCAG. They experiment with more
+            testable language.
+          </p>
+          <p>
+            <a
+              href="https://rawgit.com/w3c/coga/master/extension/identify-charges.html"
+              >On coga github: identify-charges.html</a
+            >
+          </p>
+          <p>
+            <a href="https://github.com/w3c/wcag21/issues/54">wcag issue 54</a>
+          </p>
+          <p>
+            <a href="https://github.com/w3c/wcag21/issues/37">WCAG issue 37</a>
+          </p>
+      </section>
+
+      <section>
+        <h3>Pattern: Design Forms to Prevent Mistakes</h3>
+        <h5 class="coga-5">User Need</h5>
+        <blockquote><p>I want an interface that makes mistakes less likely by helping me avoid mistakes, as well as minimize the mistakes I might make</p></blockquote>
+        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <h5 class="coga-5">Description</h5>
+        <p>
+          Choose a form design that reduces the chance that the user will make a
+          mistake. This includes:
+        </p>
+        <ul>
+		  <li>Design the form so that the user needs to enter as little information as possible;</li>
+		  <li>Clearly indicate required fields;</li>
+          <li>
+            In a text field, accept as many formats as possible. For example
+            accept different formats of phone numbers and correct
+            <a href="https://www.w3.org/TR/WCAG20/#input-errordef"
+              >Input errors</a
+            >
+            automatically;
+          </li>
+		  <li>Divide long numbers into chunks (support autocomplete across fields);</li>
+          <li>Use an interface were only valid input can be selected;</li>
+          <li>Use autocomplete and personalization of form controls;</li>
+          <li>Accept voice prompts when supported by the operating system;</li>
+          <li>
+            Automatically correct input errors when possible and the correction is reliable; and
+          </li>
+          <li>Provide the user with any known suggestions and corrections.
+          </li>
+        </ul>
+
+          <h5 class="coga-5">How it Helps</h5>
+          <p>
+            People with cognitive or learning disabilities and aging users often
+            abandon tasks and believe they cannot complete them if they receive
+            too many errors. Error messages may be confusing. Correcting errors
+            is often difficult and frustrating for users. Many users give up
+            when they get successive errors.
+          </p>
+          <p>
+            For example, while registering for an online banking account a form
+            requires the input of the user's birthdate. The required input
+            format is xx/xx/xxxx with a leading zero for single digits. If a
+            single input field with no input correction is presented, a user
+            with a cognitive disability may enter 1/3/1996 triggering an
+            error notification. It may not be clear to the user that the
+            required format is 01/03/1996 even if the format is shown below the input field or in the error
+            notification.
+          </p>
+          <p>
+            However, a well-designed form makes it easier to fill in the
+            information and prevent the user from making mistakes by automatically correcting or suggesting the correct date format. 
+          </p>
+
+          <p>
+            Minimizing user generated errors by automatically correcting them
+            will also minimize error notifications. Error notifications may be
+            distracting, taking focus away from tasks and task completion.
+          </p>
+
+          <h5 class="coga-5">More Details</h5>
+          <ul>
+            <li>
+              Only correct errors if the correction is reliable. Otherwise, if
+              suggestions for corrections are known, give the suggestions to the
+              user.
+              <ul>
+                <li>
+                  For example, “Did you mean the first of February (01/02) or
+                  the second of January (02/01)?"
+                </li>
+              </ul>
+            </li>
+            <li>
+              Calendars and dates.
+              <ul>
+                <li>
+                  Calendars should default to the first relevant day. Work
+                  calendars should default to first working day of a user's
+                  locale;
+                </li>
+                <li>
+                  Calendar-based booking systems must prevent the user from booking the
+                  return date before the departure date.
+                </li>
+              </ul>
+            </li>
+            <li>
+              Temperature.
+              <ul>
+                <li>Use the default temperature format of location.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h5 class="coga-5">Examples</h5>
+          <p><strong>Success </strong>examples:</p>
+          <ul>
+            <li>
+              Correct errors of the post code being written in the text field
+              with the city or state information;
+            </li>
+            <li>
+              The system prevents the user from selecting inappropriate dates and provides  provides a simple
+              explanation if the user attempts to do so. 
+            </li>
+          </ul>
+          <p><strong>Failure </strong>examples:</p>
+          <ul>
+            <li>
+              The booking form provides two calendars without clear labels and
+              instructions. The form allows the user to select dates without warning as to
+              whether they are possible e.g. flight out on June 1st - flight
+              return May 30th;
+            </li>
+            <li>
+              The system allows the user to select inappropriate dates without warning. The calendar
+              merely grays out inappropriate dates which may not be noticed. No
+              warnings are provided.
+            </li>
+          </ul>
+
+          <h5 class="coga-5">Technical Details</h5>
+          <p>
+            The following are proposals for WCAG. They experiment with more
+            testable language.
+          </p>
+          <p>
+            <a
+              href="https://rawgit.com/w3c/coga/master/extension/minimize-errors.html"
+              >coga on github: minimize-errors.html</a
+            >
+          </p>
       </section>
 
       <section>
@@ -3564,121 +3679,6 @@
             <a href="https://github.com/w3c/wcag21/pull/109"
               >pull request 109</a
             >
-          </p>
-      </section>
-
-      <section>
-        <h3>
-          Pattern: Notify Users of Fees and Charges at the Start of a Task
-        </h3>
-        <h5 class="coga-5">User Need</h5>
-        <blockquote><p>I want to know what information I will need (credit card, full address etc) before I start. </p></blockquote>
-        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
-        <p>
-          Tell the user about all charges at the start of a transaction
-          including typical values. Any conditions and terms should also be
-          available at the start of the transaction in easy language.
-        </p>
-
-          <h5 class="coga-5">How it Helps</h5>
-          <p>
-            Users with cognitive disabilities who have trouble with memory,
-            attention to detail or reading comprehension may not be aware of
-            charges unless they are explicitly noted at the start of a
-            transaction task. Terms and conditions can be under a link but
-            charges must be clearly displayed and available in plain language.
-          </p>
-          <p>
-            Clearly identifying charges at the start of a sale benefits all
-            users. Those with cognitive disabilities will particularly benefit
-            because some groups are less likely to have inferred or guessed the
-            charges would be included. They may not know to look in other
-            locations in the user flow or in another location, for example on
-            the homepage, or on a rates page.
-          </p>
-          <p>
-            People with impaired Executive Function or memory need to have all
-            the consequences presented in an orderly form to be able to make an
-            informed decision. When charges are not clear, the consent of the
-            transaction is unclear.
-          </p>
-          <p>
-            It also can take much longer for users with disabilities to go
-            through the process of making a purchase. If a person has spent
-            hours making an online purchase, it is much more difficult and
-            upsetting to find out that they cannot afford it. They will often
-            blame themselves for not understanding the price and may experience
-            a loss of confidence. They may stop trusting themselves for
-            day-to-day activities.
-          </p>
-          <p>
-            For example, a person with Executive Function challenges may be
-            trying to order a plane ticket, and not realize that there are extra
-            fees not quoted in the original price, such as taxes, international
-            fees, baggage fees, etc. They may spend hours booking a holiday only
-            to find that they can’t afford it. Alternatively, sometimes they end
-            up purchasing something they cannot afford. And even if they have
-            completed this process in the past, they are not able to bring their
-            experience into future purchases to anticipate the final price. The
-            result is the user loses confidence in their ability to
-            independently purchase a holiday online, may have incurred a debt
-            they are unable to pay, may not attempt again, or only with the help
-            of a hired professional (e.g. travel agent or assistant).
-          </p>
-
-          <h5 class="coga-5">Examples</h5>
-          <p><strong>Success</strong> examples:</p>
-          <ul>
-            <li>There are no surprise charges or conditions.</li>
-            <li>
-              Users are aware of all charges (including hidden fees) and can
-              make an informed decision when they decide to purchase an item and
-              put it in a shopping cart.
-            </li>
-            <li>
-              For items that shipping charges vary, the range of shipping
-              charges and the issues that change the rate would be listed, along
-              with a link to where more details can be found. For example,
-              weight and speed of shipping my impact your shipping fees which
-              can be between $4 and $400 depending on location.
-            </li>
-          </ul>
-          <p><strong>Failure </strong>examples:</p>
-          <ul>
-            <li>
-              Final transaction includes unknown charges that result in
-              higher-than-expected total charges.
-            </li>
-            <li>
-              Final transactions include conditions of purchase that are not
-              clear to users from the beginning of the task.
-            </li>
-            <li>
-              Transactions contain charges or conditions that the user did not
-              know about until they have invested a lot of effort into the sale.
-            </li>
-            <li>
-              Final transaction is completed and users are surprised by the
-              total they receive.
-            </li>
-          </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/identify-charges.html"
-              >On coga github: identify-charges.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/54">wcag issue 54</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/37">WCAG issue 37</a>
           </p>
       </section>
 
