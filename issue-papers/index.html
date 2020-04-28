@@ -1,460 +1,9 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.4.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-.issue-label {
-    text-transform: initial;
-}
-
-.warning > p:first-child { margin-top: 0 }
-.warning {
-    padding: .5em;
-    border-left-width: .5em;
-    border-left-style: solid;
-}
-span.warning { padding: .1em .5em .15em; }
-
-.issue.closed span.issue-number {
-    text-decoration: line-through;
-}
-
-.warning {
-    border-color: #f11;
-    border-width: .2em;
-    border-style: solid;
-    background: #fbe9e9;
-}
-
-.warning-title:before{
-    content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 1.3em;
-    float: left;
-    padding-right: .3em;
-    margin-top: -0.3em;
-}
-
-li.task-list-item {
-    list-style: none;
-}
-
-input.task-list-item-checkbox {
-    margin: 0 0.35em 0.25em -1.6em;
-    vertical-align: middle;
-}
-
-.issue a.respec-gh-label {
-  padding: 5px;
-  margin: 0 2px 0 2px;
-  font-size: 10px;
-  text-transform: none;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  position: relative;
-  bottom: 2px;
-  border: none;
-  display: inline-block;
-}
-</style><style>/* dfn popup panel that list all local references to a dfn */
-dfn {
-  cursor: pointer;
-}
-
-.dfn-panel {
-  position: absolute;
-  left: var(--left); /* set via JS */
-  top: var(--top); /* set via JS */
-  z-index: 35;
-  height: auto;
-  width: max-content;
-  max-width: 300px;
-  max-height: 500px;
-  overflow: auto;
-  padding: 0.5em 0.75em;
-  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-  background: #dddddd;
-  color: black;
-  border: outset 0.2em;
-}
-
-.dfn-panel * {
-  margin: 0;
-}
-
-.dfn-panel > b {
-  display: block;
-}
-
-.dfn-panel ul a[href] {
-  color: black;
-}
-
-.dfn-panel a:not(:hover) {
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-.dfn-panel a[href]:hover {
-  border-bottom-width: 1px;
-}
-
-.dfn-panel > b + b {
-  margin-top: 0.25em;
-}
-
-.dfn-panel ul {
-  padding: 0;
-}
-
-.dfn-panel li {
-  list-style: inside;
-}
-
-.dfn-panel.docked {
-  display: inline-block;
-  position: fixed;
-  left: 0.5em;
-  top: unset;
-  bottom: 2em;
-  margin: 0 auto;
-  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
-  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
-  max-height: 30vh;
-}
-</style>
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
 		<title>Cognitive Accessibility Issue Papers</title>
-		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec specific CSS
- *****************************************************************/
-@keyframes pop {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.25, 1.25);
-    opacity: 0.75;
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-/* Override code highlighter background */
-.hljs {
-  background: transparent !important;
-}
-
-/* --- INLINES --- */
-h1 abbr,
-h2 abbr,
-h3 abbr,
-h4 abbr,
-h5 abbr,
-h6 abbr,
-a abbr {
-  border: none;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-a.internalDFN {
-  color: inherit;
-  border-bottom: 1px solid #99c;
-  text-decoration: none;
-}
-
-a.externalDFN {
-  color: inherit;
-  border-bottom: 1px dotted #ccc;
-  text-decoration: none;
-}
-
-a.bibref {
-  text-decoration: none;
-}
-
-.respec-offending-element:target {
-  animation: pop 0.25s ease-in-out 0s 1;
-}
-
-.respec-offending-element,
-a[href].respec-offending-element {
-  text-decoration: red wavy underline;
-}
-@supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
-  }
-  .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
-  }
-}
-
-#references :target {
-  background: #eaf3ff;
-  animation: pop 0.4s ease-in-out 0s 1;
-}
-
-cite .bibref {
-  font-style: normal;
-}
-
-code {
-  color: #c63501;
-}
-
-th code {
-  color: inherit;
-}
-
-a[href].orcid {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-a[href].orcid > svg {
-    margin-bottom: -2px;
-}
-
-/* --- TOC --- */
-
-.toc a,
-.tof a {
-  text-decoration: none;
-}
-
-a .secno,
-a .figno {
-  color: #000;
-}
-
-ul.tof,
-ol.tof {
-  list-style: none outside none;
-}
-
-.caption {
-  margin-top: 0.5em;
-  font-style: italic;
-}
-
-/* --- TABLE --- */
-
-table.simple {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 3px solid #005a9c;
-}
-
-.simple th {
-  background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th a {
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th[scope="row"] {
-  background: inherit;
-  color: inherit;
-  border-top: 1px solid #ddd;
-}
-
-.simple td {
-  padding: 3px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.simple tr:nth-child(even) {
-  background: #f0f6ff;
-}
-
-/* --- DL --- */
-
-.section dd > p:first-child {
-  margin-top: 0;
-}
-
-.section dd > p:last-child {
-  margin-bottom: 0;
-}
-
-.section dd {
-  margin-bottom: 1em;
-}
-
-.section dl.attrs dd,
-.section dl.eldef dd {
-  margin-bottom: 0;
-}
-
-#issue-summary > ul,
-.respec-dfn-list {
-  column-count: 2;
-}
-
-#issue-summary li,
-.respec-dfn-list li {
-  list-style: none;
-}
-
-details.respec-tests-details {
-  margin-left: 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-details.respec-tests-details > * {
-  padding-right: 2em;
-}
-
-details.respec-tests-details[open] {
-  z-index: 999999;
-  position: absolute;
-  border: thin solid #cad3e2;
-  border-radius: 0.3em;
-  background-color: white;
-  padding-bottom: 0.5em;
-}
-
-details.respec-tests-details[open] > summary {
-  border-bottom: thin solid #cad3e2;
-  padding-left: 1em;
-  margin-bottom: 1em;
-  line-height: 2em;
-}
-
-details.respec-tests-details > ul {
-  width: 100%;
-  margin-top: -0.3em;
-}
-
-details.respec-tests-details > li {
-  padding-left: 1em;
-}
-
-a[href].self-link:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-aside.example .marker > a.self-link {
-  color: inherit;
-}
-
-h2 > a.self-link,
-h3 > a.self-link,
-h4 > a.self-link,
-h5 > a.self-link,
-h6 > a.self-link {
-  border: none;
-  color: inherit;
-  font-size: 83%;
-  height: 2em;
-  left: -1.6em;
-  opacity: 0.5;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: opacity 0.2s;
-  width: 2em;
-}
-
-h2 > a.self-link::before,
-h3 > a.self-link::before,
-h4 > a.self-link::before,
-h5 > a.self-link::before,
-h6 > a.self-link::before {
-  content: "§";
-  display: block;
-}
-
-@media (max-width: 767px) {
-  dd {
-    margin-left: 0;
-  }
-
-  /* Don't position self-link in headings off-screen */
-  h2 > a.self-link,
-  h3 > a.self-link,
-  h4 > a.self-link,
-  h5 > a.self-link,
-  h6 > a.self-link {
-    left: auto;
-    top: auto;
-  }
-}
-
-@media print {
-  .removeOnSave {
-    display: none;
-  }
-}
-</style>
+		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
 		
 		
-	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><meta name="description" content="This is a set of papers that describe accessibility issues for users with various cognitive or learning disabilities. Each issue paper takes information from Cognitive Accessibility User Research [coga-user-research] and distills it into a description of the challenges for a specific user group or web usage pattern, and suggests ways to address those challenges. This information informs the Cognitive Accessibility Roadmap and Gap analysis [coga-gap-analysis] in its identification of which solutions remain unmet at this time. The set of issue papers in this publication is not comprehensive and additional ones may be added to future publications of this document."><link rel="canonical" href="https://www.w3.org/TR/coga-issue-papers/"><style>var {
-  position: relative;
-  cursor: pointer;
-}
-
-var[data-type]::before,
-var[data-type]::after {
-  position: absolute;
-  left: 50%;
-  top: -6px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-/* the triangle or arrow or caret or whatever */
-var[data-type]::before {
-  content: "";
-  transform: translateX(-50%);
-  border-width: 4px 6px 0 6px;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #000;
-}
-
-/* actual text */
-var[data-type]::after {
-  content: attr(data-type);
-  transform: translateX(-50%) translateY(-100%);
-  background: #000;
-  text-align: center;
-  /* additional styling */
-  font-family: "Dank Mono", "Fira Code", monospace;
-  font-style: normal;
-  padding: 6px;
-  border-radius: 3px;
-  color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
-}
-
-var[data-type]:hover::after,
-var[data-type]:hover::before {
-  opacity: 1;
-}
-</style><script id="initialUserConfig" type="application/json">{
+	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><meta name="description" content="This is a set of papers that describe accessibility issues for users with various cognitive or learning disabilities. Each issue paper takes information from Cognitive Accessibility User Research [coga-user-research] and distills it into a description of the challenges for a specific user group or web usage pattern, and suggests ways to address those challenges. This information informs the Cognitive Accessibility Roadmap and Gap analysis [coga-gap-analysis] in its identification of which solutions remain unmet at this time. The set of issue papers in this publication is not comprehensive and additional ones may be added to future publications of this document."><link rel="canonical" href="https://www.w3.org/TR/coga-issue-papers/"><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "trace": true,
   "doRDFa": "1.1",
   "includePermalinks": true,
@@ -1466,7 +1015,8 @@ var[data-type]:hover::before {
       "etAl": "false",
       "href": "http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46",
       "publisher": "Computers Helping People with Special Needs, Lecture Notes in Computer Science, Vol. 7383, pages 303-310",
-      "publishDate": "2012"
+      "publishDate": "2012",
+      "id": "lundälv-1"
     },
     "Lyon-1": {
       "title": "Neuroimaging a window to the neurological foundations of learning and behavior in children",
@@ -2148,59 +1698,62 @@ var[data-type]:hover::before {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2020-04-02",
-  "publishISODate": "2020-04-02T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 02 April 2020"
+  "publishDate": "2020-04-28",
+  "publishISODate": "2020-04-28T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 28 April 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Cognitive Accessibility Issue Papers</h1>
-      
-      <h2>
-        W3C Editor's Draft
-        <time class="dt-published" datetime="2020-04-02">02 April 2020</time>
-      </h2>
-      <dl>
-        <dt>This version:</dt><dd>
-                <a class="u-url" href="https://w3c.github.io/coga/issue-papers/">https://w3c.github.io/coga/issue-papers/</a>
-              </dd><dt>Latest published version:</dt><dd>
-                <a href="https://www.w3.org/TR/coga-issue-papers/">https://www.w3.org/TR/coga-issue-papers/</a>
-              </dd>
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/issue-papers/">https://w3c.github.io/coga/issue-papers/</a></dd>
-        
-        
-        
-        
-        
-        <dt>Editors:</dt>
-        <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
-            (W3C)
-          </dd>
-        
-        
-        
-      </dl>
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Cognitive Accessibility Issue Papers</h1>
+    
+    <h2>
+      W3C Editor's Draft
+      <time class="dt-published" datetime="2020-04-28">28 April 2020</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://w3c.github.io/coga/issue-papers/">https://w3c.github.io/coga/issue-papers/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/coga-issue-papers/">https://www.w3.org/TR/coga-issue-papers/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/issue-papers/">https://w3c.github.io/coga/issue-papers/</a></dd>
       
       
       
-      <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-      ©
-      2017-2020
       
-      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-      <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-      W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
-      apply.
-    </p>
-      <hr title="Separator for header">
-    </div>
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
+      
+      
+      
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2017-2020
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
-			<p>This is a set of papers that describe accessibility issues for users with various cognitive or learning disabilities. Each issue paper takes information from <a href="https://www.w3.org/TR/coga-user-research/">Cognitive Accessibility User Research</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-coga-user-research" title="Cognitive Accessibility User Research">coga-user-research</a></cite>] and distills it into a description of the challenges for a specific user group or web usage pattern, and suggests ways to address those challenges. This information informs the <a href="https://www.w3.org/TR/coga-gap-analysis/">Cognitive Accessibility Roadmap and Gap analysis</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-coga-gap-analysis" title="Cognitive Accessibility Roadmap and Gap Analysis">coga-gap-analysis</a></cite>] in its identification of which solutions remain unmet at this time. The set of issue papers in this publication is not comprehensive and additional ones may be added to future publications of this document.</p>
+			<p>This is a set of papers that describe accessibility issues for users with various cognitive or learning disabilities. Each issue paper takes information from <a href="https://www.w3.org/TR/coga-user-research/">Cognitive Accessibility User Research</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-coga-user-research">coga-user-research</a></cite>] and distills it into a description of the challenges for a specific user group or web usage pattern, and suggests ways to address those challenges. This information informs the <a href="https://www.w3.org/TR/coga-gap-analysis/">Cognitive Accessibility Roadmap and Gap analysis</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-coga-gap-analysis" title="Cognitive Accessibility Roadmap and Gap Analysis">coga-gap-analysis</a></cite>] in its identification of which solutions remain unmet at this time. The set of issue papers in this publication is not comprehensive and additional ones may be added to future publications of this document.</p>
 			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
 		</section>
-		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p>
 			<p>Feedback on any aspect of the document is accepted. For this publication, the Working Groups particularly seek feedback on the following questions:</p>
 			<ul>
 				<li>Are issues for the included user groups well covered?</li>
@@ -2209,39 +1762,41 @@ var[data-type]:hover::before {
 			</ul>
 			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-coga-comments@w3.org?subject=[Issue%20Papers]">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>16 June 2017</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
 		<p>
-      This document was published by the <a href="https://www.w3.org/WAI/APA/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="https://www.w3.org/WAI/GL/">Accessible Platform Architectures Working Group</a>, and the <a class="respec-offending-element" title="Linking error: not matching `<dfn>`" id="respec-offender-linking-error-not-matching-dfn">Accessibility Guidelines Working Group</a> as an
-      Editor's Draft.
-      
-    </p><p>
-      
-      Comments regarding this document are welcome.
-            Please send them to
-            <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-            (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-          
-    </p><p>
-      Publication as an Editor's Draft does not imply endorsement by the
-      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
-      obsoleted by other documents at any time. It is inappropriate to cite this
-      document as other than work in progress.
-    </p><p>
-      
+    This document was published by the <a href="https://www.w3.org/WAI/APA/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="https://www.w3.org/WAI/GL/">Accessible Platform Architectures Working Group</a>, and the <a class="respec-offending-element" title="Error: No matching dfn found." id="respec-offender-error-no-matching-dfn-found">Accessibility Guidelines Working Group</a> as an
+    Editor's Draft.
+    
+  </p><p>
+    
+    Comments regarding this document are welcome.
+          Please send them to
+          <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+          (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+        
+  </p><p>
+    Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+    Membership. This is a draft document and may be updated, replaced or
+    obsoleted by other documents at any time. It is inappropriate to cite this
+    document as other than work in progress.
+  </p><p>
+    
         This document was produced by groups
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
        The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-      
-                  <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a>, and a <a rel="disclosure" class="respec-offending-element" title="Linking error: not matching `<dfn>`" id="respec-offender-linking-error-not-matching-dfn-0">public list of any patent disclosures (Accessibility Guidelines Working Group)</a>
-            made in connection with the deliverables of
-            each group; these pages also include
-            instructions for disclosing a patent. An individual who has actual
-            knowledge of a patent which the individual believes contains
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-            must disclose the information in accordance with
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-      
-    </p><p>
+     <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+          <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a
+          <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a>, and a
+          <a rel="disclosure" class="respec-offending-element" title="Error: No matching dfn found." id="respec-offender-error-no-matching-dfn-found-0">public list of any patent disclosures (Accessibility Guidelines Working Group)</a>
+          made in connection with the deliverables of
+          each group; these pages also include
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#list-of-issue-papers"><bdi class="secno">2. </bdi>List of Issue Papers</a></li><li class="tocline"><a class="tocxref" href="#personalization-and-user-preferences"><bdi class="secno">3. </bdi>Personalization and User Preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-0"><bdi class="secno">3.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#examples-of-what-we-may-want-personalization-to-do"><bdi class="secno">3.2 </bdi>Examples of what we may want personalization to do</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#adding-content-and-features"><bdi class="secno">3.2.1 </bdi>Adding content and features</a></li><li class="tocline"><a class="tocxref" href="#removing-content-and-features"><bdi class="secno">3.2.2 </bdi>Removing content and features</a></li><li class="tocline"><a class="tocxref" href="#changing-content-and-features"><bdi class="secno">3.2.3 </bdi>Changing content and features</a></li><li class="tocline"><a class="tocxref" href="#addressing-key-issues"><bdi class="secno">3.2.4 </bdi>Addressing key issues</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-preferences"><bdi class="secno">3.3 </bdi>User preferences</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#challenges-of-user-preferences-for-people-with-cognitive-disabilities"><bdi class="secno">3.3.1 </bdi>Challenges of user preferences for people with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#templates-for-preferences"><bdi class="secno">3.3.2 </bdi>Templates for preferences</a></li><li class="tocline"><a class="tocxref" href="#inferring-preferences"><bdi class="secno">3.3.3 </bdi>Inferring preferences </a></li><li class="tocline"><a class="tocxref" href="#managing-user-preferences"><bdi class="secno">3.3.4 </bdi>Managing user preferences </a></li></ol></li><li class="tocline"><a class="tocxref" href="#potential-solutions"><bdi class="secno">3.4 </bdi>Potential solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#potential-solutions-for-user-preferences"><bdi class="secno">3.4.1 </bdi>Potential solutions for user preferences </a></li><li class="tocline"><a class="tocxref" href="#potential-solutions-for-personalization"><bdi class="secno">3.4.2 </bdi>Potential solutions for personalization </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ways-that-personalization-is-currently-addressed"><bdi class="secno">3.4.2.1 </bdi>Ways that personalization is currently addressed </a></li><li class="tocline"><a class="tocxref" href="#limitations-of-current-personalization-implementations"><bdi class="secno">3.4.2.2 </bdi>Limitations of current personalization implementations </a></li><li class="tocline"><a class="tocxref" href="#adding-to-ways-we-can-address-personalization"><bdi class="secno">3.4.2.3 </bdi>Adding to ways we can address personalization</a></li></ol></li><li class="tocline"><a class="tocxref" href="#strategies"><bdi class="secno">3.4.3 </bdi>Strategies</a></li><li class="tocline"><a class="tocxref" href="#further-work-for-personalization"><bdi class="secno">3.4.4 </bdi>Further work for personalization</a></li><li class="tocline"><a class="tocxref" href="#end-to-end-basic-solution"><bdi class="secno">3.4.5 </bdi>End to end basic solution</a></li><li class="tocline"><a class="tocxref" href="#special-case"><bdi class="secno">3.4.6 </bdi>Special case</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#web-security-and-privacy-technologies"><bdi class="secno">4. </bdi>Web Security and Privacy Technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#description-of-the-technologies"><bdi class="secno">4.1 </bdi>Description of the technologies</a></li><li class="tocline"><a class="tocxref" href="#challenges-of-security-and-privacy-for-people-with-cognitive-disabilities"><bdi class="secno">4.2 </bdi>
@@ -2260,7 +1815,9 @@ var[data-type]:hover::before {
                 Perception-processing limitations
             </a></li><li class="tocline"><a class="tocxref" href="#reduced-knowledge"><bdi class="secno">4.2.7 </bdi>
                 Reduced knowledge
-            </a></li></ol></li><li class="tocline"><a class="tocxref" href="#proposed-solutions"><bdi class="secno">4.3 </bdi> Proposed solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#w3c-recommended-guidelines-and-techniques"><bdi class="secno">4.3.1 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> recommended guidelines and techniques</a></li><li class="tocline"><a class="tocxref" href="#ease-of-use-ideas"><bdi class="secno">4.3.2 </bdi>Ease-of-use ideas</a></li><li class="tocline"><a class="tocxref" href="#alternative-web-security-and-privacy-technologies"><bdi class="secno">4.3.3 </bdi>Alternative web security and privacy technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#captcha-alternatives"><bdi class="secno">4.3.3.1 </bdi><abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> alternatives</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#supplementing-text-with-multi-modal-content"><bdi class="secno">5. </bdi>Supplementing text with multi-modal content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-1"><bdi class="secno">5.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#challenges-of-text-for-people-with-cognitive-disabilities"><bdi class="secno">5.2 </bdi> Challenges of text for people with cognitive disabilities </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#memory-0"><bdi class="secno">5.2.1 </bdi>Memory </a></li><li class="tocline"><a class="tocxref" href="#executive-function-0"><bdi class="secno">5.2.2 </bdi>Executive function </a></li><li class="tocline"><a class="tocxref" href="#attention-related-limitations-0"><bdi class="secno">5.2.3 </bdi>Attention-related limitations </a></li><li class="tocline"><a class="tocxref" href="#language-related-functions"><bdi class="secno">5.2.4 </bdi>Language-related functions </a></li><li class="tocline"><a class="tocxref" href="#literacy-related-functions"><bdi class="secno">5.2.5 </bdi>Literacy-related functions </a></li><li class="tocline"><a class="tocxref" href="#perception-processing-limitations-0"><bdi class="secno">5.2.6 </bdi>Perception-processing limitations </a></li><li class="tocline"><a class="tocxref" href="#reduced-knowledge-0"><bdi class="secno">5.2.7 </bdi>Reduced knowledge </a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-cases-for-multi-modal-content"><bdi class="secno">5.3 </bdi>Use cases for multi-modal content</a></li><li class="tocline"><a class="tocxref" href="#ways-to-enhance-text-with-multi-modal-content"><bdi class="secno">5.4 </bdi> Ways to enhance text with multi-modal content</a></li><li class="tocline"><a class="tocxref" href="#ease-of-use-ideas-0"><bdi class="secno">5.5 </bdi>Ease-of-use ideas</a></li></ol></li><li class="tocline"><a class="tocxref" href="#distractions"><bdi class="secno">6. </bdi>Distractions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-2"><bdi class="secno">6.1 </bdi>Introduction		  </a></li><li class="tocline"><a class="tocxref" href="#source-of-distraction"><bdi class="secno">6.2 </bdi>Source of distraction</a></li><li class="tocline"><a class="tocxref" href="#distractions-and-people-with-cognitive-disabilities"><bdi class="secno">6.3 </bdi>Distractions and people with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-0"><bdi class="secno">6.4 </bdi>Proposed solutions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informing-content-providers-of-needs"><bdi class="secno">6.4.1 </bdi>Informing content providers of needs</a></li><li class="tocline"><a class="tocxref" href="#overlays-pop-up-or-pop-over-windows"><bdi class="secno">6.4.2 </bdi>Overlays, pop up or pop over windows</a></li><li class="tocline"><a class="tocxref" href="#adverts"><bdi class="secno">6.4.3 </bdi>Adverts</a></li><li class="tocline"><a class="tocxref" href="#notifications"><bdi class="secno">6.4.4 </bdi>Notifications</a></li><li class="tocline"><a class="tocxref" href="#distracting-content-adwords-blinking-text-unexpected-changes-in-content-etc"><bdi class="secno">6.4.5 </bdi>Distracting Content (Adwords, blinking text, unexpected changes in content etc)</a></li><li class="tocline"><a class="tocxref" href="#application-install-prompts"><bdi class="secno">6.4.6 </bdi>Application install prompts</a></li></ol></li><li class="tocline"><a class="tocxref" href="#integrated-solution"><bdi class="secno">6.5 </bdi>Integrated  solution</a></li><li class="tocline"><a class="tocxref" href="#related-links"><bdi class="secno">6.6 </bdi>Related links</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voice-systems"><bdi class="secno">7. </bdi>Voice Systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-3"><bdi class="secno">7.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#challenges-for-people-with-cognitive-disabilities"><bdi class="secno">7.2 </bdi> Challenges for People with Cognitive Disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#effect-of-memory-impairments-on-users-ability-to-understand-and-respond-to-prompts"><bdi class="secno">7.2.1 </bdi> Effect of memory impairments on users' ability to understand and respond to prompts</a></li><li class="tocline"><a class="tocxref" href="#executive-function-1"><bdi class="secno">7.2.2 </bdi> Executive function </a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-reasoning"><bdi class="secno">7.2.3 </bdi> Effect of impaired reasoning </a></li><li class="tocline"><a class="tocxref" href="#effect-of-attention-related-limitations"><bdi class="secno">7.2.4 </bdi>Effect of attention related limitations</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-language-and-auditory-perception-related-functions"><bdi class="secno">7.2.5 </bdi> Effect of impaired language and auditory perception related functions</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-speech-and-language-production-functions-for-speech-recognition-systems"><bdi class="secno">7.2.6 </bdi> Effect of impaired speech and language production functions (for speech-recognition systems)</a></li><li class="tocline"><a class="tocxref" href="#effect-of-reduced-knowledge"><bdi class="secno">7.2.7 </bdi>Effect of reduced knowledge</a></li></ol></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-1"><bdi class="secno">7.3 </bdi>Proposed solutions </a></li><li class="tocline"><a class="tocxref" href="#references-0"><bdi class="secno">7.4 </bdi> References</a></li></ol></li><li class="tocline"><a class="tocxref" href="#online-payments"><bdi class="secno">8. </bdi>Online Payments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-4"><bdi class="secno">8.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#use-case"><bdi class="secno">8.2 </bdi>Use Case</a></li><li class="tocline"><a class="tocxref" href="#challenges-of-web-payments-for-people-with-cognitive-disabilities"><bdi class="secno">8.3 </bdi>Challenges of web payments for people with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-2"><bdi class="secno">8.4 </bdi>Proposed solutions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#navigation"><bdi class="secno">8.4.1 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#functionality"><bdi class="secno">8.4.2 </bdi>Functionality</a></li><li class="tocline"><a class="tocxref" href="#content-and-text"><bdi class="secno">8.4.3 </bdi>Content and text</a></li><li class="tocline"><a class="tocxref" href="#layout"><bdi class="secno">8.4.4 </bdi>Layout</a></li><li class="tocline"><a class="tocxref" href="#multimedia"><bdi class="secno">8.4.5 </bdi>Multimedia</a></li></ol></li><li class="tocline"><a class="tocxref" href="#reference-used"><bdi class="secno">8.5 </bdi>Reference Used:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#online-safety"><bdi class="secno">9. </bdi>Online Safety</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-5"><bdi class="secno">9.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#safety-issues-for-people-with-cognitive-disabilities"><bdi class="secno">9.2 </bdi>Safety issues for people with cognitive disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hackers"><bdi class="secno">9.2.1 </bdi>Hackers</a></li><li class="tocline"><a class="tocxref" href="#con-artists"><bdi class="secno">9.2.2 </bdi>Con-artists </a></li><li class="tocline"><a class="tocxref" href="#sexual-predators"><bdi class="secno">9.2.3 </bdi>Sexual predators</a></li><li class="tocline"><a class="tocxref" href="#personalization-problems"><bdi class="secno">9.2.4 </bdi>Personalization problems</a></li></ol></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-3"><bdi class="secno">9.3 </bdi>Proposed Solutions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hackers-0"><bdi class="secno">9.3.1 </bdi>Hackers</a></li><li class="tocline"><a class="tocxref" href="#sexual-predators-and-con-artists"><bdi class="secno">9.3.2 </bdi>Sexual predators and con-artists</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">9.4 </bdi>Acknowledgments</a></li></ol></li><li class="tocline"><a class="tocxref" href="#symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">10. </bdi>Symbol users with Speech, Language and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-6"><bdi class="secno">10.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#challenges-for-people-with-cognitive-disabilities-using-symbols"><bdi class="secno">10.2 </bdi> Challenges for people with cognitive disabilities using symbols</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#memory-1"><bdi class="secno">10.2.1 </bdi>Memory </a></li><li class="tocline"><a class="tocxref" href="#reasoning-and-executive-function"><bdi class="secno">10.2.2 </bdi>Reasoning and executive function</a></li><li class="tocline"><a class="tocxref" href="#attention-related-limitations-1"><bdi class="secno">10.2.3 </bdi>Attention-related limitations</a></li><li class="tocline"><a class="tocxref" href="#language-and-auditory-perception-related-functions"><bdi class="secno">10.2.4 </bdi>Language and auditory perception related functions</a></li><li class="tocline"><a class="tocxref" href="#literacy-related-functions-0"><bdi class="secno">10.2.5 </bdi>Literacy-related functions</a></li><li class="tocline"><a class="tocxref" href="#knowledge"><bdi class="secno">10.2.6 </bdi>Knowledge</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#use-of-numbers-and-math-on-the-web"><bdi class="secno">11. </bdi>Use of Numbers and Math on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-7"><bdi class="secno">11.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#specific-categories"><bdi class="secno">11.2 </bdi>Specific Categories</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#effect-of-memory-impairments"><bdi class="secno">11.2.1 </bdi>Effect of memory impairments</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-executive-function"><bdi class="secno">11.2.2 </bdi>Effect of impaired executive function</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-reasoning-0"><bdi class="secno">11.2.3 </bdi>Effect of impaired reasoning</a></li><li class="tocline"><a class="tocxref" href="#effect-of-attention-related-limitations-0"><bdi class="secno">11.2.4 </bdi>Effect of attention-related limitations</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-language-related-functions"><bdi class="secno">11.2.5 </bdi>Effect of impaired language related functions</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-literacy-related-functions"><bdi class="secno">11.2.6 </bdi>Effect of impaired literacy related functions</a></li><li class="tocline"><a class="tocxref" href="#effect-of-perception-processing-limitations"><bdi class="secno">11.2.7 </bdi>Effect of perception-processing limitations</a></li><li class="tocline"><a class="tocxref" href="#effect-of-reduced-knowledge-0"><bdi class="secno">11.2.8 </bdi>Effect of reduced knowledge</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-understanding-of-behaviours-or-consciousness"><bdi class="secno">11.2.9 </bdi>Effect of impaired understanding of behaviours or consciousness</a></li></ol></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-4"><bdi class="secno">11.3 </bdi>Proposed Solutions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#significant-contributors-to-the-issue-papers"><bdi class="secno">12. </bdi>Significant contributors to the issue papers </a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+            </a></li></ol></li><li class="tocline"><a class="tocxref" href="#proposed-solutions"><bdi class="secno">4.3 </bdi> Proposed solutions </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#w3c-recommended-guidelines-and-techniques"><bdi class="secno">4.3.1 </bdi><abbr title="World Wide Web Consortium">W3C</abbr> recommended guidelines and techniques</a></li><li class="tocline"><a class="tocxref" href="#ease-of-use-ideas"><bdi class="secno">4.3.2 </bdi>Ease-of-use ideas</a></li><li class="tocline"><a class="tocxref" href="#alternative-web-security-and-privacy-technologies"><bdi class="secno">4.3.3 </bdi>Alternative web security and privacy technologies</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#captcha-alternatives"><bdi class="secno">4.3.3.1 </bdi><abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> alternatives</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#supplementing-text-with-multi-modal-content"><bdi class="secno">5. </bdi>Supplementing text with multi-modal content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-1"><bdi class="secno">5.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#challenges-of-text-for-people-with-cognitive-disabilities"><bdi class="secno">5.2 </bdi> Challenges of text for people with cognitive disabilities </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#memory-0"><bdi class="secno">5.2.1 </bdi>Memory </a></li><li class="tocline"><a class="tocxref" href="#executive-function-0"><bdi class="secno">5.2.2 </bdi>Executive function </a></li><li class="tocline"><a class="tocxref" href="#attention-related-limitations-0"><bdi class="secno">5.2.3 </bdi>Attention-related limitations </a></li><li class="tocline"><a class="tocxref" href="#language-related-functions"><bdi class="secno">5.2.4 </bdi>Language-related functions </a></li><li class="tocline"><a class="tocxref" href="#literacy-related-functions"><bdi class="secno">5.2.5 </bdi>Literacy-related functions </a></li><li class="tocline"><a class="tocxref" href="#perception-processing-limitations-0"><bdi class="secno">5.2.6 </bdi>Perception-processing limitations </a></li><li class="tocline"><a class="tocxref" href="#reduced-knowledge-0"><bdi class="secno">5.2.7 </bdi>Reduced knowledge </a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-cases-for-multi-modal-content"><bdi class="secno">5.3 </bdi>Use cases for multi-modal content</a></li><li class="tocline"><a class="tocxref" href="#ways-to-enhance-text-with-multi-modal-content"><bdi class="secno">5.4 </bdi> Ways to enhance text with multi-modal content</a></li><li class="tocline"><a class="tocxref" href="#ease-of-use-ideas-0"><bdi class="secno">5.5 </bdi>Ease-of-use ideas</a></li></ol></li><li class="tocline"><a class="tocxref" href="#distractions"><bdi class="secno">6. </bdi>Distractions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-2"><bdi class="secno">6.1 </bdi>Introduction		  </a></li><li class="tocline"><a class="tocxref" href="#source-of-distraction"><bdi class="secno">6.2 </bdi>Source of distraction</a></li><li class="tocline"><a class="tocxref" href="#distractions-and-people-with-cognitive-disabilities"><bdi class="secno">6.3 </bdi>Distractions and people with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-0"><bdi class="secno">6.4 </bdi>Proposed solutions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informing-content-providers-of-needs"><bdi class="secno">6.4.1 </bdi>Informing content providers of needs</a></li><li class="tocline"><a class="tocxref" href="#overlays-pop-up-or-pop-over-windows"><bdi class="secno">6.4.2 </bdi>Overlays, pop up or pop over windows</a></li><li class="tocline"><a class="tocxref" href="#adverts"><bdi class="secno">6.4.3 </bdi>Adverts</a></li><li class="tocline"><a class="tocxref" href="#notifications"><bdi class="secno">6.4.4 </bdi>Notifications</a></li><li class="tocline"><a class="tocxref" href="#distracting-content-adwords-blinking-text-unexpected-changes-in-content-etc"><bdi class="secno">6.4.5 </bdi>Distracting Content (Adwords, blinking text, unexpected changes in content etc)</a></li><li class="tocline"><a class="tocxref" href="#application-install-prompts"><bdi class="secno">6.4.6 </bdi>Application install prompts</a></li></ol></li><li class="tocline"><a class="tocxref" href="#integrated-solution"><bdi class="secno">6.5 </bdi>Integrated  solution</a></li><li class="tocline"><a class="tocxref" href="#related-links"><bdi class="secno">6.6 </bdi>Related links</a></li></ol></li><li class="tocline"><a class="tocxref" href="#voice-systems"><bdi class="secno">7. </bdi>Voice Systems</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-3"><bdi class="secno">7.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#challenges-for-people-with-cognitive-disabilities"><bdi class="secno">7.2 </bdi> Challenges for People with Cognitive Disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#effect-of-memory-impairments-on-users-ability-to-understand-and-respond-to-prompts"><bdi class="secno">7.2.1 </bdi> Effect of memory impairments on users' ability to understand and respond to prompts</a></li><li class="tocline"><a class="tocxref" href="#executive-function-1"><bdi class="secno">7.2.2 </bdi> Executive function </a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-reasoning"><bdi class="secno">7.2.3 </bdi> Effect of impaired reasoning </a></li><li class="tocline"><a class="tocxref" href="#effect-of-attention-related-limitations"><bdi class="secno">7.2.4 </bdi>Effect of attention related limitations</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-language-and-auditory-perception-related-functions"><bdi class="secno">7.2.5 </bdi> Effect of impaired language and auditory perception related functions</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-speech-and-language-production-functions-for-speech-recognition-systems"><bdi class="secno">7.2.6 </bdi> Effect of impaired speech and language production functions (for speech-recognition systems)</a></li><li class="tocline"><a class="tocxref" href="#effect-of-reduced-knowledge"><bdi class="secno">7.2.7 </bdi>Effect of reduced knowledge</a></li></ol></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-1"><bdi class="secno">7.3 </bdi>Proposed solutions </a></li><li class="tocline"><a class="tocxref" href="#references-0"><bdi class="secno">7.4 </bdi> References</a></li></ol></li><li class="tocline"><a class="tocxref" href="#online-payments"><bdi class="secno">8. </bdi>Online Payments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-4"><bdi class="secno">8.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#use-case"><bdi class="secno">8.2 </bdi>Use Case</a></li><li class="tocline"><a class="tocxref" href="#challenges-of-web-payments-for-people-with-cognitive-disabilities"><bdi class="secno">8.3 </bdi>Challenges of web payments for people with cognitive disabilities</a></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-2"><bdi class="secno">8.4 </bdi>Proposed solutions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#navigation"><bdi class="secno">8.4.1 </bdi>Navigation</a></li><li class="tocline"><a class="tocxref" href="#functionality"><bdi class="secno">8.4.2 </bdi>Functionality</a></li><li class="tocline"><a class="tocxref" href="#content-and-text"><bdi class="secno">8.4.3 </bdi>Content and text</a></li><li class="tocline"><a class="tocxref" href="#layout"><bdi class="secno">8.4.4 </bdi>Layout</a></li><li class="tocline"><a class="tocxref" href="#multimedia"><bdi class="secno">8.4.5 </bdi>Multimedia</a></li></ol></li><li class="tocline"><a class="tocxref" href="#reference-used"><bdi class="secno">8.5 </bdi>Reference Used:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#online-safety"><bdi class="secno">9. </bdi>Online Safety</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-5"><bdi class="secno">9.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#safety-issues-for-people-with-cognitive-disabilities"><bdi class="secno">9.2 </bdi>Safety issues for people with cognitive disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hackers"><bdi class="secno">9.2.1 </bdi>Hackers</a></li><li class="tocline"><a class="tocxref" href="#con-artists"><bdi class="secno">9.2.2 </bdi>Con-artists </a></li><li class="tocline"><a class="tocxref" href="#sexual-predators"><bdi class="secno">9.2.3 </bdi>Sexual predators</a></li><li class="tocline"><a class="tocxref" href="#personalization-problems"><bdi class="secno">9.2.4 </bdi>Personalization problems</a></li></ol></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-3"><bdi class="secno">9.3 </bdi>Proposed Solutions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hackers-0"><bdi class="secno">9.3.1 </bdi>Hackers</a></li><li class="tocline"><a class="tocxref" href="#sexual-predators-and-con-artists"><bdi class="secno">9.3.2 </bdi>Sexual predators and con-artists</a></li></ol></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">9.4 </bdi>Acknowledgments</a></li></ol></li><li class="tocline"><a class="tocxref" href="#symbol-users-with-speech-language-and-literacy-difficulties"><bdi class="secno">10. </bdi>Symbol users with Speech, Language and Literacy Difficulties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-6"><bdi class="secno">10.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#challenges-for-people-with-cognitive-disabilities-using-symbols"><bdi class="secno">10.2 </bdi> Challenges for people with cognitive disabilities using symbols</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#memory-1"><bdi class="secno">10.2.1 </bdi>Memory </a></li><li class="tocline"><a class="tocxref" href="#reasoning-and-executive-function"><bdi class="secno">10.2.2 </bdi>Reasoning and executive function</a></li><li class="tocline"><a class="tocxref" href="#attention-related-limitations-1"><bdi class="secno">10.2.3 </bdi>Attention-related limitations</a></li><li class="tocline"><a class="tocxref" href="#language-and-auditory-perception-related-functions"><bdi class="secno">10.2.4 </bdi>Language and auditory perception related functions</a></li><li class="tocline"><a class="tocxref" href="#literacy-related-functions-0"><bdi class="secno">10.2.5 </bdi>Literacy-related functions</a></li><li class="tocline"><a class="tocxref" href="#knowledge"><bdi class="secno">10.2.6 </bdi>Knowledge</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#use-of-numbers-and-math-on-the-web"><bdi class="secno">11. </bdi>Use of Numbers and Math on the Web</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#introduction-7"><bdi class="secno">11.1 </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#specific-categories"><bdi class="secno">11.2 </bdi>Specific Categories</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#effect-of-memory-impairments"><bdi class="secno">11.2.1 </bdi>Effect of memory impairments</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-executive-function"><bdi class="secno">11.2.2 </bdi>Effect of impaired executive function</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-reasoning-0"><bdi class="secno">11.2.3 </bdi>Effect of impaired reasoning</a></li><li class="tocline"><a class="tocxref" href="#effect-of-attention-related-limitations-0"><bdi class="secno">11.2.4 </bdi>Effect of attention-related limitations</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-language-related-functions"><bdi class="secno">11.2.5 </bdi>Effect of impaired language related functions</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-literacy-related-functions"><bdi class="secno">11.2.6 </bdi>Effect of impaired literacy related functions</a></li><li class="tocline"><a class="tocxref" href="#effect-of-perception-processing-limitations"><bdi class="secno">11.2.7 </bdi>Effect of perception-processing limitations</a></li><li class="tocline"><a class="tocxref" href="#effect-of-reduced-knowledge-0"><bdi class="secno">11.2.8 </bdi>Effect of reduced knowledge</a></li><li class="tocline"><a class="tocxref" href="#effect-of-impaired-understanding-of-behaviours-or-consciousness"><bdi class="secno">11.2.9 </bdi>Effect of impaired understanding of behaviours or consciousness</a></li></ol></li><li class="tocline"><a class="tocxref" href="#proposed-solutions-4"><bdi class="secno">11.3 </bdi>Proposed Solutions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#significant-contributors-to-the-issue-papers"><bdi class="secno">12. </bdi>Significant contributors to the issue papers </a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">A.1 </bdi>
+        Informative references
+      </a></li></ol></li></ol></nav>
 	<section id="introduction">
 			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#introduction"></a></h2>
 		</section>
@@ -2416,7 +1973,7 @@ var[data-type]:hover::before {
       <li>Symbol support for interoperability:
         <ol>
           <li>The Noun Project (icons) (see The Noun Project [<cite><a class="bibref" data-link-type="biblio" href="#bib-noun-project-1" title="undefined">Noun-Project-1</a></cite>]);</li>
-          <li>Max Lundälv (concept coding framework) (se AAC Vocabulary Standardisation and Harmonisatione [[Lundälv-1]];</li>
+          <li>Max Lundälv (concept coding framework) (se AAC Vocabulary Standardisation and Harmonisatione [<cite><a class="bibref" data-link-type="biblio" href="#bib-lundälv-1" title="AAC Vocabulary Standardisation and Harmonisation">Lundälv-1</a></cite>];</li>
           <li>Arabic symbol dictionary (see Arab Symbol Dictionary for AAC [<cite><a class="bibref" data-link-type="biblio" href="#bib-ecs-1" title="Arab Symbol Dictionary for AAC">ECS-1</a></cite>];</li>
           <li>ARASAAC symbols; </li>
       </ol>
@@ -2444,8 +2001,8 @@ var[data-type]:hover::before {
     </section><section id="adding-to-ways-we-can-address-personalization">
       <h5 id="x3-4-2-3-adding-to-ways-we-can-address-personalization"><bdi class="secno">3.4.2.3 </bdi>Adding to ways we can address personalization<a class="self-link" aria-label="§" href="#adding-to-ways-we-can-address-personalization"></a></h5>
       <ol>
-        <li>User <abbr title="Cascading Style Sheets">CSS</abbr> [<cite><a class="bibref" data-link-type="biblio" href="#bib-css-2017" title="CSS Snapshot 2017">CSS-2017</a></cite>] allowing an ARIA [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.0">wai-aria</a></cite>] role for extra help to be loaded However, user style sheets are being deprecated.</li>
-        <li>RDF [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-concepts" title="Resource Description Framework (RDF): Concepts and Abstract Syntax">rdf-concepts</a></cite>] and RDFA [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdfa-core" title="RDFa Core 1.1 - Third Edition">rdfa-core</a></cite>] . Issues with these solutions include adaptability and whether typical authors will use them correctly and without errors.</li>
+        <li>User <abbr title="Cascading Style Sheets">CSS</abbr> [<cite><a class="bibref" data-link-type="biblio" href="#bib-css-2017" title="CSS Snapshot 2017">CSS-2017</a></cite>] allowing an ARIA [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria">wai-aria</a></cite>] role for extra help to be loaded However, user style sheets are being deprecated.</li>
+        <li>RDF [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdf-concepts">rdf-concepts</a></cite>] and RDFA [<cite><a class="bibref" data-link-type="biblio" href="#bib-rdfa-core">rdfa-core</a></cite>] . Issues with these solutions include adaptability and whether typical authors will use them correctly and without errors.</li>
         <li>Create additional semantics such as	mentioned	in	the	issue paper Proposal for Additional Page Semantics.	These semantics, as well as element names, landmarks, Indi UI and WAI-ARIA roles can be linked to user preference to enable the interface to be adapted. A demonstration can be found from our <a href="https://www.w3.org/WAI/PF/cognitive-a11y-tf/wiki/Main_Page">wiki</a>.</li>
       </ol>
       <p>If there is an output we will need data binding.</p>
@@ -2540,7 +2097,7 @@ var[data-type]:hover::before {
             <li>
                 may be afraid to trust a web site, thus causing them to cancel a transaction.
                 <ul>
-                    <li>Note: This is of particular concern for efforts to personalize web sites so they conform to users' accessibility preferences. (E.g., users may be asked whether they trust a web site in order to pass such preferences.) (See [<cite><a class="bibref" data-link-type="biblio" href="#bib-indie-ui-events" title="IndieUI: Events 1.0">indie-ui-events</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-gpii-1">GPII-1</a></cite>])</li>
+                    <li>Note: This is of particular concern for efforts to personalize web sites so they conform to users' accessibility preferences. (E.g., users may be asked whether they trust a web site in order to pass such preferences.) (See [<cite><a class="bibref" data-link-type="biblio" href="#bib-indie-ui-events">indie-ui-events</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-gpii-1">GPII-1</a></cite>])</li>
                 </ul>
             </li>
         </ul>
@@ -2649,20 +2206,20 @@ var[data-type]:hover::before {
                 <li>
                     Provide text alternatives that identify and describe the purpose of the non-text content.
                     <ul>
-                        <li>See [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20" title="Web Content Accessibility Guidelines (WCAG) 2.0">WCAG20</a></cite>]  <a href="http://www.w3.org/TR/WCAG20/#text-equiv">Guideline 1.1</a>.</li>
+                        <li>See [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20">WCAG20</a></cite>]  <a href="http://www.w3.org/TR/WCAG20/#text-equiv">Guideline 1.1</a>.</li>
                     </ul>
                 </li>
                 <li>
                     Turn off or adjust time limits, including allowing continuation of activity without reauthentication.
                     <ul>
-                        <li>See[<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20" title="Web Content Accessibility Guidelines (WCAG) 2.0">WCAG20</a></cite>], <a href="http://www.w3.org/TR/WCAG20/#time-limits">Guideline 2.2</a>.</li>
+                        <li>See[<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20">WCAG20</a></cite>], <a href="http://www.w3.org/TR/WCAG20/#time-limits">Guideline 2.2</a>.</li>
                     </ul>
                 </li>
                 <li>
                     Help users avoid and correct mistakes.
                     <ul>
                         <li>
-                            See [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20" title="Web Content Accessibility Guidelines (WCAG) 2.0">WCAG20</a></cite>],
+                            See [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20">WCAG20</a></cite>],
                             <a href="http://www.w3.org/TR/WCAG20/#minimize-error">Guideline 3.3</a>.
                         </li>
                     </ul>
@@ -2671,7 +2228,7 @@ var[data-type]:hover::before {
                     Save submitted data for reuse after a user authenticates.
                     <ul>
                         <li>
-                            See [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20" title="Web Content Accessibility Guidelines (WCAG) 2.0">WCAG20</a></cite>],
+                            See [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20">WCAG20</a></cite>],
                             <a href="http://www.w3.org/TR/WCAG20-TECHS/G105.html">Technique G105</a>.
                         </li>
                     </ul>
@@ -2680,7 +2237,7 @@ var[data-type]:hover::before {
                     Encode user data as hidden or encrypted in a re-authorization page.
                     <ul>
                         <li>
-                            See[<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20" title="Web Content Accessibility Guidelines (WCAG) 2.0">WCAG20</a></cite>],
+                            See[<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag20">WCAG20</a></cite>],
                             <a href="http://www.w3.org/TR/WCAG20-TECHS/G181.html">Technique G181</a>.
                         </li>
                     </ul>
@@ -2736,7 +2293,7 @@ var[data-type]:hover::before {
                             </ul>
                         </li>
                         <li>In subsequent authentication sessions, the server will either automatically retrieve the private key, or prompt the user to select it.</li>
-                        <li>See [<cite><a class="bibref" data-link-type="biblio" href="#bib-html5" title="HTML5">html5</a></cite>]   <a href="http://www.w3.org/TR/html5/forms.html#the-keygen-element"> 4.10.12 The keygen element</a>.</li>
+                        <li>See [<cite><a class="bibref" data-link-type="biblio" href="#bib-html5">html5</a></cite>]   <a href="http://www.w3.org/TR/html5/forms.html#the-keygen-element"> 4.10.12 The keygen element</a>.</li>
                     </ul>
                 </li>
                 <li>
@@ -2753,7 +2310,7 @@ var[data-type]:hover::before {
             <section id="captcha-alternatives">
                 <h5 id="x4-3-3-1-captcha-alternatives"><bdi class="secno">4.3.3.1 </bdi><abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr> alternatives<a class="self-link" aria-label="§" href="#captcha-alternatives"></a></h5>
                 <ul>
-                    <li>Inaccessibility of <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr>: Alternatives to Visual Turing Tests on the Web [<cite><a class="bibref" data-link-type="biblio" href="#bib-turingtest" title="Inaccessibility of CAPTCHA">turingtest</a></cite>]</li>
+                    <li>Inaccessibility of <abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr>: Alternatives to Visual Turing Tests on the Web [<cite><a class="bibref" data-link-type="biblio" href="#bib-turingtest">turingtest</a></cite>]</li>
                     <li> Determine the time difference between when a web form is loaded and when it is submitted. If it is submitted quickly, which may be indicative of a spambot, discard the submission. Otherwise, keep it.</li>
                     <li><a href="http://www.karlgroves.com/2012/04/03/captcha-less-security/"><abbr title="Completely Automated Public Turing test to tell Computers and Humans Apart">CAPTCHA</abbr>-less Security</a>, Karl Groves, April, 2012.</li>
                     <li>
@@ -3081,7 +2638,7 @@ var[data-type]:hover::before {
 
             Voice systems are often implemented with the <abbr title="World Wide Web Consortium">W3C</abbr> VoiceXML standard and supporting standards from the 
             Voice Browser Working Group.
-            <p>See [<cite><a class="bibref" data-link-type="biblio" href="#bib-voicexml20" title="Voice Extensible Markup Language (VoiceXML) Version 2.0">voicexml20</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-voicexml21" title="Voice Extensible Markup Language (VoiceXML) 2.1">voicexml21</a></cite>]
+            <p>See [<cite><a class="bibref" data-link-type="biblio" href="#bib-voicexml20">voicexml20</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-voicexml21">voicexml21</a></cite>]
             </p>
             <p>However, it is important to emphasize that issues of cognitive accessibility for voice systems
                 apply without regard to whether
@@ -3094,7 +2651,7 @@ var[data-type]:hover::before {
                     For Stargazer astrophysics press 3." The system then waits for a response.</li>
                 <li> Accessibility is discussed for the hard of hearing, and 
                     WCAG and WAI specification are cited as being relevant 
-                    (see [[VoiceXML2.0#accessibility]])
+                    (see [<cite><a class="bibref" data-link-type="biblio" href="#bib-voicexml2.0#accessibility">VoiceXML2.0#accessibility</a></cite>])
                     Beyond that, no examples or concerns are identified for cognitive accessibility.</li>
 
             </ul>
@@ -3779,10 +3336,14 @@ var[data-type]:hover::before {
             <dd>Invited expert, IBM Corporation</dd>
           </dl>
         </section>
-	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'57d95c7feb2eebf8',m:'9e3e118177b0da2de39fb1d85c42704bc54bc2c6-1585818045-1800-ARnJenophQt8YFD+wT+Hcu7uPQygHr7xxwzpIZhj7Qv9BeiLcwK6uxzUazg6tEH+UindiG4bb9Sd6npbnSS2T02yLkR4bn6ocfqubkdXxMUgrs3fI1CF8la6z+QBbfyP4SireZpY1csv1I3K+DkbvS6ODrswW6PmShLLxbdQPeAkvUkhPZRkO5plo6DaEMjZSw==',s:[0x99527b8356,0x9c44c48dcb],fb:0,}})();</script>
+	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'58b1bcb06cffea0c',m:'af2ecf2d21cfecc6ba3e964995ca5da1298542e3-1588086909-1800-AW4e1LHv45P8nPkujDNwm/Eq8b4Ir4f+PyVFc2Gf0biYG4mFvLWu9WfTyXjoPL1BSGBbltDrk2ztpYiaYPBVLwCfNHn2nPDJ+PRUuriI8N+msK5h2SF6wVoR9pZi4kVmfP9zxc+vhN6KX88C9DyURIIrrdctUVgIsYAf7oI+ZCPm1NZQ6vaw+43MGhAChwlO9g==',s:[0x56f74e9c46,0xd77b7ef84e],fb:0,}})();</script>
 
 <section id="references" class="appendix"><h2 id="a-references"><bdi class="secno">A. </bdi>References<a class="self-link" aria-label="§" href="#references"></a></h2><section id="informative-references">
-        <h3 id="a-1-informative-references"><bdi class="secno">A.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-      <dl class="bibliography">
-        <dt id="bib-carter-1">[Carter-1]</dt><dd><a href="https://www.youtube.com/watch?v=2QkbVr4J7CM"><cite>UltraHaptics: Multi-Point Mid-Air Haptic Feedback for Touch Surfaces</cite></a>. Carter, T.; Seah, S. A. et al.  BristolIG. URL: <a href="https://www.youtube.com/watch?v=2QkbVr4J7CM">https://www.youtube.com/watch?v=2QkbVr4J7CM</a></dd><dt id="bib-coga-1">[COGA-1]</dt><dd><a href="https://www.w3.org/TR/coga-user-research/#aging-and-dementia"><cite>Cognitive Accessibility User Research; Aging and Dementia</cite></a>.  W3C. URL: <a href="https://www.w3.org/TR/coga-user-research/#aging-and-dementia">https://www.w3.org/TR/coga-user-research/#aging-and-dementia</a></dd><dt id="bib-coga-gap-analysis">[coga-gap-analysis]</dt><dd><a href="https://w3c.github.io/coga/gap-analysis/"><cite>Cognitive Accessibility Roadmap and Gap Analysis</cite></a>.  W3C. URL: <a href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd><dt id="bib-coga-user-research">[coga-user-research]</dt><dd><a href="https://www.w3.org/TR/coga-user-research/"><cite>Cognitive Accessibility User Research</cite></a>. Lisa Seeman-Kestenbaum; Michael Cooper.  W3C. 15 January 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/coga-user-research/">https://www.w3.org/TR/coga-user-research/</a></dd><dt id="bib-css-2017">[CSS-2017]</dt><dd><a href="https://www.w3.org/TR/css-2017/"><cite>CSS Snapshot 2017</cite></a>. Tab Atkins Jr.; Elika Etemad; Florian Rivoal.  W3C. 31 January 2017. W3C Note. URL: <a href="https://www.w3.org/TR/css-2017/">https://www.w3.org/TR/css-2017/</a></dd><dt id="bib-ecs-1">[ECS-1]</dt><dd><a href="http://access.ecs.soton.ac.uk/blog/symboldictionary/"><cite>Arab Symbol Dictionary for AAC</cite></a>.  ECS Accessibility Team. URL: <a href="http://access.ecs.soton.ac.uk/blog/symboldictionary/">http://access.ecs.soton.ac.uk/blog/symboldictionary/</a></dd><dt id="bib-etsi-1">[ETSI-1]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-2">[ETSI-2]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-3">[ETSI-3]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-4">[ETSI-4]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-gpii-1">[GPII-1]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-html5">[html5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd><dt id="bib-indie-ui-events">[indie-ui-events]</dt><dd><a href="https://www.w3.org/TR/indie-ui-events/"><cite>IndieUI: Events 1.0</cite></a>. James Craig; Michael Cooper.  W3C. 30 April 2015. W3C Working Draft. URL: <a href="https://www.w3.org/TR/indie-ui-events/">https://www.w3.org/TR/indie-ui-events/</a></dd><dt id="bib-noun-project-1">[Noun-Project-1]</dt><dd><a href="https://thenounproject.com/about/"><cite>undefined</cite></a>.  The Noun Project. URL: <a href="https://thenounproject.com/about/">https://thenounproject.com/about/</a></dd><dt id="bib-rdf-concepts">[rdf-concepts]</dt><dd><a href="https://www.w3.org/TR/rdf-concepts/"><cite>Resource Description Framework (RDF): Concepts and Abstract Syntax</cite></a>. Graham Klyne; Jeremy Carroll.  W3C. 10 February 2004. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf-concepts/">https://www.w3.org/TR/rdf-concepts/</a></dd><dt id="bib-rdfa-core">[rdfa-core]</dt><dd><a href="https://www.w3.org/TR/rdfa-core/"><cite>RDFa Core 1.1 - Third Edition</cite></a>. Ben Adida; Mark Birbeck; Shane McCarron; Ivan Herman et al.  W3C. 17 March 2015. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdfa-core/">https://www.w3.org/TR/rdfa-core/</a></dd><dt id="bib-turingtest">[turingtest]</dt><dd><a href="https://www.w3.org/TR/turingtest/"><cite>Inaccessibility of CAPTCHA</cite></a>. Scott Hollier; Janina Sajka; Jason White; Michael Cooper; Matthew May.  W3C. 9 December 2019. W3C Note. URL: <a href="https://www.w3.org/TR/turingtest/">https://www.w3.org/TR/turingtest/</a></dd><dt id="bib-voicexml20">[voicexml20]</dt><dd><a href="https://www.w3.org/TR/voicexml20/"><cite>Voice Extensible Markup Language (VoiceXML) Version 2.0</cite></a>. Scott McGlashan; Daniel Burnett; Jerry Carter; Peter Danielsen; Jim Ferrans; Andrew Hunt; Bruce Lucas; Brandon Porter; Kenneth Rehor; Steph Tryphonas et al.  W3C. 16 March 2004. W3C Recommendation. URL: <a href="https://www.w3.org/TR/voicexml20/">https://www.w3.org/TR/voicexml20/</a></dd><dt id="bib-voicexml21">[voicexml21]</dt><dd><a href="https://www.w3.org/TR/voicexml21/"><cite>Voice Extensible Markup Language (VoiceXML) 2.1</cite></a>. Matt Oshry; RJ Auburn; Paolo Baggia; Michael Bodell; David Burke; Daniel Burnett; Jerry Carter; Scott McGlashan; Alex Lee; Brandon Porter; Kenneth Rehor et al.  W3C. 19 June 2007. W3C Recommendation. URL: <a href="https://www.w3.org/TR/voicexml21/">https://www.w3.org/TR/voicexml21/</a></dd><dt id="bib-wai-aria">[wai-aria]</dt><dd><a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al.  W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><a href="https://www.w3.org/TR/WCAG20/"><cite>Web Content Accessibility Guidelines (WCAG) 2.0</cite></a>. Ben Caldwell; Michael Cooper; Loretta Guarino Reid; Gregg Vanderheiden et al.  W3C. 11 December 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/WCAG20/">https://www.w3.org/TR/WCAG20/</a></dd><dt id="bib-widgit-1">[Widgit-1]</dt><dd><a href="http://www.widgit.com/symbols/widgit_symbols.htm"><cite>Widgit Symbols</cite></a>. Widgit et al. URL: <a href="http://www.widgit.com/symbols/widgit_symbols.htm">http://www.widgit.com/symbols/widgit_symbols.htm</a></dd>
-      </dl></section></section><p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+      <h3 id="a-1-informative-references"><bdi class="secno">A.1 </bdi>
+        Informative references
+      <a class="self-link" aria-label="§" href="#informative-references"></a></h3>
+    <dl class="bibliography">
+      <dt id="bib-carter-1">[Carter-1]</dt><dd><a href="https://www.youtube.com/watch?v=2QkbVr4J7CM"><cite>UltraHaptics: Multi-Point Mid-Air Haptic Feedback for Touch Surfaces</cite></a>. Carter, T.; Seah, S. A. et al.  BristolIG. URL: <a href="https://www.youtube.com/watch?v=2QkbVr4J7CM">https://www.youtube.com/watch?v=2QkbVr4J7CM</a></dd><dt id="bib-coga-1">[COGA-1]</dt><dd><a href="https://www.w3.org/TR/coga-user-research/#aging-and-dementia"><cite>Cognitive Accessibility User Research; Aging and Dementia</cite></a>.  W3C. URL: <a href="https://www.w3.org/TR/coga-user-research/#aging-and-dementia">https://www.w3.org/TR/coga-user-research/#aging-and-dementia</a></dd><dt id="bib-coga-gap-analysis">[coga-gap-analysis]</dt><dd><a href="https://w3c.github.io/coga/gap-analysis/"><cite>Cognitive Accessibility Roadmap and Gap Analysis</cite></a>.  W3C. URL: <a href="https://w3c.github.io/coga/gap-analysis/">https://w3c.github.io/coga/gap-analysis/</a></dd><dt id="bib-coga-user-research">[coga-user-research]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-css-2017">[CSS-2017]</dt><dd><a href="https://www.w3.org/TR/css-2017/"><cite>CSS Snapshot 2017</cite></a>. Tab Atkins Jr.; Elika Etemad; Florian Rivoal.  W3C. 31 January 2017. W3C Note. URL: <a href="https://www.w3.org/TR/css-2017/">https://www.w3.org/TR/css-2017/</a></dd><dt id="bib-ecs-1">[ECS-1]</dt><dd><a href="http://access.ecs.soton.ac.uk/blog/symboldictionary/"><cite>Arab Symbol Dictionary for AAC</cite></a>.  ECS Accessibility Team. URL: <a href="http://access.ecs.soton.ac.uk/blog/symboldictionary/">http://access.ecs.soton.ac.uk/blog/symboldictionary/</a></dd><dt id="bib-etsi-1">[ETSI-1]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-2">[ETSI-2]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-3">[ETSI-3]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-etsi-4">[ETSI-4]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-gpii-1">[GPII-1]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-html5">[html5]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-indie-ui-events">[indie-ui-events]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-lundälv-1">[Lundälv-1]</dt><dd><a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46"><cite>AAC Vocabulary Standardisation and Harmonisation</cite></a>. Lundälv, M.; Derbring, S. et al.  Computers Helping People with Special Needs, Lecture Notes in Computer Science, Vol. 7383, pages 303-310. URL: <a href="http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46">http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46</a></dd><dt id="bib-noun-project-1">[Noun-Project-1]</dt><dd><a href="https://thenounproject.com/about/"><cite>undefined</cite></a>.  The Noun Project. URL: <a href="https://thenounproject.com/about/">https://thenounproject.com/about/</a></dd><dt id="bib-rdf-concepts">[rdf-concepts]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-rdfa-core">[rdfa-core]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-turingtest">[turingtest]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-voicexml2.0#accessibility">[VoiceXML2.0#accessibility]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-voicexml20">[voicexml20]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-voicexml21">[voicexml21]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-wai-aria">[wai-aria]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-wcag20">[WCAG20]</dt><dd><em class="respec-offending-element">Reference not found.</em></dd><dt id="bib-widgit-1">[Widgit-1]</dt><dd><a href="http://www.widgit.com/symbols/widgit_symbols.htm"><cite>Widgit Symbols</cite></a>. Widgit et al. URL: <a href="http://www.widgit.com/symbols/widgit_symbols.htm">http://www.widgit.com/symbols/widgit_symbols.htm</a></dd>
+    </dl></section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>

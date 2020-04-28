@@ -1,554 +1,9 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.4.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-.issue-label {
-    text-transform: initial;
-}
-
-.warning > p:first-child { margin-top: 0 }
-.warning {
-    padding: .5em;
-    border-left-width: .5em;
-    border-left-style: solid;
-}
-span.warning { padding: .1em .5em .15em; }
-
-.issue.closed span.issue-number {
-    text-decoration: line-through;
-}
-
-.warning {
-    border-color: #f11;
-    border-width: .2em;
-    border-style: solid;
-    background: #fbe9e9;
-}
-
-.warning-title:before{
-    content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 1.3em;
-    float: left;
-    padding-right: .3em;
-    margin-top: -0.3em;
-}
-
-li.task-list-item {
-    list-style: none;
-}
-
-input.task-list-item-checkbox {
-    margin: 0 0.35em 0.25em -1.6em;
-    vertical-align: middle;
-}
-
-.issue a.respec-gh-label {
-  padding: 5px;
-  margin: 0 2px 0 2px;
-  font-size: 10px;
-  text-transform: none;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  position: relative;
-  bottom: 2px;
-  border: none;
-  display: inline-block;
-}
-</style><style>/* dfn popup panel that list all local references to a dfn */
-dfn {
-  cursor: pointer;
-}
-
-.dfn-panel {
-  position: absolute;
-  left: var(--left); /* set via JS */
-  top: var(--top); /* set via JS */
-  z-index: 35;
-  height: auto;
-  width: max-content;
-  max-width: 300px;
-  max-height: 500px;
-  overflow: auto;
-  padding: 0.5em 0.75em;
-  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-  background: #dddddd;
-  color: black;
-  border: outset 0.2em;
-}
-
-.dfn-panel * {
-  margin: 0;
-}
-
-.dfn-panel > b {
-  display: block;
-}
-
-.dfn-panel ul a[href] {
-  color: black;
-}
-
-.dfn-panel a:not(:hover) {
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-.dfn-panel a[href]:hover {
-  border-bottom-width: 1px;
-}
-
-.dfn-panel > b + b {
-  margin-top: 0.25em;
-}
-
-.dfn-panel ul {
-  padding: 0;
-}
-
-.dfn-panel li {
-  list-style: inside;
-}
-
-.dfn-panel.docked {
-  display: inline-block;
-  position: fixed;
-  left: 0.5em;
-  top: unset;
-  bottom: 2em;
-  margin: 0 auto;
-  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
-  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
-  max-height: 30vh;
-}
-</style>
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>.issue-label{text-transform:initial}.warning>p:first-child{margin-top:0}.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}span.warning{padding:.1em .5em .15em}.issue.closed span.issue-number{text-decoration:line-through}.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}li.task-list-item{list-style:none}input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style>
 		<title>Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</title>
-		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec specific CSS
- *****************************************************************/
-@keyframes pop {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.25, 1.25);
-    opacity: 0.75;
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-/* Override code highlighter background */
-.hljs {
-  background: transparent !important;
-}
-
-/* --- INLINES --- */
-h1 abbr,
-h2 abbr,
-h3 abbr,
-h4 abbr,
-h5 abbr,
-h6 abbr,
-a abbr {
-  border: none;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-a.internalDFN {
-  color: inherit;
-  border-bottom: 1px solid #99c;
-  text-decoration: none;
-}
-
-a.externalDFN {
-  color: inherit;
-  border-bottom: 1px dotted #ccc;
-  text-decoration: none;
-}
-
-a.bibref {
-  text-decoration: none;
-}
-
-.respec-offending-element:target {
-  animation: pop 0.25s ease-in-out 0s 1;
-}
-
-.respec-offending-element,
-a[href].respec-offending-element {
-  text-decoration: red wavy underline;
-}
-@supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
-  }
-  .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
-  }
-}
-
-#references :target {
-  background: #eaf3ff;
-  animation: pop 0.4s ease-in-out 0s 1;
-}
-
-cite .bibref {
-  font-style: normal;
-}
-
-code {
-  color: #c63501;
-}
-
-th code {
-  color: inherit;
-}
-
-a[href].orcid {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-a[href].orcid > svg {
-    margin-bottom: -2px;
-}
-
-/* --- TOC --- */
-
-.toc a,
-.tof a {
-  text-decoration: none;
-}
-
-a .secno,
-a .figno {
-  color: #000;
-}
-
-ul.tof,
-ol.tof {
-  list-style: none outside none;
-}
-
-.caption {
-  margin-top: 0.5em;
-  font-style: italic;
-}
-
-/* --- TABLE --- */
-
-table.simple {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 3px solid #005a9c;
-}
-
-.simple th {
-  background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th a {
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th[scope="row"] {
-  background: inherit;
-  color: inherit;
-  border-top: 1px solid #ddd;
-}
-
-.simple td {
-  padding: 3px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.simple tr:nth-child(even) {
-  background: #f0f6ff;
-}
-
-/* --- DL --- */
-
-.section dd > p:first-child {
-  margin-top: 0;
-}
-
-.section dd > p:last-child {
-  margin-bottom: 0;
-}
-
-.section dd {
-  margin-bottom: 1em;
-}
-
-.section dl.attrs dd,
-.section dl.eldef dd {
-  margin-bottom: 0;
-}
-
-#issue-summary > ul,
-.respec-dfn-list {
-  column-count: 2;
-}
-
-#issue-summary li,
-.respec-dfn-list li {
-  list-style: none;
-}
-
-details.respec-tests-details {
-  margin-left: 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-details.respec-tests-details > * {
-  padding-right: 2em;
-}
-
-details.respec-tests-details[open] {
-  z-index: 999999;
-  position: absolute;
-  border: thin solid #cad3e2;
-  border-radius: 0.3em;
-  background-color: white;
-  padding-bottom: 0.5em;
-}
-
-details.respec-tests-details[open] > summary {
-  border-bottom: thin solid #cad3e2;
-  padding-left: 1em;
-  margin-bottom: 1em;
-  line-height: 2em;
-}
-
-details.respec-tests-details > ul {
-  width: 100%;
-  margin-top: -0.3em;
-}
-
-details.respec-tests-details > li {
-  padding-left: 1em;
-}
-
-a[href].self-link:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-aside.example .marker > a.self-link {
-  color: inherit;
-}
-
-h2 > a.self-link,
-h3 > a.self-link,
-h4 > a.self-link,
-h5 > a.self-link,
-h6 > a.self-link {
-  border: none;
-  color: inherit;
-  font-size: 83%;
-  height: 2em;
-  left: -1.6em;
-  opacity: 0.5;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: opacity 0.2s;
-  width: 2em;
-}
-
-h2 > a.self-link::before,
-h3 > a.self-link::before,
-h4 > a.self-link::before,
-h5 > a.self-link::before,
-h6 > a.self-link::before {
-  content: "§";
-  display: block;
-}
-
-@media (max-width: 767px) {
-  dd {
-    margin-left: 0;
-  }
-
-  /* Don't position self-link in headings off-screen */
-  h2 > a.self-link,
-  h3 > a.self-link,
-  h4 > a.self-link,
-  h5 > a.self-link,
-  h6 > a.self-link {
-    left: auto;
-    top: auto;
-  }
-}
-
-@media print {
-  .removeOnSave {
-    display: none;
-  }
-}
-</style>
+		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
 		
 		
-	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><meta name="description" content="@@"><link rel="canonical" href="https://www.w3.org/TR/coga-techniques/"><style>/*
-Adapted from Atom One Light by Daniel Gamage for ReSpec, with better color contrast
-Original One Light Syntax theme from https://github.com/atom/one-light-syntax
-base:    #fafafa
-mono-1:  #383a42
-mono-2:  #686b77
-mono-3:  #a0a1a7
-hue-1:   #0184bb
-hue-2:   #4078f2
-hue-3:   #a626a4
-hue-4:   #50a14f
-hue-5:   #e45649
-hue-5-2: #c91243
-hue-6:   #986801
-hue-6-2: #c18401
-*/
-
-.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 0.5em;
-  color: #383a42;
-  background: #fafafa;
-}
-
-.hljs-comment,
-.hljs-quote {
-  color: #717277;
-  font-style: italic;
-}
-
-.hljs-doctag,
-.hljs-keyword,
-.hljs-formula {
-  color: #a626a4;
-}
-
-.hljs-section,
-.hljs-name,
-.hljs-selector-tag,
-.hljs-deletion,
-.hljs-subst {
-  color: #ca4706;
-  font-weight: bold;
-}
-
-.hljs-literal {
-  color: #0b76c5;
-}
-
-.hljs-string,
-.hljs-regexp,
-.hljs-addition,
-.hljs-attribute,
-.hljs-meta-string {
-  color: #42803C;
-}
-
-.hljs-built_in,
-.hljs-class .hljs-title {
-  color: #9a6a01;
-}
-
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-type,
-.hljs-selector-class,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-number {
-  color: #986801;
-}
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-link,
-.hljs-meta,
-.hljs-selector-id,
-.hljs-title {
-  color: #336ae3;
-}
-
-.hljs-emphasis {
-  font-style: italic;
-}
-
-.hljs-strong {
-  font-weight: bold;
-}
-
-.hljs-link {
-  text-decoration: underline;
-}
-</style><style>var {
-  position: relative;
-  cursor: pointer;
-}
-
-var[data-type]::before,
-var[data-type]::after {
-  position: absolute;
-  left: 50%;
-  top: -6px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-/* the triangle or arrow or caret or whatever */
-var[data-type]::before {
-  content: "";
-  transform: translateX(-50%);
-  border-width: 4px 6px 0 6px;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #000;
-}
-
-/* actual text */
-var[data-type]::after {
-  content: attr(data-type);
-  transform: translateX(-50%) translateY(-100%);
-  background: #000;
-  text-align: center;
-  /* additional styling */
-  font-family: "Dank Mono", "Fira Code", monospace;
-  font-style: normal;
-  padding: 6px;
-  border-radius: 3px;
-  color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
-}
-
-var[data-type]:hover::after,
-var[data-type]:hover::before {
-  opacity: 1;
-}
-</style><script id="initialUserConfig" type="application/json">{
+	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><meta name="description" content="@@"><link rel="canonical" href="https://www.w3.org/TR/coga-techniques/"><style>.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;background:#fafafa}.hljs-comment,.hljs-quote{color:#717277;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;font-weight:700}.hljs-literal{color:#0b76c5}.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c}.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}</style><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "trace": true,
   "doRDFa": "1.1",
   "includePermalinks": true,
@@ -2238,91 +1693,96 @@ var[data-type]:hover::before {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2020-04-02",
-  "publishISODate": "2020-04-02T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 02 April 2020"
+  "publishDate": "2020-04-28",
+  "publishISODate": "2020-04-28T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 28 April 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
-	<body class="h-entry informative"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</h1>
-      
-      <h2>
-        W3C Editor's Draft
-        <time class="dt-published" datetime="2020-04-02">02 April 2020</time>
-      </h2>
-      <dl>
-        <dt>This version:</dt><dd>
-                <a class="u-url" href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a>
-              </dd><dt>Latest published version:</dt><dd>
-                <a href="https://www.w3.org/TR/coga-techniques/">https://www.w3.org/TR/coga-techniques/</a>
-              </dd>
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a></dd>
-        
-        
-        
-        
-        
-        <dt>Editors:</dt>
-        <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
-            (W3C)
-          </dd>
-        
-        
-        
-      </dl>
+	<body class="h-entry informative toc-inline"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Techniques for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)</h1>
+    
+    <h2>
+      W3C Editor's Draft
+      <time class="dt-published" datetime="2020-04-28">28 April 2020</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/coga-techniques/">https://www.w3.org/TR/coga-techniques/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/techniques/">https://w3c.github.io/coga/techniques/</a></dd>
       
       
       
-      <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-      ©
-      2015-2020
       
-      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-      <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-      W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
-      apply.
-    </p>
-      <hr title="Separator for header">
-    </div>
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
+      
+      
+      
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2015-2020
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>
 			<p>@@</p>
 		</section>
-		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p> <p>
-      This document was published by the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a>, and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as an
-      Editor's Draft.
-      
-    </p><p>
-      
-      Comments regarding this document are welcome.
-            Please send them to
-            <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-            (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-          
-    </p><p>
-      Publication as an Editor's Draft does not imply endorsement by the
-      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
-      obsoleted by other documents at any time. It is inappropriate to cite this
-      document as other than work in progress.
-    </p><p>
-      
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p> <p>
+    This document was published by the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a href="http://www.w3.org/WAI/PF/">Protocols and Formats Working Group</a>, and the <a href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines Working Group</a> as an
+    Editor's Draft.
+    
+  </p><p>
+    
+    Comments regarding this document are welcome.
+          Please send them to
+          <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+          (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+        
+  </p><p>
+    Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+    Membership. This is a draft document and may be updated, replaced or
+    obsoleted by other documents at any time. It is inappropriate to cite this
+    document as other than work in progress.
+  </p><p>
+    
         This document was produced by groups
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
        The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-      
-                  <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a rel="disclosure" href="">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/35422/status">public list of any patent disclosures (Protocols and Formats Working Group)</a>, and a <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Web Content Accessibility Guidelines Working Group)</a>
-            made in connection with the deliverables of
-            each group; these pages also include
-            instructions for disclosing a patent. An individual who has actual
-            knowledge of a patent which the individual believes contains
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-            must disclose the information in accordance with
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-      
-    </p><p>
+     <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+          <a rel="disclosure" href="">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a
+          <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/35422/status">public list of any patent disclosures (Protocols and Formats Working Group)</a>, and a
+          <a rel="disclosure" href="http://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Web Content Accessibility Guidelines Working Group)</a>
+          made in connection with the deliverables of
+          each group; these pages also include
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#summary"><bdi class="secno">1.1 </bdi>Summary </a></li><li class="tocline"><a class="tocxref" href="#document-structure"><bdi class="secno">1.2 </bdi>Document structure</a></li><li class="tocline"><a class="tocxref" href="#exemptions"><bdi class="secno">1.3 </bdi>Exemptions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#general-techniques"><bdi class="secno">2. </bdi>General techniques </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#provide-a-clear-structure"><bdi class="secno">2.1 </bdi>Provide a clear structure </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#break-your-content-into-manageable-chunks"><bdi class="secno">2.1.1 </bdi>Break your content into manageable chunks</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps"><bdi class="secno">2.1.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research"><bdi class="secno">2.1.1.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#help-the-user-find-information"><bdi class="secno">2.1.2 </bdi>Help the user find information</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-0"><bdi class="secno">2.1.2.1 </bdi>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-0"><bdi class="secno">2.1.2.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-headings-and-labels-to-describe-topic-or-purpose"><bdi class="secno">2.1.3 </bdi>Use headings and labels to describe topic or purpose.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-1"><bdi class="secno">2.1.3.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-1"><bdi class="secno">2.1.3.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-consistent-styles"><bdi class="secno">2.1.4 </bdi>Use consistent styles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-2"><bdi class="secno">2.1.4.1 </bdi>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-2"><bdi class="secno">2.1.4.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-presentation-color-and-symbols-to-show-structure-and-relationships"><bdi class="secno">2.1.5 </bdi>Use presentation, color and symbols to show structure and relationships</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-3"><bdi class="secno">2.1.5.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-3"><bdi class="secno">2.1.5.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-lists-and-tables"><bdi class="secno">2.1.6 </bdi>Use lists and tables</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-4"><bdi class="secno">2.1.6.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-4"><bdi class="secno">2.1.6.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-clear-presentation"><bdi class="secno">2.1.7 </bdi>Use a clear presentation </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-5"><bdi class="secno">2.1.7.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-5"><bdi class="secno">2.1.7.2 </bdi>Sources/research:</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#be-predictable"><bdi class="secno">2.2 </bdi>Be predictable</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-6"><bdi class="secno">2.2.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-6"><bdi class="secno">2.2.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#writing-style"><bdi class="secno">2.3 </bdi>Writing style</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#be-clear-and-to-the-point"><bdi class="secno">2.3.1 </bdi>Be clear and to the point</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-7"><bdi class="secno">2.3.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-7"><bdi class="secno">2.3.1.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#give-instructions-clearly"><bdi class="secno">2.3.2 </bdi>Give instructions clearly</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-8"><bdi class="secno">2.3.2.1 </bdi>Explanation and who it helps: </a></li><li class="tocline"><a class="tocxref" href="#sources-research-8"><bdi class="secno">2.3.2.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-simple-tense-and-active-rather-than-passive-voice"><bdi class="secno">2.3.3 </bdi>Use a simple tense and active rather than passive voice.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-9"><bdi class="secno">2.3.3.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-9"><bdi class="secno">2.3.3.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#avoid-double-negatives"><bdi class="secno">2.3.4 </bdi>Avoid double negatives.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-10"><bdi class="secno">2.3.4.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-10"><bdi class="secno">2.3.4.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#checking-readability"><bdi class="secno">2.3.5 </bdi>Checking Readability </a></li></ol></li><li class="tocline"><a class="tocxref" href="#provide-rapid-and-direct-feedback"><bdi class="secno">2.4 </bdi>Provide rapid and direct feedback.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-11"><bdi class="secno">2.4.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-11"><bdi class="secno">2.4.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#help-meaning"><bdi class="secno">2.5 </bdi>Help meaning</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#include-short-tooltips-on-all-icons-jargon"><bdi class="secno">2.5.1 </bdi>Include short tooltips on all icons, jargon</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-12"><bdi class="secno">2.5.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-12"><bdi class="secno">2.5.1.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-of-charts-and-graphs"><bdi class="secno">2.5.2 </bdi>Use of charts and graphs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-13"><bdi class="secno">2.5.2.1 </bdi>Explanation and who it helps:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-symbols-and-images-to-show-meaning"><bdi class="secno">2.5.3 </bdi>Use symbols and images to show meaning</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-14"><bdi class="secno">2.5.3.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-13"><bdi class="secno">2.5.3.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-of-synchronized-highlighting-of-complex-graphics-and-formula-with-speech"><bdi class="secno">2.5.4 </bdi>Use of synchronized highlighting, of complex graphics and formula with speech</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sources-research-14"><bdi class="secno">2.5.4.1 </bdi>Sources/research: </a></li></ol></li><li class="tocline"><a class="tocxref" href="#temperature"><bdi class="secno">2.5.5 </bdi>Temperature</a></li><li class="tocline"><a class="tocxref" href="#calculations"><bdi class="secno">2.5.6 </bdi>Calculations</a></li><li class="tocline"><a class="tocxref" href="#currency"><bdi class="secno">2.5.7 </bdi>Currency</a></li><li class="tocline"><a class="tocxref" href="#buying-and-selling-online-quantities-and-size"><bdi class="secno">2.5.8 </bdi>Buying and Selling Online (Quantities and Size)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#do-not-rely-on-numbers-alone-when-describing-goods-provide-a-hint-or-additional-information-to-aid-users"><bdi class="secno">2.5.8.1 </bdi>Do not rely on numbers alone when describing goods. Provide a hint or additional information to aid users.</a></li></ol></li><li class="tocline"><a class="tocxref" href="#buying-selling-online-payments"><bdi class="secno">2.5.9 </bdi>Buying &amp; Selling Online (Payments)</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-a-clear-design"><bdi class="secno">2.6 </bdi> Use a clear design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#use-clear-visual-affordances"><bdi class="secno">2.6.1 </bdi>Use clear visual affordances.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-15"><bdi class="secno">2.6.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-15"><bdi class="secno">2.6.1.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#have-a-clean-and-uncluttered-design"><bdi class="secno">2.6.2 </bdi>Have a clean  and uncluttered design</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-16"><bdi class="secno">2.6.2.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-16"><bdi class="secno">2.6.2.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#formats-for-numbers-and-time"><bdi class="secno">2.6.3 </bdi>Formats for Numbers and Time</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#time"><bdi class="secno">2.6.3.1 </bdi>Time</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-17"><bdi class="secno">2.6.3.1.1 </bdi>Explanation and who it helps:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#layout-for-numbers"><bdi class="secno">2.6.3.2 </bdi>Layout for Numbers</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-18"><bdi class="secno">2.6.3.2.1 </bdi>Explanation and who it helps</a></li></ol></li><li class="tocline"><a class="tocxref" href="#roman-numerals"><bdi class="secno">2.6.3.3 </bdi>Roman Numerals</a></li><li class="tocline"><a class="tocxref" href="#use-linear-horizontal-text-based-scales-for-questionnaires-and-surveys-rather-than-numbers"><bdi class="secno">2.6.3.4 </bdi> Use linear horizontal text based scales for questionnaires and surveys rather than numbers.</a></li><li class="tocline"><a class="tocxref" href="#relative-values"><bdi class="secno">2.6.3.5 </bdi>Relative values</a></li></ol></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#techniques-for-specific-groups"><bdi class="secno">3. </bdi>Techniques for specific groups</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#limit-the-number-of-features-and-choices-on-the-same-screen"><bdi class="secno">3.1 </bdi>Limit the number of features and choices on the same screen.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-19"><bdi class="secno">3.1.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-17"><bdi class="secno">3.1.2 </bdi>Sources/research:</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#techniques-under-development"><bdi class="secno">4. </bdi>Techniques under development</a></li><li class="tocline"><a class="tocxref" href="#provide-symbols-on-key-content"><bdi class="secno">5. </bdi>Provide symbols on key content </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#explanation-and-who-it-helps-20"><bdi class="secno">5.1 </bdi>Explanation and who it helps:</a></li><li class="tocline"><a class="tocxref" href="#sources-research-18"><bdi class="secno">5.2 </bdi>Sources/research:</a></li></ol></li><li class="tocline"><a class="tocxref" href="#use-semantics-to-provide-extra-help"><bdi class="secno">6. </bdi>Use semantics to provide extra help</a></li><li class="tocline"><a class="tocxref" href="#augmentative-with-signs"><bdi class="secno">7. </bdi>Augmentative with signs </a></li><li class="tocline"><a class="tocxref" href="#acknowledgements"><bdi class="secno">A. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ack_group"><bdi class="secno">A.1 </bdi>Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication</a></li><li class="tocline"><a class="tocxref" href="#ack_others"><bdi class="secno">A.2 </bdi>Other Cognitive and Learning Disabilities Task Force contributors, commenters, and previously active participants</a></li><li class="tocline"><a class="tocxref" href="#ack_funders"><bdi class="secno">A.3 </bdi>Enabling funders</a></li></ol></li></ol></nav>
@@ -3655,6 +3115,8 @@ var[data-type]:hover::before {
 	</section>
 </section>
 
-	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'57d95cd80fd8ff7c',m:'1369fc0a6910de652d75f9077ebbf675feddac70-1585818059-1800-AddL6REFnvn/I92X9MRIp9DumtFXrF9zQ2GLf8Unziw+d0hip5jjuYi0KdzJpowN+jt0jtk7e8VGyxueUVsmk0Ht7Ga44zoYtqJ0yxwLRS9jqHr0hh9BZMGcM6ya2dLQEcyEufhL64PN3iAERq2Ww9KBZtuM8Dao2ygx86PktNcuBPecPH8FuncvdsKbmgRKGQ==',s:[0x133709c16a,0x5056a5a74a],fb:0,}})();</script>
+	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'58b1bd00ac7fcee8',m:'0535b3b184af2366c90e038477570359558e61e7-1588086923-1800-AQoopcmn1Mw+Kd0YOmFVVs8WVGvTl2pnUh/tejq825EsZDyp6fymm24zT3nVeZy5uIIEkB5sWARAPqP1MSJRcGEBG3YN2yic8IrxDEKKabzya7fNWKeoFTKRzUsIaYSaAQMwe8GW4bqPS4htjvjGNJX4MwGrdW53hv4JAvZ3Wy3Akj/BcsPIA33CawZ9hZKFXw==',s:[0x9eda4b2bcd,0x554c631497],fb:0,}})();</script>
 
-<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>

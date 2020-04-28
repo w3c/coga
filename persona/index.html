@@ -1,359 +1,7 @@
-<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.4.2"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* dfn popup panel that list all local references to a dfn */
-dfn {
-  cursor: pointer;
-}
-
-.dfn-panel {
-  position: absolute;
-  left: var(--left); /* set via JS */
-  top: var(--top); /* set via JS */
-  z-index: 35;
-  height: auto;
-  width: max-content;
-  max-width: 300px;
-  max-height: 500px;
-  overflow: auto;
-  padding: 0.5em 0.75em;
-  font: small Helvetica Neue, sans-serif, Droid Sans Fallback;
-  background: #dddddd;
-  color: black;
-  border: outset 0.2em;
-}
-
-.dfn-panel * {
-  margin: 0;
-}
-
-.dfn-panel > b {
-  display: block;
-}
-
-.dfn-panel ul a[href] {
-  color: black;
-}
-
-.dfn-panel a:not(:hover) {
-  text-decoration: none !important;
-  border-bottom: none !important;
-}
-
-.dfn-panel a[href]:hover {
-  border-bottom-width: 1px;
-}
-
-.dfn-panel > b + b {
-  margin-top: 0.25em;
-}
-
-.dfn-panel ul {
-  padding: 0;
-}
-
-.dfn-panel li {
-  list-style: inside;
-}
-
-.dfn-panel.docked {
-  display: inline-block;
-  position: fixed;
-  left: 0.5em;
-  top: unset;
-  bottom: 2em;
-  margin: 0 auto;
-  /* 0.75em from padding (x2), 0.5em from left position, 0.2em border (x2) */
-  max-width: calc(100vw - 0.75em * 2 - 0.5em - 0.2em * 2);
-  max-height: 30vh;
-}
-</style>
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta charset="utf-8"><meta name="generator" content="ReSpec 25.6.0"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<title>Proposed Personas</title>
 		
-		<style id="respec-mainstyle">/*****************************************************************
- * ReSpec specific CSS
- *****************************************************************/
-@keyframes pop {
-  0% {
-    transform: scale(1, 1);
-  }
-  25% {
-    transform: scale(1.25, 1.25);
-    opacity: 0.75;
-  }
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-/* Override code highlighter background */
-.hljs {
-  background: transparent !important;
-}
-
-/* --- INLINES --- */
-h1 abbr,
-h2 abbr,
-h3 abbr,
-h4 abbr,
-h5 abbr,
-h6 abbr,
-a abbr {
-  border: none;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-a.internalDFN {
-  color: inherit;
-  border-bottom: 1px solid #99c;
-  text-decoration: none;
-}
-
-a.externalDFN {
-  color: inherit;
-  border-bottom: 1px dotted #ccc;
-  text-decoration: none;
-}
-
-a.bibref {
-  text-decoration: none;
-}
-
-.respec-offending-element:target {
-  animation: pop 0.25s ease-in-out 0s 1;
-}
-
-.respec-offending-element,
-a[href].respec-offending-element {
-  text-decoration: red wavy underline;
-}
-@supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
-  }
-  .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
-  }
-}
-
-#references :target {
-  background: #eaf3ff;
-  animation: pop 0.4s ease-in-out 0s 1;
-}
-
-cite .bibref {
-  font-style: normal;
-}
-
-code {
-  color: #c63501;
-}
-
-th code {
-  color: inherit;
-}
-
-a[href].orcid {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-a[href].orcid > svg {
-    margin-bottom: -2px;
-}
-
-/* --- TOC --- */
-
-.toc a,
-.tof a {
-  text-decoration: none;
-}
-
-a .secno,
-a .figno {
-  color: #000;
-}
-
-ul.tof,
-ol.tof {
-  list-style: none outside none;
-}
-
-.caption {
-  margin-top: 0.5em;
-  font-style: italic;
-}
-
-/* --- TABLE --- */
-
-table.simple {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 3px solid #005a9c;
-}
-
-.simple th {
-  background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th a {
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th[scope="row"] {
-  background: inherit;
-  color: inherit;
-  border-top: 1px solid #ddd;
-}
-
-.simple td {
-  padding: 3px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.simple tr:nth-child(even) {
-  background: #f0f6ff;
-}
-
-/* --- DL --- */
-
-.section dd > p:first-child {
-  margin-top: 0;
-}
-
-.section dd > p:last-child {
-  margin-bottom: 0;
-}
-
-.section dd {
-  margin-bottom: 1em;
-}
-
-.section dl.attrs dd,
-.section dl.eldef dd {
-  margin-bottom: 0;
-}
-
-#issue-summary > ul,
-.respec-dfn-list {
-  column-count: 2;
-}
-
-#issue-summary li,
-.respec-dfn-list li {
-  list-style: none;
-}
-
-details.respec-tests-details {
-  margin-left: 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-details.respec-tests-details > * {
-  padding-right: 2em;
-}
-
-details.respec-tests-details[open] {
-  z-index: 999999;
-  position: absolute;
-  border: thin solid #cad3e2;
-  border-radius: 0.3em;
-  background-color: white;
-  padding-bottom: 0.5em;
-}
-
-details.respec-tests-details[open] > summary {
-  border-bottom: thin solid #cad3e2;
-  padding-left: 1em;
-  margin-bottom: 1em;
-  line-height: 2em;
-}
-
-details.respec-tests-details > ul {
-  width: 100%;
-  margin-top: -0.3em;
-}
-
-details.respec-tests-details > li {
-  padding-left: 1em;
-}
-
-a[href].self-link:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-aside.example .marker > a.self-link {
-  color: inherit;
-}
-
-h2 > a.self-link,
-h3 > a.self-link,
-h4 > a.self-link,
-h5 > a.self-link,
-h6 > a.self-link {
-  border: none;
-  color: inherit;
-  font-size: 83%;
-  height: 2em;
-  left: -1.6em;
-  opacity: 0.5;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: opacity 0.2s;
-  width: 2em;
-}
-
-h2 > a.self-link::before,
-h3 > a.self-link::before,
-h4 > a.self-link::before,
-h5 > a.self-link::before,
-h6 > a.self-link::before {
-  content: "§";
-  display: block;
-}
-
-@media (max-width: 767px) {
-  dd {
-    margin-left: 0;
-  }
-
-  /* Don't position self-link in headings off-screen */
-  h2 > a.self-link,
-  h3 > a.self-link,
-  h4 > a.self-link,
-  h5 > a.self-link,
-  h6 > a.self-link {
-    left: auto;
-    top: auto;
-  }
-}
-
-@media print {
-  .removeOnSave {
-    display: none;
-  }
-}
-</style>
+		<style id="respec-mainstyle">@keyframes pop{0%{transform:scale(1,1)}25%{transform:scale(1.25,1.25);opacity:.75}100%{transform:scale(1,1)}}.hljs{background:0 0!important}a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}dfn{font-weight:700}a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}a.bibref{text-decoration:none}.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}@supports not (text-decoration:red wavy underline){.respec-offending-element:not(pre){display:inline-block}.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}}#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}cite .bibref{font-style:normal}code{color:#c63501}th code{color:inherit}a[href].orcid{padding-left:4px;padding-right:4px}a[href].orcid>svg{margin-bottom:-2px}.toc a,.tof a{text-decoration:none}a .figno,a .secno{color:#000}ol.tof,ul.tof{list-style:none outside none}.caption{margin-top:.5em;font-style:italic}table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}.simple th a{color:#fff;padding:3px 5px;text-align:left}.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}.simple td{padding:3px 10px;border-top:1px solid #ddd}.simple tr:nth-child(even){background:#f0f6ff}.section dd>p:first-child{margin-top:0}.section dd>p:last-child{margin-bottom:0}.section dd{margin-bottom:1em}.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}#issue-summary>ul,.respec-dfn-list{column-count:2}#issue-summary li,.respec-dfn-list li{list-style:none}details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}details.respec-tests-details>*{padding-right:2em}details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}details.respec-tests-details>ul{width:100%;margin-top:-.3em}details.respec-tests-details>li{padding-left:1em}a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}h2,h3,h4,h5,h6{position:relative}aside.example .marker>a.self-link{color:inherit}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}@media (max-width:767px){dd{margin-left:0}h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}}@media print{.removeOnSave{display:none}}</style>
 		
 		
 	
@@ -375,52 +23,7 @@ h6 > a.self-link::before {
 				width: 6em;
 			}		
 		</style>
-	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><link rel="canonical" href="https://www.w3.org/TR/coga-persona/"><style>var {
-  position: relative;
-  cursor: pointer;
-}
-
-var[data-type]::before,
-var[data-type]::after {
-  position: absolute;
-  left: 50%;
-  top: -6px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-/* the triangle or arrow or caret or whatever */
-var[data-type]::before {
-  content: "";
-  transform: translateX(-50%);
-  border-width: 4px 6px 0 6px;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #000;
-}
-
-/* actual text */
-var[data-type]::after {
-  content: attr(data-type);
-  transform: translateX(-50%) translateY(-100%);
-  background: #000;
-  text-align: center;
-  /* additional styling */
-  font-family: "Dank Mono", "Fira Code", monospace;
-  font-style: normal;
-  padding: 6px;
-  border-radius: 3px;
-  color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
-}
-
-var[data-type]:hover::after,
-var[data-type]:hover::before {
-  opacity: 1;
-}
-</style><script id="initialUserConfig" type="application/json">{
+	<script async="" src="/cdn-cgi/bm/cv/2172558837/api.js"></script><link rel="canonical" href="https://www.w3.org/TR/coga-persona/"><style>var{position:relative;cursor:pointer}var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}</style><script id="initialUserConfig" type="application/json">{
   "trace": true,
   "doRDFa": "1.1",
   "includePermalinks": true,
@@ -2106,89 +1709,93 @@ var[data-type]:hover::before {
       "publishDate": "2012"
     }
   },
-  "publishDate": "2020-04-02",
-  "publishISODate": "2020-04-02T00:00:00.000Z",
-  "generatedSubtitle": "Editor's Draft 02 April 2020"
+  "publishDate": "2020-04-28",
+  "publishISODate": "2020-04-28T00:00:00.000Z",
+  "generatedSubtitle": "Editor's Draft 28 April 2020"
 }</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-ED"></head>
 	<body class="h-entry informative toc-inline"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Proposed Personas</h1>
-      
-      <h2>
-        W3C Editor's Draft
-        <time class="dt-published" datetime="2020-04-02">02 April 2020</time>
-      </h2>
-      <dl>
-        <dt>This version:</dt><dd>
-                <a class="u-url" href="https://w3c.github.io/coga/persona/">https://w3c.github.io/coga/persona/</a>
-              </dd><dt>Latest published version:</dt><dd>
-                <a href="https://www.w3.org/TR/coga-persona/">https://www.w3.org/TR/coga-persona/</a>
-              </dd>
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/persona/">https://w3c.github.io/coga/persona/</a></dd>
-        
-        
-        
-        
-        
-        <dt>Editors:</dt>
-        <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:lseeman@us.ibm.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a>
-            (W3C)
-          </dd>
-        
-        
-        
-      </dl>
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C"></a> <h1 id="title" class="title">Proposed Personas</h1>
+    
+    <h2>
+      W3C Editor's Draft
+      <time class="dt-published" datetime="2020-04-28">28 April 2020</time>
+    </h2>
+    <dl>
+      <dt>This version:</dt><dd>
+              <a class="u-url" href="https://w3c.github.io/coga/persona/">https://w3c.github.io/coga/persona/</a>
+            </dd><dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/TR/coga-persona/">https://www.w3.org/TR/coga-persona/</a>
+            </dd>
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/persona/">https://w3c.github.io/coga/persona/</a></dd>
       
       
       
-      <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-      ©
-      2017-2020
       
-      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
-      <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
-      W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
-      apply.
-    </p>
-      <hr title="Separator for header">
-    </div>
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:lseeman@us.ibm.com">Lisa Seeman</a></dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:cooper@w3.org">Michael Cooper</a> (W3C) </dd>
+      
+      
+      
+    </dl>
+    
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+    ©
+    2017-2020
+    
+    <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+    <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>,
+    <a href="https://ev.buaa.edu.cn/">Beihang</a>). 
+    W3C <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules
+    apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
 		<section id="abstract" class="introductory"><h2>Abstract</h2>We covered all the main user needs. Also we should clarify that the challenges are examples.</section>
-		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at https://www.w3.org/TR/.</em></p><p>
-      This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as an
-      Editor's Draft.
-      
-    </p><p>
-      
-      Comments regarding this document are welcome.
-            Please send them to
-            <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
-            (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
-          
-    </p><p>
-      Publication as an Editor's Draft does not imply endorsement by the
-      <abbr title="World Wide Web Consortium">W3C</abbr> Membership. This is a draft document and may be updated, replaced or
-      obsoleted by other documents at any time. It is inappropriate to cite this
-      document as other than work in progress.
-    </p><p>
-      
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. Other documents may supersede
+      this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision
+      of this technical report can be found in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at
+      https://www.w3.org/TR/.</em></p><p>
+    This document was published by the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> as an
+    Editor's Draft.
+    
+  </p><p>
+    
+    Comments regarding this document are welcome.
+          Please send them to
+          <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a>
+          (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).
+        
+  </p><p>
+    Publication as an Editor's Draft does not imply endorsement by the <abbr title="World Wide Web Consortium">W3C</abbr>
+    Membership. This is a draft document and may be updated, replaced or
+    obsoleted by other documents at any time. It is inappropriate to cite this
+    document as other than work in progress.
+  </p><p>
+    
         This document was produced by groups
         operating under the
         <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
        The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
-      
-                  <abbr title="World Wide Web Consortium">W3C</abbr> maintains a <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a> and a <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Accessibility Guidelines Working Group)</a>
-            made in connection with the deliverables of
-            each group; these pages also include
-            instructions for disclosing a patent. An individual who has actual
-            knowledge of a patent which the individual believes contains
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
-            must disclose the information in accordance with
-            <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
-          
-      
-    </p><p>
+     <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+          <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a> and a
+          <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Accessibility Guidelines Working Group)</a>
+          made in connection with the deliverables of
+          each group; these pages also include
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+        
+    
+  </p><p>
                   This document is governed by the
                   <a id="w3c_process_revision" href="https://www.w3.org/2019/Process-20190301/">1 March 2019 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
                 </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#alison-an-aging-user-with-mild-cognitive-impairment"><bdi class="secno">2. </bdi>Alison: An Aging User with Mild Cognitive Impairment</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-learning-how-to-use-new-technologies-and-interfaces"><bdi class="secno">2.1 </bdi>Scenario 1: Learning how to use new technologies and interfaces</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-correcting-typos-and-writing-fluently"><bdi class="secno">2.2 </bdi>Scenario 2: Correcting typos and writing fluently</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-coping-with-online-banking-and-shopping"><bdi class="secno">2.3 </bdi>Scenario 3: Coping with online banking and shopping</a></li><li class="tocline"><a class="tocxref" href="#scenario-4-giving-feedback"><bdi class="secno">2.4 </bdi>Scenario 4: Giving feedback</a></li></ol></li><li class="tocline"><a class="tocxref" href="#amy-a-computer-scientist-who-has-autism"><bdi class="secno">3. </bdi>Amy: A Computer Scientist who has Autism</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-coping-with-poor-layouts-and-illogical-navigation"><bdi class="secno">3.1 </bdi>Scenario 1: Coping with poor layouts and illogical navigation</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-changing-colour-schemes-flashing-blinking-and-automatic-playing-videos-or-music"><bdi class="secno">3.2 </bdi>Scenario 2: Changing colour schemes, flashing, blinking and automatic playing videos or music</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-designs-that-make-use-of-abstract-imagery-and-metaphors"><bdi class="secno">3.3 </bdi>Scenario 3: Designs that make use of abstract imagery and metaphors</a></li></ol></li><li class="tocline"><a class="tocxref" href="#anna-a-student-who-has-dyslexia-and-poor-eye-hand-coordination"><bdi class="secno">4. </bdi>Anna: A Student who has Dyslexia and Poor Eye Hand Coordination</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-logging-in"><bdi class="secno">4.1 </bdi>Scenario 1: Logging in</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-finding-accessible-content"><bdi class="secno">4.2 </bdi>Scenario 2: Finding accessible content</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-filling-in-a-form-to-ask-for-an-ejournal-article"><bdi class="secno">4.3 </bdi>Scenario 3: Filling in a form to ask for an ejournal article</a></li><li class="tocline"><a class="tocxref" href="#scenario-4-overlooking-important-information"><bdi class="secno">4.4 </bdi>Scenario 4: Overlooking important information</a></li><li class="tocline"><a class="tocxref" href="#scenario-5-pressing-the-correct-button"><bdi class="secno">4.5 </bdi>Scenario 5: Pressing the correct button</a></li></ol></li><li class="tocline"><a class="tocxref" href="#carolyn-a-yoga-teacher-who-has-adhd"><bdi class="secno">5. </bdi>Carolyn: A Yoga Teacher who has ADHD</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-gathering-key-points-from-a-heavy-text-based-document-or-web-page"><bdi class="secno">5.1 </bdi>Scenario 1: Gathering key points from a heavy text based document or web page</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-the-power-to-stop-scrolling-carousels-and-banners"><bdi class="secno">5.2 </bdi>Scenario 2: The power to stop scrolling carousels and banners</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-losing-focus-when-completing-tasks"><bdi class="secno">5.3 </bdi>Scenario 3: Losing focus when completing tasks</a></li><li class="tocline"><a class="tocxref" href="#scenario-4-learning-information-from-a-video"><bdi class="secno">5.4 </bdi>Scenario 4: Learning information from a video </a></li></ol></li><li class="tocline"><a class="tocxref" href="#frank-a-retired-lawyer-with-dementia"><bdi class="secno">6. </bdi>Frank: A Retired Lawyer with Dementia</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-managing-dates-and-booking-holidays"><bdi class="secno">6.1 </bdi>Scenario 1: Managing dates and booking holidays</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-coping-with-icons-that-are-not-recognizable"><bdi class="secno">6.2 </bdi>Scenario 2: Coping with icons that are not recognizable</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-support-when-using-search-engines"><bdi class="secno">6.3 </bdi>Scenario 3: Support when using search engines</a></li><li class="tocline"><a class="tocxref" href="#scenario-4-making-a-doctors-appointment"><bdi class="secno">6.4 </bdi>Scenario 4: Making a doctors appointment</a></li><li class="tocline"><a class="tocxref" href="#scenario-5-using-the-heating"><bdi class="secno">6.5 </bdi>Scenario 5: Using the heating</a></li></ol></li><li class="tocline"><a class="tocxref" href="#george-a-user-who-works-in-a-supermarket-and-has-down-syndrome"><bdi class="secno">7. </bdi>George: A User who Works in a Supermarket and has Down syndrome</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-using-symbols-for-communication"><bdi class="secno">7.1 </bdi>Scenario 1: Using Symbols for communication</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-understanding-netiquette-and-its-impact-on-social-media-sites"><bdi class="secno">7.2 </bdi>Scenario 2: Understanding netiquette and its impact on social media sites</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-controls-on-videos-and-popup-windows"><bdi class="secno">7.3 </bdi>Scenario 3: Controls on videos and popup windows</a></li><li class="tocline"><a class="tocxref" href="#scenario-4-finding-ways-to-read-instructions"><bdi class="secno">7.4 </bdi>Scenario 4: Finding ways to read instructions</a></li></ol></li><li class="tocline"><a class="tocxref" href="#jonathan-a-therapist-with-dyscalculia"><bdi class="secno">8. </bdi>Jonathan: A Therapist with Dyscalculia</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-coping-with-quantities-when-shopping-online"><bdi class="secno">8.1 </bdi>Scenario 1: Coping with quantities when shopping online</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-remembering-pin-numbers-and-passwords"><bdi class="secno">8.2 </bdi>Scenario 2: Remembering pin numbers and passwords</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-using-spreadsheets-shared-with-colleagues"><bdi class="secno">8.3 </bdi>Scenario 3: Using spreadsheets shared with colleagues</a></li></ol></li><li class="tocline"><a class="tocxref" href="#maria-a-user-who-has-memory-loss"><bdi class="secno">9. </bdi>Maria: A User who has Memory Loss</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-finding-key-information-on-dynamic-websites"><bdi class="secno">9.1 </bdi>Scenario 1: Finding key information on dynamic websites</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-remembering-information-entered-during-a-previous-step"><bdi class="secno">9.2 </bdi>Scenario 2: Remembering information entered during a previous step</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-pressing-the-correct-button"><bdi class="secno">9.3 </bdi>Scenario 3: Pressing the correct button</a></li></ol></li><li class="tocline"><a class="tocxref" href="#sam-a-librarian-who-had-a-stroke-and-aphasia"><bdi class="secno">10. </bdi>Sam: A Librarian who had a Stroke and Aphasia</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-having-well-spaced-text-with-words-that-are-easy-to-pick-out"><bdi class="secno">10.1 </bdi>Scenario 1: Having well-spaced text with words that are easy to pick out</a></li><li class="tocline"><a class="tocxref" href="#scenario-2-using-edit-boxes-where-the-instructions-disappear"><bdi class="secno">10.2 </bdi>Scenario 2: Using edit boxes where the instructions disappear</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-trying-to-activate-elements-that-have-been-mis-recognized"><bdi class="secno">10.3 </bdi>Scenario 3: Trying to activate elements that have been mis-recognized</a></li><li class="tocline"><a class="tocxref" href="#scenario-4-coping-with-complex-language"><bdi class="secno">10.4 </bdi>Scenario 4: Coping with complex language</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tom-a-traumatic-brain-injury-survivor"><bdi class="secno">11. </bdi>Tom: A Traumatic Brain Injury Survivor</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#scenario-1-using-speech-recognition-to-navigate-the-web"><bdi class="secno">11.1 </bdi>Scenario 1: Using speech recognition to navigate the web </a></li><li class="tocline"><a class="tocxref" href="#scenario-2-finding-the-right-words-to-use-for-searching"><bdi class="secno">11.2 </bdi>Scenario 2: Finding the right words to use for searching</a></li><li class="tocline"><a class="tocxref" href="#scenario-3-being-confident-that-he-understands-the-content"><bdi class="secno">11.3 </bdi>Scenario 3: Being confident that he understands the content</a></li><li class="tocline"><a class="tocxref" href="#scenario-4-understanding-where-information-is-in-a-hierarchical-structure"><bdi class="secno">11.4 </bdi>Scenario 4: Understanding where information is in a hierarchical structure </a></li><li class="tocline"><a class="tocxref" href="#scenario-5-cognitive-overload"><bdi class="secno">11.5 </bdi>Scenario 5: Cognitive Overload </a></li></ol></li></ol></nav>
@@ -2529,6 +2136,8 @@ var[data-type]:hover::before {
 	
 		
 
-	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'57d95cf15c8b5a30',m:'005104357cff8c24fa21fd4cdcea14a61bf8531f-1585818063-1800-AejabIsN3sV3xb9sdov0+I/KhSwYbEMYfrm1GAEitymCw4PWfBpABMglJuQl+gZBfYjDa5aF9xoLfjHC/imbvZe1lBUXC1SQAJRa6Y9MZ37AEq/nMC/S1SBl+bKocQxQhtaZ+dTaBhJj0Hjwq2HWLvBeqmOTpYjdcdOkPD2oVLuQ7zPd/xX08mDlTiJyObI1AA==',s:[0x01e808d907,0xd79daa604f],fb:0,}})();</script>
+	<script type="text/javascript">(function(){window['__CF$cv$params']={r:'58b1bd2768bc73f5',m:'4dd36a07c79933ea9c14cfffdaa02e64f7ec184d-1588086929-1800-AYwZI2AoU6SrQeyN2wh+Y6mQh+IQZ59sXp+J70sCF4/I5rpdTtfPvKkjdbBo2khhKpLv3GbKaKkfKxW33S0pfr6TrrohAdzDJEWoWpKumzmk8hZadfN5ldy5FIxp30sBWEMkVimbtuH/Id204HJj2b8aPYtGsAG+/5G7ybsy4kwSzShvmmoZxjZSBlX6iOWR0g==',s:[0xe049a6a4b0,0x1cb1b8be55],fb:0,}})();</script>
 
-<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
