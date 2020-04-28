@@ -60,11 +60,11 @@
       <p>
         Not everyone finds learning new things easy, and not everyone can
         remember new designs.  To use a site or application, people need to know what all
-        controls and element are on each page and how to use them. Fewer people can use 
+        controls and elements are on each page and how to use them. Fewer people can use 
 		sites and applications that require users to figure out how to use controls or interact with the page. 
       </p>
       <p>
-        Many users, including users with mild cognitive impairment or dementia, cannot easily learn new design metaphors or remember things
+        Many users, including users with mild cognitive impairment or dementia cannot easily learn new design metaphors or remember things
         they learned. Without these skills, it can be much harder or impossible to find what
         they need, work out what controls do and how to use them.
       </p>
@@ -80,11 +80,10 @@
         symbols and design. Users need the following to be familiar:
       </p>
       <ul>
-        <li>
-          <strong>Element location:</strong> Place elements in expected locations. For example,
-          people may look for the search on the top right hand corner of a page.
-          If it is somewhere else, it will be hard to find.
-        </li>
+	    <li>
+		<strong>The look and interaction:</strong> Having controls, links and buttons look and behave like what they are, 
+		lets users know what it is and how to use it. As soon as users need to discover the design pattern, some users will be locked out. 
+		</li>
         <li>
           <strong>Symbols:</strong> Use familiar symbols. For example, people may look for a
           question mark for help. If you use a different symbol, fewer people
@@ -93,6 +92,11 @@
         <li>
           <strong>Text:</strong> Use familiar terms. For example, some people have a limited
           vocabulary. Uncommon terms may cause them difficulty.
+        </li>
+		<li>
+          <strong>Element location:</strong> Place elements in expected locations. For example,
+          people may look for the search on the top right hand corner of a page.
+          If it is somewhere else, it will be hard to find.
         </li>
         <li><strong>Getting help:</strong> Always make it easy to find help.</li>
       </ul>
@@ -146,27 +150,9 @@
           <ul>
             <li>Headings do not clarify the steps in a form;</li>
             <li>
-              Service not available... what service? I have to remember what I
-              was doing to know what service this is about.
+              A page heading reads "Service not available." The user has to remember what they were doing to know what service this is about.
             </li>
           </ul>
-          <h5  class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/clear-purpose.html"
-              >coga github: clear purpose</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/55">WCAG issue 55</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/10">Pull request</a>
-          </p>
       </section>
       
       <section>
@@ -178,7 +164,7 @@
         <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
         <h5 class="coga-5">Description</h5>
         <p>
-          Use common design elements, affordances, and patterns that are
+          Use common visual hierarchy, design elements, affordances, and patterns that are
           familiar to most users.
         </p>
  
@@ -195,19 +181,27 @@
             of use across many sites, users are more likely to recognize the
             interactions needed.
           </p>
-
+		  <p>
+		  For example, a user goes to a site to buy a product. They cannot see 
+		  how to select the item that they want. They may think the site does not allow you to buy or that their computer is broken. 
+		</p>
+		
           <h5 class="coga-5">More Details</h5>
           <p>Common design elements, affordances and patterns include:</p>
           <ul>
-            <li>
-              Links that look like links and buttons look and act like buttons:
+			 <li>
+              Create a standard Visual Hierarchy - Place elements where the user
+              is expecting them, such as:
               <ul>
                 <li>
-                  For example, underline links with a standard style throughout
-                  a page;
+                 Search in the top right hand corner in a website;
                 </li>
-                <li>Links general navigate to a new page;</li>
-                <li>Buttons general perform an action;</li>
+                <li>
+                  Link to the home page is in the top left hand corner;
+                </li>
+                <li>Link to ‘contact us’ is in the top navigation;</li>
+                <li>Link to the site map is in the footer area;</li>
+                <li>Submit button is at the bottom right for a form;</li>
               </ul>
             </li>
             <li>
@@ -228,24 +222,20 @@
               </ul>
             </li>
             <li>
-              Create a standard Visual Hierarchy - Place elements where the user
-              is expecting them, such as:
-              <ul>
-                <li>
-                  Putting the search in the top right hand corner in a website;
-                </li>
-                <li>
-                  The link to the home page is in the top left hand corner;
-                </li>
-                <li>Link to ‘contact us’ is in the top navigation;</li>
-                <li>Link to the site map is in the footer area;</li>
-                <li>Submit button is at the bottom right for a form;</li>
-              </ul>
-            </li>
-            <li>
               User interface (design) from a prior version: Allow users to
               revert back to a prior version of the application that they are
               familiar with.
+            </li>
+			            <li>
+              Links that look like links and buttons look and act like buttons:
+              <ul>
+                <li>
+                  For example, underline links with a standard style throughout
+                  a page;
+                </li>
+                <li>Links generally navigate to a new page;</li>
+                <li>Buttons generally perform an action;</li>
+              </ul>
             </li>
           </ul>
 
@@ -256,23 +246,6 @@
             the home link in the upper left corner, navigation at the top,
             search in the upper right, etc. and create an obvious visual
             hierarchy in the page.
-          </p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>On coga github: familiar-design-a.html</p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/49">wcag issue 49</a>,
-            <a href="https://github.com/w3c/wcag21/pull/121"
-              >pull request 121</a
-            >
-          </p>
-          <p>On coga github: familiar-design-aa.html</p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/35">wcag issue 35</a>
           </p>
       </section>
 
@@ -370,36 +343,6 @@
             Roman, and 2 use Helvetica.
           </p>
 
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>On coga github: consistent-identification-and-styles.html</p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/consistent-identification-and-styles.html"
-              >On coga github: consistent-identification-and-styles.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/28">wcag issue 28</a>
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/consistent-cues.html"
-              >On coga github: consistent-cues.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/31">wcag issue 31</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/108"
-              >wcag pull request 108</a
-            >
-          </p>
       </section>
 
       <section>
@@ -429,8 +372,8 @@
           <p>Examples include:</p>
           <ul>
             <li>
-              someone with dementia loses focus and then cannot remember what
-              they were doing;
+              someone with early stage dementia is interrupted in their task or loses focus and then cannot remember what
+              they were doing. By seeing the bread crumbs they can remind themselves where they were and continue their task;
             </li>
             <li>
               someone with an attention disability gets distracted and then
@@ -451,17 +394,8 @@
 		  <p>
             <strong>Failure</strong> example: Completed steps and choices the user has made are hard to find without relying on memory (example: hidden behind accordions or a previous page).
           </p>
-          <h5  class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://www.google.com/url?q=https://rawgit.com/w3c/coga/master/extension/clear-purpose.html&sa=D&ust=1554766212519000&usg=AFQjCNGJ_LQBFclVgWOf1XGIVGB9v8ebgQ"
-              >Clear Purpose</a
-            >
-          </p>
+
+
         </section>
 
       <section>
@@ -503,8 +437,13 @@
           <p>
             Using common style and design pattern on controls makes it easier to
             recognize and understand how to use it. Controls are parts of web
-            pages that do something, e.g. a link, button, checkbox. The goal of
-            these controls is to have someone use them. For example, an older
+            pages that do something, e.g. a link, button, checkbox. 
+		</p>
+		<p>
+			The goal of these controls is to have someone use them. As soon as the user 
+			needs to discover the control or work out how to use it, some users will fail. 
+		</p>	
+		<p>	For example, an older
             user with age appropriate forgetfulness takes longer to learn new
             designs. They go to an ecommerce site has boxes around the headers
             (such as "womens" or "sale") and simple large text for the "add to
@@ -556,68 +495,6 @@
             they are there.
           </p>
 
-          <h5  class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            Questions raised in the
-            <a href="https://github.com/w3c/wcag21/issues/36"
-              >WCAG github issue 36</a
-            >discussion:
-          </p>
-          <ul>
-            <li>Defining controls</li>
-            <li>
-              Link purpose. "The purpose of each link can be determined from the
-              link text alone or..."
-              <ul>
-                <li>
-                  Difference: how do I know it is a link?
-                  <ul>
-                    <li>
-                      E.g. can I ask all links to be underlined and blue if this
-                      is not their automatic state?
-                    </li>
-                    <li>
-                      I know something is a link because:
-                      <ul>
-                        <li>
-                          Underlined and blue (or purple if a visited link) – if
-                          I have vision.
-                        </li>
-                        <li>
-                          Announces as link – if using text-to-speech tool.
-                        </li>
-                        <li>Cursor change.</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              Consistent Identification. Components that have the same
-              functionality within a set of content are identified consistently.
-              <ul>
-                <li>
-                  If unusual, even if consistent, this does not make it easy to
-                  identify.
-                </li>
-              </ul>
-            </li>
-            <li>
-              Labels or instructions are provided when content requires user
-              input.
-              <ul>
-                <li>
-                  If style selected requires instructions, slows down person
-                  using them.
-                </li>
-              </ul>
-            </li>
-          </ul>
       </section>
 
 	  
@@ -628,7 +505,7 @@
         <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
         <h5 class="coga-5">Description</h5>
         <p>
-          When controls affect a part of the content, the relationship between controls and affected content should be completely clear and unambiguous.  
+          The relationship between controls and affected content should be completely clear and unambiguous.  
         </p>
         <p>This can be achieved through:</p>
 			<ul><li>Visually grouping controls with the content they relate to and/or including controls within the region they affect;</li>
@@ -688,23 +565,6 @@
 			Multiple nested scrolling regions.
 			</li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html"
-              >On coga github: clear-structure-and-relationships.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a>
-            and
-            <a href="https://github.com/w3c/wcag21/issues/39">WCAG issue 39</a>
-          </p>
       </section>
 
       <section>
@@ -773,40 +633,6 @@
           <p>
             A page with important instructions and no symbols or images to guide
             the reader or a very cluttered page of symbols that confuses.
-          </p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a href="https://www.w3.org/TR/WCAG20-TECHS/G103.html">G103:</a>
-            Providing visual illustrations, pictures, and symbols to help
-            explain ideas, events, and processes
-          </p>
-          <p>Additional Resources:</p>
-          <ul>
-            <li>
-              <a
-                href="https://rawgit.com/w3c/coga/master/extension/extra-symbols.html"
-                >More technical details with regards to Symbols.</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.widgit.com/about-symbols/how-symbols-are-used/index.htm"
-                >How Symbols are used</a
-              >
-            </li>
-          </ul>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/extra-symbols.html"
-              >On coga github: extra-symbols.html</a
-            >, and
-            <a href="https://github.com/w3c/wcag21/issues/50">wcag issue 50</a>,
-            PR # 115
           </p>
       </section>
     </section>
@@ -887,7 +713,18 @@
           <h5 class="coga-5">How it Helps</h5>
          <p>
             Confusion can occur when visual hierarchy of information is not
-            immediately apparent to the user. Distinction between levels in
+            immediately apparent to the user.  Having clear sub-menus and a 
+			clear structure will help the user know what is on the site and how to find it. 
+		</p>
+		<p>
+			Dividing the site into clear logical sections can help the user navigate. 
+			However, each section needs to be clear and the subsections easy to find.  
+			The category structure should create an outline of the document that could 
+			serve as an abstract of the whole site. The terms need to make sense to the 
+			user, and it needs to be obvious to the user what category the page they are 
+			looking for would fall under.  
+		</p>	
+		 <p>	Distinction between levels in
             content hierarchy may be difficult to understand or perceive due to
             minimal type size or type weight differences or color differences
             that are not easily perceived or understood. Furthermore, hierarchy
@@ -980,29 +817,7 @@
             </li>
           </ul>
 
-          <h5 class="coga-5">Technical Details</h5>
-			<p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html"
-              >On coga github: clear-structure-and-relationships.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a>
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html"
-              >On coga github: clear-structure-and-relationships.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a>
-          </p>
+
       </section>
 
       <section>
@@ -1032,11 +847,13 @@
         </ul>
 
           <h5 class="coga-5">How it Helps</h5>
-          <p>
-            By creating clear layouts, with easy to use controls, users can focus on the task instead of spending time figuring out how to use the controls and information. They easily find key information, and are more likely to return to the page. Clear layout helps people with cognitive and learning  disabilities that  impact problem solving skills, get overwhelmed when presented with a lot of text,  impact problem solving skills, those that and those with difficulties with more complicated tasks
-          </p>
+
           <p>
            Some people with disabilities need a clear layout to help them know how to use the information. When structure and relationships are unclear, users may need to experiment with different layouts and structures until they work out how to use them. However, people with cognitive disabilities may not be able to do so, and may not be able to use the content or application. Those impacted may not complete tasks, miss key information, and not return to pages that are complicated to use and understand.
+          </p>
+
+          <p>
+            By creating clear layouts, with easy to use controls, users can focus on the task instead of spending time figuring out how to use the controls and information. They easily find key information, and are more likely to return to the page. Clear layout helps people with cognitive and learning  disabilities that  impact problem solving skills, get overwhelmed when presented with a lot of text,  impact problem solving skills, those that and those with difficulties with more complicated tasks
           </p>
 		  
 		  <h5>A Good Structure</h5>
@@ -1105,39 +922,16 @@
 				<p>Sometimes the structure and relationships can be made clear through personalization or user agents and good use of semantics in the code (see WCAG 2.0 SC 1.3.1).</p>
 
           <h5 class="coga-5">Examples</h5>
-		  <p><strong>Succcess </strong> example:</p>
+		  <p><strong>Success </strong> example:</p>
 				<p>A site that uses:</p>
 				<ul><li>Separated Content With a Card Design and Symbols - White space, borders or call outs are used in addition to headings and symbols to help define sections of content. This organizes the information on the page so it is easier to determine layout and find specific information;</li>
 				<li>Separated Interactive Elements - Place interactive elements like scroll bars and buttons close to the content they can impact. Also, keep interactive elements further from content to which they do not apply. This makes it easier to identify which elements will impact each section of content.</li></ul>
-				<p>See GOV.UK. for an success example.</p>
+				<p>See GOV.UK. for a success example.</p>
 		  
           <p><strong>Failure </strong> examples:</p>
           <p>Dense text, with little white space, no call outs, and a lack of visually differentiated headings to define sections;</p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/clear-structure-and-relationships.html"
-            >
-              On coga github: clear-structure-and-relationships.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/26">WCAG issue 26</a>
-          </p>
-		  <p>
-            <a href="https://github.com/w3c/wcag21/issues/39">WCAG issue 39</a>
-          </p>
-		  <p>
-            <a href="https://github.com/w3c/wcag21/issues/40">WCAG issue 40</a>
-          </p>		  
-			<p>ISO/FDIS 9241-112 [i.23]</p>
-			<p>ETSI 203 350 Guidelines for the design of mobile ICT devices and their related applications for people with cognitive disabilities: 12.4.2, 12.4.16, 12.4.16, 12.4.18, 12.4.21</p>  
-      </section>
+</section>
       
       <section>
         <h3>
@@ -1245,15 +1039,7 @@
             </li>
           </ol>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language:
-          </p>
-          <p>
-            On coga github: critical-features.html and
-            <a href="https://github.com/w3c/wcag21/issues/39">wcag issue 39</a>
-          </p>
+
       </section>
 
 	  <section>
@@ -1330,26 +1116,6 @@
             </li>
           </ul>
 		  
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/clear-purpose.html"
-              >coga github: clear purpose</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/55">WCAG issue 55</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/10">Pull request 10</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/40">WCAG issue 40</a>
-          </p>
       </section>
 
       <section>
@@ -1397,6 +1163,10 @@
             appropriate or related content and provides suggested auto-corrected
             versions of the search terms that the user can choose from.
           </p>
+		  <p>
+		  If there are many results from related topics, it helps if search results
+		  are presented under the appropriate heading and categories, which help the user find the search results they are looking for. 
+		  </p>
 
           <h5 class="coga-5">More Details</h5>
           <p>
@@ -1405,17 +1175,8 @@
           </p>
 
           <h5 class="coga-5">Examples</h5>
-		  <p><strong>Success</strong> example: A site has a search.</p>
+		  <p><strong>Success</strong> example: A site has a search with spell check.</p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>On coga github: search.html</p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/44">wcag issue 44</a>
-          </p>
       </section>
 
     </section>
@@ -1461,6 +1222,7 @@
             unit because of this one term. This type of design has caused emergencies such as
             hypothermia.
           </p>
+		  <p>Use common words and terms, with their most common meanings will help avoid these problems. </p>
 
           <h5 class="coga-5">More Details</h5>
           <p>
@@ -1517,34 +1279,6 @@
             that pertain to your situation.
           </p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            Proposals for wcag design requirement can be found at
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/plain-language-a.html"
-              >On coga github: plain-language-a.html</a
-            >,
-            <a href="https://github.com/w3c/wcag21/issues/30">wcag issue 30</a>,
-            <a href="https://github.com/w3c/wcag21/pull/135"
-              >pull request 135</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aa.html
-            <a href="https://github.com/w3c/wcag21/issues/41">wcag issue 41</a>,
-            <a href="https://github.com/w3c/wcag21/pull/107"
-              >pull request 107</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aaa.html
-            <a href="https://github.com/w3c/wcag21/pull/105">pull request 105</a
-            >.
-          </p>
       </section>
 
       <section>
@@ -1564,7 +1298,7 @@
             Using simple tense and voice benefits many people including those with language impairments,
             learning disabilities or a poor memory. For example, more people
             will understand “press the on button” (present tense and active
-            voice) then “the on button should be pressed”.
+            voice) then “the on button should be pressed."
           </p>
           <p>
             Active voice makes it clear who is supposed to take action. For example,
@@ -1591,40 +1325,10 @@
           <h5 class="coga-5">Examples</h5>
           <p>
             <strong>Success </strong>example: Plain text in a simple tense
-          <p>This month your stocks went up.</p>
+          <p>Your stocks went up this month.</p>
 
           <p><strong>Failure </strong>example: Not plain text</p>
           <p>Over the last month, we saw your stocks increasing.
-          </p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            Proposals for wcag design requirement can be found at
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/plain-language-a.html"
-              >On coga github: plain-language-a.html</a
-            >,
-            <a href="https://github.com/w3c/wcag21/issues/30">wcag issue 30</a>,
-            <a href="https://github.com/w3c/wcag21/pull/135"
-              >pull request 135</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aa.html
-            <a href="https://github.com/w3c/wcag21/issues/41">wcag issue 41</a>,
-            <a href="https://github.com/w3c/wcag21/pull/107"
-              >pull request 107</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aaa.html <a
-              href="https://github.com/w3c/wcag21/pull/105"
-              >pull request 105</a
-            >.
           </p>
       </section>
 
@@ -1635,22 +1339,24 @@
         <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>
         <h5 class="coga-5">Description</h5>
         <p>
-          Use a simple sentence structure. Do not use a double negative to
-          express a positive. Do not use clauses inside clauses. Both double negatives
-		  and nested clauses can be confusing.
-        </p>
+          Use a simple sentence structure. </p>
+		  <ul><li>Do not use a double negative to
+          express a positive. </li>
+		  <li>Do not use clauses inside clauses.</li></ul>
+		  <p>Both double negatives and nested clauses can be confusing.</p>
+        
 
           <h5 class="coga-5">How it Helps</h5>
           <p>
             Simple sentence structure benefits many people including those with language impairments,
-            learning disabilities or a poor memory. For example, a person with
-            early stage dementia can manage their own appointments and affairs
-            because the language is clear and understandable.
+            learning disabilities or a poor memory. 
           </p>
           <p>
             For example, more people will understand “You must get the agency’s
             approval before we can answer your claim”: rather than “No approval
-            of any claims can be achieved without the agency’s approval”.
+            of any claims can be achieved without the agency’s approval." In this example, a person with
+            early stage dementia can manage their own appointments and affairs
+            when the language is clear and understandable.
           </p>
 
           <h5 class="coga-5">Examples</h5>
@@ -1659,38 +1365,8 @@
           </p>
           <p><strong>Failure</strong> Example:</p>
           <p>Do not write unclearly. 
-
           </p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            Proposals for wcag design requirement can be found at
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/plain-language-a.html"
-              >On coga github: plain-language-a.html</a
-            >,
-            <a href="https://github.com/w3c/wcag21/issues/30">wcag issue 30</a>,
-            <a href="https://github.com/w3c/wcag21/pull/135"
-              >pull request 135</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aa.html
-            <a href="https://github.com/w3c/wcag21/issues/41">wcag issue 41</a>,
-            <a href="https://github.com/w3c/wcag21/pull/107"
-              >pull request 107</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aaa.html<a
-              href="https://github.com/w3c/wcag21/pull/105"
-              >pull request 105</a
-            >.
-          </p>
       </section>
 
       <section>
@@ -1712,7 +1388,7 @@
           <p>
             Many people do not understand non-literal content. For example, a
             programmer with autism spectrum disorder may not understand jokes
-            and similes. Sometime instructions have jokes and similes to make
+            and similes. Sometimes instructions have jokes and similes to make
             the content friendlier. However, this confuses the programmer
             who now cannot do her job as needed.
           </p>
@@ -1764,35 +1440,6 @@
             and jump in.
           </p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            Proposals for WCAG design requirement can be found at
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/plain-language-a.html"
-              >On coga github: plain-language-a.html</a
-            >,
-            <a href="https://github.com/w3c/wcag21/issues/30">wcag issue 30</a>,
-            <a href="https://github.com/w3c/wcag21/pull/135"
-              >pull request 135</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aa.html
-            <a href="https://github.com/w3c/wcag21/issues/41">wcag issue 41</a>,
-            <a href="https://github.com/w3c/wcag21/pull/107"
-              >pull request 107</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aaa.html<a
-              href="https://github.com/w3c/wcag21/pull/105"
-              >pull request 105</a
-            >.
-          </p>
       </section>
 
       <section>
@@ -1806,6 +1453,7 @@
           <li>Keep paragraphs short. Have only one topic in each paragraph.</li>
           <li>Use short sentences. Have only one point per sentence.</li>
           <li>Use bulleted or numbered lists.</li>
+		  <li>Use short descriptive headings.</li>
         </ul>
 		
           <h5 class="coga-5">How it Helps</h5>
@@ -1898,42 +1546,16 @@
             Service Center at (1-###-###-####). The center is open 7:30 a.m.- 5
             p.m. Monday through Friday.
           </p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <ul>
-            <li>
-              SC Shortname: Manageable blocks -
-              <a href="https://rawgit.com/w3c/coga/master/extension/chunks.html"
-                >On coga github: chunks.html</a
-              >
-            </li>
-            <li>
-              WCAG 2.1 Proposed SC: Manageable blocks (issue 2016 Nov) -
-              <a href="https://github.com/w3c/wcag21/issues/24"
-                >WCAG issue 24</a
-              >
-            </li>
-            <li>
-              WCAG 2.1 Proposed SC: Manageable Blocks (pull request 2017 Jan)
-              <a href="https://github.com/w3c/wcag21/pull/90"
-                >pull request 90</a
-              >
-            </li>
-          </ul>
       </section>
 
       <section>
-        <h3>Pattern: Use Clear, Accurate Text Formatting and Punctuation</h3>
+        <h3>Pattern: Use Clear, Unambiguous Text Formatting and Punctuation</h3>
         <h5 class="coga-5">User Need</h5>
         <blockquote><p>I need words to include accents, characters and diacritics that are necessary to phonetically read the words.</p></blockquote>
         <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Need">Clear Language</a>.</p>
         <h5 class="coga-5">Description</h5>
         <p>
-          Use the correct punctuation for text, numbers and symbols to improve
+          Use punctuation and format for text, numbers and symbols that reduce ambiguity and improve
           readability and comprehension.
         </p>
 		
@@ -1944,9 +1566,9 @@
             functions. If they find content too demanding they are at risk of
             losing its meaning and the overall context of the message that is
             being conveyed. Some users may use assistive technology or
-            personalization tools to reduce the cognitive demands of decoding
-            content. An example would be text-to-speech that reads aloud content
-            allowing for the use of auditory and visual channels.
+            personalization tools to help understand content. An example would be text-to-speech that reads aloud content
+            allowing for the use of auditory and visual channels. However, sometimes the punctuation 
+			or format makes it more likely that the screen reader will read it incorrectly. For example, Roman numerals may be read as text. 
           </p>
           <p>
             Users should not need to decipher letters, numbers, and words because of formatting or punctuation errors. 
@@ -1955,26 +1577,25 @@
             are using assistive technology or personalizing content. It is
             important that the content is created with these adaptations in
             mind, to ensure that all users gain the experience you want them to
-            achieve. Content creators should ensure that information is provided
+            achieve. 
+			</p>
+			<p>			
+			Ensure that information is provided
             in a way that can be read accurately by assistive technology. It may
             have to be personalized to suit certain users, but this can be
             achieved when all the elements are accessible.
           </p>
-          <p>Use cases:</p>
-          <ul>
-            <li>
-              “I listen to content so I need it to be announced and phrased
-              correctly so I can understand it.”
-            </li>
-            <li>
-              “I listen to content and I hear content read incorrectly or
-              skipped, particularly numbers and symbols.”
-            </li>
-            <li>
-              “If text, numbers or symbols are in an unfamiliar layout, I get
-              really confused.”
-            </li>
-          </ul>
+		  <p>
+		  For example, a user with a communication disability may listen to content using a screen reader.
+		  If the content is phrased correctly, they can understand it. Sometimes they hear content read incorrectly 
+		  or skipped, particularly numbers and symbols, and they cannot understand it. If text, numbers or 
+		  symbols are in an unfamiliar layout, the user may become confused.
+		  </p>
+		  <p>(In contrast, a blind person listening to the content, is likely to be able to figure out the correct 
+		  meaning. However, the word manipulations necessary to work out the correct meaning are not achievable 
+		  by someone with a communications or language impairment. )
+		  </p>
+
 
           <h5 class="coga-5">More Details</h5>
           <p>
@@ -2050,21 +1671,6 @@
             English voice and “4th of March 2019” by a British English voice.
             Writing out the month in words can avoid confusion.
           </p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <ul>
-            <li>
-              SC Shortname: Clear Text and Voice -
-              <a
-                href="https://rawgit.com/w3c/coga/master/extension/clear-text-and-voice.html"
-                >On coga github: clear-text-and-voice.html</a
-              >
-            </li>
-          </ul>
       </section>
       
       <section>
@@ -2074,7 +1680,7 @@
         <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>       
         <h5 class="coga-5">Description</h5>
         <p>
-          Include vowels, letters or diacritic marks that users need to decipher words. 
+          Include vowels, letters or diacritic marks that users need to decipher words correctly. 
 		  This is often needed in languages like Arabic and Hebrew.
         </p>
 	
@@ -2089,11 +1695,14 @@
 		<p>For example a user with a language disability is trying to sound out a word. They guess
 		three different pronunciations until they find one that makes sense. Unfortunately, many 
 		people with language impairments cannot work out the meaning as words out of context may 
-		only provide an idea rather than a specific meaning.  Screenreaders often require these 
+		only provide an idea rather than a specific meaning.  Screen readers often require these 
 		characters to speak the correct word. </p>
 
 		<p>Note that not all diacritic marks are necessary to pronounce the word correctly. Only 
 		letters and diacritic marks that are necessary for the unambiguous pronunciation need to be included.</p>
+
+          <h5 class="coga-5">More Details</h5>
+          <p>Words can be deciphered and pronounced to have the correct meaning</p>
 
           <h5 class="coga-5">Getting Started</h5>
           <p>
@@ -2112,9 +1721,6 @@
           <p>It was written: كُتِبَ</p>
           <p><strong>Failure</strong> example  (Arabic):</p>
           <p>كتب</p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>Words can be deciphered and pronounced to have the correct meaning</p>
       </section>
 
       <section>
@@ -2144,7 +1750,7 @@
             summarize the entire document.
           </p>
 		  <p>For media, summaries help users with short attention 
-			span find the exact file they need and jump to correct content. 
+			span find the exact file they need and jump to correct content.  All media files should have a summary description.
 		  </p>
 
           <h5 class="coga-5">More Details</h5>
@@ -2181,23 +1787,6 @@
 		  <p>In multimedia, the segments are summarized as Chapter 1, part 1. Chapter 1, part 2, etc.
 		  </p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a href="https://rawgit.com/w3c/coga/master/extension/help.html"
-              >On coga github: help.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/32">wcag issue 32</a>
-            and
-            <a href="https://www.w3.org/TR/WCAG20-TECHS/G86.html"
-              >WCAG20-TECHS</a
-            >
-          </p>
       </section>
 
       <section>
@@ -2211,7 +1800,8 @@
           much easier to follow. Consider:
         </p>
         <ul>
-          <li>Using numbers and lists can also help;</li>
+          <li>Including all steps, even those you think are "obvious;"</li>
+		  <li>Using numbers and lists can also help;</li>
           <li>
             Providing complex instructions in an If/Then
             table, which can be easier to follow; or
@@ -2222,7 +1812,7 @@
         </ul>
           <h5 class="coga-5">How it Helps</h5>
           <p>
-            Step-by-step instructions benefits many people including those with language impairments,
+            Step-by-step instructions benefit many people including those with language impairments,
             learning disabilities or a poor memory.
           </p>
           <p>
@@ -2273,36 +1863,6 @@
             with a resume and sample code that you wrote. If you want to work in
             design, write to design@example.com with a resume and sample pages.
           </p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            Proposals for wcag design requirement can be found at
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/plain-language-a.html"
-              >On coga github: plain-language-a.html</a
-            >,
-            <a href="https://github.com/w3c/wcag21/issues/30">wcag issue 30</a>,
-            <a href="https://github.com/w3c/wcag21/pull/135"
-              >pull request 135</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aa.html
-            <a href="https://github.com/w3c/wcag21/issues/41">wcag issue 41</a>,
-            <a href="https://github.com/w3c/wcag21/pull/107"
-              >pull request 107</a
-            >
-          </p>
-          <p>
-            On coga github: plain-language-aaa.html<a
-              href="https://github.com/w3c/wcag21/pull/105"
-              >pull request 105</a
-            >.
-          </p>
       </section>
 
       <section>
@@ -2351,22 +1911,7 @@
             Note that “white space” is a term that means the background color.
             It does not always need to be always white!
           </p>
-  
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            Use clear spacing between letters, words, sentences, lines,
-            paragraphs and blocks of text.
-          </p>
-          <p>
-            Text is not fully justified and on coga github:
-            visual-presentation.html,
-            <a href="https://github.com/w3c/wcag21/issues/51">wcag issue 51 </a
-            >and PR number 113.
-          </p>
+
       </section>
 
       <section>
@@ -2376,18 +1921,18 @@
         <p>Related User Story: <a href="#user-story-visual-presentation" aria-label="Visual Presentation User Story">Visual Presentation</a>.</p>       
         <h5 class="coga-5">Description</h5>
         <p>
-          Do not overlay words on busy background.  Provide an option to remove background 
+          Do not overlay words on busy backgrounds.  Provide an option to remove background 
 		  noise behind auditory content or ensure background sounds do not interfere with 
 		  the main auditory content. 
         </p>
 		<p>For text:</p>
-			<ul><li>Use solid backgrounds for blocks of text</li>
-				<li>Use thick outlines with solid fills for text that is overlaid on background that has designs running through it</li>
+			<ul><li>Use solid backgrounds for blocks of text.</li>
+				<li>Use thick outlines with solid fills for text that is overlaid on background that has designs running through it.</li>
 			</ul>
 		
 		<p>For auditory content:</p>
-			<ul><li>Do not include fast changing background auditory content behinds foreground auditory content such as background conversations, unnecessary traffic etc. or,</li>
-				<li>Provide an option to remove background noise behind auditory content</li>
+			<ul><li>Do not include fast changing background auditory content behinds foreground auditory content such as background conversations or unnecessary traffic.</li>
+				<li>Provide an option to remove background noise behind auditory content.</li>
 			</ul>
 			
           <h5 class="coga-5">How it Helps</h5>
@@ -2396,7 +1941,7 @@
 			Phrases are also easier to comprehend. The more words an individual can process in one glance, 
 			the faster they can read, the easier they can understand what’s written, and the more they stay interested. Most people can take in a whole 
 			line of text, or more at once. Fixating on many words at a time is necessary for comprehension for many people. A slow reader may read a sentence slowly using 6 to 9 
-			eye fixations, sometimes taking in only a single word (or less) at a time. Adding 
+			eye fixations, sometimes taking in only a single word (or part of a word) at a time. Adding 
 			background noise reduces the number of words readers can fixate on. Removing background noise helps users 
 			comprehend more words at the same time.
           </p>
@@ -2409,13 +1954,10 @@
 
           <h5 class="coga-5">Examples</h5>
           <p><strong>Success</strong> example:</p>
-          <p>It is easier to recognize words and process large amounts of text when the content can be easily distinguished from the background.</p> 
+          <p>It is easy to recognize words and process large amounts of text as the content can be easily distinguished from the background.</p> 
           </p>
           <p><strong>Failure</strong> example:</p>
-          <div style="background-image: repeating-linear-gradient(black, gray 10%, white 30%);"><p>It is much more difficult to recognize words and process text when the background has a lot of noise.</p> </div>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>None</p>
+          <div style="background-image: repeating-linear-gradient(black, gray 10%, white 30%);"><p>It is difficult to recognize words and process text when the background has a lot of noise.</p> </div>
       </section>
 
     <section>
@@ -2436,33 +1978,27 @@
  		<p>Implied content can be difficult for some users because it requires them to:</p>
 			<ul><li>Know where to look to get the information, and</li>
 			<li>Understand the meaning behind what is being implied.</li></ul>
-		<p>One example was a research study where people with autism were asked to watch a movie 
+		<p>When using body gestures, emotion communications, and facial expressions as the only way to communicate something, it is important to include this in another way to ensure all users understand. One way this can be done is through supplementary text.</p>
+<p>For example, is a gif used in a social media post that communicates a person’s true feelings about a statement they made in text. Some individuals may not be able to understand the emotion being demonstrated by the person’s body language or facial expression and miss the point the author is trying to make.
+
+		<p>Similarly, a research study asked people with autism to watch a movie 
 		that had a lot of implied communications. They were watching the actors’ mouth, but the 
 		information such as that the spoken text was sarcastic was communicated by their facial 
 		expressions. When asked about what happened in the movie, some missed the implied communications 
 		and the point of the communications.</p>
-		<p>Another example is a gif used in a social media post that communicates a person’s true 
-		feelings about a statement they made in text. Some individuals may not be able to understand
-		the emotion being demonstrated by the person’s body language or facial expression and miss
-		the point the author is trying to make.</p>
-		<p>When using body gestures, emotion communications, and facial expressions as the only way 
-		to communicate something, it is important to include this in another way to ensure all users 
-		understand. One way this can be done is through supplementary text.</p>
 
           <h5 class="coga-5">More Details</h5>
           <p>This includes:</p>
           <ul><li>Graphics used alone to identify that something is important, or should be remembered;</li>
           <li>Sarcasm in text; and</li>
           <li>Animations used to add importance or communicate something contrary to the literal meaning of the paired text.</li></ul>
+		<p>Note that standard emojis often come with an explanation or alternative text.</p>
 
           <h5 class="coga-5">Examples</h5>
           <p><strong>Success</strong> example:</p>
           <p>When writing sarcastic comments in a social media post or email, add supplementary text such as <sarcasm> to help
 		  readers understand the intent of your communication. </p> 
 		  <p>Once it is mature you can also use personalization semantics to add non-literal text alternatives.</p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>None</p>
     </section>
 
       <section>
@@ -2497,7 +2033,7 @@
           </p>
           <p>
             For example, a train schedule has a long list of relative times that
-            they train leaves for different zones on the hour. The user cannot
+            the train leaves for different zones on the hour. The user cannot
             calculate when the next train leaves from their location.
           </p>
 
@@ -2562,17 +2098,6 @@
           </ol>
 		  <p>For these, consider providing a description or representation of what the number means as a concept.</p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            See
-            <a href="https://github.com/w3c/wcag21/issues/32">wcag issue 32</a>
-          </p>
-      </section>
-
     </section>
 
     <section>
@@ -2598,12 +2123,12 @@
       </p>
       <p>
         Also many users have short term memory issues that can make copying text
-        difficult or impossible. For example, if you can remember 7 letters in
-        your head at the same time. They may be able to remember one or two.
+        difficult or impossible. For example, you may be able to remember 6 letters in
+        your head at the same time. Someone with an impaired working memory may be able to remember only one or two.
         This makes them much more likely to make mistakes copying as it requires
-        you to remember the numbers or letter accurately.
+        you to remember the numbers or letter accurately and then return to the same position in the original version (which also requires memory).
       </p>
-      <p>Note that a lot can be achieved through supporting personalization.</p>
+      <p>Note that this can often be achieved through supporting personalization.</p>
 
       <section>
         <h3>
@@ -2618,7 +2143,7 @@
           <h5 class="coga-5">How it Helps</h5>
           <p>
             Sometimes users are about to press a control and the control moves.  As a result, users with slow hand-eye coordination and
-			processing speed may hit the wrong control causing an unwanted action and 
+			cognitive processing speed may hit the wrong control causing an unwanted action and 
 			disorientation.  For example, a user prepares to press a button on a video. The orientation changes to landscape and the control moves. 
 			Because the user has slow eye tracking or hand-eye coordination, they end up pressing a link to a new video. 
 
@@ -2742,11 +2267,13 @@
 
           <h5 class="coga-5">Examples</h5>
           <p><strong>Success </strong>example:</p>
-          <p>The user is watching a video. They touch a control accidentally and pressing back does not take them back to the video 
+          <p>The user is watching a video. They touch a control accidentally and pressing back does not take them back to the video.</p> 
 		  <p>
-            While applying
-			A user accidentally hits the home icon and navigates awayompleting an online form when applying for a job. The user is able
-            to go back through all the screens to be sure they did not
+			A user is completing an online form when applying for a job. The user accidentally hits the home icon 
+			and navigates away from the form. The back button takes them back to where they were without any loss of data. 
+          </p>
+		  <p>
+			The user is also able to go back through all the screens to be sure they did not
             misunderstand a section or skip an answer. The user can edit any data they
             mistyped.
           </p>
@@ -2757,39 +2284,6 @@
             a question. When they use the back button all data previously
             entered has been cleared/deleted.
           </p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language:
-            <a href="https://github.com/w3c/wcag21/issues/38">WCAG issue 38</a>
-            and
-            <a href="https://github.com/w3c/wcag21/issues/53">WCAG issue 53</a>
-          </p>
-          <p>Additional Resources:</p>
-          <ul>
-            <li>
-              <a href="https://github.com/w3c/wcag21/issues/53"
-                >More technical details with regards to return
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://rawgit.com/w3c/coga/master/gap-analysis/table.html"
-                >User needs Table (Table 3 Applicable)</a
-              >
-            </li>
-            <li>
-              <a href="https://w3c.github.io/wcag/coga/user-research.html"
-                >Background Research Document.</a
-              >
-            </li>
-            <li>
-              <a href="https://w3c.github.io/personalization-semantics/"
-                >Personalization Semantics</a
-              >
-            </li>
-          </ul>
       </section>
 
       <section>
@@ -2837,7 +2331,7 @@
             day-to-day activities.
           </p>
           <p>
-            For example, a person with Executive Function challenges may be
+            For example, a person who has challenges with Executive Function may be
             trying to order a plane ticket, and not realize that there are extra
             fees not quoted in the original price, such as taxes, international
             fees, baggage fees, etc. They may spend hours booking a holiday only
@@ -2887,30 +2381,12 @@
               total they receive.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/identify-charges.html"
-              >On coga github: identify-charges.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/54">wcag issue 54</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/37">WCAG issue 37</a>
-          </p>
       </section>
 
       <section>
         <h3>Pattern: Design Forms to Prevent Mistakes</h3>
         <h5 class="coga-5">User Need</h5>
-        <blockquote><p>I want an interface that makes mistakes less likely by helping me avoid mistakes, as well as minimize the mistakes I might make</p></blockquote>
+        <blockquote><p>I want an interface that makes mistakes less likely by helping me avoid mistakes, as well as minimize the mistakes I might make.</p></blockquote>
         <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
         <h5 class="coga-5">Description</h5>
         <p>
@@ -2922,11 +2398,7 @@
 		  <li>Clearly indicate required fields;</li>
           <li>
             In a text field, accept as many formats as possible. For example
-            accept different formats of phone numbers and correct
-            <a href="https://www.w3.org/TR/WCAG20/#input-errordef"
-              >Input errors</a
-            >
-            automatically;
+            accept different formats of phone numbers;
           </li>
 		  <li>Divide long numbers into chunks (support autocomplete across fields);</li>
           <li>Use an interface were only valid input can be selected;</li>
@@ -2941,10 +2413,9 @@
 
           <h5 class="coga-5">How it Helps</h5>
           <p>
-            People with cognitive or learning disabilities and aging users often
-            abandon tasks and believe they cannot complete them if they receive
-            too many errors. Error messages may be confusing. Correcting errors
-            is often difficult and frustrating for users. Many users give up
+            After making many errors, people with cognitive or learning disabilities and aging users often
+            abandon their tasks and believe they cannot complete them. Error messages may be confusing. Correcting errors
+            is often difficult and frustrating for users and increase cognitive fatigue. Many users give up
             when they get successive errors.
           </p>
           <p>
@@ -2970,6 +2441,7 @@
 
           <h5 class="coga-5">More Details</h5>
           <ul>
+		  <li>Clearly mark required content.</li>
             <li>
               Only correct errors if the correction is reliable. Otherwise, if
               suggestions for corrections are known, give the suggestions to the
@@ -3030,17 +2502,6 @@
             </li>
           </ul>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/minimize-errors.html"
-              >coga on github: minimize-errors.html</a
-            >
-          </p>
       </section>
 
       <section>
@@ -3055,7 +2516,7 @@
           the place they were at without redoing additional steps.
         </p>
         <p>
-          For financial transactions and important information: Allow the user
+          For financial transactions and important information, allow the user
           to easily cancel the transactions and provide clear information and
           simple instructions for important information including the amount of
           time the user has to cancel a transaction.
@@ -3115,7 +2576,7 @@
             susceptible to scams.
           </p>
           <p>
-            In another example, a user with Attention-Deficit/Hyperactivity
+            For example, a user with Attention-Deficit/Hyperactivity
             Disorder purchasing a travel ticket on a website may struggle with
             details and may have a low attention span. The successful completion
             of the order relies on the information provided at multiple steps in
@@ -3153,7 +2614,7 @@
 
           <h5 class="coga-5">Getting Started</h5>
           <p>
-            Start with forms were a mistake can have serious consequences such
+            Start with forms where a mistake can have serious consequences such
             as financial loss or vulnerability.
           </p>
 
@@ -3175,30 +2636,10 @@
               A summary is provided before submitting important information but the user can't make corrections without losing other data entered.
             </li>
           </ul>
-
-           <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/error-prevention-legal.html"
-              >On coga github: error-prevention-legal.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/33">WCAG issue 33</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/104"
-              >pull request 104</a
-            >
-          </p>
       </section>
 	  
 	  <section>
-        <h3>Pattern: Use Clear Labels</h3>
+        <h3>Pattern: Use Clear Visible Labels</h3>
         <h5 class="coga-5">User Need</h5>
         <blockquote><p>I want clear labels, step-by-step instructions and clear error messages</p></blockquote>
         <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
@@ -3215,15 +2656,14 @@
 			is available or what the control is. Although many users can guess what a control 
 			is for users with cognitive disabilities or impaired memory or executive function 
 			are less likely to be able to remember  the design pattern or  work out what it is.
-			A clear label, next to the control, means people with cognitive disabilities are more 
-			likely to be able to use it.
+			A clear label that uses familiar terms and is located next to the control, helps people with cognitive disabilities use it.
 			</p>
 			<p>Similarly, if a label is not next to a control it is confusing  for some users.  
 			When a label cannot be next to a control, there should be clear visual indicators 
-			that clearly, and visibly associate them, so that the control and not belong to a different 
-			label. (This will need user testing with learning and cognitive disabilities to ensure it is usable.) 
+			that visibly and unambiguously associate the label with the control. 
+			This will need user testing with users who have learning and cognitive disabilities to ensure it is usable. 
 			</p>
-			<p>For example, a user living  with dementia is using an application. Some controls 
+			<p>For example, a user living  with early stage dementia is using an application. Some controls 
 			do not have visual labels. A care giver shows them what the control is for and they 
 			can use the application. The next day they try and use it again but cannot remember 
 			what the control is for. This application is not useable for them.
@@ -3235,7 +2675,7 @@
 
           <h5 class="coga-5">More Details</h5>
           <p>
-            Many people with learning and cognitive disabilities use web extension and simple screenreaders. 
+            Many people with learning and cognitive disabilities use web extension and simple screen readers. 
 			These assistive technologies often do not read ARIA or titles. Until that changes, or an extension displays them, 
 			labels should not rely on these attributes for people with learning or cognitive disabilities.
           </p>
@@ -3247,11 +2687,9 @@
 </p> 
           </p>
           <p><strong>Failure</strong> example:</p>
-          <p> Label uses uncommon words that are not easy to understand exactly what is needed.</p>
+          <p> Label uses uncommon words that are not easy to understand. It is unclear what action is needed.</p>
 		  <p>given name ___________________</p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>None</p>
       </section>
 	  
       <section>
@@ -3263,9 +2701,9 @@
         <p>Write clear instructions that are:</p>
         <ul>
           <li>Located before the field or activity;</li>
-		  <li>broken down by steps;</li>
+		  <li>broken down by steps - ensure that steps are not omitted;</li>
           <li>Clear, concise, and accessible;</li>
-		  <li>Include examples that make it easy to understand what to do;</li>
+		  <li>Include examples or illustrations that make it easy to understand what to do;</li>
 		  <li>Let the user know how long a task might take.</li>
         </ul>
 
@@ -3273,23 +2711,28 @@
           <p>
             Clear instructions help prevent user errors. This reduces
             frustration and enhances the user’s autonomy and independence
-            because they can avoid asking for help. This helps anybody with
-            memory issues, people from a different culture, and people on autism
+            because they can avoid asking for help. This helps many people 
+			with cognitive and learning disabilities as well as people from different cultures, emerging markets, new users, and people on autism
             spectrum who may miss cultural context.
           </p>
+		  <p>For example, a person with age appropriate forgetfulness is trying to complete a form. 
+		    They put all the address and post code in one line (as one would do when writing a letter). 
+			They are given an error message. After a few error messages they assume they cannot manage the form. </p>
 
           <h5 class="coga-5">More Details</h5>
           <p>
             Provide instructions at the start of the process, not simply in an
             error message.
           </p>
+		  <p>Provide instructions needed to enable the user to complete the task. When multiple formats are accepted or errors are automatically corrected, less instructions are needed for the user to complete the task.</p>
+			<p>Note that instructions can be hidden behind a familiar  icon.</p> 
 
           <h5 class="coga-5">Getting Started</h5>
           <p>
             In a system with common errors, tackle the most impactful errors
             first and add guidance as needed.
           </p>
-]
+
           <h5 class="coga-5">Examples</h5>
           <p><strong>Success</strong> examples:</p>
           <ul> 
@@ -3313,20 +2756,6 @@
               control wrong and books their hotel for wrong day.
             </li>
           </ul>
-]
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a href="https://rawgit.com/w3c/coga/master/extension/help.html"
-              >On coga github: help.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/38">WCAG issue 38</a>
-          </p>
       </section>
 
       <section>
@@ -3348,6 +2777,11 @@
             anybody with memory issues, people new to culture, and people on the
             autism spectrum who may miss cultural context.
           </p>
+		  
+		  <p>For example, a user with age appropriate forgetfulness enters their 
+		  phone number with hyphens inserted. They receive an error message, 
+		  because the system sees them as an error. They wonder if they have 
+		  forgotten their phone number and stop trying to use the form. </p>
 
           <h5 class="coga-5">Getting Started</h5>
           <p>
@@ -3384,22 +2818,11 @@
               include numbers only;
             </li>
             <li>
-              User inputs telephone number but is told it must include numbers
+              User inputs telephone number with spaces but is told it must include numbers
               only.
             </li>
           </ul>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/minimize-errors.html"
-              >coga on github: minimize-errors.html</a
-            >
-          </p>
       </section>
 
       <section>
@@ -3418,18 +2841,7 @@
             The use of timed events can present significant barriers for users
             with cognitive disabilities, as these users may require more time to
             read content or to perform functions, such as completing an online
-            form.
-          </p>
-          <p>
-            During the completion of an online process for reserving a hotel
-            room and purchasing a plane ticket, a user with a cognitive
-            impairment may become overwhelmed with the amount of instruction and
-            data input required to complete the process. The user may not be
-            able to complete the process in one sitting, and may need to take a
-            break. Users should be able to leave a process without losing their
-            current place within the process, and without losing data that have
-            already been entered. If users cannot take a break and check their
-            work, many will often be unable to complete a task correctly.
+            form, and may need to take breaks to keep going.
           </p>
           <p>
             While making a purchase on an e-commerce Web site, a user with a
@@ -3439,7 +2851,19 @@
             may need additional time to look up the information required to
             complete a transaction, without losing their place in the process,
             and without losing data that have already been entered.
+          </p>		  
+          <p>
+            For example, during the completion of an online process for reserving a hotel
+            room and purchasing a plane ticket, a user with a cognitive
+            impairment may become overwhelmed with the amount of instruction and
+            data input required to complete the process. The user may not be
+            able to complete the process in one sitting, and may need to take a
+            break. Users should be able to leave a process without losing their
+            current place within the process, and without losing data that have
+            already been entered. If users cannot take a break and check their
+            work, many will often be unable to complete a task correctly.
           </p>
+
           <p>
             In another example, users’ cognitive skills may temporarily diminish
             as they get tired. They then must stop the task for that day, and
@@ -3451,36 +2875,10 @@
 
           <p>
             This pattern helps people with a variety of disabilities including
-            the following:
+            people who have cognitive or language limitations. These individuals need more time to read and understand content or to </li>
+			pause content to have additional time to understand it.
           </p>
-          <ul>
-            <li>
-              People with physical disabilities, who often need more time to
-              react, to type, and to complete activities.</li>
-			  <li>People with low
-              vision need more time to locate things on screen and to read.</li>
-              <li>People who are blind and who use screen readers may need more
-              time to understand screen layouts, to find information, and to
-              operate controls. </li>
-			  <li>People who have cognitive or language
-              limitations need more time to read and to understand. </li>
-			  <li>People who
-              are deaf and who communicate in sign language may need more time
-              to read textual information (which may be a second language for
-              some).
-            </li>
-            <li>
-              In circumstances where a sign-language interpreter may be relating
-              audio content to a user who is deaf, control over time limits is
-              also important.
-            </li>
-            <li>
-              People with reading disabilities, cognitive limitations, and
-              learning disabilities, who may need more time to read or to
-              comprehend information, can pause content to have additional time
-              to read it.
-            </li>
-          </ul>
+		  <p>It is important to note that many people need more than 120 seconds to read the time out notice. So the session ends before the user has finished reading about how to extend the time.  </p>
 
           <h5 class="coga-5">More Details</h5>
           <p>
@@ -3490,13 +2888,13 @@
             ensure that users with disabilities are properly notified.
           </p>
           <p>
-            A website only times out when sensitive information is given (such
-            as the users credit card information). The sensitive information is
-            asked for at the last stage of the process. The user is warned that
+            When a website only times out because sensitive information is given (such
+           as credit card information), the website should ask for the sensitive information at the last stage. 
+		    The website should also warn the user that
             once they give the credit card information they should complete the
             process quickly as the session can time out. After a period of
             inactivity, the Web page asks the user to press any key for more
-            time. If the user does not respond within 120 seconds, a timeout
+            time. If the user does not respond within the time limit, a timeout
             occurs. However, when the user comes back and logs-in again all the
             content is back.
           </p>
@@ -3509,7 +2907,7 @@
               A website uses a client-side time limit to help protect users who
               may step away from their computers. After a period of inactivity,
               the Web page asks if the user needs more time. If the user does
-              not respond within 120 seconds, a timeout occurs. The user is able
+              not respond within 10 minutes, a timeout occurs. The user is able
               to request more time at least 10 times.
             </li>
             <li>
@@ -3522,8 +2920,8 @@
             </li>
             <li>
               A ticket-purchasing web site allows users two minutes to confirm
-              purchase of selected seats, but warns users when their time is
-              almost out. It allows users to extend this time limit at least 10
+              purchase of selected seats, but warns users when their time will
+              end. It allows users to extend this time limit at least 10
               times using a simple action, which is labeled with simple text,
               such as a button labeled "Extend time limit."
             </li>
@@ -3533,7 +2931,8 @@
               who want to bid on an item, it would be unfair to extend the time
               limit for one user. Therefore, a time limit is required for this
               type of activity. No extension, adjustment, or deactivation of
-              such a time limit is required by this design requirement.
+              such a time limit is required by this design requirement. However, 
+			  at the start of the task, the user is warned about the time limit, and how long they have until the time ends. 
             </li>
           <li>
             A Web site with sensitive information uses a client-side time limit
@@ -3541,27 +2940,10 @@
             a period of inactivity, the Web page asks if the user needs more
             time. If the user does not respond within 120 seconds, a timeout
             occurs. However, when the user logs in again all the work is back.
+			The user is warned ahead of time how long they have for inactive sessions 
+			and is told that their data will not be lost. 
           </li>          </ul>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/timed-events.html"
-              >On coga github: timed-events.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/14">wcag issue 14</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/116"
-              >pull request 116</a
-            >
-          </p>
       </section>
 
       <section>
@@ -3661,31 +3043,12 @@
               completed and current steps in a multi-step process.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a href="https://rawgit.com/w3c/coga/master/extension/feedback.html"
-              >On coga github: feedback.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/54">wcag issue 54</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/109"
-              >pull request 109</a
-            >
-          </p>
       </section>
 
       <section>
         <h3>Pattern: Keep Users' Information Safe and Help Users Understand Known Risks</h3>
         <h5 class="coga-5">User Need</h5>
-        <blockquote><p>I need to feel safe and secure when using a website, especially if providing information or communicating with others.</p></blockquote>
+        <blockquote><p>I need to be safe and secure when using a website, especially if providing information or communicating with others.</p></blockquote>
         <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
         <h5 class="coga-5">Description</h5>
         <p>Keep the user's information safe. This includes:</p>
@@ -3756,27 +3119,13 @@
               Using industry best practices for storing and securing user
               information;
             </li>
+			<li>Including COGA persona and use case in the research, development and requirements phases;</li>
             <li>
               Using consent forms in plain language that have been tested with
               people with learning and cognitive disabilities to ensure they
               understand the risks.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/user-information.html"
-              >On coga github: user-information.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/25">wcag issue 25</a>
-          </p>
       </section>
  
     <section>
@@ -3796,6 +3145,7 @@
 		Provide in line alternatives or an option to switch units that is easily 
 		selected, or perhaps based on the user’s location. Common examples are the 
 		units used for distance, meters, currency and temperature.</p>
+		<p>For example, a user may know the temperature in Centigrade. When it is given in Fahrenheit, they think it is going to become very warm.</p>
 
           <h5 class="coga-5">More Details</h5>
           <p>Sometimes metrics are commonly declared in a specific unit even when 
@@ -3811,9 +3161,6 @@
           <p>The Eiffel Tower is 1,063 feet (324 meters) tall, including the antenna at the top.</p> 
 		  <p><strong>Failure</strong> example:</p>
 		  <p>The Eiffel Tower is 1,063 feet tall.</p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>None</p>
       </section>
 	</section>
 	  
@@ -3882,7 +3229,7 @@
             </li>
             <li>
               Have a setting where users can select which types of interruptions
-              they prefer.
+              they can manage and when.
             </li>
           </ul>
           <p>
@@ -3900,11 +3247,15 @@
 			  Sometimes, noises and different types of content may adversely affect mental health. 
 			  For example, noises, distractions or distressing content may make the user more anxious or possibly trigger PTSD. 
 			  There has also been research to suggest that too many interruptions and social media 
-			  may aggravate depression. Allowing users to control this content could help them be more productive online.  
+			  may aggravate depression and difficulty focusing. Allowing users to control this content could help them be more productive online.  
           <p>
           <p>
             Where standard techniques exist to remove or control distractions, they should be used.
           </p>
+		  <p>For example, a person with traumatic brain injury is filling out their taxes online.
+		  The social media application pings them with notifications. They try to turn notifications 
+		  off and then they try to turn off the application but it is too complex.  They are unable 
+		  to submit their taxes without help. </p>
 
           <h5 class="coga-5">Examples</h5>
 
@@ -3913,7 +3264,9 @@
             <li>
               An application lets the user decide how they want to be
               notified about reminders and emails. Users can choose visual
-              reminders and/or sounds, or none. For some users, not having any
+              reminders and/or sounds, or none. They can flag users as essential 
+			  contacts who can interrupt in more cases.  These settings are easy 
+			  to find from every screen. For some users, not having any
               notifications enables them to focus on a task and then go to their
               emails or calendar when the task is completed.
             </li>
@@ -3927,24 +3280,6 @@
               article photo (navy rectangle) change every 20 seconds.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/interruptions.html"
-              >On coga github: interruptions.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/47">wcag issue 47</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/98">pull request 98</a>
-          </p>
       </section>
 
       <section>
@@ -4021,21 +3356,16 @@
         <p>Related User Story: <a href="#user-story-distractions" aria-label="Distractions Story">Findable</a>.</p>
         <h5 class="coga-5">Description</h5>
         <p>
-          Provide users with five or less choices on each screen and remove
+          Provide users with five or less main choices on each screen and remove
           unnecessary content. This can be provided via a simplified version
           alternative that is generated in real time from the same code base as
           the main content.
         </p>
         <p>
           Extra links that do not relate to the main purpose of the page should
-          be limited to the footer section. Extra choices can also be provided
-          using clear and descriptive titles.
+          be limited to the footer section. Extra choices can also hidden under a “more” link or other clear and descriptive titles.
         </p>
-        <p>
-          This can be provided via a simplified version alternative that is
-          generated in real time from the same code base as the main content.
-        </p>
-
+		
           <h5 class="coga-5">How it Helps</h5>
           <p>
             Too much text, too many images and too much other content can cause
@@ -4045,7 +3375,12 @@
             particular, it helps those with a short attention span who may leave
             the page if it appears complex.
           </p>
-		  <p>Simplified content and a consistent design helps reduce cognitive overload which can lead to increased stress and mental fatigue.</p>
+		  <p>Simplified content and a consistent design helps reduce cognitive 
+		  overload which can lead to increased stress and mental fatigue.</p>
+			<p>For example, a person with early stage dementia goes to their doctors site. 
+			There are five choices on the screen: appointments; ask your doctor a question; 
+			test results; approvals and more. Each option has a symbol, clear text and is separated by whitespace. 
+			In two clicks they have asked their doctor their question. They can easily select what they need without asking for help.</p>
 
           <h5 class="coga-5">More Details</h5>
           <p>
@@ -4060,7 +3395,7 @@
           </p>
 
           <p>
-            The intent of this Pattern is not to clutter the page with
+            The intent of this pattern is not to clutter the page with
             unnecessary information but to provide important cues and
             instructions that will benefit people with disabilities. Too much
             information or instruction can be just as much of a hindrance as too
@@ -4088,23 +3423,11 @@
               importantly the message is lost in an overload of information.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html"
-              >WCAG SC 3.3.2</a
-            >
-          </p>
       </section>
 
 	  <section>
         <h3>
-          Pattern: Provide Information So a User Can Prepare For and Complete a Task
+          Pattern: Provide Information So a User Can Complete and Prepare for a Task
         </h3>
         <h5 class="coga-5">User Need</h5>
         <blockquote><p>I know how to start a task, and what is involved.</p></blockquote>
@@ -4128,10 +3451,10 @@
           </p>
           <p>
             Often people need to manage their times of concentration so they can focus without interruptions. 
-			Thus, prior advice on the time a task takes, it’s complexity or working memory load enables them to 
-			better prepare and complete without unintentional abandonment. Furthermore, the provision of a list 
-			of required resources before starting the task along with an indication of the number steps left until 
-			completion of the task will help avoid unwitting failures.
+			Prior advice on the time a task takes, it’s complexity or working memory load enables them to 
+			better prepare and complete without unintentional abandonment. The list 
+			of required resources before starting the task along and the number steps left until 
+			completion of the task will help users avoid failures.
 		  </p>
 
           <h5 class="coga-5">Getting Started</h5>
@@ -4149,10 +3472,6 @@
           <p><strong>Failure</strong> example:</p>
           <p>Another airline does not notify the user that they need their passport. The process times out when 
 		  the user is trying to find their passport number. The user needs to start over or will abandon the booking.</p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>None</p>
-
       </section>
     </section>
 
@@ -4162,35 +3481,39 @@
         Do not put barriers that stop people with cognitive disabilities from
         using or getting to content.
       </p>
+	  <p>Sometimes developers put a menu barrier between users and the task they 
+	  are doing so users cannot use the content or service.</p>
       <p>
         Many users have memory issues and/or language issues that can make
         remembering passwords or remembering numbers, while processing words,
         difficult or impossible. That can make transcribing text or remembering
         passwords difficult or impossible.
       </p>
+	  <p>For example, many users have a small short-term memory. You may be able 
+	  to remember 7 letters or items in your head at the same time. A person with 
+	  a low working memory  may be able to remember one to four pieces of information 
+	  at the same time (depending on the extent of the impairment). If they need to 
+	  remember what they are doing, divide the steps and track what they have done 
+	  they are even more likely to make mistakes.</p>
       <p>
         Sometimes security and authentication put a barrier between users and
         the tasks they are doing. For example, requiring remembering and/or
-        transcribing passwords often blocks users with cognitive disabilities
+        transcribing passwords often blocks users with cognitive disabilities or memory impairments
         from accessing content or using a service.
       </p>
       <p>
-        Sometimes developers put a menu barrier between users and the task they
-        are doing so users cannot use the content or service.
-      </p>
-      <p>
-        Voice XML enables voice dialog systems and voice browsers. An example
+        For example, Voice XML enables voice dialog systems and voice browsers. An example
         might be a phone menu system that ask you "dial 1 for internal services,
         dial 2 for external services, dial 9 for billing services." Sometimes
         users need to hold multiple pieces of transitory information in their
         minds, such as a number being presented as an option, while processing
-        terms that follow. Many people with impaired short term memory cannot
+        terms that follow. However, many people with impaired working memory cannot
         hold more than two or three pieces of information in their memory at the same
         time. As a result, they cannot complete this task and cannot get to the place they need
         to be.
       </p>
-      <p>When possible, provide easy-to-use options.</p>
-      <p>Note that a lot can be achieved through supporting personalization.</p>
+      <p>When possible, provide easy-to-use options and paths to reach a human or the content they need.</p>
+      <p>Note that many accommodations can be provided via personalization support.</p>
 
      
       <section>
@@ -4219,7 +3542,7 @@
 
           <h5 class="coga-5">How it Helps</h5>
           <p>
-            Many people with week memory often lose the password and not be able
+            Many people with weak memory often lose the password and not be able
             to login and use their applications. Their solutions often are only
             sometimes helpful and have security risks:
           </p>
@@ -4325,24 +3648,6 @@
             <li>Using two-step authentication that requires coping;</li>
             <li>Using a password and not allowing pasting into the field.</li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/accessible-authentication.html"
-              >On coga github: accessible-authentication.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/23">wcag issue 23</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/91">pull request 91</a>
-          </p>
       </section>
 
 	  <section>
@@ -4362,14 +3667,12 @@
 
           <h5 class="coga-5">Examples</h5>
           <p><strong>Success</strong> example:</p>
-          <p>Allow login with Facebook or use the web authentication protocol and allow single 
+          <p>Allow login with Facebook</p>
+			<p>Use the web authentication protocol and provide a single 
 		  step method that match your security needs.</p> 
           </p>
           <p><strong>Failure</strong> example:</p>
           <p>All login methods involve multiple steps</p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>None</p>
       </section>
 
     <section>
@@ -4382,16 +3685,14 @@
 
           <h5 class="coga-5">How it Helps</h5>
  		<p>This allows people with language and communication disabilities to login without being overwhelmed
-		large blocks of text. </p>
+		by blocks of text. </p>
+		<p>For example, a symbol user wants to send a message to their doctor. They can press the login with the icon they know and send a message.</p>
 
           <h5 class="coga-5">Examples</h5>
           <p><strong>Success</strong> example:</p>
-          <p>The user can log in with a third party like Facebook or Google or with the web authentication protocol that allows any easy login option.</p>
+          <p>The user can log in with a third party like Facebook or Google which have well know symbols or with the web authentication protocol along with an easy login option.</p>
           <p><strong>Failure</strong> example:</p>
           <p>Login requires answering security questions. No simple, word free, login alternative is provided.</p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>None</p>
     </section>
 
        <section>
@@ -4400,37 +3701,25 @@
         <blockquote><p>If I get stuck I want to be able to find a human by pressing a reserved digit (typically the number 0).</p></blockquote>
         <p>Related User Story: <a href="#user-story-voice-menus" aria-label="Voice Menus User Story">Voice Menus</a>.</p>
         <h5 class="coga-5">Description</h5>
-        <p>Let people easily reach a human who can help.</p>
+        <p>Let people easily reach a human who can help. Do not require navigating menu systems to reach a human. </p>
 		<p>Design helpful voice menus by:</p>
 		<ul>
-			<li>Providing a reserved digit that can be used at any time, usually 0, to skip the voice menu and go directly to a person</li>
-			<li>Providing simple-to-navigate voice-menu systems with limited options that make sense</li>
-			<li>Stating the option before the number to selected</li>
-			<li>Pausing between each option</li>
-			<li>Waiting for a slow speaker to respond</li>
-			<li>Providing a simple way to go back without having to start at the beginning</li>
+			<li>Providing a known reserved digit that can be used at any time, usually 0, to skip the voice menu and go directly to a person;</li>
+			<li>Waiting for a slow speaker to respond;</li>
+			<li>Listening for a quiet speaker</li>
+			<li>Supporting forgetfulness and memory impairments </li>
+			<li>Allowing words normally used by people with different cognitive and learning disabilities</li>
 			<li>Following usability best practices</li>
-			<li>Avoiding unnecessary steps or options</li>
+			<li>Avoiding additional steps or options</li>
 			<li>Avoiding unnecessary or distracting information such as promotional information</li>
 		</ul>
-
-		<p>Create a process that does not require:</p>
-        <ul>
-          <li>Memorizing character strings or pin numbers</li>
-		  <li>Remembering digits to select for a short time </li>
-          <li>Performing calculations</li>
-          <li>Copying</li>
-		  <li>Clear speech or fast responses</li>
-          <li>Using  executive function to work out the category of the service they need </li>
-          <li>Going through multiple steps</li>
-        </ul>
 		
           <h5 class="coga-5">How it Helps</h5>
           <p>
             Many people cannot use voice menu systems and other complex systems.
             This often stops people from completing critical tasks by themselves. Often
             this can include making doctors' appointments, getting health
-            insurance, reaching social services, gettig their water turned back on,
+            insurance, reaching social services, getting their water turned back on,
             etc.
           </p>
           <p>
@@ -4443,12 +3732,12 @@
             disabilities.
           </p>
           <p>
-            See
+            (See
             <a
               href="https://rawgit.com/w3c/coga/master/issue-papers/voice-menus.html"
               >Voice Menu Systems</a
             >
-            issue paper for a full discussion.
+            issue paper for a full discussion.)
           </p>
           <p>Why can’t people use complex menus?</p>
           <ul><li>
@@ -4473,13 +3762,19 @@
             When a lot of irrelevant information is given before the correct
             option, the user may give up. This is especially true if they did not understand
             all the earlier options and information.
-          </li></ul>
+          </li>
+		  <li>They may not understand the terms used.</li>
+		<li>Having focused on the menu, they may forget why they are calling.</li>
+
+		  </li></ul>
           <p>
             The 0 digit should be reserved for reaching a person. Consistently
             set the first option for each menu to: "to weight for a person who
             can help you press 0". This can help everyone reach the support they
             need.
           </p>
+		  
+		  <p>Test any system with a wide range of users with different learning and cognitive disabilities. </p>
 
           <h5 class="coga-5">More Details</h5>
           <p>Considerations for Speech Recognition</p>
@@ -4539,21 +3834,6 @@
           <ul>
             <li>Long menu systems that make it hard to find a person.</li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/task-completion.html"
-              >On coga github: task-completion.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/21">wcag issue 21</a>
-          </p>
       </section>
 
       <section>
@@ -4562,18 +3842,28 @@
         <blockquote><p>I need processes that do not rely on memory and access to information.</p></blockquote>
         <p>Related User Story: <a href="#user-story-previous-steps" aria-label="Previous Steps User Story.">Previous Steps</a>.</p>
         <h5 class="coga-5">Description</h5>
-        <p>
-          Each step in a sequential process must contain the information
-          necessary to allow a user to proceed. They must rely on memory from
-          prior steps. When useful, provide a summary of information from
-          previous steps, and a mechanism for traversing the process.
+		<p>Create a process that does not require:</p>
+        <ul>
+          <li>Memorizing character strings or pin numbers</li>
+		  <li>Remembering digits to select for a short time </li>
+          <li>Performing calculations</li>
+          <li>Copying</li>
+		  <li>Clear speech or fast responses</li>
+          <li>Using  executive function to work out the category of the service they need </li>
+          <li>Going through multiple steps</li>
+        </ul> 
+ <p>
+          When going through multiple steps, each step in a sequential process must contain the information
+          necessary to allow a user to proceed. They must not rely on memory from
+          prior steps.
         </p>
         <p>Labels are before the activation mechanism.</p>
+		<p> When useful, provide a summary of information from previous steps, and a mechanism for traversing the process.</p>
 
           <h5 class="coga-5">How it Helps</h5>
           <p>
-            Often content has barrier which prevent users with learning
-            disability from completing a step, and as a result, prevents them
+            Often content has barriers which prevent users with learning
+            disabilities from completing a step, and as a result, prevents them
             from achieving whatever they wished to achieve.
           </p>
           <p>
@@ -4596,13 +3886,13 @@
             </li>
             <li>
               Reduced executive function may also cause problems. Sometime the
-              user needs more time to complete a task. But she can be problems
-              also if when the system response is too slow. The user may not
+              user needs more time to complete a task. But there can also be problems
+              if the system response is too slow. The user may not
               know whether their input has registered with the system, and
               consequently may press the key or speak again.
             </li>
             <li>
-              The use needs may need to compare similar options such as
+              The user may need to compare similar options such as
               "billing", "accounts", "sales" and decide which is the service
               that is best suited to solve the issue at hand. Without strong
               reasoning skills the user is likely to select the wrong menu
@@ -4613,7 +3903,7 @@
               increase the amount of processing required.
             </li>
             <li>
-              The use needs to focus on the different options and select the
+              The user needs to focus on the different options and select the
               correct one. A person with impaired attention may have not be able
               to focus for a long or multi-level menu. Advertising and
               additional, unrequested information also make it harder to retain
@@ -4638,15 +3928,23 @@
           <p>
             Allowing the 0 digit to get to a person, or having the first option
             "to weight for a person who can help you press 0" can consistently
-            help.
+            help. However, when this is not possible there are steps one can take to reduce the memory requirements for the user.
           </p>
           <p>
-            Each step in a sequential process must contain the information
-            necessary to allow a user to proceed. They must NOT rely on memory
-            from prior steps. When useful, provide a summary of information from
-            previous steps, and an easy mechanism for traversing the process is
-            available.
+            Good practice that dd reduces the memory skills required include: 
           </p>
+		  <ul><li>Each step in a sequential process must contain the information necessary to allow a user to proceed. They must NOT rely on memory from prior steps.</li>
+			<li>Providing simple-to-navigate menus with limited and clear options that are easy to understand and make sense to different user groups. </li>
+			<li>Stating the option before the number to selected.</li>
+			<li>Pausing between each option.</li>
+			<li>Waiting for a slow speaker to respond.</li>
+			<li>Listen for a quiet speaker. </li>
+			<li>Support forgetfulness and memory impairments.</li>
+			<li>Allow words normally used by people with different cognitive and learning disabilities.</li>
+			<li>Providing a simple way to go back without having to start at the beginning.</li>
+			<li>When useful, provide a summary of information from previous steps, and an easy mechanism for traversing the process is available.</li>
+			<li>After the user makes a mistake, give them an option to press 0 for human help.</li>
+		</ul>
 
           <h5 class="coga-5">More Details</h5>
           <p>
@@ -4655,9 +3953,7 @@
           </p>
           <p>
             Standard best practices in voice user interface apply to users with
-            cognitive disabilities, and should be followed. A good reference is
-            published by The Association for Voice Interaction Design Wiki
-            [AVIxD]. Another good reference is [ETSI ETR 096]. Some examples of
+            cognitive disabilities, and should be followed. Some examples of
             generally accepted best practices in voice user interface design:
           </p>
           <ul>
@@ -4691,10 +3987,7 @@
               detail when the user does not respond as expected.
             </li>
           </ul>
-          <p>
-            See the AVIxD wiki cited above for additional recommendation and
-            detail.
-          </p>
+
           <p><strong>User settings</strong></p>
           <p>
             User-specific settings can be used to customize the voice user
@@ -4710,9 +4003,6 @@
               Extra time should be a user setting for both the speed of speech
               and ability for the user to define if they need a slower speech or
               more input time etc.
-            </li>
-            <li>
-              Timed text should be adjustable (as with all accessible media).
             </li>
             <li>
               The user should be able to extend or disable time out as a system
@@ -4810,21 +4100,6 @@
               they need
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/task-completion.html"
-              >On coga github: task-completion.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/21">wcag issue 21</a>
-          </p>
       </section>
     </section>
 
@@ -4843,19 +4118,21 @@
         </p>
         <p>
           Access to human help should never require the user to manage complex
-          menu systems such as voice menus with different options.
+          menu systems such as voice menus with different options. One or more contact mechanisms 
+		  should be easy to locate and use from any page or any step in a process.
         </p>
 
           <h5 class="coga-5">How it Helps</h5>
           <p>
             In cases where the user gets stuck or confused for any reason,
             contact with a human is usually the most effective and suitable
-            solution. Otherwise, the user may abandon the process and be left
-            with negative attitude towards the service or supplier.
-          </p>
+            solution. In reality many sites provide this option only to users who can navigate complex systems.
+			The people who need it the most  will effectively not have access to the human help option. They may 
+			abandon the process and be left with a negative attitude towards the service or supplier.
+         </p>
           <p>
-            One or more contact mechanisms should be easy to locate and use from
-            any page or any step in a process.
+            For example, a user with an intellectual disability wants to use a coupon. They cannot find the instructions 
+			and they cannot find the phone number for support. They effectively cannot use the coupon.  
           </p>
 
           <h5 class="coga-5">More Details</h5>
@@ -4895,7 +4172,7 @@
           <ul>
             <li>
               A phone number, ideally with a feature to automatically call via
-              an interoperable Voice over IP specification.
+              an interoperable Voice over IP specification without a voice menu (direct to an operator).
             </li>
             <li>
               An email link using the ‘mailto’ protocol with prefilled “to” and
@@ -4903,21 +4180,6 @@
               of the users mail client.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/extra-help-aaa.html"
-              >On coga github: extra-help-aaa.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/52">wcag issue 52</a>
-          </p>
       </section>
 
       <section>
@@ -4941,29 +4203,26 @@
         </p>
 		<p>Dedicated help and alternative content should be clearly differentiated from primary content. 
 		Where there is alternative or supplemental content, provide an easy, single action mechanism for the 
-		user to able to find and select the content format or version that is easiest for them to understand.
+		user to be able to find and select the content format or version that is easiest for them to understand.
 		</p>
 
           <h5 class="coga-5">How it Helps</h5>
           <p>
-            The use of complex information, long documents and data in a
-            particular format can present significant barriers to users with
+            The use of complex information, long documents and complex data formats can present significant barriers to users with
             cognitive accessibility needs. Users should be able to understand
             the information and successfully complete described tasks without
-            requiring further external assistance as much as possible. If
-            content is sufficiently complex to cause barrier, it may be
-            inaccessible and then additional supporting help should be provided.
+            requiring further external assistance as much as possible. 
           </p>
           <p>
-            The complexity of information may be inherent in the information
-            itself, for example the language used, the quantity of information,
+            The complexity of information may be part of the information
+            itself, for example the quantity of information
             or the subject matter. In this case, it is likely to need careful
-            explanation, organization and presentation for all users to be able
+            explanation, organization and presentation so as many users as possible are able
             to understand without any mistakes, confusion or need of assistance.
           </p>
           <p>
             In addition, the presentation mode of information, such as a graph,
-            diagram or table, may obscure its meaning through complexity. Here,
+            diagram or table, may make it more complex. Here,
             a supporting description and guided interpretation will highlight
             the key features the user needs to understand.
           </p>
@@ -4988,7 +4247,7 @@
           <ul>
             <li>
               Charts or graphics are provided where they aid the comprehension
-              of complex information. (COGA Techniques 2.7.3)
+              of complex information.
             </li>
             <li>
               Tables are provided where they aid the comprehension of
@@ -5002,7 +4261,7 @@
                   Reinforce numbers with non-numerical concepts, e.g., Very
                   Cold, Cold, Cool, Mild, Warm, Hot, Very Hot
                 </li>
-                <li>Use COGA semantics to supply non-numerical concepts</li>
+                <li>Use personalization semantics to supply non-numerical concepts</li>
               </ul>
             </li>
             <li>
@@ -5033,11 +4292,7 @@
               Sufficient techniques for content with more than 300 words
               <ul>
                 <li>
-                  <a href="http://www.w3.org/TR/WCAG20-TECHS/G86.html"
-                    >WCAG 2.0 Technique G86: Providing a text summary that can
-                    be understood by people with lower secondary education level
-                    reading ability</a
-                  >. For pieces of content with less than 300 words the heading
+                  Provide an easy reading summary using common terms and short blocks of text. For pieces of content with less than 300 words the heading
                   may act as a summary.
                 </li>
                 <li>
@@ -5051,9 +4306,6 @@
                   comprehension for the user and these keywords are programmatic
                   determinable and emphasized in the modality of the user.
                 </li>
-                <li>Using Personalization semantics to identify keywords</li>
-                <li>Using Personalization semantics to supply a summary</li>
-                <li>Using a plugin to supply a summary</li>
               </ul>
             </li>
           </ul>
@@ -5083,30 +4335,11 @@
           <p><strong>Failure</strong> example:</p>
           <ul>
             <li>
-              A graph and data table of sales figures is shown without any
+              A long text and data table of sales figures is shown without any
               explanation of the key features that relate to the content.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a href="https://rawgit.com/w3c/coga/master/extension/help.html"
-              >On coga github: help.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/32">wcag issue 32</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/118"
-              >pull request 118</a
-            >
-          </p>
-      </section>
+     </section>
 
 	  <section>
         <h3>Pattern: Clearly State the Results and Disadvantages of Actions, Options, and Selections</h3>
@@ -5161,14 +4394,6 @@
 			  each option is not visible until two steps later in the process.  A customer must go several screens down on each item in order to make a decision. 
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>None.
-          </p>
 
       </section>
 	  
@@ -5294,25 +4519,6 @@
               as you scroll or tab between them but no help is provided.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a href="https://rawgit.com/w3c/coga/master/extension/help.html"
-              >On coga github: help.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/32">wcag issue 32</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/118"
-              >pull request 118</a
-            >
-          </p>
       </section>
 
       <section>
@@ -5351,6 +4557,7 @@
 			Ideas for improvements and positive feedback will also be
             missed.
           </p>
+		  <p>For example, a user with a learning disability struggles to use an ecommerce site. They have an idea on how to make it much easier to use. They spend an hour trying to give the feedback and then they stop trying. The site continues to lose customers.</p>
 
           <h5 class="coga-5">More Details</h5>
           <p>Make sure the feedback option is:</p>
@@ -5420,26 +4627,6 @@
               the phone.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <ul>
-            <li>
-              SC Shortname: Finding Help -
-              <a
-                href="https://rawgit.com/w3c/coga/master/extension/finding-help.html"
-                >On coga github: clear-text-and-voice.html</a
-              >
-            </li>
-            <li>
-              <a href="https://github.com/w3c/wcag21/issues/43"
-                >WCAG issue 43</a
-              >
-            </li>
-          </ul>
       </section>
 
       <section>
@@ -5475,7 +4662,7 @@
             <li>memory,</li>
             <li>executive function,</li>
             <li>spatial orientation</li>
-            <li>visual/spatial attention, perception&amp;processing</li>
+            <li>visual/spatial attention, perception and processing</li>
             <li>spatial disorientation anxiety</li>
             <li>language processing</li>
             <li>intellectual</li>
@@ -5491,6 +4678,8 @@
             Platforms or other technologies often provide personalization options for relative and cardinal directions and terms which can be used. For
             example, the platform locale settings.
           </p>
+		  <p>For example a person with traumatic brain injury is using a GPS. They review the route before leaving, and look at pictures of the turns. 
+		  These preparations will enable them to follow the route. While driving, the route changes to avoid three minutes of traffic.  They are no longer able to follow it.</p>
  
           <h5 class="coga-5">Examples</h5>
           <p><strong>Success</strong> example:</p>
@@ -5513,25 +4702,6 @@
               Instructions always assume that the person is at the expected location with no way to recover.
             </li>
           </ul>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a href="https://rawgit.com/w3c/coga/master/extension/help.html"
-              >On coga github: help.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/32">wcag issue 32</a>
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/pull/118"
-              >pull request 118</a
-            >
-          </p>
       </section>
 
       <section>
@@ -5583,7 +4753,7 @@
             appointment online. Often they copy the detailing incorrectly onto
             their calendar. However, the website gives them an option to add the
             appointment to the calendar and sets a reminder an hour before. The
-            user now comes to the correct place at the correct time.
+            user now comes to the correct place at the correct time with the correct papers.
           </p>
           <p>
             The benefit to users with cognitive accessibility needs is that they
@@ -5682,27 +4852,21 @@
               reminder.
             </li>
           </ul>
+		            <p><strong>Failure</strong> examples:</p>
 
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a
-              href="https://rawgit.com/w3c/coga/master/extension/reminders.html"
-              >On coga github: reminders.html</a
-            >
-          </p>
-          <p>
-            <a href="https://github.com/w3c/wcag21/issues/34">wcag issue 34</a>
-          </p>
+          <ul>
+            <li>
+              A health care site allows you to set a local medical appointment. 
+			  They are not given the option to automatically add it to their calendar or set a reminder.
+            </li>
+          </ul>
       </section>
     </section>
 
     <section>
       <h2>Objective 8: Support Adaptation and Personalization</h2>
-      <p>
+      <p>People with cognitive disabilities often use add-ons or extensions as assistive technology. This includes spell checkers,  passwords support, and support for text-to-speech with synchronized highlighting of the phrase being read.  It is important that developers do not disable these tools. </p>
+	  <p>
         Personalization can enable us to really meet the individual user’s
         needs. Some users need extra support which we can provide with minimal
         effort from the user via personalization. Personalization allows the
@@ -5720,7 +4884,7 @@
           Less features and options to the optimum number for the individual
           user;
         </li>
-        <li>Keyboard short cuts that are familiar to the user;</li>
+        <li>Keyboard shortcuts that are familiar to the user;</li>
         <li>Widgets for help.</li>
       </ul>
       <p>Personalization also helps with the following:</p>
@@ -5783,6 +4947,8 @@
               Submission of forms through mechanisms other than a button that is
               clearly labeled using simple language to submit the form;
             </li>
+			<li>Opening new content or a feature;</li>
+			<li>Selecting an option;</li>
             <li>Rerouting automatically by a GPS; and</li>
             <li>Changing the direction of a map in a GPS.</li>
           </ul>
@@ -5795,6 +4961,7 @@
             delay. They become completely lost and disoriented and can no
             longer use the application.
           </p>
+		  <p>In another example, a user is watching a video and wants to press “like”. As they are about to press the button, the controls shift and they load a different video instead of pressing “like”. They are now less likely to press “like” because the do not want to lose their content.  As a result their preferences are not heard. </p>
           <p>
             Letting users control when content changes gives users with cognitive disabilities more control over how
             websites and applications behave. This gives them
@@ -5802,7 +4969,7 @@
             and complete the task.
           </p>
 
-          <h5 class="coga-5">More Details</h5>
+          <h5 class="coga-5">More Details</h5> 
           <p>
             Exception: The changes are part of an activity where it is essential
             (e.g. a game).
@@ -5838,17 +5005,6 @@
 			turns were added and how much time will be saved. The GPS asks the user if they 
 			want to change the route or if the GPS changed it, the
             user can go back to the original route in one touch or command.
-          </p>
-
-          <h5 class="coga-5">Technical Details</h5>
-          <p>
-            The following are proposals for WCAG. They experiment with more
-            testable language.
-          </p>
-          <p>
-            <a href="https://rawgit.com/w3c/coga/master/extension/status.html"
-              >status.html</a
-            >
           </p>
       </section>
         
@@ -5895,10 +5051,10 @@
                     details such as:
                   </p>
                   <ul>
-                    <li>The Internet of Things (IoT) interface</li>
-                    <li>Their user name and password</li>
-                    <li>What an acronym stands for</li>
-                    <li>A phone number</li>
+                    <li>The symbols on a Web of Things (WoT) interface;</li>
+                    <li>Their user name and password;</li>
+                    <li>What an acronym stands for;</li>
+                    <li>A phone number; or</li>
                     <li>The meaning of uncommon words</li>
                   </ul>
                   <p>
@@ -5929,8 +5085,8 @@
                   </p>
 
                   <p>
-                    Another example is a person that has a language related disability
-                    (e.g. Dyslexia) which may cause them to read at a slower rate. They
+                    Another example is a person that has a language related disability,
+                    such as Dyslexia, which may cause them to read at a slower rate. They
                     often miss objects and information that they did not know they
                     needed to read. While high-literacy readers scan text, low-literacy
                     users may read the text “word-for-word.” This means they only know
@@ -5943,7 +5099,7 @@
                     particular needs. These readers may select the earlier option they
                     encounter, because they may not have noticed (or prioritized)
                     reading that side bar content. They also might miss information that
-                    is essential for successfully completing an interaction.
+                    is essential for successfully completing an interaction. Less content makes it all more usable.
                   </p>
 
                   <p>
@@ -6014,7 +5170,7 @@
                   <p><strong>Success</strong> example:</p>
                   <ul>
                     <li>
-                      Browser extension and personalization tool bars work. User is able
+                      Browser extension and personalization tool bars work. Users are able
                       to apply their settings from a personalization toolbar to improve
                       the usability for them of the page.
                     </li>
@@ -6032,21 +5188,6 @@
                       The correct symbols cannot be added by a simplification toolbar.
                     </li>
                   </ul>
-
-                  <h5 class="coga-5">Technical Details</h5>
-                  <p>
-                    The following are proposals for WCAG. They experiment with more
-                    testable language.
-                  </p>
-                  <p>
-                    <a
-                      href="https://rawgit.com/w3c/coga/master/extension/standardized-apis"
-                      >On coga github: standardized-apis</a
-                    >
-                  </p>
-                  <p>
-                    <a href="https://github.com/w3c/wcag21/issues/46">wcag issue 46</a>
-                  </p>
       </section>
 
       <section>
@@ -6092,7 +5233,7 @@
                   Make sure it is easy to get back to the full featured version;
                 </li>
                 <li>You can meet this design pattern by;</li>
-                <li>Use aui-simplification on regions and controls;</li>
+                <li>Use data-simplification on regions and controls;</li>
                 <li>Use other attributes in personalization semantics;</li>
                 <li>Add a simplification toolbar;</li>
                 <li>Provide an alternative version.</li>
@@ -6100,7 +5241,7 @@
            
               <h5 class="coga-5">Getting Started</h5>
               <p>
-                Add aui-simplification=”critical” on content that is in any critical
+                Add data-simplification=”critical” on content that is in any critical
                 user testing paths.
               </p>
             
@@ -6117,21 +5258,6 @@
                   thread etc. There is no easy way to simplify the page.
                 </li>
               </ul>
-
-              <h5 class="coga-5">Technical Details</h5>
-              <p>
-                The following are proposals for WCAG. They experiment with more
-                testable language.
-              </p>
-              <p>
-                <a
-                  href="https://rawgit.com/w3c/coga/master/extension/support-personalization.html"
-                  >On coga github: support-personalization.html</a
-                >
-              </p>
-              <p>
-                <a href="https://github.com/w3c/wcag21/issues/6">wcag issue 6</a>
-              </p>
       </section>
 
       <section>
@@ -6147,7 +5273,7 @@
                 <ul>
                   <li>Html 5 autocomplete on common fields;</li>
                   <li>Adding a toolbar that adds personalized images;</li>
-                  <li>Use attributes in personalization semantics.</li>
+                  <li>Use attributes in <a href="https://www.w3.org/TR/personalization-semantics-content-1.0/">personalization semantics</a>.</li>
         		  </ul> </li>
         		  </ol>
                 <p>
@@ -6181,7 +5307,7 @@
             </p>
             <p>
               If users' symbols are mapped to the same concepts, then user agents
-              can load the symbols that are understandable by the user and they
+              can load the symbols that are understandable by the user and the
               user can access the web and other applications.
             </p>
             <p>
@@ -6218,22 +5344,6 @@
                 >.
               </li>
             </ul>
-         
-              <h5 class="coga-5">Technical Details</h5>
-              <p>
-                The following are proposals for WCAG. They experiment with more
-                testable language.
-              </p>
-              <p>
-                <a
-                  href="https://rawgit.com/w3c/coga/master/extension/support-personalization.html"
-                  >On coga github: support-personalization.html</a
-                >
-              </p>
-              <p>
-                <a href="https://github.com/w3c/wcag21/issues/6"></a>wcag issue 6
-              </p>
-
       </section>
     </section>
   </body>
