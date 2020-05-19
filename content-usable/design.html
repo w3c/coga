@@ -4834,7 +4834,8 @@
 
     <section>
       <h2>Objective 8: Support Adaptation and Personalization</h2>
-      <p>People with cognitive disabilities often use add-ons or extensions as assistive technology. This includes spell checkers,  passwords support, and support for text-to-speech with synchronized highlighting of the phrase being read.  It is important that developers do not disable these tools. </p>
+      <p>People with cognitive disabilities often use add-ons or extensions as assistive technology. This includes spell checkers,  passwords support, and support for text-to-speech with synchronized highlighting of the phrase being read.
+	  It is important that these tools are supported and work on all content. In other words, content should not include code that disables these tools.</p>
 	  <p>
         Personalization can enable us to really meet the individual user’s
         needs. Some users need extra support which we can provide with minimal
@@ -5097,22 +5098,18 @@
                     is important as the design requirement is not open ended.
                   </p>
                   <p>
-                    People with cognitive disabilities are often using add-ons as
-                    assistive technology. It is essential that add-ons and similar tools
-                    work. Otherwise, we need to make the author support all the
-                    functions of the add-ons in use as assistive technology.
+                    People with cognitive disabilities often use add-ons as assistive technology. 
+					It is essential that add-ons and similar tools work as expected, except when:
                   </p>
-                  <p>Exceptions:</p>
-                  <ul>
+                  <ol>
                     <li>
-                      When there is a security or safety requirement, these API's may be
-                      disabled for the relevant field
+                      A security or safety requirement requires these API's be disabled. In this case they should be disabled only for the relevant field(s).
                     </li>
                     <li>
-                      If it breaks the main function of the site, such as evaluation and
-                      testing applications
+                      The add-on breaks the main function of the site, such as evaluation and testing applications.
                     </li>
-                  </ul>
+                  </ol>
+				  <p>When add-on's are automatically disabled by the code, the burden of supporting the extra functionality of the add-ons falls to the author.</p>
   
                   <h5 class="coga-5">Getting Started</h5>
                   <p>
