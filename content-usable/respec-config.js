@@ -43,17 +43,32 @@ var respecConfig = {
         name: "Lisa Seeman",
         url: 'http://athena-ict.com',
         mailto: "lisa.seeman@zoho.com",
+        company: "Invited expert",  
         w3cid: 16320
+      },
+      {
+        name: "Rachael Montgomery",
+        mailto: "rachael@accessiblecommunity.org",
+        company: "Invited expert",
+        w3cid: 90310
       },
        
       {
-        name: "Michael Cooper",
+        name: "Steve Lee",
         url: 'https://www.w3.org',
-        mailto: "cooper@w3.org",
+        mailto: "stevelee@w3.org",
         company: "W3C",
         companyURI: "http://www.w3.org",
-        w3cid: 34017
-      }
+        w3cid: 71103
+      },
+      {
+        name: "Ruoxi Ran",
+        url: 'https://www.w3.org',
+        mailto: "ran@w3.org",
+        company: "W3C",
+        companyURI: "http://www.w3.org",
+        w3cid: 100586
+      },
       
     ],
 
