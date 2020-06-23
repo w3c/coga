@@ -43,6 +43,7 @@ var respecConfig = {
         name: "Lisa Seeman",
         url: 'http://athena-ict.com',
         mailto: "lisa.seeman@zoho.com",
+        company: "Invited expert",  
         w3cid: 16320
       },
       {
