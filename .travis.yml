@@ -34,6 +34,9 @@ script:
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/persona/index.html -o persona/index.html -f
   - cp -R ../../w3c/coga/content-usable .
   - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/content-usable/index.html -o content-usable/index.html -f
+  - cp -R ../../w3c/coga/glossary .
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/glossary/index.html -o glossary/index.html -f
+
 
 
 after_success:
