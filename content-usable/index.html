@@ -45,7 +45,7 @@
 
     </style>
 
-    <link href="../common/css/common.css" rel="stylesheet" type="text/css" />
+
   </head>
 
   <body>
@@ -70,7 +70,15 @@
 		</p>
     </section>
 
-    <section id="sotd"></section>
+    <section id="sotd">
+			<p>This is a Working Draft by the <a href="https://www.w3.org/WAI/GL/task-forces/coga/">Cognitive and Learning Disabilities Accessibility Task Force (Coga TF)</a> of the <a href="https://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a>. This version has been enhanced from the previous version to focus on an audience of designers and developers, and provide comprehensive user stories and design patterns. Please find the <a href="#changelog">change log</a> for those changes in this Working Draft. This document is ready for wide review before finalization as a Working Group Note.</p>
+			<p>The COGA TF encourages feedback on any aspect of the document. All coments are welcome. Some  comments may not be addressed in the first Working Group Note, but will be  considered for a later version of the Note. The TF would particularly like feedback on the following questions:</p>
+			<ul>
+				<li>Are any user needs or patterns missing or incorrect?</li>
+				<li>Are there sections that are hard to understand?</li>
+			</ul>
+			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-cognitive-a11y-tf@w3.org">public-cognitive-a11y-tf@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-cognitive-a11y-tf/">archives</a>). Comments are requested by <strong>04 September 2020</strong>. In-progress updates to the document may be viewed in the <a href="https://w3c.github.io/coga/content-usable/">publicly visible editors' draft</a>.</p>
+		</section>
 	
       <section id="summary">
        <h1>Summary</h1>
@@ -79,7 +87,7 @@
 <li><img src="./img/Noun_clear_2594014.svg" alt="" width="40" height="40" />
 <strong>Help users understand what things are and how to use them.</strong> This often involves using things that are familiar to the user so that they do not have to learn new symbols, terms or design patterns. People with cognitive disabilities often need predictable behavior and design patterns. For example, they may know the standard convention for hyperlinks (underlined and blue for unvisited; purple for visited).</li>
 <li><img src="./img/Noun_find_1164217.svg" alt="" width="40" height="40" />
-<strong>Help users find what they need.</strong> Navigating the system should be easy. The layout should be clear and easy to follow with good visual cues like symbols. Using clear headings, boundaries and regions also help let people understand the page design.</li>
+<strong>Help users find what they need.</strong> Navigating a system should be easy. The layout should be clear and easy to follow with visual cues like symbols. Using clear headings, boundaries and regions also help let people understand the page design.</li>
 <li><img src="./img/Noun_menu_58729.svg" alt="" width="40" height="40" />
 <strong>Help users understand with clear text and images.</strong> This includes easy words, short sentences and blocks of text, clear images, and easy to understand video.</li>
 
@@ -87,10 +95,11 @@
 <strong>Provide support for different ways to understand content.</strong> Graphics, summaries of long documents, adding icons to headings and links and alternatives for numbers are all examples of extra help and support.</li>
 
 <li><img src="./img/Noun_mistake_2809535.svg" alt="" width="40" height="40" />
-<strong>Help users avoid mistakes.</strong> A good design will make errors less likely. Do not ask the user for more things then you need! When errors do occur the user should find it easy to correct them.</li>
+<strong>Help users avoid mistakes.</strong> A good design will make errors less likely. Do not ask the user for more things than you need! When errors occur the user should find it easy to correct them.</li>
 
 <li><img src="./img/Noun_focus_2640065.svg" alt="" width="40" height="40" />
-<strong>Help users to maintain focus.</strong> Avoid distracting the user from their task. If they do get distracted, headings and breadcrumbs can help orientate the user and help the user restore the context when it is lost. (Making breadcrumbs clickable can also help the user undo mistakes.)</li>
+<strong>Help users to maintain focus.</strong> Avoid distracting the user from their task. If the user does get distracted, headings and breadcrumbs can help orientate the user and help the user restore the context when it is lost. Providing linked breadcrumbs can help the user undo mistakes.
+</li>
 
 <li><img src="./img/Noun_Login_624752.svg" alt="" width="40" height="40" />
 <strong>Ensure processes do not rely on memory.</strong> Avoid memory barriers that stop people with cognitive disabilities from using content. This includes long passwords to log in and voice menus that involve remembering a specific number or term. Make sure there is an easier option for people who need it.</li>
@@ -123,7 +132,7 @@
       </p>
       <p>
         Traditionally, accessibility focused on making the interface usable for 
-		people with sensory and physical impairments (vision, hearing and/or mobility). 
+		people with sensory and physical impairments (vision, hearing, or mobility). 
 		Some accessibility features will help people with cognitive impairments. 
 		Often the issues that affect people with cognitive and learning disabilities  
 		include design, context, structure, language, usability, and other factors that are 
@@ -141,8 +150,8 @@
         <li>  <a href="https://w3c.github.io/coga/issue-papers/">Cognitive Accessibility Issue Papers</a>, and</li>
         <li>  <a href="https://www.w3.org/TR/coga-gap-analysis/">Cognitive Accessibility Gap Analysis and Roadmap</a>.</li>
 		</ul>
-	  </p>		  
-	  	  <p>
+	  <p class="ednote">We are collecting terms used in our documents in <a href="https://docs.google.com/spreadsheets/d/1lWTTYjzoCDx6goBCMH7pI72nsuIGu35JDu1hYGlyCwY/edit#gid=0">Glossary of COGA</a>. We hope to have a single term for each concept and consistent documentation.</p>	  
+	  <p>
 		 The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> 
 		 beyond the requirements of WCAG. They address accessibility barriers that could not be 
 		 included in the normative WCAG 2.x specification and may not otherwise be addressed.
@@ -153,8 +162,7 @@
 		<p>This document provides information on the development process and design options for making websites and applications that are more usable and accessible for people with 
 		cognitive impairments. It is organized by high level objectives which are listed along with user stories in Section 3.</p>
 		 
-		<p>This document is divided into parts.  Each part can be used when needed by different groups in the development team. Following the advice in this document as much as possible 
-		will be particularly valuable for Web content and applications that address:</p> 
+		<p>This document is divided into parts.  Each part can be used when needed by different groups in the development team. Following the advice in this document, as much as possible, will be particularly valuable for web content and applications that address:</p> 
 		<ul>
 			<li>individual safety concerns, </li>
 			<li>health, </li>
@@ -162,7 +170,7 @@
 			<li>autonomy, </li>
 			<li>care-giving, </li>
 			<li>social integration, and</li>
-			<li>workplace needs.</li>
+			<li>work and the workplace.</li>
 		</ul>
 
 </section>
@@ -188,14 +196,13 @@
             to remember new symbols and interface paradigms;
           </li>
 		  <li>
-			  People with impaired working memory will only be able to hold one to 
+			  People with impaired working memory may only be able to hold one to 
 			  three items in their memory at the same time. This can make it difficult to 
 			  hold information temporarily or copy access codes. 
 		  </li>
           <li>
             People with different processing speed capabilities may need
-            additional time to understand the design relationships and volume of
-            information on screen;
+            additional time to understand the design relationships and information on the screen;
           </li>
           <li>
             People with language related disabilities may need simple clear
@@ -203,12 +210,12 @@
             familiar symbols to understand content;
           </li>
           <li>
-            People with social and/or communication disabilities may need clear
+            People with social or communication disabilities may need clear
             literal language and may not understand metaphors or non-literal
             text and symbols;
           </li>
           <li>
-            People with impairments that affect or comprehending mathematical concepts may not understand or confuse numerical
+            People with impairments that affect the comprehension of mathematical concepts may not understand or confuse numerical
             references such as percentages;
           </li>
           <li>
@@ -219,10 +226,12 @@
             (including in multimedia);
           </li>
           <li>
-            Many groups will need support to minimize errors and complete their
-            task. They will struggle with cognitive fatigue when completing complex, multi-stage processes such as
+            People with cognitive disabilities that impact learning may need more support or time to complete a new process or an authentication task.
+          </li>
+          <li>
+            Many groups may struggle with cognitive fatigue when completing complex, multi-stage processes such as
             filling out forms or entering data correctly or finding the content
-            or feature that they need.
+            or feature that they need. They will need support to minimize errors and complete their task. 
           </li>
         </ul>
         <p>
@@ -233,17 +242,11 @@
           situation can place an additional cognitive load on users by
           splitting their attention. However, for users with cognitive and
           learning disabilities, these difficulties are likely to be persistent
-          and significant. As a result, they could be unable to access content and complete these tasks independently.
+          and significant. As a result, they may be unable to access content and complete these tasks independently.
         </p>
   
         <p>
-          Cognitive and learning disabilities are usually hidden difficulties and may be age related. The
-          terminology and definitions used for cognitive disabilities varies
-          between countries and users are less likely to have a formal diagnosis
-          of a disability than individuals with physical and sensory
-          difficulties. Often, only some functions are impaired while other cognitive functions are unaffected. For example, someone with dyslexia may be a fantastic engineer.
-          Sometimes, cognitive disability may include intellectual impairments that affect comprehension alongside written and spoken
-          expression. People may also experience more than one type of  cognitive and learning disability. 
+          Cognitive and learning disabilities are difficult to diagnose and categorize. They are usually hidden and can be age related.  Users are less likely to have a formal diagnosis of a disability than individuals with physical and sensory difficulties. Often, only some functions are impaired while other cognitive functions are unaffected. For example, someone with dyslexia may be a fantastic engineer. Sometimes, cognitive and learning disabilities may include intellectual impairments that affect comprehension, alongside written and spoken expression. People may also experience more than one type of cognitive and learning disability. Note that the terminology and definitions used for cognitive and learning disabilities varies between countries.
         </p>
         <p>
           Mental health issues can also result in cognitive difficulties, such as difficulty focusing, cognitive fatigue or reduced memory. 
@@ -277,7 +280,7 @@
         <ul>
           <li>
             Including the needs of users with cognitive and learning disabilities in the
-            context of user needs and requirements;
+            context of user needs and requirements.
           </li>
           <li>
             Including people with cognitive and learning disabilities in research methods such
@@ -296,13 +299,13 @@
         <section id="user_needs">
           <h1>User Stories</h1>
           <p>This section contains user stories, followed by the user needs that relate to them. They are divided into the same objectives as the design guide above.</p>
-			<p>Note that for people with learning and cognitive disabilities, meeting  these needs often is the difference between being able to use the site or not be able to use it at all. This may also be true for people with mental health issues or under temporary stress.  </p>
-			<p>User needs for people with learning and cognitive disabilities (COGA) are often helpful for other users, although they can usually manage to use the site without these user needs being met.   </p>
+			<p>Note that for people with learning and cognitive disabilities, meeting these needs can be the difference between being able to use the site or not being able to use it at all. This may also be true for people with mental health issues or under temporary stress.  </p>
+			<p>User needs for people with learning and cognitive disabilities are often helpful for other users, although they can usually manage to use the site without these user needs being met.   </p>
          <section>
           <h2>Objective 1: Help Users Understand What Things are and How to Use Them</h2>
 <section>
 			<h4>User Story: Clear Purpose</h4>
-			<p>As a user with a memory impairment, attention impairment and/or executive function impairment or as a user with a communication disability who uses symbols,
+			<p>As a user with a memory impairment, attention impairment, or executive function impairment or as a user with a communication disability who uses symbols,
                I need to know the purpose of the content so that I know if I am in the right place, and what I am doing even if I lose attention and focus for a time. </p>
 
 			<p>This also includes the following user needs:</p><ul><li>
@@ -318,13 +321,13 @@
 </section><section>
 			<h4>User Story: Clear Operation</h4>
 
-		<p>As a user with a memory impairment, a learning disability, or a communication disability who uses symbols, and/or executive function impairment, I find it hard to learn new interface design patterns. I need to know which controls are available and how to use them so that the site is usable for me.</p>
+		<p>As a user with a memory impairment or a communication disability who uses symbols, or executive function impairment, I find it hard to learn new interface design patterns. I need to know which controls are available and how to use them so that the site is usable for me.</p>
 
 			<p>This also includes the following user needs: </p><ul><li>
-			I understand my options and the tasks I can perform  and I can identify the controls I can interact with in order to complete actions. </li><li> 
+			I understand my options and the tasks I can perform  and I can identify the controls I can interact with to complete actions. </li><li> 
 			I know how to use all the controls and the effects of each action. </li><li>
 			The interface is designed so that I rarely touch controls by accident</li><li>
-			I do not try to activate elements that are not controls. Otherwise I just think the site is broken and give up. </li><li>
+			I do not try to activate elements that are not controls. Otherwise I think the site is broken and will give up. </li><li>
 			Controls do not move unexpectedly as I am using them. </li><li>
 			I know the consequence of each action, such as sending information, changing settings, changing the context or closing the application. </li></ul>
 
@@ -358,7 +361,7 @@
 <section>
 			<h4>User Story: Findable</h4>
 
-			<p>As a user with a memory impairment, weak executive function and/or weak language processing skills, I need to be able to find features and content easily, so that I can find things in a reasonable amount of time.</p>
+			<p>As a user with a memory impairment, weak executive function, or weak language processing skills, I need to be able to find features and content easily, so that I can find things in a reasonable amount of time.</p>
 
       <p>I can identify important information and critical functions on a page, quickly and easily.</p> 
       <p>This also includes the following user needs:</p>
@@ -368,7 +371,7 @@
 			I can easily identify content that I need, and do not need.  Information I need to know and important information stands out, or is the first thing I read  and does not get lost in the noise of less important information. </li><li>
 			I can get to the feature I need using the minimum number of easy steps.</li><li>
 			I know the starting point for each specific task, such as applying for a job.</li><li>
-			I find the design familiar such that user interface elements such as menus, buttons and design components as well as elements common to many websites such as help and search are where I expect them to be and do not move unexpectedly. </li>
+			I find the design and user interface elements familiar. Menus, buttons, design components, and common elements such as help and search are easy to recognize and where I expect them to be. </li>
 			</ul>
 
       <p><strong>Related Personas:</strong>
@@ -381,7 +384,7 @@
 </section><section>
 			<h4>User Story: Searchable</h4>
  
-      <p>As a user with a memory impairment, weak executive function and/or weak language processing skills, I need to be able to find features and content easily, so that I can find things in a reasonable amount of time. I can easily search for what I want. </p>
+      <p>As a user with a memory impairment, weak executive function, or weak language processing skills, I need to be able to find features and content easily, so that I can find things in a reasonable amount of time. I can easily search for what I want. </p>
       <p>This also includes the following user needs: </p>
 			<ul><li>
 			I can find what I have searched for before.</li>
@@ -392,7 +395,7 @@
 			</section><section>
 			<h4>User Story: Clear Navigation</h4>
 
-	<p>As a user with a memory impairment, weak executive function and/or weak language processing skills, I need to be able to find features and content easily, so that I can find things in a reasonable amount of time.</p>
+	<p>As a user with a memory impairment, weak executive function, or weak language processing skills, I need to be able to find features and content easily, so that I can find things in a reasonable amount of time.</p>
 
       <p>I need the structure and menu categories to make sense to me,  so that I find what I am looking for, without looking in the wrong place.</p>
       <p> This also includes the following user needs: </p>			
@@ -413,10 +416,12 @@
 </section><section>
     <h4>User Story: Media</h4>
 
-    <p>As a user with weak executive functioning and attention impairments, I want media presented in small chunks of understandable content, so I can understand the main points and not lose focus. </p>
+    <p>As a user with weak executive functioning and attention impairments, I want media presented in small chunks of understandable content, so that I can understand the main points and not lose focus. </p>
+
     <p>This also includes the following user needs: </p><ul><li>
 
-    I can easily navigate to what I want, take breaks and easily jump back a step if I do not follow or get distracted, when I am using small segments of multimedia that have navigable text or labels that describe the segment. </li><li>
+    I can easily navigate to what I want, take breaks and easily jump back a step if I do not follow or get distracted.</li>
+    <li> I want small segments of multimedia that have navigable text or labels that describe the segment. </li><li>
     I understand plain language used in the media.</li><li>
     I can use a clear structure to help me navigate and understand different parts of the media.</li><li>
     I can use visual aids and pictures to help me understand the media content.</li></ul>
@@ -429,9 +434,9 @@
 <section>
 			<h4>User Story: Clear Language (Written or Audio)</h4>
 		
-			<p>As a user with a language impairment, learning disability and/or a memory impairment, I want the language used to be clear and easy for me to understand so that I can understand the content.</p>
+			<p>As a user with a language, processing or memory impairment, I want the language used to be clear and easy for me to understand so that I can understand the content.</p>
 			<p>This also includes the following user needs:</p> <ul><li>
-			I understand the language used including vocabulary, syntax, tense and other aspects of language.</li><li>
+			I understand the language used, including vocabulary, syntax, tense and other aspects of language.</li><li>
 			I can easily distinguish the content from the background distractions.</li><li>
 			I need words to include accents, characters and diacritics that are necessary to phonetically read the words. This is often needed for speech synthesis and phonetic readers  in languages like Arabic and Hebrew. </li><li>
 			I do not want unexplained, implied or ambiguous information because I may misunderstand jokes and metaphors. </li><li>
@@ -446,7 +451,7 @@
 </section><section>
 			<h4>User Story: Visual Presentation</h4>
 
-			<p>As a user with a language impairment, learning disability and/or an impaired memory, I want a page layout that helps me follow and understand the content without getting overwhelmed. </p>
+			<p>As a user with a language or communication impairment, dyslexia, or an impaired memory, I want a page layout that helps me follow and understand the content without getting overwhelmed. </p>
 
 			<p>This also includes the following user needs: </p><ul><li>
 
@@ -455,9 +460,9 @@
 			Short paragraphs and sentences with one idea.</li><li>
 			Good use of lists.</li><li>
 			Pictographic symbols next to headings, labels and links.  </li></ul></li><li>
-			I can read easily when there is a good use of white space.<ul><li>
-			Good use of white space between lines, sentences or phrases.</li><li>
-			Good use of white space between chunks, so that the chunks are clear and the page does not get overwhelming.</li></ul></li><li>
+			I can read easily when there is a good use of white space between for example:<ul><li>
+			Lines, sentences or phrases;</li><li>
+			Chunks, so that the chunks are clear and the page does not get overwhelming.</li></ul></li><li>
 			I need explanations of implied content, like body gestures and facial expressions seen in images and animations. </li></ul>
 
       <p><strong>Related Personas:</strong> 
@@ -472,13 +477,17 @@
 </section><section>
 			<h4>User Story: Math Concepts</h4>
 
-			<p>As a user who does not understand numerical concepts, I need content to be usable without understanding math concepts.</p>
+			<p>As a user who does not understand numerical concepts, I need content to be usable without understanding math concepts, such as percentages.</p>
 
-			<p>This also includes the following user needs: </p><ul><li>
-			I want content to be usable without understanding math concepts, such as percentages.<ul><li>
-			I do not want math concepts in my content or </li><li>
-			the content  provides multiple / alternatives like a non-math symbol. (There are people who find math easier to understand than words - just not me!) </li></ul></li><li>
-			I find words easier to understand than digits.</li></ul>
+			<p>This also includes the following user needs: </p>
+      <ul><li>I do not want math concepts in my content.</li>
+        <li>I want content that provides alternatives like a non-math textual explanation . (There are people who find math easier to understand than words - just not me!)</li>
+        <li>I find words easier to understand than digits.</li>
+      </ul>
+
+			
+
+
 			
 	  <p><strong>Related Personas:</strong>
 	  	<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a>, 	  
@@ -491,16 +500,16 @@
 			<h2>Objective 4: Help Users Avoid Mistakes or Correct Them </h2>
 <section>			<h4>User Story: Assistance and Support</h4>
 
-			<p>As a user who has difficulty with organization (executive functioning), typing, and putting letters and numbers in the right order, I want an interface that helps me avoid making mistakes, complete forms and other similar tasks successfully.</p>
+			<p>As a user who has difficulty with organization (executive functioning), typing, and putting letters and numbers in the right order, I want an interface that helps me avoid making mistakes, complete forms and perform other similar tasks successfully.</p>
 			<p>This also includes the following user needs: </p><ul><li>
 
 			I want an interface that makes mistakes less likely by helping me avoid mistakes, as well as minimize the mistakes I might make.</li><li>
 			I want to enter as little information as possible, so the task is more manageable.</li><li>
 			I want an interface to provide only valid options, so I can select the ones I want.</li><li>
 			I want an interface that helps ensure I rarely touch controls by accident.</li><li>
-			I want long numbers that often have spaces, like credit card numbers, divided into chunks. That way I find it easier to check it. </li><li> 
+			I want long numbers that often have spaces, like credit card numbers, divided into chunks. That way I find it easier to check them. </li><li> 
 			I want inputs to accept different formats  and not mark them as mistakes.</li><li>
-			I want interfaces to use metrics I know, and that are common in my location (such as feet or meters) or I get confused. I do not always know what metric they are talking about or notice the number looks wrong.  </li><li>
+			I want interfaces to use metrics I know, and that are common in my location (such as feet or meters); otherwise I get confused. I do not always know what metric they are talking about or notice the number looks wrong.  </li><li>
 			I want to use applications or APIs that help me, such as remembering my information so I do not need to enter it again and have help with my spelling. </li><li>
 			I want clear labels, step-by-step instructions and clear error messages, so I know exactly what to do. </li><li>
 			I want examples that make it easy to understand what I need to do. </li><li>
@@ -530,7 +539,7 @@
 			<ul><li>
 			I want to be able to check my work and go back without losing the work I have just done. </li><li>
 			If I touch the wrong control, it is important to make it easy for me to go back to where I was in one simple step.</li><li>
-			I want predictable back or undo features so I'm exactly where I was previously, before I made a mistake. </li><li>
+			I want predictable back or undo features so I know exactly where I was previously, before I made a mistake. </li><li>
 			I understand the consequences of what I do.</li></ul>
 			
 			<p><strong>Related Personas:</strong>
@@ -546,16 +555,14 @@
 
 			<p>As a user with an attention impairment and weak memory, I need to be able to avoid distraction and restore the context after I lose focus and come back to the task, so that I can complete the task I am trying to do.</p>
 
-			<p>This also includes the following user needs:</p><ul><li>
-			I do not want distractions from my task. </li><li>
-			If there are distractions, I must be able to easily  turn them off </li></ul>
-
-			<p>As a user that needs help to stay focused, I need help with knowing where a task starts and finishes to help with switching attention so that I can focus on the task.</p>
-
-      <p>This also includes the following user needs:</p>
-      <ul><li>
-        I need to know the context, where I am, what I just did, or what just happened to me after I lost cognitive focus and then needed to come back to the task.
-      </li></ul>
+			<p>This also includes the following user needs:</p>
+      <ul>
+        <li>I do not want distractions from my task. </li>
+        <li>If there are distractions, I must be able to easily  turn them off </li>
+        <li>I need to know the context, where I am, what I just did, or what just happened to me after I lost cognitive focus and then needed to come back to the task.</li>
+        <li>I need to be able to go back or see information about where I am in a site so I can reorientate myself.</li>
+          <li>I want to know where I am in a process to avoid disorientation, including what I have done and what my next step will be.</li>
+      </ul>
 
       <p>As a user with poor short-term memory, I need to be able to go back or see information about where I am in a site so I can reorientate myself.</p>
       <p>As a user who gets disoriented, I want to know where I am in a process, including what I have done and what my next step will be.</p>
@@ -583,7 +590,7 @@
 			I need to be able to use a site without remembering or transcribing passwords and usernames </li><li>
 			I cannot decipher a lot of words or symbols</li><li>
 			I need the login process to be simple, and not multi-step </li><li>
-			As a symbol user, I need a login process I can use that does not rely on a lot of words</li><li>
+			As a user with a language impairment, I need a login process that I can use that does not rely on a lot of words</li><li>
 			I need the login process that does not contain puzzles or calculations</li></ul>
 
 		<p><strong>Related Personas:</strong>
@@ -592,18 +599,18 @@
 		</p></section>
 			<section><h4>User Story: Voice Menus</h4>
 
-			<p>As a user who has memory impairments and weak language processing skills, I want to get human help, without going through a complex VoiceXML menu system and/or a complex voice recognition menu system that relies on memory and executive function, so I can set an appointment or find out some information.</p>
+			<p>As a user who has memory impairments and weak language processing skills, I want to get human help, without going through a complex VoiceXML menu system or a complex voice recognition menu system that relies on memory and executive function, so that I can set an appointment or find out some information.</p>
 
 			<p>This also includes the following user needs:</p>
 			<ul><li> 
-			If I get stuck I want to be able to find a human by pressing a reserved digit (typically the number 0).</li><li>
-			I need simple-to-navigate voice-menu systems with limited options that make sense to me, so I don’t have to struggle with multiple steps.</li><li>
+			If I get stuck I want to be able to find a human by pressing a reserved digit that I know (typically the number 0).</li><li>
+			I need simple-to-navigate voice-menu systems with limited options that make sense to me, so I don’t have to struggle with multiple steps and can identify options quickly.</li><li>
 			I need the option to be said before the number to select, so I do not have to remember the number while processing the words.</li><li>
 			As a user with low cognitive processing speed, I want pauses between each option so I can process what was said.</li><li>
 			As a slow speaker I want the system to wait for my response.</li><li>
-			I want it to be simple, to go back every time I make a mistake, without having to start at the beginning.</li><li>
-			I want the best practices for usability to be followed.</li><li>
-			As a user who has weak executive function, I need a process to select simple help, and not multi-step help.</li><li>
+			I want it to be simple to go back every time I make a mistake, without having to start at the beginning.</li><li>
+			As a user who often finds menus unusable, I want the best practices for usability to be followed.</li><li>
+			I need a process to select simple help, and not multi-step help (to support weak executive functioning).</li><li>
 			I do not want to waste my energy while I struggle to understand other material, such as special offers or promotions.</li><li>
 			As a user with weak language skills I need help  identifying the right words to say in a voice menu and the words should be the ones I would use.</li><li>
 			As a user who struggles with multiple steps, I need to identify relevant options quickly. 
@@ -621,7 +628,7 @@
 			<h2>Objective 7: Provide Help and Support</h2>
 <section>
 			<h4>User Story: Help</h4>
-      <p>As a user who often cannot use a website I want to be able to get help and give feedback easily from every place where I get stuck. This ensures I am not excluded and the site is aware of my needs.</p>
+      <p>As a user who finds some websites hard to use, I want to be able to get help and give feedback easily from every place where I get stuck. This ensures I am not excluded and the site is aware of my needs.</p>
       <p>This also includes the following user needs:</p><ul><li> 
 			I can give feedback from any point in the process. </li><li>
 			I can give feedback, ask questions and get feedback:<ul><li> 
@@ -633,19 +640,19 @@
 </section><section>	  
 			<h4>User Story: Support</h4>
 
-      <p>As a user who often cannot use a website I sometimes need in-page and inline support so that I am able to use the content.</p>
-      <p>This also includes the following user needs:</p><ul><li> 
-			As a user who struggles with text and words, help and support should include symbols or enable me to personalize using my own</li><li>
-			As a user who struggles with text and words, help and main content should be clearly differentiated so I do not confuse them </li><li>
-			As a user who struggles with text and words, I need contextually-relevant graphs and pictures to supplement text so I can understand a point without a lot of reading. For example, I find graphs much easier to understand than the same information in an article or academic paper</li><li>
-			As a user who struggles with text and words, I need text to speech support, with synchronized highlighting, so I can follow as I go</li><li>
-			As a user who struggles with web content, I need rapid feedback or visual cues to indicate an event was successfully triggered. For example, I need to know when an email has been sent, otherwise it looks as if it has just disappeared</li><li>
-			I need reminders integrated into my calendar, otherwise I will forget appointments and when I am meant to do things. Sometimes I need reminders to revisit a website to complete the next task</li><li>
-			As a user with an attention disorder, too many reminders distract me. I need to be able to control when reminders are sent, the frequency and type of reminders. </li>
+      <p>As a user who finds some websites hard to use and struggles with text and words, I sometimes need in-page and inline support so that I am able to use the content. However, with an attention disorder any support required needs to be in my control to avoid distractions. </p>
+      <p>This also includes the following user needs:</p>
+      <ul>
+        <li>I need any help and support content to include symbols or enable me to personalize content using my own.</li>
+        <li>I need contextually-relevant graphs and pictures to supplement text so I can understand a point without a lot of reading. For example, I find graphs much easier to understand than the same information in an article or academic paper.</li>
+        <li>I need text to speech support, with synchronized highlighting, so I can follow as words are read aloud.</li>
+        <li>As a user who struggles with web content, I need rapid feedback or visual cues to indicate an event was successfully triggered. For example, I need to know when an email has been sent, otherwise it looks as if it has just disappeared.</li>
+        <li>I need reminders integrated into my calendar, otherwise I will forget appointments and when I am meant to do things. Sometimes I need reminders to revisit a website to complete the next task.</li>
+        <li>I need to be able to control when reminders are sent, the frequency and type of reminders so that I do not become distracted.</li>
 			</ul>
 </section><section>			
 			<h4>User Story: Directions</h4>
-		<p>As a user with cognitive disabilities that effect navigation and sequencing, I need help understanding and using directions and navigation. </p>
+		<p>As a user with cognitive disabilities that affect navigation and sequencing, I need help understanding and using directions and navigation. </p>
 
   <p><strong>Related Personas:</strong>
 
@@ -655,7 +662,7 @@
 </section><section>
 			<h4>User Story: Cognitive Stress</h4>
  
-      <p>As a user with sensitivities that can be affected by content (e.g. content that is busy, confusing, depressing, loud noise), I need content that I can cope with so that I can be successful.</p>
+      <p>As a user with sensitivities that can be affected by content (e.g. content that is busy, confusing, depressing, or has loud noises), I need content that I can cope with so that I can be successful.</p>
       <p>This also includes the following user needs:</p>
 	  <ul><li> 
 			I need simple, consistent content.</li><li>
@@ -665,9 +672,8 @@
 			I need to know I am safe and secure when using a website, especially if providing information or communicating with others.</li>
 	  </ul>
 			   
-			
-			
-     <p><strong>Related Persona:</strong>		<a href="#tom-a-traumatic-brain-injury-survivor">Tom</a></p>
+     <p><strong>Related Persona:</strong> <a href="#anna-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Anna</a>, <a href="#frank-a-retired-lawyer-with-dementia">Frank</a>, <a href="#tom-a-traumatic-brain-injury-survivor">Tom</a></p>
+
 </section><section>	 
 			<h4>User Story: Task Management</h4>
 
@@ -705,7 +711,7 @@
 			I need to be able to find and select the content format or version of the content that is easiest for me to understand. </li><li>
 			I need alternatives to spoken and written language such as icons, symbols or pictures.</li><li>
 			I need personalized  symbols  or pictures that I can recognize immediately, as learning new ones takes a long time. </li><li>
-			When I do not know a word I need I need the symbols and pictures that I know and recognize. </li><li>
+			When I do not know a word I need the symbols and pictures that I know and recognize. </li><li>
 			I need video and pictures that help me understand the content without so much reading of text.</li><li>
 			I need my additional support features from widgets or extensions. For example, I have an extension that  helps me  correctly enter words, grammar and use punctuation as well as read the page to me. </li><li>
 			I need "easy to use" gestures on a touch screen that do not confuse me (or the possibility of alternative access).</li><li>
@@ -777,11 +783,13 @@ disabilities, and when possible, usability testing with individuals with cogniti
 <li>Have dyslexia and/or dyscalculia or ADHD</li>
 <li>Have a learning or intellectual disability</li>
 <li>People with acquired cognitive issues (for example, due to neurological trauma) who have the same challenges as people with other disabilities such as:
+
+<p>People with acquired cognitive issues have the same challenges as people with other disabilities such as:
+
 <ul>
 <li>having difficulty (asking a family member to help) with booking travel booking or hotel booking online</li>
 <li>being unable to use online banking</li>
 <li>coping with content forms and pop-up windows when errors occur</li>
-</ul></li>
 </ul>
 <p>It is helpful to find people with learning and cognitive difficulties who are also in your target group as customers or users.</p>
 <p>If your organization has a more formal process, work with those that help employees or community members get assistive technology or other accommodations. They can put out a call for volunteers to their contacts. This helps individuals self-identify and opt-in to help.</p>
@@ -832,11 +840,11 @@ Peer-researchers understand the perspective of people with their disabilities. T
 <li>Have a copy of the participation forms at the session, in case questions come up before the session begins.</li>
 <li>Send participation forms to the participant in advance, and allow plenty of time for the participant to ask questions and fill in forms;</li>
 <li>Allow the participant to bring a care giver, family member or friend to attend with them. </li>
-<li>If your tester has a guardian, you should get an assent form from the tester and an informed consent form from their guardian;</li>
-<li>If they bring a guardian or care giver, make sure they are not doing the tasks for them. If they give help, monitor closely what help they give as this may be due to a design fault.&nbsp;</li>
+<li>If your tester has a guardian, get an assent form from the tester and an informed consent form from their guardian;</li>
+<li>If they bring a guardian or care giver, make sure the guaridan or care giver is not doing the tasks for them. If they give help, monitor closely what help they give as this may be due to a design fault.&nbsp;</li>
 <li>Explain the testing method before the test.</li>
-<li>The questions should not be too difficult.&nbsp;</li>
-<li>It helps to provide easy methods of assessing mood, rather than asking for the participant to verbalize. Try asking them to select a smiley face, such as:<em> Figure 1 A simple mood selector</em><br /><br />
+<li>Make sure the questions are not too difficult.&nbsp;</li>
+<li>Provide easy methods of assessing mood, rather than asking for the participant to verbalize. Try asking them to select a smiley face, such as:<em> Figure 1 A simple mood selector</em><br /><br />
 
 
 	<figure>
@@ -846,6 +854,7 @@ Peer-researchers understand the perspective of people with their disabilities. T
                     alt="a set of 5 smiley faces from happy, through neutral, to sad."                 />
                   <figcaption>A simple mood selector</figcaption>
                 </figure>
+
 				</li>
 <li>Some individuals also have challenges identifying moods from faces. Other options to consider are simple mood selectors and text-based rating scales where an individual can point to their selection. For example, I really like this, it is fine, I really don't like this.</li>
 <li>Check they understand the methods used to collect the data.&nbsp;</li>
@@ -859,6 +868,7 @@ Peer-researchers understand the perspective of people with their disabilities. T
 <li>Check that the testers understand the task or question. Encourage your testers to &ldquo;think out loud&rdquo;&nbsp;</li>
 <li>Can your testers manage each task reasonably easily and fast? You can time the task taken to complete, and note any parts where the users slow down or seem to struggle. Also, note any errors that they make including clicking on the wrong item.</li>
 <li>Is completing the task frustrating or upsetting?
+
 <ol>
 <li>You can ask the users how they are feeling before and after the tasks or rate their mood such as selecting the smiley face which represents how they feel.</li>
 <li>Ask them if anything was annoying.</li>
@@ -1075,13 +1085,13 @@ Test for the following but set up the tests so that the user demonstrates their 
 	</section>
 	
       <section id="persona">
-        <h1>Use Cases / Persona</h1>
+        <h1>Use Cases / Personas</h1>
         <p>
           Any time there is a 'target audience', there will be people with
           learning and cognitive disabilities in that audience. However, cognitive
           impairments are often invisible in day-to-day life until people
           encounter particular challenges. To provide some context and
-          understanding, nine personas have been created which outline fictional
+          understanding, ten personas have been created which outline fictional
           people with various cognitive impairments and the challenges they face.
         </p>
 		
@@ -1092,8 +1102,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> I'm not sure what I should press. I pressed something that looked like the buy button but it did nothing. I am not sure if it is me or if this website just doesn't work.</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> The buy button was clearly something I could click. The process was easy. I have now bought matching dresses for the grandchildren.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>I'm not sure what I should press. I pressed something that looked like the buy button but it did nothing. I am not sure if it is me or if this website just doesn't work.</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>The buy button was clearly something I could click. The process was easy. I have now bought matching dresses for the grandchildren.</q></span></p></li>
             </ul>
           </div>
 
@@ -1125,8 +1135,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> They used lots of words on the links that did not seem to make sense. I think they were metaphors but I'm not sure.</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> I put my mouse over the items I did not understand and there was some clear text that explained what it did. I would rather they just used the clear text in the first place but at least I could use it.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>They used lots of words on the links that did not seem to make sense. I think they were metaphors but I'm not sure.</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>I put my mouse over the items I did not understand and there was some clear text that explained what it did. I would rather they just used the clear text in the first place but at least I could use it.</q></span></p></li>
             </ul>
           </div>
 
@@ -1149,8 +1159,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> As a slow reader it takes me ages to read though badly structured text and I often miss important information.</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> The newsletter has headings so I can find the important information quickly.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>As a slow reader it takes me ages to read though badly structured text and I often miss important information.</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>The newsletter has headings so I can find the important information quickly.</q></span></p></li>
             </ul>
           </div>
 
@@ -1160,16 +1170,17 @@ Test for the following but set up the tests so that the user demonstrates their 
 <section>
             <h4>Anna Scenario 1: Logging In</h4>
             <p>Anna's use of the library catalogue from home failed at the first attempt when she could not remember her password. She kept putting in ‘afib61’ rather than ‘afid16’ and could not see the mistake. The error message on the web page had not helped because it announced that her user name or password were incorrect and she was not sure which one was wrong. Luckily, as she was on her own laptop the browser settings allowed her to save her password and she was able to automatically log in.</p>
-          </section><section>
+          </section>
+          <section>
           
             <h4>Anna Scenario 2: Finding Accessible Content</h4>
             <p>Having navigated the online library system, Anna eventually found a paper on the subject she wanted, which she could download in pdf format. She was hoping to use her text-to-speech app to read the content aloud but when she tried to highlight the text nothing happened. She discovered the document was actually an image and yet there was no warning this was the case. She could not find an alternative accessible version of the paper. This meant she had to use optical character recognition to virtually scan the paper. It was not totally successful leaving gaps in the information she found and the process took away valuable time from her writing.</p>
-<section>          </section><section>
+      </section><section>
             <h4>Anna Scenario 3: Filling in a Form to Ask for an eJournal Article</h4>
             <p>Finally, Anna found an ejournal that had another article, but there was a form that had to be completed. Anna duly started the process but realized she did not know the author’s name. She returned to the page where she had found the article to copy and paste the name. Sadly, when she returned to the form all that she had filled in was lost. She had hoped to just be able to add the final bit, not have to retype the whole thing again. </p>
             <p>(Adapted from MOOCAP Erasmus + Persona CC-BY-4.0 http://gpii.eu/moocap/?page_id=33)</p></section>
-        </section><section>
-          
+        <section>
+      
           
             <h4>Anna Scenario 4: Overlooking Important Information</h4>
             <p>Anna is a very slow reader and often sounds out words. She has low auditory processing skills so she cannot speed up her screen reader. Therefore, to manage her busy life she has to try and scan read and skip through the massive amounts of content, emails and newsletter she sees so she can read only the most important parts. Sometimes however, she cannot find important content because it is buried inside lots of other content, or the headers and visual layout of the content does not guide her to where she needs to be. </p>
@@ -1182,16 +1193,17 @@ Test for the following but set up the tests so that the user demonstrates their 
         </section>    
 		
 		<section>
-          <h2>Carolyn: A Yoga Teacher who has ADHD</h2>
+          <h2>Carolyn: A Yoga Teacher who has AD(H)D</h2>
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> If I come to a website that has lots of banners automatically flying by it really distracts me and I want to turn them off!</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> I found an option on my computer to say I wanted less movement and the website stopped all the flying things.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>If I come to a website that has lots of banners automatically flying by it really distracts me and I want to turn them off!</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>I found an option on my computer to say I wanted less movement and the website stopped all the flying things.</q></span></p></li>
             </ul>
           </div>
 
-          <p>Carolyn found concentrating at school difficult and when she got into college to take a course in business studies life became even more stressful. She knew she could cope with the studies but never seemed to get her work completed on time, found it hard to start a report and even to create a plan for a project. When working with others she always had good ideas but somehow they were never taken up and she became frustrated often failing to keep her feelings in check. Luckily, a tutor suggested she sought help and when a psychologist, mentioned Attention Deficit Hyperactive Disorder (ADHD) Carolyn was relieved to have a reason for some of the planning and organizational difficulties she was having. She learnt that if she could make use of her constantly active brain and body as well as manage her time better, she could turn her hobby into a very successful Yoga business. </p>
+          <p>Carolyn found concentrating at school difficult and when she got into college to take a course in business studies life became even more stressful. She knew she could cope with the studies but never seemed to get her work completed on time, found it hard to start a report and even to create a plan for a project. When working with others she always had good ideas but somehow they were never taken up and she became frustrated often failing to keep her feelings in check. Luckily, a tutor suggested she sought help and when a psychologist, mentioned Attention Deficit Hyperactive Disorder (AD(H)D) Carolyn was relieved to have a reason for some of the planning and organizational difficulties she was having. She learnt that if she could make use of her constantly active brain and body as well as manage her time better, she could turn her hobby into a very successful Yoga business. </p>
+
 <section>
             <h4>Carolyn Scenario 1: Gathering Key Points from a Heavy Text Based Document or Web Page</h4> 
             <p>Carolyn could not really explain her apparent forgetfulness and not being able to focus or complete tasks, but she knew that if she came across a long document or web page with dense text she had to find the key points. If the web page failed to have a clear structure with a content list, well-spaced and highlighted headings she would be lost and lose concentration. Carolyn also said that if she was using her mobile she found advertisements appearing between chunks of text completely upset her focus and she had to stop reading. However, when there was good use of white space, recognizable icons linking to simple bold text clarifying the important points, Carolyn could target these areas and find out what she needed. A clear summary also provided clarity of understanding and Carolyn could remember much of what she had read.</p>
@@ -1214,8 +1226,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> I want to turn the volume up but there is no dial?</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> There was a clear volume buttons with a label that made sense, so I knew what to press.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>I want to turn the volume up but there is no dial?</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>There was a clear volume buttons with a label that made sense, so I knew what to press.</q></span></p></li>
             </ul>
           </div>
 
@@ -1246,8 +1258,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> I find it hard to understand and remember such long and complex written instructions.</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> The instructions for scanning items are presented as a clear list of steps made of pictures with easy to read text next to them. If I get stuck I can quickly find a reminder of what to do in such ‘Easy Read’ content.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>I find it hard to understand and remember such long and complex written instructions.</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>The instructions for scanning items are presented as a clear list of steps made of pictures with easy to read text next to them. If I get stuck I can quickly find a reminder of what to do in such ‘Easy Read’ content.</q></span></p></li>
             </ul>
           </div>
 
@@ -1272,8 +1284,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> It says there is a meeting at 15.34 UTH. Now is lunch time. Did I miss it?</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> There is a line marker showing what time of day it is now, so I can see the meeting is soon.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>It says there is a meeting at 15.34 UTH. Now is lunch time. Did I miss it?</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>There is a line marker showing what time of day it is now, so I can see the meeting is soon.</q></span></p></li>
             </ul>
           </div>
 
@@ -1286,6 +1298,7 @@ Test for the following but set up the tests so that the user demonstrates their 
             <p>The use of pin numbers and passwords that insist on including a number has always been an issue and most of the time Jonathan uses a secure password application when online. When it comes to the number on the back of his credit card (Card Verification Code) that is always required at the end of a payment exercise, he has to look it up each time, though autofill has helped with completing the rest of the form. Jonathan made sure that what he originally entered and saved in his browser was correct. Too many times he has had to retrace his steps due to typos and not seeing that the entry was incorrect. When he has to return to the form to make corrections, he finds it essential that the corrections needed are clearly highlighted and the instructions provided are helpful. He also feels that it is important that the data he entered previously has not been lost, as the more often he types in numbers etc. the more likely he is to make mistakes.</p>
           </section><section>
             <h4>Jonathan Scenario 3: Using Spreadsheets Shared with Colleagues</h4>
+
             <p>At work, there are times when Jonathan has to share a spreadsheet with a colleague to ensure that the group’s accounts are in order, suppliers have been correctly invoiced and fees collected. The mass of numbers affects Jonathan’s ability to concentrate on the various areas on the spreadsheet. He has found that it helps to use color coding, increased spacing and larger font sizes in order to pick out the various elements. He uses a tool for recording his hours where he can press start and stop to see how long he has worked without using math but he is not confident to add hours worked to the spreadsheet himself. He wishes it was integrated into the work spreadsheet. Jonathan will often use the comment feature to add something that he feels his colleague need to check, rather than making the correction to the spreadsheet himself. </p>
             
             <p>If the document is saved as a PDF or presented in another format, Jonathan insists that it is easy to use with his text-to-speech program which helps him to check how the numbers need to be said and that he can annotate the contents when using his tablet. This is especially important if he is presenting numbers at a meeting.</p>
@@ -1297,8 +1310,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> When there are lots of buttons or menu items I often make mistakes and press the wrong ones and end up getting frustrated and wasting time.</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> I like websites that allow me to work through a series of instructions and edit boxes one after the other with clear buttons moving me to the next stage.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>When there are lots of buttons or menu items I often make mistakes and press the wrong ones and end up getting frustrated and wasting time.</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>I like websites that allow me to work through a series of instructions and edit boxes one after the other with clear buttons moving me to the next stage.</q></span></p></li>
             </ul>
           </div>
 
@@ -1322,8 +1335,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> Long sentences are hard, too many strange words and I get lost.</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> I like simple short sentences with easy words.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>Long sentences are hard, too many strange words and I get lost.</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>I like simple short sentences with easy words.</q></span></p></li>
             </ul>
           </div>
 
@@ -1333,7 +1346,9 @@ Test for the following but set up the tests so that the user demonstrates their 
             <p>Despite all the difficulties that Sam had with his beloved reading, he was determined to improve and found that if a website had no clutter or background imagery he could read the headings. He also found that if there was adequate spacing and the text was not too complex, he could pick words out and with the help of text-to-speech understand the meaning. He did not like the sound of the synthesized speech, because he found it distracting having always read silently. However, over time, he learnt to enlarge the fonts and if the page had left justified text with uneven right edges, he could find his way about by the different shapes of each paragraph. As he became more confident, he began to use some browser tools and was able to increase the line spacing and change the font style on some of his old favorite online historical documents.</p>
            </section><section> 
             <h4>Sam Scenario 2: Using Edit Boxes where the Instructions Disappear</h4> 
+
             <p>Sam had not expected to have to fill in so many online forms in order to receive benefits due to his disability. They caused immense frustration and feelings of self-doubt due to their lack of clarity. Every time he had to fill in an edit box, the instructions disappeared the minute he began to type and he could not remember what was required. He often had to refresh the page and start again to see the label in the box. Sam spent so long on the task that the page would time out. He had to print it out and get help. This was really upsetting as he wanted to be independent and it often reduced him to tears. This was very unlike him, but as the doctor explained, this was linked to his stroke. He also found it very frustrating when a form required a particular way of formatting information with no example as to how to complete the action. Worse still was when the error was not clearly explained, making correction even harder. Dates, postal codes and phone numbers are a particular nightmare.</p>
+
           </section><section>
             <h4>Sam Scenario 3: Trying to Activate Elements that have been Mis-recognized</h4> 
             <p>The effects of aphasia with acquired dyslexia can be exhausting and confusing but most worrying for Sam was the sense of getting lost on a web page that he thought he knew. He admitted to being nervous when he could not pick out elements in a page that required an interaction. Sometimes he said he did not dare click on a button in case he did something wrong or was sent to somewhere without warning. Sam found this aspect of his web surfing very alarming, as in the past he had been able to navigate with ease. He discovered that the edges of shapes did not appear as clear as they should have been when people use pale greys and he missed links unless expressly highlighted. If a pop-up window suddenly appeared, there were times when he could not close it to return to the page. Small crosses became a nightmare and Sam stressed that the more things happened on a page, the more confused he became. He mentioned the fact that some sites were easier on his tablet as then it all seemed to flow one way and he could just scroll up and down until he felt happy with a decision.</p> 
@@ -1349,8 +1364,8 @@ Test for the following but set up the tests so that the user demonstrates their 
 
           <div class="p-quotes">
             <ul>
-              <li><p><span class="p-issue">Problem:</span><span><q> I got lost making the order and I wanted to go back to the previous step. I hit the back key in the browser and it reloaded the home page. I had to start over.</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> There was a clear back button on each step and when I used the browser back button it also worked.</q></span></p></li>
+              <li><p><span class="p-issue">Problem:</span><span><q>I got lost making the order and I wanted to go back to the previous step. I hit the back key in the browser and it reloaded the home page. I had to start over.</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q>There was a clear back button on each step and when I used the browser back button it also worked.</q></span></p></li>
             </ul>
           </div>
 
@@ -1365,7 +1380,9 @@ Test for the following but set up the tests so that the user demonstrates their 
             <p>Tom finds there are times when he spells words incorrectly and he appreciates error corrections or a system that accepts mistakes. He also has word finding problems when he is tired and he welcomes search suggestions, as these are ideas that might be related to his search. However, too many results can cause concern and Tom admits he really cannot work his way through very long lists that have not been broken up with headings and categories.</p>
           </section><section>
             <h4>Tom Scenario 3: Being Confident that he Understands the Content</h4>
+
             <p>Tom has difficulty understanding content when it is not explicitly clear, and without any ambiguity whatsoever. He takes a notably longer amount of time to read and process information in order to be certain that he is interpreting it correctly. His interpretation of information is almost always correct, but even the slightest bit of ambiguity, or open interpretation creates sticking points that he must read over and over again, and question every which way until he can assure himself with the confidence that he understands it correctly. Examples and clear step-by-step instructions can help him have the confidence to complete his task. Simple, clear memorable graphics or large indicators of steps in a process can increase Tom’s understanding, confidence and orientation in a process. </p>
+
           </section><section>
             <h4>Tom Scenario 4: Understanding where Information is in a Hierarchical Structure</h4>
             <p>Tom tries to understand the outline of the page and site, so that he does not get lost in the content. Sometimes he dives into the website but then he does not know where he is in the content or task. Clear and consistent headings in a hierarchical structure are needed for Tom to understand the level of importance of content and a clear site structure lets him orientate himself in the site.</p> 
@@ -1468,7 +1485,7 @@ Test for the following but set up the tests so that the user demonstrates their 
     
 
     <section class="appendix" maxTocLevel ="1">
-      <h1>Appendix: Mapping User Needs, Persona and Patterns</h1>
+      <h1>Appendix: Mapping User Needs, Personas and Patterns</h1>
        <div data-include="mapping-user-patterns.html" data-oninclude="fixIncludes" data-include-replace="true"></div>
 
     </section>
@@ -1557,17 +1574,24 @@ On the other hand, according to Georgia State University's Center for Mature Con
         
         <ul>
           <li>2019-07-16: Added Design Guide to appendix.</li>
-          <li>2020-03-27: Coga TF changed the documents as follow:
+          <li>2020-03-27: Coga TF changed the documents as follows:
             <ul>
               <li>Conducted a gap analysis across the user needs, user stories, personas, and patterns and filled in the gaps;</li>
               <li>Removed duplicate content;</li>
               <li>Reorganized the content to focus the main portion on designers and developers and create a more cohesive flow;</li>
-              <li>Conducted editorial cleanup (punctuation, grammar, etc) of the content to improve quality and readability;</li>
+              <li>Conducted editorial cleanup (punctuation, grammar, etc) of the content to improve quality and readability; and</li>
               <li>Added quotes to patterns and personas.</li>
             
             </ul>
           </li>
-        </ul>
+          <li>2020-07-13: Coga TF changed the documents as follows:
+			<ul>
+				<li>Adjusted the tone of the document and fixed editing errors;</li>
+				<li>Reorganized the sections to improve readability; and</li>
+				<li>Removed appendixes that were still in process.</li>
+        
+		  <li>This version of document will be used for Wide Review.</li>
+		</ul>
       </section>
     </section>
     

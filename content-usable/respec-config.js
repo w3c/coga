@@ -7,7 +7,7 @@ var respecConfig = {
     permalinkHide:     false,
     tocIntroductory: true,
     // specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-    specStatus:           "ED",
+    specStatus:           "WD",
     noRecTrack: true,
     //crEnd:                "2012-04-30",
     //perEnd:               "2013-07-23",
@@ -105,7 +105,9 @@ var respecConfig = {
     // This is important for Rec-track documents, do not copy a patent URI from a random
     // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
     // Team Contact.
-    wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
+
+    wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/35422/status"],
+
     maxTocLevel: 3,
 
     localBiblio: biblio,
