@@ -8,7 +8,7 @@ git:
   
 branches:
   only:
-    master
+    main
 
 before_script:
   - git config --global user.email "cooper@w3.org"
@@ -21,21 +21,21 @@ script:
   - git clone --depth=1 --branch=gh-pages https://github.com/w3c/coga.git
   - cd coga
   - cp -R ../../w3c/coga/user-research .
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/user-research/index.html -o user-research/index.html -f
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/user-research/index.html -o user-research/index.html -f
   - cp -R ../../w3c/coga/issue-papers .
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/issue-papers/index.html -o issue-papers/index.html -f
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/issue-papers/index.html -o issue-papers/index.html -f
   - cp -R ../../w3c/coga/gap-analysis .
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/gap-analysis/index.html -o gap-analysis/index.html -f
-#  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/gap-analysis/semantics.html -o gap-analysis/semantics.html -f
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/extension/index.html -o extension/index.html -f
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/gap-analysis/index.html -o gap-analysis/index.html -f
+#  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/gap-analysis/semantics.html -o gap-analysis/semantics.html -f
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/extension/index.html -o extension/index.html -f
   - cp -R ../../w3c/coga/techniques .
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/techniques/index.html -o techniques/index.html -f
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/techniques/index.html -o techniques/index.html -f
   - cp -R ../../w3c/coga/persona .
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/persona/index.html -o persona/index.html -f
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/persona/index.html -o persona/index.html -f
   - cp -R ../../w3c/coga/content-usable .
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/content-usable/index.html -o content-usable/index.html -f
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/content-usable/index.html -o content-usable/index.html -f
   - cp -R ../../w3c/coga/glossary .
-  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/master/glossary/index.html -o glossary/index.html -f
+  - curl https://labs.w3.org/spec-generator/?type=respec"&"url=https://raw.githack.com/w3c/coga/main/glossary/index.html -o glossary/index.html -f
 
 
 
