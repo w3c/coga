@@ -2,21 +2,20 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <body>
     <section id="introduction">
+      <h2>Design Guide Introduction</h2>
+
       <p>
-		This guide provides assistance making websites and applications usable by people with cognitive 
-		and learning disabilities by providing guidance for designs and the design process.
+		This guide provides assistance making websites and applications friendly for people with cognitive and learning disabilities. The patterns in this guide provide practical guidance to improve the accessibility of designs and the design process.
       </p>
 	  <p>
-		 The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> 
-		 beyond the requirements of WCAG. They are intended to address barriers that could not not be 
-		 included in the normative WCAG 2.x specification and may not otherwise be addressed.
+		 The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> beyond the requirements of WCAG. They are intended to address barriers that could not be included in the normative WCAG specification and may not otherwise be addressed.
 	  </p>
 	  
       <p>
-       This guide is divided into design themes. Each theme includes user stories, testing 
-	   methodologies, and design checkpoints. Simply understanding the themes and user stories may help designers make content more accessible to some users 
-	   with cognitive and learning disabilities. Implementing these patterns is essential for some people with cognitive and learning impairments to be 
-	   able to use content independently. Please see the section on user testing for guidance on how to perform cognitive accessibility user testing.
+      	This guide is divided into design Objectives. An outline of these Objectives can also be found in the Summary section. Simply understanding the Objectives and related user stories may help designers make content more accessible to some users with cognitive and learning disabilities.
+      </p>
+      <p>
+	   Each Objective contains a number of practical Patterns that describe what to do to address user needs.  Implementing these Patterns is <strong>essential</strong> for some people with cognitive and learning impairments to be able to use content independently. 
       </p>
     </section>
 
@@ -25,297 +24,285 @@
         Objective 1: Help Users Understand What Things are and How to Use Them
       </h2>
       <p>
-        Not everyone finds learning new things easy, and not everyone can
-        remember new designs.  To use a site or application, people need to know what all
-        controls and elements are on each page and how to use them. Fewer people can use 
-		sites and applications that require users to figure out how to use controls or interact with the page. 
+      	Users with cognitive and learning disabilities may have trouble with orientation and learning. This can mean people get disoriented in a site. 
       </p>
       <p>
-        Many users, including users with mild cognitive impairment or dementia cannot easily learn new design metaphors or remember things
-        they learned. Without these skills, it can be much harder or impossible to find what
-        they need, work out what controls do and how to use them.
+        Learning new things and remembering new information is especially difficult for people with cognitive and learning disabilities. They can also struggle or be unable to learn new design patterns.  Make controls, icons and elements simple and conventional to help. 
       </p>
       <p>
-        Many users can be overwhelmed by too many options or too much
-        information. If an individual's reading is slow, then too much
-        information without structure and organization will make it difficult or impossible to use
-        the site.
-      </p>
-      <p>
-        Using familiar design patterns, terms and symbols is key to
-        helping users who struggle to remember new
-        symbols and design. Users need the following to be familiar:
+        Make it clear to users what things are and how to use them. This includes clearly indicating the purpose of: 
       </p>
       <ul>
-	    <li>
-		<strong>The look and interaction:</strong> Having controls, links and buttons look and behave like what they are, 
-		lets users know what it is and how to use it. As soon as users need to discover the design pattern, some users will be locked out. 
-		</li>
-        <li>
-          <strong>Symbols:</strong> Use familiar symbols. For example, people may look for a
-          question mark for help. If you use a different symbol, fewer people
-          will find help.
-        </li>
-        <li>
-          <strong>Text:</strong> Use familiar terms. For example, some people have a limited
-          vocabulary. Uncommon terms may cause them difficulty.
-        </li>
-		<li>
-          <strong>Element location:</strong> Place elements in expected locations. For example,
-          people may look for the search on the top right hand corner of a page.
-          If it is somewhere else, it will be hard to find.
-        </li>
-        <li><strong>Getting help:</strong> Always make it easy to find help.</li>
+      	<li>a site,</li>
+      	<li>section of a site, </li>
+      	<li>page, </li>
+      	<li>section of a page, and</li>
+      	<li>controls.</li>
       </ul>
       <p>
-        Personalization can be extremely useful for designers who want to offer
-        familiarity and flexibility. Familiarity helps users with cognitive and
-        learning disabilities but is often based on the needs of the individual
-        user. Personalization allows users to customize their interface, which
-        is important as what is familiar for one user may not be familiar to
-        another.
+        Use headers, labels and other signposts to help users know the purpose of the page, region, or control.
       </p>
+      <p>Help users understand how to use controls and elements on each page. </p>
+      <p>
+      	Use familiar design patterns, terms and icons to help users who struggle to remember new designs. Ensure the look, location and interaction of controls and other elements are familiar and consistent across the site. 
+      </p>
+      <p>
+      	Show a clear relationship between controls and the content they effect to help users understand the effect of possible actions and reduce potential confusion.
+      </p>
+  
     
       <section> 
         <h3>Pattern: Make the Purpose of Your Page Clear</h3>
           <section><h5 class="coga-5">User Need</h5>
           <blockquote><p>I can easily see the context and purpose of the page.</p></blockquote>
           <p>Related User Story: <a href="#user-story-clear-purpose" aria-label="Clear Purpose User Story">Clear Purpose</a>.</p>
-          </section><section><h5 class="coga-5">Description</h5>
+          </section>
+          <section><h5 class="coga-5">What to Do</h5>
           <p>
-            Use a clear title or heading that summarizes the purpose of a page, or
-            other clear signposts that have been tested by users with cognitive
-            disabilities.
+            Help the user know the purpose of the content. Use:
           </p>
+          <ul>
+          	<li>A clear title or heading that summarizes the purpose of a page, or</li>
+          	<li>other clear signposts that have been tested by users with cognitive and learning disabilities.</li>
+          </ul>
           </section><section><h5  class="coga-5">How it Helps</h5>
           <p>
-            This helps many people, including those with poor memory and
-            attention as well as anyone who is easily distracted due to
-            age-appropriate forgetfulness and Attention-Deficit/Hyperactivity
-            Disorder. 
+            This helps many people, including those with impaired memory and attention as well as anyone who is easily distracted due to age-related forgetfulness and  AD(H)D.
           </p>
           <p>
-            For example, someone with mild dementia is using online shopping.
-            They get distracted and then when they look at the screen again they
-            have forgotten what they were doing. A clear heading at the top of
-            each page shows clearly
-            <strong>what the page is about and what they are doing</strong>.
+            For example, someone with mild dementia is using online shopping. They get distracted and then when they look at the screen again they have forgotten what they were doing. A clear heading at the top of each page shows clearly <strong>what the page is about and what they are doing</strong>.
           </p>
-		  <p> In another example, a user with Attention-Deficit/Hyperactivity
-            Disorder is looking for information in a video. They can tell by the video title that this video is has the information they need.</p>
-          </section><section><h5  class="coga-5">More Details</h5>
-          <p>Headings need to clarify the purpose of this specific page.</p>
-		  <p>When possible, provide information to help users understand how they got to the page.  For example: breadcrumbs, clearly indicated on main navigation, highlighting currently selected tab, etc.)</p>
+		  <p>In another example, a user with AD(H)D is looking for information in a video. They can tell by the video title that this video has the information they need.</p>
+          </section>
+          <section><h5  class="coga-5">More Details</h5>
+          <p>Headings clarify the purpose of this specific page.</p>
+		  <p>When possible, provide information to help users understand how they got to the page. For example: breadcrumbs, clearly indicated on main navigation, highlighting currently selected tab, etc.</p>
 
-          </section><section><h5  class="coga-5">Examples</h5>
+          </section>
+          <section><h5  class="coga-5">Examples</h5>
           <p>
-            <strong>Use</strong>: Headings tell me exactly where I
-            am.
+            <strong>Use</strong>: 
+          </p>
+          <p>
+          	Page headings that tell me exactly where I am.
           </p>
 
           <p><strong>Avoid</strong>: </p>
+          <p>R signposts:</p>
           <ul>
-            <li>Headings do not clarify the steps in a form;</li>
+            <li>A page heading that does not say where you are. For example, a page heading that reads "Service not available". The user has to remember what the service relates to.</li>
             <li>
-              A page heading reads "Service not available." The user has to remember what they were doing to know what service this is about.
+              Page headings that do not clarify the steps in a form.
             </li>
           </ul>
-      </section></section>
+      </section>
+      </section>
       
       <section>
         <h3>
-          Pattern: Use a Design that the User is Likely to Recognize and Understand
+          Pattern: Use a Familiar Hierarchy and Design
         </h3>
           <section><h5 class="coga-5">User Need</h5>
-        <blockquote><p>I find it hard to learn new interface design patterns.</p></blockquote>
+        <blockquote><p>And I find it hard to learn new interface design patterns.</p></blockquote>
         <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
-        </section><section><h5 class="coga-5">Description</h5>
+        </section><section><h5 class="coga-5">What to Do</h5>
         <p>
-          Use common visual hierarchy, design elements, affordances, and patterns that are
-          familiar to most users.
+          Use common designs that are familiar to most users. This includes:
         </p>
+        <ul>
+        	<li>design elements </li>
+        	<li>affordances (visual hints about how to a control)</li>
+        	<li>patterns, and</li>
+        	<li>the layout and visual hierarchy (arrangement of elements to show the order of importance).</li>
+        </ul>
  
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>
-            Many users, such as those with mild cognitive impairment or
-            dementia, cannot easily learn and remember new design metaphors.
-            Without these skills, it can be much harder or impossible to locate
-            desired items to interact with, and to know what interactions may
-            do. Users can feel lost or overwhelmed.
+            Many users cannot easily learn and remember new design metaphors. Without these skills, it can be much harder or impossible to locate desired items with which to interact, and to know what interactions may do. Users can feel lost or overwhelmed.
           </p>
           <p>
-            Because common design elements are repeated often over a long period
-            of use across many sites, users are more likely to recognize the
-            interactions needed.
+            Users are more likely to find and recognize common design elements that are repeated often over a long period of use, across many sites. 
           </p>
 		  <p>
-		  For example, a user goes to a site to buy a product. They cannot see 
-		  how to select the item that they want. They may think the site does not allow you to buy or that their computer is broken. 
+		  For example, a user with a mild cognitive impairment or dementia, goes to a site to buy a product. They cannot find where to pay for the item that they want. They may think the site does not allow shopping and the site just provides information.
 		</p>
 		
           </section><section><h5 class="coga-5">More Details</h5>
           <p>Common design elements, affordances and patterns include:</p>
           <ul>
 			 <li>
-              Create a standard Visual Hierarchy - Place elements where the user
-              is expecting them, such as:
+              Create a standard layout and visual hierarchy. Place elements where the user is expecting them. For example, in an English site:
               <ul>
                 <li>
-                 Search in the top right hand corner in a website;
+                 search in the top right hand corner in a website
                 </li>
                 <li>
-                  Link to the home page is in the top left hand corner;
+                  link to the home page is in the top left hand corner
                 </li>
-                <li>Link to ‘contact us’ is in the top navigation;</li>
-                <li>Link to the site map is in the footer area;</li>
-                <li>Submit button is at the bottom right for a form;</li>
+                <li>link to ‘contact us’ is in the top navigation area</li>
+                <li>link to the site map is in the footer area, and</li>
+                <li>the submit button is at the bottom of a form.</li>
               </ul>
             </li>
             <li>
-              Common design patterns, such as those documented in the ARIA
-              authoring best practices or used in the most popular sites:
+              Common design patterns (repeated designs for controls and other elements), such as: 
               <ul>
                 <li>
-                  Very common navigation design patterns and common icons;
+                  ARIA authoring best practices, 
                 </li>
                 <li>
-                  A platform specific user interface design for navigation
-                  mechanisms and icons;
+                  patterns used in the most popular sites,
                 </li>
                 <li>
-                  An adaptive user interface design that can be personalized
-                  (see above);
+                  very common navigation design patterns and common icons,
+                </li>
+                <li>
+                	platform specific (operating system) user interface design for navigation mechanisms and icons, and
+                </li>
+                <li>
+                	adaptive user interface design that can be personalized (see above).
                 </li>
               </ul>
             </li>
             <li>
-              User interface (design) from a prior version: Allow users to
-              revert back to a prior version of the application that they are
-              familiar with.
+              User interface (design) from a prior version. Allow users to revert back to a prior version of the application with which they are familiar.
             </li>
-			            <li>
-              Links that look like links and buttons look and act like buttons:
+			<li>
+              Links that look like links and buttons look and act like buttons. For example: 
               <ul>
                 <li>
-                  For example, underline links with a standard style throughout
-                  a page;
+                  underline links with a standard style throughout a page
                 </li>
-                <li>Links generally navigate to a new page;</li>
-                <li>Buttons generally perform an action;</li>
+                <li>links generally navigate to a new page, and</li>
+                <li>buttons generally perform an action.</li>
               </ul>
             </li>
           </ul>
 
-          </section><section><h5 class="coga-5">Getting Started</h5>
-          <p>
-            When deciding pages, select standard components that look and behave
-            the way users expect. Use standard conventions for layout such as
-            the home link in the upper left corner, navigation at the top,
-            search in the upper right, etc. and create an obvious visual
-            hierarchy in the page.
-          </p>
-      </section></section>
+          </section>
+          <section><h5 class="coga-5">Getting Started</h5>
+          
+          <ol>
+           <li>
+            When designing web pages, select standard components that look and behave the way users expect. Use standard conventions for layout such as:
+            <ul>
+            	<li>
+            		home link in the upper left corner, 
+            	</li>
+            	<li>
+            		navigation at the top, and
+            	</li>
+            	<li>
+            		search in the upper right. 
+            	</li>
+            </ul>
+          	</li>
+          	<li>
+          		Create an obvious visual hierarchy in the page.
+          	</li>
+          	</ol>
+      	</section>
+      	<section>
+      		<h5 class="coga-5">Examples</h5>
+      		<p>
+      			Use:
+      		</p>
+      		<ol>
+      			<li>A common web layout</li>
+      		</ol>
+      		<ol>
+      			<li>Unfamiliar layouts</li>
+      			<li>Unfamiliar visual hierarchy </li>
+      		</ol>
+      	</section>
+
+
+      </section>
 
       <section>
         <h3>Pattern: Use a Consistent Visual Design</h3>
           <section><h5 class="coga-5">User Need</h5>
-        <blockquote><p>I always recognize where I am in the architecture of the website.</p></blockquote>
+        <blockquote><p>I need to understand my options and the tasks I can perform and I can identify the controls I can interact with in order to complete actions.</p></blockquote>
+        <p>I know how to use all the controls and the effects of each action.</p>
         <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
-        </section><section><h5 class="coga-5">Description</h5>
+        </section><section><h5 class="coga-5">What to Do</h5>
         <p>Use a consistent visual design across groups of pages.</p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
+          <p>Many users take a long time to learn new designs and recognize elements. Once learned, the elements should be used throughout the site. </p>
           <p>
-            Those with difficulty understanding how to interact with information
-            need to use cues like color, layout and other visual information to
-            help them know where to look, what they should do and how they
-            should complete that task.
+            For example, an older user with age-related forgetfulness takes a long time to learn new designs. When they come to a site, the first page takes time to understand, but then they know what to do on the next page. If the next page is different from the first and also difficult to learn, they become tired and make more mistakes. As they move to a third difficult page the cognitive load becomes too much and they cannot complete the task. 
           </p>
-          <p>
-            For example, an older user with age appropriate forgetfulness takes
-            a long time to learn new designs. When they come to a site, the
-            first page takes time to understand, but then they know what to do
-            on the next page. If the next page is different from the first and
-            also difficult to learn, they become tired and make more mistakes,
-            as they move to a third page the cognitive load becomes too much and
-            they cannot complete the task. This pattern helps by:
-          </p>
-          <ul>
-            <li>
-              Ensuring a consistent user experience by providing familiarity and
-              building confidence;
-            </li>
-            <li>Making it possible to easily use and interact with content; </li>
-            <li>Aiding the completion of tasks; and </li>
-			<li>Reducing cognitive overload which can lead to increased stress and mental fatigue.</li>
-          </ul>
+          
 
           </section><section><h5 class="coga-5">More Details</h5>
           <p>This includes:</p>
           <ul>
             <li>
-              Design themes, including heading styles, font choices, symbols,
-              colors, visual appearance of controls, buttons and links should be
-              consistent.
+              Consistent design themes, including heading styles, font choices, icons, colors, visual appearance of controls, buttons and links.
             </li>
             <li>
-              Headings with the same structural level have the same font and
-              visual style.
+              Headings with the same structural level have the same font and visual style.
             </li>
             <li>
-              Icons, controls and menu items that have same function and role
-              have the same look and style
+              Icons, controls and menu items that have same function and role have the same look and style
             </li>
             <li>
-              State and focus for elements with similar function and roles have
-              the same style used consistently across a site.
+              State and focus for elements with similar function and roles have the same style across a site.
             </li>
             <li>
-              Layout should be consistent, including position of interactive
-              elements and navigational controls.
+              Layout is consistent across blocks of content. This  includes the position of interactive elements and navigational controls.
             </li>
             <li>
-              Structure of content and style of presenting information should be
-              consistent throughout, such as organization of block text, images
-              and bullet points.
+              Structure of content and style of presenting information is consistent. This includes the organization of blocks of text, icons,  images and bullet points.
             </li>
           </ul>
 
           </section><section><h5 class="coga-5">Getting Started</h5>
           <p>
-            Plan the design for your information before adding content. Think
-            about the colors, font choices and areas where text and images will
-            appear.
+            Plan the design for your information before adding content. Think about the colors, font choices and areas where text and images will appear.
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
           <p><strong>Use</strong>: </p>
-          <p>
-            A web page has two submit buttons, both should visually look and
-            function the same way.
-          </p>
-
-          <p>All selected radio buttons on the site look the same.</p>
-          <p>
-            When all links on a page have keyboard focus the focus indicator
-            looks the same.
-          </p>
+          <ol>
+          	<li>Heading at the same level looks similar, across the site.</li>
+          	<li>
+          		Controls look consistent, across the site. For example:
+          		<ul>
+          			<li>Two submit buttons in a website, both look and function the same way.</li>
+          			<li>All selected radio buttons on the site look the same.</li>
+          			<li>When an item is tabbed to, it has focus and can be activated. The keyboard focus indicator (outline that shows which element has focus) for all links look the same.</li>
+          		</ul>
+          	</li>
+          	<li>
+          		The location of common features is consistent. For example: 
+          		<ul>
+          			<li>The search box is always in the same place in the entire site. </li>
+          		</ul>
+          	</li>
+          </ol>
           <p><strong>Avoid</strong>: </p>
-          <p>
-            3 pages have a submit button, but each one is located in a different
-            place on the page.
-          </p>
-          <p>
-            There are 6 heading level 2s on a page. 4 are styled using Times New
-            Roman, and 2 use Helvetica.
-          </p>
+          <ol>
+          	<li>Elements with similar functions look different. For example:
+          	<ul>
+          		<li>There are six heading level 2s on a page. Four are styled using Times New Roman, and two using Helvetica.</li>
+          	</ul>
+          	</li>
+          	<li>
+          		Elements with similar functions are presented in different locations. For example:
+          		<ul>
+          			<li>Three pages have a submit button, but each one is located in a different place on the page.</li>
+          		</ul>
+          	</li>
+          </ol>
 
       </section></section>
 
       <section>
         <h3>Pattern: Make Each Step Clear</h3>
           <section><h5  class="coga-5">User Need</h5>
-          <blockquote><p>I always recognize where I am in the architecture of the website, application or multi-step process, even after I get distracted.</p></blockquote>
+          <blockquote><p>I need to always recognize where I am in the architecture of the website, application or multi-step process, even after I get distracted.</p></blockquote>
           <p>Related User Story: <a href="#user-story-clear-purpose" aria-label="Clear Purpose User Story">Clear Purpose</a>.</p>          
 		  </section><section><h5  class="coga-5">Description</h5>
         <p>
@@ -1781,7 +1768,9 @@
           </p>
           <p>
             For example, a person with a low working memory cannot hold onto
-            many pieces of information at the same time. They are more likely to make mistakes if they need to remember what they are doing, divide the steps, and track what they have done. When
+            many pieces of information at the same time. If they need to
+            remember what they are doing, divide the steps and track what they
+            have done they are much more likely to make mistakes. When
             instructions are clearly separated and laid out, users can follow
             them without making mistakes.
           </p>
@@ -2025,7 +2014,7 @@
             Note that other users may find math easier to
             understand than long text.
           </p>
-          <p>Where some math (mathematics) skills are essential for the content:</p>
+          <p>Where some math skills are essential for the content:</p>
           <ul>
             <li>
               Move towards digital math that can be extended (not numbers in
@@ -2064,7 +2053,7 @@
 	
     <section>
       <h2>
-        Objective 4: Help Users Avoid Mistakes and Know How to Correct Them
+        Objective 4: Help Users Avoid Mistakes or Correct Them 
       </h2>
       <p>
         A good design and use of scripts will make errors less likely, but when
