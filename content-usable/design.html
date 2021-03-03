@@ -6,7 +6,7 @@
 		This guide provides assistance making websites and applications friendly for people with cognitive and learning disabilities. The patterns in this guide provide practical guidance to improve the accessibility of designs and the design process.
       </p>
 	  <p>
-		 The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> beyond the requirements of WCAG. They are intended to address barriers that could not be included in the normative WCAG specification and may not otherwise be addressed.
+		 The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> beyond the requirements of The Web Content Accessibility Guidelines [WCAG]. They are intended to address barriers that could not be included in the normative [WCAG] specification and may not otherwise be addressed.
 	  </p>
 
       <p>
@@ -148,7 +148,7 @@
               Common design patterns (repeated designs for controls and other elements), such as:
               <ul>
                 <li>
-                  ARIA authoring best practices,
+                  [WAI-ARIA] authoring best practices,
                 </li>
                 <li>
                   patterns used in the most popular sites,
@@ -555,7 +555,7 @@
             <li>
              When adding multiple symbols to a paragraph or section of text, place the symbols above the text.
             </li>
-			       <li>Use personalization semantics to help the user load familiar symbols.</li>
+			       <li>Use personalization semantics such as [personalization-semantics-1.0] to help the user load familiar symbols.</li>
           </ul>
 
           </section><section><h5 class="coga-5">Getting Started</h5>
@@ -624,7 +624,7 @@
 
           </section>
           <section><h5 class="coga-5">More Details</h5>
-		        <p>Make important features and tasks both visually and programmatically prominent. See <a href="https://www.w3.org/TR/WCAG20/">WCAG 2.0</a>. </p>
+		        <p>Make important features and tasks both visually and programmatically prominent. See The Web Content Accessibility Guidelines [WCAG]. </p>
 
           </section>
           <section>
@@ -1587,7 +1587,7 @@
           <p><strong>Use:</strong> </p>
           <ol><li>When writing sarcastic comments in a social media post or email, add supplementary text such as &lt;sarcasm> to help
 		  readers understand the intent of your communication. </li>
-		  <li>Once it is mature you can also use personalization semantics to add non-literal text alternatives. See best practices.</li></ol>
+		  <li>Once it is mature you can also use personalization semantics to add non-literal text alternatives. See best practices and [personalization-semantics].</li></ol>
       <p><strong>Avoid:</strong></p>
         <ol><li>Metaphors and similes that remain unexplained. For example: "You are my sunshine." rather than saying "You make me happy."</li></ol>
     </section></section>
@@ -1643,7 +1643,7 @@
               Reinforce numbers with non-numerical concepts, e.g., very cold, cold, cool, mild, warm, hot, very hot.
             </li>
             <li>
-              Use personalization semantics to supply non-numerical concepts. See <a href="https://github.com/w3c/personalization-semantics/wiki">Personalization Semantics Wiki</a> and <a href="https://w3c.github.io/personalization-semantics/help/index.html#numberfree-explanation">data-numberfree</a> (see best practices).
+              Use personalization semantics to supply non-numerical concepts. See [personalization-semantics].
             </li>
           </ul>
           <p>
@@ -1830,7 +1830,7 @@
               Using back and undo features without unwanted data loss;
             </li>
             <li>
-              Using semantics and personalization to log the steps and return to
+              Using semantics and personalization (such as [personalization-semantics]) to log the steps and return to
               a step in the process; and
             </li>
             <li>Reopening a closed window or option.</li>
@@ -2138,7 +2138,7 @@
 
           </section><section><h5 class="coga-5">More Details</h5>
           <p>
-            Many people with learning and cognitive and learning disabilities use web extension and simple text to speech. These assistive technologies often do not read ARIA or titles. Until that changes, or an extension displays them, labels should not rely on these attributes for people with cognitive and learning disabilities.
+            Many people with learning and cognitive and learning disabilities use web extension and simple text to speech. These assistive technologies often do not read [WAI-ARIA] or titles. Until that changes, or an extension displays them, labels should not rely on these attributes for people with cognitive and learning disabilities.
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
@@ -2393,12 +2393,12 @@
           <p><strong>Use:</strong> </p>
           <ul>
             <li>
-              WAI-ARIA states are used to provide state feedback for a toggle
+             [WAI-ARIA] states are used to provide state feedback for a toggle
               button with an animation showing the state (such as a button was
               pushed).
             </li>
             <li>
-              Use ARIA-pressed with a visual or a checkbox is checked/unchecked.
+              Use ARIA-pressed with a visual or a checkbox is checked/unchecked. (see [WAI-ARIA])
             </li>
             <li>
               Provide a confirmation message when an email message is
@@ -3002,7 +3002,7 @@
            Ensure this pattern is included in important systems that affect health, finance, communication, water and government services.
           </p>
 
-          <p class="ednote">Note that personalization technology is still young and is developing rapidly. At the time of publication HTML autocorrect on fields is the best supported option.</p>
+          <p class="ednote">Note that personalization technology [personalization-semantics] is still young and is developing rapidly. At the time of publication HTML autocorrect on fields is the best supported option.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
           <p><strong>Use:</strong></p>
@@ -3220,7 +3220,7 @@
                   Reinforce numbers with non-numerical concepts, e.g., Very
                   Cold, Cold, Cool, Mild, Warm, Hot, Very Hot
                 </li>
-                <li>Use personalization semantics to supply non-numerical concepts</li>
+                <li>Use personalization semantics to supply non-numerical concepts. See [personalization-semantics].</li>
               </ul>
             </li>
             <li>
@@ -3366,7 +3366,7 @@
             Users often find forms and related tasks to be the most complex experience with websites. They can easily become confused, unsure, or even completely lost. Providing extra help can make the difference between being able to successfully complete a task and giving up. This is especially true if any part of the form is complex or requires nonstandard interactions.
           </p>
           <p>
-            Many standard form controls provide support automatically. For example, many fields can be automatically filled in with information using autocomplete or personalization semantics. Then the user will not make mistakes filling it out.
+            Many standard form controls provide support automatically. For example, many fields can be automatically filled in with information using autocomplete or personalization semantics [personalization-semantics-1.0]. Then the user will not make mistakes filling it out.
           </p>
           <p>
             When you require additional fields and nonstandard controls many users will have difficulty using them. Many users with disabilities will get the information incorrect or be unable to work out how to complete the task. Often this results in the task being completely abandoned. In other cases, the user asks a caregiver for help to complete the form or work the control. In either case, they have not been able to complete the task because of their disability.
@@ -3687,8 +3687,7 @@
       <h2>Objective 8: Support Adaptation and Personalization</h2>
       <p>Many users need products that support adaptation and personalization. Users should be able to use add-ons and extensions as assistive technology. This includes spell checkers, passwords support, support for text-to-speech, and synchronized highlighting of the phrase being read.</p>
       <p>Personalization can allow the user to select preferred, familiar options from a set of alternatives.</p>
-      <p>Support personalization and simplification when you can.</p>
-      <p>Do not disable add-ons and extensions.</p>
+      <p>Support personalization and simplification when you can. Do not disable add-ons and extensions.</p>
 
       <section>
         <h3>Pattern: Let Users Control When the Content Changes</h3>
@@ -3929,7 +3928,7 @@
                 <ul>
                 <li>Supporting simplified versions from the browser.</li>
                 <li>use of data-simplification on regions and controls</li>
-                <li>use other attributes in personalization semantics</li>
+                <li>use other attributes in personalization semantics. See [personalization-semantics].</li>
                 <li>adding a simplification toolbar</li>
                   <li>providing an alternative version.</li>
                 </ul>
@@ -3976,7 +3975,7 @@
                   <ul>
                   <li>HTML5 autocomplete on common fields</li>
                   <li>adding a toolbar that adds personalized images</li>
-                  <li>use attributes in <a href="https://www.w3.org/TR/personalization-semantics-content-1.0/">personalization semantics</a>.</li>
+                  <li>use attributes in [personalization-semantics-1.0].</li>
                   </ul>
                     </li>
                   </ol>
@@ -3985,7 +3984,7 @@
             </section><section><h5 class="coga-5">How it Helps</h5>
             <p>Personalization changes the interface to meet the needs of the user.</p>
             <p>Having familiar terms and symbols is key to many users being able to use the web. However, what is familiar for one user may be unfamiliar to another requiring them to learn new symbols. Adding semantics allows symbols and support to be added by an extension or browser that is familiar to the individual user.</p>
-            <p>A stronger example is people using AAC. These users usually only learn one symbol set. They cannot easily communicate with other symbol users in a written format or may struggle to understand different symbols used in different applications. When using personalization, such as<a href="https://www.w3.org/TR/personalization-semantics-content-1.0/"> personalization semantics</a> the user agents can load the symbols that are understandable by the individual user. The user can also access the web and other applications.</p>
+            <p>A stronger example is people using AAC. These users usually only learn one symbol set. They cannot easily communicate with other symbol users in a written format or may struggle to understand different symbols used in different applications. When using personalization, such as [personalization-semantics-1.0] the user agents can load the symbols that are understandable by the individual user. The user can also access the web and other applications.</p>
 
             <p>Other support includes autocomplete and extensions that help the user fill out forms and understand the content. Many users with memory or executive function impairments cannot fill in forms without asking someone to help copy over information or check their work. Autocomplete allows many more users to manage forms by themselves.</p>
 
@@ -4003,14 +4002,14 @@
 
             <p><strong>Use:</strong></p>
               <ol>
-              <li>Use the HTML autocomplete tags on all common fields.</li>
+              <li>Use the [HTML5] autocomplete tags on all common fields.</li>
               <li>True text to support browser preferences for styles.</li>
               <li>Add a toolbar that adds personalized images.</li>
-              <li>Add the semantics that can work with a toolbar for personalized images Examples of working pages can be found <a href="https://github.com/w3c/personalization-semantics/wiki/Implementations-of-Semantics">Implementations of Semantics</a>, also see <a href="https://github.com/w3c/personalization-semantics/wiki/Getting-started-with-personalization-semantics">Getting Started with personalization semantics</a>.</li>
+              <li>Add the semantics that can work with a toolbar for personalized images or [personalization-semantics]. Examples of working pages can be found <a href="https://github.com/w3c/personalization-semantics/wiki/Implementations-of-Semantics">Implementations of Semantics</a>, also see <a href="https://github.com/w3c/personalization-semantics/wiki/Getting-started-with-personalization-semantics">Getting Started with personalization semantics</a>.</li>
               </ol>
               <p><strong>Avoid:</strong></p>
               <ol>
-              <li>Forms that do not support HTML autocomplete.</li>
+              <li>Forms that do not support [HTML5] autocomplete.</li>
               <li>Default fonts that are not clear or readable such as a cartoon font or gothic.</li>
               <li>Pages that can not easily be personalized.</li>
               </ol>
