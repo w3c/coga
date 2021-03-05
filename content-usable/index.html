@@ -32,14 +32,32 @@
         background: transparent;
         text-decoration:underline;
       }
-      .objective1 h3::before {
-			display: inline-block;
-			width: 2em;
+
+	
+		.objective1 h3::before {
+	
+			content: "";
+			background-image:url(img/StartHere.svg);
+		    background-size:40px 40px;
+		    width:40px;
+		    height:40px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-bottom;
+		}
+
+		.objective2 h3::before {
+			
+			content: "";
+			background-image:url(img/find.svg);
+		    background-size:40px 40px;
+		    width:40px;
+		    height:40px;
+		    display: inline-block;
 			margin-right: .5em;
 			vertical-align: text-top;
-		}
-		.objective1 h3::before {
-			content: url(img/StartHere.svg);
+		
+
 		}
 		.imagelist li img {
 			float: left;
@@ -411,9 +429,9 @@ people with limited technical knowledge or are new to the web.</li></ul>
     </p></section>
 
 		</section>
-		<section>
+		<section class="objective2">
 
-			<h2>Objective 2: Help Users Find What They Need</h2>
+			<h3>Objective 2: Help Users Find What They Need</h3>
 <section>
 			<h4>User Story: Findable</h4>
 
