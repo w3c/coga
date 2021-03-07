@@ -2337,14 +2337,13 @@
           </section><section><h5 class="coga-5">Examples</h5>
           <p><img src="./img/tick.gif" alt="" width="30" height="30" /><strong> Use:</strong></p>
               <ol>
-                <li>Unlimited time, when possible</li>
-                <li>Timeouts that the user can avoid.</li>
-                <li>Timeout warnings, when the timeout is needed. For example:
-                <ul><li> In an auction, there is a time limit on the amount of time a user has to submit a bid. At the start of the task, the user is warned about the time limit, and how long they have until the time ends.</li></ul></li>
-                <li> When possible and safe, the user's work is not lost. For example:
-                  <ul>
-                <li>A website with sensitive information uses a client-side time limit to help protect users who may step away from their computers. When the user logs in again all the work is still in place back. The user is warned ahead of time how long they have for inactive sessions and is told that their data will not be lost.</li>
-                </ul>
+                <li>Unlimited time, when possible.</li>
+                <li>Timeouts that users with learning and cognitive disabilities find it easy to avoid. For example: At the start of the task the user is told that the have a day to complete the task. They have an option to set it to longer. </li>
+                <li>When the timeout is needed:
+                <ol>
+                <li><strong>Timeout warnings at the start of the task.</strong> For example: In an auction, there is a time limit on the amount of time a user has to submit a bid. At the start of the task, the user is warned about the time limit, and how long they have until the time ends.</li></li>
+                 <li> <strong>When possible and safe, the user's work is not lost.</strong> For example:
+                  A website with sensitive information uses a client-side time limit to help protect users who may step away from their computers. When the user logs in again all the work is still in place back. The user is warned ahead of time how long they have for inactive sessions and is told that their data will not be lost.</li>
                 </li>
               </ol>
               <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong> Avoid:</strong></p>
@@ -2418,30 +2417,28 @@
 
           </section><section><h5 class="coga-5">Examples</h5>
          <p><img src="./img/tick.gif" alt="" width="30" height="30" /><strong> Use:</strong></p>
-          <ul>
+          <ol>
             <li>
-             [WAI-ARIA] states to provide state feedback for toggle
-              buttons with an animation showing the state (such as a button was
-              pushed).
+            Visual state feedback. Use CSS and [WAI-ARIA] states such as aria-pressed and aria-selected, to gives a visual change that shows the change in state. For example: Buttons and tabs with a visualy clear state when selected.
             </li>
-            <li>
-              ARIA-pressed with a visual that shows checkboxes are checked/unchecked. (See [WAI-ARIA].)
-            </li>
+             <li>Messages that let the user know if a task is completed. For example:
+             <ul>
             <li>
               Confirmation messages when an email message is
               successfully sent, or a form is successfully submitted.
             </li>
             <li>
               Visible and programmatically-determinable information to
-              indicate a new password satisfies security requirements.
-            </li>
-          </ul>
+              show that a new password is set.
+            </li></ul></li>
+          </ol>
         <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong> Avoid:</strong></p>
-          <ul>
+          <ol>
             <li>
-              Multi-step processes without progress-indicators (e.g., breadcrumbs) to communicate
-              completed and current steps.</li>
-          </ul>
+               State changes without visual feedback.</li>
+               <li>
+               Task succeeds or fails without feedback.</li>
+          </ol>
       </section></section>
 
       <section>
@@ -2471,11 +2468,11 @@
           <p><img src="./img/tick.gif" alt="" width="30" height="30" /><strong> Use:</strong></p>
             <ol>
               <li>Alternative login options that have been tested with people who have learning or cognitive disabilities that are approved security techniques, in your jurisdiction, for sensitive data.</li>
-              <li>A wide range of people with learning and cognitive disabilities, to understand the risks and how they may relate to personal information.</li>
+              <li>Talking to a wide range of people with learning and cognitive disabilities, to understand the risks and how they may relate to personal information.</li>
               <li>COGA persona and use case in the research, development and requirements phases.</li>
               <li>Industry best practices for storing and securing user information.</li>
               <li>Consent forms in easy to understand language that have been tested with people with learning and cognitive disabilities to ensure they understand the risks.</li>
-              <li>Warnings to users each time personal information may be given.</li>
+              <li>Warnings to users each time personal information may be given, in easy to understand language.</li>
             </ol>
             <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong> Avoid:</strong></p>
             <ol>
