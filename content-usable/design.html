@@ -2628,7 +2628,7 @@
               <li>select the date and time</li>
               <li>select seats</li>
               <li>pay</li>
-              <li>print tickets</li>
+              <li>print or save tickets</li>
                             </li>
               </ul>
 
@@ -2778,7 +2778,7 @@
             <ol>
             <li>Missing out important details about what the user may need. For example:
             <ul>
-            <li>Another airline does not notify the user that they need their passport. The process times out when the user is trying to find their passport number. The user needs to start over or will abandon the booking.</li>
+            <li>Another airline does not notify the user that they need their passport. The process times out when the user is trying to find their passport number. The user needs to start over or abandon the booking.</li>
             </ul>
             </li>
             </ol>
@@ -2851,7 +2851,7 @@
           <p>There are many ways to meet this design pattern:</p>
             <ul>
             <li>Use <a href="https://www.w3.org/TR/webauthn/">Web Authentication: An
-<abbr title="application programming interface">API</abbr> for accessing Public Key Credentials</a> to support inclusive alternatives that do not rely on typical cognitive abilities. For example, hardware authentication devices, smartcard or FIDO.</li>
+<abbr title="application programming interface">API</abbr> [webauthn-2] for accessing Public Key Credentials</a> to support inclusive alternatives that do not rely on typical cognitive abilities. For example, hardware authentication devices, smartcard or FIDO.</li>
             <li>Provide automatic user authentication based upon the use of a trusted device (to which the user has already logged in with their own identity). The user does not have to transcribe characters, but may have to press a link to identify they have the device.</li>
             <li>Allow a biometrics option.</li>
             <li>Use a system the user is already logged into via third-party authentication services (e.g., OAuth, Facebook, etc.).</li>
@@ -2879,12 +2879,12 @@
             <li>
               <a href="https://www.w3.org/TR/webauthn/"
                 >Web Authentication: An
-<abbr title="application programming interface">API</abbr> for accessing Public Key
+<abbr title="application programming interface">API</abbr> [webauthn-2] for accessing Public Key
                 Credentials.</a
               >
             </li>
-            <li>Logging in via Google or Facebook (federated login).</li>
-            <li>Two step authentication and Bluetooth links.</li>
+            <li>Single Sign-on (SSO) that allow users to access many sites with a single login (federated login).</li>
+            <li>Two step authentication with Bluetooth links (no coping).</li>
             <li>Quick Response Codes (QR Code).</li>
           </ol>
                     <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong> Avoid:</strong></p>
@@ -2909,8 +2909,7 @@
 <p><img src="./img/tick.gif" alt="" width="30" height="30" /><strong>Use:</strong></p>
             <ol>
             <li>Easy third party logins as an option.</li>
-            <li>The web authentication protocol.</li>
-            <li>A single step method that matches your security needs.</li>
+            <li>The web authentication protocol [webauthn-2] with a single step method that matches your security needs.</li>
             </ol>
             <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong>Avoid:</strong></p>
             <ol>
@@ -2933,8 +2932,8 @@
           </section><section><h5 class="coga-5">Examples</h5>
     <p><img src="./img/tick.gif" alt="" width="30" height="30" /><strong> Use:</strong></p>
             <ol>
-            <li>Third party logins like Facebook or Google which have well known icons.</li>
-            <li>The web authentication protocol along with an easy login option.</li>
+            <li>Third party logins which have well known icons.</li>
+            <li>The web authentication protocol [webauthn-2] along with an easy login option.</li>
             </ol>
             <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong> Avoid:</strong></p>
             <ol>
@@ -3035,7 +3034,7 @@
           </section><section><h5 class="coga-5">Examples</h5>
   <p><img src="./img/tick.gif" alt="" width="30" height="30" /><strong> Use:</strong></p>
             <ul>
-                <li>User interaction dialogs in which the first option takes you directly to a human. For example: "To wait for a person who can help you press 0".</li>
+                <li>User interaction dialogs in which the first option takes you directly to a human. For example: "To reach for a person who can help you, press 0 or say help".</li>
                 <li>Error recovery from each point, allowing the user to fix errors easily.</li>
                 <li>The user can easily go back or repeat the list at any point.</li>
                 <li>A user-interaction dialog, such as the standard "0" from any point, where there is easy access to a human operator who can help users achieve their goals.</li>
@@ -3105,7 +3104,7 @@
 
           </section><section><h5 class="coga-5">Examples</h5>
       <p><img src="./img/tick.gif" alt="" width="30" height="30" /><strong> Use:</strong></p>
-          <p>Processes do not rely on memory. For example:</p>
+          <p>Processes that do not rely on memory. For example:</p>
           <ul>
           <li>Using user interaction dialogs in which the first option "to wait for a person who can help you press 0 or say help".</li>
           <li>Using a user-interaction dialog, such as the standard "help" from any point, where there is easy access to a human operator who can help users achieve their goals.</li>
@@ -3171,7 +3170,7 @@
             <ol>
             <li>A phone number, ideally with a feature to automatically call via an interoperable Voice over Internet Protocol (VoIP) specification</li>
             <li>A number that goes directly to a human or an available standard to get human help for example, using the 0 digit on voice menu systems.</li>
-            <li>An email link using the 'mailto' protocol with prefilled 'to' and 'subject' fields. Note that this will not work on all platforms or depending on the user's mail client.</li>
+            <li>An email link using the 'mailto' protocol with prefilled 'to' and 'subject' fields. Note that this will not work on all platforms or mail clients.</li>
             <li>An option for live chat or video call help. Note: It must be fully accessible and easy to close new windows that open as part of live help functionality. Ensure live chats do not distract users from their task.</li>
             </ol>
                       <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong> Avoid:</strong></p>
@@ -3361,7 +3360,7 @@
               </li>
               <li>Warnings about any changes or risks. For example:
               <ul>
-              <li>When choosing an airline ticket, if a ticket option is to a different destination or there is another unusual action or change that could be risky, the user is asked to confirm the change.</li>
+              <li>When choosing an airline ticket, if a ticket option is to a different destination or there is another unusual action or change that could be unwanted or have risks, the user is asked to confirm the change.</li>
               </ul>
               </li>
               </ol>
@@ -3420,8 +3419,7 @@
             <li>Non-standard controls and form fields with instructions or help. For example:
             <ul>
             <li>An accessible help button next to a nonstandard control.</li>
-            <li>A standard mechanism for context sensitive help</li>
-            <li>This can include using [personalization semantics] for context sensitive help.</li>
+            <li>A standard mechanism for context sensitive help. This can include using [personalization semantics] for context sensitive help.</li>
             <li>Clear and unambiguous instructions that are easy to find.</li>
             </ul>
             </li>
@@ -3582,7 +3580,7 @@
           <ol>
           <li>Consistent reference to points of the compass including less well known ones (e.g. N by NE).</li>
           <li>Instructions that always assume that the person is at the expected location. They do not have an easy way to recover.</li>
-          <li>Content that changes automatically in ways that the user does not want.</li>
+          <li>Content that changes automatically in ways that the user does not want or control.</li>
           </ol>
       </section></section>
 
@@ -3911,13 +3909,12 @@
                   </section><section><h5 class="coga-5">Examples</h5>
                   <p><img src="./img/tick.gif" alt="" width="30" height="30" /><strong> Use:</strong></p>
                     <ol>
-                    <li>Support for browser extensions and features, and personalization tool bars. Users are able to apply their settings from a personalization toolbar to improve the usability for them of the page. For example:<ul>
+                    <li>Support for browser extensions and features, and personalization tool bars. Users are able to apply their settings from a personalization toolbar to improve the usability for them of the page. </li>
                     <li>Extension that adds options to the right click work as expected.</li>
-                    <li>The page can be formatted and simplified from the user's preferences in the operating system or user agent.</li></ul>
-                    </li>
+                    <li>The page can be formatted and simplified from the user's preferences in the operating system or user agent.</li>
                     </ol>
                     <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong> Avoid:</strong></p>
-                    <ol><li>Designs and code that stop browser extensions and feature, and personalization tool bars from working.
+                    <ol><li>Designs and code that stop browser extensions, settings and features, and personalization tool bars from working. For example:
                       <ul>
                     <li>Password storage applications do not work.</li>
                     <li>Distraction removing extensions do not work.</li>
@@ -3991,7 +3988,7 @@
                 </ol>
                 <p><img src="./img/x.JPG" alt="" width="30" height="30" /><strong> Avoid:</strong></p>
                 <ol>
-                <li>Simplified modes that have unnecessary extra content or are not supported.</li>
+                <li>Simplified modes have unnecessary extra content or are not supported.</li>
                 <li>Applications with lots of features and can not be simplified. For example:
                 <ul>
                 <li>A busy email program has many control bars and features such as tagging, group tagging, start a new thread etc. There is no easy way to simplify the page.</li>
