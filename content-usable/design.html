@@ -2,11 +2,12 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <body>
     <section id="introduction">
+    <h2>Introduction</h2>
       <p>
 		This guide provides assistance making websites and applications friendly for people with cognitive and learning disabilities. The patterns in this guide provide practical guidance to improve the accessibility of designs and the design process.
       </p>
 	  <p>
-		 The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> beyond the requirements of The Web Content Accessibility Guidelines [WCAG]. They are intended to address barriers that could not be included in the normative [WCAG] specification and may not otherwise be addressed.
+		 The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> beyond the requirements of The Web Content Accessibility Guidelines WCAG[[WCAG22]. They are intended to address barriers that could not be included in the normative WCAG[[WCAG22]] specification and may not otherwise be addressed.
 	  </p>
 
       <p>
@@ -17,7 +18,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="objective-1">
       <h2>
         Objective 1: Help Users Understand What Things are and How to Use Them
       </h2>
@@ -50,12 +51,12 @@
 
 
       <section>
-        <h3>Pattern: Make the Purpose of Your Page Clear</h3>
+        <h3>Make the Purpose of Your Page Clear (Pattern)</h3>
           <section><h5 class="coga-5">User Need</h5>
           <blockquote><p>I need to know the context and purpose of the page.</p></blockquote>
-          <p>Related User Story: <a href="#user-story-clear-purpose" aria-label="Clear Purpose User Story">Clear Purpose</a>.</p>
+          <p>Related User Story: <a href="#clear-purpose-user-story" aria-label="Clear Purpose User Story">Clear Purpose</a>.</p>
           </section>
-          <section><h5 class="coga-5">What to Do</h5>
+          <section class="wtd"><h5 class="coga-5">What to Do</h5>
           <p>
             Help the user know the purpose of the content. Use:
           </p>
@@ -65,12 +66,12 @@
           </ul>
           </section><section><h5  class="coga-5">How it Helps</h5>
           <p>
-            This helps many people, including those with impaired memory and attention as well as anyone who is easily distracted due to age-related forgetfulness and AD(H)D.
+            This helps many people, including those with impaired memory and attention as well as anyone who is easily distracted due to age-related forgetfulness and <a href="#dfn-anxiety-disorders">AD(H)D</a>.
           </p>
           <p>
             For example, someone with mild dementia is using online shopping. They get distracted and then when they look at the screen again they have forgotten what they were doing. A clear heading at the top of each page shows clearly <strong>what the page is about and what they are doing</strong>.
           </p>
-		  <p>In another example, a user with AD(H)D is looking for information in a video. They can tell by the video title that this video has the information they need.</p>
+		  <p>In another example, a user with <a href="#dfn-anxiety-disorders">AD(H)D</a> is looking for information in a video. They can tell by the video title that this video has the information they need.</p>
           </section>
           <section><h5  class="coga-5">More Details</h5>
           <p>Headings clarify the purpose of this specific page.</p>
@@ -79,13 +80,13 @@
           </section>
           <section><h5  class="coga-5">Examples</h5>
           <p>
-            <strong><span class="use"> </span> Use:</strong>
+            <strong><span class="use"></span>Use:</strong>
           </p>
           <ol>
           	<li>Page headings that tell the user where they are.</li>
           </ol>
 
-          <p><strong><span class="aviod"> </span> Avoid:</strong> </p>
+          <p><strong><span class="avoid"></span>Avoid:</strong> </p>
           <ol>
             <li>Pages without clear headings or signposts  that tell the user where they are. For example:
                 <ul>
@@ -102,12 +103,12 @@
 
       <section>
         <h3>
-          Pattern: Use a Familiar Hierarchy and Design
+          Use a Familiar Hierarchy and Design (Pattern)
         </h3>
           <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to understand my options and the tasks I can perform and I can identify the controls I can interact with to complete actions. (I find it hard to learn new interface design patterns.)</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-operation-user-story" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Use common designs that are familiar to most users. This includes:
         </p>
@@ -126,7 +127,7 @@
             Users are more likely to find and recognize common design elements that are repeated often over a long period of use, across many sites.
           </p>
 		  <p>
-		  For example, a user with a mild cognitive impairment or dementia, goes to a site to buy a product. They cannot find where to pay for the item that they want. They may think the site does not allow shopping and the site just provides information.
+		  For example, a user with a <a href="#dfn-mci">mild cognitive impairment</a> or dementia, goes to a site to buy a product. They cannot find where to pay for the item that they want. They may think the site does not allow shopping and the site just provides information.
 		</p>
 
           </section><section><h5 class="coga-5">More Details</h5>
@@ -150,7 +151,7 @@
               Common design patterns (repeated designs for controls and other elements), such as:
               <ul>
                 <li>
-                  [WAI-ARIA] authoring best practices,
+                  WAI-ARIA authoring best practices[[wai-aria-practices-1.2]],
                 </li>
                 <li>
                   patterns used in the most popular sites,
@@ -206,11 +207,11 @@
       	</section>
       	<section>
       		<h5 class="coga-5">Examples</h5>
-      		<p><span class="use"> </span><strong> Use:</strong></p>
+      		<p><span class="use"></span><strong>Use:</strong></p>
       		<ol>
       			<li>Common web layouts.</li>
       		</ol>
-          <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+          <p><span class="avoid"></span><strong>Avoid:</strong></p>
       		<ol>
       			<li>Unfamiliar layouts.</li>
       			<li>Unfamiliar visual hierarchies. </li>
@@ -221,12 +222,12 @@
       </section>
 
       <section>
-        <h3>Pattern: Use a Consistent Visual Design</h3>
+        <h3>Use a Consistent Visual Design (Pattern)</h3>
           <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to understand my options and the tasks I can perform and I can identify the controls I can interact with in order to complete actions.</p></blockquote>
         <p>I know how to use all the controls and the effects of each action.</p>
-        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-operation-user-story" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Use a consistent visual design across groups of pages.</p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
@@ -265,7 +266,7 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-       <p><span class="use"> </span><strong> Use:</strong></p>
+       <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
           	<li>Headings at the same level look similar, across the site.</li>
           	<li>
@@ -283,7 +284,7 @@
           		</ul>
           	</li>
           </ol>
-                <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <ol>
           	<li>Elements with similar functions looking different. For example:
@@ -302,11 +303,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Make Each Step Clear</h3>
+        <h3>Make Each Step Clear (Pattern)</h3>
           <section><h5  class="coga-5">User Need</h5>
           <blockquote><p>I need to recognize where I am in the architecture of the website, application or multi-step process, even after I get distracted.</p></blockquote>
-          <p>Related User Story: <a href="#user-story-clear-purpose" aria-label="Clear Purpose User Story">Clear Purpose</a>.</p>
-		  </section><section><h5  class="coga-5">What to Do</h5>
+          <p>Related User Story: <a href="#clear-purpose-user-story" aria-label="Clear Purpose User Story">Clear Purpose</a>.</p>
+		  </section><section class="wtd"><h5  class="coga-5">What to Do</h5>
         <p>
           Provide breadcrumbs, a "how I got here" button, or heading to help the user orientate themselves inside a site or task.
         </p>
@@ -326,7 +327,7 @@
           <p>Examples include:</p>
           <ul>
             <li>
-              Someone with early stage dementia is interrupted in their task or loses focus and then cannot remember what they were doing. By seeing the bread crumbs they can remind themselves where they are and continue their task.
+              Someone with <a href="#dfn-early-stage-dementia">early stage dementia</a> is interrupted in their task or loses focus and then cannot remember what they were doing. By seeing the bread crumbs they can remind themselves where they are and continue their task.
             </li>
             <li>
               Someone with an attention disability gets distracted and then needs to pick up where they left off.
@@ -337,7 +338,7 @@
           </ul>
           </section><section><h5  class="coga-5">Examples</h5>
           <p>
-        <p><span class="use"> </span><strong> Use:</strong></p>
+        <p><span class="use"></span><strong>Use:</strong></p>
 		      <p>
           <ol>
             <li>Breadcrumbs that indicate the current step in the process, important choices, as well as past and future steps.</li>
@@ -351,7 +352,7 @@
 
             </li>
           </ol>
-                    <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                    <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
            <ol>
              <li>Completed steps and choices that are hard to find and check. For example:
@@ -366,12 +367,12 @@
 
       <section>
         <h3>
-          Pattern: Clearly Identify Controls and Their Use
+          Clearly Identify Controls and Their Use (Pattern)
         </h3>
           <section><h5  class="coga-5">User Need</h5>
         <blockquote><p>I need to understand my options and the tasks I can perform and I can identify the controls I can interact with in order to complete actions.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
-        </section><section><h5  class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-operation-user-story" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        </section><section class="wtd"><h5  class="coga-5">What to Do</h5>
         <p>Use a clear and recognizable design for controls. Make it clear what elements are controls and how to use them.</p>
 
 		    <p>This includes:</p>
@@ -393,7 +394,7 @@
           </li>
         </ul>
         <p>
-          When this is not possible, provide instructions that explain how to use the control. Instructions should be on the same page or one click away and written in easy to understand language.
+          When this is not possible, provide instructions that explain how to use the control. Instructions should be on the same page or one click away and written in <a href="#dfn-easy-to-understand-language">easy to understand language</a>.
         </p>
 
           </section><section><h5  class="coga-5">How it Helps</h5>
@@ -403,7 +404,8 @@
         		<p>
         			The goal of these controls is to allow someone to use them. As soon as the user needs to discover the control or work out how to use it, some users will fail.
         		</p>
-        		<p>	For example, an older user with age-related forgetfulness takes longer to learn new designs. They go to an ecommerce site that has boxes around the headers (such as "sale"). It also has simple large text for controls such as the "add to cart" button. The user clicks on the headings and not on the "�add to cart"� button (that looks like text). After a few failures they assume they cannot manage it and leave the site.
+
+        		<p>	For example, an older user with age-related forgetfulness takes longer to learn new designs. They go to an ecommerce site that has boxes around the headers (such as "sale"). It also has simple large text for controls such as the "add to cart" button. The user clicks on the headings and not on the "add to cart" button (that looks like text). After a few failures they assume they cannot manage it and leave the site.
           </p>
           <p>
             Some users have trouble when controls have a different look, color or shape than they have used before. For example, when links do not have underlines and blue or purple text some users will not know there is a link (even if this appears with focus).
@@ -431,7 +433,7 @@
 
 
           <section><h5  class="coga-5">Examples</h5>
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
             <li>
               Standard blue and purple link colors or links with an underline and distinct text color (the link text color used is not used for static text on the site).
@@ -443,7 +445,7 @@
           </ol>
 
 
-                    <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                    <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <ol>
             <li>Links without an underline</li>
@@ -454,11 +456,11 @@
 
 
 	    <section>
-        <h3>Pattern: Make the Relationship Clear Between Controls and the Content They Affect</h3>
+        <h3>Make the Relationship Clear Between Controls and the Content They Affect (Pattern)</h3>
           <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to know how to use all the controls and the effects of each action.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-operation" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-operation-user-story" aria-label="Clear Operation User Story">Clear Operation</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           The relationship between controls and affected content should be completely clear and unambiguous.
         </p>
@@ -507,7 +509,7 @@
           </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
             <li>
                Controls clearly associated with the section they control by placing the control inside the section, placing clear borders around the section, and labeling the controls to match the section heading. For example:
@@ -520,7 +522,7 @@
             </li>
           </ol>
 
-                 <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                 <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <ol>
             <li>Multiple scrollable sections where it is unclear which scrollbar to use for each section.</li>
@@ -532,11 +534,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Use Icons that Help the User</h3>
+        <h3>Use Icons that Help the User (Pattern)</h3>
           <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to know what features and content are on this page or if I should move on.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-symbols-pictographic-or-ideographic-that-represent-concepts" aria-label="Use Symbols User Story">Use Symbols</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#symbols-pictographic-or-ideographic-that-represent-concepts-user-story" aria-label="Use Symbols User Story">Use Symbols</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Add familiar icons, images and symbols to important content such as controls and section headings. Each icon or symbol should convey a single meaning and be next to the content it relates to.
         </p>
@@ -564,17 +566,18 @@
             <li>
              When adding multiple symbols to a paragraph or section of text, place the symbols above the text.
             </li>
-			       <li>Use personalization semantics such as [personalization-semantics-1.0] to help the user load familiar symbols.</li>
+			       <li>Use personalization semantics such as [[personalization-semantics-1.0]] to help the user load familiar symbols.</li>
           </ul>
 
           </section><section><h5 class="coga-5">Getting Started</h5>
           <p>
             Use common icons that the user is likely to understand.
           </p>
-          <p>Provide common icons next to key texts, headings, media sections, "�contact us"� buttons and help buttons.</p>
+
+          <p>Provide common icons next to key texts, headings, media sections, "contact us" buttons and help buttons.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-      <p><span class="use"> </span><strong> Use:</strong></p>
+      <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
             <li>
               Instructions and important lists where each bullet point starts with an icon that relates to the content within that point. For example, see the summary of this document.
@@ -584,7 +587,7 @@
             </li>
             <li>Icons in call out boxes.</li>
           </ol>
-                   <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                   <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <ol>
             <li>Important instructions without icons or images to guide the reader.</li>
@@ -593,9 +596,9 @@
       </section></section>
     </section>
 
-    <section>
+    <section class="objective-2">
       <h2>Objective 2: Help Users Find What They Need</h2>
-      <p>Users with cognitive and learning disabilities may have trouble finding the content they need. They may also struggle to orientation themselves inside the content or task. Users should be able to quickly and easily locate what they are looking for. Use a clear and easy layout to help users navigate the system easily. For example:</p>
+      <p>Users with cognitive and learning disabilities may have trouble finding the content they need. They may also struggle to orient themselves inside the content or task. Users should be able to quickly and easily locate what they are looking for. Use a clear and easy layout to help users navigate the system easily. For example:</p>
       <ul>
         <li>Make anything related to safety or that the user needs to know easy to identify without reading a lot of text!</li>
         <li>Provide a clear site structure and hierarchy will help users navigate to the page they need.</li>
@@ -607,12 +610,12 @@
 
       <section>
         <h3>
-          Pattern: Make it Easy to Find the Most Important Tasks and Features of the Site
+          Make it Easy to Find the Most Important Tasks and Features of the Site (Pattern)
         </h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to find it easy to identify the content that I need, and do not need. Information I need to know and important information stands out, or is the first thing I read and does not get lost in the noise of less important information.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-findable" aria-label="Findable User Story">Findable</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#findable-user-story" aria-label="Findable User Story">Findable</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Make important tasks and features on the site stand out and easy to find. </p>
         <p>This includes:</p>
         <ul>
@@ -627,14 +630,14 @@
 
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>
-            People with impaired executive function, impaired memory, and other cognitive and learning disabilities may have difficulty determining what they can do on a site. By calling out important tasks and features, people can more quickly determine whether the site will meet their needs.
+            People with impaired <a href="#dfn-executive-function">executive function</a>, impaired memory, and other cognitive and learning disabilities may have difficulty determining what they can do on a site. By calling out important tasks and features, people can more quickly determine whether the site will meet their needs.
           </p>
 
 		      <p>For example, a user goes to a website to buy tickets. He sees many reviews and other information but cannot see how to buy the tickets. The user leaves the site.</p>
 
           </section>
           <section><h5 class="coga-5">More Details</h5>
-		        <p>Make important features and tasks both visually and programmatically prominent. See The Web Content Accessibility Guidelines [WCAG]. </p>
+		        <p>Make important features and tasks both visually and programmatically prominent. See The Web Content Accessibility Guidelines WCAAG[[WCAG22]]. </p>
 
           </section>
           <section>
@@ -649,12 +652,12 @@
           </section>
 
           <section><h5 class="coga-5">Examples</h5>
-            <p><span class="use"> </span><strong> Use:</strong></p>
+            <p><span class="use"></span><strong>Use:</strong></p>
               <ol>
               <li>The most important tasks are directly on the main page and in visually distinct boxes. For example, important tasks on a library site might be: searching, signing up for a library card, locating a branch, and reserving a conference room.</li>
               <li>The most used features near the top of the page.</li>
               </ol>
-              <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+              <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
               <li>Items that the team wish to promote more prominently placed than the main reason for users coming to the site. For example: A library website only includes upcoming events on the main page. Users have to click through non obvious links to search for books, signing up for a library card, locating a branch, or reserving a conference room.</li>
               <li>Positioning information users are likely to want so they have to scroll, or page down, to find it.</li>
@@ -662,10 +665,10 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Make the Site Hierarchy Easy to Understand and Navigate</h3>
+        <h3>Make the Site Hierarchy Easy to Understand and Navigate (Pattern)</h3>
           <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to easily understand, navigate and browse both the site and page structure.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-navigation" aria-label="Clear Navigation User Story">Clear Navigation</a>.</p>
+        <p>Related User Story: <a href="#clear-navigation-user-story" aria-label="Clear Navigation User Story">Clear Navigation</a>.</p>
         </section><section><h5 class="coga-5">What to do</h5>
             <p>Make it easy to understand and use the site hierarchy and the menu structure.</p>
             <p>This includes:</p>
@@ -714,16 +717,16 @@
 
           </section><section><h5 class="coga-5">Examples</h5>
 
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
             <li>A visually clear and logical site hierarchy</li>
             <li>Clear indicators when text is hidden. For example:</li>
             <ul>
-            <li>Consistently using "+"� sign to show that additional information will be shown when pressed.</li>
+            <li>Consistently using "+" sign to show that additional information will be shown when pressed.</li>
             <li>Consistently using triangles next to hidden sub-menu items in menus.</li>
             </ul>
           </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>A site hierarchy where users do not correctly guess what item is under each menu item.</li>
               <li>Unclear logic for the menu categories.</li>
@@ -738,11 +741,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Use a Clear and Understandable Page Structure</h3>
+        <h3>Use a Clear and Understandable Page Structure (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to easily understand, navigate and browse both the site and page structure.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-navigation" aria-label="Clear Navigation User Story">Clear Navigation</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-navigation-user-story" aria-label="Clear Navigation User Story">Clear Navigation</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Carefully design the layout of the page. Make sure it has a clear structure and hierarchy so that it is easy to understand.</p>
         <p>This can be achieved by:</p>
         <ul>
@@ -789,14 +792,14 @@
             <p>Icons should be used consistently. It is also important the graphical indicators do not clutter the interface. Too many icons can add to the cognitive load for users to process. Examples of clear dividers include high contrast borders or white space. A change in background color can be a clear divider if the contrast is strong enough.</p>
           </section>
           <section><h5 class="coga-5">Examples</h5>
-            <p><span class="use"> </span><strong> Use:</strong></p>
+            <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Well separated sections of content. White space, borders or call outs are used to separate sections.</li>
               <li>Headings and icons to help define sections of content. This organizes the information on the page so it is easier to understand the layout and find specific information.</li>
               <li>Call outs boxes.</li>
 
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Dense text, with little white space.</li>
               <li>Unclear page structure and hierarchy.</li>
@@ -810,12 +813,12 @@
 
       <section>
         <h3>
-          Pattern: Make it easy to find the most important actions and information on the page
+          Make it easy to find the most important actions and information on the page (Pattern)
         </h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to reach important information and the controls I need without scrolling or carrying out other actions. They are not hidden or off screen.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-findable" aria-label="Findable User Story">Findable</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#findable-user-story" aria-label="Findable User Story">Findable</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Make key content visually stand out. Key content should be visible to users without needing to scroll the page or hover over content. This includes:</p>
           <ul>
             <li>critical tasks and the controls needed to complete them,</li>
@@ -824,7 +827,7 @@
           </ul>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
-          <p>Slow readers, people with impaired executive function, impaired memory, and other cognitive and learning disabilities may not be able to find the information and features on a page. For example content that requires a lot of reading or the use of the scroll bar or pointer hovers may be hard to find.  Other users can not find content that requires paging through different screens </p>
+          <p>Slow readers, people with impaired <a href="#dfn-executive-function">executive function</a>, impaired memory, and other cognitive and learning disabilities may not be able to find the information and features on a page. For example content that requires a lot of reading or the use of the scroll bar or pointer hovers may be hard to find.  Other users can not find content that requires paging through different screens </p>
           <p>Users who are unfamiliar with the page (or common design patterns) may rely on prominent visual styling aids to find important information. A clear heading structure can also help with this by reducing what needs to be read.</p>
           <p>For example, an elementary school publishes a weekly newsletter with stories, activities and important announcements. One important announcement is that school will end early one day. If The newsletter has less important information before the early school dismissal, and does not have a warning symbol next to the important information. A parent who reads slowly may need to stop before the important information and does not find out that the school is ending early one day. The parent is not home for the child on time.</p>
           <p>In another example, a user is writing a comment, but the send button is not visible when the focus is on the text area. As a result, she cannot see how to send her feedback. The company will then not receive any feedback from groups who unable to find the feedback button.</p>
@@ -845,25 +848,25 @@
 
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Important controls and features that are visible without the need to scroll the page.</li>
               <li>Important controls, such as a submit button, that stand out from less important links and buttons.</li>
               <li>Critical information (such as information about health and safety) that is highlighted and visible without scrolling.</li>
               <li>Critical information that visually stands out from other less important information on the page.</li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol><li>Important information, controls or features that the user can not find straight away. For example: Warnings about user safety that are not visually distinct and above the fold.</li></ol>
 
 
       </section></section>
 
 	  <section>
-        <h3>Pattern: Break Media into Chunks</h3>
+        <h3>Break Media into Chunks (Pattern)</h3>
           <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to easily navigate to what I want, take breaks and easily jump back a step if I do not follow or get distracted.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-media" aria-label="Media User Story">Media</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#media-user-story" aria-label="Media User Story">Media</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Divide long pieces of media into segments that are:</p>
           <ul>
             <li>logical</li>
@@ -895,11 +898,11 @@
 
 
           </section><section><h5 class="coga-5">Examples</h5>
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Media that is divided into short logical segments. Each section is labeled and easy to get to. For example: A 30-minute video is divided into 5 sections, each with a descriptive link to play from that point onwards.</li>
             </ol>
-                    <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                    <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
             <ol>
               <li>Media that is not divided into segments. For example: A 30-minute video contains no subdivisions or descriptions of sections. A user has to play it from the beginning or guess starting locations within the video.</li>
@@ -910,11 +913,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Provide Search</h3>
+        <h3>Provide Search (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to be able to find features and content easily.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-searchable" aria-label="Searchable User Story">Searchable</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#searchable-user-story" aria-label="Searchable User Story">Searchable</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Provide a friendly search capability. Ideally search should include:</p>
             <ul>
             <li>autocomplete,</li>
@@ -924,7 +927,7 @@
             </ul>
           </section><section><h5 class="coga-5">How it Helps</h5>
             <p>Having a search capability allows users to find the content they need even if they cannot use the site menus. A user can learn how to use search and reuse that skill on many sites.</p>
-            <p>Menu systems and most site navigation require the user to understand the menu categories. Users with impaired executive function may be unable to identify the correct categories.</p>
+            <p>Menu systems and most site navigation require the user to understand the menu categories. Users with impaired <a href="#dfn-executive-function">executive function</a> may be unable to identify the correct categories.</p>
             <p>In some cases, users know the correct category via memory, rather than logic. For example, most users remember that the print function is often found under the file menu. Users with impaired memory may not be able to find these menu items based on recall.</p>
             <p>Users with impaired short-term memory, age related forgetfulness or who are easily distracted may also find navigating a site and going to many pages to look for content difficult. If it takes too long they may lose focus and forget what they are looking for.</p>
             <p>Search is most useful when it corrects misspellings, finds appropriate or related content and provides suggested auto-corrected versions of the search terms.</p>
@@ -937,11 +940,11 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-		        <p><span class="use"> </span><strong> Use:</strong></p>
+		        <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Search with spell check or suggested terms.</li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Search that presents many results that are not grouped or ordered by their relationship to the original request.</li>
             </ol>
@@ -950,9 +953,9 @@
 
     </section>
 
-    <section>
+    <section class="objective-3">
       <h2>Objective 3: Use Clear and Understandable Content</h2>
-        <p>Some users have impaired language skills. More of these users understand content which uses easy to understand language. For example, someone with a language impairment may be able to understand simple sentences and common words. However, complex language with uncommon words may be inaccessible to them.</p>
+        <p>Some users have impaired language skills. More of these users understand content which uses <a href="#dfn-easy-to-understand-language">easy to understand language</a>. For example, someone with a language impairment may be able to understand simple sentences and common words. However, complex language with uncommon words may be inaccessible to them.</p>
         <p>Help users understand the message and purpose of the page by using:</p>
         <ul>
           <li>Easy to understand words,</li>
@@ -966,11 +969,11 @@
         <p>A good visual layout and small chunks of text makes content easier to understand. Use whitespace and good separation of foreground from background to help comprehension.</p>
         <p>Also, avoid relying on numerical or mathematical skills.</p>
       <section>
-        <h3>Pattern: Use Clear Words</h3>
+        <h3>Use Clear Words (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to understand the language used, including vocabulary, syntax, tense and other aspects of language.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-language-written-or-audio-user-story" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <ul>
             <li>Use common and clear words in all content. Look at the most common 1500 words or phrases. These are the terms that people with severe language impairments are most likely to know.</li>
             <li>Remove unnecessary or vague words (such as: "and so forth").</li>
@@ -988,7 +991,7 @@
               <li>adding a simple language term in brackets next to it;</li>
               <li>providing a pop up definition, or</li>
 
-              <li>using supported markup (see <a href="https://w3c.github.io/personalization-semantics/help/index.html#easylang-explanation">easylang</a>). Note that <a href="https://w3c.github.io/personalization-semantics/help/index.html#easylang-explanation">easylang</a> is being introduced into the new personalization specifications [personalization-semantics]. At the time of publication more support is needed.</li>
+              <li>using supported markup (see <a href="https://w3c.github.io/personalization-semantics/help/index.html#easylang-explanation">easylang</a>). Note that <a href="https://w3c.github.io/personalization-semantics/help/index.html#easylang-explanation">easylang</a> is being introduced into the new personalization specifications [[personalization-semantics-help-1.0]]. At the time of publication more support is needed.</li>
               </ul>
 
 
@@ -1000,7 +1003,7 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-        <p><span class="use"> </span><strong> Use:</strong></p>
+        <p><span class="use"></span><strong>Use:</strong></p>
 
             <ol>
               <li>Common, clear  and easy to understand words and definitions of terms. For example:
@@ -1016,7 +1019,7 @@
               <li>Jargon that is avoided or explained.</li>
             </ol>
 
-                  <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                  <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
 
             <ol>
@@ -1031,16 +1034,16 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Use a Simple Tense and Voice</h3>
+        <h3>Use a Simple Tense and Voice (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to understand the language used, including vocabulary, syntax, tense and other aspects of language.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-language-written-or-audio-user-story" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
             <p>Use the tense and the voice that is easiest to understand. In English, this is usually the present tense and active voice. Speak directly to the user, and use the simplest form of verbs and sentence structure.</p>
             <p>Use local plain language guidance to find the tense and the voice that is easiest to understand in different languages.</p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
-          <p>Using simple tense and voice benefits many people such as people with language impairments, dyslexia or a memory impairment. For example, more people will understand "�press the on button"� (present tense and active voice) than "�the on button should be pressed." (passive voice)
+          <p>Using simple tense and voice benefits many people such as people with language impairments, dyslexia or a memory impairment. For example, more people will understand "press the on button" (present tense and active voice) than "the on button should be pressed." (passive voice)
           <p>Active voice makes it clear who is supposed to take action. For example, "It must be done." is passive voice ad does not say who must act. "You must do it." is active voice and clearly states who has the action.</p>
           <p>Putting the aim of the sentence at the beginning can also make English sentences easier to follow. Local language experts may have additional linguistic advice that helps make content easy to understand.</p>
 
@@ -1052,7 +1055,7 @@
           </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
             <li>Simple tense and language. For example:
 
@@ -1061,18 +1064,18 @@
               </ul>
               </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>Complex language and tense. For example: &ldquo;Over the last month, we saw your stocks increasing.&rdquo;</li>
             </ol>
       </section></section>
 
       <section>
-        <h3>Pattern: Avoid Double Negatives or Nested Clauses</h3>
+        <h3>Avoid Double Negatives or Nested Clauses (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to understand the language used, including vocabulary, syntax, tense and other aspects of language.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-language-written-or-audio-user-story" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Use a simple sentence structure. </p>
     		  <p>This includes:</p>
@@ -1085,14 +1088,14 @@
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>Simple sentence structure benefits many people, including those with language impairments, dyslexia or a memory impairment. Both double negatives and nested clauses can be confusing.</p>
           <p>For example, more people will understand &ldquo;You must get the agency&rsquo;s approval before we can answer your claim&rdquo;: rather than &ldquo;No approval of any claims can be achieved without the agency&rsquo;s approval."</p>
-          <p>Simple language allows more people to understand. For example, a person with early stage dementia can manage their own affairs when the language is clear and understandable.</p>
+          <p>Simple language allows more people to understand. For example, a person with <a href="#dfn-early-stage-dementia">early stage dementia</a> can manage their own affairs when the language is clear and understandable.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-        <p><span class="use"> </span><strong> Use:</strong></p>
+        <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
             <li>Short text without double negatives. For example: "Write clearly."</li>
           </ol>
-          <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+          <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <ol>
             <li>Double negatives that can be replaced by a positive. For example:
@@ -1113,11 +1116,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Use Literal Language</h3>
+        <h3>Use Literal Language (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to understand the meaning of the text. I do not want unexplained, implied or ambiguous information because I may misunderstand jokes and metaphors.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-language-written-or-audio-user-story" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Use literal and concrete language. When possible, use concrete terms
           and examples that refer to objects or events that you can see, hear or
@@ -1157,7 +1160,7 @@
           </p>
 
           </section><section><h5 class="coga-5">Example</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
               <ol>
                 <li>Literal text and concrete language. For example:
                 <ul>
@@ -1165,7 +1168,7 @@
                 </ul>
                 </li>
               </ol>
-                <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
                 <li>Non-literal text. For example:
                 <ul>
@@ -1177,11 +1180,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Keep Text Succinct</h3>
+        <h3>Keep Text Succinct (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to understand the language used, including vocabulary, syntax, tense and other aspects of language.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-language-written-or-audio-user-story" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Use short blocks of text</p>
         <p>This includes:</p>
         <ul>
@@ -1194,7 +1197,7 @@
 
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p><a href="https://en.wikipedia.org/wiki/Chunking_(psychology)">Chunking</a> text content makes it easier to read and understand. This helps people with learning or cognitive disabilities related, processing speed or language. People with a memory impairment or anyone who is easily distracted will also benefit. Chunking is also helpful to anyone who is multitasking. Try to put the aim or purpose at the beginning of each chunk or paragraph.</p>
-          <p>For example, a graduate student with AD(H)D may need to teach themselves a new software skill. The software documentation is broken up into short paragraphs and lists by topic. The student finds the documentation easy to read and understand.</p>
+          <p>For example, a graduate student with <a href="#dfn-anxiety-disorders">AD(H)D</a> may need to teach themselves a new software skill. The software documentation is broken up into short paragraphs and lists by topic. The student finds the documentation easy to read and understand.</p>
 
           </section><section><h5 class="coga-5">More Details</h5>
           <ul>
@@ -1205,7 +1208,7 @@
           </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Short chunks of text. For example:
              <ul>
@@ -1219,7 +1222,7 @@
               </ul>
               </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Long chunks of text. For example:
                 <ul>
@@ -1230,18 +1233,18 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Use Clear, Unambiguous Formatting and Punctuation</h3>
+        <h3>Use Clear, Unambiguous Formatting and Punctuation (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need words to include accents, characters and diacritics that are necessary to phonetically read the words.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Need">Clear Language</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-language-written-or-audio-user-story" aria-label="Clear Language User Need">Clear Language</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Use punctuation and format for text, numbers and symbols that reduce ambiguity and improve
           readability and comprehension.
         </p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
-            <p>For some readers, decoding words, numbers and symbols does not happen automatically and can be demanding on working memory and executive functions. If they find content too demanding they are at risk of losing its meaning.</p>
+            <p>For some readers, decoding words, numbers and symbols does not happen automatically and can be demanding on working memory and <a href="#dfn-executive-function">executive function</a>s. If they find content too demanding they are at risk of losing its meaning.</p>
             <p>Some users may use assistive technology or personalization tools to help understand content such as text-to-speech that reads aloud the content. However, sometimes the punctuation or format makes it more likely that the screen reader will read it incorrectly. For example, Roman numerals may be read as text.</p>
             <p>A user with a learning disability may be unable to manipulate letters, numbers, and words to correct mistakes that occur because of formatting or punctuation errors. They also need to focus on understanding the meaning of the content in order to use it.</p>
             <p>For example, a user with a communication disability may listen to content using text-to-speech. If the content is phrased correctly, they can understand it. Sometimes they hear content read incorrectly or skipped, particularly numbers and symbols, and they cannot understand it. If text, numbers or symbols are in an unfamiliar layout, the user may become confused.</p>
@@ -1249,7 +1252,7 @@
 
 
           </section><section><h5 class="coga-5">More Details</h5>
-          <p><strong>Use language tags. </strong>Language tags are the key means to achieve the goal of unambiguous text formatting. See [HTML language tags] and [BCP 47 Language Codes].</p>
+          <p><strong>Use language tags. </strong>Language tags are the key means to achieve the goal of unambiguous text formatting. See HTML[[HTML]] language tags and <a href="https://tools.ietf.org/html/bcp47">BCP 47 Language Codes</a>.</p>
           <p>
             <strong>Use punctuation correctly</strong> for the language you are
             writing in, as it will affect how the stress and intonation (known
@@ -1292,24 +1295,24 @@
           </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Dates that can be read and understood in any culture.
             <p>Consider how you write dates, because once again the text-to-speech will use the format associated with the language of the voice. A date such as 04/03/2019 will be read as "April 3rd 2019" by a US English voice and "4th of March 2019" by a British English voice. Writing out the month in words can avoid confusion.</p>
             </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"> </span><strong>Avoid:</strong></p>
             <ol>
               <li>Dates and numbers that are not clear or read differently based on culture.</li>
             </ol>
       </section></section>
 
       <section>
-        <h3>Pattern: Include Symbols and Letters Necessary to Decipher the Words</h3>
+        <h3>Include Symbols and Letters Necessary to Decipher the Words (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need words to include accents, characters and diacritics that are necessary to phonetically read the words. This is often needed for speech synthesis and phonetic readers in languages like Arabic and Hebrew.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#clear-language-written-or-audio-user-story" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Include vowels, letters or diacritic marks that users need to decipher words correctly.
 		  This is often needed in languages like Arabic and Hebrew.
@@ -1327,39 +1330,39 @@
 
           </section><section><h5 class="coga-5">Getting Started</h5>
           <p>
-            In Hebrew add additional Yud (י) and Vav (ו) that enables correct pronunciation.
+            In Hebrew add additional Yud (×) and Vav (×) that enables correct pronunciation.
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><strong><span class="use"> </span>Use:</strong></p>
+          <p><strong><span class="use"></span>Use:</strong></p>
             <ol>
             <li>Additional letters or diatric marks that enable correct pronunciation. For example:
 
               <ul>
-                <li>אֹמַר /אומר (Hebrew)</li>
-                <li>He wrote: كَتَبَ (Arabic)</li>
-                <li>Books: كُتُبْ (Arabic)</li>
-                <li>It was written: كُتِبَ (Arabic)</li>
+                <li>×Ö¹×Ö·×¨ /××××¨ (Hebrew)</li>
+                <li>He wrote: ÙÙØªÙØ¨Ù (Arabic)</li>
+                <li>Books: ÙÙØªÙØ¨Ù (Arabic)</li>
+                <li>It was written: ÙÙØªÙØ¨Ù (Arabic)</li>
               </ul>
             </li>
             </ol>
 
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Words without needed letters or diatric marks so the user must guess the pronunciation based on memory and context. For example:
                 <ul>
-                <li>אמר (Hebrew)</li>
-                <li>كتب (Arabic)</li>
+                <li>×××¨ (Hebrew)</li>
+                <li>ÙØªØ¨ (Arabic)</li>
                 </ul>
               </li>
             </ol>
       </section></section>
 
       <section>
-        <h3>Pattern: Provide Summary of Long Documents and Media</h3>
+        <h3>Provide Summary of Long Documents and Media (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need an easy to understand, short summary for long pieces of content or an option for an Easy To Understand version.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-clear-language-written-or-audio" aria-label="Clear Language User Story">Clear Language</a>.</p>
+        <p>Related User Story: <a href="#clear-language-written-or-audio-user-story" aria-label="Clear Language User Story">Clear Language</a>.</p>
         </section><section><h5 class="coga-5">What To Do</h5>
         <p>
           Provide a brief summary for a long document and media.
@@ -1385,11 +1388,11 @@
             <p>Summaries of each segment should include the main points from the content. Users should be able to use the summary to uniquely identify the content and know what it will contain.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Short summaries with bullet points that clearly state the main points.</li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>Long texts, documents or media without summaries.</li>
                 <li>Unclear summaries. For example:</li>
@@ -1401,10 +1404,10 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Separate Each Instruction</h3>
+        <h3>Separate Each Instruction (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need short boxes or chunks of content or sections</p></blockquote>
-        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
+        <p>Related User Story: <a href="#support-user-story" aria-label="Support User Story">Support</a>.</p>
         </section><section><h5 class="coga-5">What To Do</h5>
         <p>In instructions, separate each step. State each step clearly. This includes:</p>
           <ul>
@@ -1423,7 +1426,7 @@
 
           </section><section><h5 class="coga-5">Examples</h5>
           <p>
-            <p><span class="use"> </span><strong> Use:</strong></p>
+            <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Bullet points to separate each step.</li>
               <li>An if/then table to separate steps based on conditions. For example:&nbsp;
@@ -1456,7 +1459,7 @@
              </li>
              </ol>
 
-		      <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+		      <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
                 <li>More then on step in the same block of text without separation. For example:
                   <ul>
@@ -1467,11 +1470,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Use White Spacing</h3>
+        <h3>Use White Spacing (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need a good use of white space, so that the chunks are clear and the page does not get overwhelming.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-visual-presentation" aria-label="Visual Presentation User Story">Visual Presentation</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#visual-presentation-user-story" aria-label="Visual Presentation User Story">Visual Presentation</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Put white space around objects and text, including boxes, paragraph
           headings, and content, so that each section is clearly separated.
@@ -1503,18 +1506,18 @@
             Allow for the ability to easily adjust white space around objects and text, including boxes, paragraph headings, and content, to a degree that suits the user and does not disrupt the overall integrity of a web page. Do not add so much white space that important content can not be seen above the scroll.
           </p>
           <p>
-            Note that "�white space"� is a term that means the background color.
+            Note that "white space" is a term that means the background color.
             It does not always need to be always white!
           </p>
 
       </section>
       <section>
         <h5>Examples</h5>
-        <p><span class="use"> </span><strong> Use:</strong></p>
+        <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
           <li>White space around separate sections of the content.</li>
           </ol>
-          <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+          <p><span class="avoid"></span><strong>Avoid:</strong></p>
           <ol>
           <li>Dense pages.</li>
           </ol>
@@ -1525,15 +1528,15 @@
       </section>
 
       <section>
-        <h3>Pattern: Ensure Foreground Content is not Obscured by Background</h3>
+        <h3>Ensure Foreground Content is not Obscured by Background (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <p>I need to easily perceive the content, for example:</p>
             <ul>
               <li>Text is clear because the background is plain.</li>
               <li>Media does not have distracting background noise.</li>
             </ul>
-        <p>Related User Story: <a href="#user-story-visual-presentation" aria-label="Visual Presentation User Story">Visual Presentation</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#visual-presentation-user-story" aria-label="Visual Presentation User Story">Visual Presentation</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Do not overlay words on busy backgrounds. Provide an option to remove background
 		  noise behind auditory content or ensure background sounds do not interfere with
 		  the main auditory content.
@@ -1564,20 +1567,20 @@
       <p>Similarly, background noise in an audio track can make it harder to process and understand the main content.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
           <ol><li>Easy to recognize words and content that can be easily distinguished from the background.</li>
           </ol>
-          <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+          <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <ol><li>Backgrounds that might make it difficult to read text, such as <span style="background-image: repeating-linear-gradient(black, gray 10%, white 30%);">"Backgrounds behind text that make it difficult to recognize words and process text."</span></li></ol>
       </section></section>
 
     <section>
-        <h3>Pattern: Explain Implied Content</h3>
+        <h3>Explain Implied Content (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to understand the meaning of the text. I do not want unexplained, implied or ambiguous information because I may misunderstand jokes and metaphors.</p></blockquote>
-         <p>Related User Story: <a href="#user-story-visual-presentation" aria-label="Visual Presentation User Story">Visual Presentation</a>.</p>
-         </section><section><h5 class="coga-5">What to Do</h5>
+         <p>Related User Story: <a href="#visual-presentation-user-story" aria-label="Visual Presentation User Story">Visual Presentation</a>.</p>
+         </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
          <p>Provide definitions or explanations for implied or ambiguous information such:</p>
         <ul>
             <li>body gestures</li>
@@ -1607,22 +1610,22 @@
 		<p>Note that standard emojis often come with an explanation or alternative text.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
           <ol><li>Supplementary text such as (sarcasm) when writing sarcastic comments in emails and social media posts to help readers understand the intent of the communication. </li>
-		  <li>Personalization semantics (once it is mature) to add non-literal text alternatives. See  [personalization-semantics].</li></ol>
-      <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+		  <li>Personalization semantics (once it is mature) to add non-literal text alternatives. See [[personalization-semantics-help-1.0]].</li></ol>
+      <p><span class="avoid"></span><strong>Avoid:</strong></p>
         <ol><li>Unexplained metaphors and similes. For example: "You are my sunshine." rather than saying "You make me happy."</li></ol>
     </section></section>
 
       <section>
-        <h3>Pattern: Provide Alternatives for Numerical Concepts</h3>
+        <h3>Provide Alternatives for Numerical Concepts (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need words rather than numbers and numerical concepts.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-math-concepts" aria-label="Math Concepts User Story">Math Concepts Language</a>.</p>
+        <p>Related User Story: <a href="#math-concepts-user-story" aria-label="Math Concepts User Story">Math Concepts Language</a>.</p>
         <p>Provide alternatives for numbers and numerical concepts.</p>
 
           </section>
-          <section>
+          <section class="wtd">
             <h5>What to Do</h5>
             <p>Provide alternatives for numbers and numerical concepts.</p>
           </section>
@@ -1662,7 +1665,7 @@
               Reinforce numbers with non-numerical concepts, e.g., very cold, cold, cool, mild, warm, hot, very hot.
             </li>
             <li>
-              Once it is mature you can also use personalization semantics to add non-numerical concepts. See [personalization-semantics].
+              Once it is mature you can also use personalization semantics to add non-numerical concepts. See [[personalization-semantics-help-1.0]].
             </li>
           </ul>
           <p>
@@ -1689,7 +1692,7 @@
     </section>
     <section>
       <h5>Examples</h5>
-      <p><span class="use"> </span><strong> Use:</strong></p>
+      <p><span class="use"></span><strong>Use:</strong></p>
         <ol><li>Extra support for numerical content such as:</li>
 
         <ul>
@@ -1707,7 +1710,7 @@
 
         <p>For the above, there is a description or representation of what the number means as a concept.</p>
                       </ol>
-        <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+        <p><span class="avoid"></span><strong>Avoid:</strong></p>
         <ol>
         <li>Numerical content without extra support</li>
         </ol>
@@ -1718,7 +1721,7 @@
     </section></section>
 
 
-    <section>
+    <section class="objective-4">
       <h2>
         Objective 4: Help Users Avoid Mistakes or Know How To Correct Them
       </h2>
@@ -1729,12 +1732,12 @@
 
       <section>
         <h3>
-          Pattern: Ensure Controls and Content Do Not Move Unexpectedly
+          Ensure Controls and Content Do Not Move Unexpectedly (Pattern)
         </h3>
           <section><h5 class="coga-5">User Need</h5>
           <blockquote><p>I need to know where things are. Controls and content do not move unexpectedly as I am using them.</p></blockquote>
-          <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
-          </section><section><h5 class="coga-5">What to Do</h5>
+          <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+          </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
           <p>Make sure controls and content remain in place and do not move, unless the user initiates the movement. </p>
           <p>A user may initiate a movement by triggering an action or by altering a property of the device, such as window size.</p>
           <p>This can usually be achieved by:</p>
@@ -1747,7 +1750,7 @@
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>If a control moves, users with slow hand-eye coordination or impaired cognitive processing speed may hit the wrong control. This causes unwanted actions and errors. The user may experience disorientation, confusion or even incorrect understanding of the content.</p>
           <p>For example, a user moves to press a button on a video. The user accidentally nudges the device. The orientation changes to landscape and the control moves. Because the user has slow eye tracking or hand-eye coordination, they end up pressing a link to a new video.</p>
-          <p>Shifting controls and content can also cause cognitive overload and increase mental fatigue. For example, as a user with Traumatic Brain Injury reads content, the content refreshes and an additional article appears above the current content. The article the user is reading moves down. The user becomes disoriented and the application becomes very hard to use or understand.</p>
+          <p>Shifting controls and content can also cause cognitive overload and increase mental fatigue. For example, as a user with Traumatic <a href="#dfn-brain-injury">Brain Injury</a> reads content, the content refreshes and an additional article appears above the current content. The article the user is reading moves down. The user becomes disoriented and the application becomes very hard to use or understand.</p>
           </section><section><h5 class="coga-5">More Details</h5>
 		      <p>Controls moving unexpectedly includes:</p>
 				<ul><li>Links in a list shifting positions.</li>
@@ -1757,13 +1760,13 @@
 
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Controls and content that do not move about as the page loads or refreshes.</li>
               <li>A loading icon that is clearly visible while the page is loading. After the content is finished loading and there is no further movement, the icon is removed.</li>
               <li>Controls and content that only move when the user initiates a change.</li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Controls and content that move without the user's request. For example: The user is about to select a phone number to call. As the user is about to touch the phone number, it shifts down. The user presses the wrong phone number and calls the wrong person.</li>
               <li>Links in a list shifting positions.</li>
@@ -1774,11 +1777,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Let Users Go Back</h3>
+        <h3>Let Users Go Back (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need predictable back or undo features so that I know exactly where I was previously, before I made a mistake.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-undo" aria-label="Undo User Story">Undo</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#undo-user-story" aria-label="Undo User Story">Undo</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Always let the user return to a previous point.</p>
         <p>
           The standard back button is the best way to do this as it is familiar
@@ -1850,13 +1853,13 @@
             </li>
             <li>
               Once it is mature you can also use personalization semantics to log the steps and return to
-              a step in the process.  See  [personalization-semantics].
+              a step in the process.  See [[personalization-semantics-1.0]].
             </li>
             <li>Reopening a closed window or option.</li>
           </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol><li>Designs that make it easy to go back. For example:</li></p>
             <ul>
             <li>The user is watching a video. They touch a control accidentally. Pressing back can take them back to the video at the same position.</li>
@@ -1864,7 +1867,7 @@
             <li>The user is also able to go back through all the screens to be sure they did not misunderstand a section or skip an answer. The user can edit any data they mistyped.</li>
             </ul>
           </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
 
 
@@ -1879,11 +1882,11 @@
 
       <section>
         <h3>
-          Pattern: Notify Users of Fees and Charges at the Start of a Task
+          Notify Users of Fees and Charges at the Start of a Task (Pattern)
         </h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need support to manage the task, such as letting me know what information I will need (credit card, full address etc) before I start. </p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
         <p>
           Tell the user about all charges at the start of a transaction
           including typical values. Any conditions and terms should also be
@@ -1891,14 +1894,14 @@
         </p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
-              <p>Users with cognitive and learning disabilities who have trouble with memory, attention to detail or reading comprehension may not be aware of charges unless they are explicitly noted at the start of a transaction task. Terms and conditions can be under a link, but charges must be clearly displayed and available in easy to understand language.</p>
+              <p>Users with cognitive and learning disabilities who have trouble with memory, attention to detail or reading comprehension may not be aware of charges unless they are explicitly noted at the start of a transaction task. Terms and conditions can be under a link, but charges must be clearly displayed and available in <a href="#dfn-easy-to-understand-language">easy to understand language</a>.</p>
               <p>Clearly identifying charges at the start of a sale benefits all users. Those with cognitive and learning disabilities will particularly benefit because some groups are less likely to have inferred or guessed the charges would be included. They may not know to look in other places in the user flow, such as on the homepage, or on a designated rates page.</p>
-              <p>People with impaired executive function or memory need to have all the consequences presented in an orderly form to be able to make an informed decision. When charges are not clear, the consent of the transaction is unclear.</p>
+              <p>People with impaired <a href="#dfn-executive-function">executive function</a> or memory need to have all the consequences presented in an orderly form to be able to make an informed decision. When charges are not clear, the consent of the transaction is unclear.</p>
               <p>It also can take much longer for users with disabilities to go through the process of making a purchase. If a person has spent hours making an online purchase, it is much more difficult and upsetting to find out that they cannot afford it. They will often blame themselves for not understanding the price and may experience a loss of confidence. They may stop trusting themselves with online, day-to-day activities.</p>
-              <p>For example, a person who has challenges with executive function may be trying to order a plane ticket, and not realize that there are extra fees not quoted in the original price, such as taxes, international fees, baggage fees, etc. They may spend hours booking a holiday only to find that they cannot afford it. Alternatively, sometimes they end up purchasing something they cannot afford. And even if they have completed this process in the past, they may not be not able to bring their experience into future purchases to anticipate the final price. The result is the user loses confidence in their ability to independently purchase a holiday online, may have incurred a debt they are unable to pay, may not attempt again, or only with the help of a hired professional (e.g. travel agent or assistant).</p>
+              <p>For example, a person who has challenges with <a href="#dfn-executive-function">executive function</a> may be trying to order a plane ticket, and not realize that there are extra fees not quoted in the original price, such as taxes, international fees, baggage fees, etc. They may spend hours booking a holiday only to find that they cannot afford it. Alternatively, sometimes they end up purchasing something they cannot afford. And even if they have completed this process in the past, they may not be not able to bring their experience into future purchases to anticipate the final price. The result is the user loses confidence in their ability to independently purchase a holiday online, may have incurred a debt they are unable to pay, may not attempt again, or only with the help of a hired professional (e.g. travel agent or assistant).</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
 
             <li>Clearly stated charges. Users are aware of all charges  and can make an informed decision when they decide to purchase an item and put it in a shopping cart. </li>
@@ -1906,7 +1909,7 @@
             <li>Clearly stated of ranges of possible charges. For items with shipping charges that vary, list the range of shipping charges and the issues that change the rate, along with a link to where more details can be found. For example, weight and speed of shipping may impact your shipping fees which can be between $4 and $400 depending on location.</li>
             <li>There are no surprise conditions.</li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
             <ol>
             <li>Final transactions that include new charges or hidden fees, that result in higher-than-expected total charges.</li>
@@ -1917,11 +1920,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Design Forms to Prevent Mistakes</h3>
+        <h3>Design Forms to Prevent Mistakes (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need an interface that helps me avoid mistakes.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Choose a form design that reduces the chance that the user will make a mistake. This includes:</p>
           <ul>
           <li>Requiring the user to enter as little information as possible.</li>
@@ -1950,7 +1953,7 @@
               user.
               <ul>
                 <li>
-                  For example, "�Did you mean the first of February (01/02) or
+                  For example, "Did you mean the first of February (01/02) or
                   the second of January (02/01)?"
                 </li>
               </ul>
@@ -1978,7 +1981,7 @@
           </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
           <p>Designs that make mistakes less likely. For example: </p>
           <ul>
             <li>
@@ -1990,7 +1993,7 @@
               explanation if the user attempts to do so.
             </li>
           </ul>
-                <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <p>Designs that make mistakes more likely. For example: </p>
           <ul>
@@ -2010,11 +2013,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Make it Easy to Undo Form Errors</h3>
+        <h3>Make it Easy to Undo Form Errors (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to check my work and go back without losing the work I have just done.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-undo" aria-label="Undo User Story">Undo</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#undo-user-story" aria-label="Undo User Story">Undo</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Always allow the user to check their work and correct any mistakes.
           Once the user has fixed their mistake it should be easy to get back to
@@ -2124,7 +2127,7 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-       <p><span class="use"> </span><strong> Use:</strong></p>
+       <p><span class="use"></span><strong>Use:</strong></p>
           <ul>
             <li>
               A summary provided before submitting important information. It allows the user to correct information and return to the summary with a single click.
@@ -2133,7 +2136,7 @@
               Clickable breadcrumbs that allow the user to see the previous steps, go back, and change them.
             </li>
           </ul>
-                 <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                 <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <ul>
             <li>
@@ -2143,31 +2146,31 @@
       </section></section>
 
 	  <section>
-        <h3>Pattern: Use Clear Visible Labels</h3>
+        <h3>Use Clear Visible Labels (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need clear labels, step-by-step instructions and clear error messages.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
       <p>Use clear labels. Labels should:</p>
-			<ul><li>Use common words and easy to understand language,</li>
+			<ul><li>Use common words and <a href="#dfn-easy-to-understand-language">easy to understand language</a>,</li>
 			<li>Be visible and next to the relevant control, and </li>
 			<li>Be readable by assistive technologies, including those used by people with cognitive and learning disabilities.</li>
 			</ul>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
-        			<p>When labels are missing or unclear, users often do not know that the feature is available or what the control is. Although many users can guess what a control is for users with cognitive and learning disabilities with impaired memory or executive function are less likely to be able to remember the design pattern or work out what it is. A clear label that uses familiar terms and is located next to the control, helps people with cognitive and learning disabilities.</p>
+        			<p>When labels are missing or unclear, users often do not know that the feature is available or what the control is. Although many users can guess what a control is for users with cognitive and learning disabilities with impaired memory or <a href="#dfn-executive-function">executive function</a> are less likely to be able to remember the design pattern or work out what it is. A clear label that uses familiar terms and is located next to the control, helps people with cognitive and learning disabilities.</p>
               <p>Similarly, if a label is not next to a control it is confusing for some users. When a label cannot be next to a control, there should be clear visual indicators that visibly and unambiguously associate the label with the control. This will need user testing with users who have learning and cognitive and learning disabilities to ensure it is usable.</p>
-              <p>For example, a user living with early stage dementia is using an application. Some controls do not have visual labels. A caregiver shows them what the control is for and they can use the application. The next day they try to use it again, but cannot remember what the control is for. This application is not usable for them.</p>
+              <p>For example, a user living with <a href="#dfn-early-stage-dementia">early stage dementia</a> is using an application. Some controls do not have visual labels. A caregiver shows them what the control is for and they can use the application. The next day they try to use it again, but cannot remember what the control is for. This application is not usable for them.</p>
               <p>In another example, the label disappears when the focus is removed. The user cannot remember what the control is and does not know how to make it reappear.</p>
               <p>Labels need to be visible, readable by AT, and be nearby the labeled content</p>
 
           </section><section><h5 class="coga-5">More Details</h5>
           <p>
-            Many people with learning and cognitive and learning disabilities use web extension and simple text-to-speech. These assistive technologies often do not read [WAI-ARIA] or titles. Until that changes, or an extension displays them, labels should not rely on these attributes for people with cognitive and learning disabilities.
+            Many people with learning and cognitive and learning disabilities use web extension and simple text-to-speech. These assistive technologies often do not read WAI-ARIA[[wai-aria-1.2]] or titles. Until that changes, or an extension displays them, labels should not rely on these attributes for people with cognitive and learning disabilities.
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
             <li>Visible labels that use simple common words and are next to the control. For example:
             <ul>
@@ -2175,7 +2178,7 @@
             </ul>
             </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>Hidden labels or labels that use uncommon words that are not easy to understand. It is unclear what action is needed. For example:
             <ul>
@@ -2187,11 +2190,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Use Clear Step-by-step Instructions</h3>
+        <h3>Use Clear Step-by-step Instructions (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need clear labels, step-by-step instructions and clear error messages, so I know exactly what to do.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Write clear instructions that are:</p>
         <ul>
           <li>located before, or next to, the field or activity</li>
@@ -2222,7 +2225,7 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
             <li>Clear and easy to understand instructions. For example:
             <ul>
@@ -2232,7 +2235,7 @@
             </li>
             </ol>
 
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>No clear instructions for complex tasks. For example:
             <ul>
@@ -2244,25 +2247,25 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Accept different input formats </h3>
+        <h3>Accept different input formats (Pattern) </h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need inputs to accept different formats and not mark them as mistakes.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
          <p>
           Accept all format variations in text inputs for values such as currency, time zone, locale, address or credit card number.
         </p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>
-            Forgiving form entry processes help the user fill out forms, without an overwhelming amount of errors. They can avoid asking for help when errors cause them problems. This reduces frustration while enhancing the user�'s autonomy and independence.
+            Forgiving form entry processes help the user fill out forms, without an overwhelming amount of errors. They can avoid asking for help when errors cause them problems. This reduces frustration while enhancing the userâ's autonomy and independence.
           </p>
 
-		      <p>This benefits anybody with a learning and cognitive disability or age appropriate forgetfulness. It will also help anyone who is used to a different format. </p>
-          <p>For example, a user with age appropriate forgetfulness enters their  phone number with hyphens inserted. They receive an error message, because the system does not accept that format. They wonder if they have forgotten their phone number or made a different mistake. They stop trying to use the form.</p>
+		      <p>This benefits anybody with a learning and cognitive disability or <a href="#dfn-age-related-memory-loss">age appropriate forgetfulness</a>. It will also help anyone who is used to a different format. </p>
+          <p>For example, a user with <a href="#dfn-age-related-memory-loss">age appropriate forgetfulness</a> enters their  phone number with hyphens inserted. They receive an error message, because the system does not accept that format. They wonder if they have forgotten their phone number or made a different mistake. They stop trying to use the form.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Platform facilities for flexible input types and validation.</li>
               <li>Research and support for different formats that might be entered, including international variations.</li>
@@ -2276,7 +2279,7 @@
               </ul>
               </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Restricting entries to arbitrary lengths.</li>
               <li>Insisting on specific separator characters if they are not required and can be ignored.</li>
@@ -2292,10 +2295,10 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Avoid Data Loss and "Timeouts"</h3>
+        <h3>Avoid Data Loss and "Timeouts" (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need time to complete my work. I do not want a session to timeout while I try to find the information needed, such as my postal/zip code or social security number.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
         </section><section><h5 class="coga-5">What to do</h5>
         <p>
           Avoid timeouts and let the user save their  work as they go.
@@ -2324,7 +2327,7 @@
           <p>
             Users' cognitive skills may diminish as they get tired. They then must stop the task for that day. When users know that their data won't be lost, they can recover from mental fatigue and return to successfully complete the task.
           </p>
-		      <p>It is important to note that many people need time to read the "�timeout"� notice. Often, the session ends before the user has finished reading about how to extend the time. If the user is looking up information they will not see the timeout notice. </p>
+		      <p>It is important to note that many people need time to read the "timeout" notice. Often, the session ends before the user has finished reading about how to extend the time. If the user is looking up information they will not see the timeout notice. </p>
 
           </section><section><h5 class="coga-5">More Details</h5>
           <p>
@@ -2335,7 +2338,7 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
               <ol>
                 <li>Unlimited time, when possible.</li>
                 <li>Timeouts that users with learning and cognitive disabilities find it easy to avoid. For example: At the start of the task the user is told that the have a day to complete the task. They have an option to set it to longer. </li>
@@ -2346,7 +2349,7 @@
                   A website with sensitive information uses a client-side time limit to help protect users who may step away from their computers. When the user logs in again all the work is still in place back. The user is warned ahead of time how long they have for inactive sessions and is told that their data will not be lost.</li>
                 </li>
               </ol>
-              <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+              <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
                 <li>System timeouts that are not necessary for security.</li>
                 <li>System timeouts without warning the user at the start of the process.</li>
@@ -2356,10 +2359,10 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Provide Feedback</h3>
+        <h3>Provide Feedback (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need rapid feedback or visual cues to indicate an event was successfully triggered. For example, I need to know when an email has been sent, otherwise it looks as if it has just disappeared.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
         <p>
           For each step in a process let the user know of its status and if it
           was successfully completed.
@@ -2416,10 +2419,10 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
             <li>
-            Visual state feedback. Use CSS and [WAI-ARIA] states such as aria-pressed and aria-selected, to gives a visual change that shows the change in state. For example: Buttons and tabs with a visualy clear state when selected.
+            Visual state feedback. Use CSS and WAI-ARIA [[wai-aria-1.2]] states such as aria-pressed and aria-selected, to gives a visual change that shows the change in state. For example: Buttons and tabs with a visualy clear state when selected.
             </li>
              <li>Messages that let the user know if a task is completed. For example:
              <ul>
@@ -2432,7 +2435,7 @@
               show that a new password is set.
             </li></ul></li>
           </ol>
-        <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+        <p><span class="avoid"></span><strong>Avoid:</strong></p>
           <ol>
             <li>
                State changes without visual feedback.</li>
@@ -2442,11 +2445,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Help the user stay safe</h3>
+        <h3>Help the user stay safe (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to know I am safe and secure when using a website, especially if providing information or communicating with others.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Keep the user safe. This includes:</p>
         <ul>
           <li>Understand risks for people with learning and cognitive disabilities when providing personal information or communicating with others.</li>
@@ -2465,16 +2468,16 @@
 
           </section><section><h5 class="coga-5">Examples</h5>
 
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Alternative login options that have been tested with people who have learning or cognitive disabilities that are approved security techniques, in your jurisdiction, for sensitive data.</li>
               <li>Talking to a wide range of people with learning and cognitive disabilities, to understand the risks and how they may relate to personal information.</li>
               <li>COGA persona and use case in the research, development and requirements phases.</li>
               <li>Industry best practices for storing and securing user information.</li>
-              <li>Consent forms in easy to understand language that have been tested with people with learning and cognitive disabilities to ensure they understand the risks.</li>
-              <li>Warnings to users each time personal information may be given, in easy to understand language.</li>
+              <li>Consent forms in <a href="#dfn-easy-to-understand-language">easy to understand language</a> that have been tested with people with learning and cognitive disabilities to ensure they understand the risks.</li>
+              <li>Warnings to users each time personal information may be given, in <a href="#dfn-easy-to-understand-language">easy to understand language</a>.</li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Users sharing information without understanding all the risks.</li>
               <li>Hidden and confusing information about risks.</li>
@@ -2484,11 +2487,11 @@
       </section></section>
 
     <section>
-        <h3>Pattern: Use Familiar Metrics and Units</h3>
+        <h3>Use Familiar Metrics and Units (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need interfaces to use metrics I know, and that are common in my location (such as feet or meters) otherwise I get confused. I do not always know what metric they are talking about or notice that the number looks wrong.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-assistance-and-support" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#assistance-and-support-user-story" aria-label="Assistance and Support User Story">Assistance and Support</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Provide metrics in units that users will be familiar with.</p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
@@ -2502,7 +2505,7 @@
           <p>Provide a mechanism to select a different set of metrics that are more meaningful to the user, or provide common alternatives in the text</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
               <li>Metrics in different units that different users understand. For example:
               <ul>
@@ -2510,7 +2513,7 @@
               </ul>
             </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Only one unit for metrics. For example:
               <ul>
@@ -2521,7 +2524,7 @@
       </section>
 	</section></section>
 
-    <section>
+    <section class="objective-5">
       <h2>
         Objective 5: Help Users Focus
       </h2>
@@ -2531,11 +2534,11 @@
           <p>Also, help users maintain focus on their task by telling them what information they may need to prepare at the beginning of the task, so that they can collect all required information before starting.</p>
 
       <section>
-        <h3>Pattern: Limit Interruptions</h3>
+        <h3>Limit Interruptions (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need tasks to not have distractions.</p></blockquote>
-         <p>Related User Story: <a href="#user-story-distractions" aria-label="Distractions User Story">Distractions</a>.</p>
-         </section><section><h5 class="coga-5">What to Do</h5>
+         <p>Related User Story: <a href="#distractions-user-story" aria-label="Distractions User Story">Distractions</a>.</p>
+         </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Avoid interruptions. This includes:</p>
               <ul>
               <li>Providing an easy way to control interruptions, reminders, and changes in content unless they are started by the user or involve an emergency.</li>
@@ -2545,7 +2548,7 @@
 
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>
-            Interruptions stop people with memory or attention impairments from completing their task. This can include individuals with Dementia, those that have had a stroke or brain injury, and those taking medications with side effects impacting memory or attention. Certain types of interruptions or a certain number may cause them to stop, even if the task is very important. Interruptions can include sounds, content that visually appears or changes (such as advertisements on a page). Interruptions can be as simple as text notifications about the presence of new changes while working in a shared online document.
+            Interruptions stop people with memory or attention impairments from completing their task. This can include individuals with Dementia, those that have had a stroke or <a href="#dfn-brain-injury">brain injury</a>, and those taking medications with side effects impacting memory or attention. Certain types of interruptions or a certain number may cause them to stop, even if the task is very important. Interruptions can include sounds, content that visually appears or changes (such as advertisements on a page). Interruptions can be as simple as text notifications about the presence of new changes while working in a shared online document.
           </p>
             <p>A site will work best for those with memory or attention challenges
             if they have:
@@ -2569,12 +2572,12 @@
           </p>
           <p>Some people are sensitive to noise and can easily become overwhelmed by too many stimuli. </p>
 		  <p>
-			  Sometimes, noises and different types of content may adversely affect mental health. For example, noises, distractions or distressing content may make the user more anxious or possibly trigger post-traumatic stress disorder (PTSD). There has also been research to suggest that too many interruptions and use of social media may aggravate depression and difficulty focusing. Allowing users to control this content could help them be more productive online.
+			  Sometimes, noises and different types of content may adversely affect <a href="#dfn-mental-health">mental health</a>. For example, noises, distractions or distressing content may make the user more anxious or possibly trigger post-traumatic stress disorder (PTSD). There has also been research to suggest that too many interruptions and use of social media may aggravate depression and difficulty focusing. Allowing users to control this content could help them be more productive online.
           </p>
           <p>
             Where standard techniques exist to remove or control distractions, they should be used.
           </p>
-		  <p>For example, a person with traumatic brain injury is filling out their taxes online.
+		  <p>For example, a person with traumatic <a href="#dfn-brain-injury">brain injury</a> is filling out their taxes online.
 		  The social media application pings them with notifications. They try to turn notifications
 		  off and then they try to turn off the application, but it is too complex. They are unable
 		  to submit their taxes without help. </p>
@@ -2589,7 +2592,7 @@
             <li>An application lets the user decide how they want to be notified about reminders and emails. Users can choose visual reminders, sounds, or none. They can flag users as essential contacts who can interrupt in most cases. These settings are easy to find from every screen. For some users, not having any notifications enables them to focus on a task and then go to their emails or calendar when the task is completed.</li>
             </ul></li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>Distracting content that is hard to turn off, or cannot be turned off. For example:
             <ul>
@@ -2604,21 +2607,21 @@
 
       <section>
         <h3>
-          Pattern: Make Short Critical Paths
+          Make Short Critical Paths (Pattern)
         </h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to be able to find features and content easily.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-distractions" aria-label="Distractions User Story">Distractions</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#distractions-user-story" aria-label="Distractions User Story">Distractions</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Streamline processes and workflows so that they include only the minimally
 		necessary steps. Separate out optional steps that are supplemental but not required. Do not
 		require the user to go through optional steps.</p>
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>Streamlining processes and workflows reduces distractions, mistakes, and mental fatigue. Using short critical paths increases the chance that users with cognitive and learning disabilities can successfully and accurately complete a process or task and navigate a workflow.</p>
-          <p>For example, a user with early stage dementia is trying to buy a new phone. Before they can pay, steps are added offering them headphones and other items. They become overwhelmed and confused. They leave the site without buying the phone.</p>
+          <p>For example, a user with <a href="#dfn-early-stage-dementia">early stage dementia</a> is trying to buy a new phone. Before they can pay, steps are added offering them headphones and other items. They become overwhelmed and confused. They leave the site without buying the phone.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-            <p><span class="use"> </span><strong> Use:</strong></p>
+            <p><span class="use"></span><strong>Use:</strong></p>
               <ol>
               <li>Processes that only require necessary steps.
               <ul>
@@ -2645,7 +2648,7 @@
               </ul>
               </li>
               </ol>
-              <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+              <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
               <li>Adding unnecessary steps. For example, the steps included in the online process to buy movie tickets are:
               <ul>
@@ -2676,23 +2679,23 @@
 	   </section></section>
 
       <section>
-        <h3>Pattern: Avoid Too Much Content</h3>
+        <h3>Avoid Too Much Content (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to find it easy to identify the content that I need, and do not need. Information I need to know and important information stands out, or is the first thing I read and does not get lost in the noise of less important information.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-distractions" aria-label="Distractions Story">Findable</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#distractions-user-story" aria-label="Distractions Story">Findable</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Keep the interface simple. Provide users with five or less main choices on each screen and remove unnecessary content. This can be provided via a simplified version, as an alternative that is generated in real time from the same code base as the main content.
         </p>
         <p>
-          Extra links that do not relate to the main purpose of the page should be limited to the footer section. Extra choices can also be hidden under a "�more"� link or other clear and descriptive titles.
+          Extra links that do not relate to the main purpose of the page should be limited to the footer section. Extra choices can also be hidden under a "more" link or other clear and descriptive titles.
         </p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>
             Busy pages, too much text, too many images and too much other content can cause cognitive overload, anxiety and loss of focus. Keeping content down to a small number of important points reduces the clutter, calms the user and allows for better understanding while aiding memory. For example, it can help  slow readers or  those with a short attention span, who may leave the page if it appears complex
           </p>
-		      <p>Simplified content and a consistent simple design helps reduce cognitive overload and decreases stress and mental fatigue. For example, a person with early stage dementia goes to their doctor's application. There are five choices on the screen: appointments, ask your doctor a question, test results, approvals and more. Each option has an icon, clear text and is separated by whitespace. In two clicks they have asked their doctor their question. They can easily select what they need without asking for help. More options are also available if they swipe left. However, they are unlikely to do so.</p>
+		      <p>Simplified content and a consistent simple design helps reduce cognitive overload and decreases stress and mental fatigue. For example, a person with <a href="#dfn-early-stage-dementia">early stage dementia</a> goes to their doctor's application. There are five choices on the screen: appointments, ask your doctor a question, test results, approvals and more. Each option has an icon, clear text and is separated by whitespace. In two clicks they have asked their doctor their question. They can easily select what they need without asking for help. More options are also available if they swipe left. However, they are unlikely to do so.</p>
 
           </section><section><h5 class="coga-5">More Details</h5>
           <p>
@@ -2716,7 +2719,7 @@
 
           </section><section><h5 class="coga-5">Examples</h5>
 
-          <p><span class="use"> </span><strong> Use:</strong></p>
+          <p><span class="use"></span><strong>Use:</strong></p>
               <ol>
               <li>A simple interface. The main feature is much bigger than anything else. For example:
               <ul>
@@ -2724,7 +2727,7 @@
               </ul></li>
               </ol>
 
-              <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+              <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
               <li>Pages with unnecessary content. For example:
               <ul>
@@ -2736,12 +2739,12 @@
 
 	  <section>
         <h3>
-          Pattern: Provide Information So a User Can Complete and Prepare for a Task
+          Provide Information So a User Can Complete and Prepare for a Task (Pattern)
         </h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to know how to start a task, and what is involved.</p></blockquote>
-            <p>Related User Story: <a href="#user-story-distractions" aria-label="Distractions Story">Distractions</a>.</p>
-            </section><section><h5 class="coga-5">What to Do</h5>
+            <p>Related User Story: <a href="#distractions-user-story" aria-label="Distractions Story">Distractions</a>.</p>
+            </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Emphasize the start of important tasks.</p>
 		<p>Before a user performs a task consisting of multiple steps, ensure they have an estimate of the
 		amount of effort required to complete the task. This should include:</p>
@@ -2753,7 +2756,7 @@
 
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>
-            Some users find distractions difficult especially when the distractions cause them to switch focus mid-task and subsequently return where they left off. For example, a website may have a large arrow pointing the way to the "�book here"� link. The arrow emphasizes the start of the booking task, and will help users know when they have started the task.
+            Some users find distractions difficult especially when the distractions cause them to switch focus mid-task and subsequently return where they left off. For example, a website may have a large arrow pointing the way to the "book here" link. The arrow emphasizes the start of the booking task, and will help users know when they have started the task.
           </p>
           <p>
             Often people need to manage their times of concentration so they can focus without interruptions. Prior advice on the time a task takes, it's complexity or working memory load enables them to better prepare and complete it without unintentional abandonment. The list of required resources before starting the task, along and the number steps left until completion of the task, will help users avoid failures.
@@ -2765,7 +2768,7 @@
 		  </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-    <p><span class="use"> </span><strong> Use:</strong></p>
+    <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
             <li>Visual cues when a user starts a task.</li>
             <li>An overview of the process including the time it might take, and any resources needed. For example:
@@ -2774,7 +2777,7 @@
             </ul>
             </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>Missing out important details about what the user may need. For example:
             <ul>
@@ -2785,7 +2788,7 @@
       </section>
     </section></section>
 
-    <section>
+    <section class="objective-6">
       <h2>Objective 6: Ensure Processes Do Not Rely on Memory</h2>
         <p>Memory barriers stop many users from using products or accessing help or content.</p>
         <p>People with any impairment that affects memory or language can find it difficult or impossible to overcome memory barriers.</p>
@@ -2801,13 +2804,12 @@
          <p>Allow users access to content, services or help, without using processes that rely on memory. Make sure there is an easier option for people who need it.</p>
       <section>
         <h3>
-          Pattern: Provide a Login that Does Not Rely on Memory or Other Cognitive
-          Skills
+          Provide a Login that Does Not Rely on Memory or Other Cognitive Skills (Pattern)
         </h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to be able to use a site without remembering or transcribing passwords and usernames.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-accessible-authentication" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#accessible-authentication-user-story" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Users can login, register and reset credentials, without having more cognitive abilities then they need to use a simple web page. They do not have to:</p>
             <ul>
             <li>memorize character strings</li>
@@ -2820,7 +2822,7 @@
 
           </section><section><h5 class="coga-5">How it Helps</h5>
           <p>
-            People with memory impairments often forget their passwords and are not able to login. Their solutions often are only sometimes helpful and have security risks:
+            People with <a href="#dfn-memory-impairments">memory impairments</a> often forget their passwords and are not able to login. Their solutions often are only sometimes helpful and have security risks:
           </p>
           <ul>
             <li>
@@ -2851,7 +2853,7 @@
           <p>There are many ways to meet this design pattern:</p>
             <ul>
             <li>Use <a href="https://www.w3.org/TR/webauthn/">Web Authentication: An
-<abbr title="application programming interface">API</abbr> [webauthn-2] for accessing Public Key Credentials</a> to support inclusive alternatives that do not rely on typical cognitive abilities. For example, hardware authentication devices, smartcard or FIDO.</li>
+<abbr title="application programming interface">API</abbr> for accessing Public Key Credentials</a> [[webauthn-2]] to support inclusive alternatives that do not rely on typical cognitive abilities. For example, hardware authentication devices, smartcard or FIDO.</li>
             <li>Provide automatic user authentication based upon the use of a trusted device (to which the user has already logged in with their own identity). The user does not have to transcribe characters, but may have to press a link to identify they have the device.</li>
             <li>Allow a biometrics option.</li>
             <li>Use a system the user is already logged into via third-party authentication services (e.g., OAuth etc.).</li>
@@ -2874,20 +2876,17 @@
 
           </section><section><h5 class="coga-5">Examples</h5>
 
-   <p><span class="use"> </span><strong> Use:</strong></p>
+   <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
             <li>
-              <a href="https://www.w3.org/TR/webauthn/"
-                >Web Authentication: An
-<abbr title="application programming interface">API</abbr> [webauthn-2] for accessing Public Key
-                Credentials.</a
-              >
+              <a href="https://www.w3.org/TR/webauthn/">Web Authentication: An
+              <abbr title="application programming interface">API</abbr> for accessing Public Key Credentials</a> [[webauthn-2]].
             </li>
             <li>Single Sign-on (SSO) that allow users to access many sites with a single login (federated login).</li>
             <li>Two step authentication with Bluetooth links (no coping).</li>
             <li>Quick Response Codes (QR Code).</li>
           </ol>
-                    <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                    <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
           <ol>
             <li>Using two-step authentication that requires copying.</li>
@@ -2896,46 +2895,47 @@
       </section></section>
 
 	  <section>
-        <h3>Pattern: Allow the User a Simple, Single Step, Login</h3>
+        <h3>Allow the User a Simple, Single Step, Login (Pattern)</h3>
         <blockquote><p>I need the login process to be simple, and not multi-step.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-accessible-authentication" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
-        <section><h5 class="coga-5">What to Do</h5>
+
+        <p>Related User Story: <a href="#accessible-authentication-user-story" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
+        <section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Provide a simple, single-step alternative for logins</p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
- 		         <p>A simple login allows people with impaired executive function or impaired memory to use applications. This is especially important for users who become confused or overwhelmed with multi--step processes. For example, a user with traumatic brain injury wishes to use a site for online banking. They may have put their finger on a fingerprint scanner to authenticate who they are. Other examples include some third party logins.</p>
+ 		         <p>A simple login allows people with impaired <a href="#dfn-executive-function">executive function</a> or impaired memory to use applications. This is especially important for users who become confused or overwhelmed with multi--step processes. For example, a user with traumatic <a href="#dfn-brain-injury">brain injury</a> wishes to use a site for online banking. They may have put their finger on a fingerprint scanner to authenticate who they are. Other examples include some third party logins.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
 <p><span class="use"> </span><strong>Use:</strong></p>
             <ol>
             <li>Easy third party logins as an option.</li>
-            <li>The web authentication protocol [webauthn-2] with a single step method that matches your security needs.</li>
+            <li>The web authentication protocol [[webauthn-2]] with a single step method that matches your security needs.</li>
             </ol>
-            <p><span class="aviod"> </span><strong>Avoid:</strong></p>
+            <p><span class="avoid"> </span><strong>Avoid:</strong></p>
             <ol>
             <li>All login methods involving multiple steps.</li>
             </ol>
       </section></section>
 
     <section>
-        <h3>Pattern: Provide a Login Alternative with Less Words</h3>
+        <h3>Provide a Login Alternative with Less Words (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need a login process I can use that does not rely on a lot of words (as someone with a severe language impairment).</p></blockquote>
-        <p>Related User Story: <a href="#user-story-accessible-authentication" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#accessible-authentication-user-story" aria-label="Accessible Authentication User Story">Accessible Authentication</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Provide at least one login alternative that does not require reading or writing a lot of words</p>
 
           </section><section><h5 class="coga-5">How it Helps</h5>
  		<p>This pattern allows people with language and communication disabilities to login without being overwhelmed by blocks of text </p>
-		<p>For example, someone with a severe language impairment using an <abbr title="Alternative and Augmentative Communication System">AAC</abbr> device (Alternative and Augmentative Communication System) wants to send a message to their doctor. They can press the login with the icon they know and send a message without having to read text.</p>
+		<p>For example, someone with a severe language impairment using an <abbr title="Alternative and Augmentative Communication System">AAC</abbr> device (<a href="#dfn-AAC">Alternative and Augmentative Communication System</a>) wants to send a message to their doctor. They can press the login with the icon they know and send a message without having to read text.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-    <p><span class="use"> </span><strong> Use:</strong></p>
+    <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
             <li>Third party logins which have well known icons.</li>
-            <li>The web authentication protocol [webauthn-2] along with an easy login option.</li>
+            <li>The web authentication protocol [[webauthn-2]] along with an easy login option.</li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>Logins that requires answering security questions.</li>
             <li>Logins without a simple, word free, login option or alternative.</li>
@@ -2943,11 +2943,11 @@
     </section></section>
 
        <section>
-        <h3>Pattern: Let Users Avoid Navigating Voice Menus</h3>
+        <h3>Let Users Avoid Navigating Voice Menus (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p> I need to get human help, without going through a complex menu system.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-voice-menus" aria-label="Voice Menus User Story">Voice Menus</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#voice-menus-user-story" aria-label="Voice Menus User Story">Voice Menus</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Let people easily reach a human who can help. Do not require navigating menu systems to reach a human. </p>
 		<p>Design helpful voice menus by:</p>
             <ul>
@@ -2957,7 +2957,7 @@
                 <li>Using words normally used by people with a wide range of cognitive and learning disabilities.</li>
                 <li>Waiting for a slow speaker to respond.</li>
                 <li>Allowing for a quiet speaker, repetition and stutters.</li>
-                <li>Supporting forgetfulness and memory impairments.</li>
+                <li>Supporting forgetfulness and <a href="#dfn-memory-impairments">memory impairments</a>.</li>
                 <li>Allow for easy error recovery.</li>
                 <li>Following usability best practices.</li>
             </ul>
@@ -2984,7 +2984,7 @@
             <li>Alternative routes, such as web menus, may be provided but are also complex. They are therefore not helpful.</li>
           </ul>
           <p>
-            The 0 digit, the word '�help'� or other culturally appropriate term, should be reserved for reaching a person. Consistently set the first option for each menu to: "to wait for a person who can help you press 0". This can help everyone reach the support they need.
+            The 0 digit, the word 'help' or other culturally appropriate term, should be reserved for reaching a person. Consistently set the first option for each menu to: "to wait for a person who can help you press 0". This can help everyone reach the support they need.
           </p>
 
 		      <p>Test any system with a wide range of users with different learning and cognitive disabilities. Involving a wide range of users has made many voice systems accessible to the extent that they become an aid people with cognitive and learning disabilities. </p>
@@ -3018,7 +3018,7 @@
             <p><strong>Considerations for Speech Recognition</strong></p>
 
             <ul>
-            <li>For speech recognition based systems, standards for voice commands for many languages exists and should be used where possible, such as the ETSI standard [ETSI 202 076]. Keep in mind that expecting people to learn more than a few commands places a cognitive burden on the user.</li>
+            <li>For speech recognition based systems, standards for voice commands for many languages exists and should be used where possible, such as the ETSI standard <a href="https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf">ETSI 202 076</a>. Keep in mind that expecting people to learn more than a few commands places a cognitive burden on the user.</li>
             <li>Natural language understanding systems allow users to state their requests in their own words. This can be useful for users who have difficulty remembering menu options, or who have difficulty mapping the offered menu options to their goals. However, natural language interfaces can be difficult to use for users who have difficulty producing speech or language. Directed dialog (menu-based) fallback or transfer to an agent should be provided. Such fallbacks should be easy to use and conform to this document.</li>
             </ul>
             <p>Follow requirements of legislation</p>
@@ -3032,7 +3032,7 @@
 
 
           </section><section><h5 class="coga-5">Examples</h5>
-  <p><span class="use"> </span><strong> Use:</strong></p>
+  <p><span class="use"></span><strong>Use:</strong></p>
             <ul>
                 <li>User interaction dialogs in which the first option takes you directly to a human. For example: "To reach for a person who can help you, press 0 or say help".</li>
                 <li>Error recovery from each point, allowing the user to fix errors easily.</li>
@@ -3043,7 +3043,7 @@
                 <li>State the option before giving them the key to press or term to use.</li>
                 <li>Advisory technique: Cueing users to record something that may be useful at a later point, and give them time to do so.</li>
             </ul>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ul>
               <li>Long menu systems that make it hard to find a person.</li>
               <li>Unclear error recovery.</li>
@@ -3055,11 +3055,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Do Not Rely on Users Calculations or Memorizing Information</h3>
+        <h3>Do Not Rely on Users Calculations or Memorizing Information (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need navigation and processes that do not rely on memory.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-previous-steps" aria-label="Previous Steps User Story.">Previous Steps</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#remembering-from-previous-steps-user-story" aria-label="Previous Steps User Story.">Previous Steps</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
 		        <p>Create a process that does not require:</p>
             <ul>
             <li>remembering digits to select for a short time</li>
@@ -3067,7 +3067,7 @@
             <li>copying</li>
             <li>clear speech or fast responses</li>
             <li>memorizing characters, strings or pin numbers</li>
-            <li>using executive function to work out the category of the service they need</li>
+            <li>using <a href="#dfn-executive-function">executive function</a> to work out the category of the service they need</li>
             <li>recalling information over multiple steps. When going through multiple steps, each step in a process must contain the information needed to allow a user to proceed. They must not rely on memory from prior steps.</li>
             <li>Instructions and labels should be located before a call to action or activation mechanism.</li>
             </ul>
@@ -3077,7 +3077,7 @@
             <p>Often content has barriers which prevent users with cognitive and learning disabilities from completing a step or process, and as a result, prevents them from achieving whatever they wished to achieve.</p>
             <p>To increase security when making a purchase, sometimes puzzles or calculations are required. For example: To finalize a purchase, a user is asked to enter the result of multiplying positions 1 and 2 of a number. This type of statement can not be understood by some people with cognitive and learning disabilities. Both security and cognitive accessibility should be guaranteed.</p>
             <p>Many users have an impaired working memory. They can not remember many details at the same time. However, systems, such as dialog menus, rely on all users using working memory to make choices. They expect the user to remember several choices and to select one choice, whether by speaking or through a key press. The user needs to hold multiple pieces of transitory information in the mind.</p>
-            <p>Users with an impaired executive function may need more time to complete a task. But there can also be problems if the system response is too slow. For example some people may need longer to compare similar options such as "billing", "accounts", "sales" and decide which is the service they need. Using clear language will also help.</p>
+            <p>Users with an impaired <a href="#dfn-executive-function">executive function</a> may need more time to complete a task. But there can also be problems if the system response is too slow. For example some people may need longer to compare similar options such as "billing", "accounts", "sales" and decide which is the service they need. Using clear language will also help.</p>
 
           </section><section><h5 class="coga-5">More Details</h5>
           <p>Good practice that reduces the reliance on memory skills include:</p>
@@ -3095,7 +3095,7 @@
             <li>Listen for a quiet or hesitant speaker.</li>
             <li>Allow simple, one word responses</li>
             <li>State the option before the number to command to be selected.</li>
-            <li>Support forgetfulness and memory impairments.</li>
+            <li>Support forgetfulness and <a href="#dfn-memory-impairments">memory impairments</a>.</li>
             </ul>
 
             <p>Note that this is essential for critical systems such as health, finance, communication, water and government services.</p>
@@ -3103,7 +3103,7 @@
 
 
           </section><section><h5 class="coga-5">Examples</h5>
-      <p><span class="use"> </span><strong> Use:</strong></p>
+      <p><span class="use"></span><strong>Use:</strong></p>
           <p>Processes that do not rely on memory. For example:</p>
           <ul>
           <li>Using user interaction dialogs in which the first option "to wait for a person who can help you press 0 or say help".</li>
@@ -3111,7 +3111,7 @@
           <li>Good error recovery so that the user knows how to go back from any point.</li>
           <li>Advisory technique: Cue users to write something that may be useful at a later point, and give them time to do so.</li>
           </ul>
-          <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+          <p><span class="avoid"></span><strong>Avoid:</strong></p>
           <ol><li>Processes that rely on memory. For example:</li>
           <ul>
           <li>Requiring the user remember a code or a category from a previous step.</li>
@@ -3123,7 +3123,7 @@
     </section>
     </section>
 
-    <section>
+    <section class="objective-7">
       <h2>Objective 7: Provide Help and Support</h2>
       <p>Support different ways of understanding content. Provide extra help and support such as:</p>
       <ul>
@@ -3137,11 +3137,11 @@
       <p>Some applications depend on user data, such as smart cities. Data from users who can not use the system can be missing from data driven systems. The problem is worse when they can not even give feedback about their problems. They become invisible and their needs are not met.</p>
 
       <section>
-        <h3>Pattern: Provide Human Help</h3>
+        <h3>Provide Human Help (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to know how to get human help and can manage the process easily.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-help" aria-label="Help User Story">Help</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#help-user-story" aria-label="Help User Story">Help</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Many people rely on human help. When possible, there is human help available, and it is easy to use. This includes:</p>
             <ul>
             <li>Easy to find on each page and at each step of a process.</li>
@@ -3166,14 +3166,14 @@
 
           </section><section><h5 class="coga-5">Examples</h5>
 
-<p><span class="use"> </span><strong> Use:</strong></p>
+<p><span class="use"></span><strong>Use:</strong></p>
             <ol>
-            <li>A phone number, ideally with a feature to automatically call via an interoperable Voice over Internet Protocol (VoIP) specification</li>
+            <li>A phone number, ideally with a feature to automatically call via an interoperable <a href="https://en.wikipedia.org/wiki/Voice_over_IP">Voice over Internet Protocol (VoIP)</a> specification</li>
             <li>A number that goes directly to a human or an available standard to get human help for example, using the 0 digit on voice menu systems.</li>
-            <li>An email link using the 'mailto' protocol with prefilled 'to' and 'subject' fields. Note that this will not work on all platforms or mail clients.</li>
+            <li>An email link using the 'mailto[[mailto]]' protocol with prefilled 'to' and 'subject' fields. Note that this will not work on all platforms or mail clients.</li>
             <li>An option for live chat or video call help. Note: It must be fully accessible and easy to close new windows that open as part of live help functionality. Ensure live chats do not distract users from their task.</li>
             </ol>
-                      <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                      <p><span class="avoid"></span><strong>Avoid:</strong></p>
 
             <ol>
             <li>Long contact forms the user must fully complete to get human help.</li>
@@ -3184,16 +3184,16 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Provide Alternative Content for Complex Information and Tasks</h3>
+        <h3>Provide Alternative Content for Complex Information and Tasks (Pattern)</h3>
 
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need contextually-relevant graphs and pictures to supplement text.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-help" aria-label="Help User Story">Help</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#help-user-story" aria-label="Help User Story">Help</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>Provide content that helps users understand complex information. </p>
     		  <p>This should include redundant information for different user groups such as:</p>
     		  <ul>
-            <li>summaries of long documents and step-by-step information in easy to understand language</li>
+            <li>summaries of long documents and step-by-step information in <a href="#dfn-easy-to-understand-language">easy to understand language</a></li>
             <li>explanation of choices and any disadvantages</li>
             <li>tables and charts</li>
             <li>symbols that are familiar to the user</li>
@@ -3248,7 +3248,7 @@
                   Reinforce numbers with non-numerical concepts, e.g., Very
                   Cold, Cold, Cool, Mild, Warm, Hot, Very Hot
                 </li>
-                <li>Once it is mature you can also use personalization semantics to add non-numerical concepts. See [personalization-semantics].</li>
+                <li>Once it is mature you can also use personalization semantics to add non-numerical concepts. See [[personalization-semantics-1.0]].</li>
               </ul>
             </li>
             <li>
@@ -3303,7 +3303,7 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-<p><span class="use"> </span><strong> Use:</strong></p>            <ol>
+<p><span class="use"></span><strong>Use:</strong></p>            <ol>
             <li>The techniques in the "more details" section above for long documents, documents with multiple sections, complex information, and numeric information. For example:
             <ul>
             <li>The explanation of a medical procedure and success rate statistics is amplified through the use of an additional text aside, a diagram and a graph.</li>
@@ -3311,7 +3311,7 @@
             </ul>
             </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>Long documents without a good structure and summary.</li>
             <li>Complex information and numeric information without extra support. For example:
@@ -3323,11 +3323,11 @@
      </section></section>
 
 	  <section>
-        <h3>Pattern: Clearly State the Results and Disadvantages of Actions, Options, and Selections</h3>
+        <h3>Clearly State the Results and Disadvantages of Actions, Options, and Selections (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need support and explanations for any choices. The advantages or disadvantages are clear to me and I understand the effects of the choice I might make. </p></blockquote>
-        <p>Related User Story: <a href="#user-story-cognitive-stress" aria-label="Cognitive Stress Story">Cognitive Stress</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#cognitive-stress-user-story" aria-label="Cognitive Stress Story">Cognitive Stress</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           When presenting users with actions and selections, clearly explain the benefits, risks and consequences of each option. This includes any:</p>
 			<ul><li>changes from what the user asked for</li>
@@ -3351,7 +3351,7 @@
 		      <p>Whenever you ask the user to make a selection or take an action, consider whether there are any implied or hidden results that the user should be aware of. Clearly indicate those results within the user interface and confirm the user is aware of them.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-     <p><span class="use"> </span><strong> Use:</strong></p>
+     <p><span class="use"></span><strong>Use:</strong></p>
               <ol>
               <li>Clear lists of what is included and what is not included. For example:
               <ul>
@@ -3364,7 +3364,7 @@
               </ul>
               </li>
               </ol>
-              <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+              <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
               <li>Details that are not clear when the user selects an option.</li>
               <ul><li>For example: Meal options from an online menu have fun names. The meal contents, side items, allergy information and ability to customize each option is not visible until two steps later in the process. A customer must go several screens down on each item in order to make a decision.</li>
@@ -3376,11 +3376,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Provide Help for Forms and Non-standard Controls</h3>
+        <h3>Provide Help for Forms and Non-standard Controls (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need explanations for unusual controls in a form I find easy to use (such as a video or text).</p></blockquote>
-        <p>Related User Story: <a href="#user-story-task-management" aria-label="Task Management User Story">Task Management</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#task-management-user-story" aria-label="Task Management User Story">Task Management</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Provide help for any complex forms, particularly when there are
           multiple steps, unusual interactions, non-standard controls and
@@ -3393,13 +3393,13 @@
             Users often find forms and related tasks to be the most complex experience with websites. They can easily become confused, unsure, or even completely lost. Providing extra help can make the difference between being able to successfully complete a task and giving up. This is especially true if any part of the form is complex or requires nonstandard interactions.
           </p>
           <p>
-            Many standard form controls provide support automatically. For example, many fields can be automatically filled in with information using autocomplete or personalization semantics [personalization-semantics-1.0]. Then the user will not make mistakes filling it out.
+            Many standard form controls provide support automatically. For example, many fields can be automatically filled in with information using autocomplete or personalization semantics [[personalization-semantics-content-1.0]]. Then the user will not make mistakes filling it out.
           </p>
           <p>
             When you require additional fields and nonstandard controls many users will have difficulty using them. Many users with disabilities will get the information incorrect or be unable to work out how to complete the task. Often this results in the task being completely abandoned. In other cases, the user asks a caregiver for help to complete the form or work the control. In either case, they have not been able to complete the task because of their disability.
           </p>
           <p>
-            The standard [HTML] forms and controls have been carefully specified for maximum usability and accessibility. They are usually understood by users, especially if they are familiar with web interactions. However, users are likely to experience difficulties if the standard form behavior has been altered or completely new controls are provided. Assuming the new behaviors have been carefully designed and user tested, users may still require help in order to successfully use them.
+            The standard [[HTML]] forms and controls have been carefully specified for maximum usability and accessibility. They are usually understood by users, especially if they are familiar with web interactions. However, users are likely to experience difficulties if the standard form behavior has been altered or completely new controls are provided. Assuming the new behaviors have been carefully designed and user tested, users may still require help in order to successfully use them.
           </p>
 
           </section><section><h5 class="coga-5">More Details</h5>
@@ -3414,17 +3414,17 @@
             </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-<p><span class="use"> </span><strong> Use:</strong></p>
+<p><span class="use"></span><strong>Use:</strong></p>
 <ol>
             <li>Non-standard controls and form fields with instructions or help. For example:
             <ul>
             <li>An accessible help button next to a nonstandard control.</li>
-            <li>A standard mechanism for context sensitive help. This can include using [personalization semantics] for context sensitive help.</li>
+            <li>A standard mechanism for context sensitive help. This can include using personalization semantics for context sensitive help.</li>
             <li>Clear and unambiguous instructions that are easy to find.</li>
             </ul>
             </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
             <li>Non-standard controls and unusual form fields that do not have instructions or help. For example:
             <ul>
@@ -3435,11 +3435,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Make It Easy to Find Help and Give Feedback</h3>
+        <h3>Make It Easy to Find Help and Give Feedback (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to get help and give feedback easily from every place where I get stuck. </p></blockquote>
-        <p>Related User Story: <a href="#user-story-help" aria-label="Help User Story">Help</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#help-user-story" aria-label="Help User Story">Help</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Make it easy for the user to ask for help or report issues at any point in a process. This
           includes:
@@ -3492,7 +3492,7 @@
           </p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
             <ol>
             <li>Simple feedback mechanisms that are available on each screen. For example:
             <ul>
@@ -3504,14 +3504,14 @@
             <li>Multiple feedback mechanisms such as:
             <ul>
             <li>Web Chat or Web Call - An option to provide feedback using live chat or a video call. Note: The live chat or video call feature must be fully accessible. Web chat should not be a distraction and easy to close. Check usability with user testing.</li>
-            <li>Phone - A feedback phone number, ideally with a feature to automatically call via Voice over Internet Protocol (VOIP). Make sure there are no complex voice menus.</li>
+            <li>Phone - A feedback phone number, ideally with a feature to automatically call via <a href="https://en.wikipedia.org/wiki/Voice_over_IP">Voice over Internet Protocol (VoIP)</a>. Make sure there are no complex voice menus.</li>
             <li>Web Form - A simple site contact form with no more than 3 required fields.</li>
-            <li>Email - An email link using the "mailto" protocol with prefilled "to" and "subject" fields. Note that this will not work on all platforms or all mail clients.</li>
-            <li>Interactive Voice Response (IVR) - Provide an automatic option at the end of an IVR to give feedback by pressing a specific digit on the phone.</li>
+            <li>Email - An email link using the "mailto[[mailto]]" protocol with prefilled "to" and "subject" fields. Note that this will not work on all platforms or all mail clients.</li>
+            <li><a href="https://en.wikipedia.org/wiki/Interactive_voice_response">Interactive Voice Response (IVR)</a> - Provide an automatic option at the end of an IVR to give feedback by pressing a specific digit on the phone.</li>
             </ul>
             </li>
             </ol>
-            <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+            <p><span class="avoid"></span><strong>Avoid:</strong></p>
             <ol>
               <li>Complex feedback mechanisms.</li>
               <li>A single way to give feedback that not everyone can use.</li>
@@ -3519,11 +3519,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Provide Help with Directions</h3>
+        <h3>Provide Help with Directions (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need help understanding and using directions and navigation.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-help" aria-label="Help User Story">Help</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#help-user-story" aria-label="Help User Story">Help</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Content is provided that helps users understand and use directions or
           navigational systems. This can include:
@@ -3549,7 +3549,7 @@
           </p>
           <ul>
             <li>memory,</li>
-            <li>executive function,</li>
+            <li><a href="#dfn-executive-function">executive function</a>,</li>
             <li>spatial orientation,</li>
             <li>visual/spatial attention, perception and processing,</li>
             <li>spatial disorientation anxiety,</li>
@@ -3558,7 +3558,7 @@
             <li>attention</li>
           </ul>
           <p>
-            Some users may need more detailed help, such as step-by-step directions. Many users need to preview a route before following it. Then landmarks can help with recognition and orientation as well as reducing anxiety. Alternative relative directional terms and cardinal directions matching a user's preferences are most effective. For example the application could refer to  "�the driver's side"� or "�the East Wing"�. Helping people imagine relative and absolute distances can help, for example "�you've travelled half way"�.
+            Some users may need more detailed help, such as step-by-step directions. Many users need to preview a route before following it. Then landmarks can help with recognition and orientation as well as reducing anxiety. Alternative relative directional terms and cardinal directions matching a user's preferences are most effective. For example the application could refer to  "the driver's side" or "the East Wing". Helping people imagine relative and absolute distances can help, for example "you've travelled half way".
           </p>
           <p>
             Due to the wide variation in personal requirements, personalization mechanisms can be very useful. For example, the units used for distances.
@@ -3566,17 +3566,17 @@
             example, the platform locale settings.
           </p>
           <p>Changes can be very confusing. A user may be prepared to change the route to save hours of traffic, but this will involve them pulling into a gas station to  learn the new route. They may not want to change routes to avoid a small amount of traffic. Help the user to find the option that works for them.</p>
-		      <p>For example a person with traumatic brain injury is using a Global Positioning System (GPS). They review the route before leaving, and look at pictures of the turns. These preparations will enable them to follow the route. While driving, the route changes to avoid three minutes of traffic. They are no longer able to follow it and become lost.</p>
+		      <p>For example a person with traumatic <a href="#dfn-brain-injury">brain injury</a> is using a Global Positioning System (GPS). They review the route before leaving, and look at pictures of the turns. These preparations will enable them to follow the route. While driving, the route changes to avoid three minutes of traffic. They are no longer able to follow it and become lost.</p>
 
           </section><section><h5 class="coga-5">Examples</h5>
-        <p><span class="use"> </span><strong> Use:</strong></p>
+        <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
           <li>A second way to indicate left and right that is always available or a way to personalize the indication.</li>
           <li>Directions that use landmarks. For example, images of local landmarks are provided or can be added to help with orientation during wayfinding.</li>
           <li>Options that are available to avoid unwanted changes.</li>
           <li>Extra support that is available.</li>
           </ol>
-          <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+          <p><span class="avoid"></span><strong>Avoid:</strong></p>
           <ol>
           <li>Consistent reference to points of the compass including less well known ones (e.g. N by NE).</li>
           <li>Instructions that always assume that the person is at the expected location. They do not have an easy way to recover.</li>
@@ -3585,11 +3585,11 @@
       </section></section>
 
       <section>
-        <h3>Pattern: Provide Reminders</h3>
+        <h3>Provide Reminders (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need reminders integrated into my calendar, otherwise I will forget appointments and when I am meant to do things. Sometimes I need reminders to revisit a website to complete the next task.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-support" aria-label="Support User Story">Support</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#support-user-story" aria-label="Support User Story">Support</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
           Make it easy for the user to set a reminder for date and time sensitive events. Use standard application programming interfaces (APIs) when possible.
         </p>
@@ -3691,14 +3691,14 @@
           </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-<p><span class="use"> </span><strong> Use:</strong></p>              <ol>
+<p><span class="use"></span><strong>Use:</strong></p>              <ol>
               <li>Options for the user to add the event to their calendar and set a reminder. For example:
               <ul>
               <li>A health care site allows you to set a local medical appointment. Once the appointment is set the user is given the option to add it to their calendar (automatically) with a reminder three hours before. They are also given the option to add or edit the reminder.</li>
               </ul>
               </li>
               </ol>
-              <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+              <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
               <li>Events that are added to the user's calendar that the user does not want to attend.</li>
               <li>The user can not automatically add the events and appointments they just set to their calendar. For example:
@@ -3710,18 +3710,18 @@
       </section>
     </section></section>
 
-    <section>
+    <section class="objective-8">
       <h2>Objective 8: Support Adaptation and Personalization</h2>
       <p>Many users need products that support adaptation and personalization. Users should be able to use add-ons and extensions as assistive technology. This includes spell checkers, passwords support, support for text-to-speech, and synchronized highlighting of the phrase being read.</p>
       <p>Personalization can allow the user to select preferred, familiar options from a set of alternatives.</p>
       <p>Support personalization and simplification when you can. Do not disable add-ons and extensions.</p>
 
       <section>
-        <h3>Pattern: Let Users Control When the Content Moves or Changes</h3>
+        <h3>Let Users Control When the Content Moves or Changes (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to know where things are. Controls and content do not move unexpectedly as I am using them.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-adapt" aria-label="Adapt User Story">Adapt</a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        <p>Related User Story: <a href="#adapt-user-story" aria-label="Adapt User Story">Adapt</a>.</p>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
          <p>
           Ensure that changes of context, functionality, settings, route and
           orientation are initiated only by user request or an easily available
@@ -3754,7 +3754,7 @@
             delay. They become completely lost and disoriented and can no
             longer use the application.
           </p>
-		  <p>In another example, a user is watching a video and wants to press "�like"�. As they are about to press the button, the controls shift and they load a different video instead of pressing "like"�. They are now less likely to press "like"� because they do not want to lose their content. As a result their preferences are not taken into account </p>
+		  <p>In another example, a user is watching a video and wants to press "like". As they are about to press the button, the controls shift and they load a different video instead of pressing "like". They are now less likely to press "like" because they do not want to lose their content. As a result their preferences are not taken into account </p>
           <p>
             Letting users control when content changes gives users with cognitive and learning disabilities more control over how websites and applications behave. This gives them the opportunity to make choices that enable them to use the content and complete the task.
           </p>
@@ -3785,7 +3785,7 @@
           </ul>
 
           </section><section><h5 class="coga-5">Examples</h5>
-         <p><span class="use"> </span><strong> Use:</strong></p>
+         <p><span class="use"></span><strong>Use:</strong></p>
           <ol>
           <li>User control when content changes. For example:
           <ul>
@@ -3793,20 +3793,20 @@
           </ul>
           </li>
           </ol>
-          <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+          <p><span class="avoid"></span><strong>Avoid:</strong></p>
           <ol>
           <li>Content that changes without the user having control.</li>
           </ol>
       </section></section>
 
       <section>
-        <h3>Pattern: Enable
-<abbr title="application programming interface">APIs</abbr> and Extensions</h3>
+        <h3>Enable
+<abbr title="application programming interface">APIs</abbr> and Extensions (Pattern)</h3>
         <section><h5 class="coga-5">User Need</h5>
         <blockquote><p>I need to use additional support features from widgets or extensions.</p></blockquote>
-        <p>Related User Story: <a href="#user-story-extensions-and-api-s" aria-label="Extensions and APIs User Story">Extensions and
+        <p>Related User Story: <a href="#extensions-and-apis-user-story" aria-label="Extensions and APIs User Story">Extensions and
 <abbr title="application programming interface">APIs</abbr></a>.</p>
-        </section><section><h5 class="coga-5">What to Do</h5>
+        </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
         <p>
 <abbr title="application programming interface">APIs</abbr> and extensions work with your content.</p>
 
@@ -3840,8 +3840,8 @@
 <abbr title="application programming interface">APIs</abbr> are not supported, the author should provide support for all the functions of the add-ons used as assistive technology.
                   </p>
                   <p>
-                    For example, a user with traumatic brain injury has executive
-                    function and memory impairments impacting their ability to remember
+                    For example, a user with traumatic <a href="#dfn-brain-injury">brain injury</a> has executive
+                    function and <a href="#dfn-memory-impairments">memory impairments</a> impacting their ability to remember
                     details such as:
                   </p>
                   <ul>
@@ -3907,13 +3907,13 @@
                   </ul>
 
                   </section><section><h5 class="coga-5">Examples</h5>
-                  <p><span class="use"> </span><strong> Use:</strong></p>
+                  <p><span class="use"></span><strong>Use:</strong></p>
                     <ol>
                     <li>Support for browser extensions and features, and personalization tool bars. Users are able to apply their settings from a personalization toolbar to improve the usability for them of the page. </li>
                     <li>Extension that adds options to the right click work as expected.</li>
                     <li>The page can be formatted and simplified from the user's preferences in the operating system or user agent.</li>
                     </ol>
-                    <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                    <p><span class="avoid"></span><strong>Avoid:</strong></p>
                     <ol><li>Designs and code that stop browser extensions, settings and features, and personalization tool bars from working. For example:
                       <ul>
                     <li>Password storage applications do not work.</li>
@@ -3927,11 +3927,11 @@
       </section></section>
 
       <section>
-            <h3>Pattern: Support Simplification</h3>
+            <h3>Support Simplification (Pattern)</h3>
             <section><h5 class="coga-5">User Need</h5>
             <blockquote><p>I need less content without extra options and features as I cannot function at all when there is too much cognitive overload.</p></blockquote>
-            <p>Related User Story: <a href="#user-story-adapt" aria-label="Adapt User Story">Adapt</a>.</p>
-            </section><section><h5 class="coga-5">What to Do</h5>
+            <p>Related User Story: <a href="#adapt-user-story" aria-label="Adapt User Story">Adapt</a>.</p>
+            </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
                 <p>Support simplification of your content. Often this includes allowing the user to:</p>
             <ul>
               <li>
@@ -3951,7 +3951,7 @@
                 For example, an email program has lots of features and formatting
                 options when drafting an email. This makes it too complex for a lot
                 of people. With personalization the user can have a simple option
-                with only send and cancel options. There is a "�to"� and subject line
+                with only send and cancel options. There is a "to" and subject line
                 but no cc or bcc options. In this setting there is a clear heading
                 (write an email) and they have icons that the user understands.
               </p>
@@ -3965,7 +3965,7 @@
                 <ul>
                 <li>Supporting simplified versions from the browser.</li>
                 <li>use of data-simplification on regions and controls</li>
-                <li>use other attributes in personalization semantics. See [personalization-semantics].</li>
+                <li>use other attributes in personalization semantics. See [[personalization-semantics-1.0]].</li>
                 <li>adding a simplification toolbar</li>
                   <li>providing an alternative version.</li>
                 </ul>
@@ -3975,18 +3975,18 @@
 
               </section><section><h5 class="coga-5">Getting Started</h5>
               <p>
-                Add data-simplification=&quot;�critical&quot; on content that is in any critical
+                Add data-simplification=&quot;critical&quot; on content that is in any critical
                 user testing paths.
               </p>
 
               </section><section><h5 class="coga-5">Examples</h5>
-              <p><span class="use"> </span><strong> Use:</strong></p>
+              <p><span class="use"></span><strong>Use:</strong></p>
                 <ol>
                 <li>A simplified "reading" view that is available and easy to close.</li>
                 <li>Applications that have 3 large features. Other features are in the footer or under a "more" option.</li>
                 <li>A simplified version of the application that is available.</li>
                 </ol>
-                <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+                <p><span class="avoid"></span><strong>Avoid:</strong></p>
                 <ol>
                 <li>Simplified modes have unnecessary extra content or are not supported.</li>
                 <li>Applications with lots of features and can not be simplified. For example:
@@ -3998,11 +3998,11 @@
       </section></section>
 
       <section>
-              <h3>Pattern: Support a Personalized and Familiar Interface</h3>
+              <h3>Support a Personalized and Familiar Interface (Pattern)</h3>
               <section><h5 class="coga-5">User Need</h5>
               <blockquote><p>I need (a version of) a familiar interface, that I recognize and know what will happen.</p></blockquote>
-              <p>Related User Story: <a href="#user-story-adapt" aria-label="Adapt User Story">Adapt</a>.</p>
-              </section><section><h5 class="coga-5">What to Do</h5>
+              <p>Related User Story: <a href="#adapt-user-story" aria-label="Adapt User Story">Adapt</a>.</p>
+              </section><section class="wtd"><h5 class="coga-5">What to Do</h5>
               <p>Provide users with a way to personalize their interface to make it familiar.</p>
               <p>This can be done by:</p>
                   <ol>
@@ -4012,7 +4012,7 @@
                   <ul>
                   <li>HTML5 autocomplete on common fields</li>
                   <li>adding a toolbar that adds personalized images</li>
-                  <li>use attributes in [personalization-semantics-1.0].</li>
+                  <li>use attributes in [[personalization-semantics-1.0]].</li>
                   </ul>
                     </li>
                   </ol>
@@ -4021,9 +4021,9 @@
             </section><section><h5 class="coga-5">How it Helps</h5>
             <p>Personalization changes the interface to meet the needs of the user.</p>
             <p>Having familiar terms and symbols is key to many users being able to use the web. However, what is familiar for one user may be unfamiliar to another requiring them to learn new symbols. Adding semantics allows symbols and support to be added by an extension or browser that is familiar to the individual user.</p>
-            <p>A stronger example is people using <abbr title="Alternative and Augmentative Communication System">AAC</abbr>. These users usually only learn one symbol set. They cannot easily communicate with other symbol users in a written format or may struggle to understand different symbols used in different applications. When using personalization, such as [personalization-semantics-1.0] the user agents can load the symbols that are understandable by the individual user. The user can also access the web and other applications.</p>
+            <p>A stronger example is people using <abbr title="Alternative and Augmentative Communication System"><a href="#dfn-AAC">AAC</a></abbr>. These users usually only learn one symbol set. They cannot easily communicate with other symbol users in a written format or may struggle to understand different symbols used in different applications. When using personalization, such as [[personalization-semantics-1.0]] the user agents can load the symbols that are understandable by the individual user. The user can also access the web and other applications.</p>
 
-            <p>Other support includes autocomplete and extensions that help the user fill out forms and understand the content. Many users with memory or executive function impairments cannot fill in forms without asking someone to help copy over information or check their work. Autocomplete allows many more users to manage forms by themselves.</p>
+            <p>Other support includes autocomplete and extensions that help the user fill out forms and understand the content. Many users with memory or <a href="#dfn-executive-function">executive function</a> impairments cannot fill in forms without asking someone to help copy over information or check their work. Autocomplete allows many more users to manage forms by themselves.</p>
 
             </section><section><h5 class="coga-5">Getting Started</h5>
             <ul>
@@ -4037,16 +4037,16 @@
 
             </section><section><h5 class="coga-5">Examples</h5>
 
-            <p><span class="use"> </span><strong> Use:</strong></p>
+            <p><span class="use"></span><strong>Use:</strong></p>
               <ol>
-              <li>[HTML5] autocomplete tags on all common fields.</li>
+              <li>[[HTML5]] autocomplete tags on all common fields.</li>
               <li>True text to support browser preferences for styles.</li>
               <li>A toolbar that adds personalized images.</li>
-              <li>Semantics that can work with a toolbar for personalized images or [personalization-semantics]. </li>
+              <li>Semantics that can work with a toolbar for personalized images or [[personalization-semantics-1.0]]. </li>
               </ol>
-              <p><span class="aviod"> </span><strong> Avoid:</strong></p>
+              <p><span class="avoid"></span><strong>Avoid:</strong></p>
               <ol>
-              <li>Forms that do not support [HTML5] autocomplete.</li>
+              <li>Forms that do not support [[HTML5] autocomplete.</li>
               <li>Default fonts that are not clear or readable such as a cartoon font or gothic.</li>
               <li>Pages that can not easily be personalized.</li>
               </ol>

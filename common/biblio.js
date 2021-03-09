@@ -1159,7 +1159,13 @@ var biblio = {
 		"publisher": "Communications in Computer and Information Science Volume 277 CCIS, pages 146-151",
 		"publishDate": "2011"
 		},
-		
+		"mailto":
+		{
+		"title": "The 'mailto' URI Scheme",
+		"href": "https://tools.ietf.org/html/rfc6068",
+		"publisher": "Internet Engineering Task Force (IETF)",
+		"publishDate": "2010"
+		},
 	"Meyer-1": {
 		"title": "Fine motor skills in South African children with symptoms of ADHD: influence of subtype, gender, age, and hand dominance",
 		"authors": [
