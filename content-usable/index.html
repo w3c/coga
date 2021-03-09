@@ -6,7 +6,7 @@
     </title>
     <meta charset="utf-8" />
     <script
-      src="https://www.w3.org/Tools/respec/respec-w3c-common"
+      src="https://www.w3.org/Tools/respec/respec-w3c"
       class="remove"
     ></script>
     <script src="../common/biblio.js" class="remove"></script>
@@ -34,7 +34,7 @@
       }
 
 
-		.objective1 h3::before {
+		.objective-1 h3::before {
 
 			content: "";
 			background-image:url(img/StartHere.svg);
@@ -43,10 +43,10 @@
 		    height:40px;
 		    display: inline-block;
 			margin-right: .5em;
-			vertical-align: text-bottom;
+			vertical-align: text-top;
 		}
 
-		.objective2 h3::before {
+		.objective-2 h3::before {
 
 			content: "";
 			background-image:url(img/find.svg);
@@ -58,6 +58,116 @@
 			vertical-align: text-top;
 
 
+		}
+		.objective-3 h3::before {
+
+			content: "";
+			background-image:url(img/clear-text.svg);
+		    background-size:40px 40px;
+		    width:40px;
+		    height:40px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-top;
+
+
+		}
+		.objective-4 h3::before {
+
+			content: "";
+			background-image:url(img/glass.svg);
+		    background-size:40px 40px;
+		    width:40px;
+		    height:40px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-top;
+
+
+		}
+		.objective-5 h3::before {
+
+			content: "";
+			background-image:url(img/light.svg);
+		    background-size:40px 40px;
+		    width:40px;
+		    height:40px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-top;
+
+
+		}
+		.objective-6 h3::before {
+
+			content: "";
+			background-image:url(img/memory.svg);
+		    background-size:40px 40px;
+		    width:40px;
+		    height:40px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-top;
+
+
+		}
+		.objective-7 h3::before {
+
+			content: "";
+			background-image:url(img/support.svg);
+		    background-size:40px 40px;
+		    width:40px;
+		    height:40px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-top;
+
+
+		}
+		.objective-8 h3::before {
+
+			content: "";
+			background-image:url(img/users.svg);
+		    background-size:40px 40px;
+		    width:40px;
+		    height:40px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-top;
+
+
+		}
+
+		.use {
+
+			content: "";
+			background-image:url(img/tick.gif);
+		    background-size:30px 30px;
+		    width:30px;
+		    height:30px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-bottom;
+		}
+		.avoid {
+			content: "";
+			background-image:url(img/x.JPG);
+		    background-size:30px 30px;
+		    width:30px;
+		    height:30px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-top;
+		}
+		.wtd h5::before{
+			content: "";
+			background-image:url(img/RightArrow.svg);
+		    background-size:30px 30px;
+		    width:30px;
+		    height:30px;
+		    display: inline-block;
+			margin-right: .5em;
+			vertical-align: text-top;
 		}
 		.imagelist li img {
 			float: left;
@@ -80,8 +190,7 @@
       <p>
         This document is for people who make Web content (Web pages) and Web
         applications. It gives advice on how to make content usable for people
-        with cognitive and learning disabilities. This includes, but is not limited to:  Cognitive Disabilities, Learning Disabilities (LD),
-Neurodiversity, Intellectual Disabilities and Specific Learning Disabilities.
+        with <a href="#dfn-cognitive-and-learning-disabilities">cognitive and learning disabilities</a>. This includes, but is not limited to:  Cognitive Disabilities, Learning Disabilities (LD), <a href="#dfn-neurodiversity">Neurodiversity</a>, Intellectual Disabilities and Specific Learning Disabilities.
 
       </p>
       <p>This document has content about:</p>
@@ -93,15 +202,15 @@ Neurodiversity, Intellectual Disabilities and Specific Learning Disabilities.
         <li>personas (examples) and user needs.</li>
       </ul>
       <p>
-		The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> beyond the requirements of the Web Content Accessibility Guidelines [WCAG].
-		Following this guidance is not required for conformance to [WCAG]. However, following this guidance will increase accessibility for people with
+		The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a> beyond the requirements of the Web Content Accessibility Guidelines WCAG[[WCAG22]].
+		Following this guidance is not required for conformance to WCAG[[WCAG22]. However, following this guidance will increase accessibility for people with
 		cognitive and learning disabilities.
 		</p>
     </section>
 
     <section id="sotd"></section>
 
-      <section id="summary">
+      <section id="summary" class="toctext: sum">
        <h1>Summary (Easy To Understand Language)</h1>
 <p>To help web content providers meet the needs of people with cognitive and learning disabilities we have identified the following key topics:</p>
 <ol class="imagelist">
@@ -190,13 +299,13 @@ Neurodiversity, Intellectual Disabilities and Specific Learning Disabilities.
 	  	  <p>
 
 		 The Objectives and Patterns presented here provide <a href="https://www.w3.org/WAI/standards-guidelines/wcag/#supplement">supplemental guidance</a>
-		 beyond the requirements of <a href="https://www.w3.org/TR/WCAG2">WCAG</a>. Following this guidance is not required for conformance to WCAG. They address accessibility barriers that were not included in the current normative [WCAG] 2.x and may not otherwise be addressed.
+		 beyond the requirements of <a href="https://www.w3.org/TR/WCAG2">WCAG</a>. Following this guidance is not required for conformance to WCAG. They address accessibility barriers that were not included in the current normative WCAG 2.x and may not otherwise be addressed.
 
 	  </p> <p> Note that people with cognitive and learning disabilities may also
 have other impairments such as motor disabilities or visual
 impairments. For
 example, some people with age related forgetfulness may also require
-higher contrast. It is always important to follow Web Content Accessibility Guidelines [WCAG] and insure the
+higher contrast. It is always important to follow Web Content Accessibility Guidelines WCAG[[WCAG22]] and insure the
 needs
 of all disabilities are addressed.</p>
 
@@ -311,7 +420,7 @@ of all disabilities are addressed.</p>
         </p>
         <p>
           Other groups who will benefit include:
- <ul><li>People with  Mental health  issues that cause cognitive difficulties,
+ <ul><li>People with <a href="#dfn-mental-health">Mental health</a> issues that cause cognitive difficulties,
 such as difficulty focusing, cognitive fatigue or reduced memory,</li><li>
 people under a temporary stress,</li><li>
 people who do not know the language or culture of the country well,</li><li>
@@ -340,7 +449,7 @@ people with limited technical knowledge or are new to the web.</li></ul>
 		  <li>Including people with cognitive and learning disabilities in the design and development team.</li>
         </ul>
         <p>
-          If people with cognitive impairments are included in the usability testing and their feedback is accounted for, the website will be easier to use for everyone, including people who are experiencing stress or mental health issues. (See <a href="#Building_in_the_user">Section 5</a>.)
+          If people with cognitive impairments are included in the usability testing and their feedback is accounted for, the website will be easier to use for everyone, including people who are experiencing stress or <a href="#dfn-mental-health">Mental health</a> issues. (See <a href="#Building_in_the_user">Section 5</a>.)
         </p>
       </section>
       <section>
@@ -358,13 +467,13 @@ people with limited technical knowledge or are new to the web.</li></ul>
         <section id="user_needs">
           <h1>User Stories</h1>
           <p>This section contains user stories, followed by the user needs that relate to them. They are divided into the same objectives as the design guide above.</p>
-			<p>Note that for people with cognitive and learning disabilities, meeting these needs can be the difference between being able to use the site or not being able to use it at all. This may also be true for people with mental health issues or under temporary stress.</p>
+			<p>Note that for people with cognitive and learning disabilities, meeting these needs can be the difference between being able to use the site or not being able to use it at all. This may also be true for people with <a href="#dfn-mental-health">Mental health</a> issues or under temporary stress.</p>
 			<p>User needs for people with cognitive and learning disabilities are often helpful for other users, although they can usually manage to use the site without these user needs being met.</p>
-         <section class="objective1">
+         <section class="objective-1">
           <h3>Objective 1: Help Users Understand What Things are and How to Use Them</h3>
 		<section>
-			<h4>User Story: Clear Purpose</h4>
-			<p>As a user with a memory impairment, attention impairment, or executive function impairment or as a user with a communication disability who uses symbols, I need to know the purpose of the content so that I know if I am in the right place, and what I am doing even if I lose attention and focus for a time.</p>
+			<h4>Clear Purpose (User Story)</h4>
+			<p>As a user with a memory impairment, attention impairment, or <a href="#dfn-executive-function">executive function</a> impairment or as a user with a communication disability who uses symbols, I need to know the purpose of the content so that I know if I am in the right place, and what I am doing even if I lose attention and focus for a time.</p>
 
 			<p>This also includes the following user needs:</p>
 			<ul>
@@ -383,11 +492,11 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
 			</ul>
 
-			<p><strong>Related Personas:</strong> <a href="#yuki-a-yoga-teacher-who-has-adhd">Yuki</a>, <a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>, <a href="#maria-a-user-who-has-memory-loss">Maria</a>, <a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a></p>
+			<p><strong>Related Personas:</strong> <a href="#yuki-a-yoga-teacher-who-has-ad-h-d">Yuki</a>, <a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>, <a href="#maria-a-user-who-has-memory-loss">Maria</a>, <a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a></p>
 </section><section>
-			<h4>User Story: Clear Operation</h4>
+			<h4>Clear Operation (User Story)</h4>
 
-		<p>As a user with a memory impairment, a learning disability, or a communication disability who uses symbols, or executive function impairment, I find it hard to learn new interface design patterns. I need to know which controls are available and how to use them so that the site is usable for me.</p>
+		<p>As a user with a memory impairment, a learning disability, or a communication disability who uses symbols, or <a href="#dfn-executive-function">executive function</a> impairment, I find it hard to learn new interface design patterns. I need to know which controls are available and how to use them so that the site is usable for me.</p>
 
 			<p>This also includes the following user needs:</p>
 			<ul>
@@ -406,14 +515,14 @@ people with limited technical knowledge or are new to the web.</li></ul>
 			</ul>
 
       <p><strong>Related Personas:</strong> 	<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a>,
-		<a href="#amy-a-computer-scientist-who-has-autism">Amy</a>,
-		<a href="#tal-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Tal</a>,
+		<a href="#amy-an-autistic-computer-scientist">Amy</a>,
+		<a href="#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>,
         <a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>,
 		<a href="#george-a-user-who-works-in-a-supermarket-and-has-down-syndrome">George</a>,
-		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a></p>
+		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a></p>
 </section>
          	<section>
-    <h4>User Story: Symbols (pictographic or ideographic that represent concepts)</h4>
+    <h4>Symbols (pictographic or ideographic that represent concepts) (User Story)</h4>
     <p>As a user with complex communication needs that may include a mild language impairment, I want symbols that help me understand the content.</p>
     <p>This also includes the following user needs:</p><ul><li>
     I need symbols to help understand essential content, such as controls and section headings</li><li>
@@ -429,13 +538,13 @@ people with limited technical knowledge or are new to the web.</li></ul>
     </p></section>
 
 		</section>
-		<section class="objective2">
+		<section class="objective-2">
 
 			<h3>Objective 2: Help Users Find What They Need</h3>
 <section>
-			<h4>User Story: Findable</h4>
+			<h4>Findable (User Story)</h4>
 
-			<p>As a user with a memory impairment, impaired executive function, or impaired language processing skills who has trouble finding the features they need, I need to identify important information and critical functions on a page, so that I can find things in a reasonable amount of time.</p>
+			<p>As a user with a memory impairment, impaired <a href="#dfn-executive-function">executive function</a>, or impaired language processing skills who has trouble finding the features they need, I need to identify important information and critical functions on a page, so that I can find things in a reasonable amount of time.</p>
 
 
       <p>I can identify important information and critical functions on a page, quickly and easily.</p>
@@ -455,13 +564,13 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
       <p><strong>Related Personas:</strong>
 		<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a>,
-		<a href="#amy-a-computer-scientist-who-has-autism">Amy</a>,
-		<a href="#tal-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Tal</a>,
-		<a href="#yuki-a-yoga-teacher-who-has-adhd">Yuki</a>,
+		<a href="#amy-an-autistic-computer-scientist">Amy</a>,
+		<a href="#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>,
+		<a href="#yuki-a-yoga-teacher-who-has-ad-h-d">Yuki</a>,
 		<a href="#maria-a-user-who-has-memory-loss">Maria</a>,
 		<a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a></p>
 </section><section>
-			<h4>User Story: Searchable</h4>
+			<h4>Searchable (User Story)</h4>
 
       <p>As a user with a cognitive or learning disability and who learnt how to use search to find things, I need to be able use search, so that I can find things on a website. </p>
       <p>This also includes the following user needs: </p>
@@ -473,7 +582,7 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
 			<p><strong>Related Persona:</strong> <a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a></p>
 			</section><section>
-			<h4>User Story: Clear Navigation</h4>
+			<h4>Clear Navigation (User Story)</h4>
 
 	<p>As a user with a cognitive or learning disability and who likes to browse on the web, I need the structure and menu categories to make sense to me, so that I find what I am looking for, without looking in the wrong place.</p>
 
@@ -487,16 +596,16 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
 	 <p><strong>Related Personas:</strong>
 	  	<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a>,
-		<a href="#amy-a-computer-scientist-who-has-autism">Amy</a>,
+		<a href="#amy-an-autistic-computer-scientist">Amy</a>,
 		<a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>,
 		<a href="#maria-a-user-who-has-memory-loss">Maria</a>,
-		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a>,
+		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a>,
 		<a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a>
 	  </p>
 </section><section>
-    <h4>User Story: Media</h4>
+    <h4>Media (User Story)</h4>
 
-    <p>As a user with impaired executive functioning and attention impairments, I want media presented in small chunks of understandable content, so that I can understand the main points and not lose focus.</p>
+    <p>As a user with impaired <a href="#dfn-executive-function">executive function</a>ing and attention impairments, I want media presented in small chunks of understandable content, so that I can understand the main points and not lose focus.</p>
     <p>This also includes the following user needs: </p><ul><li>
 
     I need to easily navigate to what I want, take breaks and easily jump back a step if I do not follow or get distracted.</li><li>
@@ -508,13 +617,13 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
     </ul>
 
-    <p><strong>Related Persona:</strong> <a href="#yuki-a-yoga-teacher-who-has-adhd">Yuki</a></p>
+    <p><strong>Related Persona:</strong> <a href="#yuki-a-yoga-teacher-who-has-ad-h-d">Yuki</a></p>
   </section>
   </section>
-		<section>
+		<section class="objective-3">
 			<h2>Objective 3: Use Clear and Understandable Content</h2>
 <section>
-			<h4>User Story: Clear Language (Written or Audio)</h4>
+			<h4>Clear Language (Written or Audio) (User Story)</h4>
 
 			<p>As a user with a language, processing, or memory impairment, I need the language used to be clear and easy for me to understand so that I can understand the content.</p>
 			<p>This also includes the following user needs:</p>
@@ -534,12 +643,12 @@ people with limited technical knowledge or are new to the web.</li></ul>
 			</ul>
 
       <p><strong>Related Personas:</strong>
-		<a href="#yuki-a-yoga-teacher-who-has-adhd">Yuki</a>,
+		<a href="#yuki-a-yoga-teacher-who-has-ad-h-d">Yuki</a>,
 		<a href="#george-a-user-who-works-in-a-supermarket-and-has-down-syndrome">George</a>,
-		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a>,
+		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a>,
 		<a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a>	</p>
 </section><section>
-			<h4>User Story: Visual Presentation</h4>
+			<h4>Visual Presentation (User Story)</h4>
 
 			<p>As a user with a language or communication impairment, dyslexia, or an impaired memory, I want a page layout that helps me follow and understand the content without getting overwhelmed. </p>
 
@@ -555,16 +664,16 @@ people with limited technical knowledge or are new to the web.</li></ul>
 			I need explanations of implied or ambiguous information, like body gestures and facial expressions seen in images and animations.</li></ul>
 
       <p><strong>Related Personas:</strong>
-		<a href="#amy-a-computer-scientist-who-has-autism">Amy</a>,
-		<a href="#tal-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Tal</a>,
-		<a href="#yuki-a-yoga-teacher-who-has-adhd">Yuki</a>,
+		<a href="#amy-an-autistic-computer-scientist">Amy</a>,
+		<a href="#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>,
+		<a href="#yuki-a-yoga-teacher-who-has-ad-h-d">Yuki</a>,
 		<a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>,
 		<a href="#george-a-user-who-works-in-a-supermarket-and-has-down-syndrome">George</a>,
-		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a>,
+		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a>,
 		<a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a>
 	  </p>
 </section><section>
-			<h4>User Story: Math Concepts</h4>
+			<h4>Math Concepts (User Story)</h4>
 
 			<p>As a user who does not understand numerical concepts, I need content to be usable without understanding math concepts.</p>
 
@@ -585,9 +694,9 @@ people with limited technical knowledge or are new to the web.</li></ul>
 	  </p></section>
 		</section>
 
-		<section>
+		<section class="objective-4">
 			<h2>Objective 4: Help Users Avoid Mistakes and Know How to Correct Them</h2>
-<section>			<h4>User Story: Assistance and Support</h4>
+<section>			<h4>Assistance and Support (User Story)</h4>
 
 			<p>As a user who has difficulty with organization (executive functioning), typing, and putting letters and numbers in the right order, I want an interface that stops me from making mistakes, complete forms and perform other similar tasks successfully.</p>
 			<p>This also includes the following user needs: </p>
@@ -626,17 +735,17 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
       <p><strong>Related Personas:</strong>
 	  	<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a>,
-		<a href="#tal-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Tal</a>,
-		<a href="#yuki-a-yoga-teacher-who-has-adhd">Yuki</a>,
+		<a href="#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>,
+		<a href="#yuki-a-yoga-teacher-who-has-ad-h-d">Yuki</a>,
 		<a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>,
 		<a href="#george-a-user-who-works-in-a-supermarket-and-has-down-syndrome">George</a>,
 		<a href="#jonathan-a-therapist-with-dyscalculia">Jonathan</a>,
 		<a href="#maria-a-user-who-has-memory-loss">Maria</a>,
-		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a>,
+		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a>,
 		<a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a>
 	  </p>
 </section><section>
-			<h4>User Story: Undo</h4>
+			<h4>Undo (User Story)</h4>
 
 			<p>As a user who often makes mistakes or touches the wrong thing, I want to undo what I just did quickly and easily so that I can manage to use applications.</p>
 
@@ -653,14 +762,14 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
 			<p><strong>Related Personas:</strong>
 				<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a>,
-				<a href="#tal-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Tal</a>,
+				<a href="#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>,
 				<a href="#maria-a-user-who-has-memory-loss">Maria</a>
 			</p></section>
 		</section>
 
-		<section>
+		<section class="objective-5">
 			<h2>Objective 5: Help Users Focus</h2>
-			<section><h4>User Story: Distractions</h4>
+			<section><h4>Distractions (User Story)</h4>
 
 			<p>As a user with an attention impairment and impaired memory, I need to avoid distraction. If I lose focus and forget what I am doing, I need reminders of what I was doing, so that I can complete my task.</p>
 
@@ -684,25 +793,25 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
 
 		<p><strong>Related Personas:</strong>
-		<a href="#amy-a-computer-scientist-who-has-autism">Amy</a>,
-		<a href="#yuki-a-yoga-teacher-who-has-adhd">Yuki</a>,
+		<a href="#amy-an-autistic-computer-scientist">Amy</a>,
+		<a href="#yuki-a-yoga-teacher-who-has-ad-h-d">Yuki</a>,
 		<a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>,
-		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a>,
+		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a>,
 		<a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a>
 	  </p></section>
 		</section>
 
-		<section>
+		<section class="objective-6">
 			<h2>Objective 6: Ensure Processes Do Not Rely on Memory</h2>
 <section>
-			<h4>User Story: Remembering from Previous Steps</h4>
+			<h4>Remembering from Previous Steps (User Story)</h4>
 
 			<p>As a user with short-term and working memory difficulties, I need processes that do not rely on memory and access to information I entered during previous steps in a process. </p>
 			<p><strong>Related Personas:</strong> <a href="#maria-a-user-who-has-memory-loss">Maria</a></p>
 </section>
 <section>
-			<h4>User Story: Accessible Authentication</h4>
-			<p>As a user who has memory impairments and often forgets passwords, and has impaired executive function, I need a method of secure website authentication that I can use.</p>
+			<h4>Accessible Authentication (User Story)</h4>
+			<p>As a user who has <a href="#dfn-memory-impairments">memory impairments</a> and often forgets passwords, and has impaired <a href="#dfn-executive-function">executive function</a>, I need a method of secure website authentication that I can use.</p>
 			<p>This also includes the following user needs:</p>
 			<ul>
 			<li>
@@ -720,12 +829,12 @@ people with limited technical knowledge or are new to the web.</li></ul>
 			</ul>
 
 		<p><strong>Related Personas:</strong>
-	  		<a href="#tal-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Tal</a>,
+	  		<a href="#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>,
 			<a href="#jonathan-a-therapist-with-dyscalculia">Jonathan</a>
 		</p></section>
-			<section><h4>User Story: Voice Menus</h4>
+			<section><h4>Voice Menus (User Story)</h4>
 
-			<p>As a user who has memory impairments and impaired language processing skills, I need to get human help, without going through a complex menu system (VoiceXML) or a complex voice recognition menu system that relies on memory and executive function, so that I can set an appointment or find out some information.</p>
+			<p>As a user who has <a href="#dfn-memory-impairments">memory impairments</a> and impaired language processing skills, I need to get human help, without going through a complex menu system (VoiceXML)[[voicexml21]] or a complex voice recognition menu system that relies on memory and <a href="#dfn-executive-function">executive function</a>, so that I can set an appointment or find out some information.</p>
 
 			<p>This also includes the following user needs:</p>
 			<ul>
@@ -756,12 +865,12 @@ people with limited technical knowledge or are new to the web.</li></ul>
 	  </p></section>
 		</section>
 
-		<section>
+		<section class="objective-7">
 
 
 			<h2>Objective 7: Provide Help and Support</h2>
 <section>
-			<h4>User Story: Help</h4>
+			<h4>Help (User Story)</h4>
       <p>As a user who finds some websites hard to use, I need to get help and give feedback easily from every place where I get stuck. This ensures I am not excluded and the site is aware of my needs.</p>
       <p>This also includes the following user needs:</p>
       <ul>
@@ -781,7 +890,7 @@ people with limited technical knowledge or are new to the web.</li></ul>
 			I need to know how to get human help and can manage the process easily.</li></ul>
       <p><strong>Related Persona:</strong>		<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a></p>
 </section><section>
-			<h4>User Story: Support</h4>
+			<h4>Support (User Story)</h4>
 
       <p>As a user who finds some websites hard to use and struggles with text and words, I sometimes need in-page and inline support so that I can use the content. However, with an attention disorder any support required needs to be in my control to avoid distractions.</p>
       <p>This also includes the following user needs:</p>
@@ -803,16 +912,16 @@ people with limited technical knowledge or are new to the web.</li></ul>
 			</ul>
 </section>
 <section>
-			<h4>User Story: Directions</h4>
+			<h4>Directions (User Story)</h4>
 		<p>As a user with cognitive and learning disabilities that affect navigation and sequencing, I need help understanding and using directions and navigation.</p>
 
   <p><strong>Related Personas:</strong>
 
 		<a href="#george-a-user-who-works-in-a-supermarket-and-has-down-syndrome">George</a>,
-		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a>,
+		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a>,
 	  </p>
 </section><section>
-			<h4>User Story: Cognitive Stress</h4>
+			<h4>Cognitive Stress (User Story)</h4>
 
       <p>As a user with sensitivities that can be affected by content (e.g. content that is busy, confusing, depressing, or has loud noises), I need content that I can cope with so that I can be successful.</p>
       <p>This also includes the following user needs:</p>
@@ -826,11 +935,11 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
 
 
-     <p><strong>Related Persona:</strong> <a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a>, <a href="#tal-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Tal</a>, <a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a></p>
+     <p><strong>Related Persona:</strong> <a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a>, <a href="#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>, <a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a></p>
 </section><section>
-			<h4>User Story: Task Management</h4>
+			<h4>Task Management (User Story)</h4>
 
-			<p>As a user who struggles using web content due to executive function impairment, or struggles with numerical concepts, I want to be confident that I can manage my tasks.
+			<p>As a user who struggles using web content due to <a href="#dfn-executive-function">executive function</a> impairment, or struggles with numerical concepts, I want to be confident that I can manage my tasks.
       </p><p>This also includes the following user needs:</p>
       <ul>
       <li>
@@ -856,16 +965,16 @@ people with limited technical knowledge or are new to the web.</li></ul>
       <p><strong>Related Personas:</strong>
 	  		<a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>,
 			<a href="#jonathan-a-therapist-with-dyscalculia">Jonathan</a>,
-	  		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a>,
+	  		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a>,
 			<a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a></p></section>
 		</section>
-		<section>
+		<section class="objective-8">
 
 
 			<h2>Objective 8: Support Adaptation and Personalization</h2>
-			<section><h4>User Story: Adapt</h4>
+			<section><h4>Adapt (User Story)</h4>
 
-			<p>As a user with short and medium-term memory impairment and impaired executive function, I need a familiar interface so that I do not need to figure out and remember new interfaces. This may take a few weeks of repetition and I may not manage to learn it all if I have a condition affecting learning new things, such as dementia.</p>
+			<p>As a user with short and medium-term memory impairment and impaired <a href="#dfn-executive-function">executive function</a>, I need a familiar interface so that I do not need to figure out and remember new interfaces. This may take a few weeks of repetition and I may not manage to learn it all if I have a condition affecting learning new things, such as dementia.</p>
 
 			<p>This also includes the following user needs:</p>
 			<ul>
@@ -875,7 +984,7 @@ people with limited technical knowledge or are new to the web.</li></ul>
 			<li>
 			I need the controls to be consistently positioned on the screen where I expect them to be.</li>
 			<li>
-			I need content delivered in an easy to understand language or an easy-to-understand mode (like short, understandable, video clips).</li>
+			I need content delivered in an <a href="#dfn-easy-to-understand-language">easy to understand language</a> or an easy-to-understand mode (like short, understandable, video clips).</li>
 			<li>
 			I need to easily find and select the content format or version of the content that is easiest for me to understand.</li>
 			<li>
@@ -900,13 +1009,13 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
       <p><strong>Related Personas:</strong>
 	  	  	<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a>,
-		<a href="#amy-a-computer-scientist-who-has-autism">Amy</a>,
+		<a href="#amy-an-autistic-computer-scientist">Amy</a>,
 		<a href="#gopal-a-retired-lawyer-with-dementia">Gopal</a>,
  				<a href="#jonathan-a-therapist-with-dyscalculia">Jonathan</a>,
-		<a href="#sam-a-librarian-who-had-a-stroke-and-aphasia">Sam</a>
+		<a href="#sam-a-librarian-who-has-a-hemiplegia-and-aphasia">Sam</a>
 	  </p>
 </section><section>
-      <h4>User Story: Extensions and <abbr title="application programming interface">APIs</abbr></h4>
+      <h4>Extensions and <abbr title="application programming interface">APIs</abbr> (User Story)</h4>
 
       <p>As a user with learning and cognitive impairments, who uses add-ons and extensions as assistive technology, I need my add-ons, application programming interface (API) and extensions to work with the content so that I can use it.</p>
       <p>This also includes the following user needs:</p>
@@ -918,7 +1027,7 @@ people with limited technical knowledge or are new to the web.</li></ul>
 
 	       <p><strong>Related Personas:</strong>
 	  	  	<a href="#alison-an-aging-user-with-mild-cognitive-impairment">Alison</a>,
-	  		<a href="#tal-a-student-who-has-dyslexia-and-poor-eye-hand-coordination">Tal</a>,
+	  		<a href="#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>,
  				<a href="#jonathan-a-therapist-with-dyscalculia">Jonathan</a>,
 			<a href="#kwame-a-traumatic-brain-injury-survivor">Kwame</a>
 	  </p></section>
@@ -951,7 +1060,7 @@ Note that it is beyond the scope of this document to give general advice on usab
 			<li>Include people with cognitive and learning disabilities in the design and development process. This also includes research that has something to do with them. They're the experts in what works for them.</li>
 
 		</ul>
-		<p>Sometimes designs and content are usable for some people, but not if they have cognitive or learning impairments. Sometimes content is usable by people with one cognitive and learning disability but not a different one. For example, content with fewer words and more numbers may be perfect for some autistic and dyslexic users. However, the same content is inaccessible for people with dyscalculia who struggle with numeric information. It is important that usability testing includes a diverse set of users with different cognitive and learning disabilities, such as: people with a memory impairment, learning difficulty, attention impairment, numeric impairment, language and communication disability and intellectual disability.</p>
+		<p>Sometimes designs and content are usable for some people, but not if they have cognitive or learning impairments. Sometimes content is usable by people with one cognitive and learning disability but not a different one. For example, content with fewer words and more numbers may be perfect for some <a href="#dfn-autistic">autistic</a> and dyslexic users. However, the same content is inaccessible for people with dyscalculia who struggle with numeric information. It is important that usability testing includes a diverse set of users with different cognitive and learning disabilities, such as: people with a memory impairment, learning difficulty, attention impairment, numeric impairment, language and communication disability and intellectual disability.</p>
 </section>
 
 <section>
@@ -960,7 +1069,7 @@ Note that it is beyond the scope of this document to give general advice on usab
 <ul>
 <li>Are older and struggle to use computers, or have age-related forgetfulness;</li>
 <li>May be at an early stage of dementia;</li>
-<li>Have a specific learning disability such as those with dyslexia, dyscalculia, or AD(H)D;</li>
+<li>Have a specific learning disability such as those with dyslexia, dyscalculia, or <a href="#dfn-anxiety-disorders">AD(H)D</a>;</li>
 <li>Have an intellectual disability; or</li>
 <li>Have acquired cognitive issues (for example, due to neurological trauma). </li>
 
@@ -989,7 +1098,7 @@ Note that it is beyond the scope of this document to give general advice on usab
 <p>If your tester has a guardian, you should get informed consent from <strong>both </strong>the tester and their guardian.</p>
 <p>Using an understandable consent form is important. Our design patterns on clear content will help you use clear language and layout. Adding icons and symbols can also help.</p>
 <p>Make sure users understand the consent form. This can be done by asking them some questions about the consent that tests that they understand the key points. You can also adapt the example consent forms from <a href="https://www.w3.org/WAI/GL/task-forces/coga/wiki/Developer_resources">our developer resource page</a>.</p>
-<p>Throughout the process, remind them that participation is always voluntary and they can stop at any time. This is particularly important if they have memory impairments and may have forgotten that it is their choice to participate. Remember to thank them for their ideas and contribution.</p>
+<p>Throughout the process, remind them that participation is always voluntary and they can stop at any time. This is particularly important if they have <a href="#dfn-memory-impairments">memory impairments</a> and may have forgotten that it is their choice to participate. Remember to thank them for their ideas and contribution.</p>
 <p>Different areas may require consent for more items than others. Check the legal requirements in your jurisdiction and for your type of content.</p>
 </section>
 <section>
@@ -1065,7 +1174,7 @@ Note that it is beyond the scope of this document to give general advice on usab
 
 <p>For each objective, make sure your user testing includes individuals with a range of cognitive and learning disabilities. Do not just ask questions, but ask the user to complete an action that demonstrates usability. Test for the following but set up the tests so that the user demonstrates their knowledge and understanding rather than answers a simple question:</p>
 <ul><li>Are enough user groups represented?</li>
-<li>For example, a typical project may wish to include: People living with early stage dementia, age-related forgetfulness, intellectual disabilities, different specific cognitive and learning disabilities and communication disabilities.</li>
+<li>For example, a typical project may wish to include: People living with <a href="#dfn-early-stage-dementia">early stage dementia</a>, age-related forgetfulness, intellectual disabilities, different specific cognitive and learning disabilities and communication disabilities.</li>
 </ul>
 
       <section>
@@ -1264,7 +1373,7 @@ Note that it is beyond the scope of this document to give general advice on usab
             <p>A page that loads automatically or animations and videos that play automatically cause problems for Amy. Sometimes, the movement can be very distracting and the sounds alarming. Amy has always found that sudden noises or something happening unintentionally has been a problem. When designing her own applications and websites, she makes sure the controls for animated objects and videos are clearly visible and do not start until the user decides to play them.</p>
           </section><section>
             <h4>Amy Scenario 3: Designs that Make Use of Abstract Imagery and Metaphors</h4>
-            <p>Amy is always concerned about communicating clearly. She finds it hard when people ask her to create a design that includes abstract imagery. Images that do not directly represent something make Amy feel uneasy. She tends to ask if there can be some explanatory text in case other users are confused. On the other hand, a figure of speech where someone has written something that is not literal makes her wish that the writer would use Easy To Understand Language as it is hard to understand concepts such as, "the wheels of justice turn slowly." </p>
+            <p>Amy is always concerned about communicating clearly. She finds it hard when people ask her to create a design that includes abstract imagery. Images that do not directly represent something make Amy feel uneasy. She tends to ask if there can be some explanatory text in case other users are confused. On the other hand, a figure of speech where someone has written something that is not literal makes her wish that the writer would use <a href="#dfn-easy-to-understand-language">easy to understand language</a> as it is hard to understand concepts such as, "the wheels of justice turn slowly." </p>
    </section>
         </section>
 
@@ -1280,7 +1389,7 @@ Note that it is beyond the scope of this document to give general advice on usab
           <div class="p-quotes">
             <ul>
               <li><p><span class="p-issue">Problem:</span><span><q> I find it hard to understand and remember long and complex written instructions.</q></span></p></li>
-              <li><p><span class="p-issue">Works well:</span><span><q> The instructions for scanning items are presented as a clear list of steps with pictures and easy to understand language next to them. If I get stuck I can quickly find a reminder of what to do with such ‘Easy To Understand’ content.</q></span></p></li>
+              <li><p><span class="p-issue">Works well:</span><span><q> The instructions for scanning items are presented as a clear list of steps with pictures and <a href="#dfn-easy-to-understand-language">easy to understand language</a> next to them. If I get stuck I can quickly find a reminder of what to do with such ‘Easy To Understand’ content.</q></span></p></li>
             </ul>
           </div>
 
@@ -1296,7 +1405,7 @@ Note that it is beyond the scope of this document to give general advice on usab
             <p>Using a mouse is not easy for everyone and double clicking can take time to learn. George has worked hard to improve his mouse skills by playing many onscreen games. However, he still finds it hard to move accurately enough to skip ads on videos or to track down the close/exit method offered by some pop-up windows. Once again friends have come to the rescue and enabled an ad blocker extension for his browser. However, this does not always capture all the ads or prevent George from selecting the submit button rather than a cross or exit button on a pop-up. There have been times when George has downloaded malware without any second warning appearing. Sometimes he is unable to reach a site because he cannot find the small cross on a transparent popup window that overlays the main page.</p>
           </section><section>
             <h4>George Scenario 4: Finding ways to Read Instructions</h4>
-            <p>George finds it very hard to read instructions unless they use very short and easy to understand language. He needs text that has been simplified. The best option for George is when there is  a summary of a paragraph with a well-known symbol, short bullet points and a clear diagram or image of what is required. He finds videos with instructions usually go too quickly. He has to stop them, going back time and time again. Helpful instructions with well broken up sets of phrases using easy to understand words can work well. He can then go back to them when he has to remember how to do a particular task.</p>
+            <p>George finds it very hard to read instructions unless they use very short and <a href="#dfn-easy-to-understand-language">easy to understand language</a>. He needs text that has been simplified. The best option for George is when there is  a summary of a paragraph with a well-known symbol, short bullet points and a clear diagram or image of what is required. He finds videos with instructions usually go too quickly. He has to stop them, going back time and time again. Helpful instructions with well broken up sets of phrases using easy to understand words can work well. He can then go back to them when he has to remember how to do a particular task.</p>
 </section>
         </section>
 
@@ -1373,7 +1482,7 @@ Note that it is beyond the scope of this document to give general advice on usab
             </ul>
           </div>
 
-          <p>Kwame was involved in a very serious car crash that left him with some physical, sensory and cognitive and learning disabilities having sustained a brain injury. He has returned to work. However, he often finds conversations are strained due to difficulties with memory recollection and visual understanding.</p>
+          <p>Kwame was involved in a very serious car crash that left him with some physical, sensory and cognitive and learning disabilities having sustained a <a href="#dfn-brain-injury">brain injury</a>. He has returned to work. However, he often finds conversations are strained due to difficulties with memory recollection and visual understanding.</p>
           <p>Kwame learnt how to walk, talk, and live life all over again. Medical experts informed him that his greatest chances for recovery would take place within the first 2 years after his injury. After that he may continue to recover, but at a much slower, and incremental rate. His friends and family are amazed by how quickly he has regained his ability to speak, and perform his daily life functions. They are confused by all of the cognitive difficulties he says he is having, despite his ability to articulate and communicate. For example, he often cannot recognize images and faces. He gets disorientated in physical spaces. He often gets lost in rooms, as well as buildings, larger places, documents and websites.</p>
           <p>He has returned to his old company as a researcher and is back using applications and the Internet throughout his working day.</p>
 <section>
@@ -1504,7 +1613,7 @@ Note that it is beyond the scope of this document to give general advice on usab
             </ul>
           </div>
 
-          <p>Yuki found concentrating at school difficult. When she got into college and started taking a course in business studies life became even more stressful. She knew she could cope with the studies, but never seemed to get her work completed on time, found it hard to start a report and even to create a plan for a project. When working with others she always had good ideas but somehow they were never taken up and she became frustrated often failing to keep her feelings in check. Luckily, a tutor suggested she look for help. When a psychologist mentioned Attention Deficit Hyperactive Disorder (AD(H)D) Yuki was relieved to have a reason for her planning and organizational difficulties and other executive functions. She did not want to draw attention to her difficulties, but knowing what caused the challenges helped her find solutions. She learnt that if she could make use of her constantly active brain and body as well as manage her time better, she could turn her hobby into a very successful Yoga business.</p>
+          <p>Yuki found concentrating at school difficult. When she got into college and started taking a course in business studies life became even more stressful. She knew she could cope with the studies, but never seemed to get her work completed on time, found it hard to start a report and even to create a plan for a project. When working with others she always had good ideas but somehow they were never taken up and she became frustrated often failing to keep her feelings in check. Luckily, a tutor suggested she look for help. When a psychologist mentioned Attention Deficit Hyperactive Disorder (AD(H)D) Yuki was relieved to have a reason for her planning and organizational difficulties and other <a href="#dfn-executive-function">executive functions</a>. She did not want to draw attention to her difficulties, but knowing what caused the challenges helped her find solutions. She learnt that if she could make use of her constantly active brain and body as well as manage her time better, she could turn her hobby into a very successful Yoga business.</p>
 <section>
             <h4>Yuki Scenario 1: Gathering Key Points from a Heavy Text Based Document or Webpage</h4>
             <p>Yuki could not really explain her apparent forgetfulness and not being able to focus or complete tasks. She knew that if she came across a long document or webpage with dense text she had to find the key points. If the webpage failed to have a clear structure, well-spaced and highlighted headings she would be lost and lose concentration. Yuki also said that if she was reading her mobile screen, advertisements appearing between chunks of text upset her focus and she had to stop reading. However, when there was good use of white space, recognizable icons linking to simple bold text clarifying the important points, Yuki could target these areas and find out what she needed. A clear summary helped Yuki understand and she could remember much of what she had read.</p>
@@ -1527,36 +1636,36 @@ Note that it is beyond the scope of this document to give general advice on usab
       <section>
         <h1>Glossary</h1>
       <dl>
-          <dt>Age Related Memory Loss</dt>
+          <dt id="dfn-age-related-memory-loss">Age Related Memory Loss</dt>
           <dd>
               <p>Sometimes called "Age Appropriate Forgetfulness"</p>
               <p>People with age related memory loss have impaired memory issues that can be a normal part of healthy aging. They may take longer to learn new things, forget something but remember it later, or occasionally forget particular words. (This differs from dementia where forgetfulness is due to a  disorder and is more pronounced.)</p>
           </dd>
-          <dt>Alternative and Augmentative Communication System</dt>
+          <dt id="dfn-AAC">Alternative and Augmentative Communication System</dt>
         <dd>
               <p>Sometimes referred to as "AAC"</p>
               <p>Any method, device or application that can be used to help those who cannot use spoken language and need additional support by means of symbols, images and/or text. For example a screen with symbols that the user can select to speak the appropriate words or add them to a document.</p>
           </dd>
-          <dt>Anxiety Disorders</dt>
+          <dt id="dfn-anxiety-disorders">Anxiety Disorders</dt>
         <dd>
               <p>People who have anxiety disorders struggle with intense and uncontrollable feelings of anxiety, fear, worry, and/or panic. This is more than just feeling worried once in a while. This may last for a long time and can interfere with daily activities, such as concentration and executive functioning.</p>
           </dd>
-          <dt>Attention Deficit (hyperactivity) disorder, AD(H)D</dt>
+          <dt id="dfn-ad-h-d">Attention Deficit (hyperactivity) disorder, AD(H)D</dt>
         <dd>
               <p>Sometimes called Attention deficit disorder, ADD, and Attention deficit hyperactivity disorder, ADHD</p>
               <p>Attention deficit (hyperactivity) disorder or AD(H)D involves difficulty focusing on a single task, focusing for longer periods, or being easily distracted. It is marked by an ongoing pattern of inattention and/or hyperactivity-impulsivity that interferes with functioning or development.</p>
           </dd>
-          <dt>Autistic </dt>
+          <dt id="dfn-autistic">Autistic </dt>
         <dd>
               <p>Sometimes called "Autism spectrum disorder (ASD)", "autism", "Asperger syndrome", and "pervasive developmental disorder"</p>
-              <p>Autistic people have some degree of impaired social behavior, communication and language abilities. This may also impact the person’s ability to regulate behavior and attention. Individuals can have a narrow range of interests and activities and they may rely on alternative communication methods. Some individuals may also experience episodes of sensory overload. See neurodiversity for an alternative approach to Autism and learning and cognitive disabilities.</p>
+              <p>Autistic people have some degree of impaired social behavior, communication and language abilities. This may also impact the person’s ability to regulate behavior and attention. Individuals can have a narrow range of interests and activities and they may rely on alternative communication methods. Some individuals may also experience episodes of sensory overload. See <a href="#dfn-neurodiversity">neurodiversity</a> for an alternative approach to Autism and learning and cognitive disabilities.</p>
           </dd>
-          <dt>Brain Injury</dt>
+          <dt id="dfn-brain-injury">Brain Injury</dt>
           <dd>
-              <p>Brain injury including Traumatic Brain Injury (TBI) and Acquired Brain Injury (ABI),  are caused by damage to the brain which can lead to long-term impairment of  executive function, memory, learning, coordination, speech and emotions as well as other physical and sensory impairments.</p>
+              <p>Brain injury including Traumatic Brain Injury (TBI) and Acquired Brain Injury (ABI),  are caused by damage to the brain which can lead to long-term impairment of  <a href="#dfn-executive-function">executive function</a>, memory, learning, coordination, speech and emotions as well as other physical and sensory impairments.</p>
               <p>Brain injury can have many different causes such as a concussion or stroke, and can happen at any stage of life.</p>
-          </dd
-          <dt>Cognitive and Learning Disabilities</dt>
+          </dd>
+          <dt id="dfn-cognitive-and-learning-disabilities">Cognitive and Learning Disabilities</dt>
           <dd>
               <p>May include: Cognitive Disabilities, Learning Disabilities (LD), Intellectual Disabilities  and Specific Learning Disability</p>
               <p>Cognitive disabilities and learning disabilities can mean different things in different locations. Taken together they refer to: </p>
@@ -1566,20 +1675,20 @@ Note that it is beyond the scope of this document to give general advice on usab
                   <li>Significantly reduced memory and attention or visual, verbal or numerical thinking</li>
               </ul>
           </dd>
-          <dt>Early Stage Dementia</dt>
+          <dt id="dfn-early-stage-dementia">Early Stage Dementia</dt>
           <dd>
               <p>Common impairments of early stage dementia include memory loss, difficulty concentrating, and struggling to follow a conversation or find the right word. These may appear before a diagnosis of dementia. At this stage, these symptoms are often mild.</p>
           </dd>
-          <dt>Easy To Understand Language</dt>
+          <dt id="dfn-easy-to-understand-language">Easy To Understand Language</dt>
           <dd>
           <p>May include: Easy Reading, Easy To Read, Plain Language, Easy To Understand.</p>
               <p>Easy To Understand Language refers to text content that is in an accessible, easy to understand, form. It is often useful for people with learning disabilities, and is easier for many other people as well. </p>
           </dd>
-          <dt>Executive Function</dt>
+          <dt id="dfn-executive-function">Executive Function</dt>
           <dd>
               <p>The group of cognitive processes and skills required for planning,  fulfilling tasks and goals. It includes working memory and remembering details, impulse inhibition, organizing tasks, managing time, fluid reasoning and solving problems.</p>
           </dd>
-          <dt>Memory impairments</dt>
+          <dt id="dfn-memory-impairments">Memory impairments</dt>
           <dd>
               <p>Memory impairments refer to an inability to recognize or recall pieces of information or skills that are usually remembered. It can affect:</p>
               <ul>
@@ -1588,18 +1697,18 @@ Note that it is beyond the scope of this document to give general advice on usab
                   <li>Long-term Memory that holds information long term, such as information from personal events, language and information. For example, we may rely on long-term memory to recall past events.</li>
               </ul>
           </dd>
-          <dt>Mental health</dt>
+          <dt id="dfn-mental-health">Mental health</dt>
           <dd>
               <p>Includes: Mental health impairment</p>
               <p>Mental health refers to our emotional, psychological, and social well-being. A mental health impairment/condition generally has some combination of disturbed thoughts, emotions and ability to relate to others that impairs daily functioning. Examples include depression, anxiety and post-traumatic stress disorder. These conditions may cause temporary or long term  issues with accessing information, such as difficulty focusing on information, processing information, or understanding it.</p>
           </dd>
-          <dt>Mild Cognitive Impairment (MCI)</dt>
+          <dt id="dfn-mci">Mild Cognitive Impairment (MCI)</dt>
           <dd>
-              <p>Mild cognitive impairment (MCI) can involve problems with memory, language, thinking and judgment that are greater than normal age-related challenges. It is sometimes considered the stage between the common and expected age appropriate forgetfulness  and the more serious decline of dementia although many or most people with MCI will not develop dementia.</p>
+              <p>Mild cognitive impairment (MCI) can involve problems with memory, language, thinking and judgment that are greater than normal age-related challenges. It is sometimes considered the stage between the common and expected <a href="#dfn-age-related-memory-loss">age appropriate forgetfulness</a> and the more serious decline of dementia although many or most people with MCI will not develop dementia.</p>
           </dd>
-          <dt>Neurodiversity</dt>
+          <dt id="dfn-neurodiversity">Neurodiversity</dt>
           <dd>
-              <p>Neurodiversity is a term that refers to the different ways the brain can work and interpret information. It highlights that people naturally think about things differently. Autistic people, Attention Deficit/Hyperactivity Disorder (AD(H)D), Dyslexia, and other diagnoses or labels may prefer the term “neurodiverse” as they are part of normal and healthy variation in the human population, bringing diverse skills and perspectives.</p>
+              <p>Neurodiversity is a term that refers to the different ways the brain can work and interpret information. It highlights that people naturally think about things differently. <a href="#dfn-autistic">Autistic</a> people, Attention Deficit/Hyperactivity Disorder (AD(H)D), Dyslexia, and other diagnoses or labels may prefer the term “neurodiverse” as they are part of normal and healthy variation in the human population, bringing diverse skills and perspectives.</p>
           </dd>
       </dl>
 
@@ -1715,27 +1824,6 @@ Note that it is beyond the scope of this document to give general advice on usab
       </section>
     </section>
 
-    <section id="informative-references">
-	        <h3 id="d-1-informative-references"><bdi class="secno">D.1 </bdi>Informative references<a class="self-link" aria-label="§" href="#informative-references"></a></h3>
-	      <dl class="bibliography">
-	        <dt id="bib-aria">[WAI-ARIA]</dt><dd><a href="https://www.w3.org/TR/wai-aria-1.0/"><cite>WAI-ARIA</cite></a>.James Craig, Apple Inc.
-Michael Cooper, W3C, Lisa Pappas, Society for Technical Communication, Rich Schwerdtfeger, IBM,Lisa Seeman, UB Access .  W3C Recommendation 20 March 2014 URL: <a href="https://www.w3.org/TR/wai-aria-1.0/">Accessible Rich Internet Applications (WAI-ARIA) </a></dd>
- <dt id="webauthn-2">[webauthn-2]</dt><dd><a href="https://www.w3.org/TR/webauthn-2/">Web Authentication:
-An API for accessing Public Key Credentials</a>
- Editors:
-Jeff Hodges (Google)
-J.C. Jones (Mozilla)
-Michael B. Jones (Microsoft)
-Akshay Kumar (Microsoft)
-Emil Lundberg (Yubico), Level 2
-W3C Proposed Recommendation, 25 February 2021,</dd>
-	        <dt id="bib-html5">[HTML5]</dt><dd><a href="https://www.w3.org/TR/html5/"><cite>HTML5</cite></a>. Ian Hickson; Robin Berjon; Steve Faulkner; Travis Leithead; Erika Doyle Navara; Theresa O'Connor; Silvia Pfeiffer.  W3C. 27 March 2018. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></dd>
-	        <dt id="bib-html52">[HTML52]</dt><dd><a href="https://www.w3.org/TR/html52/"><cite>HTML 5.2</cite></a>. Steve Faulkner; Arron Eicholz; Travis Leithead; Alex Danilo; Sangwhan Moon.  W3C. 14 December 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/html52/">https://www.w3.org/TR/html52/</a></dd>
-	        <dt id="bib-personalization-semantics-1.0">[personalization-semantics-1.0]</dt><dd><a href="https://www.w3.org/TR/personalization-semantics-1.0/"><cite>Personalization Semantics Content 1.0</cite></a>. Lisa Seeman-Kestenbaum; Charles LaPierre; Richard Schwerdtfeger; Michael Cooper; Ruoxi Ran.  W3C. 18 October 2018. W3C Working Draft. URL: <a href="https://www.w3.org/TR/personalization-semantics-1.0/">https://www.w3.org/TR/personalization-semantics-1.0/</a> <p>Note that this is a new technology, and at the time of publication more support is needed.</p></dd>
-	 <dt id="bib-personalization-semantics">[personalization-semantics]</dt><dd><a href="https://w3c.github.io/personalization-semantics/"><cite>Personalization Semantics Explainer 1.0</cite></a>. Lisa Seeman-Kestenbaum; Charles LaPierre; Richard Schwerdtfeger; Michael Cooper; Ruoxi Ran.  W3C. 18 October 2018. W3C Working Draft. URL: <a href="https://www.w3.org/TR/personalization-semantics-1.0/">https://www.w3.org/TR/personalization-semantics-1.0/</a>.  <p>Note that this is a new technology, and at the time of publication more support is needed.</p></dd>
-
-	<dt id="bib-wcag-2.0">[WCAG]</dt><dd><a href="https://www.w3.org/TR/WCAG22/"><cite>Web Content Accessibility Guidelines (WCAG) 2.2</cite></a></dd>
-      </dl></section>
 
     <div
       data-include="acknowledgements.html"
