@@ -98,7 +98,6 @@ var respecConfig = {
 
     localBiblio: biblio,
 
-    // Spec URLs
-        
+	preProcess: [preRespec]
 
   };
