@@ -960,6 +960,11 @@ var biblio = {
 		"publisher": "ACM International Conference Proceeding Series. ISABEL '11 Proceedings of the 4th International Symposium on Applied Sciences in Biomedical and Communication Technologies, Article Number 39",
 		"publishDate": "2011"
                             },
+    "ISO 9241-112": {
+    	"href": "https://www.iso.org/standard/64840.html",
+    	"publisher": "International Standards Organization",
+    	"title": "Ergonomics of human-system interaction — Part 112: Principles for the presentation of information" 
+    },
 
 	
 	"Kadesjö-1": {
