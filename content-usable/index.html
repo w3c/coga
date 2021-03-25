@@ -11,196 +11,8 @@
    	<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
    	<script class="remove">document.respecIsReady.then(() => {postRespec();});</script>
 
-    <style type="text/css">
-      .p-quotes {
-        margin-bottom: 35px;
-      }
-      .p-quotes ul {
-        list-style-type: none;
-      }
-      .p-quotes li > p span {
-        display: table-cell;
-      }
-      .p-issue {
-        font-weight: bold;
-        display: table-cell;
-        width: 6em;
-      }
-      .btn{
-        color: #034575;
-        background: transparent;
-        text-decoration:underline;
-      }
-
-
-		.objective-1 h3::before {
-
-			content: "";
-			background-image:url(img/StartHere.svg);
-		    background-size:40px 40px;
-		    width:40px;
-		    height:40px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-top;
-		}
-
-		.objective-2 h3::before {
-
-			content: "";
-			background-image:url(img/find.svg);
-		    background-size:40px 40px;
-		    width:40px;
-		    height:40px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-top;
-
-
-		}
-		.objective-3 h3::before {
-
-			content: "";
-			background-image:url(img/clear-text.svg);
-		    background-size:40px 40px;
-		    width:40px;
-		    height:40px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-top;
-
-
-		}
-		.objective-4 h3::before {
-
-			content: "";
-			background-image:url(img/glass.svg);
-		    background-size:40px 40px;
-		    width:40px;
-		    height:40px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-top;
-
-
-		}
-		.objective-5 h3::before {
-
-			content: "";
-			background-image:url(img/light.svg);
-		    background-size:40px 40px;
-		    width:40px;
-		    height:40px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-top;
-
-
-		}
-		.objective-6 h3::before {
-
-			content: "";
-			background-image:url(img/memory.svg);
-		    background-size:40px 40px;
-		    width:40px;
-		    height:40px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-top;
-
-
-		}
-		.objective-7 h3::before {
-
-			content: "";
-			background-image:url(img/support.svg);
-		    background-size:40px 40px;
-		    width:40px;
-		    height:40px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-top;
-
-
-		}
-		.objective-8 h3::before {
-
-			content: "";
-			background-image:url(img/users.svg);
-		    background-size:40px 40px;
-		    width:40px;
-		    height:40px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-top;
-
-
-		}
-
-		.use {
-
-			content: "";
-			background-image:url(img/tick.gif);
-		    background-size:25px 25px;
-		    width:25px;
-		    height:25px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-bottom;
-		}
-		.avoid {
-			content: "";
-			background-image:url(img/x.JPG);
-		    background-size:25px 25px;
-		    width:25px;
-		    height:25px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-bottom;
-		}
-		.wtd h5::before{
-			content: "";
-			background-image:url(img/RightArrow.svg);
-		    background-size:25px 25px;
-		    width:25px;
-		    height:25px;
-		    display: inline-block;
-			margin-right: .5em;
-			vertical-align: text-bottom;
-		}
-		.imagelist li img {
-			float: left;
-			margin-right: -2.5em;
-			position: relative;
-			left: -3.5em;
-		}
-		.imagelist {
-			list-style-type: none;
-			margin-left: 1.5em;
-		}
-		#summary .imagelist h2 {
-			color: black;
-			display: inline;
-			font-size: 1em;
-			font-weight: bold;
-			padding-right: 0.3em;
-		}
-		#summary .imagelist div.see-also {
-			margin: 1em 0;
-		}
-		#summary .imagelist ul {
-			display: inline;
-			margin-left:0;
-			padding-left:0;
-		}
-		#summary .imagelist ul li {
-			display: inline;
-			list-style: none;
-			padding-left: .3em;
-		}
-    </style>
-
     <link href="../common/common.css" rel="stylesheet" type="text/css" />
+    <link href="content-usable.css" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
@@ -231,51 +43,60 @@
       <section id="summary" class="toctext: sum">
        <h1>Summary (Easy To Understand Language)</h1>
 <p>To help web content providers meet the needs of people with cognitive and learning disabilities we have identified the following key topics:</p>
-<ol class="imagelist">
-<li><img src="./img/StartHere.svg" alt="" width="40" height="40" />
-<h2>Help users understand what things are and how to use them.</h2> Use things that are familiar to the user so that they do not have to learn new icons, symbols, terms, or design patterns. People with cognitive and learning disabilities often need common behavior and design patterns. For example, they may know the standard convention for links (underlined and blue for unvisited; purple for visited).
-	<div class="see-also">See also:</div><ul><li><a href="#objective-1-help-users-understand-what-things-are-and-how-to-use-them">user needs</a>,</li><li><a href="#objective-1-help-users-understand-what-things-are-and-how-to-use-them-0">design patterns</a>,</li><li><a href="#objective-1-help-users-understand-what-things-are-and-how-to-use-them-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 1.</li></ul>
-</li>
-<li><img src="./img/find.svg" alt="" width="40" height="40" />
-<h2>Help users find what they need.</h2> Navigating a system should be easy. Have a clear and easy to follow layout with visual cues, such as icons. Clear headings, boundaries, and regions also helps people understand the page design.
-	<div class="see-also">See also:</div><ul><li><a href="#objective-2-help-users-find-what-they-need">user needs</a>,</li><li><a href="#objective-2-help-users-find-what-they-need-0">design patterns</a>,</li><li><a href="#objective-2-help-users-find-what-they-need-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 2.</li></ul>
-</li>
+<div class="imagelist">
+<section id="summary-understand">
+<h2>Help users understand what things are and how to use them.</h2>
+<p>Use things that are familiar to the user so that they do not have to learn new icons, symbols, terms, or design patterns. People with cognitive and learning disabilities often need common behavior and design patterns. For example, they may know the standard convention for links (underlined and blue for unvisited; purple for visited).</p>
+<div class="see-also">See also:<ul><li><a href="#objective-1-help-users-understand-what-things-are-and-how-to-use-them">user needs</a>,</li><li><a href="#objective-1-help-users-understand-what-things-are-and-how-to-use-them-0">design patterns</a>,</li><li><a href="#objective-1-help-users-understand-what-things-are-and-how-to-use-them-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 1.</li></ul></div>
+</section>
+<section id="summary-find">
+<h2>Help users find what they need.</h2>
+<p>Navigating a system should be easy. Have a clear and easy to follow layout with visual cues, such as icons. Clear headings, boundaries, and regions also helps people understand the page design.</p>
+<div class="see-also">See also:<ul><li><a href="#objective-2-help-users-find-what-they-need">user needs</a>,</li><li><a href="#objective-2-help-users-find-what-they-need-0">design patterns</a>,</li><li><a href="#objective-2-help-users-find-what-they-need-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 2.</li></ul></div>
+</section>
 	
-<li><img src="./img/clear-text.svg" alt="" width="40" height="40" />
-<h2>Use clear content (text, images and media).</h2> This includes easy words, short sentences and blocks of text, clear images, and easy to understand video.<div class="see-also">See also:</div><ul><li><a href="#objective-3-use-clear-and-understandable-content">user needs</a>,</li><li><a href="#objective-3-use-clear-and-understandable-content-0">design patterns</a>,</li><li><a href="#objective-3-use-clear-and-understandable-content-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 3.</li></ul>
-</li>
+<section id="summary-clear-content">
+<h2>Use clear content (text, images and media).</h2>
+<p>This includes easy words, short sentences and blocks of text, clear images, and easy to understand video.</p><div class="see-also">See also:<ul><li><a href="#objective-3-use-clear-and-understandable-content">user needs</a>,</li><li><a href="#objective-3-use-clear-and-understandable-content-0">design patterns</a>,</li><li><a href="#objective-3-use-clear-and-understandable-content-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 3.</li></ul></div>
+</section>
 	
-<li><img src="./img/glass.svg" alt="" width="40" height="40" />
-<h2>Help users avoid mistakes.</h2> A good design makes errors less likely. Do not ask the user for more things than you need! When errors occur, the user should find it easy to correct them.
-<div class="see-also">See also:</div><ul><li><a href="#objective-4-help-users-avoid-mistakes-and-know-how-to-correct-them">user needs</a>,</li><li><a href="#objective-4-help-users-avoid-mistakes-and-know-how-to-correct-them-0">design patterns</a>,</li><li><a href="#objective-4-help-users-avoid-mistakes-and-know-how-to-correct-them-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 4.</li></ul>
-</li>
-<li><img src="./img/light.svg" alt="" width="40" height="40" />
-<h2>Help users focus.</h2> Avoid distracting the user from their task. If the user does get distracted, headings and breadcrumbs can help orientate the user and help the user restore the context when it is lost. Providing linked breadcrumbs can help the user undo mistakes.
-<div class="see-also">See also:</div><ul><li><a href="#objective-5-help-users-focus">user needs</a>,</li><li><a href="#objective-5-help-users-focus-0">design patterns</a>,</li><li><a href="#objective-5-help-users-focus-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 5.</li></ul>
-</li>
-<li><img src="./img/memory.svg" alt="" width="40" height="40" />
-<h2>Ensure processes do not rely on memory.</h2> Memory barriers stop people with cognitive disabilities from using content. This includes long passwords to log in and voice menus that involve remembering a specific number or term. Make sure there is an easier option for people who need it.
-<div class="see-also">See also:</div><ul><li><a href="#objective-6-ensure-processes-do-not-rely-on-memory">user needs</a>,</li><li><a href="#objective-6-ensure-processes-do-not-rely-on-memory-0">design patterns</a>,</li><li><a href="#objective-6-ensure-processes-do-not-rely-on-memory-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 6.</li></ul>
-</li>
-<li><img src="./img/support.svg" alt="" width="40" height="40" /><strong> Provide help and support</strong>. This includes:
-<h2>making it easy to get human help.</h2> If users have difficulty sending feedback, then you will never know if they are able to use the content or when they are experiencing problems. In addition,
-<strong>support different ways to understand content.</strong> Graphics, summaries of long documents, adding icons to headings and links, and alternatives for numbers are all examples of extra help and support.
-<div class="see-also">See also:</div><ul><li><a href="#objective-7-provide-help-and-support">user needs</a>,</li><li><a href="#objective-7-provide-help-and-support-0">design patterns</a>,</li><li><a href="#objective-7-provide-help-and-support-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 7.</li></ul>
-</li>
-<li><img src="./img/tools.svg" alt="" width="40" height="40" />
-<h2>Support adaptation and personalization.</h2> People with cognitive and learning disabilities often use add-ons or extensions as assistive technology. Sometimes, extra support requires minimal effort from the user via personalization that allows the user to select preferred options from a set of alternatives. Support personalization when you can. Do not disable add-ons and extensions!
-<div class="see-also">See also:</div><ul><li><a href="#objective-8-support-adaptation-and-personalization">user needs</a>,</li><li><a href="#objective-8-support-adaptation-and-personalization-0">design patterns</a>,</li><li><a href="#objective-8-support-adaptation-and-personalization"> mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 8.</li></ul>
-</li>
-<li><img src="./img/users.svg" alt="" width="40" height="40" />
-<h2>Test with real users!</h2> Involve people with disabilities in the research, design, and development process. They're the experts in what works for them. This includes involving people with cognitive and learning disabilities in:
+<section id="summary-mistakes">
+<h2>Help users avoid mistakes.</h2>
+<p>A good design makes errors less likely. Do not ask the user for more things than you need! When errors occur, the user should find it easy to correct them.</p>
+<div class="see-also">See also:<ul><li><a href="#objective-4-help-users-avoid-mistakes-and-know-how-to-correct-them">user needs</a>,</li><li><a href="#objective-4-help-users-avoid-mistakes-and-know-how-to-correct-them-0">design patterns</a>,</li><li><a href="#objective-4-help-users-avoid-mistakes-and-know-how-to-correct-them-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 4.</li></ul></div>
+</section>
+<section id="summary-focus">
+<h2>Help users focus.</h2>
+<p>Avoid distracting the user from their task. If the user does get distracted, headings and breadcrumbs can help orientate the user and help the user restore the context when it is lost. Providing linked breadcrumbs can help the user undo mistakes.</p>
+<div class="see-also">See also:<ul><li><a href="#objective-5-help-users-focus">user needs</a>,</li><li><a href="#objective-5-help-users-focus-0">design patterns</a>,</li><li><a href="#objective-5-help-users-focus-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 5.</li></ul></div>
+</section>
+<section id="summary-memory">
+<h2>Ensure processes do not rely on memory.</h2>
+<p>Memory barriers stop people with cognitive disabilities from using content. This includes long passwords to log in and voice menus that involve remembering a specific number or term. Make sure there is an easier option for people who need it.</p>
+<div class="see-also">See also:<ul><li><a href="#objective-6-ensure-processes-do-not-rely-on-memory">user needs</a>,</li><li><a href="#objective-6-ensure-processes-do-not-rely-on-memory-0">design patterns</a>,</li><li><a href="#objective-6-ensure-processes-do-not-rely-on-memory-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 6.</li></ul></div>
+</section>
+<section id="summary-support"><h2> Provide help and support.</h2>
+<p>This includes:
+<strong>making it easy to get human help.</strong> If users have difficulty sending feedback, then you will never know if they are able to use the content or when they are experiencing problems. In addition,
+<strong>support different ways to understand content.</strong> Graphics, summaries of long documents, adding icons to headings and links, and alternatives for numbers are all examples of extra help and support.</p>
+<div class="see-also">See also:<ul><li><a href="#objective-7-provide-help-and-support">user needs</a>,</li><li><a href="#objective-7-provide-help-and-support-0">design patterns</a>,</li><li><a href="#objective-7-provide-help-and-support-1">mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 7.</li></ul></div>
+</section>
+<section id="summary-personalization">
+<h2>Support adaptation and personalization.</h2>
+<p>People with cognitive and learning disabilities often use add-ons or extensions as assistive technology. Sometimes, extra support requires minimal effort from the user via personalization that allows the user to select preferred options from a set of alternatives. Support personalization when you can. Do not disable add-ons and extensions!</p>
+<div class="see-also">See also:<ul><li><a href="#objective-8-support-adaptation-and-personalization">user needs</a>,</li><li><a href="#objective-8-support-adaptation-and-personalization-0">design patterns</a>,</li><li><a href="#objective-8-support-adaptation-and-personalization"> mappings to scenarios</a>,</li><li>and <a href="#Building_in_the_user">user testing</a> for objective 8.</li></ul></div>
+</section>
+<section id="summary-test">
+<h2>Test with real users!</h2>
+<p>Involve people with disabilities in the research, design, and development process. They're the experts in what works for them. This includes involving people with cognitive and learning disabilities in:</p>
 <ul>
 <li>focus groups.</li>
 <li>usability tests, and</li>
 <li>the design and research team.</li>
 </ul>
-<div class="see-also">See also:</div><ul><li><a href="#working-with-users-with-cognitive-and-learning-disabilities">working with users with cognitive and learning disabilities</a></li><li>and <a href="#Building_in_the_user">section 5</a>.</li></ul>
-</li>
-</ol>
+<div class="see-also">See also:<ul><li><a href="#working-with-users-with-cognitive-and-learning-disabilities">working with users with cognitive and learning disabilities</a></li><li>and <a href="#Building_in_the_user">section 5</a>.</li></ul></div>
+</section>
+</div>
 
 
   </section>
@@ -1876,5 +1697,4 @@ people with limited technical knowledge or are new to the web.</li></ul>
 		</section>
 
 		-->
-
 
