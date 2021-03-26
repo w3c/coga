@@ -61,9 +61,19 @@ function edNotePermalinks() {
 	});
 }
 
+function listTerms() {
+	var val = "";
+	document.querySelectorAll('dfn').forEach(function(node){
+		val += node.innerHTML + "|";
+		val += node.attributes["data-lt"].value;
+	});
+	return val;
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
+	//alert(listTerms());
 }
 
 // scripts after Respec has run
