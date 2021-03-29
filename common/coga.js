@@ -32,6 +32,7 @@ function sentenceCase(str) {
 function pathToName(path) {
 	return sentenceCase(path.replace(/-/g, " "));
 }
+*/
 
 function termTitles() {
 	// put definitions into title attributes of term references
@@ -39,7 +40,6 @@ function termTitles() {
 		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
 	});	
 }
- *  */
 
 function adjustDfnData() {
 	document.querySelectorAll('dfn').forEach(function(node){

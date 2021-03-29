@@ -9,8 +9,7 @@
    	<script src="../common/biblio.js" class="remove"></script>
    	<script src="respec-config.js" class="remove"></script>
    	<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
-   	<script class="remove">document.respecIsReady.then(() => {postRespec();});</script>
-
+   	<script class="remove">window.addEventListener('load', (event) => {document.respec.ready.then(() => {postRespec();});});</script>
     <link href="../common/common.css" rel="stylesheet" type="text/css" />
     <link href="content-usable.css" rel="stylesheet" type="text/css" />
   </head>
@@ -1686,4 +1685,3 @@ people who do not know the language or culture of the country well,</li><li> peo
 		</section>
 
 		-->
-
