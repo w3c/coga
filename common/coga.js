@@ -70,6 +70,19 @@ function listTerms() {
 	return val;
 }
 
+function stripTag(node) {
+	while (node.firstChild) {
+		node.parentNode.insertBefore(node.firstChild, node);
+	}
+	node.parentNode.removeChild(node);
+}
+
+function cleanIncludes() {
+	document.body.querySelectorAll("title").forEach(function(node){node.remove();});
+	document.body.querySelectorAll("body").forEach(function(node){stripTag(node);});
+	document.body.querySelectorAll("html").forEach(function(node){stripTag(node);});
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
@@ -80,4 +93,5 @@ function preRespec() {
 function postRespec() {
 	termTitles();
 	edNotePermalinks();
+	cleanIncludes();
 }
