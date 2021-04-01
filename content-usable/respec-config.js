@@ -16,6 +16,7 @@ var respecConfig = {
 
     // the specifications short name, as in http://www.w3.org/TR/short-name/
     shortName:            "coga-usable",
+    pluralize: true,
 
 
     // if you wish the publication date to be other than today, set this
