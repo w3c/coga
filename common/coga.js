@@ -32,6 +32,7 @@ function sentenceCase(str) {
 function pathToName(path) {
 	return sentenceCase(path.replace(/-/g, " "));
 }
+*/
 
 function termTitles() {
 	// put definitions into title attributes of term references
@@ -39,7 +40,6 @@ function termTitles() {
 		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
 	});	
 }
- *  */
 
 function adjustDfnData() {
 	document.querySelectorAll('dfn').forEach(function(node){
@@ -61,13 +61,37 @@ function edNotePermalinks() {
 	});
 }
 
+function listTerms() {
+	var val = "";
+	document.querySelectorAll('dfn').forEach(function(node){
+		val += node.innerHTML + "|";
+		val += node.attributes["data-lt"].value;
+	});
+	return val;
+}
+
+function stripTag(node) {
+	while (node.firstChild) {
+		node.parentNode.insertBefore(node.firstChild, node);
+	}
+	node.parentNode.removeChild(node);
+}
+
+function cleanIncludes() {
+	document.body.querySelectorAll("title").forEach(function(node){node.remove();});
+	document.body.querySelectorAll("body").forEach(function(node){stripTag(node);});
+	document.body.querySelectorAll("html").forEach(function(node){stripTag(node);});
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
+	//alert(listTerms());
 }
 
 // scripts after Respec has run
 function postRespec() {
 	termTitles();
 	edNotePermalinks();
+	cleanIncludes();
 }
