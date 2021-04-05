@@ -48,7 +48,7 @@ var respecConfig = {
         w3cid: 16320
       },
       {
-        name: "Rachael Montgomery",
+        name: "Rachael Bradley Montgomery",
         mailto: "rachael@accessiblecommunity.org",
         company: "Invited expert",
         w3cid: 90310
