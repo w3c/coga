@@ -43,9 +43,8 @@ function termTitles() {
 
 function adjustDfnData() {
 	document.querySelectorAll('dfn').forEach(function(node){
-		var datalt = node.getAttributeNode("data-lt");
 		var curVal = node.getAttribute("data-lt");
-		node.setAttribute("data-lt", node.textContent + (curVal == "" ? "|" : ""));
+		node.setAttribute("data-lt", node.textContent + (curVal == null ? "" : "|" + curVal));
 	});
 }
 
