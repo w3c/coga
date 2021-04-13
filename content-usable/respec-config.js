@@ -41,7 +41,7 @@ var respecConfig = {
     // only "name" is required
     editors: [
       {
-        name: "Lisa Seeman",
+        name: "Lisa Seeman-Horwitz",
         url: 'http://athena-ict.com',
         mailto: "lisa.seeman@zoho.com",
         company: "Invited expert",  
