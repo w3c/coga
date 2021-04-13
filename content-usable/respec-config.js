@@ -16,6 +16,7 @@ var respecConfig = {
 
     // the specifications short name, as in http://www.w3.org/TR/short-name/
     shortName:            "coga-usable",
+    pluralize: true,
 
 
     // if you wish the publication date to be other than today, set this
@@ -40,14 +41,14 @@ var respecConfig = {
     // only "name" is required
     editors: [
       {
-        name: "Lisa Seeman",
+        name: "Lisa Seeman-Horwitz",
         url: 'http://athena-ict.com',
         mailto: "lisa.seeman@zoho.com",
         company: "Invited expert",  
         w3cid: 16320
       },
       {
-        name: "Rachael Montgomery",
+        name: "Rachael Bradley Montgomery",
         mailto: "rachael@accessiblecommunity.org",
         company: "Invited expert",
         w3cid: 90310
@@ -92,25 +93,12 @@ var respecConfig = {
     // errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
 
     // name of the WG
-    wg:           ["Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
+    group: ["ag", "apa"],
 
-    // URI of the public WG page
-    wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
-
-    // name (with the @w3c.org) of the public mailing to which comments are due
-    wgPublicList: "public-coga-comments",
-
-    // URI of the patent status for this WG, for Rec-track documents
-    // !!!! IMPORTANT !!!!
-    // This is important for Rec-track documents, do not copy a patent URI from a random
-    // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
-    // Team Contact.
-    wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
-    maxTocLevel: 3,
+	maxTocLevel: 3,
 
     localBiblio: biblio,
 
-    // Spec URLs
-        
+	preProcess: [preRespec]
 
   };
