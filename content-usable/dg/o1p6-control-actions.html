@@ -1,0 +1,144 @@
+<h3>
+  Make the Relationship Clear Between Controls and the Content They Affect
+  (Pattern)
+</h3>
+<pre class="yaml remove">
+title: Make the Relationship Clear Between Controls and the Content They Affect
+ref: ${{ FILENAME_REF }}
+objective: ${{ FILENAME_OBJREF }}
+permalink: ${{ FILENAME_TEXT }}
+github: ${{ GITHUB_INFO }}
+feedbackemail: ${{ FEEDBACK_EMAIL }}
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need to know how to use all the controls and the effects of each action.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#clear-operation-user-story"
+      aria-label="Clear Operation User Story"
+      >Clear Operation</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    The relationship between controls and affected content should be completely
+    clear and unambiguous.
+  </p>
+  <p>This can be achieved through:</p>
+  <ul>
+    <li>visually grouping controls with the content they relate to,</li>
+    <li>including controls within the region they affect,</li>
+    <li>
+      using clear dividers or white space between regions in a page that may
+      have separate controls or a scroll bar,
+    </li>
+    <li>avoiding multiple or nested scrolling areas.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    If a control on a page operates only on part of the page, it can be hard to
+    tell what it will affect and what it will not. Users may try the wrong
+    control. Many users will try again, and discover the correct control or
+    scrollbar. However, many people with cognitive or learning disabilities may
+    not be able to work out what to do. Others will feel cognitive overload, and
+    stop as a result. They may assume the application is broken, or that it is
+    too complicated for them. For these users, the application will not be
+    usable.
+  </p>
+  <p>
+    Clear borders and groupings on the page can help indicate what element the
+    control effects. Having a border or other visual cue around the controls and
+    the relevant section can help make it more understandable. Check with user
+    testing that users with <a>cognitive and learning disabilities</a> find all
+    the page relationships clear and quickly know how to use the controls.
+    Testing is essential when the controls cannot be in the area they affect.
+  </p>
+  <p>
+    For example, consider a user living with dementia trying to work out which
+    scrollbar to use for embedded scrollable regions. When they try the wrong
+    scrollbar, they do not get the effect they desire and their content may seem
+    to disappear.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <ul>
+    <li>
+      <strong>Separate Interactive Elements</strong>. For example: Do not have
+      two scroll bars close together. Some users may find it difficult to
+      determine which one to use with a particular section of content. Instead:
+      <ul>
+        <li>use clear visual layout and placement of the scroll bars,</li>
+        <li>break the content into two separate pages, or</li>
+        <li>consider removing unnecessary information from the page.</li>
+      </ul>
+    </li>
+    <li>
+      Associate elements and their controls. Place interactive elements like
+      scroll bars and buttons close to the content they can impact. Keep
+      interactive elements further from content to which they do not apply.
+      (This makes it easier to identify which elements will impact each section
+      of content.)
+    </li>
+    <li>
+      Use dividers. Examples of clear dividers include high contrast borders or
+      white space. A change in background color can be a clear divider if the
+      contrast is strong enough.
+    </li>
+    <li>
+      Help the user see the right control. Use large clear buttons and scroll
+      bars.
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>
+      Controls clearly associated with the section they control by placing the
+      control inside the section, placing clear borders around the section, and
+      labeling the controls to match the section heading. For example:
+      <ul>
+        <li>
+          On a library site, a search box for the whole site is located in the
+          upper right of the site’s main navigation. A second search box
+          searches the library catalog. It is located within a section with a
+          clear border, different background color, and a heading “Library
+          Catalog”. The go button reads “search catalog”.
+        </li>
+        <li>
+          A page needs a scrollbar for one section. The scrollbar look like it
+          is inside the section.
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+
+  <ol>
+    <li>
+      Multiple scrollable sections where it is unclear which scrollbar to use
+      for each section.
+    </li>
+    <li>
+      Controls for one section that look like they might affect the whole page
+      or another section. For example: The search box relates to one area of a
+      page, and not for another area. It is unclear which area the search is
+      for.
+    </li>
+    <li>Multiple nested scrolling regions.</li>
+  </ol>
+</section>
