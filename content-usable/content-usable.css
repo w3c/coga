@@ -19,7 +19,6 @@
 }
 
 .objective h3::before {
-	background-size: 40px 40px;
 	width: 40px;
 	height: 40px;
 	display: inline-block;
@@ -51,36 +50,21 @@
 	content: url(img/users.svg);
 }
 
-.use {
-
-	content: "";
-	background-image: url(img/tick.gif);
-	background-size: 25px 25px;
+.use::before, .avoid::before, .wtd h5::before {
 	width: 25px;
 	height: 25px;
 	display: inline-block;
 	margin-right: .5em;
 	vertical-align: text-bottom;
 }
-.avoid {
-	content: "";
-	background-image: url(img/x.JPG);
-	background-size: 25px 25px;
-	width: 25px;
-	height: 25px;
-	display: inline-block;
-	margin-right: .5em;
-	vertical-align: text-bottom;
+.use::before {
+	content: url(img/tick.gif);
+}
+.avoid::before {
+	content: url(img/x.JPG);
 }
 .wtd h5::before {
-	content: "";
-	background-image: url(img/RightArrow.svg);
-	background-size: 25px 25px;
-	width: 25px;
-	height: 25px;
-	display: inline-block;
-	margin-right: .5em;
-	vertical-align: text-bottom;
+	content: url(img/RightArrow.svg);
 }
 .see-also {
 	margin: 1em 0;
