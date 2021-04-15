@@ -82,9 +82,39 @@ function cleanIncludes() {
 	document.body.querySelectorAll("html").forEach(function(node){stripTag(node);});
 }
 
+function getTextNodes() {
+  const acceptNode = (/** @type {Text} */ node) => {
+    if (!options.wsNodes && !node.data.trim()) {
+      return NodeFilter.FILTER_REJECT;
+    }
+    return NodeFilter.FILTER_ACCEPT;
+  };
+  const nodeIterator = document.createNodeIterator(
+    document.body,
+    NodeFilter.SHOW_TEXT,
+    acceptNode
+  );
+  /** @type {Text[]} */
+  const textNodes = [];
+  let node;
+  while ((node = nodeIterator.nextNode())) {
+    textNodes.push(/** @type {Text} */ (node));
+  }
+  return textNodes;
+}
+
+function linkTerms() {
+	var terms = "";
+	document.querySelectorAll("dfn[data-lt]").forEach(function(node){
+		terms += node.getAttribute("data-lt") + "|";	
+	});
+	alert (terms);
+}
+
 // scripts before Respec has run
 function preRespec() {
 	adjustDfnData();
+	linkTerms();
 	//alert(listTerms());
 }
 
