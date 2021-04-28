@@ -42,7 +42,7 @@ function termTitles() {
 		document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.querySelectorAll("p").forEach(function(p){
 			if (!p.classList.contains("alternates") && !done) {
 				var string = p.textContent.trim();
-				node.title = string.replace("/(.*?)\..*/g", "$1").replace(/\s+/g,' ');
+				node.title = string.replace(/(.*?)\..*/, "$1").replace(/\s+/g,' ');
 				done = true;
 			}
 		});
