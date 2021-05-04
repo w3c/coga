@@ -37,15 +37,22 @@ function pathToName(path) {
 function termTitles() {
 	// put definitions into title attributes of term references
 	document.querySelectorAll('.internalDFN').forEach(function(node){
-		node.title = document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.firstElementChild.textContent.trim().replace(/\s+/g,' ');
+		var result;
+		var done = false;
+		document.querySelector(node.href.substring(node.href.indexOf('#'))).parentNode.nextElementSibling.querySelectorAll("p").forEach(function(p){
+			if (!p.classList.contains("alternates") && !done) {
+				var string = p.textContent.trim();
+				node.title = string.replace(/(.*?)\..*/, "$1").replace(/\s+/g,' ');
+				done = true;
+			}
+		});
 	});	
 }
 
 function adjustDfnData() {
 	document.querySelectorAll('dfn').forEach(function(node){
-		var datalt = node.getAttributeNode("data-lt");
 		var curVal = node.getAttribute("data-lt");
-		node.setAttribute("data-lt", node.textContent + (curVal == "" ? "|" : ""));
+		node.setAttribute("data-lt", node.textContent + (curVal == null ? "" : "|" + curVal));
 	});
 }
 
