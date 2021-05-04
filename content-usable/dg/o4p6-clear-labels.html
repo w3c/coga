@@ -1,0 +1,106 @@
+<h3>Use Clear Visible Labels (Pattern)</h3>
+<pre class="yaml remove">
+title: Use Clear Visible Labels 
+ref: ${{ FILENAME_REF }}
+objective: ${{ FILENAME_OBJREF }}
+permalink: ${{ FILENAME_TEXT }}
+github: ${{ GITHUB_INFO }}
+feedbackemail: ${{ FEEDBACK_EMAIL }}
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need clear labels, step-by-step instructions, and clear error messages.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#assistance-and-support-user-story"
+      aria-label="Assistance and Support User Story"
+      >Assistance and Support</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>Use clear labels. Labels should:</p>
+  <ul>
+    <li>use common words and <a>easy to understand language</a>,</li>
+    <li>be visible and next to the relevant control, and</li>
+    <li>
+      be readable by assistive technologies, including those used by people with
+      <a>cognitive and learning disabilities</a>.
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    When labels are missing or unclear, users often do not know that the feature
+    is available or what the control is. Although many users can guess what a
+    control is for users with <a>cognitive and learning disabilities</a> with
+    impaired memory or <a>executive function</a> are less likely to be able to
+    remember the design pattern or work out what it is. A clear label that uses
+    familiar terms and is located next to the control, helps people with
+    <a>cognitive and learning disabilities</a>.
+  </p>
+  <p>
+    Similarly, if a label is not next to a control it is confusing for some
+    users. When a label cannot be next to a control, there should be clear
+    visual indicators that visibly and unambiguously associate the label with
+    the control. This will need user testing with users who have learning and
+    <a>cognitive and learning disabilities</a> to ensure it is usable.
+  </p>
+  <p>
+    For example, a user living with <a>early stage dementia</a> is using an
+    application. Some controls do not have visual labels. A caregiver shows them
+    what the control is for and they can use the application. The next day they
+    try to use it again, but cannot remember what the control is for. This
+    application is not usable for them.
+  </p>
+  <p>
+    In another example, the label disappears when the focus is removed. The user
+    cannot remember what the control is and does not know how to make it
+    reappear.
+  </p>
+  <p>
+    Labels need to be visible, readable by assistive technology, and be nearby
+    the labeled content.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>
+    Many people with <a>cognitive and learning disabilities</a> use web
+    extensions and simple text-to-speech. These assistive technologies often do
+    not read WAI-ARIA [[wai-aria-1.2]] or titles. Until that changes, or an
+    extension displays them, labels should not rely on these attributes for
+    people with <a>cognitive and learning disabilities</a>.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>
+      Visible labels that use simple common words and are next to the control.
+      For example:
+      <ul>
+        <li>first name ____________________</li>
+      </ul>
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>
+      Hidden labels or labels that use uncommon words that are not easy to
+      understand. It is unclear what action is needed. For example:
+      <ul>
+        <li>given name ___________________</li>
+      </ul>
+    </li>
+  </ol>
+</section>

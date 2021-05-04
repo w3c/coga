@@ -1,0 +1,106 @@
+<h3>Include Symbols and Letters Necessary to Decipher the Words (Pattern)</h3>
+<pre class="yaml remove">
+title: Include Symbols and Letters Necessary to Decipher the Words
+ref: ${{ FILENAME_REF }}
+objective: ${{ FILENAME_OBJREF }}
+permalink: ${{ FILENAME_TEXT }}
+github: ${{ GITHUB_INFO }}
+feedbackemail: ${{ FEEDBACK_EMAIL }}
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need words to include accents, characters, and diacritics that are
+      necessary to phonetically read the words. This is often needed for speech
+      synthesis and phonetic readers in languages like Arabic and Hebrew.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#clear-language-written-or-audio-user-story"
+      aria-label="Clear Language User Story"
+      >Clear Language</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Include vowels, letters, or diacritic marks that users need to decipher
+    words correctly. This is often needed in languages like Arabic and Hebrew.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    Some languages, such as Hebrew and Arabic, have optional vowels and
+    diacritic marks. Without these marks, most words with the same characters
+    have between two (Hebrew) and seven (Arabic) different ways of being
+    pronounced with different meanings. Most readers can read the word based on
+    the context, and use their visual memory to guess the correct pronunciation.
+    People with impaired visual memory, slow readers, and text-to-speech may
+    often guess the incorrect term or pronunciation.
+  </p>
+
+  <p>
+    For example, a user with a language disability is trying to sound out a
+    word. They guess three different pronunciations until they find one that
+    makes sense. Unfortunately, many people with language impairments cannot
+    work out the meaning as words out of context may only provide an idea rather
+    than a specific meaning. Text-to-speech often requires these characters to
+    speak the correct word.
+  </p>
+
+  <p>
+    Note that not all diacritic marks are necessary to pronounce the word
+    correctly. Only letters and diacritic marks that are necessary for the
+    unambiguous pronunciation need to be included.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>Words can be deciphered and pronounced to have the correct meaning.</p>
+</section>
+<section>
+  <h5 class="coga-5">Getting Started</h5>
+  <p>
+    In Hebrew add additional Yud (י) and Vav (ו) that enables correct
+    pronunciation.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p>
+    <strong><span class="use"></span>Use:</strong>
+  </p>
+  <ol>
+    <li>
+      Additional letters or diatric marks that enable correct pronunciation. For
+      example:
+
+      <ul>
+        <li>He says: <span dir="rtl" lang="he">אֹמַר /אומר</span> (Hebrew)</li>
+        <li>He wrote: <span dir="rtl" lang="ar"> كَتَب</span> (Arabic)</li>
+        <li>Books: <span dir="rtl" lang="ar">كُتُبْ</span> (Arabic)</li>
+        <li>
+          It was written: <span dir="rtl" lang="ar">كُتِبَ</span> (Arabic)
+        </li>
+      </ul>
+    </li>
+  </ol>
+
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>
+      Words without needed letters or diatric marks so the user must guess the
+      pronunciation based on memory and context. For example:
+      <ul>
+        <li><span dir="rtl" lang="he">אמר</span> (Hebrew)</li>
+        <li><span dir="rtl" lang="ar">كتب</span> (Arabic)</li>
+      </ul>
+    </li>
+  </ol>
+</section>

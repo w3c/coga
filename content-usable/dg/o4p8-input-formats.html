@@ -1,0 +1,102 @@
+<h3>Accept different input formats (Pattern)</h3>
+<pre class="yaml remove">
+title: Accept different input formats 
+ref: ${{ FILENAME_REF }}
+objective: ${{ FILENAME_OBJREF }}
+permalink: ${{ FILENAME_TEXT }}
+github: ${{ GITHUB_INFO }}
+feedbackemail: ${{ FEEDBACK_EMAIL }}
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need inputs to accept different formats and not mark them as mistakes.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#assistance-and-support-user-story"
+      aria-label="Assistance and Support User Story"
+      >Assistance and Support</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Accept all format variations in text inputs for values such as currency,
+    time zone, locale, address, or credit card number.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    Forgiving form entry processes help the user fill out forms, without an
+    overwhelming amount of errors. They can avoid asking for help when errors
+    cause them problems. This reduces frustration while enhancing the user’s
+    autonomy and independence.
+  </p>
+
+  <p>
+    This benefits anybody with a learning and cognitive disability or
+    <a>age related forgetfulness</a>. It will also help anyone who is used to a
+    different format.
+  </p>
+  <p>
+    For example, a user with <a>age related forgetfulness</a> enters their phone
+    number with hyphens inserted. They receive an error message, because the
+    system does not accept that format. They wonder if they have forgotten their
+    phone number or made a different mistake. They stop trying to use the form.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>Platform facilities for flexible input types and validation.</li>
+    <li>
+      Research and support for different formats that might be entered,
+      including international variations.
+    </li>
+    <li>Minimal required fields.</li>
+    <li>
+      Flexible input fields that accept different formats. For example, an input
+      field that accepts:
+      <ul>
+        <li>various currency symbols,</li>
+        <li>a credit card number with or without spaces,</li>
+        <li>
+          telephone numbers as written in many regions, including country code,
+          region code, and number using optional brackets, and
+        </li>
+        <li>international characters such as those with accents.</li>
+      </ul>
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>Restricting entries to arbitrary lengths.</li>
+    <li>
+      Insisting on specific separator characters if they are not required and
+      can be ignored.
+    </li>
+    <li>
+      Input fields that do not accept the format that the user may use. For
+      example:
+      <ul>
+        <li>
+          Forcing users to use a specific currency value that they may not be
+          their currency.
+        </li>
+        <li>
+          A credit number field that requires no spaces even though cards have
+          numbers printed with spaces.
+        </li>
+        <li>Telephone number field will not accept + codes or brackets.</li>
+      </ul>
+    </li>
+  </ol>
+</section>

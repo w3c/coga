@@ -2,7 +2,7 @@
 
 <pre class="yaml remove"> 
 title: About Design Guide
-permalink: ${{ FILENAME_TEXT }}
+permalink: ${{ FILENAME }}
 github: ${{ GITHUB_INFO }}
 feedbackemail: ${{ FEEDBACK_EMAIL }}
 </pre>
@@ -21,7 +21,7 @@ in the normative WCAG [[WCAG22]] specification and may not otherwise be
 addressed.
 
 This guide is divided into design objectives. An outline of these objectives
-can also be found in the Summary section. Simply understanding the objectives
+can also be found in the <a href="#summary">summary section</a>. Simply understanding the objectives
 and related user stories may help designers make content more accessible to
 some users with <a>cognitive and learning disabilities</a>.
 

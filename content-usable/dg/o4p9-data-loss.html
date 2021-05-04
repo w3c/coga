@@ -1,0 +1,137 @@
+<h3>Avoid Data Loss and “Timeouts” (Pattern)</h3>
+<pre class="yaml remove">
+title: Avoid Data Loss and “Timeouts” 
+ref: ${{ FILENAME_REF }}
+objective: ${{ FILENAME_OBJREF }}
+permalink: ${{ FILENAME_TEXT }}
+github: ${{ GITHUB_INFO }}
+feedbackemail: ${{ FEEDBACK_EMAIL }}
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need time to complete my work. I do not want a session to timeout while
+      I try to find the information needed, such as my postal/zip code or social
+      security number.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#assistance-and-support-user-story"
+      aria-label="Assistance and Support User Story"
+      >Assistance and Support</a
+    >.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">What to do</h5>
+  <p>Avoid timeouts and let the user save their work as they go.</p>
+  <p>
+    When this is not possible, inform the user when they initiate the process:
+  </p>
+  <ul>
+    <li>the amount of time available to complete the process,</li>
+    <li>if the user will lose entered data if a timeout occurs.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    Timed events can present significant barriers for users with
+    <a>cognitive and learning disabilities</a>. These users may require more
+    time to read content or to perform functions, such as completing an online
+    form. They may need to read help or look at notes.
+  </p>
+  <p>
+    Users with <a>cognitive and learning disabilities</a> may need additional
+    time to look up the information required to complete a transaction. They may
+    need a break, without losing their place in the process, and without losing
+    data that has already been entered.
+  </p>
+  <p>
+    For example, while making a purchase on an e-commerce web site, a user does
+    not remember required information. This may be a date, a phone number, or a
+    zip code that may seem easy to remember for users without a cognitive or
+    learning disability. They need to look up this information, which takes them
+    time away from the screen. Then they need to copy it carefully into the
+    form.
+  </p>
+
+  <p>
+    In another example, a user is completing an online process for reserving a
+    hotel room and purchasing a plane ticket. They become overwhelmed with the
+    amount of instruction and data input required to complete the process. The
+    user cannot complete the process in one sitting, and takes a break.
+  </p>
+
+  <p>
+    Users’ cognitive skills may diminish as they get tired. They then must stop
+    the task for that day. When users know that their data won’t be lost, they
+    can recover from mental fatigue and return to successfully complete the
+    task.
+  </p>
+  <p>
+    It is important to note that many people need time to read the “timeout”
+    notice. Often, the session ends before the user has finished reading about
+    how to extend the time. If the user is looking up information, they will not
+    see the timeout notice.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>
+    When a web site must timeout because sensitive information (such as credit
+    card information) is entered or displayed, the web site should ask for the
+    sensitive information at the last stage.
+  </p>
+  <p>
+    The web site should also warn the user that once they give the credit card
+    information they should complete the process quickly as the session can
+    timeout.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>Unlimited time, when possible.</li>
+    <li>
+      Timeouts that users with learning and cognitive disabilities find it easy
+      to avoid. For example: At the start of the task the user is told that they
+      have a day to complete the task. They have an option to set it to longer.
+    </li>
+    <li>
+      When the timeout is needed:
+      <ol>
+        <li>
+          <strong>Timeout warnings at the start of the task.</strong> For
+          example: In an auction, there is a time limit on the amount of time a
+          user has to submit a bid. At the start of the task, the user is warned
+          about the time limit, and how long they have until the time ends.
+        </li>
+        <li>
+          <strong>When possible and safe, the user’s work is not lost.</strong>
+          For example: A web site with sensitive information uses a client-side
+          time limit to help protect users who may step away from their
+          computers. When the user logs in again all the work is still in place.
+          The user is warned ahead of time how long they have for inactive
+          sessions and is told that their data will not be lost.
+        </li>
+      </ol>
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>System timeouts that are not necessary for security.</li>
+    <li>
+      System timeouts without warning the user at the start of the process.
+    </li>
+    <li>
+      System timeouts where the user loses their work, without it being a
+      security or privacy risk.
+    </li>
+  </ol>
+</section>

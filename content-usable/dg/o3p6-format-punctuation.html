@@ -1,0 +1,191 @@
+<h3>Use Clear, Unambiguous Formatting and Punctuation (Pattern)</h3>
+<pre class="yaml remove">
+title: Use Clear, Unambiguous Formatting and Punctuation
+ref: ${{ FILENAME_REF }}
+objective: ${{ FILENAME_OBJREF }}
+permalink: ${{ FILENAME_TEXT }}
+github: ${{ GITHUB_INFO }}
+feedbackemail: ${{ FEEDBACK_EMAIL }}
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need to understand the language used, including vocabulary, syntax,
+      tense, and other aspects of language.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#clear-language-written-or-audio-user-story"
+      aria-label="Clear Language User Story"
+      >Clear Language</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>Use short blocks of text</p>
+  <p>This includes:</p>
+  <ul>
+    <li>
+      Keep paragraph
+      <section>
+        <h5 class="coga-5">User Need</h5>
+        <blockquote>
+          <p>
+            I need words to include accents, characters, and diacritics that are
+            necessary to phonetically read the words.
+          </p>
+        </blockquote>
+        <p>
+          Related User Story:
+          <a
+            href="#clear-language-written-or-audio-user-story"
+            aria-label="Clear Language User Need"
+            >Clear Language</a
+          >.
+        </p>
+      </section>
+      <section class="wtd">
+        <h5 class="coga-5">What to Do</h5>
+        <p>
+          Use punctuation and format for text, numbers, and symbols that reduce
+          ambiguity and improve readability and comprehension.
+        </p>
+      </section>
+      <section>
+        <h5 class="coga-5">How it Helps</h5>
+        <p>
+          For some readers, decoding words, numbers, and symbols does not happen
+          automatically and can be demanding on working memory and
+          <a>executive functions</a>. If they find content too demanding they
+          are at risk of losing its meaning.
+        </p>
+        <p>
+          Some users may use assistive technology or personalization tools to
+          help understand content such as text-to-speech that reads aloud the
+          content. However, sometimes the punctuation or format makes it more
+          likely that the screen reader will read it incorrectly. For example,
+          Roman numerals may be read as text.
+        </p>
+        <p>
+          A user with a learning disability may be unable to manipulate letters,
+          numbers, and words to correct mistakes that occur because of
+          formatting or punctuation errors. They also need to focus on
+          understanding the meaning of the content in order to use it.
+        </p>
+        <p>
+          For example, a user with a communication disability may listen to
+          content using text-to-speech. If the content is phrased correctly,
+          they can understand it. Sometimes they hear content read incorrectly
+          or skipped, particularly numbers and symbols, and they cannot
+          understand it. If text, numbers or symbols are in an unfamiliar
+          layout, the user may become confused.
+        </p>
+        <p>
+          In contrast, a blind person listening to the content, is likely to be
+          able to figure out the correct meaning even when words are not
+          pronounced correctly. However, the word manipulations necessary to
+          work out the correct meaning are not achievable by someone with a
+          communications or language impairment.
+        </p>
+      </section>
+      <section>
+        <h5 class="coga-5">More Details</h5>
+        <p>
+          <strong>Use language tags. </strong>Language tags are the key means to
+          achieve the goal of unambiguous text formatting. See HTML [[HTML]]
+          language tags and
+          <a href="https://tools.ietf.org/html/bcp47">BCP 47 Language Codes</a>.
+        </p>
+        <p>
+          <strong>Use punctuation correctly</strong> for the language you are
+          writing in, as it will affect how the stress and intonation (known as
+          prosody) patterns from the text are heard, when converted into speech.
+          For example, in English, commas and semicolons will result in a short
+          pause in the speech, whereas a hyphen - will generally be ignored.
+          Question marks, exclamation marks, and speech marks can result in
+          changes in intonation, such as a rise in the pitch of the voice.
+        </p>
+        <p>
+          <strong
+            >Avoid the use of Roman Numerals and unfamiliar symbols</strong
+          >
+          in text were possible. These can confuse readers and are likely to be
+          read incorrectly by text-to-speech tools. If these symbols are
+          necessary then ensure they are marked up correctly, using techniques
+          such as MathML and abbreviation expansions to provide additional
+          support. Roman Numerals should be presented in upper case if used in
+          isolation as they are likely to be read as individual letters.
+        </p>
+        <p>
+          Long numbers may be read as single digits or phrased as a single
+          number. This is a particular problem for phone numbers or zip codes.
+          While it is difficult to control exactly how these numbers are read
+          aloud, content creators can help by:
+        </p>
+        <ul>
+          <li>
+            Displaying the content of the number and using HTML semantics to
+            ensure users and assistive technologies are aware of the number’s
+            purpose. In addition, the following recommendations can assist with
+            improving text-to-speech rendering:
+          </li>
+          <li>
+            For phone numbers, use the correct layout for the locality of the
+            phone number and ensure users can select the whole phone number
+            (including area code), so that text-to-speech voices can recognize
+            the format and phrase it correctly.
+          </li>
+          <li>
+            For Zip / Postal codes, include state or address information close
+            to the number so that speech voices can expand known abbreviations
+            (such as state names) and listeners can perceive the context.
+          </li>
+          <li>
+            When writing long numbers, consider what separators will be familiar
+            to your readers and how it will be read aloud. In general, English
+            speaking countries will use commas between thousands and a period as
+            the decimal separator whereas German and other European countries do
+            the opposite. For example, 1,245 would represent one thousand two
+            hundred and forty-five in English, but one point two four five in
+            German. Text-to-speech output will assume the separators are being
+            used in the format of the language of its voice. If this does not
+            match the content, then listeners can become easily confused. While
+            replacing thousand separators with a space has become a common
+            convention to avoid confusion, it leads to difficulties with
+            text-to-speech with long numbers being read out in a disjointed
+            fashion. For example, 120 034 943 can be read as one hundred and
+            twenty, zero three four, nine hundred and forty-three.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h5 class="coga-5">Examples</h5>
+        <p><span class="use"></span><strong>Use:</strong></p>
+        <ol>
+          <li>
+            Dates that can be read and understood in any culture.
+            <p>
+              Consider how you write dates, because once again the
+              text-to-speech will use the format associated with the language of
+              the voice. A date such as 04/03/2019 will be read as “April 3rd
+              2019” by a US English voice and “4th of March 2019” by a British
+              English voice. Writing out the month in words can avoid confusion.
+            </p>
+          </li>
+        </ol>
+        <p><span class="avoid"> </span><strong>Avoid:</strong></p>
+        <ol>
+          <li>
+            Dates and numbers that are not clear or read differently based on
+            culture.
+          </li>
+        </ol>
+      </section>
+    </li>
+  </ul>
+</section>
