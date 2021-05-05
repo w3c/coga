@@ -15,8 +15,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  copy-rules:
-    name: Copy rules
+  build-design-guide:
+    name: Build Design Guide
     runs-on: ubuntu-latest
     env:
       DESTINATION_REPO: w3c/wai-coga-design-guide
@@ -39,7 +39,8 @@ jobs:
       - name: Build Web Design Guide
         run: |
           echo "Build"
-          content-usable/generate.sh
+          pwd
+          ./content-usable/generate.sh
           cp "this/dg/_site/" "webdg/"
           ls -R webdg
           exit
