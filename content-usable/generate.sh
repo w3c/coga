@@ -46,4 +46,3 @@ parse_file $SOURCEDIR/about.md $DESTDIR/content
 for file in $SOURCEDIR/o?-*.html; do parse_file $file $DESTDIR/_objectives; done
 for file in $SOURCEDIR/o?p*.html; do parse_file $file $DESTDIR/_patterns; done
 
-cp -r $DESTDIR/* ../wai/wai-coga-design-guide/
