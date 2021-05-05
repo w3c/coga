@@ -39,17 +39,12 @@ jobs:
           
       - name: Build Web Design Guide
         run: |
-          pwd
-          ls -la . this
-          ./content-usable/generate.sh
+          this/content-usable/generate.sh
           cp "this/dg/_site/" "webdg/"
-          ls -R webdg
-          exit
 
       - name: Commit and push
         run: |
-          echo "Commit"
-          cd wwebdg
+          cd webdg
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
