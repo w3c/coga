@@ -39,8 +39,10 @@ jobs:
           
       - name: Build Web Design Guide
         run: |
-          this/content-usable/generate.sh
-          cp "this/dg/_site/" "webdg/"
+          cd this
+          content-usable/generate.sh
+          cp "content-usable/dg/_site/" "webdg/"
+          cd ..
 
       - name: Commit and push
         run: |
