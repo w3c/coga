@@ -1,6 +1,6 @@
-<h3>Provide Reminders (Pattern)</h3>
+<h3>Provide Help with Directions (Pattern)</h3>
 <pre class="yaml remove">
-title: Provide Reminders
+title: Provide Help with Directions 
 ref: ${{ FILENAME_REF }}
 objective: ${{ FILENAME_OBJREF }}
 permalink: ${{ FILENAME_TEXT }}
@@ -11,153 +11,120 @@ feedbackemail: ${{ FEEDBACK_EMAIL }}
 <section>
   <h5 class="coga-5">User Need</h5>
   <blockquote>
-    <p>
-      I need reminders integrated into my calendar, otherwise I will forget
-      appointments and when I am meant to do things. Sometimes I need reminders
-      to revisit a web site to complete the next task.
-    </p>
+    <p>I need help understanding and using directions and navigation.</p>
   </blockquote>
   <p>
     Related User Story:
-    <a href="#support-user-story" aria-label="Support User Story">Support</a>.
+    <a href="#help-user-story" aria-label="Help User Story">Help</a>.
   </p>
 </section>
 <section class="wtd">
   <h5 class="coga-5">What to Do</h5>
   <p>
-    Make it easy for the user to set a reminder for date and time sensitive
-    events. Use standard application programming interfaces (APIs) when
-    possible.
+    Content is provided that helps users understand and use directions or
+    navigational systems. This can include:
   </p>
-  <p>
-    Reminders must be set only at the user’s request and the user must be able
-    to personalize the remainder method.
-  </p>
+  <ul>
+    <li>Providing landmarks that are easily recognized.</li>
+    <li>
+      Providing cardinal directions (general or global) that can be related to a
+      static object such as north of the tower.
+    </li>
+    <li>
+      Helping people avoid changes that confuse them, such as a change of
+      orientation or routing.
+    </li>
+    <li>Facilitating reorientation when leaving the route.</li>
+    <li>Supporting different ways people are aware of distances.</li>
+    <li>
+      Allowing personalization of terms such as directions and measurements.
+    </li>
+  </ul>
 </section>
 <section>
   <h5 class="coga-5">How it Helps</h5>
   <p>
-    People with cognitive and learning disabilities often have challenges
-    managing events and time. (In fact, being unable to correctly manage events
-    and time without support is a diagnostic criterion for some groups of
-    disabilities.) This results in missing meetings, not submitting a request by
-    a certain date or a form within a specified time period and missed
-    opportunities. For example:
+    People with <a>cognitive and learning disabilities</a> experience different
+    levels of difficulty with wayfinding directions or wayfinding applications.
+    The help needed to address wayfinding issues can be different for indoor
+    navigation, where there are more stimuli, and outdoors, where there can be
+    more demands on memory. The help needed also varies with the individual.
+  </p>
+
+  <p>
+    Wayfinding requires many cognitive functions. Designs should accommodate a
+    wide range of cognitive and learning disabilities including those supported
+    by other design patterns. For example:
   </p>
   <ul>
-    <li>
-      When the user copies information into a calendar they often copy the day
-      or time incorrectly.
-    </li>
-    <li>
-      The user is challenged processing and retaining time based information.
-    </li>
-    <li>The user may find it hard to sequence time-bound events.</li>
-    <li>
-      The user’s skills decrease when tired to such an extent that they have to
-      stop a task. They may wish to reschedule the task.
-    </li>
+    <li>memory,</li>
+    <li><a>executive function</a>,</li>
+    <li>spatial orientation,</li>
+    <li>visual/spatial attention, perception, and processing,</li>
+    <li>spatial disorientation anxiety,</li>
+    <li>language processing,</li>
+    <li>intellectual,</li>
+    <li>attention.</li>
   </ul>
   <p>
-    Using calendar
-    <abbr title="application programming interface">APIs</abbr> (or task
-    manager) that allow the user to automatically add events and deadlines to
-    their own calendar can help.
+    Some users may need more detailed help, such as step-by-step directions.
+    Many users need to preview a route before following it. Then landmarks can
+    help with recognition and orientation as well as reducing anxiety.
+    Alternative relative directional terms and cardinal directions matching a
+    user’s preferences are most effective. For example, the application could
+    refer to “the driver’s side” or “the East Wing”. Helping people imagine
+    relative and absolute distances can help, for example, “you’ve travelled
+    half way”.
   </p>
   <p>
-    For example, a user with a cognitive and learning disability sets a doctor’s
-    appointment online. Often they copy the details incorrectly into their
-    calendar. However, in this case, the web site gives them an option to add
-    the appointment to the calendar and sets a reminder an hour before. The user
-    now comes to the correct place at the correct time with the correct papers.
+    Due to the wide variation in personal requirements, personalization
+    mechanisms can be very useful. For example, the units used for distances.
+    Platforms or other technologies often provide personalization options for
+    relative and cardinal directions and terms which can be used. For example,
+    the platform locale settings.
   </p>
   <p>
-    The benefit to users with cognitive accessibility needs is that they can
-    independently manage appointments, deadlines, and schedules. The ability to
-    set reminders can reduce the cognitive load associated when processing time
-    bound tasks. Time dependent activities may be monitored and tracked by the
-    user to ensure that they are completed in a timely manner.
+    Changes can be very confusing. A user may be prepared to change the route to
+    save hours of traffic, but this will involve them pulling into a gas station
+    to learn the new route. They may not want to change routes to avoid a small
+    amount of traffic. Help the user to find the option that works for them.
   </p>
   <p>
-    Always give the option to set a reminder at the end of the task so that the
-    user does not get interrupted.
+    For example, a person with traumatic <a>brain injury</a> is using a Global
+    Positioning System (GPS). They review the route before leaving, and look at
+    pictures of the turns. These preparations will enable them to follow the
+    route. While driving, the route changes to avoid three minutes of traffic.
+    They are no longer able to follow it and become lost.
   </p>
-  <p>
-    It is essential not to add unwanted reminders, as this makes the user’s
-    calendar too full. This can even prevent them from being able to use their
-    calendar at all. The user is the best person to know how many reminders, and
-    which type, will best meet their needs.
-  </p>
-</section>
-<section>
-  <h5 class="coga-5">More Details</h5>
-  <p>
-    Where a standard mechanism exists for the platform or technologies, it must
-    be used. See:
-  </p>
-  <ul>
-    <li>
-      <a href="https://developer.mozilla.org/en/docs/Web/API/notification"
-        >Web Notification API</a
-      >
-    </li>
-    <li>
-      <a href="https://www.html5rocks.com/en/tutorials/notifications/quick/"
-        >Using the Notifications API</a
-      >
-    </li>
-    <li>
-      <a
-        href="https://developers.google.com/google-apps/calendar/concepts/reminders"
-        >Reminders and Notifications</a
-      >
-    </li>
-  </ul>
-  <p>
-    Date and time sensitive events are any event that has to be completed by a
-    certain time. The time constraints on such an event may be defined by a
-    calendar date and time or by the total elapsed time.
-  </p>
-  <p>Variables that could be considered include:</p>
-  <ul>
-    <li>Time - at a logical time.</li>
-    <li>Location - prompted when at an appropriate location.</li>
-    <li>Context - on computer vs. mobile, on specific a site, etc.</li>
-  </ul>
 </section>
 <section>
   <h5 class="coga-5">Examples</h5>
   <p><span class="use"></span><strong>Use:</strong></p>
   <ol>
     <li>
-      Options for the user to add the event to their calendar and set a
-      reminder. For example:
-      <ul>
-        <li>
-          A health care site allows you to set a local medical appointment. Once
-          the appointment is set the user is given the option to add it to their
-          calendar (automatically) with a reminder three hours before. They are
-          also given the option to add or edit the reminder.
-        </li>
-      </ul>
+      A second way to indicate left and right that is always available or a way
+      to personalize the indication.
     </li>
+    <li>
+      Directions that use landmarks. For example, images of local landmarks are
+      provided or can be added to help with orientation during wayfinding.
+    </li>
+    <li>Options that are available to avoid unwanted changes.</li>
+    <li>Extra support that is available.</li>
   </ol>
   <p><span class="avoid"></span><strong>Avoid:</strong></p>
   <ol>
     <li>
-      Events that are added to the user’s calendar that the user does not want
-      to attend.
+      Consistent reference to points of the compass including less well known
+      ones (e.g. N by NE).
     </li>
     <li>
-      The user cannot automatically add the events and appointments they just
-      set to their calendar. For example:
-      <ul>
-        <li>
-          A health care site allows you to set a local medical appointment. The
-          user is not given the option to automatically add it to their calendar
-          or set a reminder.
-        </li>
-      </ul>
+      Instructions that always assume that the person is at the expected
+      location. They do not have an easy way to recover.
+    </li>
+    <li>
+      Content that changes automatically in ways that the user does not want or
+      control.
     </li>
   </ol>
 </section>

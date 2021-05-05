@@ -918,11 +918,123 @@ people who do not know the language or culture of the country well,</li><li> peo
 
 		</section>
 
-    <section id="design_for_everyone">
-      <h1>Design Guide</h1>
-        <div data-include="design.html" data-oninclude="fixIncludes" data-include-replace="true"></div>
-    </section>
-
+    <!-- TODO do we need data-oninclude="fixIncludes" -->
+	<section id="design_for_everyone">
+		<h1>Design Guide</h1>
+		<div
+		  data-include="dg/about.md"
+		  data-include-format="markdown"
+		  data-include-replace="true"
+		></div>
+  
+		<section class="objective-1">
+		  <div
+			data-include="dg/o1-understandable.html"
+			data-include-replace="true"
+		  ></div>
+		  <section data-include="dg/o1p1-clear-purpose.html"></section>
+		  <section data-include="dg/o1p2-familiar-design.html"></section>
+		  <section data-include="dg/o1p3-consistent-design.html"></section>
+		  <section data-include="dg/o1p4-clear-steps.html"></section>
+		  <section data-include="dg/o1p5-clear-controls.html"></section>
+		  <section data-include="dg/o1p6-control-actions.html"></section>
+		  <section data-include="dg/o1p7-icons-used.html"></section>
+		</section>
+  
+		<section class="objective-2">
+		  <div data-include="dg/o2-find.html" data-include-replace="true"></div>
+		  <section data-include="dg/o2p1-site-important.html"></section>
+		  <section data-include="dg/o2p2-site-structure.html"></section>
+		  <section data-include="dg/o2p3-page-structure.html"></section>
+		  <section data-include="dg/o2p4-page-important.html"></section>
+		  <section data-include="dg/o2p5-chunked-media.html"></section>
+		  <section data-include="dg/o2p6-search.html"></section>
+		</section>
+  
+		<section class="objective-3">
+		  <div
+			data-include="dg/o3-clear-content.html"
+			data-include-replace="true"
+		  ></div>
+		  <section data-include="dg/o3p1-clear-words.html"></section>
+		  <section data-include="dg/o3p2-simple-tense.html"></section>
+		  <section data-include="dg/o3p3-double-negatives.html"></section>
+		  <section data-include="dg/o3p4-literal-language.html"></section>
+		  <section data-include="dg/o3p5-succinct-text.html"></section>
+		  <section data-include="dg/o3p6-format-punctuation.html"></section>
+		  <section data-include="dg/o3p7-symbols-letters.html"></section>
+		  <section data-include="dg/o3p8-summary.html"></section>
+		  <section data-include="dg/o3p9-separated-instructions.html"></section>
+		  <section data-include="dg/o3p10-whitespace.html"></section>
+		  <section data-include="dg/o3p11-unobscured-foreground.html"></section>
+		  <section data-include="dg/o3p12-implicit-explained.html"></section>
+		  <section data-include="dg/o3p13-numerical-alternatives.html"></section>
+		</section>
+  
+		<section class="objective-4">
+		  <div
+			data-include="dg/o4-minimize-mistakes.html"
+			data-include-replace="true"
+		  ></div>
+		  <section data-include="dg/o4p1-unexpected-movement.html"></section>
+		  <section data-include="dg/o4p2-back-undo.html"></section>
+		  <section data-include="dg/o4p3-declared-charges.html"></section>
+		  <section data-include="dg/o4p4-supportive-forms.html"></section>
+		  <section data-include="dg/o4p5-form-undo.html"></section>
+		  <section data-include="dg/o4p6-clear-labels.html"></section>
+		  <section data-include="dg/o4p7-step-instructions.html"></section>
+		  <section data-include="dg/o4p8-input-formats.html"></section>
+		  <section data-include="dg/o4p9-data-loss.html"></section>
+		  <section data-include="dg/o4p10-status-feedback.html"></section>
+		  <section data-include="dg/o4p11-user-safety.html"></section>
+		  <section data-include="dg/o4p12-familiar-metrics.html"></section>
+		</section>
+  
+		<section class="objective-5">
+		  <div
+			data-include="dg/o5-user-focus.html"
+			data-include-replace="true"
+		  ></div>
+		  <section data-include="dg/o5p1-minimal-interruptions.html"></section>
+		  <section data-include="dg/o5p2-short-paths.html"></section>
+		  <section data-include="dg/o5p3-manageable-quantity.html"></section>
+		  <section data-include="dg/o5p4-task-expectations.html"></section>
+		</section>
+  
+		<section class="objective-6">
+		  <div data-include="dg/o6-memory.html" data-include-replace="true"></div>
+		  <section data-include="dg/o6p1-login-cognition.html"></section>
+		  <section data-include="dg/o6p2-singlestep-login.html"></section>
+		  <section data-include="dg/o6p3-concise-login.html"></section>
+		  <section data-include="dg/o6p4-voice-menus.html"></section>
+		  <section data-include="dg/o6p5-low-cognition.html"></section>
+		</section>
+  
+		<section class="objective-7">
+		  <div
+			data-include="dg/o7-support.html"
+			data-include-replace="true"
+		  ></div>
+		  <section data-include="dg/o7p1-human-help.html"></section>
+		  <section data-include="dg/o7p2-alternative-content.html"></section>
+		  <section data-include="dg/o7p3-supported-choice.html"></section>
+		  <section data-include="dg/o7p4-described-interactions.html"></section>
+		  <section data-include="dg/o7p5-findable-support.html"></section>
+		  <section data-include="dg/o7p6-supported-wayfinding.html"></section>
+		  <section data-include="dg/o7p7-reminders.html"></section>
+		</section>
+  
+		<section class="objective-8">
+		  <div
+			data-include="dg/o8-personalization.html"
+			data-include-replace="true"
+		  ></div>
+		  <section data-include="dg/o8p1-motion.html"></section>
+		  <section data-include="dg/o8p2-apis.html"></section>
+		  <section data-include="dg/o8p3-complexity.html"></section>
+		  <section data-include="dg/o8p4-interface.html"></section>
+		</section>
+	  </section>
 
     <section id="Building_in_the_user">
       <h1>Usability Testing, Focus Groups, and Feedback</h1>
