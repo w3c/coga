@@ -42,8 +42,8 @@ jobs:
           cd this
           content-usable/generate.sh
           ls . content-usable content-usable/dg content-usable/dg/_site
-          cp -r content-usable/dg/_site/* webdg/
           cd ..
+          cp -r this/content-usable/dg/_site/* webdg/
 
       - name: Commit and push
         run: |
