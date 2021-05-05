@@ -41,7 +41,7 @@ jobs:
         run: |
           cd this
           content-usable/generate.sh
-          cp "content-usable/dg/_site/" "webdg/"
+          cp -r "content-usable/dg/_site/*" "webdg/"
           cd ..
 
       - name: Commit and push
