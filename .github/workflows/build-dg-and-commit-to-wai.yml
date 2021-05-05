@@ -39,8 +39,8 @@ jobs:
           
       - name: Build Web Design Guide
         run: |
-          echo "Build"
           pwd
+          ls -la . this
           ./content-usable/generate.sh
           cp "this/dg/_site/" "webdg/"
           ls -R webdg
