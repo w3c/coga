@@ -1,0 +1,111 @@
+---
+title: Ensure Foreground Content is not Obscured by Background 
+ref: o3p11
+objective: o3
+permalink: unobscured-foreground
+github: 
+  repository: w3c/coga
+  path: design-guide/o3p11-unobscured-foreground.html
+feedbackemail: wai@w3.org
+---
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <p>I need to easily perceive the content, for example:</p>
+  <ul>
+    <li>Text is clear because the background is plain.</li>
+    <li>Media does not have distracting background noise.</li>
+  </ul>
+  <p>
+    Related User Story:
+    <a
+      href="#visual-presentation-user-story"
+      aria-label="Visual Presentation User Story"
+      >Visual Presentation</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Do not overlay words on busy backgrounds. Provide an option to remove
+    background noise behind auditory content or ensure background sounds do not
+    interfere with the main auditory content.
+  </p>
+  <p>For text:</p>
+  <ul>
+    <li>Use solid backgrounds for blocks of text.</li>
+    <li>
+      Use thick outlines with solid fills for text that is overlaid on
+      background that has designs running through it.
+    </li>
+    <li>Use strong color contrast.</li>
+  </ul>
+
+  <p>For auditory content:</p>
+  <ul>
+    <li>
+      Avoid fast changing background content behind foreground auditory content
+      (such as background conversations or unnecessary traffic noise).
+    </li>
+    <li>
+      Provide an option to remove background noise behind auditory content.
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    Reading a sentence phrase by phrase conveys more meaning than reading
+    individual words. Phrases are also easier to comprehend. The more words an
+    individual can process in one glance, the faster they can read, the easier
+    they can understand what’s written, and the more they stay interested. Most
+    people can take in a whole line of text, or more at once. Fixating on many
+    words at a time is necessary for comprehension for many people. A slow
+    reader may read a sentence slowly using 6 to 9 eye fixations, sometimes
+    taking in only a single word (or part of a word) at a time. Adding
+    backgrounds reduces the number of words readers can fixate on. Removing
+    backgrounds helps users comprehend more words at the same time.
+  </p>
+
+  <p>
+    Also, automatic word recognition is often used for reading comprehension.
+    For example, approximately 200 words exist in the English language that do
+    not fit traditional letter sound patterns. These words must be memorized and
+    automatically recognized. If a user can’t recognize these words, the text is
+    harder to understand. Backgrounds can increase the amount of time it takes
+    users to recognize words.
+  </p>
+  <p>
+    Similarly, background noise in an audio track can make it harder to process
+    and understand the main content.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>
+      Easy to recognize words and content that can be easily distinguished from
+      the background.
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+
+  <ol>
+    <li>
+      Backgrounds that might make it difficult to read text, such as
+      <span
+        style="
+          background-image: repeating-linear-gradient(
+            black,
+            gray 10%,
+            white 30%
+          );
+        "
+        >“Backgrounds behind text that make it difficult to recognize words and
+        process text.”</span
+      >
+    </li>
+  </ol>
+</section>

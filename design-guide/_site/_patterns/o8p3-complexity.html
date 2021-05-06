@@ -1,0 +1,117 @@
+---
+title: Support Simplification
+ref: o8p3
+objective: o8
+permalink: complexity
+github: 
+  repository: w3c/coga
+  path: design-guide/o8p3-complexity.html
+feedbackemail: wai@w3.org
+---
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need less content without extra options and features as I cannot
+      function at all when there is too much cognitive overload.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a href="#adapt-user-story" aria-label="Adapt User Story">Adapt</a>.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Support simplification of your content. Often this includes allowing the
+    user to:
+  </p>
+  <ul>
+    <li>
+      Remove or hide features that most users do not use or that are not
+      essential.
+    </li>
+    <li>Get less text or more simple text.</li>
+    <li>
+      Select the content format or version that is easiest for them to
+      understand, or
+    </li>
+    <li>Find the extra features when wanted.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    A user who has difficulty reading or using web content can be easily
+    overwhelmed with too much information on a web page. They need to simplify
+    the page to include the critical information that they need and not spend
+    all their energy reading and understanding other content and features. This
+    is also true for users who are easily distracted.
+  </p>
+  <p>
+    For example, an email program has lots of features and formatting options
+    when drafting an email. This makes it too complex for a lot of people. With
+    personalization the user can have a simple option with only send and cancel
+    options. There is a “to” and subject line but no cc or bcc options. In this
+    setting there is a clear heading (write an email) and they have icons that
+    the user understands.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>Note that:</p>
+  <ul>
+    <li>Typically, a simple application has 3 to 6 functions.</li>
+    <li>Make sure it is easy to get back to the full featured version.</li>
+    <li>
+      You can meet this design pattern by:
+      <ul>
+        <li>supporting simplified versions from the browser,</li>
+        <li>using of data-simplification on regions and controls,</li>
+        <li>
+          using other attributes in personalization semantics (see
+          [[personalization-semantics-1.0]]),
+        </li>
+        <li>adding a simplification toolbar, or</li>
+        <li>providing an alternative version.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Getting Started</h5>
+  <p>
+    Add <code>data-simplification="critical"</code> on content that is in any
+    critical user testing paths.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>A simplified “reading” view that is available and easy to close.</li>
+    <li>
+      Applications that have 3 large features. Other features are in the footer
+      or under a “more” option.
+    </li>
+    <li>A simplified version of the application is available.</li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>
+      Simplified modes have unnecessary extra content or are not supported.
+    </li>
+    <li>
+      Applications with lots of features and cannot be simplified. For example:
+      <ul>
+        <li>
+          A busy email program has many control bars and features such as
+          tagging, group tagging, start a new thread, etc. There is no easy way
+          to simplify the page.
+        </li>
+      </ul>
+    </li>
+  </ol>
+</section>

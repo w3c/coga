@@ -2,12 +2,13 @@
 # process files 
 # NB run in repository root 
   
-SOURCEDIR=content-usable/dg
+SOURCEDIR=design-guide
+IMGSOURCEDIR=content-usable/img
 DESTDIR=$SOURCEDIR/_site
 
 # Static Template variables for frontmatter 
 # NB escape special caracters for sed eg / as \\/
-REPOSITORY=w3c\\/wai-coga-design-guide
+REPOSITORY=w3c\\/coga
 FEEDBACK_EMAIL=wai@w3.org
 
 parse_file () {
@@ -37,12 +38,16 @@ parse_file () {
         > $2/${1#$SOURCEDIR/}
 }
 
+copy_images () {
+    ls $DESTDIR
+}
 
-# cleanup
 rm -rf $DESTDIR 
 for dir in $DESTDIR $DESTDIR/content $DESTDIR/_patterns $DESTDIR/_objectives; do mkdir $dir; done
 
+shopt -s nullglob # no error if no md files
 parse_file $SOURCEDIR/about.md $DESTDIR/content
-for file in $SOURCEDIR/o?-*.html; do parse_file $file $DESTDIR/_objectives; done
-for file in $SOURCEDIR/o?p*.html; do parse_file $file $DESTDIR/_patterns; done
+for file in $SOURCEDIR/o?-*.{html,md}; do parse_file $file $DESTDIR/_objectives; done
+for file in $SOURCEDIR/o?p*.{html,md}; do parse_file $file $DESTDIR/_patterns; done
 
+copy_images

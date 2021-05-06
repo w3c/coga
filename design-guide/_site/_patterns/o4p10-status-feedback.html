@@ -1,0 +1,124 @@
+---
+title: Provide Feedback
+ref: o4p10
+objective: o4
+permalink: status-feedback
+github: 
+  repository: w3c/coga
+  path: design-guide/o4p10-status-feedback.html
+feedbackemail: wai@w3.org
+---
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need rapid feedback or visual cues to indicate an event was successfully
+      triggered. For example, I need to know when an email has been sent,
+      otherwise it looks as if it has just disappeared.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#assistance-and-support-user-story"
+      aria-label="Assistance and Support User Story"
+      >Assistance and Support</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    For each step in a process let the user know of its status and if it was
+    successfully completed.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  Making the result of each user action clear helps people with a variety of
+  <a>cognitive and learning disabilities</a>. This includes:
+  <ul>
+    <li>
+      understand that their actions were processed (e.g., the click did
+      something),
+    </li>
+    <li>prevent uncertainty or doubt regarding the outcome, and</li>
+    <li>remember what they just did.</li>
+  </ul>
+  <p>
+    For example, a user with <a>age-related forgetfulness</a>, may have
+    difficulty remembering how the interface worked. So when they press the send
+    button they may not feel confident that the form was submitted. Feedback,
+    such as a thank you message, will tell them submission occurred and make
+    them feel confident in the process.
+  </p>
+  <p>
+    During a multi-step task this feedback (user-action feedback) can also
+    assist people with attention or short-term
+    <a>cognitive and learning disabilities</a> to remember what they are doing.
+    For example, a user with early dementia may get distracted and then forget
+    exactly where they were in the task. This user-action feedback helps
+    re-orient them. It also helps them avoid leaving a task by reminding them
+    that they are in a process, and where in the process they currently are.
+  </p>
+  <p>
+    Provide easily-recognizable success or failure feedback with every user
+    action. When possible, the feedback should use consistent and familiar
+    design patterns. For example:
+  </p>
+  <ul>
+    <li>
+      After a step in a multi-step task is completed, breadcrumbs display a
+      tick, or a checkmark next to that step’s name; and, if applicable, the
+      title or the name of the next step is readily apparent.
+    </li>
+    <li>
+      After a button is clicked, it should look depressed. (Note that if it is a
+      toggle button, the state should also be programmatically determinable).
+    </li>
+    <li>
+      After a form is submitted or an email message is sent, feedback
+      communicating what just happened is provided, such as “Your application
+      was submitted, thank you” or “Your email message was sent”.
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>
+    The success or failure of every user initiated action is clearly indicated
+    to the user by visual, programmatically-determinable, rapid feedback in the
+    primary modalities of the content. Audio feedback is supported.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>
+      Visual state feedback. Use CSS and WAI-ARIA [[wai-aria-1.2]] states such
+      as aria-pressed and aria-selected, to gives a visual change that shows the
+      change in state. For example: Buttons and tabs with a visually clear state
+      when selected.
+    </li>
+    <li>
+      Messages that let the user know if a task is completed. For example:
+      <ul>
+        <li>
+          Confirmation messages when an email message is successfully sent, or a
+          form is successfully submitted.
+        </li>
+        <li>
+          Visible and programmatically-determinable information to show that a
+          new password is set.
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>State changes without visual feedback.</li>
+    <li>Task succeeds or fails without feedback.</li>
+  </ol>
+</section>

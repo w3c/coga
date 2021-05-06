@@ -1,0 +1,216 @@
+---
+title: Provide Alternative Content for Complex Information and Tasks
+ref: o7p2
+objective: o7
+permalink: alternative-content
+github: 
+  repository: w3c/coga
+  path: design-guide/o7p2-alternative-content.html
+feedbackemail: wai@w3.org
+---
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>I need contextually-relevant graphs and pictures to supplement text.</p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a href="#help-user-story" aria-label="Help User Story">Help</a>.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>Provide content that helps users understand complex information.</p>
+  <p>
+    This should include redundant information for different user groups such as:
+  </p>
+  <ul>
+    <li>
+      summaries of long documents and step-by-step information in
+      <a>easy to understand language</a>,
+    </li>
+    <li>explanation of choices and any disadvantages,</li>
+    <li>tables and charts,</li>
+    <li>symbols that are familiar to the user,</li>
+    <li>well-structured video content,</li>
+    <li>pictures and informational graphics, and</li>
+    <li>alternatives for numeric content.</li>
+  </ul>
+  <p>Where there is alternative or supplemental content:</p>
+  <ul>
+    <li>
+      Provide an easy, single action mechanism for the user to be able to find
+      and select the content format or version that is easiest for them to
+      understand.
+    </li>
+    <li>
+      Dedicated help and alternative content should be clearly differentiated
+      from primary content.
+    </li>
+    <li>
+      Make the relationship between the alternative content and the primary
+      content clear.
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    The use of complex information, long documents, and complex data formats can
+    present significant barriers to users with cognitive accessibility needs.
+    Users should be able to understand the information and successfully complete
+    described tasks without requiring further external assistance as much as
+    possible.
+  </p>
+  <p>
+    Sometimes the content’s subject matter is complex. In this case, it is
+    likely to need careful explanation, organization, and presentation so as
+    many users as possible are able to understand without any mistakes,
+    confusion, or need of assistance.
+  </p>
+  <p>
+    The way information is presented, such as a graph, diagram, or table, may
+    make it more complex for some users. Here, a supporting description and
+    guided interpretation will highlight the key features the user needs to
+    understand.
+  </p>
+
+  <p>
+    Different people find different types of information easier to understand.
+    This is particularly true for people with
+    <a>cognitive and learning disabilities</a>. For example, some people have an
+    impairment that affects numbers but not language, and other people have a
+    language impairment but may intuitively understand numbers. Help may be
+    provided in various forms, to support different users, for example:
+  </p>
+  <ul>
+    <li>Text “asides” providing explanation and help for diagrams.</li>
+    <li>A supporting chart or graph to illuminate text content.</li>
+    <li>Video clips that show the tasks being completed in steps.</li>
+    <li>A supplemental table, that is not complex.</li>
+    <li>
+      Popup on hover explanations of keywords, possibly linked to a glossary.
+    </li>
+    <li>A flow chart of steps in a process.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>
+    Recommended techniques for content relating to numbers and complex
+    information (use whichever apply).
+  </p>
+  <ul>
+    <li>
+      Charts or graphics are provided where they aid the comprehension of
+      complex information.
+    </li>
+    <li>
+      Tables are provided where they aid the comprehension of information.
+    </li>
+    <li>
+      Where an understanding of mathematics is not a primary requirement for
+      using this content, use one of the following:
+      <ul>
+        <li>
+          Reinforce numbers with non-numerical concepts, e.g., Very Cold, Cold,
+          Cool, Mild, Warm, Hot, Very Hot.
+        </li>
+        <li>
+          Once it is mature you can also use personalization semantics to add
+          non-numerical concepts. See [[personalization-semantics-1.0]].
+        </li>
+      </ul>
+    </li>
+    <li>
+      For content with sections use one of the following:
+      <ul>
+        <li>Enable semantics to add symbols to sections.</li>
+        <li>
+          Add icons as an addition to headings, key short sentences and phrases
+          to aid understanding.
+        </li>
+        <li>
+          However, as some people have difficulty remembering icons, use text
+          with the icons.
+          <ul>
+            <li>
+              Use clear icons or symbols that can easily be seen and expanded.
+            </li>
+            <li>Use images understood by different users.</li>
+            <li>
+              In left to right languages place the image to the left of the
+              text.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      Recommended techniques for content with more than 300 words
+      <ul>
+        <li>
+          Provide an Easy to Understand summary using common terms and short
+          blocks of text. For pieces of content with less than 300 words the
+          heading may act as a summary.
+        </li>
+        <li>
+          Semantic headings are used to break the information down into a more
+          manageable size and provide structure to the information being
+          presented. This particularly benefits users of Assistive Technology.
+        </li>
+        <li>
+          The content owner identifies at least two keywords that aid
+          comprehension for the user and these keywords are programmatically
+          determinable and emphasized in the preferred modality of the user.
+        </li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Getting Started</h5>
+  <p>
+    Provide explanatory content for complex information that is important for
+    successful completion of a task including tasks in the real world.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>
+      The techniques in the “more details” section above for long documents,
+      documents with multiple sections, complex information, and numeric
+      information. For example:
+      <ul>
+        <li>
+          The explanation of a medical procedure and success rate statistics is
+          amplified through the use of an additional text aside, a diagram, and
+          a graph.
+        </li>
+        <li>
+          The multi-step process for applying for a visa is made easier to use
+          by adding a flow chart of all the steps that are always visible. Each
+          step in the flowchart has links to extra help and the current step is
+          clearly highlighted.
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>Long documents without a good structure and summary.</li>
+    <li>
+      Complex information and numeric information without extra support. For
+      example:
+      <ul>
+        <li>
+          A long text and data table of sales figures is shown without any
+          explanation of the key features that relate to the content.
+        </li>
+      </ul>
+    </li>
+  </ol>
+</section>

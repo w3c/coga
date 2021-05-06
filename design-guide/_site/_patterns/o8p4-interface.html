@@ -1,0 +1,123 @@
+---
+title: Support a Personalized and Familiar Interface
+ref: o8p4
+objective: o8
+permalink: interface
+github: 
+  repository: w3c/coga
+  path: design-guide/o8p4-interface.html
+feedbackemail: wai@w3.org
+---
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need (a version of) a familiar interface, that I recognize and know what
+      will happen.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a href="#adapt-user-story" aria-label="Adapt User Story">Adapt</a>.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Provide users with a way to personalize their interface to make it familiar.
+  </p>
+  <p>This can be done by:</p>
+  <ol>
+    <li>
+      Allowing user preferences on presentation such as font style, font size,
+      line heights, margins, and contrast. (Note: The default version should
+      still be readable and use clear fonts.)
+    </li>
+    <li>
+      Allowing a rollback to a previous interface that the user is familiar with
+      and knows how to use.
+    </li>
+    <li>
+      Adding semantics on controls, links, and symbols that allow the user to
+      control the experience. For example:
+      <ul>
+        <li>HTML5 autocomplete on common fields,</li>
+        <li>adding a toolbar that adds personalized images,</li>
+        <li>use attributes in [[personalization-semantics-1.0]].</li>
+      </ul>
+    </li>
+  </ol>
+  <p>
+    Ensure the user knows the personalization options and can easily configure
+    them. Clear instructions can help.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>Personalization changes the interface to meet the needs of the user.</p>
+
+  <p>
+    Having familiar terms and symbols is key to many users being able to use the
+    web. However, what is familiar for one user may be unfamiliar to another
+    requiring them to learn new symbols. Adding semantics allows symbols and
+    support to be added by an extension or browser that is familiar to the
+    individual user.
+  </p>
+  <p>
+    A stronger example is people using
+    <abbr title="Alternative and Augmentative Communication System"
+      ><a>AAC</a></abbr
+    >. These users usually only learn one symbol set. They cannot easily
+    communicate with other people using
+    <abbr title="Alternative and Augmentative Communication System"
+      ><a>AAC</a></abbr
+    >
+    in a written format or may struggle to understand different symbols used in
+    different applications. When using personalization, such as
+    [[personalization-semantics-1.0]] the user agents can load the symbols that
+    are understandable by the individual user. The user can also access the Web
+    and other applications.
+  </p>
+
+  <p>
+    Other support includes autocomplete and extensions that help the user fill
+    out forms and understand the content. Many users with memory or
+    <a>executive function</a> impairments cannot fill in forms without asking
+    someone to help copy over information or check their work. Autocomplete
+    allows many more users to manage forms by themselves.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Getting Started</h5>
+  <ul>
+    <li>Use the HTML autocomplete tags on all common fields.</li>
+    <li>Add a toolbar that adds personalized images.</li>
+    <li>
+      Add the semantics that can work with a toolbar for personalized images.
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>[[HTML5]] autocomplete tags on all common fields.</li>
+    <li>True text to support browser preferences for styles.</li>
+    <li>A toolbar that adds personalized images.</li>
+    <li>
+      Semantics that can work with a toolbar for personalized images or
+      [[personalization-semantics-1.0]].
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>Forms that do not support [[HTML5]] autocomplete.</li>
+    <li>
+      Default fonts that are not clear or readable such as a cartoon font or
+      gothic.
+    </li>
+    <li>Pages that cannot easily be personalized.</li>
+  </ol>
+</section>

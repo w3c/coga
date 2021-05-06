@@ -1,0 +1,144 @@
+---
+title: Design Forms to Prevent Mistakes
+ref: o4p4
+objective: o4
+permalink: supportive-forms
+github: 
+  repository: w3c/coga
+  path: design-guide/o4p4-supportive-forms.html
+feedbackemail: wai@w3.org
+---
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>I need an interface that helps me avoid mistakes.</p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#assistance-and-support-user-story"
+      aria-label="Assistance and Support User Story"
+      >Assistance and Support</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Choose a form design that reduces the chance that the user will make a
+    mistake. This includes:
+  </p>
+  <ul>
+    <li>Requiring the user to enter as little information as possible.</li>
+    <li>Clearly indicating required fields.</li>
+    <li>
+      In a text field, accepting as many formats as possible. For example,
+      accepting different formats of phone numbers.
+    </li>
+    <li>
+      Dividing long numbers into chunks (supporting autocomplete across fields).
+    </li>
+    <li>Using an interface where only valid input can be selected.</li>
+    <li>Using autocomplete and personalization of form controls.</li>
+    <li>Accepting voice prompts when supported by the operating system.</li>
+    <li>Automatically correcting input errors when possible and reliable.</li>
+    <li>Providing the user with known suggestions and corrections.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    After making many errors, people with
+    <a>cognitive and learning disabilities</a> and users with
+    <a>age-related forgetfulness</a> often abandon their tasks and believe they
+    cannot complete them. Error messages may be confusing. Correcting errors is
+    often difficult and frustrating for users and increases cognitive fatigue.
+    Many users need to stop when they get successive errors.
+  </p>
+  <p>
+    For example, while registering for an online banking account a form requires
+    the input of the user’s birthdate. The required input format is xx/xx/xxxx
+    with a leading zero for single digits. If a single input field with no input
+    correction is presented, a user with a cognitive disability may enter
+    1/3/1996 triggering an error notification. It may not be clear to the user
+    that the required format is 01/03/1996 (even if the format is shown below
+    the input field or in the error notification).
+  </p>
+  <p>
+    A well-designed form makes it easier to fill in the information and prevents
+    the user from making mistakes by automatically correcting or suggesting the
+    correct date format.
+  </p>
+  <p>
+    Minimizing user generated errors by automatically correcting them will also
+    minimize error notifications. Error notifications may be tiring and
+    distracting, taking focus away from tasks and task completion.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <ul>
+    <li>Clearly mark required content.</li>
+    <li>
+      Only correct errors if the correction is reliable. Otherwise, if
+      suggestions for corrections are known, give the suggestions to the user.
+      <ul>
+        <li>
+          For example, “Did you mean the first of February (01/02) or the second
+          of January (02/01)?”
+        </li>
+      </ul>
+    </li>
+    <li>
+      Calendars and dates.
+      <ul>
+        <li>
+          Calendars should default to the first relevant day. Work calendars
+          should default to the first working day of a user’s locale.
+        </li>
+        <li>
+          Calendar-based booking systems must prevent the user from booking the
+          return date before the departure date.
+        </li>
+      </ul>
+    </li>
+    <li>
+      Temperature.
+      <ul>
+        <li>Use the default temperature format of the user’s location.</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <p>Designs that make mistakes less likely. For example:</p>
+  <ul>
+    <li>
+      Correcting errors of the post code being written in the text field with
+      the city or state information.
+    </li>
+    <li>
+      Preventing the user from selecting inappropriate dates and providing a
+      simple explanation if the user attempts to do so.
+    </li>
+  </ul>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+
+  <p>Designs that make mistakes more likely. For example:</p>
+  <ul>
+    <li>
+      The booking form provides two calendars without clear labels and
+      instructions. The form allows the user to select dates without warning as
+      to whether they are possible e.g. flight out on June 1st - flight return
+      May 30th.
+    </li>
+    <li>
+      The system allows the user to select inappropriate dates without warning.
+      The calendar merely grays out inappropriate dates which may not be
+      noticed. No warnings are provided.
+    </li>
+  </ul>
+</section>

@@ -1,0 +1,127 @@
+---
+title: Provide Help for Forms and Non-standard Controls
+ref: o7p4
+objective: o7
+permalink: described-interactions
+github: 
+  repository: w3c/coga
+  path: design-guide/o7p4-described-interactions.html
+feedbackemail: wai@w3.org
+---
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need explanations for unusual controls in a form I find easy to use
+      (such as a video or text).
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#task-management-user-story"
+      aria-label="Task Management User Story"
+      >Task Management</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Provide help for any complex forms, particularly when there are multiple
+    steps, unusual interactions, non-standard controls, and required fields that
+    do not support autocomplete. Give examples that make it easy to understand
+    what to do.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    Users often find forms and related tasks to be the most complex experience
+    with web sites. They can easily become confused, unsure, or even completely
+    lost. Providing extra help can make the difference between being able to
+    successfully complete a task and giving up. This is especially true if any
+    part of the form is complex or requires nonstandard interactions.
+  </p>
+  <p>
+    Many standard form controls provide support automatically. For example, many
+    fields can be automatically filled in with information using autocomplete or
+    personalization semantics [[personalization-semantics-content-1.0]]. Then
+    the user will not make mistakes filling it out.
+  </p>
+  <p>
+    When you require additional fields and nonstandard controls many users will
+    have difficulty using them. Many users with disabilities will get the
+    information incorrect or be unable to work out how to complete the task.
+    Often this results in the task being completely abandoned. In other cases,
+    the user asks a caregiver for help to complete the form or work the control.
+    In either case, they have not been able to complete the task because of
+    their disability.
+  </p>
+  <p>
+    The standard [[HTML]] forms and controls have been carefully specified for
+    maximum usability and accessibility. They are usually understood by users,
+    especially if they are familiar with web interactions. However, users are
+    likely to experience difficulties if the standard form behavior has been
+    altered or completely new controls are provided. Assuming the new behaviors
+    have been carefully designed and user tested, users may still require help
+    in order to successfully use them.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+
+  <p>
+    Examples of forms and controls that are likely to require additional help:
+  </p>
+
+  <ul>
+    <li>
+      Password fields that require certain character types of characters to be
+      entered.
+    </li>
+    <li>
+      Surveys with complex interactions, for example, where buttons only appear
+      depending on previous answers.
+    </li>
+    <li>
+      Date entry where there could be some ambiguity about the required format.
+    </li>
+    <li>
+      Custom controls like date pickers where some dates may be grayed out.
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>Standard controls</li>
+    <li>
+      Non-standard controls and form fields with instructions or help. For
+      example:
+      <ul>
+        <li>An accessible help button next to a nonstandard control.</li>
+        <li>
+          A standard mechanism for context sensitive help. This can include
+          using personalization semantics for context sensitive help.
+        </li>
+        <li>Clear and unambiguous instructions that are easy to find.</li>
+      </ul>
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>
+      Non-standard controls and unusual form fields that do not have
+      instructions or help. For example:
+      <ul>
+        <li>
+          A form has a complex mechanism for enabling and disabling sections as
+          you scroll or tab between them, but no help is provided.
+        </li>
+      </ul>
+    </li>
+  </ol>
+</section>
