@@ -40,9 +40,9 @@ jobs:
       - name: Build Web Design Guide
         run: |
           cd this
-          content-usable/generate.sh
+          design-guide/generate.sh
           cd ..
-          cp -r this/content-usable/dg/_site/* webdg/
+          cp -r this/design-guide/_site/* webdg/
 
       - name: Commit and push
         run: |
