@@ -43,11 +43,11 @@ copy_images () {
 }
 
 rm -rf $DESTDIR 
-for dir in $DESTDIR $DESTDIR/content $DESTDIR/_patterns $DESTDIR/_objectives; do mkdir $dir; done
+for dir in $DESTDIR $DESTDIR/content $DESTDIR/content/_patterns $DESTDIR/content/_objectives; do mkdir $dir; done
 
 shopt -s nullglob # no error if no md files
-parse_file $SOURCEDIR/about.md $DESTDIR/content
-for file in $SOURCEDIR/o?-*.{html,md}; do parse_file $file $DESTDIR/_objectives; done
-for file in $SOURCEDIR/o?p*.{html,md}; do parse_file $file $DESTDIR/_patterns; done
+for file in $SOURCEDIR/{about.md,summary.html}; do parse_file $file $DESTDIR/content; done
+for file in $SOURCEDIR/o?-*.{html,md}; do parse_file $file $DESTDIR/content/_objectives; done
+for file in $SOURCEDIR/o?p*.{html,md}; do parse_file $file $DESTDIR/content/_patterns; done
 
 copy_images
