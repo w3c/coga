@@ -1,10 +1,10 @@
 #!/bin/bash
-# Process Design guide files and output to ./design-guide/_site/
+# Process Design guide files and output to ./design-guide/_build/
 # NB run with cwd = repository root ./design-guide/generate
   
 SOURCEDIR=design-guide
 IMG_SOURCEDIR=content-usable/img
-DESTROOT=$SOURCEDIR/_site
+DESTROOT=$SOURCEDIR/_build
 CONTENT_DESTDIR=$DESTROOT/content
 PATTERN_DESTDIR=$CONTENT_DESTDIR/_patterns
 OBJECTIVE_DESTDIR=$CONTENT_DESTDIR/_objectives
@@ -79,14 +79,25 @@ copy_images () {
     ls
 }
 
+# Create empty folders
 rm -rf $DESTROOT 
 for dir in $DESTROOT $CONTENT_DESTDIR $PATTERN_DESTDIR $OBJECTIVE_DESTDIR $IMG_DESTDIR; do mkdir -p $dir; done
 
+shopt -s extglob  # expanded pattern expansion
 shopt -s nullglob # no error if no md files
-for file in $SOURCEDIR/{about.md,summary.html}; do parse_file $file $CONTENT_DESTDIR; done
-for file in $SOURCEDIR/o?-*.{html,md}; do parse_file $file $OBJECTIVE_DESTDIR; done
-for file in $SOURCEDIR/o?p*.{html,md}; do parse_file $file $PATTERN_DESTDIR; done
+for file in $SOURCEDIR/!(o[[:digit:]]*).{html,md}; do parse_file $file $CONTENT_DESTDIR; done
+for file in $SOURCEDIR/o[[:digit:]]-*.{html,md}; do parse_file $file $OBJECTIVE_DESTDIR; done
+for file in $SOURCEDIR/o[[:digit:]]p*.{html,md}; do parse_file $file $PATTERN_DESTDIR; done
 
 # cp -r $SOURCEDIR/*.css $DESTROOT/assets/css
 
 copy_images
+
+
+# Shortcut for steve's local dev
+if [[ $NAME='$OD-X1-CARBON' && $LOG_NAME='WSL' && $PWD='/home/wsl/coga' ]] ;
+then
+  WAI_REPO="../wai/wai-coga-design-guide"
+  rm -rf $WAI_REPO/{content,content-images}
+  cp -r $DESTROOT/* $WAI_REPO
+fi
