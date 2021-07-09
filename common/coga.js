@@ -116,7 +116,7 @@ function linkTerms() {
 	document.querySelectorAll("dfn[data-lt]").forEach(function(node){
 		terms += node.getAttribute("data-lt") + "|";	
 	});
-	alert (terms);
+	//alert (terms);
 }
 
 // scripts before Respec has run
