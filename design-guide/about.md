@@ -4,7 +4,6 @@
 title: About Design Guide
 permalink: ${{ FILENAME }}
 github: ${{ GITHUB_INFO }}
-feedbackemail: ${{ FEEDBACK_EMAIL }}
 </pre>
 
 This guide provides assistance making web sites and applications friendly for
