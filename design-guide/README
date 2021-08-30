@@ -1,0 +1,36 @@
+# Design Guide Files
+
+These file are shared between the content-usable TR note (here) and the WAI website Design Guide (wai-coga-design-guide).
+
+## Content-usable use
+
+The files are included in `content-usable/index.html` using respect's include feature.
+
+Note: they can be converted from html to markdown for easier editing by the Taskforce as respec supports markdown
+
+## WAI websit use
+
+This repo is included as a git submodule in wai-coga-deign-guide in order to access these files. A script converts these files for the Jekyll build process.
+
+## File names
+
+- `about.md` - the Design guide about section in content-usable
+- `o<n>-<name>` - each objective eg `o1-understandable.html`
+- `o<n>P<nn>-name` - each pattern eg `o1p01-clear-purpose.html`
+
+## File format
+
+Each file contains 
+
+- Section Title used in content-usable
+- A presection that is ignored by content usable but converted to frontmatter for the web version Jekyll build process
+- The content for the objective or pattern
+
+## Front matter in <pre>
+
+Full details of how these are used can be found wai-coga-design-guide repo. But in brief the sections are
+
+- Title
+- ref - ref taken from the filename prefix, eg 01p01
+- github - repo and file details
+- sidebar - links to appear in the sidebar - eg user stories and personas
