@@ -1,0 +1,166 @@
+<h3>Provide Reminders (Pattern)</h3>
+<pre class="yaml remove">
+title: Provide Reminders
+ref: ${{ FILENAME_REF }}
+github: ${{ GITHUB_INFO }}
+sidebar:
+  sections: 
+    - name: User Story
+      items: "Support"
+    - name: Personas
+      items: "George, Sam, Kwame"
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need reminders integrated into my calendar, otherwise I will forget
+      appointments and when I am meant to do things. Sometimes I need reminders
+      to revisit a web site to complete the next task.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a href="#support-user-story" aria-label="Support User Story">Support</a>.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Make it easy for the user to set a reminder for date and time sensitive
+    events. Use standard application programming interfaces (APIs) when
+    possible.
+  </p>
+  <p>
+    Reminders must be set only at the user’s request and the user must be able
+    to personalize the remainder method.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    People with cognitive and learning disabilities often have challenges
+    managing events and time. (In fact, being unable to correctly manage events
+    and time without support is a diagnostic criterion for some groups of
+    disabilities.) This results in missing meetings, not submitting a request by
+    a certain date or a form within a specified time period and missed
+    opportunities. For example:
+  </p>
+  <ul>
+    <li>
+      When the user copies information into a calendar they often copy the day
+      or time incorrectly.
+    </li>
+    <li>
+      The user is challenged processing and retaining time based information.
+    </li>
+    <li>The user may find it hard to sequence time-bound events.</li>
+    <li>
+      The user’s skills decrease when tired to such an extent that they have to
+      stop a task. They may wish to reschedule the task.
+    </li>
+  </ul>
+  <p>
+    Using calendar
+    <abbr title="application programming interface">APIs</abbr> (or task
+    manager) that allow the user to automatically add events and deadlines to
+    their own calendar can help.
+  </p>
+  <p>
+    For example, a user with a cognitive and learning disability sets a doctor’s
+    appointment online. Often they copy the details incorrectly into their
+    calendar. However, in this case, the web site gives them an option to add
+    the appointment to the calendar and sets a reminder an hour before. The user
+    now comes to the correct place at the correct time with the correct papers.
+  </p>
+  <p>
+    The benefit to users with cognitive accessibility needs is that they can
+    independently manage appointments, deadlines, and schedules. The ability to
+    set reminders can reduce the cognitive load associated when processing time
+    bound tasks. Time dependent activities may be monitored and tracked by the
+    user to ensure that they are completed in a timely manner.
+  </p>
+  <p>
+    Always give the option to set a reminder at the end of the task so that the
+    user does not get interrupted.
+  </p>
+  <p>
+    It is essential not to add unwanted reminders, as this makes the user’s
+    calendar too full. This can even prevent them from being able to use their
+    calendar at all. The user is the best person to know how many reminders, and
+    which type, will best meet their needs.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>
+    Where a standard mechanism exists for the platform or technologies, it must
+    be used. See:
+  </p>
+  <ul>
+    <li>
+      <a href="https://developer.mozilla.org/en/docs/Web/API/notification"
+        >Web Notification API</a
+      >
+    </li>
+    <li>
+      <a href="https://www.html5rocks.com/en/tutorials/notifications/quick/"
+        >Using the Notifications API</a
+      >
+    </li>
+    <li>
+      <a
+        href="https://developers.google.com/google-apps/calendar/concepts/reminders"
+        >Reminders and Notifications</a
+      >
+    </li>
+  </ul>
+  <p>
+    Date and time sensitive events are any event that has to be completed by a
+    certain time. The time constraints on such an event may be defined by a
+    calendar date and time or by the total elapsed time.
+  </p>
+  <p>Variables that could be considered include:</p>
+  <ul>
+    <li>Time - at a logical time.</li>
+    <li>Location - prompted when at an appropriate location.</li>
+    <li>Context - on computer vs. mobile, on specific a site, etc.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>
+      Options for the user to add the event to their calendar and set a
+      reminder. For example:
+      <ul>
+        <li>
+          A health care site allows you to set a local medical appointment. Once
+          the appointment is set the user is given the option to add it to their
+          calendar (automatically) with a reminder three hours before. They are
+          also given the option to add or edit the reminder.
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>
+      Events that are added to the user’s calendar that the user does not want
+      to attend.
+    </li>
+    <li>
+      The user cannot automatically add the events and appointments they just
+      set to their calendar. For example:
+      <ul>
+        <li>
+          A health care site allows you to set a local medical appointment. The
+          user is not given the option to automatically add it to their calendar
+          or set a reminder.
+        </li>
+      </ul>
+    </li>
+  </ol>
+</section>

@@ -1,0 +1,300 @@
+<h3>Let Users Avoid Navigating Voice Menus (Pattern)</h3>
+<pre class="yaml remove">
+title: Let Users Avoid Navigating Voice Menus
+ref: ${{ FILENAME_REF }}
+github: ${{ GITHUB_INFO }}
+sidebar:
+  sections: 
+    - name: User Story
+      items: "Voice Menus"
+    - name: Personas
+      items: "Gopal, Maria"
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need to get human help, without going through a complex menu system.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a href="#voice-menus-user-story" aria-label="Voice Menus User Story"
+      >Voice Menus</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Let people easily reach a human who can help. Do not require navigating menu
+    systems to reach a human.
+  </p>
+  <p>Design helpful voice menus by:</p>
+  <ul>
+    <li>
+      Providing a known word or reserved digit (such as “0” or “help”) that can
+      be used at any time to skip the voice menu and go directly to a person.
+    </li>
+    <li>Avoiding unnecessary steps or options.</li>
+    <li>
+      Avoiding unnecessary or distracting information such as promotional
+      information.
+    </li>
+    <li>
+      Using words normally used by people with a wide range of
+      <a>cognitive and learning disabilities</a>.
+    </li>
+    <li>Waiting for a slow speaker to respond.</li>
+    <li>Allowing for a quiet speaker, repetition, and stutters.</li>
+    <li>Supporting forgetfulness and <a>memory impairments</a>.</li>
+    <li>Allow for easy error recovery.</li>
+    <li>Following usability best practices.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    Many people cannot use voice menu systems. This often stops people from
+    completing critical tasks by themselves. Often this can include making
+    doctors’ appointments, getting health insurance, reaching social services,
+    getting their water turned back on, etc.
+  </p>
+  <p>
+    If people cannot manage voice menus by themselves, they have to ask someone
+    else to help them. This means the service is not accessible to them.
+    Sometimes tasks are not done. For example, they may delay making a doctor’s
+    appointment or other critical task as not to bother their helper. People
+    often do not get the help they need or get it too late. (This may be partly
+    responsible for the lower life expectancy of people with learning and
+    cognitive disabilities.)
+  </p>
+
+  <p>Why can’t people use complex menus?</p>
+  <ul>
+    <li>
+      A good short-term and working memory (several seconds) is essential so
+      that the user can remember the number or the term for the menu. Without
+      these functions the user is likely to select the wrong number.
+    </li>
+    <li>
+      Many users have an impaired working memory. For example, if you can
+      remember 7 letters or items in your head at the same time they may be able
+      to remember one or two. This makes them less likely to manage a menu
+      system correctly.
+    </li>
+    <li>
+      For example, a phone menu system (voice markup system) may have an option:
+      “Press 3 for internal services”. To use this option the user must remember
+      a digit 3 while figuring out if they need an internal service. Many people
+      cannot do this. It also requires them to press the correct digit.
+    </li>
+    <li>
+      When a lot of irrelevant information is given before the correct option,
+      the user may have cognitive overload and stop. This is especially true if
+      they did not understand all the earlier options and information.
+    </li>
+    <li>
+      They may not understand the terms used. Having focused on the menu, they
+      may forget why they are calling.
+    </li>
+    <li>
+      Alternative routes, such as web menus, may be provided but are also
+      complex. They are therefore not helpful.
+    </li>
+  </ul>
+  <p>
+    The 0 digit, the word “help” or other culturally appropriate term, should be
+    reserved for reaching a person. Consistently set the first option for each
+    menu to: “to wait for a person who can help you press 0”. This can help
+    everyone reach the support they need.
+  </p>
+
+  <p>
+    Test any system with a wide range of users with different learning and
+    cognitive disabilities. Involving a wide range of users has made many voice
+    systems accessible to the extent that they become an aid people with
+    <a>cognitive and learning disabilities</a>.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>
+    Follow best practices in general <a>voice user interfaces</a> (VUIs) design.
+    Standard best practices in <a>voice user interfaces</a> apply to users with
+    cognitive disabilities, and should be followed. These practices are
+    improving as more designs focus on <a>conversational interfaces</a>. Some
+    examples of generally accepted best practices in
+    <a>voice user interfaces</a> design:
+  </p>
+  <ul>
+    <li>
+      Pauses are important between phrases in order to allow processing time of
+      language and options.
+    </li>
+    <li>
+      Options in text should be given before the digit to select, or the
+      instruction to select that option. This will mean that the user does not
+      need to remember the digit or instruction whilst processing the term. For
+      example: The prompt “press 1 for the secretary,” requires the user to
+      remember the digit 1 while interpreting the term “secretary”. A better
+      prompt is “for the secretary (pause): press 1” or “ for the secretary
+      (pause) or for more help (pause): press 1”.
+    </li>
+    <li>
+      Error recovery should be simple, and take the user to a human operator if
+      the error persists. Error responses should not end the call or send the
+      user to a more complex menu.
+    </li>
+    <li>
+      Advertisements and other extraneous information should not be read as it
+      can confuse the user and can make it harder to retain attention.
+    </li>
+    <li>Terms used should be as simple and jargon-free as possible.</li>
+    <li>
+      Use Tapered prompts. Best practices in <a>voice user interfaces</a> design
+      include providing several different prompts for each point in the
+      interaction. The different prompts are used based on the user’s behavior.
+      For example, if the user takes a long time to respond to a prompt, a
+      simpler or more explanatory version of the prompt can be used instead of
+      the default. They should be used to increase the level of prompt detail
+      when the user does not respond as expected.
+    </li>
+  </ul>
+  <p><strong>User settings</strong></p>
+  <p>
+    User-specific settings can be used to customize the
+    <a>voice user interfaces</a> (such as menus, and options). Keep in mind that
+    if it is difficult to set user preferences, they won’t be used. Setting
+    preferences by natural language is the most natural (”slow down!”), but is
+    not currently very common.
+  </p>
+  <ul>
+    <li>
+      Extra time should be a user setting for both the speed of speech and
+      ability for the user to define if they need a slower speech or more input
+      time etc. Timed text should be adjustable (as with all accessible media).
+    </li>
+    <li>
+      The user should be able to extend or disable timeouts as a system default
+      on their device.
+    </li>
+    <li>
+      Error recovery should be simple, and take you to a human operator. Error
+      responses should not throw the user off the line or send them to a more
+      complex menu. Preferably they should use a reserved digit for support and
+      human help.
+    </li>
+    <li>
+      Advertisement and other information should not be read as it can confuse
+      the user and can make it harder to retain attention.
+    </li>
+    <li>Terms used should be as simple as possible.</li>
+    <li>
+      Examples and advice should be given on how to build a prompt that reduces
+      the cognitive load
+      <ul>
+        <li>
+          Example 1: Reducing cognitive load: The prompt “press 1 for the
+          secretary,” requires the user to remember the digit 1 while
+          interpreting the term secretary. It is less good then the prompt “for
+          the secretary (pause): press 1” or “ for the secretary (pause) or for
+          more help (pause): press 1”.
+        </li>
+        <li>
+          Example 2: Setting a default for a human operator as the number 0.
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+  <p><strong>Considerations for Speech Recognition</strong></p>
+
+  <ul>
+    <li>
+      For speech recognition based systems, standards for voice commands for
+      many languages exists and should be used where possible, such as the ETSI
+      standard
+      <a
+        href="https://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"
+        >ETSI 202 076</a
+      >. Keep in mind that expecting people to learn more than a few commands
+      places a cognitive burden on the user.
+    </li>
+    <li>
+      Natural language understanding systems allow users to state their requests
+      in their own words. This can be useful for users who have difficulty
+      remembering menu options, or who have difficulty mapping the offered menu
+      options to their goals. However, natural language interfaces can be
+      difficult to use for users who have difficulty producing speech or
+      language. Directed dialog (menu-based) fallback or transfer to an agent
+      should be provided. Such fallbacks should be easy to use and conform to
+      this document.
+    </li>
+  </ul>
+  <p>Follow requirements of legislation.</p>
+  <p>
+    For example, the U.S. Telecommunications Act Section 255 Accessibility
+    Guidelines [[Section255]] paragraph 1193.41 Input, control, and mechanical
+    functions, clauses (g), (h), and (i) apply to cognitive disabilities and
+    require that equipment should be operable without time-dependent controls,
+    the ability to speak, and should be operable by persons with limited
+    cognitive skills.
+  </p>
+  <p>
+    See
+    <a href="https://w3c.github.io/coga/issue-papers/voice-menus.html"
+      >Voice Menu Systems</a
+    >
+    issue paper for a full discussion.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Getting Started</h5>
+  <p>
+    Ensure this pattern is included in important systems that affect health,
+    finance, communication, water, and government services.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ul>
+    <li>
+      User interaction dialogs in which the first option takes you directly to a
+      human. For example: “To reach for a person who can help you, press 0 or
+      say help”.
+    </li>
+    <li>
+      Error recovery from each point, allowing the user to fix errors easily.
+    </li>
+    <li>The user can easily go back or repeat the list at any point.</li>
+    <li>
+      A user-interaction dialog, such as the standard “0” from any point, where
+      there is easy access to a human operator who can help users achieve their
+      goals.
+    </li>
+    <li>Speech is clear, with pauses.</li>
+    <li>Common words are used.</li>
+    <li>
+      State the option before giving them the key to press or term to use.
+    </li>
+    <li>
+      Advisory technique: Cueing users to record something that may be useful at
+      a later point, and give them time to do so.
+    </li>
+  </ul>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ul>
+    <li>Long menu systems that make it hard to find a person.</li>
+    <li>Unclear error recovery.</li>
+    <li>Complex language and uncommon terms.</li>
+    <li>Unnecessary content, such as promotions.</li>
+    <li>Fast speech, or expecting fast inputs from the user.</li>
+    <li>
+      Systems that were not tested with a wide range of users with different
+      <a>cognitive and learning disabilities</a>.
+    </li>
+  </ul>
+</section>

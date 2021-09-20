@@ -1,0 +1,156 @@
+<h3>Let Users Go Back (Pattern)</h3>
+<pre class="yaml remove">
+title: Let Users Go Back
+ref: ${{ FILENAME_REF }}
+github: ${{ GITHUB_INFO }}
+sidebar:
+  sections: 
+    - name: User Story
+      items: "Undo"
+    - name: Personas
+      items: "Alison, Maria, Tal"
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need predictable back or undo features so that I know exactly where I
+      was previously, before I made a mistake.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a href="#undo-user-story" aria-label="Undo User Story">Undo</a>.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>Always let the user return to a previous point.</p>
+  <p>
+    The standard back button is the best way to do this as it is familiar to the
+    user. Many users will try the back button first.
+  </p>
+  <p>The user should never lose their work if they press back.</p>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    Allowing users to return to a previous point helps prevent mistakes and
+    makes it easy to correct mistakes when they happen.
+  </p>
+  <p>Examples of mistakes include:</p>
+  <ul>
+    <li>touching a control by accident,</li>
+    <li>opening a new link by accident, and</li>
+    <li>closing a window the user intended to keep open.</li>
+  </ul>
+  <p>
+    If a person easily makes mistakes or makes them often, it is important that
+    they can go back and make changes without having their work or previous
+    choices deleted.
+  </p>
+  <p>
+    For example, a user is watching a video. They try to increase the volume but
+    touch a different link instead. A new video now loads. The user can press
+    the back button and return to the video they were watching before. They now
+    know they can try and increase the volume and if they make a mistake, they
+    can easily go back and try again.
+  </p>
+  <p>
+    In another example, the back button did not work as expected, but took them
+    somewhere else (such as the home page). When they try to change the volume
+    or add a comment they often lose the video they were watching and cannot
+    find the way to get back to it. The user now feels they cannot use any of
+    the web site’s features in case they lose their main content again. They do
+    not expand the screen, change the volume, or leave comments.
+  </p>
+  <p>
+    In forms, each time the user has to re-enter data presents a new chance for
+    mistakes to occur. Entering and re-entering data can be stressful and tiring
+    for some people with <a>cognitive and learning disabilities</a>. This
+    increases the likelihood of mistakes and may make it impossible to submit
+    correct data and complete the intended task.
+  </p>
+  <p>
+    For those with anxiety, memory challenges, and difficulty following
+    directions, the ability to go back and review information they have entered
+    is very important. For example, for some people the task of following
+    directions and reviewing their answers works best as two separate tasks.
+    Being able to enter information with their focus being on following the
+    directions, and later going back to review their answers, helps them be more
+    effective.
+  </p>
+</section>
+<section>
+  <h5>Getting Started</h5>
+  <p>
+    When the user has an opportunity to go back and review the data they
+    entered, even if submitted by mistake. The back button always works as
+    expected.
+  </p>
+</section>
+
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>Options for supporting users going back include:</p>
+  <ul>
+    <li>Going back steps in a user journey via a clearly labeled action.</li>
+    <li>
+      Using clickable breadcrumbs with clickable previous steps and no loss of
+      data.
+    </li>
+    <li>Using back and undo features without unwanted data loss.</li>
+    <li>
+      Once it is mature you can also use personalization semantics to log the
+      steps and return to a step in the process. See
+      [[personalization-semantics-1.0]].
+    </li>
+    <li>Reopening a closed window or option.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>
+      Designs that make it easy to go back. For example:
+      <ul>
+        <li>
+          The user is watching a video. They touch a control accidentally.
+          Pressing back can take them back to the video at the same position.
+        </li>
+        <li>
+          A user is completing an online form when applying for a job. The user
+          accidentally hits the home icon and navigates away from the form. The
+          back button takes them back to where they were without any loss of
+          data.
+        </li>
+        <li>
+          The user is also able to go back through all the screens to be sure
+          they did not misunderstand a section or skip an answer. The user can
+          edit any data they mistyped.
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>
+      Designs that make it hard to go back. For example:
+      <ul>
+        <li>
+          The user is watching a video. They touch a control accidentally and go
+          to a new video. Pressing back makes the new video smaller and does not
+          take them back to the original video.
+        </li>
+        <li>
+          Completing an online form when applying for a job. The user goes back
+          to a screen to check if they have forgotten to answer a question. When
+          they use the back button all data previously entered has been
+          cleared/deleted.
+        </li>
+      </ul>
+    </li>
+  </ol>
+</section>

@@ -1,0 +1,118 @@
+<h3>Ensure Controls and Content Do Not Move Unexpectedly (Pattern)</h3>
+<pre class="yaml remove">
+title: Ensure Controls and Content Do Not Move Unexpectedly
+ref: ${{ FILENAME_REF }}
+github: ${{ GITHUB_INFO }}
+sidebar:
+  sections: 
+    - name: User Story
+      items: "Assistant and Support"
+    - name: Personas
+      items: "Alison, George, Gopal, Jonathan, Kwame, Maria, Sam, Tal, Yuki"
+</pre>
+
+<section>
+  <h5 class="coga-5">User Need</h5>
+  <blockquote>
+    <p>
+      I need to know where things are. Controls and content do not move
+      unexpectedly as I am using them.
+    </p>
+  </blockquote>
+  <p>
+    Related User Story:
+    <a
+      href="#assistance-and-support-user-story"
+      aria-label="Assistance and Support User Story"
+      >Assistance and Support</a
+    >.
+  </p>
+</section>
+<section class="wtd">
+  <h5 class="coga-5">What to Do</h5>
+  <p>
+    Make sure controls and content remain in place and do not move, unless the
+    user initiates the movement.
+  </p>
+  <p>
+    A user may initiate a movement by triggering an action or by altering a
+    property of the device, such as window size.
+  </p>
+  <p>This can usually be achieved by:</p>
+  <ul>
+    <li>
+      ensuring controls and content do not move about as the page loads or
+      refreshes,
+    </li>
+    <li>
+      displaying a clear “loading” indicator if content moves or changes during
+      a page load,
+    </li>
+    <li>
+      not updating or moving content, such as an item’s position in a list,
+      unless the user causes it.
+    </li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">How it Helps</h5>
+  <p>
+    If a control moves, users with slow hand-eye coordination or impaired
+    cognitive processing speed may hit the wrong control. This causes unwanted
+    actions and errors. The user may experience disorientation, confusion or
+    even incorrect understanding of the content.
+  </p>
+  <p>
+    For example, a user moves to press a button on a video. The user
+    accidentally nudges the device. The orientation changes to landscape and the
+    control moves. Because the user has slow eye tracking or hand-eye
+    coordination, they end up pressing a link to a new video.
+  </p>
+  <p>
+    Shifting controls and content can also cause cognitive overload and increase
+    mental fatigue. For example, as a user with Traumatic
+    <a>Brain Injury</a> reads content, the content refreshes and an additional
+    article appears above the current content. The article the user is reading
+    moves down. The user becomes disoriented and the application becomes very
+    hard to use or understand.
+  </p>
+</section>
+<section>
+  <h5 class="coga-5">More Details</h5>
+  <p>Controls moving unexpectedly includes:</p>
+  <ul>
+    <li>links in a list shifting positions,</li>
+    <li>orientation changes, and</li>
+    <li>slow loading of a page that the user thinks is complete.</li>
+  </ul>
+</section>
+<section>
+  <h5 class="coga-5">Examples</h5>
+  <p><span class="use"></span><strong>Use:</strong></p>
+  <ol>
+    <li>
+      Controls and content that do not move about as the page loads or
+      refreshes.
+    </li>
+    <li>
+      A loading icon, that is clearly visible while the page is loading. After
+      the content is finished loading and there is no further movement, the icon
+      is removed.
+    </li>
+    <li>
+      Controls and content that only move when the user initiates a change.
+    </li>
+  </ol>
+  <p><span class="avoid"></span><strong>Avoid:</strong></p>
+  <ol>
+    <li>
+      Controls and content that move without the user’s request. For example:
+      The user is about to select a phone number to call. As the user is about
+      to touch the phone number, it shifts down. The user presses the wrong
+      phone number and calls the wrong person.
+    </li>
+    <li>Links in a list shifting positions.</li>
+    <li>Orientation changes that cannot be easily turned off.</li>
+    <li>Slow loading pages that the user thinks are complete.</li>
+  </ol>
+</section>
