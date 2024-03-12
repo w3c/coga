@@ -22,6 +22,6 @@
 
 ## Editorial Quality Checklist:
 - [ ]  I did not check the editorial aspects
-- [ ]  grammer and caplization
+- [ ]  grammer and capitalization
 - [ ]  short sentences and easy words
 - [ ]  Present tense and active voicing
