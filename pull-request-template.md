@@ -5,12 +5,12 @@
 - Notes (if needed): ----
 ##Source
 - where is it from such as google docs url : ----
-- when was it aproved such as meating muinits : ----
+- when was it aproved such as meating minutes : ----
 ## Did this break anything?
 - [ ] No
 - [ ] Yes
 ## Type of change
-- [ ] New section
+- [ ]  New section
 - [ ]  Bug fix (non-breaking change which fixes an issue)
 - [ ]  Stucture change
 - [ ]  Super small fix (Corrected a typo, removed a comment, etc.)
@@ -24,4 +24,4 @@
 - [ ]  I did not check the editorial aspects
 - [ ]  grammer and caplization
 - [ ]  short sentences and easy words
-- [ ]  Present tence and active voicing
+- [ ]  Present tense and active voicing
