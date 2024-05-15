@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>COGA Structure v2 - Rain's design</title>
+		<meta charset="utf-8"/>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
+		<script>
+
+		function toggleSotd(divId) {
+            var div = document.getElementById(divId);
+            if (div.classList.contains("collapse")) {
+                div.classList.remove("collapse");
+                div.classList.add("expand");
+                document.getElementById(`btn-sotd`).innerText = "Collapse Status of This Document";
+            } else {
+                div.classList.remove("expand");
+                div.classList.add("collapse");
+                document.getElementById(`btn-sotd`).innerText = "Show Status of This Document";
+            }
+        }
+
+		function toggleToc(divId) {
+            var div = document.getElementById(divId);
+            if (div.classList.contains("collapse")) {
+                div.classList.remove("collapse");
+                div.classList.add("expand");
+                document.getElementById(`btn-toc`).innerText = "Collapse Table of Contents";
+            } else {
+                div.classList.remove("expand");
+                div.classList.add("collapse");
+                document.getElementById(`btn-toc`).innerText = "Show Table of Contents";
+            }
+        }
+        
+        function toggleAll() {
+            var allButtonsToggle = document.getElementById("allButtonsToggle");
+            if (allButtonsToggle.innerText === "Expand Full Document") {
+                allButtonsToggle.innerText = "Collapse Full Document";
+                for (var i = 1; i <= 13; i++) {
+                    var divId = `div${i}`;
+					var divSotd = document.getElementById('sotd');
+					var divToc = document.getElementById('toc');
+                    var div = document.getElementById(divId);
+                    div.classList.remove("collapse");
+                    div.classList.add("expand");
+					divSotd.classList.remove("collapse");
+                    divSotd.classList.add("expand");
+					divToc.classList.remove("collapse");
+                    divToc.classList.add("expand");
+                    document.getElementById(`btn-div${i}`).innerText = "Collapse";
+					document.getElementById(`btn-sotd`).innerText = "Collapse Status of This Document";
+					document.getElementById(`btn-toc`).innerText = "Collapse Table of Contents";
+                }
+            } else {
+                allButtonsToggle.innerText = "Expand Full Document";
+                for (var i = 1; i <= 13; i++) {
+                    var divId = `div${i}`;
+                    var div = document.getElementById(divId);
+					var divSotd = document.getElementById('sotd');
+					var divToc = document.getElementById('toc');
+                    div.classList.remove("expand");
+                    div.classList.add("collapse");
+					divSotd.classList.remove("expand");
+                    divSotd.classList.add("collapse");
+					divToc.classList.remove("expand");
+                    divToc.classList.add("collapse");
+                    document.getElementById(`btn-div${i}`).innerText = "Expand";
+					document.getElementById(`btn-sotd`).innerText = "Show Status of This Document";
+					document.getElementById(`btn-toc`).innerText = "Show Table of Contents";
+                }
+            }
+        }
+		function toggleAllhowto() {
+            var allButtonsTogglehowto = document.getElementById("allButtonsTogglehowto");
+            if (allButtonsTogglehowto.innerText === "Expand All") {
+                allButtonsTogglehowto.innerText = "Collapse All";
+                for (var i = 1; i <= 7; i++) {
+                    var divId = `div${i}`;
+                    var div = document.getElementById(divId);
+                    div.classList.remove("collapse");
+                    div.classList.add("expand");
+                    document.getElementById(`btn-div${i}`).innerText = "Collapse";
+                }
+            } else {
+                allButtonsTogglehowto.innerText = "Expand All";
+                for (var i = 1; i <= 7; i++) {
+                    var divId = `div${i}`;
+                    var div = document.getElementById(divId);
+                    div.classList.remove("expand");
+                    div.classList.add("collapse");
+                    document.getElementById(`btn-div${i}`).innerText = "Expand";
+                }
+            }
+        }
+		function toggleAlldesign() {
+            var allButtonsToggledesign = document.getElementById("allButtonsToggledesign");
+            if (allButtonsToggledesign.innerText === "Expand All") {
+                allButtonsToggledesign.innerText = "Collapse All";
+                for (var i = 8; i <= 12; i++) {
+                    var divId = `div${i}`;
+                    var div = document.getElementById(divId);
+                    div.classList.remove("collapse");
+                    div.classList.add("expand");
+                    document.getElementById(`btn-div${i}`).innerText = "Collapse";
+                }
+            } else {
+                allButtonsToggledesign.innerText = "Expand All";
+                for (var i = 8; i <= 12; i++) {
+                    var divId = `div${i}`;
+                    var div = document.getElementById(divId);
+                    div.classList.remove("expand");
+                    div.classList.add("collapse");
+                    document.getElementById(`btn-div${i}`).innerText = "Expand";
+                }
+            }
+        }
+		function toggleDiv(divId) {
+            var div = document.getElementById(divId);
+            if (div.classList.contains("collapse")) {
+                div.classList.remove("collapse");
+                div.classList.add("expand");
+                document.getElementById(`btn-div${i}`).innerText = "Collapse";
+            } else {
+                div.classList.remove("expand");
+                div.classList.add("collapse");
+                document.getElementById(`btn-div${i}`).innerText = "Expand";
+            }
+        }
+
+		
+			</script>
+
+		<script class="remove">
+		var respecConfig = {
+	// embed RDFa data in the output
+	trace: true,
+	useExperimentalStyles: true,
+	doRDFa: '1.1',
+	includePermalinks: true,
+	permalinkEdge: true,
+	permalinkHide: false,
+	noRecTrack: true,
+	tocIntroductory: true,
+	lint: { "no-unused-dfns": false },
+	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+	specStatus: "DNOTE",
+	//crEnd:                "",
+	//perEnd:               "",
+	diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+
+	// the specifications short name, as in https://www.w3.org/TR/short-name/
+	shortName: "coga-usable",
+
+
+	// if you wish the publication date to be other than today, set this
+	//publishDate:  "2014-12-11",
+	copyrightStart: "2022",
+	license: "w3c-software-doc",
+
+	// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+	// and its maturity status
+	// previousPublishDate:  "2005-11-23",
+	// previousMaturity:  "NOTE",
+	//prevRecURI: "",
+	//previousDiffURI: "",
+
+	// if there a publicly available Editors Draft, this is the link
+	// edDraftURI: "https://w3c.github.io/apa/caur/",
+
+	// if this is a LCWD, uncomment and set the end of its review period
+	// lcEnd: "2012-02-21",
+
+	// editors, add as many as you like
+	// only "name" is required
+	editors: [
+		{
+			name: "Lisa",
+			mailto: "lisa1seeman@gmail.com",
+			w3cid: 74028
+		},
+
+	],
+
+	// authors, add as many as you like.
+	// This is optional, uncomment if you have authors as well as editors.
+	// only "name" is required. Same format as editors.
+
+	//authors:  [
+	//    { name: "Your Name", url: "http://example.org/",
+	//      company: "Your Company", companyURI: "http://example.com/" },
+	//],
+
+	/*
+	alternateFormats: [
+		{ uri: 'wcag21-diff.html', label: "Diff from Previous Recommendation" } ,
+		{ uri: 'wcag21.ps', label: "PostScript version" },
+		{ uri: 'wcag21.pdf', label: "PDF version" }
+	],
+	*/
+
+	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
+
+	group: ["apa","ag"],
+	github: "w3c/coga",
+	maxTocLevel: 3
+
+};
+
+
+		</script>
+		<style type="text/css">
+
+
+			.container {
+            margin: 0% auto;
+            width: 100%;
+            background-color: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+			
+			
+			}
+
+			.expand1 {
+				display: flex;
+				align-items:center;
+				padding: 5px;
+				justify-content: space-between;
+			}
+			.iconandhead{
+				display: flex;
+				align-items:center;
+				padding: 5px;
+				justify-content:left;
+			}
+
+			.collapse {
+				display: none; /* hide the collapsible section */		
+			}
+			.expand {
+            display: block;
+        	}
+			.inlineBtn{
+				display: flex;
+				justify-content: space-between;
+				font-size: 15px;
+			}
+		
+			
+			.icon {
+				width: 60px;
+				height: 60px;
+				margin-right: 10px;
+				
+				};
+		</style>
+	</head>
+	<body>
+		<button id="allButtonsToggle" onclick="toggleAll()">Expand Full Document</button>
+		<button id="btn-toc" onclick="toggleToc('toc')">Show Table of Contents</button> 
+	
+		<section id="abstract">Coga Usable document prototype</section>
+		<button id="btn-sotd" onclick="toggleSotd('sotd')">Show Status of This Document</button> 
+		<section id="sotd" class="collapse"></section>
+
+
+
+		<section class="informative" id="introduction">
+
+			<h1>Introduction</h1>
+			
+			<p>This document explains how to make content usable for individuals with cognitive and learning disabilities and differences [link to appendix with full list, not yet available]. The web is becoming increasingly essential for daily living, self care, safety, and independence. At the same time, approximately 20% of people [link to appendix, not yet available] in the world experience major cognitive or learning accessibility barriers online. This document is a working group note from the W3C, and provides supplemental guidance, beyond the Web Content Accessibility Guidelines (WCAG). </p>
+			<div class="inlineBtn">
+				<button class="inlineBtn">
+					<div><img src="img/np-user-research-1402000.svg" width="40px" height="40px"/></div><p><a href="#know-your-user">Know your user</a></p>
+				</button>
+				<button class="inlineBtn">
+					<div><img src="img/np-technique-6014141.svg" width="40px" height="40px"/></div><p><a href="#design-and-build">Design and build</a></p>
+				</button>
+				<button class="inlineBtn">
+					<div><img src="img/contains - evidence.svg" width="40px" height="40px"/></div><p><a href="#how-to-use-this-document">How to use this document</a></p>
+				</button>
+			</div>
+
+			<section class="notoc">
+				<h3>Know your user</h3>
+				<p>
+					An introduction to different cognitive abilities, specific user needs, and how to include the user in your process:
+				</p>
+				<ul>
+					<li>
+						Understand the user
+						<ul>
+							<li>
+								About people with cognitive and learning disabilities [anchor link, not yet available]
+							</li>
+							<li>
+								Personas [anchor link, not yet available]
+							</li>
+							<li>
+								User stories [anchor link, not yet available] 
+							</li>
+							<li>
+								Use cases [anchor link, not yet available] 
+							</li>
+							<li>
+								Functional needs [anchor link, not yet available] 
+							</li>
+						</ul>
+					</li>
+					<li>
+						Build the user into the development process 
+						<ul>
+							<li>
+								Focus groups [anchor link, not yet available]
+							</li>
+							<li>
+								Codesign [anchor link, not yet available]
+							</li>
+							<li>
+								Inclusive usability testing [anchor link, not yet available]
+							</li>
+							<li>
+								Working with people with cognitive disabilities [anchor link, not yet available]
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<p>Know your user → [CTA - anchor link, not yet available] </p>
+			</section>
+
+			<section class="notoc">
+				<h3>Design and build</h3>
+				<p>Includes design principles and specific patterns, implementation, and testing techniques: </p>
+				<ul>
+					<li>
+						Design is clear [anchor link] 
+					</li>
+					<li>
+						Interactions are clear and straightforward [anchor link] 
+					</li>
+					<li>
+						Functionality is supportive [anchor link] 
+					</li>
+					<li>
+						Content is understandable [anchor link]
+					</li>
+					<li>
+						Help is available and usable [anchor link] 
+					</li>
+				</ul>
+			</section>
+
+			<section class="notoc">
+				<h3>How to use this document</h3>
+				<p>
+					“Making content usable” is intended for anyone involved in the creation, curation, design, or development of digital technology and content. Depending on your specific role, here are potential paths you might take through this document. Each role listed below has a chip associated with it, that also includes visual indicators such as a specific icon and color.  These are regularly used throughout the document to identify content that might be of particular interest to individuals in those roles.  
+				</p>
+
+				<button id="allButtonsTogglehowto" onclick="toggleAllhowto()">Expand All</button>
+				<div  class="container">
+						<div  class="expand1">
+							<div class = "iconandhead">
+								<img src="img/noun-product-manager-4520957 17.svg" class="icon"/>
+								<div id="Tech-implementation"> 
+									<p><strong>Product ownership</strong></p>
+									<p>Includes product and program managers, stakeholders, and clients.</p>
+								</div>
+							</div>
+							
+							<button id="btn-div1" onclick="toggleDiv('div1')">Expand</button> 
+
+						</div>
+					<div id="div1" class="collapse">
+						<ol>
+							<li>
+								Start by understanding the user [link], which will clarify why this work is critical, how it impacts your potential reach
+							</li>
+							<li>
+								Include the user [link, not yet available] in your market research
+							</li>
+							<li>
+								Review the cognitive accessibility design principles [link to design and build] to make sure you know what to include in product requirements
+							</li>
+							<li>
+								Request that those working on design and implementation use this document and refer to the design and build [link to design and build] section
+							</li>
+						</ol>
+					</div>
+				</div>
+				
+				<div  class="container">
+						<div  class="expand1">
+							<div class = "iconandhead">
+								<img src="img/noun-product-manager-4520957 10.svg" class="icon"/>
+								<div id="Tech-implementation"> 
+									<p><strong>Tech implementation</strong></p>
+									<p>Includes engineer/developer, tech lead, coder, etc.</p>
+								</div>
+							</div>
+							
+							<button id="btn-div2" onclick="toggleDiv('div2')">Expand</button> 
+
+						</div>
+					<div id="div2" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/noun-product-manager-4520957 11.svg" class="icon"/>
+							<div id="Research"> 
+								<p><strong>Research</strong></p>
+								<p>Includes UXR, competitive analyst.</p>
+							</div>
+						</div>
+						
+						<button id="btn-div3" onclick="toggleDiv('div3')">Expand</button>  
+
+					</div>
+					<div id="div3" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/noun-product-manager-4520957 16.svg" class="icon"/>
+							<div id="UX-info-architecture"> 
+								<p><strong>UX & info architecture</strong></p>
+								<p>Includes UX & Interaction designers, and content strategists.</p>
+							</div>
+						</div>
+						
+						<button id="btn-div4" onclick="toggleDiv('div4')">Expand</button>
+
+					</div>
+					<div id="div4" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/noun-product-manager-4520957 15.svg" class="icon" />
+							<div id="Visual-design"> 
+								<p><strong>Visual design</strong></p>
+								<p>Includes artist and graphic designer.</p>
+							</div>
+						</div>
+						
+						<button id="btn-div5" onclick="toggleDiv('div5')">Expand</button> 
+
+					</div>
+					<div id="div5" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/noun-product-manager-4520957 10.svg" class="icon"/>
+							<div id="Content-creation"> 
+								<p><strong>Content creation</strong></p>
+								<p>Includes writers, video and music creators, and sound designers.</p>
+							</div>
+						</div>
+						
+						<button id="btn-div6" onclick="toggleDiv('div6')">Expand</button> 
+
+					</div>
+					<div id="div6" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/noun-product-manager-4520957 13.svg" class="icon"/>
+							<div id="Testing"> 
+								<p><strong>Testing</strong></p>
+								<p>Includes QA, test engineers, and auditors.</p>
+							</div>
+						</div>
+						
+						<button id="btn-div7" onclick="toggleDiv('div7')">Expand</button>  
+
+					</div>
+					<div id="div7" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+
+			</section>
+
+		</section>
+		<section>
+			<h2>Understand the user</h2>
+			<p>[content not yet ready for discussion]</p>	  
+		</section>
+		<section id="Design-and-build1">
+			<h2>Design and build</h2>
+			<p>
+				[still need to write the intro paragraph! make sure this short paragraph lets people know this includes both learning disabilities, aging, neurodivergence, and much more]
+			</p>
+			<section>
+				<h3>Overview of contents</h3>
+				<button id="allButtonsToggledesign" onclick="toggleAlldesign()">Expand All</button>
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/np-logic-5772814.svg" class="icon"/>
+							<div id="Design-is-clear"> 
+								<p><strong>Design is clear</strong></p>
+								<p>The visual, aural, and media design supports the user to easily understand the purpose and meaning of components, the hierarchy of the page and site, and how to navigate the layouts.</p>
+								<p>How to achieve clear design [anchor link]</p>
+							</div>
+						</div>
+
+						
+						<button id="btn-div8" onclick="toggleDiv('div8')">Expand</button> 
+
+					</div>
+					<div id="div8" class="collapse">
+						<p>[need to write]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/np-user-interaction-2119242.svg" class="icon"/>
+							<div id="Interactions-are-clear-and-straightforward"> 
+								<p><strong>Interactions are clear and straightforward</strong></p>
+								<p>The flows, tasks, and events provide clarity for the user to understand how to interact with the system, and what will and has happened based on how they interact with the interface.</p>
+								<p>How to ensure straightforward interactions [anchor link]</p>
+							</div>
+						</div>
+						
+						<button id="btn-div9" onclick="toggleDiv('div9')">Expand</button>  
+
+					</div>
+					<div id="div9" class="collapse">
+						<p>[need to write]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/np-scaffolding-3150023.svg" class="icon"/>
+							<div id="Functionality-is-supportive"> 
+								<p><strong>Functionality is supportive</strong></p>
+								<p>Functionality is incorporated to support the user “behind the scenes,” and/or provides the user with customization and/or personalization options. </p>
+								<p>How to build supportive functionality [anchor link]</p>
+							</div>
+						</div>
+						
+						<button id="btn-div10" onclick="toggleDiv('div10')">Expand</button>  
+
+					</div>
+					<div id="div10" class="collapse">
+						<p>[need to write]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/np-information-79272.svg" class="icon"/>
+							<div id="Content-is-understandable"> 
+								<p><strong>Content is understandable</strong></p>
+								<p>The language, imagery, media, and other content is easy to understand, and/or provides other ways to be understood by those who are better supported with other formats.</p>
+								<p>How to improve content understandability [anchor link]</p>
+							</div>
+						</div>
+						
+						<button id="btn-div11" onclick="toggleDiv('div11')">Expand</button> 
+
+					</div>
+					<div id="div11" class="collapse">
+						<p>[need to write]</p>
+					</div>
+				</div>
+
+				<div  class="container">
+					<div  class="expand1">
+						<div class = "iconandhead">
+							<img src="img/np-rescue-3591584.svg" class="icon"/>
+							<div id="Help-is-available-and-usable"> 
+								<p><strong>Help is available and usable</strong></p>
+								<p>The user is able to complete their journey outside of the system, or in an alternate way, if they choose to.</p>
+								<p>How to ensure help is usable [anchor link]</p>
+							</div>
+						</div>
+						
+						<button id="btn-div12" onclick="toggleDiv('div12')">Expand</button> 
+
+					</div>
+					<div id="div12" class="collapse">
+						<p>[need to write]</p>
+					</div>
+				</div>
+
+
+
+
+
+			</section>
+
+		</section>
+
+
+	</body>
+</html>
