@@ -12,7 +12,7 @@
 			if (div.classList.contains("collapse")) {
 				div.classList.remove("collapse");
 				div.classList.add("expand");
-				document.getElementById(`btn-sotd`).innerText = "Collapse Status of This Document";
+				document.getElementById(`btn-sotd`).innerText = "-Collapse Status of This Document";
 			} else {
 				div.classList.remove("expand");
 				div.classList.add("collapse");
@@ -25,7 +25,7 @@
 			if (div.classList.contains("collapse")) {
 				div.classList.remove("collapse");
 				div.classList.add("expand");
-				document.getElementById(`btn-toc`).innerText = "Collapse Table of Contents";
+				document.getElementById(`btn-toc`).innerText = "-Collapse Table of Contents";
 			} else {
 				div.classList.remove("expand");
 				div.classList.add("collapse");
@@ -35,8 +35,8 @@
 
 		function toggleAll() {
 			var allButtonsToggle = document.getElementById("allButtonsToggle");
-			if (allButtonsToggle.innerText === "Expand Full Document") {
-				allButtonsToggle.innerText = "Collapse Full Document";
+			if (allButtonsToggle.innerText === "+Expand Full Document") {
+				allButtonsToggle.innerText = "-Collapse Full Document";
 				for (var i = 1; i <= 13; i++) {
 					var divId = `div${i}`;
 					//var divSotd = document.getElementById('sotd');
@@ -48,12 +48,12 @@
 					//divSotd.classList.add("expand");
 					//divToc.classList.remove("collapse");
 					//divToc.classList.add("expand");
-					document.getElementById(`btn-div${i}`).innerText = "Collapse";
-					//document.getElementById(`btn-sotd`).innerText = "Collapse Status of This Document";
-					//document.getElementById(`btn-toc`).innerText = "Collapse Table of Contents";
+					document.getElementById(`btn-div${i}`).innerText = "-Collapse";
+					//document.getElementById(`btn-sotd`).innerText = "-Collapse Status of This Document";
+					//document.getElementById(`btn-toc`).innerText = "-Collapse Table of Contents";
 				}
 			} else {
-				allButtonsToggle.innerText = "Expand Full Document";
+				allButtonsToggle.innerText = "+Expand Full Document";
 				for (var i = 1; i <= 13; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
@@ -65,7 +65,7 @@
 					//divSotd.classList.add("collapse");
 					//divToc.classList.remove("expand");
 					//divToc.classList.add("collapse");
-					document.getElementById(`btn-div${i}`).innerText = "Expand";
+					document.getElementById(`btn-div${i}`).innerText = "+Expand";
 					//document.getElementById(`btn-sotd`).innerText = "Show Status of This Document";
 					//document.getElementById(`btn-toc`).innerText = "Show Table of Contents";
 				}
@@ -73,45 +73,45 @@
 		}
 		function toggleAllhowto() {
 			var allButtonsTogglehowto = document.getElementById("allButtonsTogglehowto");
-			if (allButtonsTogglehowto.innerText === "Expand All") {
-				allButtonsTogglehowto.innerText = "Collapse All";
+			if (allButtonsTogglehowto.innerText === "+Expand All") {
+				allButtonsTogglehowto.innerText = "-Collapse All";
 				for (var i = 1; i <= 7; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
 					div.classList.remove("collapse");
 					div.classList.add("expand");
-					document.getElementById(`btn-div${i}`).innerText = "Collapse";
+					document.getElementById(`btn-div${i}`).innerText = "-Collapse";
 				}
 			} else {
-				allButtonsTogglehowto.innerText = "Expand All";
+				allButtonsTogglehowto.innerText = "+Expand All";
 				for (var i = 1; i <= 7; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
 					div.classList.remove("expand");
 					div.classList.add("collapse");
-					document.getElementById(`btn-div${i}`).innerText = "Expand";
+					document.getElementById(`btn-div${i}`).innerText = "+Expand";
 				}
 			}
 		}
 		function toggleAlldesign() {
 			var allButtonsToggledesign = document.getElementById("allButtonsToggledesign");
-			if (allButtonsToggledesign.innerText === "Expand All") {
-				allButtonsToggledesign.innerText = "Collapse All";
+			if (allButtonsToggledesign.innerText === "+Expand All") {
+				allButtonsToggledesign.innerText = "-Collapse All";
 				for (var i = 8; i <= 12; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
 					div.classList.remove("collapse");
 					div.classList.add("expand");
-					document.getElementById(`btn-div${i}`).innerText = "Collapse";
+					document.getElementById(`btn-div${i}`).innerText = "-Collapse";
 				}
 			} else {
-				allButtonsToggledesign.innerText = "Expand All";
+				allButtonsToggledesign.innerText = "+Expand All";
 				for (var i = 8; i <= 12; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
 					div.classList.remove("expand");
 					div.classList.add("collapse");
-					document.getElementById(`btn-div${i}`).innerText = "Expand";
+					document.getElementById(`btn-div${i}`).innerText = "+Expand";
 				}
 			}
 		}
@@ -121,11 +121,11 @@
 			if (div.classList.contains("collapse")) {
 				div.classList.remove("collapse");
 				div.classList.add("expand");
-				document.getElementById(`btn-div${i}`).innerText = "Collapse";
+				document.getElementById('btn-' + divId).innerText = "-Collapse";
 			} else {
 				div.classList.remove("expand");
 				div.classList.add("collapse");
-				document.getElementById(`btn-div${i}`).innerText = "Expand";
+				document.getElementById('btn-' + divId).innerText = "+Expand";
 			}
 		}
 
@@ -240,7 +240,7 @@
 		.iconandhead {
 			display: flex;
 			align-items: center;
-			padding: 5px;
+			padding: 10px;
 			justify-content: left;
 		}
 
@@ -267,12 +267,13 @@
 
 		}
 
+
 		;
 	</style>
 </head>
 
 <body style="line-height: 2; font-size: 1.2em;">
-	<button id="allButtonsToggle" onclick="toggleAll()">Expand Full Document</button>
+	<button id="allButtonsToggle" onclick="toggleAll()">+Expand Full Document</button>
 	<!-- <button id="btn-toc" onclick="toggleToc('toc')">Show Table of Contents</button> -->
 
 	<section id="abstract">Coga Usable document prototype</section>
@@ -386,7 +387,7 @@
 				document to identify content that might be of particular interest to individuals in those roles.
 			</p>
 
-			<button id="allButtonsTogglehowto" onclick="toggleAllhowto()">Expand All</button>
+			<button id="allButtonsTogglehowto" onclick="toggleAllhowto()">+Expand All</button>
 			<div class="container">
 				<div class="expand1">
 					<div class="iconandhead">
@@ -397,7 +398,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div1" onclick="toggleDiv('div1')">Expand</button>
+					<button id="btn-div1" onclick="toggleDiv('div1')">+Expand</button>
 
 				</div>
 				<div id="div1" class="collapse">
@@ -431,7 +432,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div2" onclick="toggleDiv('div2')">Expand</button>
+					<button id="btn-div2" onclick="toggleDiv('div2')">+Expand</button>
 
 				</div>
 				<div id="div2" class="collapse">
@@ -449,7 +450,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div3" onclick="toggleDiv('div3')">Expand</button>
+					<button id="btn-div3" onclick="toggleDiv('div3')">+Expand</button>
 
 				</div>
 				<div id="div3" class="collapse">
@@ -467,7 +468,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div4" onclick="toggleDiv('div4')">Expand</button>
+					<button id="btn-div4" onclick="toggleDiv('div4')">+Expand</button>
 
 				</div>
 				<div id="div4" class="collapse">
@@ -485,7 +486,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div5" onclick="toggleDiv('div5')">Expand</button>
+					<button id="btn-div5" onclick="toggleDiv('div5')">+Expand</button>
 
 				</div>
 				<div id="div5" class="collapse">
@@ -503,7 +504,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div6" onclick="toggleDiv('div6')">Expand</button>
+					<button id="btn-div6" onclick="toggleDiv('div6')">+Expand</button>
 
 				</div>
 				<div id="div6" class="collapse">
@@ -521,7 +522,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div7" onclick="toggleDiv('div7')">Expand</button>
+					<button id="btn-div7" onclick="toggleDiv('div7')">+Expand</button>
 
 				</div>
 				<div id="div7" class="collapse">
@@ -544,7 +545,7 @@
 		</p>
 		<section>
 			<h3>Overview of contents</h3>
-			<button id="allButtonsToggledesign" onclick="toggleAlldesign()">Expand All</button>
+			<button id="allButtonsToggledesign" onclick="toggleAlldesign()">+Expand All</button>
 			<div class="container">
 				<div class="expand1">
 					<div class="iconandhead">
@@ -559,7 +560,7 @@
 					</div>
 
 
-					<button id="btn-div8" onclick="toggleDiv('div8')">Expand</button>
+					<button id="btn-div8" onclick="toggleDiv('div8')">+Expand</button>
 
 				</div>
 				<div id="div8" class="collapse">
@@ -580,7 +581,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div9" onclick="toggleDiv('div9')">Expand</button>
+					<button id="btn-div9" onclick="toggleDiv('div9')">+Expand</button>
 
 				</div>
 				<div id="div9" class="collapse">
@@ -600,7 +601,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div10" onclick="toggleDiv('div10')">Expand</button>
+					<button id="btn-div10" onclick="toggleDiv('div10')">+Expand</button>
 
 				</div>
 				<div id="div10" class="collapse">
@@ -620,7 +621,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div11" onclick="toggleDiv('div11')">Expand</button>
+					<button id="btn-div11" onclick="toggleDiv('div11')">+Expand</button>
 
 				</div>
 				<div id="div11" class="collapse">
@@ -640,7 +641,7 @@
 						</div>
 					</div>
 
-					<button id="btn-div12" onclick="toggleDiv('div12')">+ Expand</button>
+					<button id="btn-div12" onclick="toggleDiv('div12')">+Expand</button>
 
 				</div>
 				<div id="div12" class="collapse">
