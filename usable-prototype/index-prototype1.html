@@ -1,159 +1,202 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<title>COGA Structure v2 - WCAG Style</title>
-		<meta charset="utf-8"/>
-		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
+
+<head>
+	<title>COGA Structure v2 - WCAG Style</title>
+	<meta charset="utf-8" />
+	<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 
 
-		<script class="remove">
+	<script class="remove">
 		var respecConfig = {
-	// embed RDFa data in the output
-	trace: true,
-	useExperimentalStyles: true,
-	doRDFa: '1.1',
-	includePermalinks: true,
-	permalinkEdge: true,
-	permalinkHide: false,
-	noRecTrack: true,
-	tocIntroductory: true,
-	lint: { "no-unused-dfns": false },
-	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-	specStatus: "DNOTE",
-	//crEnd:                "",
-	//perEnd:               "",
-	diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+			// embed RDFa data in the output
+			trace: true,
+			useExperimentalStyles: true,
+			doRDFa: '1.1',
+			includePermalinks: true,
+			permalinkEdge: true,
+			permalinkHide: false,
+			noRecTrack: true,
+			tocIntroductory: true,
+			lint: { "no-unused-dfns": false },
+			// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+			specStatus: "DNOTE",
+			//crEnd:                "",
+			//perEnd:               "",
+			diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 
-	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "coga-usable",
-
-
-	// if you wish the publication date to be other than today, set this
-	//publishDate:  "2014-12-11",
-	copyrightStart: "2022",
-	license: "w3c-software-doc",
-
-	// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
-	// and its maturity status
-	// previousPublishDate:  "2005-11-23",
-	// previousMaturity:  "NOTE",
-	//prevRecURI: "",
-	//previousDiffURI: "",
-
-	// if there a publicly available Editors Draft, this is the link
-	// edDraftURI: "https://w3c.github.io/apa/caur/",
-
-	// if this is a LCWD, uncomment and set the end of its review period
-	// lcEnd: "2012-02-21",
-
-	// editors, add as many as you like
-	// only "name" is required
-	editors: [
-		{
-			name: "Lisa",
-			mailto: "lisa1seeman@gmail.com",
-			w3cid: 74028
-		},
-
-	],
-
-	// authors, add as many as you like.
-	// This is optional, uncomment if you have authors as well as editors.
-	// only "name" is required. Same format as editors.
-
-	//authors:  [
-	//    { name: "Your Name", url: "http://example.org/",
-	//      company: "Your Company", companyURI: "http://example.com/" },
-	//],
-
-	/*
-	alternateFormats: [
-		{ uri: 'wcag21-diff.html', label: "Diff from Previous Recommendation" } ,
-		{ uri: 'wcag21.ps', label: "PostScript version" },
-		{ uri: 'wcag21.pdf', label: "PDF version" }
-	],
-	*/
-
-	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
-
-	group: ["apa","ag"],
-	github: "w3c/coga",
-	maxTocLevel: 3
-
-};
+			// the specifications short name, as in https://www.w3.org/TR/short-name/
+			shortName: "coga-usable",
 
 
-		</script>
-		<style>
-			.doclinks {
-    float: right;
-    border: thin solid black;
-    font-size: x-small;
-    display: block;
-    width: 25%;
-    hyphens: none;
-}
-		</style>
-	</head>
-	<body>
-	
-		<section id="abstract">Coga Usable document prototype, according to Kevin's suggestions. Try to keep the structure of the documents in TR simple and easy to read, and point more content to the web page through links, just like the document structure of WCAG. At the same time, we can add more styles and designs to the web page. </section>
-		<section id="sotd"></section>
+			// if you wish the publication date to be other than today, set this
+			//publishDate:  "2014-12-11",
+			copyrightStart: "2022",
+			license: "w3c-software-doc",
+
+			// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+			// and its maturity status
+			// previousPublishDate:  "2005-11-23",
+			// previousMaturity:  "NOTE",
+			//prevRecURI: "",
+			//previousDiffURI: "",
+
+			// if there a publicly available Editors Draft, this is the link
+			// edDraftURI: "https://w3c.github.io/apa/caur/",
+
+			// if this is a LCWD, uncomment and set the end of its review period
+			// lcEnd: "2012-02-21",
+
+			// editors, add as many as you like
+			// only "name" is required
+			editors: [
+				{
+					name: "Lisa",
+					mailto: "lisa1seeman@gmail.com",
+					w3cid: 74028
+				},
+
+			],
+
+			// authors, add as many as you like.
+			// This is optional, uncomment if you have authors as well as editors.
+			// only "name" is required. Same format as editors.
+
+			//authors:  [
+			//    { name: "Your Name", url: "http://example.org/",
+			//      company: "Your Company", companyURI: "http://example.com/" },
+			//],
+
+			/*
+			alternateFormats: [
+				{ uri: 'wcag21-diff.html', label: "Diff from Previous Recommendation" } ,
+				{ uri: 'wcag21.ps', label: "PostScript version" },
+				{ uri: 'wcag21.pdf', label: "PDF version" }
+			],
+			*/
+
+			// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
+
+			group: ["apa", "ag"],
+			github: "w3c/coga",
+			maxTocLevel: 3
+
+		};
+
+
+	</script>
+	<style>
+		.doclinks {
+			float: right;
+			border: thin solid black;
+			font-size: x-small;
+			display: block;
+			width: 25%;
+			hyphens: none;
+		}
+
+		.icon {
+			float: right;
+			width: 100px;
+			height: 100px;
+			margin-left: 10px;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<section id="abstract">Coga Usable document prototype, according to Kevin's suggestions. Try to keep the structure
+		of the documents in TR simple and easy to read, and point more content to the web page through links, just like
+		the document structure of WCAG. At the same time, we can add more styles and designs to the web page. </section>
+	<section id="sotd"></section>
 
 
 
-		<section class="informative" id="introduction">
+	<section class="informative" id="introduction">
 
-			<h1>Introduction</h1>
-			
-			<p>...</p>
-		</section>
+		<h1>Introduction</h1>
+
+		<p>...</p>
+	</section>
+	<section>
+		<h1>Objectives</h1>
+
+		<p>The following content is simplified based on the document structure of coga-usable v1. Try to keep the
+			structure of the documents in TR simple and easy to read, and move the patterns and user stores to the
+			website. The structure is similar to WCAG.</p>
+		<div style="border-bottom: 1px solid #ccc"></div>
 		<section>
-			<h1>Objectives</h1>
-			
-			<p>The following content is simplified based on the document structure of coga-usable v1. Try to keep the structure of the documents in TR simple and easy to read, and move the patterns and user stores to the website. The structure is similar to WCAG.</p>
+
+			<h2>
+				Design is clear
+			</h2>
+			<div class="icon">
+				<img src="img/np-user-interaction-2119242.svg" class="icon" />
+			</div>
+
+			<p>Use icons, symbols, terms, and design patterns that are already familiar to users so that they do not
+				have to learn new ones. People with cognitive and learning disabilities often need common behavior and
+				design patterns. For example, use the standard convention for hyperlinks (underlined and blue for
+				unvisited; purple for visited).</p>
+			<ul>
+				<li>
+					<a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#description">How to
+						achieve clear design</a>
+				</li>
+				<li>
+					<a
+						href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#userstoriesandpersonas">why
+						does design clear matter (User
+						Stories and Personas) </a>
+				</li>
+
+			</ul>
+		</section>
+
+		<div style="border-bottom: 1px solid #ccc"></div>
 		<section>
 			<h2>
-				Objective 1: Help Users Understand What Things are and How to Use Them
+				Interactions are clear and straightforward
 			</h2>
-			<div class="doclinks"><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#description">Understanding this objective</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#designpatternsforthisobjective">Design Patterns for this Objective</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#userstoriesandpersonas">User Stories and Personas</a></div>
-			<p>Use icons, symbols, terms, and design patterns that are already familiar to users so that they do not have to learn new ones. People with cognitive and learning disabilities often need common behavior and design patterns. For example, use the standard convention for hyperlinks (underlined and blue for unvisited; purple for visited).</p>
-		</section>
+			<div class="icon">
+				<img src="img/np-scaffolding-3150023.svg" class="icon" />
+			</div>
+			<p>Make navigating the system easy. Use a clear and easy-to-follow layout with visual cues, such as icons.
+				Clear headings, boundaries, and regions also helps people understand the page design.
 
+			</p>
+			<ul>
+				<li>
+					<a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#description">How to
+						achieve straightforward interactions</a>
+				</li>
+				<li>
+					<a
+						href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#userstoriesandpersonas">why
+						does straightforward interactions matter (User
+						Stories and Personas) </a>
+				</li>
+		</section>
+		<div style="border-bottom: 1px solid #ccc"></div>
 		<section>
 			<h2>
-				Objective 2: Help users find what they need.
+				@@@
 			</h2>
-			<div class="doclinks"><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#description">Understanding this objective</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#designpatternsforthisobjective">Design Patterns for this Objective</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#userstoriesandpersonas">User Stories and Personas</a></div>
-			<p>Make navigating the system easy. Use a clear and easy-to-follow layout with visual cues, such as icons. Clear headings, boundaries, and regions also helps people understand the page design.
+
+			<p>A good design makes errors less likely. Ask the user only for what you need! When errors occur, make it
+				easy for the user to correct them.
 
 			</p>
 		</section>
-
-		<section>
-			<h2>
-				Objective 3: Use clear content (text, images and media).
-			</h2>
-			<div class="doclinks"><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#description">Understanding this objective</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#designpatternsforthisobjective">Design Patterns for this Objective</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#userstoriesandpersonas">User Stories and Personas</a></div>
-			<p>A good design makes errors less likely. Ask the user only for what you need! When errors occur, make it easy for the user to correct them.
-
-			</p>
-		</section>
-
-		<section>
-			<h2>
-				Objective 4: ...
-			</h2>
-			<div class="doclinks"><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#description">Understanding this objective</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#designpatternsforthisobjective">Design Patterns for this Objective</a> <span class="screenreader">|</span> <br><a href="https://www.w3.org/WAI/WCAG2/supplemental/objectives/o1-understandable/#userstoriesandpersonas">User Stories and Personas</a></div>
-			<p>...
-
-			</p>
-		</section>
+		<div style="border-bottom: 1px solid #ccc"></div>
 		<section>...</section>
 
 	</section>
 
 
 
-	</body>
+</body>
+
 </html>
