@@ -2,8 +2,10 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>COGA Structure v2 - subgroup proposal</title>
+	<title>Making Content Usable - v2 structure subgroup prototype
+		for TR note layout</title>
 	<meta charset="utf-8" />
+	<link href="content-usable.css" rel="stylesheet" type="text/css" />
 	<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 	<script>
 
@@ -12,7 +14,7 @@
 			if (div.classList.contains("collapse")) {
 				div.classList.remove("collapse");
 				div.classList.add("expand");
-				document.getElementById(`btn-sotd`).innerText = "-Collapse Status of This Document";
+				document.getElementById(`btn-sotd`).innerText = "- Collapse Status of This Document";
 			} else {
 				div.classList.remove("expand");
 				div.classList.add("collapse");
@@ -25,7 +27,7 @@
 			if (div.classList.contains("collapse")) {
 				div.classList.remove("collapse");
 				div.classList.add("expand");
-				document.getElementById(`btn-toc`).innerText = "-Collapse Table of Contents";
+				document.getElementById(`btn-toc`).innerText = "- Collapse Table of Contents";
 			} else {
 				div.classList.remove("expand");
 				div.classList.add("collapse");
@@ -33,85 +35,87 @@
 			}
 		}
 
-		function toggleAll() {
-			var allButtonsToggle = document.getElementById("allButtonsToggle");
-			if (allButtonsToggle.innerText === "+Expand Full Document") {
-				allButtonsToggle.innerText = "-Collapse Full Document";
-				for (var i = 1; i <= 13; i++) {
-					var divId = `div${i}`;
-					//var divSotd = document.getElementById('sotd');
-					//var divToc = document.getElementById('toc');
-					var div = document.getElementById(divId);
-					div.classList.remove("collapse");
-					div.classList.add("expand");
-					//divSotd.classList.remove("collapse");
-					//divSotd.classList.add("expand");
-					//divToc.classList.remove("collapse");
-					//divToc.classList.add("expand");
-					document.getElementById(`btn-div${i}`).innerText = "-Collapse";
-					//document.getElementById(`btn-sotd`).innerText = "-Collapse Status of This Document";
-					//document.getElementById(`btn-toc`).innerText = "-Collapse Table of Contents";
-				}
-			} else {
-				allButtonsToggle.innerText = "+Expand Full Document";
-				for (var i = 1; i <= 13; i++) {
-					var divId = `div${i}`;
-					var div = document.getElementById(divId);
-					//var divSotd = document.getElementById('sotd');
-					//var divToc = document.getElementById('toc');
-					div.classList.remove("expand");
-					div.classList.add("collapse");
-					//divSotd.classList.remove("expand");
-					//divSotd.classList.add("collapse");
-					//divToc.classList.remove("expand");
-					//divToc.classList.add("collapse");
-					document.getElementById(`btn-div${i}`).innerText = "+Expand";
-					//document.getElementById(`btn-sotd`).innerText = "Show Status of This Document";
-					//document.getElementById(`btn-toc`).innerText = "Show Table of Contents";
-				}
+		document.addEventListener('DOMContentLoaded', function () {
+			function toggleAll() {
+				const buttons = document.querySelectorAll('.btnall');
+
+				buttons.forEach(button => {
+					button.addEventListener('click', event => {
+						event.stopImmediatePropagation();
+
+						const isExpanded = button.innerText === '+ Expand all';
+						const toggleText = isExpanded ? '- Collapse all' : '+ Expand all';
+
+
+						buttons.forEach(btn => btn.innerText = toggleText);
+
+						for (let i = 1; i <= 23; i++) {
+							const divId = `div${i}`;
+							const div = document.getElementById(divId);
+							if (div) {
+								if (isExpanded && !div.classList.contains("expand")) {
+									div.classList.add("expand");
+									div.classList.remove("collapse");
+								} else if (!isExpanded && div.classList.contains("expand")) {
+									div.classList.add("collapse");
+									div.classList.remove("expand");
+								}
+							}
+
+							const btnId = `btn-div${i}`;
+							const btn = document.getElementById(btnId);
+							if (btn) {
+								btn.innerText = div.classList.contains("expand") ? "- Collapse" : "+ Expand";
+							}
+						}
+					});
+				});
 			}
-		}
+
+			// Call the function to initialize the event listeners
+			toggleAll();
+		});
 		function toggleAllhowto() {
 			var allButtonsTogglehowto = document.getElementById("allButtonsTogglehowto");
-			if (allButtonsTogglehowto.innerText === "+Expand All") {
-				allButtonsTogglehowto.innerText = "-Collapse All";
+			if (allButtonsTogglehowto.innerText === "+ Expand All") {
+				allButtonsTogglehowto.innerText = "- Collapse All";
 				for (var i = 1; i <= 7; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
 					div.classList.remove("collapse");
 					div.classList.add("expand");
-					document.getElementById(`btn-div${i}`).innerText = "-Collapse";
+					document.getElementById(`btn-div${i}`).innerText = "- Collapse";
 				}
 			} else {
-				allButtonsTogglehowto.innerText = "+Expand All";
+				allButtonsTogglehowto.innerText = "+ Expand All";
 				for (var i = 1; i <= 7; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
 					div.classList.remove("expand");
 					div.classList.add("collapse");
-					document.getElementById(`btn-div${i}`).innerText = "+Expand";
+					document.getElementById(`btn-div${i}`).innerText = "+ Expand";
 				}
 			}
 		}
 		function toggleAlldesign() {
 			var allButtonsToggledesign = document.getElementById("allButtonsToggledesign");
-			if (allButtonsToggledesign.innerText === "+Expand All") {
-				allButtonsToggledesign.innerText = "-Collapse All";
-				for (var i = 8; i <= 12; i++) {
+			if (allButtonsToggledesign.innerText === "+ Expand All") {
+				allButtonsToggledesign.innerText = "- Collapse All";
+				for (var i = 8; i <= 10; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
 					div.classList.remove("collapse");
 					div.classList.add("expand");
-					document.getElementById(`btn-div${i}`).innerText = "-Collapse";
+					document.getElementById(`btn-div${i}`).innerText = "- Collapse";
 				}
 			} else {
-				allButtonsToggledesign.innerText = "+Expand All";
-				for (var i = 8; i <= 12; i++) {
+				allButtonsToggledesign.innerText = "+ Expand All";
+				for (var i = 8; i <= 10; i++) {
 					var divId = `div${i}`;
 					var div = document.getElementById(divId);
 					div.classList.remove("expand");
 					div.classList.add("collapse");
-					document.getElementById(`btn-div${i}`).innerText = "+Expand";
+					document.getElementById(`btn-div${i}`).innerText = "+ Expand";
 				}
 			}
 		}
@@ -121,11 +125,11 @@
 			if (div.classList.contains("collapse")) {
 				div.classList.remove("collapse");
 				div.classList.add("expand");
-				document.getElementById('btn-' + divId).innerText = "-Collapse";
+				document.getElementById('btn-' + divId).innerText = "- Collapse";
 			} else {
 				div.classList.remove("expand");
 				div.classList.add("collapse");
-				document.getElementById('btn-' + divId).innerText = "+Expand";
+				document.getElementById('btn-' + divId).innerText = "+ Expand";
 			}
 		}
 
@@ -145,7 +149,7 @@
 			tocIntroductory: true,
 			lint: { "no-unused-dfns": false },
 			// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-			specStatus: "DNOTE",
+			specStatus: "ED",
 			//crEnd:                "",
 			//perEnd:               "",
 			diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
@@ -210,75 +214,34 @@
 
 
 	</script>
-	<style type="text/css">
-		body {
-			line-height: 2;
-			font-size: 1.2em;
-			font: Lexend;
 
-		}
-
-		.container {
-			margin: 0% auto;
-			width: 100%;
-			background-color: #f0f0f0;
-			padding: 10px;
-			border: 1px solid #ccc;
-			border-radius: 10px;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-
-
-		}
-
-		.expand1 {
-			display: flex;
-			align-items: center;
-			padding: 5px;
-			justify-content: space-between;
-		}
-
-		.iconandhead {
-			display: flex;
-			align-items: center;
-			padding: 10px;
-			justify-content: left;
-		}
-
-		.collapse {
-			display: none;
-			/* hide the collapsible section */
-		}
-
-		.expand {
-			display: block;
-		}
-
-		.inlineBtn {
-			display: flex;
-			justify-content: space-between;
-			font-size: 15px;
-		}
-
-
-		.icon {
-			width: 80px;
-			height: 80px;
-			margin-right: 20px;
-
-		}
-
-
-		;
-	</style>
 </head>
 
 <body style="line-height: 2; font-size: 1.2em;">
-	<button id="allButtonsToggle" onclick="toggleAll()">+Expand Full Document</button>
-	<!-- <button id="btn-toc" onclick="toggleToc('toc')">Show Table of Contents</button> -->
+	<div>
+		<p>Jump to:
+			<a href="#introduction"><button>contents</button></a>
+			<a href="#how-to-use-this-document"><button>How to use this document</button></a>
+			<a href="#know-your-user"><button>Know the user</button></a>
+			<a href="#design-and-build"><button>Design & build</button></a>
+		</p>
+	</div>
 
-	<section id="abstract">Coga Usable document prototype</section>
+	<!--<button id="btnall1" class="btnall" onclick="toggleAll()">+ Expand all</button> <button id="btn-toc" onclick="toggleToc('toc')">Show Table of Contents</button> -->
+
+	<section id="abstract">This is
+		a prototype for testing
+		only. Please reference
+		<a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a> for
+		the published note.
+	</section>
 	<!-- <button id="btn-sotd" onclick="toggleSotd('sotd')">Show Status of This Document</button> -->
-	<section id="sotd"></section>
+	<section id="sotd">This is
+		a prototype for testing
+		only. Please reference
+		<a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a> for
+		the published note.
+	</section>
 
 
 
@@ -292,370 +255,464 @@
 			people [link to appendix, not yet available] in the world experience major cognitive or learning
 			accessibility barriers online. This document is a working group note from the W3C, and provides supplemental
 			guidance, beyond the Web Content Accessibility Guidelines (WCAG). </p>
-		<div class="inlineBtn">
-			<button class="inlineBtn">
-				<div><img src="img/np-user-research-1402000.svg" width="40px" height="40px" /></div>
-				<p><a href="#know-your-user">Know your user</a></p>
-			</button>
-			<button class="inlineBtn">
-				<div><img src="img/np-technique-6014141.svg" width="40px" height="40px" /></div>
-				<p><a href="#design-and-build">Design and build</a></p>
-			</button>
-			<button class="inlineBtn">
-				<div><img src="img/contains - evidence.svg" width="40px" height="40px" /></div>
-				<p><a href="#how-to-use-this-document">How to use this document</a></p>
-			</button>
-		</div>
-
-		<section class="notoc">
-			<h3>Know your user</h3>
-			<p>
-				An introduction to different cognitive abilities, specific user needs, and how to include the user in
-				your process:
-			</p>
-			<ul>
-				<li>
-					Understand the user
-					<ul>
-						<li>
-							About people with cognitive and learning disabilities [anchor link, not yet available]
-						</li>
-						<li>
-							Personas [anchor link, not yet available]
-						</li>
-						<li>
-							User stories [anchor link, not yet available]
-						</li>
-						<li>
-							Use cases [anchor link, not yet available]
-						</li>
-						<li>
-							Functional needs [anchor link, not yet available]
-						</li>
-					</ul>
-				</li>
-				<li>
-					Build the user into the development process
-					<ul>
-						<li>
-							Focus groups [anchor link, not yet available]
-						</li>
-						<li>
-							Codesign [anchor link, not yet available]
-						</li>
-						<li>
-							Inclusive usability testing [anchor link, not yet available]
-						</li>
-						<li>
-							Working with people with cognitive disabilities [anchor link, not yet available]
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<p>Know your user → [CTA - anchor link, not yet available] </p>
-		</section>
-
-		<section class="notoc">
-			<h3>Design and build</h3>
-			<p>Includes design principles and specific patterns, implementation, and testing techniques: </p>
-			<ul>
-				<li>
-					Design is clear [anchor link]
-				</li>
-				<li>
-					Interactions are clear and straightforward [anchor link]
-				</li>
-				<li>
-					Functionality is supportive [anchor link]
-				</li>
-				<li>
-					Content is understandable [anchor link]
-				</li>
-				<li>
-					Help is available and usable [anchor link]
-				</li>
-			</ul>
-		</section>
-
-		<section class="notoc">
-			<h3>How to use this document</h3>
-			<p>
-				“Making content usable” is intended for anyone involved in the creation, curation, design, or
-				development of digital technology and content. Depending on your specific role, here are potential paths
-				you might take through this document. Each role listed below has a chip associated with it, that also
-				includes visual indicators such as a specific icon and color. These are regularly used throughout the
-				document to identify content that might be of particular interest to individuals in those roles.
-			</p>
-
-			<button id="allButtonsTogglehowto" onclick="toggleAllhowto()">+Expand All</button>
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/noun-product-manager-4520957 17.svg" class="icon" />
-						<div>
-							<h5>Product ownership</h5>
-							<p>Includes product and program managers, stakeholders, and clients.</p>
-						</div>
-					</div>
-
-					<button id="btn-div1" onclick="toggleDiv('div1')">+Expand</button>
-
-				</div>
-				<div id="div1" class="collapse">
-					<ol>
-						<li>
-							Start by understanding the user [link], which will clarify why this work is critical, how it
-							impacts your potential reach
-						</li>
-						<li>
-							Include the user [link, not yet available] in your market research
-						</li>
-						<li>
-							Review the cognitive accessibility design principles [link to design and build] to make sure
-							you know what to include in product requirements
-						</li>
-						<li>
-							Request that those working on design and implementation use this document and refer to the
-							design and build [link to design and build] section
-						</li>
-					</ol>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/noun-product-manager-4520957 10.svg" class="icon" />
-						<div>
-							<h4>Tech implementation</h4>
-							<p>Includes engineer/developer, tech lead, coder, etc.</p>
-						</div>
-					</div>
-
-					<button id="btn-div2" onclick="toggleDiv('div2')">+Expand</button>
-
-				</div>
-				<div id="div2" class="collapse">
-					<p>[need to write steps]</p>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/noun-product-manager-4520957 11.svg" class="icon" />
-						<div id="Research">
-							<h4>Research</h4>
-							<p>Includes UXR, competitive analyst.</p>
-						</div>
-					</div>
-
-					<button id="btn-div3" onclick="toggleDiv('div3')">+Expand</button>
-
-				</div>
-				<div id="div3" class="collapse">
-					<p>[need to write steps]</p>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/noun-product-manager-4520957 16.svg" class="icon" />
-						<div id="UX-info-architecture">
-							<h4>UX & info architecture</h4>
-							<p>Includes UX & Interaction designers, and content strategists.</p>
-						</div>
-					</div>
-
-					<button id="btn-div4" onclick="toggleDiv('div4')">+Expand</button>
-
-				</div>
-				<div id="div4" class="collapse">
-					<p>[need to write steps]</p>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/noun-product-manager-4520957 15.svg" class="icon" />
-						<div id="Visual-design">
-							<h4>Visual design</h4>
-							<p>Includes artist and graphic designer.</p>
-						</div>
-					</div>
-
-					<button id="btn-div5" onclick="toggleDiv('div5')">+Expand</button>
-
-				</div>
-				<div id="div5" class="collapse">
-					<p>[need to write steps]</p>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/noun-product-manager-4520957 10.svg" class="icon" />
-						<div id="Content-creation">
-							<h4>Content creation</h4>
-							<p>Includes writers, video and music creators, and sound designers.</p>
-						</div>
-					</div>
-
-					<button id="btn-div6" onclick="toggleDiv('div6')">+Expand</button>
-
-				</div>
-				<div id="div6" class="collapse">
-					<p>[need to write steps]</p>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/noun-product-manager-4520957 13.svg" class="icon" />
-						<div id="Testing">
-							<h4>Testing</h4>
-							<p>Includes QA, test engineers, and auditors.</p>
-						</div>
-					</div>
-
-					<button id="btn-div7" onclick="toggleDiv('div7')">+Expand</button>
-
-				</div>
-				<div id="div7" class="collapse">
-					<p>[need to write steps]</p>
-				</div>
-			</div>
-
-		</section>
-
 	</section>
 	<section>
-		<h2>Understand the user</h2>
-		<p>[content not yet ready for discussion]</p>
-	</section>
-	<section id="Design-and-build1">
-		<h2>Design and build</h2>
+		<h3>How to use this document</h3>
 		<p>
-			[still need to write the intro paragraph! make sure this short paragraph lets people know this includes both
-			learning disabilities, aging, neurodivergence, and much more]
+			“Making content usable” is intended for anyone involved in the creation, curation, design, or
+			development of digital technology and content. Depending on your specific role, here are potential paths
+			you might take through this document. Each role listed below has a chip associated with it, that also
+			includes visual indicators such as a specific icon and color. These are regularly used throughout the
+			document to identify content that might be of particular interest to individuals in those roles.
+		</p>
+
+		<button id="btnall2" class="btnall" onclick="toggleAll()">+ Expand all</button>
+
+		<div class="container">
+
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 17.svg" class="icon" />
+					<div>
+						<h4>2.1 Product ownership</h4>
+						<p>Includes product and program managers, stakeholders, and clients.</p>
+					</div>
+				</div>
+
+				<button id="btn-div1" class="btn" onclick="toggleDiv('div1')">+ Expand</button>
+			</div>
+
+
+
+
+			<div id="div1" class="collapse">
+				<ol>
+					<li>
+						Start by understanding the user [link], which will clarify why this work is critical, how it
+						impacts your potential reach
+					</li>
+					<li>
+						Include the user [link, not yet available] in your market research
+					</li>
+					<li>
+						Review the cognitive accessibility design principles [link to design and build] to make sure
+						you know what to include in product requirements
+					</li>
+					<li>
+						Request that those working on design and implementation use this document and refer to the
+						design and build [link to design and build] section
+					</li>
+				</ol>
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 10.svg" class="icon" />
+					<div>
+						<h4>2.2 Tech implementation</h4>
+						<p>Includes engineer/developer, tech lead, coder, etc.</p>
+					</div>
+				</div>
+
+				<button id="btn-div2" class="btn" onclick="toggleDiv('div2')">+ Expand</button>
+
+			</div>
+			<div id="div2" class="collapse">
+				<p>[need to write steps]</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 11.svg" class="icon" />
+					<div id="Research">
+						<h4>2.3 Research</h4>
+						<p>Includes UXR, competitive analyst.</p>
+					</div>
+				</div>
+
+				<button id="btn-div3" class="btn" onclick="toggleDiv('div3')">+ Expand</button>
+
+			</div>
+			<div id="div3" class="collapse">
+				<p>[need to write steps]</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 16.svg" class="icon" />
+					<div id="UX-info-architecture">
+						<h4>2.4 UX & info architecture</h4>
+						<p>Includes UX & Interaction designers, and content strategists.</p>
+					</div>
+				</div>
+
+				<button id="btn-div4" class="btn" onclick="toggleDiv('div4')">+ Expand</button>
+
+			</div>
+			<div id="div4" class="collapse">
+				<p>[need to write steps]</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 15.svg" class="icon" />
+					<div id="Visual-design">
+						<h4>2.5 Visual design</h4>
+						<p>Includes artist and graphic designer.</p>
+					</div>
+				</div>
+
+				<button id="btn-div5" class="btn" onclick="toggleDiv('div5')">+ Expand</button>
+
+			</div>
+			<div id="div5" class="collapse">
+				<p>[need to write steps]</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 10.svg" class="icon" />
+					<div id="Content-creation">
+						<h4>2.6 Content creation</h4>
+						<p>Includes writers, video and music creators, and sound designers.</p>
+					</div>
+				</div>
+
+				<button id="btn-div6" class="btn" onclick="toggleDiv('div6')">+ Expand</button>
+
+			</div>
+			<div id="div6" class="collapse">
+				<p>[need to write steps]</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 13.svg" class="icon" />
+					<div id="Testing">
+						<h4>2.7 Testing</h4>
+						<p>Includes QA, test engineers, and auditors.</p>
+					</div>
+				</div>
+
+				<button id="btn-div7" class="btn" onclick="toggleDiv('div7')">+ Expand</button>
+
+			</div>
+			<div id="div7" class="collapse">
+				<p>[need to write steps]</p>
+			</div>
+		</div>
+
+		<div style="border-bottom: 1.5px solid #000000"></div>
+
+		<div>
+			<p>Jump to:
+				<a href="#introduction"><button>contents</button></a>
+				<a href="#how-to-use-this-document"><button>How to use this document</button></a>
+				<a href="#design-and-build"><button>Design & build</button></a>
+			</p>
+		</div>
+
+	</section>
+
+
+	<section>
+		<h3>Know your user</h3>
+		<p>
+			An introduction to different cognitive abilities, specific user needs, and how to include the user in
+			your process:
 		</p>
 		<section>
-			<h3>Overview of contents</h3>
-			<button id="allButtonsToggledesign" onclick="toggleAlldesign()">+Expand All</button>
+			<h4>About people with cognitive and learning disabilities</h4>
+			<p>People with cognitive and learning disabilities may experience difficulties with many of the cognitive
+				activities often
+				required to
+				interact with technology and understand content. This can create accessibility barriers with many tasks,
+				including:</p>
+			<ul style="margin: 0.5em;">
+				<li>Reading, writing, communication, and both aural and visual language processing,</li>
+				<li>Understanding or performing numerical tasks such as mathematical equations or recognizing time</li>
+				<li>Remembering or processing new information, and</li>
+				<li>Following instructions or performing ordered tasks.</li>
+			</ul>
+			<p>This is not exhaustive. For a more in-depth understanding of the experiences of individuals with
+				cognitive and learning
+				disabilities,
+				read the companion document to this guidance, About people with cognitive and learning disabilities
+				link.</p>
+		</section>
+		<section>
+			<h3>Personas</h3>
+			<button id="btnall3" class="btnall" onclick="toggleAll()">+ Expand all</button>
 			<div class="container">
 				<div class="expand1">
 					<div class="iconandhead">
-						<img src="img/np-logic-5772814.svg" class="icon" />
-						<div id="Design-is-clear">
-							<h4>Design is clear</h4>
-							<p>The visual, aural, and media design supports the user to easily understand the purpose
-								and meaning of components, the hierarchy of the page and site, and how to navigate the
-								layouts.</p>
-							<p>How to achieve clear design [anchor link]</p>
+						<img src="img/people.png" class="icon" style="border-radius: 50%;" />
+						<div id="Testing">
+							<h4>2.2.1 Amy: an autistic computer scientist</h4>
+							<p>Support with logical information architecture, reduced visual stimulation, and clear
+								language</p>
 						</div>
 					</div>
 
-
-					<button id="btn-div8" onclick="toggleDiv('div8')">+Expand</button>
+					<button id="btn-div8" class="btn" onclick="toggleDiv('div8')">+ Expand</button>
 
 				</div>
 				<div id="div8" class="collapse">
-					<p>[need to write]</p>
+					<p>[need to write steps]</p>
 				</div>
 			</div>
 
 			<div class="container">
 				<div class="expand1">
 					<div class="iconandhead">
-						<img src="img/np-user-interaction-2119242.svg" class="icon" />
-						<div id="Interactions-are-clear-and-straightforward">
-							<h4>Interactions are clear and straightforward</h4>
-							<p>The flows, tasks, and events provide clarity for the user to understand how to interact
-								with the system, and what will and has happened based on how they interact with the
-								interface.</p>
-							<p>How to ensure straightforward interactions [anchor link]</p>
+						<img src="img/people.png" class="icon" style="border-radius: 80%;" />
+						<div id="Testing">
+							<h4>2.2.2 Persona 2 Name</h4>
+							<p>Byline for the persona that sets them up as a person, not a diagnosis</p>
 						</div>
 					</div>
 
-					<button id="btn-div9" onclick="toggleDiv('div9')">+Expand</button>
+					<button id="btn-div9" class="btn" onclick="toggleDiv('div9')">+ Expand</button>
 
 				</div>
 				<div id="div9" class="collapse">
-					<p>[need to write]</p>
+					<p>[need to write steps]</p>
 				</div>
 			</div>
 
 			<div class="container">
 				<div class="expand1">
 					<div class="iconandhead">
-						<img src="img/np-scaffolding-3150023.svg" class="icon" />
-						<div id="Functionality-is-supportive">
-							<h4>Functionality is supportive</h4>
-							<p>Functionality is incorporated to support the user “behind the scenes,” and/or provides
-								the user with customization and/or personalization options. </p>
-							<p>How to build supportive functionality [anchor link]</p>
+						<img src="img/people.png" class="icon" style="border-radius: 50%;" />
+						<div id="Testing">
+							<h4>2.2.3 Persona n Name</h4>
+							<p>Byline for the persona that sets them up as a person, not a diagnosis</p>
 						</div>
 					</div>
 
-					<button id="btn-div10" onclick="toggleDiv('div10')">+Expand</button>
+					<button id="btn-div10" class="btn" onclick="toggleDiv('div10')">+ Expand</button>
 
 				</div>
 				<div id="div10" class="collapse">
-					<p>[need to write]</p>
+					<p>[need to write steps]</p>
 				</div>
 			</div>
-
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/np-information-79272.svg" class="icon" />
-						<div id="Content-is-understandable">
-							<h4>Content is understandable</h4>
-							<p>The language, imagery, media, and other content is easy to understand, and/or provides
-								other ways to be understood by those who are better supported with other formats.</p>
-							<p>How to improve content understandability [anchor link]</p>
-						</div>
-					</div>
-
-					<button id="btn-div11" onclick="toggleDiv('div11')">+Expand</button>
-
-				</div>
-				<div id="div11" class="collapse">
-					<p>[need to write]</p>
-				</div>
-			</div>
-
-			<div class="container">
-				<div class="expand1">
-					<div class="iconandhead">
-						<img src="img/np-rescue-3591584.svg" class="icon" />
-						<div id="Help-is-available-and-usable">
-							<h4>Help is available and usable</h4>
-							<p>The user is able to complete their journey outside of the system, or in an alternate way,
-								if they choose to.</p>
-							<p>How to ensure help is usable [anchor link]</p>
-						</div>
-					</div>
-
-					<button id="btn-div12" onclick="toggleDiv('div12')">+Expand</button>
-
-				</div>
-				<div id="div12" class="collapse">
-					<p>[need to write]</p>
-				</div>
-			</div>
-
-
-
-
 
 		</section>
 
 	</section>
+
+	<section>
+		<h3>Design and build</h3>
+		<p>This guide provides assistance making web sites and applications friendly for people with . The
+			patterns in this guide provide practical guidance to improve the accessibility of designs and the design
+			process. The
+			objectives and
+			patterns presented here provide beyond the requirements of The Web Content Accessibility Guidelines WCAG
+			[ ]. They are intended to address barriers that could not be included in the normative WCAG [WCAG22]
+			specification and
+			may
+			not otherwise be addressed.</p>
+		<p>Each objective contains a number of practical patterns (repeated designs for controls and other elements)
+			that describe
+			what to do
+			to address user needs. Implementing these patterns is essential for some people with cognitive and learning
+			disabilities
+			to be able to
+			use content independently</p>
+
+		<section>
+			<h3>Objective 1: Design is clear and helpful</h3>
+			<p>The visual, aural, and media design supports the user to easily understand the purpose and meaning of
+				components, the
+				hierarchy of
+				the page and site, and how to navigate the layouts</p>
+			<section>
+				<h4>Recognizable purpose</h4>
+				<button id="btnall4" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Make the purpose of your page clear</h5>
+						<button id="btn-div11" class="btn" onclick="toggleDiv('div11')">+ Expand</button>
+					</div>
+					<div id="div11" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Use clear visible labelsr</h5>
+						<button id="btn-div12" class="btn" onclick="toggleDiv('div12')">+ Expand</button>
+					</div>
+					<div id="div12" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Use familiar and consistent design patterns</h5>
+						<button id="btn-div22" class="btn" onclick="toggleDiv('div22')">+ Expand</button>
+					</div>
+					<div id="div22" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Clearly identify controls, their use, and their relationship to
+							the content they affect</h5>
+						<button id="btn-div13" class="btn" onclick="toggleDiv('div13')">+ Expand</button>
+					</div>
+					<div id="div13" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h3>Distinguishable</h3>
+				<button id="btnall5" class="btnall" onclick="toggleAll()">+ Expand all</button>
+
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Make it easy to find the most important features and tasks on
+							the site</h5>
+						<button id="btn-div14" class="btn" onclick="toggleDiv('div14')">+ Expand</button>
+					</div>
+					<div id="div14" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Make it easy to find the most important actions and information
+							on the page</h5>
+						<button id="btn-div15" class="btn" onclick="toggleDiv('div15')">+ Expand</button>
+					</div>
+					<div id="div15" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Make it easy to find the most important actions and information
+							on the page</h5>
+						<button id="btn-div21" class="btn" onclick="toggleDiv('div21')">+ Expand</button>
+					</div>
+					<div id="div21" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Ensure foreground content is not obscured by background</h5>
+						<button id="btn-div17" class="btn" onclick="toggleDiv('div17')">+ Expand</button>
+					</div>
+					<div id="div17" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<h3>Consistent</h3>
+				<button id="btnall5" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Use white spacing</h5>
+						<button id="btn-div18" class="btn" onclick="toggleDiv('div18')">+ Expand</button>
+					</div>
+					<div id="div18" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Use a consistent visual design</h5>
+						<button id="btn-div19" class="btn" onclick="toggleDiv('div19')">+ Expand</button>
+					</div>
+					<div id="div19" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<h5 style="margin-top: 1.5rem;">Use a predictable hierarchy</h5>
+						<button id="btn-div20" class="btn" onclick="toggleDiv('div20')">+ Expand</button>
+					</div>
+					<div id="div20" class="collapse">
+						<p>[need to write steps]</p>
+					</div>
+				</div>
+			</section>
+
+
+		</section>
+		<div style="text-align: center;">
+			<div style="border-bottom: 1px dashed #000000"></div>
+			<p><strong>Jump to objective: &nbsp;&nbsp;</strong><a
+					href="#objective-1-design-is-clear-and-helpful">Design</a>&nbsp;&nbsp;
+				Interactions &nbsp;&nbsp;<a href="#objective-3-functionality-is-supportive">Functionality</a>
+				&nbsp;&nbsp;<a href="#objective-4-content-is-understandable">Content</a>
+				&nbsp;&nbsp;<a href="#objective-5-help-is-available-and-usable">Help</a>
+			</p>
+			<div style="border-bottom: 1px dashed #000000"></div>
+
+		</div>
+
+		<section>
+			<h2>Objective 2: Interactions are clear and straightforward</h2>
+			<p>The flows, tasks, and events provide clarity for the user to understand how to interact with the
+				system, and what will
+				and has
+				happened based on how they interact with the interface</p>
+
+			<section>
+				<h3>Informative</h3>
+			</section>
+			<section>
+				<h3>Logical</h3>
+			</section>
+			<section>
+				<h3>Safe and reliable</h3>
+			</section>
+		</section>
+
+		<section>
+			<h2>Objective 3: Functionality is supportive</h2>
+			<p>Functional is incorporated to proactively help the user behind the scenes, and/or provides the user
+				with customization /
+				personalization options.</p>
+			<section>
+				<h3>Supportive</h3>
+			</section>
+		</section>
+
+		<section>
+			<h2>Objective 4: Content is understandable</h2>
+			<p>simlar structure</p>
+		</section>
+		<section>
+			<h2>Objective 5: Help is available and usable</h2>
+			<p>simlar structure</p>
+		</section>
+
+	</section>
+
+
+
+
 
 
 </body>
