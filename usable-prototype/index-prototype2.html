@@ -149,7 +149,7 @@
 			tocIntroductory: true,
 			lint: { "no-unused-dfns": false },
 			// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-			specStatus: "ED",
+			specStatus: "DNOTE",
 			//crEnd:                "",
 			//perEnd:               "",
 			diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
@@ -231,12 +231,19 @@
 
 	<section id="abstract">
 		<p><strong>(Introduction)</strong></p>
-		<p>This document explains how to make content usable for individuals with cognitive and learning disabilities and differences. The web is becoming increasingly essential for daily living, self care, safety, and independence. At the same time, approximately 20% of people  in the world experience major cognitive or learning accessibility barriers online. This document is a working group note from the W3C, and provides supplemental guidance, beyond the Web Content Accessibility Guidelines (WCAG).</p>
+		<p>This document explains how to make content usable for individuals with cognitive and learning disabilities
+			and differences. The web is becoming increasingly essential for daily living, self care, safety, and
+			independence. At the same time, approximately 20% of people in the world experience major cognitive or
+			learning accessibility barriers online. This document is a working group note from the W3C, and provides
+			supplemental guidance, beyond the Web Content Accessibility Guidelines (WCAG).</p>
 		<p><strong>This document has content about:</strong></p>
 		<ul>
-			<li><strong><a href="#how-to-use-this-document">How to use the document</a></strong>, broken down by different standard roles in the industry such as engineer, designer, and tester.</li>
-			<li><strong><a href="#know-the-user">Getting to know users with cognitive and learning disabilities</a></strong>, and understanding their specific needs.</li>
-			<li><strong><a href="#design-and-build">How to design and build for cognitive accessibility</a></strong>, including specific design patterns and implementation examples.</li>
+			<li><strong><a href="#how-to-use-this-document">How to use the document</a></strong>, broken down by
+				different standard roles in the industry such as engineer, designer, and tester.</li>
+			<li><strong><a href="#know-the-user">Getting to know users with cognitive and learning
+						disabilities</a></strong>, and understanding their specific needs.</li>
+			<li><strong><a href="#design-and-build">How to design and build for cognitive accessibility</a></strong>,
+				including specific design patterns and implementation examples.</li>
 		</ul>
 	</section>
 	<br />
@@ -252,9 +259,11 @@
 	</div>
 
 	<!-- <button id="btn-sotd" onclick="toggleSotd('sotd')">Show Status of This Document</button> -->
-	<section id="sotd"><strong>This is a prototype for testing only. Please reference <a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a> for the published note.</strong>
+	<section id="sotd"><strong>This is a prototype for testing only. Please reference <a
+				href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a> for the published
+			note.</strong>
 	</section>
-<br />
+	<br />
 	<div style="border-bottom: 1.5px solid #000000"></div>
 
 	<div>
@@ -268,7 +277,12 @@
 	<section>
 		<h3>How to use this document</h3>
 		<p>
-			<strong>“Making content usable”</strong> is intended for <strong>anyone</strong> involved in the creation, curation, design, or development of digital technology and content. <strong>Depending on your specific role</strong>, here are potential paths you might take through this document. Each role listed below has a chip associated with it, that also includes visual indicators such as a specific icon and color. These are regularly used throughout the document to identify content that might be of particular interest to individuals in those roles.
+			<strong>“Making content usable”</strong> is intended for <strong>anyone</strong> involved in the creation,
+			curation, design, or development of digital technology and content. <strong>Depending on your specific
+				role</strong>, here are potential paths you might take through this document. Each role listed below has
+			a chip associated with it, that also includes visual indicators such as a specific icon and color. These are
+			regularly used throughout the document to identify content that might be of particular interest to
+			individuals in those roles.
 		</p>
 
 		<button id="btnall2" class="btnall" onclick="toggleAll()">+ Expand all</button>
@@ -293,13 +307,18 @@
 			<div id="div1" class="collapse" style="margin-left: 115px">
 				<ol>
 					<li>
-						Start by <strong><a href="#know-the-user">understanding the user</a></strong>, which will clarify why this work is critical, how it impacts your potential reach
+						Start by <strong><a href="#know-the-user">understanding the user</a></strong>, which will
+						clarify why this work is critical, how it impacts your potential reach
 					</li>
 					<li>
-						<strong><a href="#build-the-user-into-the-process">Include the user</a></strong> in your market research
+						<strong><a href="#build-the-user-into-the-process">Include the user</a></strong> in your market
+						research
 					</li>
 					<li>
-						<strong><a href="#design-and-build">Review the cognitive accessibility design principles</a></strong> to make sure you know what to include in product requirements, <strong>and </strong>request that those working on design and implementation use this document and refer to the <strong><a href="#design-and-build">design and build</a></strong> section
+						<strong><a href="#design-and-build">Review the cognitive accessibility design
+								principles</a></strong> to make sure you know what to include in product requirements,
+						<strong>and </strong>request that those working on design and implementation use this document
+						and refer to the <strong><a href="#design-and-build">design and build</a></strong> section
 					</li>
 				</ol>
 			</div>
@@ -458,7 +477,8 @@
 						<img src="img/people.png" class="icon" style="border-radius: 50%;" />
 						<div id="Testing">
 							<h4>2.2.1 Amy: an autistic computer scientist</h4>
-							<p>Support with logical information architecture, reduced visual stimulation, and clear language</p>
+							<p>Support with logical information architecture, reduced visual stimulation, and clear
+								language</p>
 						</div>
 					</div>
 
@@ -479,7 +499,8 @@
 						<li>Changing color schemes, automatic blinking, flashing, and autoplay on video or music</li>
 						<li>Designs that make use of abstract imagery and metaphors</li>
 					</ul>
-					<p><strong><a href="link to be added.">Learn more about Amy and how to design accessible experiences for her 🔗</a></strong></p>
+					<p><strong><a href="link to be added.">Learn more about Amy and how to design accessible experiences
+								for her 🔗</a></strong></p>
 					<p>&nbsp;</p>
 				</div>
 			</div>
@@ -557,9 +578,11 @@
 					feedback will be easier to use for everyone, including people who are experiencing stress, or mental
 					health issues.</li>
 			</ul>
-			<p>For resources to help you make these processes achievable for you, no matter the size of your organization, read our companion document:</p>
-			<p><a href=""><strong>Building for people with cognitive and learning disabilities into the process 🔗</strong></a><br /></p>
-		
+			<p>For resources to help you make these processes achievable for you, no matter the size of your
+				organization, read our companion document:</p>
+			<p><a href=""><strong>Building for people with cognitive and learning disabilities into the process
+						🔗</strong></a><br /></p>
+
 		</section>
 
 		<div style="border-bottom: 1.5px solid #000000"></div>
@@ -576,11 +599,19 @@
 
 	<section>
 		<h3>Design and build</h3>
-		<p>TThis guide provides assistance making web sites and applications friendly for people with cognitive and learning disabilities. <strong>The patterns in this guide provide practical guidance to improve the accessibility of designs and the design process.</strong> The objectives and patterns presented here provide supplemental guidance beyond the requirements of The Web Content Accessibility Guidelines WCAG [WCAG22]. They are intended to address barriers that could not be included in the normative WCAG [WCAG22] specification and may not otherwise be addressed.</p>
-		<p>Each objective contains a number of practical patterns (repeated designs for controls and other elements) that describe what to do to address user needs. Implementing these patterns is <strong>essential</strong> for some people with cognitive and learning disabilities to be able to use content independently.</p>
+		<p>TThis guide provides assistance making web sites and applications friendly for people with cognitive and
+			learning disabilities. <strong>The patterns in this guide provide practical guidance to improve the
+				accessibility of designs and the design process.</strong> The objectives and patterns presented here
+			provide supplemental guidance beyond the requirements of The Web Content Accessibility Guidelines WCAG
+			[WCAG22]. They are intended to address barriers that could not be included in the normative WCAG [WCAG22]
+			specification and may not otherwise be addressed.</p>
+		<p>Each objective contains a number of practical patterns (repeated designs for controls and other elements)
+			that describe what to do to address user needs. Implementing these patterns is <strong>essential</strong>
+			for some people with cognitive and learning disabilities to be able to use content independently.</p>
 		<ol>
 			<li><a href="#objective-1-design-is-clear-and-helpful">Design is clear and helpful</a></li>
-			<li><a href="#objective-2-interactions-are-clear-and-straightforward">Interactions are clear and straightforward</a></li>
+			<li><a href="#objective-2-interactions-are-clear-and-straightforward">Interactions are clear and
+					straightforward</a></li>
 			<li><a href="#objective-3-functionality-is-supportive">Functionality is supportive</a></li>
 			<li><a href="#objective-4-content-is-understandable">Content is understandable</a></li>
 			<li><a href="#objective-5-help-is-available-and-usable">Help is available and usable</a></li>
@@ -588,11 +619,14 @@
 
 		<section>
 			<h3>Objective 1: Design is clear and helpful</h3>
-			<p>The visual, aural, and media design supports the user to easily understand the purpose and meaning of components, the hierarchy of the page and site, and how to navigate the layouts.</p>
+			<p>The visual, aural, and media design supports the user to easily understand the purpose and meaning of
+				components, the hierarchy of the page and site, and how to navigate the layouts.</p>
 			<ol>
 				<li><strong>Which roles typically do this?</strong> Designers and information architects.</li>
-				<li><strong>When is this typically done?</strong> During the design phase and in the creation of content and visual assets.</li>
-				<li><strong>Which part of the process can break this?</strong> Implementation, especially when 3P tooling or resources are introduced.</li>
+				<li><strong>When is this typically done?</strong> During the design phase and in the creation of content
+					and visual assets.</li>
+				<li><strong>Which part of the process can break this?</strong> Implementation, especially when 3P
+					tooling or resources are introduced.</li>
 			</ol>
 
 			<p><strong>Patterns for achieving a helpful design:</strong></p>
@@ -628,7 +662,8 @@
 				</div>
 				<div class="container">
 					<div class="expand1">
-						<h5 style="margin-top: 1.5rem;">Clearly identify controls, their use, and their relationship to the content they affect</h5>
+						<h5 style="margin-top: 1.5rem;">Clearly identify controls, their use, and their relationship to
+							the content they affect</h5>
 						<button id="btn-div13" class="btn" onclick="toggleDiv('div13')">+ Expand</button>
 					</div>
 					<div id="div13" class="collapse" style="margin-left: 20px;">
@@ -652,7 +687,8 @@
 				</div>
 				<div class="container">
 					<div class="expand1">
-						<h5 style="margin-top: 1.5rem;">Make it easy to find the most important actions and information on the page</h5>
+						<h5 style="margin-top: 1.5rem;">Make it easy to find the most important actions and information
+							on the page</h5>
 						<button id="btn-div15" class="btn" onclick="toggleDiv('div15')">+ Expand</button>
 					</div>
 					<div id="div15" class="collapse" style="margin-left: 20px;">
@@ -727,11 +763,15 @@
 
 		<section>
 			<h2>Objective 2: Interactions are clear and straightforward</h2>
-			<p>The flows, tasks, and events provide clarity for the user to understand how to interact with the system, and what will and has happened based on how they interact with the interface.</p>
+			<p>The flows, tasks, and events provide clarity for the user to understand how to interact with the system,
+				and what will and has happened based on how they interact with the interface.</p>
 			<ol>
-				<li><strong>Which roles typically do this?</strong> User experience and interaction designers, content strategists, and technical leads.</li>
-				<li><strong>When is this typically done?</strong> During both the interaction design and engineering design phases.</li>
-				<li><strong>Which part of the process can break this?</strong> Implementation, especially when 3P tooling or resources are introduced.</li>
+				<li><strong>Which roles typically do this?</strong> User experience and interaction designers, content
+					strategists, and technical leads.</li>
+				<li><strong>When is this typically done?</strong> During both the interaction design and engineering
+					design phases.</li>
+				<li><strong>Which part of the process can break this?</strong> Implementation, especially when 3P
+					tooling or resources are introduced.</li>
 			</ol>
 
 			<p><strong>Patterns for achieving clear and straightforward interactions:</strong></p>
@@ -921,11 +961,15 @@
 
 		<section>
 			<h2>Objective 3: Functionality is supportive</h2>
-			<p>Functionality is incorporated to proactively help the user “behind the scenes,” and/or provides the user with customization / personalization options.</p>
+			<p>Functionality is incorporated to proactively help the user “behind the scenes,” and/or provides the user
+				with customization / personalization options.</p>
 			<ol>
-				<li><strong>Which roles typically do this?</strong> Engineers, coders, often with design considerations.</li>
-				<li><strong>When is this typically done?</strong> Implementation (Eng), including selection of 3P tooling.</li>
-				<li><strong>Which part of the process can break this?</strong> UX design, UX writing, content strategy.</li>
+				<li><strong>Which roles typically do this?</strong> Engineers, coders, often with design considerations.
+				</li>
+				<li><strong>When is this typically done?</strong> Implementation (Eng), including selection of 3P
+					tooling.</li>
+				<li><strong>Which part of the process can break this?</strong> UX design, UX writing, content strategy.
+				</li>
 			</ol>
 
 			<p><strong>Patterns for supportive functionality:</strong></p>
@@ -1011,7 +1055,8 @@
 				</div>
 				<div class="container">
 					<div class="expand1">
-						<h5 style="margin-top: 1.5rem;">Allow misspelling and imprecise formatting in text entry fields (including search)</h5>
+						<h5 style="margin-top: 1.5rem;">Allow misspelling and imprecise formatting in text entry fields
+							(including search)</h5>
 						<button id="btn-div50" class="btn" onclick="toggleDiv('div50')">+ Expand</button>
 					</div>
 					<div id="div50" class="collapse" style="margin-left: 20px;">
@@ -1079,9 +1124,11 @@
 
 		<section>
 			<h2>Objective 4: Content is understandable</h2>
-			<p>The language, imagery, media, and other content is easy to understand, and/or provides other ways to be understood by those who are better supported with other formats.</p>
+			<p>The language, imagery, media, and other content is easy to understand, and/or provides other ways to be
+				understood by those who are better supported with other formats.</p>
 			<ol>
-				<li><strong>Which roles typically do this?</strong> Content folks, visual designers, media creators.</li>
+				<li><strong>Which roles typically do this?</strong> Content folks, visual designers, media creators.
+				</li>
 				<li><strong>When is this typically done?</strong> Content creation, entry, edits.</li>
 				<li><strong>Which part of the process can break this?</strong> Any.</li>
 			</ol>
@@ -1205,51 +1252,70 @@
 					</div>
 					<div id="div41" class="collapse" style="margin-left: 20px;">
 						<p><strong>📖 A user story</strong></p>
-						<p>As a user with complex communication needs that may include a mild language impairment, I want symbols that help me understand the content.</p>
-						<p><strong><a href="">More stories and user needs around icon support for the user 🔗</a></strong></p>
+						<p>As a user with complex communication needs that may include a mild language impairment, I
+							want symbols that help me understand the content.</p>
+						<p><strong><a href="">More stories and user needs around icon support for the user
+									🔗</a></strong></p>
 						<p><strong>✅ What to do</strong></p>
-						<p>Add familiar icons, images, and symbols to important content such as controls and section headings. Each icon or symbol should convey a single meaning and be next to the content it relates to.</p>
+						<p>Add familiar icons, images, and symbols to important content such as controls and section
+							headings. Each icon or symbol should convey a single meaning and be next to the content it
+							relates to.</p>
 						<div style="margin-left: 2rem;">
 							<p><strong>&checkmark; Use common icons that the user is likely to understand.</strong></p>
 							<div style="margin-left: 60px;">
-								<img src="img/use-icon1.png" width="90%" alt="A universal footer on a website contains three sections, speak to a representative, which has a headset icon, email us with an envelop icon, and mailing address with a stamp icon" />
-							<p style="font-size: smaller;">Icons can be especially helpful next to contact, help, and search content, and in callout boxes.</p>
+								<img src="img/use-icon1.png" width="90%"
+									alt="A universal footer on a website contains three sections, speak to a representative, which has a headset icon, email us with an envelop icon, and mailing address with a stamp icon" />
+								<p style="font-size: smaller;">Icons can be especially helpful next to contact, help,
+									and search content, and in callout boxes.</p>
 							</div>
 
-							<p><strong>&checkmark; Provide common icons next to key texts, headings, media sections, “contact us” buttons, and "help" buttons.Use clear and unambiguous icons or symbols that are easy to see and enlarge.</strong></p>
+							<p><strong>&checkmark; Provide common icons next to key texts, headings, media sections,
+									“contact us” buttons, and "help" buttons.Use clear and unambiguous icons or symbols
+									that are easy to see and enlarge.</strong></p>
 							<div style="margin-left: 60px;">
 								<p>⭐ Helpful</p>
 								<img src="img/use-icon2.png" />
-								<p style="font-size: smaller;">Start each item in a list (such as a select list as in this example, or instructions in a recipe) with an icon that relates to it.</p>
+								<p style="font-size: smaller;">Start each item in a list (such as a select list as in
+									this example, or instructions in a recipe) with an icon that relates to it.</p>
 								<p>ℹ️ Caution</p>
 								<img src="img/use-icon3.png" />
-								<p style="font-size: smaller;">Not including icons in this select list may create a barrier for people who have difficulty reading or understanding flower names.</p>
+								<p style="font-size: smaller;">Not including icons in this select list may create a
+									barrier for people who have difficulty reading or understanding flower names.</p>
 							</div>
 
 
 
 							<p><strong>&checkmark; Be aware of cultural differences.</strong></p>
 							<div style="margin-left: 60px;">
-								<p>For example, a shopping cart icon ( 🛒 ) may not be helpful in locations where people typically use baskets ( 🧺 ).</p>
+								<p>For example, a shopping cart icon ( 🛒 ) may not be helpful in locations where people
+									typically use baskets ( 🧺 ).</p>
 							</div>
 
-							<p><strong>&checkmark; In left-to-right languages, when adding a few icons or symbols to a page place the image to the left of the text.</strong></p>
+							<p><strong>&checkmark; In left-to-right languages, when adding a few icons or symbols to a
+									page place the image to the left of the text.</strong></p>
 							<div style="margin-left: 60px;">
-								<p>In left-to-right languages, the icon would be on the left of the text, at the beginning of the word. In right-to-left languages, the icon would ideally be on the right, also at the beginning of the word. In vertical languages, the icon may be most effective at the top.</p>
+								<p>In left-to-right languages, the icon would be on the left of the text, at the
+									beginning of the word. In right-to-left languages, the icon would ideally be on the
+									right, also at the beginning of the word. In vertical languages, the icon may be
+									most effective at the top.</p>
 							</div>
 
-							<p><strong>&checkmark; When adding multiple symbols to a paragraph or section of text, place the symbols above the text.</strong></p>
+							<p><strong>&checkmark; When adding multiple symbols to a paragraph or section of text, place
+									the symbols above the text.</strong></p>
 							<div style="margin-left: 60px;">
 								<p>⭐ Helpful</p>
 								<img src="img/use-icon4.png" width="90%" />
-								<p style="font-size: smaller;">For someone who benefits from the icons, they can help to tell the story along with the words.</p>
+								<p style="font-size: smaller;">For someone who benefits from the icons, they can help to
+									tell the story along with the words.</p>
 
 								<p>ℹ️ Caution</p>
 								<img src="img/use-icon5.png" width="90%" />
-								<p style="font-size: smaller;">Too many icons can easily become overwhelming even for those they help.</p>
+								<p style="font-size: smaller;">Too many icons can easily become overwhelming even for
+									those they help.</p>
 							</div>
 
-							<p><strong>&checkmark; Use personalization semantics such as [personalization-semantics-1.0] to help the user load familiar symbols.</strong></p>
+							<p><strong>&checkmark; Use personalization semantics such as [personalization-semantics-1.0]
+									to help the user load familiar symbols.</strong></p>
 
 						</div>
 
@@ -1262,7 +1328,8 @@
 							attention to navigate content,
 							including media. Clear symbols, icons, and images can also act as signposts to help
 							individuals find what they need.</p>
-						<p><a href=""><strong>More on how symbols can help individuals with content understanding and navigation 🔗</strong></a>
+						<p><a href=""><strong>More on how symbols can help individuals with content understanding and
+									navigation 🔗</strong></a>
 					</div>
 
 
@@ -1326,9 +1393,11 @@
 
 		<section>
 			<h2>Objective 5: Help is available and usable</h2>
-			<p>The user is able to complete their journey in an alternate way - including potentially outside of the system - if they choose to.</p>
+			<p>The user is able to complete their journey in an alternate way - including potentially outside of the
+				system - if they choose to.</p>
 			<ol>
-				<li><strong>Which roles typically do this?</strong> Product, though this also has to be designed and implemented.</li>
+				<li><strong>Which roles typically do this?</strong> Product, though this also has to be designed and
+					implemented.</li>
 				<li><strong>When is this typically done?</strong> Early in project planning, as a user journey.</li>
 				<li><strong>Which part of the process can break this?</strong> Any, especially launch.</li>
 			</ol>

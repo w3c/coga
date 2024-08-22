@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="generator" content="ReSpec 35.1.1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<style>
+		dfn {
+			cursor: pointer
+		}
+
+		.dfn-panel {
+			position: absolute;
+			z-index: 35;
+			min-width: 300px;
+			max-width: 500px;
+			padding: .5em .75em;
+			margin-top: .6em;
+			font-family: "Helvetica Neue", sans-serif;
+			font-size: small;
+			background: #fff;
+			background: var(--indextable-hover-bg, #fff);
+			color: #000;
+			color: var(--text, #000);
+			box-shadow: 0 1em 3em -.4em rgba(0, 0, 0, .3), 0 0 1px 1px rgba(0, 0, 0, .05);
+			box-shadow: 0 1em 3em -.4em var(--tocsidebar-shadow, rgba(0, 0, 0, .3)), 0 0 1px 1px var(--tocsidebar-shadow, rgba(0, 0, 0, .05));
+			border-radius: 2px
+		}
+
+		.dfn-panel:not(.docked)>.caret {
+			position: absolute;
+			top: -9px
+		}
+
+		.dfn-panel:not(.docked)>.caret::after,
+		.dfn-panel:not(.docked)>.caret::before {
+			content: "";
+			position: absolute;
+			border: 10px solid transparent;
+			border-top: 0;
+			border-bottom: 10px solid #fff;
+			border-bottom-color: var(--indextable-hover-bg, #fff);
+			top: 0
+		}
+
+		.dfn-panel:not(.docked)>.caret::before {
+			border-bottom: 9px solid #a2a9b1;
+			border-bottom-color: var(--indextable-hover-bg, #a2a9b1)
+		}
+
+		.dfn-panel * {
+			margin: 0
+		}
+
+		.dfn-panel b {
+			display: block;
+			color: #000;
+			color: var(--text, #000);
+			margin-top: .25em
+		}
+
+		.dfn-panel ul a[href] {
+			color: #333;
+			color: var(--text, #333)
+		}
+
+		.dfn-panel>div {
+			display: flex
+		}
+
+		.dfn-panel a.self-link {
+			font-weight: 700;
+			margin-right: auto
+		}
+
+		.dfn-panel .marker {
+			padding: .1em;
+			margin-left: .5em;
+			border-radius: .2em;
+			text-align: center;
+			white-space: nowrap;
+			font-size: 90%;
+			color: #040b1c
+		}
+
+		.dfn-panel .marker.dfn-exported {
+			background: #d1edfd;
+			box-shadow: 0 0 0 .125em #1ca5f940
+		}
+
+		.dfn-panel .marker.idl-block {
+			background: #8ccbf2;
+			box-shadow: 0 0 0 .125em #0670b161
+		}
+
+		.dfn-panel a:not(:hover) {
+			text-decoration: none !important;
+			border-bottom: none !important
+		}
+
+		.dfn-panel a[href]:hover {
+			border-bottom-width: 1px
+		}
+
+		.dfn-panel ul {
+			padding: 0
+		}
+
+		.dfn-panel li {
+			margin-left: 1em
+		}
+
+		.dfn-panel.docked {
+			position: fixed;
+			left: .5em;
+			top: unset;
+			bottom: 2em;
+			margin: 0 auto;
+			max-width: calc(100vw - .75em * 2 - .5em - .2em * 2);
+			max-height: 30vh;
+			overflow: auto
+		}
+
+		h5 {
+			font-weight: bold;
+		}
+	</style>
+
+	<title>Making Content Usable - v2 structure subgroup prototype for TR note layout</title>
+
+
+	<link href="content-usable.css" rel="stylesheet" type="text/css">
+
+	<style id="respec-mainstyle">
+		@keyframes pop {
+			0% {
+				transform: scale(1, 1)
+			}
+
+			25% {
+				transform: scale(1.25, 1.25);
+				opacity: .75
+			}
+
+			100% {
+				transform: scale(1, 1)
+			}
+		}
+
+		a.internalDFN {
+			color: inherit;
+			border-bottom: 1px solid #99c;
+			text-decoration: none
+		}
+
+		a.externalDFN {
+			color: inherit;
+			border-bottom: 1px dotted #ccc;
+			text-decoration: none
+		}
+
+		a.bibref {
+			text-decoration: none
+		}
+
+		.respec-offending-element:target {
+			animation: pop .25s ease-in-out 0s 1
+		}
+
+		.respec-offending-element,
+		a[href].respec-offending-element {
+			text-decoration: red wavy underline
+		}
+
+		@supports not (text-decoration:red wavy underline) {
+			.respec-offending-element:not(pre) {
+				display: inline-block
+			}
+
+			.respec-offending-element {
+				background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x
+			}
+		}
+
+		#references :target {
+			background: #eaf3ff;
+			animation: pop .4s ease-in-out 0s 1
+		}
+
+		cite .bibref {
+			font-style: normal
+		}
+
+		a[href].orcid {
+			padding-left: 4px;
+			padding-right: 4px
+		}
+
+		a[href].orcid>svg {
+			margin-bottom: -2px
+		}
+
+		ol.tof,
+		ul.tof {
+			list-style: none outside none
+		}
+
+		.caption {
+			margin-top: .5em;
+			font-style: italic
+		}
+
+		#issue-summary>ul {
+			column-count: 2
+		}
+
+		#issue-summary li {
+			list-style: none;
+			display: inline-block
+		}
+
+		details.respec-tests-details {
+			margin-left: 1em;
+			display: inline-block;
+			vertical-align: top
+		}
+
+		details.respec-tests-details>* {
+			padding-right: 2em
+		}
+
+		details.respec-tests-details[open] {
+			z-index: 999999;
+			position: absolute;
+			border: thin solid #cad3e2;
+			border-radius: .3em;
+			background-color: #fff;
+			padding-bottom: .5em
+		}
+
+		details.respec-tests-details[open]>summary {
+			border-bottom: thin solid #cad3e2;
+			padding-left: 1em;
+			margin-bottom: 1em;
+			line-height: 2em
+		}
+
+		details.respec-tests-details>ul {
+			width: 100%;
+			margin-top: -.3em
+		}
+
+		details.respec-tests-details>li {
+			padding-left: 1em
+		}
+
+		.self-link:hover {
+			opacity: 1;
+			text-decoration: none;
+			background-color: transparent
+		}
+
+		aside.example .marker>a.self-link {
+			color: inherit
+		}
+
+		.header-wrapper {
+			display: flex;
+			align-items: baseline
+		}
+
+		:is(h2, h3, h4, h5, h6):not(#toc>h2, #abstract>h2, #sotd>h2, .head>h2) {
+			position: relative;
+			left: -.5em
+		}
+
+		:is(h2, h3, h4, h5, h6):not(#toch2)+a.self-link {
+			color: inherit;
+			order: -1;
+			position: relative;
+			left: -1.1em;
+			font-size: 1rem;
+			opacity: .5
+		}
+
+		:is(h2, h3, h4, h5, h6)+a.self-link::before {
+			content: "§";
+			text-decoration: none;
+			color: var(--heading-text)
+		}
+
+		:is(h2, h3)+a.self-link {
+			top: -.2em
+		}
+
+		:is(h4, h5, h6)+a.self-link::before {
+			color: #000
+		}
+
+		@media (max-width:767px) {
+			dd {
+				margin-left: 0
+			}
+		}
+
+		@media print {
+			.removeOnSave {
+				display: none
+			}
+		}
+	</style>
+
+	<script>
+
+		function toggleSotd(divId) {
+			var div = document.getElementById(divId);
+			if (div.classList.contains("collapse")) {
+				div.classList.remove("collapse");
+				div.classList.add("expand");
+				document.getElementById(`btn-sotd`).innerText = "- Collapse Status of This Document";
+			} else {
+				div.classList.remove("expand");
+				div.classList.add("collapse");
+				document.getElementById(`btn-sotd`).innerText = "Show Status of This Document";
+			}
+		}
+
+		function toggleToc(divId) {
+			var div = document.getElementById(divId);
+			if (div.classList.contains("collapse")) {
+				div.classList.remove("collapse");
+				div.classList.add("expand");
+				document.getElementById(`btn-toc`).innerText = "- Collapse Table of Contents";
+			} else {
+				div.classList.remove("expand");
+				div.classList.add("collapse");
+				document.getElementById(`btn-toc`).innerText = "Show Table of Contents";
+			}
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+			function toggleAll() {
+				const buttons = document.querySelectorAll('.btnall');
+
+				buttons.forEach(button => {
+					button.addEventListener('click', event => {
+						event.stopImmediatePropagation();
+
+						const isExpanded = button.innerText === '+ Expand all';
+						const toggleText = isExpanded ? '- Collapse all' : '+ Expand all';
+
+
+						buttons.forEach(btn => btn.innerText = toggleText);
+
+						for (let i = 1; i <= 100; i++) {
+							const divId = `div${i}`;
+							const div = document.getElementById(divId);
+							if (div) {
+								if (isExpanded && !div.classList.contains("expand")) {
+									div.classList.add("expand");
+									div.classList.remove("collapse");
+								} else if (!isExpanded && div.classList.contains("expand")) {
+									div.classList.add("collapse");
+									div.classList.remove("expand");
+								}
+							}
+
+							const btnId = `btn-div${i}`;
+							const btn = document.getElementById(btnId);
+							if (btn) {
+								btn.innerText = div.classList.contains("expand") ? "- Collapse" : "+ Expand";
+							}
+						}
+					});
+				});
+			}
+
+			// Call the function to initialize the event listeners
+			toggleAll();
+		});
+		function toggleAllhowto() {
+			var allButtonsTogglehowto = document.getElementById("allButtonsTogglehowto");
+			if (allButtonsTogglehowto.innerText === "+ Expand All") {
+				allButtonsTogglehowto.innerText = "- Collapse All";
+				for (var i = 1; i <= 7; i++) {
+					var divId = `div${i}`;
+					var div = document.getElementById(divId);
+					div.classList.remove("collapse");
+					div.classList.add("expand");
+					document.getElementById(`btn-div${i}`).innerText = "- Collapse";
+				}
+			} else {
+				allButtonsTogglehowto.innerText = "+ Expand All";
+				for (var i = 1; i <= 7; i++) {
+					var divId = `div${i}`;
+					var div = document.getElementById(divId);
+					div.classList.remove("expand");
+					div.classList.add("collapse");
+					document.getElementById(`btn-div${i}`).innerText = "+ Expand";
+				}
+			}
+		}
+		function toggleAlldesign() {
+			var allButtonsToggledesign = document.getElementById("allButtonsToggledesign");
+			if (allButtonsToggledesign.innerText === "+ Expand All") {
+				allButtonsToggledesign.innerText = "- Collapse All";
+				for (var i = 8; i <= 10; i++) {
+					var divId = `div${i}`;
+					var div = document.getElementById(divId);
+					div.classList.remove("collapse");
+					div.classList.add("expand");
+					document.getElementById(`btn-div${i}`).innerText = "- Collapse";
+				}
+			} else {
+				allButtonsToggledesign.innerText = "+ Expand All";
+				for (var i = 8; i <= 10; i++) {
+					var divId = `div${i}`;
+					var div = document.getElementById(divId);
+					div.classList.remove("expand");
+					div.classList.add("collapse");
+					document.getElementById(`btn-div${i}`).innerText = "+ Expand";
+				}
+			}
+		}
+
+		function toggleDiv(divId) {
+			var div = document.getElementById(divId);
+			if (div.classList.contains("collapse")) {
+				div.classList.remove("collapse");
+				div.classList.add("expand");
+				document.getElementById('btn-' + divId).innerText = "- Collapse";
+			} else {
+				div.classList.remove("expand");
+				div.classList.add("collapse");
+				document.getElementById('btn-' + divId).innerText = "+ Expand";
+			}
+		}
+
+
+	</script>
+
+
+
+
+	<meta name="color-scheme" content="light">
+	<meta name="description" content="(Introduction)">
+	<link rel="canonical" href="https://www.w3.org/TR/coga-usable/">
+	<style>
+		var {
+			position: relative;
+			cursor: pointer
+		}
+
+		var[data-type]::after,
+		var[data-type]::before {
+			position: absolute;
+			left: 50%;
+			top: -6px;
+			opacity: 0;
+			transition: opacity .4s;
+			pointer-events: none
+		}
+
+		var[data-type]::before {
+			content: "";
+			transform: translateX(-50%);
+			border-width: 4px 6px 0 6px;
+			border-style: solid;
+			border-color: transparent;
+			border-top-color: #222
+		}
+
+		var[data-type]::after {
+			content: attr(data-type);
+			transform: translateX(-50%) translateY(-100%);
+			background: #222;
+			text-align: center;
+			font-family: "Dank Mono", "Fira Code", monospace;
+			font-style: normal;
+			padding: 6px;
+			border-radius: 3px;
+			color: #daca88;
+			text-indent: 0;
+			font-weight: 400
+		}
+
+		var[data-type]:hover::after,
+		var[data-type]:hover::before {
+			opacity: 1
+		}
+	</style>
+	<script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "useExperimentalStyles": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "noRecTrack": true,
+  "tocIntroductory": true,
+  "lint": {
+    "no-unused-dfns": false
+  },
+  "specStatus": "DNOTE",
+  "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+  "shortName": "coga-usable",
+  "copyrightStart": "2022",
+  "license": "w3c-software-doc",
+  "editors": [
+    {
+      "name": "Lisa",
+      "mailto": "lisa1seeman@gmail.com",
+      "w3cid": 74028,
+      "url": "mailto:lisa1seeman@gmail.com"
+    }
+  ],
+  "group": [
+    "apa",
+    "ag"
+  ],
+  "github": "w3c/coga",
+  "maxTocLevel": 3,
+  "publishISODate": "2024-08-22T00:00:00.000Z",
+  "generatedSubtitle": "W3C Group Draft Note 22 August 2024"
+}</script>
+	<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-DNOTE">
+</head>
+
+<body style="line-height: 2; font-size: 1.2em;" class="h-entry informative" data-new-gr-c-s-check-loaded="14.1190.0"
+	data-gr-ext-installed="">
+	<div class="head">
+		<p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48"
+					src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+			</a></p>
+		<h1 id="title" class="title">Making Content Usable - v2 structure subgroup prototype for TR note layout</h1>
+		<p id="w3c-state"><a href="https://www.w3.org/standards/types#DNOTE">W3C Group Draft Note</a> <time
+				class="dt-published" datetime="2024-08-22">22 August 2024</time></p>
+		<details open="">
+			<summary>More details about this document</summary>
+			<dl>
+				<dt>This version:</dt>
+				<dd>
+					<a class="u-url"
+						href="https://www.w3.org/TR/2024/DNOTE-coga-usable-20240822/">https://www.w3.org/TR/2024/DNOTE-coga-usable-20240822/</a>
+				</dd>
+				<dt>Latest published version:</dt>
+				<dd>
+					<a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a>
+				</dd>
+				<dt>Latest editor's draft:</dt>
+				<dd><a href="https://w3c.github.io/coga/">https://w3c.github.io/coga/</a></dd>
+				<dt>History:</dt>
+				<dd>
+					<a
+						href="https://www.w3.org/standards/history/coga-usable/">https://www.w3.org/standards/history/coga-usable/</a>
+				</dd>
+				<dd>
+					<a href="https://github.com/w3c/coga/commits/">Commit history</a>
+				</dd>
+
+
+
+
+
+				<dt>Editor:</dt>
+				<dd class="editor p-author h-card vcard" data-editor-id="74028">
+					<a class="ed_mailto u-email email p-name" href="mailto:lisa1seeman@gmail.com">Lisa</a>
+				</dd>
+
+
+				<dt>Feedback:</dt>
+				<dd>
+					<a href="https://github.com/w3c/coga/">GitHub w3c/coga</a>
+					(<a href="https://github.com/w3c/coga/pulls/">pull requests</a>,
+					<a href="https://github.com/w3c/coga/issues/new/choose">new issue</a>,
+					<a href="https://github.com/w3c/coga/issues/">open issues</a>)
+				</dd>
+
+
+			</dl>
+		</details>
+
+
+		<p class="copyright">
+			<a href="https://www.w3.org/policies/#copyright">Copyright</a>
+			©
+			2022-2024
+
+			<a href="https://www.w3.org/">World Wide Web Consortium</a>.
+			<abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+			<a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>,
+			<a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and
+			<a rel="license" href="https://www.w3.org/copyright/software-license-2023/"
+				title="W3C Software and Document Notice and License">permissive document license</a> rules apply.
+		</p>
+		<hr title="Separator for header">
+	</div>
+	<div>
+		<p>Jump to:
+			<a href="#how-to-use-this-document"><button>Contents</button></a>
+			<a href="#how-to-use-this-document"><button>How to use this document</button></a>
+			<a href="#know-the-user"><button>Know the user</button></a>
+			<a href="#design-and-build"><button>Design &amp; build</button></a>
+		</p>
+	</div>
+
+
+
+	<section id="abstract" class="introductory">
+		<h2>Abstract</h2>
+		<p><strong>(Introduction)</strong></p>
+		<p>This document explains how to make content usable for individuals with cognitive and learning disabilities
+			and differences. The web is becoming increasingly essential for daily living, self care, safety, and
+			independence. At the same time, approximately 20% of people in the world experience major cognitive or
+			learning accessibility barriers online. This document is a working group note from the <abbr
+				title="World Wide Web Consortium">W3C</abbr>, and provides
+			supplemental guidance, beyond the Web Content Accessibility Guidelines (WCAG).</p>
+		<p><strong>This document has content about:</strong></p>
+		<ul>
+			<li><strong><a href="#how-to-use-this-document">How to use the document</a></strong>, broken down by
+				different standard roles in the industry such as engineer, designer, and tester.</li>
+			<li><strong><a href="#know-the-user">Getting to know users with cognitive and learning
+						disabilities</a></strong>, and understanding their specific needs.</li>
+			<li><strong><a href="#design-and-build">How to design and build for cognitive accessibility</a></strong>,
+				including specific design patterns and implementation examples.</li>
+		</ul>
+	</section>
+	<br>
+	<div style="border-bottom: 1.5px solid #000000"></div>
+
+	<div>
+		<p>Jump to:
+			<a href="#how-to-use-this-document"><button>Contents</button></a>
+			<a href="#how-to-use-this-document"><button>How to use this document</button></a>
+			<a href="#know-the-user"><button>Know the user</button></a>
+			<a href="#design-and-build"><button>Design &amp; build</button></a>
+		</p>
+	</div>
+
+
+	<section id="sotd" class="introductory">
+		<h2>Status of This Document</h2>
+		<p><em>This section describes the status of this
+				document at the time of its publication. A list of current <abbr
+					title="World Wide Web Consortium">W3C</abbr>
+				publications and the latest revision of this technical report can be found
+				in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical
+					reports index</a> at
+				https://www.w3.org/TR/.</em></p><strong>This is a prototype for testing only. Please reference <a
+				href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a> for the published
+			note.</strong>
+		<p>
+			This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform
+				Architectures Working Group</a> and the <a href="https://www.w3.org/groups/wg/ag">Accessibility
+				Guidelines Working Group</a> as
+			a Group Draft Note using the
+			<a href="https://www.w3.org/policies/process/20231103/#recs-and-notes">Note track</a>.
+		</p>
+		<p>Group Draft Notes are not endorsed by
+			<abbr title="World Wide Web Consortium">W3C</abbr> nor its Members.
+		</p>
+		<p>
+			This is a draft document and may be updated, replaced or obsoleted by other
+			documents at any time. It is inappropriate to cite this document as other
+			than work in progress.
+
+		</p>
+		<p data-deliverer="83907,35422">
+
+			The
+			<a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr>
+				Patent
+				Policy</a>
+			does not carry any licensing requirements or commitments on this
+			document.
+
+
+		</p>
+		<p>
+			This document is governed by the
+			<a id="w3c_process_revision" href="https://www.w3.org/policies/process/20231103/">03 November 2023 <abbr
+					title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+		</p>
+	</section>
+	<nav id="toc">
+		<h2 class="introductory" id="table-of-contents">Table of Contents</h2>
+		<ol class="toc">
+			<li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li>
+			<li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li>
+			<li class="tocline"><a class="tocxref" href="#how-to-use-this-document"><bdi class="secno">1. </bdi>How to
+					use this document</a></li>
+			<li class="tocline"><a class="tocxref" href="#know-the-user"><bdi class="secno">2. </bdi>Know the user</a>
+				<ol class="toc">
+					<li class="tocline"><a class="tocxref"
+							href="#about-people-with-cognitive-and-learning-disabilities"><bdi class="secno">2.1
+							</bdi>About people with cognitive and learning disabilities</a></li>
+					<li class="tocline"><a class="tocxref" href="#personas"><bdi class="secno">2.2 </bdi>Personas</a>
+					</li>
+					<li class="tocline"><a class="tocxref" href="#stories-use-cases-and-functional-needs"><bdi
+								class="secno">2.3 </bdi>Stories, use cases, and functional needs</a></li>
+					<li class="tocline"><a class="tocxref" href="#build-the-user-into-the-process"><bdi
+								class="secno">2.4 </bdi>Build the user into the process</a></li>
+				</ol>
+			</li>
+			<li class="tocline"><a class="tocxref" href="#design-and-build"><bdi class="secno">3. </bdi>Design and
+					build</a>
+				<ol class="toc">
+					<li class="tocline"><a class="tocxref" href="#objective-1-design-is-clear-and-helpful"><bdi
+								class="secno">3.1 </bdi>Objective 1: Design is clear and helpful</a>
+						<ol class="toc">
+							<li class="tocline"><a class="tocxref" href="#recognizable-purpose"><bdi class="secno">3.1.1
+									</bdi>Recognizable purpose</a></li>
+							<li class="tocline"><a class="tocxref" href="#distinguishable"><bdi class="secno">3.1.2
+									</bdi>Distinguishable</a></li>
+							<li class="tocline"><a class="tocxref" href="#consistent"><bdi class="secno">3.1.3
+									</bdi>Consistent</a></li>
+						</ol>
+					</li>
+					<li class="tocline"><a class="tocxref"
+							href="#objective-2-interactions-are-clear-and-straightforward"><bdi class="secno">3.2
+							</bdi>Objective 2: Interactions are clear and straightforward</a>
+						<ol class="toc">
+							<li class="tocline"><a class="tocxref" href="#informative"><bdi class="secno">3.2.1
+									</bdi>Informative</a></li>
+							<li class="tocline"><a class="tocxref" href="#logical"><bdi class="secno">3.2.2
+									</bdi>Logical</a></li>
+							<li class="tocline"><a class="tocxref" href="#safe-and-reliable"><bdi class="secno">3.2.3
+									</bdi>Safe and reliable</a></li>
+						</ol>
+					</li>
+					<li class="tocline"><a class="tocxref" href="#objective-3-functionality-is-supportive"><bdi
+								class="secno">3.3 </bdi>Objective 3: Functionality is supportive</a>
+						<ol class="toc">
+							<li class="tocline"><a class="tocxref" href="#supportive"><bdi class="secno">3.3.1
+									</bdi>Supportive</a></li>
+							<li class="tocline"><a class="tocxref" href="#flexible"><bdi class="secno">3.3.2
+									</bdi>Flexible</a></li>
+							<li class="tocline"><a class="tocxref" href="#customizable"><bdi class="secno">3.3.3
+									</bdi>Customizable</a></li>
+						</ol>
+					</li>
+					<li class="tocline"><a class="tocxref" href="#objective-4-content-is-understandable"><bdi
+								class="secno">3.4 </bdi>Objective 4: Content is understandable</a>
+						<ol class="toc">
+							<li class="tocline"><a class="tocxref" href="#concise"><bdi class="secno">3.4.1
+									</bdi>Concise</a></li>
+							<li class="tocline"><a class="tocxref" href="#direct-meaning"><bdi class="secno">3.4.2
+									</bdi>Direct meaning</a></li>
+							<li class="tocline"><a class="tocxref" href="#scaffolded"><bdi class="secno">3.4.3
+									</bdi>Scaffolded</a></li>
+						</ol>
+					</li>
+					<li class="tocline"><a class="tocxref" href="#objective-5-help-is-available-and-usable"><bdi
+								class="secno">3.5 </bdi>Objective 5: Help is available and usable</a>
+						<ol class="toc">
+							<li class="tocline"><a class="tocxref" href="#available"><bdi class="secno">3.5.1
+									</bdi>Available</a></li>
+							<li class="tocline"><a class="tocxref" href="#alternative-paths"><bdi class="secno">3.5.2
+									</bdi>Alternative paths</a></li>
+							<li class="tocline"><a class="tocxref" href="#accept-user-feedback-and-thoughts"><bdi
+										class="secno">3.5.3 </bdi>Accept user feedback and thoughts</a></li>
+						</ol>
+					</li>
+				</ol>
+			</li>
+			<li class="tocline"><a class="tocxref" href="#appendix"><bdi class="secno">A. </bdi>Appendix</a></li>
+		</ol>
+	</nav>
+	<br>
+	<div style="border-bottom: 1.5px solid #000000"></div>
+
+	<div>
+		<p>Jump to:
+			<a href="#how-to-use-this-document"><button>Contents</button></a>
+			<a href="#know-the-user"><button>Know the user</button></a>
+			<a href="#design-and-build"><button>Design &amp; build</button></a>
+		</p>
+	</div>
+
+	<section id="how-to-use-this-document">
+		<div class="header-wrapper">
+			<h2 id="x1-how-to-use-this-document"><bdi class="secno">1. </bdi>How to use this document</h2><a
+				class="self-link" href="#how-to-use-this-document" aria-label="Permalink for Section 1."></a>
+		</div>
+
+		<p>
+			<strong>“Making content usable”</strong> is intended for <strong>anyone</strong> involved in the creation,
+			curation, design, or development of digital technology and content. <strong>Depending on your specific
+				role</strong>, here are potential paths you might take through this document. Each role listed below has
+			a chip associated with it, that also includes visual indicators such as a specific icon and color. These are
+			regularly used throughout the document to identify content that might be of particular interest to
+			individuals in those roles.
+		</p>
+
+		<button id="btnall2" class="btnall" onclick="toggleAll()">+ Expand all</button>
+
+		<div class="container">
+
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 17.svg" class="icon">
+					<div>
+						<div class="header-wrapper">
+							<h3 id="x1-1-product-ownership">1.1 Product ownership</h3><a class="self-link"
+								href="#x1-1-product-ownership" aria-label="Permalink for this Section"></a>
+						</div>
+						<p>Includes product and program managers, stakeholders, and clients.</p>
+					</div>
+				</div>
+
+				<button id="btn-div1" class="btn" onclick="toggleDiv('div1')">+ Expand</button>
+			</div>
+
+
+
+
+			<div id="div1" class="collapse" style="margin-left: 115px">
+				<ol>
+					<li>
+						Start by <strong><a href="#know-the-user">understanding the user</a></strong>, which will
+						clarify why this work is critical, how it impacts your potential reach
+					</li>
+					<li>
+						<strong><a href="#build-the-user-into-the-process">Include the user</a></strong> in your market
+						research
+					</li>
+					<li>
+						<strong><a href="#design-and-build">Review the cognitive accessibility design
+								principles</a></strong> to make sure you know what to include in product requirements,
+						<strong>and </strong>request that those working on design and implementation use this document
+						and refer to the <strong><a href="#design-and-build">design and build</a></strong> section
+					</li>
+				</ol>
+			</div>
+		</div>
+
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 10.svg" class="icon">
+					<div>
+						<div class="header-wrapper">
+							<h3 id="x1-2-tech-implementation">1.2 Tech implementation</h3><a class="self-link"
+								href="#x1-2-tech-implementation" aria-label="Permalink for this Section"></a>
+						</div>
+						<p>Includes engineer/developer, tech lead, coder, etc.</p>
+					</div>
+				</div>
+
+				<button id="btn-div2" class="btn" onclick="toggleDiv('div2')">+ Expand</button>
+
+			</div>
+			<div id="div2" class="collapse" style="margin-left: 115px;">
+				<p><strong>Placeholder for content, not yet written for prototype</strong></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 11.svg" class="icon">
+					<div id="Research">
+						<div class="header-wrapper">
+							<h3 id="x1-3-research">1.3 Research</h3><a class="self-link" href="#Research"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<p>Includes UXR, competitive analyst.</p>
+					</div>
+				</div>
+
+				<button id="btn-div3" class="btn" onclick="toggleDiv('div3')">+ Expand</button>
+
+			</div>
+			<div id="div3" class="collapse" style="margin-left: 115px">
+				<p><strong>Placeholder for content, not yet written for prototype</strong></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 16.svg" class="icon">
+					<div id="UX-info-architecture">
+						<div class="header-wrapper">
+							<h3 id="x1-4-ux-info-architecture">1.4 UX &amp; info architecture</h3><a class="self-link"
+								href="#UX-info-architecture" aria-label="Permalink for this Section"></a>
+						</div>
+						<p>Includes UX &amp; Interaction designers, and content strategists.</p>
+					</div>
+				</div>
+
+				<button id="btn-div4" class="btn" onclick="toggleDiv('div4')">+ Expand</button>
+
+			</div>
+			<div id="div4" class="collapse" style="margin-left: 115px">
+				<p><strong>Placeholder for content, not yet written for prototype</strong></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 15.svg" class="icon">
+					<div id="Visual-design">
+						<div class="header-wrapper">
+							<h3 id="x1-5-visual-design">1.5 Visual design</h3><a class="self-link" href="#Visual-design"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<p>Includes artist and graphic designer.</p>
+					</div>
+				</div>
+
+				<button id="btn-div5" class="btn" onclick="toggleDiv('div5')">+ Expand</button>
+
+			</div>
+			<div id="div5" class="collapse" style="margin-left: 115px">
+				<p><strong>Placeholder for content, not yet written for prototype</strong></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 10.svg" class="icon">
+					<div id="Content-creation">
+						<div class="header-wrapper">
+							<h3 id="x1-6-content-creation">1.6 Content creation</h3><a class="self-link"
+								href="#Content-creation" aria-label="Permalink for this Section"></a>
+						</div>
+						<p>Includes writers, video and music creators, and sound designers.</p>
+					</div>
+				</div>
+
+				<button id="btn-div6" class="btn" onclick="toggleDiv('div6')">+ Expand</button>
+
+			</div>
+			<div id="div6" class="collapse" style="margin-left: 115px">
+				<p><strong>Placeholder for content, not yet written for prototype</strong></p>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="expand1">
+				<div class="iconandhead">
+					<img src="img/noun-product-manager-4520957 13.svg" class="icon">
+					<div id="Testing">
+						<div class="header-wrapper">
+							<h3 id="x1-7-testing">1.7 Testing</h3><a class="self-link" href="#Testing"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<p>Includes QA, test engineers, and auditors.</p>
+					</div>
+				</div>
+
+				<button id="btn-div7" class="btn" onclick="toggleDiv('div7')">+ Expand</button>
+
+			</div>
+			<div id="div7" class="collapse" style="margin-left: 115px">
+				<p><strong>Placeholder for content, not yet written for prototype</strong></p>
+			</div>
+		</div>
+
+
+
+	</section>
+	<br>
+	<div style="border-bottom: 1.5px solid #000000"></div>
+
+	<div>
+		<p>Jump to:
+			<a href="#how-to-use-this-document"><button>Contents</button></a>
+			<a href="#how-to-use-this-document"><button>How to use this document</button></a>
+			<a href="#design-and-build"><button>Design &amp; build</button></a>
+		</p>
+	</div>
+
+
+	<section id="know-the-user">
+		<div class="header-wrapper">
+			<h2 id="x2-know-the-user"><bdi class="secno">2. </bdi>Know the user</h2><a class="self-link"
+				href="#know-the-user" aria-label="Permalink for Section 2."></a>
+		</div>
+
+		<section id="about-people-with-cognitive-and-learning-disabilities">
+			<div class="header-wrapper">
+				<h3 id="x2-1-about-people-with-cognitive-and-learning-disabilities"><bdi class="secno">2.1 </bdi>About
+					people with cognitive and learning disabilities</h3><a class="self-link"
+					href="#about-people-with-cognitive-and-learning-disabilities"
+					aria-label="Permalink for Section 2.1"></a>
+			</div>
+
+			<p>People with cognitive and learning disabilities may experience difficulties with many of the cognitive
+				activities often
+				required to
+				interact with technology and understand content. This can create accessibility barriers with many tasks,
+				including:</p>
+			<ul style="margin: 0.5em;">
+				<li>Reading, writing, communication, and both aural and visual language processing,</li>
+				<li>Understanding or performing numerical tasks such as mathematical equations or recognizing time</li>
+				<li>Remembering or processing new information, and</li>
+				<li>Following instructions or performing ordered tasks.</li>
+			</ul>
+			<p>This is not exhaustive. For a more in-depth understanding of the experiences of individuals with
+				cognitive and learning disabilities, read the companion document to this guidance:</p>
+			<p><a href=""><strong>About People with Cognitive and Learning Disabilities 🔗</strong></a></p>
+		</section>
+
+		<section id="personas">
+			<div class="header-wrapper">
+				<h3 id="x2-2-personas"><bdi class="secno">2.2 </bdi>Personas</h3><a class="self-link" href="#personas"
+					aria-label="Permalink for Section 2.2"></a>
+			</div>
+
+			<button id="btnall3" class="btnall" onclick="toggleAll()">+ Expand all</button>
+			<div class="container">
+				<div class="expand1">
+					<div class="iconandhead">
+						<img src="img/people.png" class="icon" style="border-radius: 50%;">
+						<div id="Testing">
+							<div class="header-wrapper">
+								<h4 id="x2-2-1-amy-an-autistic-computer-scientist">2.2.1 Amy: an autistic computer
+									scientist</h4><a class="self-link" href="#Testing"
+									aria-label="Permalink for this Section"></a>
+							</div>
+							<p>Support with logical information architecture, reduced visual stimulation, and clear
+								language</p>
+						</div>
+					</div>
+
+					<button id="btn-div8" class="btn" onclick="toggleDiv('div8')">+ Expand</button>
+
+				</div>
+				<div id="div8" class="collapse" style="margin-left: 115px">
+					<p>Amy loved her computer science course and now programs in several languages. She has discovered
+						she can visualize the
+						outcome of her coding and is quick to find any errors even if they are not highlighted. Writing
+						documentation is less
+						fun and she is too concise. This means some users do not receive enough help using her
+						applications.Some of the
+						scenarios in which Amy experiences accessibility barriers:
+					</p>
+					<ul style="margin-top: 2rem;">
+						<li>Coping with ambiguous or dense layouts and illogical navigation</li>
+						<li>Changing color schemes, automatic blinking, flashing, and autoplay on video or music</li>
+						<li>Designs that make use of abstract imagery and metaphors</li>
+					</ul>
+					<p><strong><a href="link to be added.">Learn more about Amy and how to design accessible experiences
+								for her 🔗</a></strong></p>
+					<p>&nbsp;</p>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="expand1">
+					<div class="iconandhead">
+						<img src="img/people.png" class="icon" style="border-radius: 80%;">
+						<div id="Testing">
+							<div class="header-wrapper">
+								<h4 id="x2-2-2-persona-2-name">2.2.2 Persona 2 Name</h4><a class="self-link"
+									href="#Testing" aria-label="Permalink for this Section"></a>
+							</div>
+							<p>Byline for the persona that sets them up as a person, not a diagnosis</p>
+						</div>
+					</div>
+
+					<button id="btn-div9" class="btn" onclick="toggleDiv('div9')">+ Expand</button>
+
+				</div>
+				<div id="div9" class="collapse" style="margin-left: 115px">
+					<p><strong>Placeholder for content, not yet written for prototype</strong></p>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="expand1">
+					<div class="iconandhead">
+						<img src="img/people.png" class="icon" style="border-radius: 50%;">
+						<div id="Testing">
+							<div class="header-wrapper">
+								<h4 id="x2-2-3-persona-n-name">2.2.3 Persona n Name</h4><a class="self-link"
+									href="#Testing" aria-label="Permalink for this Section"></a>
+							</div>
+							<p>Byline for the persona that sets them up as a person, not a diagnosis</p>
+						</div>
+					</div>
+
+					<button id="btn-div10" class="btn" onclick="toggleDiv('div10')">+ Expand</button>
+
+				</div>
+				<div id="div10" class="collapse" style="margin-left: 115px">
+					<p><strong>Placeholder for content, not yet written for prototype</strong></p>
+				</div>
+			</div>
+
+		</section>
+
+		<section id="stories-use-cases-and-functional-needs">
+			<div class="header-wrapper">
+				<h3 id="x2-3-stories-use-cases-and-functional-needs"><bdi class="secno">2.3 </bdi>Stories, use cases,
+					and functional needs</h3><a class="self-link" href="#stories-use-cases-and-functional-needs"
+					aria-label="Permalink for Section 2.3"></a>
+			</div>
+
+			<p>For people with cognitive and learning disabilities, meeting the design objectives in this document and
+				addressing the
+				specific functional needs of these individual can be the difference between being able to use the site
+				or not being able
+				to use it at all. This may also be true for people with mental health issues or under temporary stress.
+			</p>
+			<p>User needs for people with cognitive and learning disabilities often help other users, although they can
+				usually manage
+				to use the site without these user needs being met.</p>
+			<p>The stories, use cases, and functional needs that will provide a solid foundation for making content
+				usable for
+				individuals with cognitive and learning disabilities detailed in the companion document to this
+				guidance, About people
+				with cognitive and learning disabilities.</p>
+		</section>
+		<section id="build-the-user-into-the-process">
+			<div class="header-wrapper">
+				<h3 id="x2-4-build-the-user-into-the-process"><bdi class="secno">2.4 </bdi>Build the user into the
+					process</h3><a class="self-link" href="#build-the-user-into-the-process"
+					aria-label="Permalink for Section 2.4"></a>
+			</div>
+
+			<p>A thoughtful user-centered design process will result in more accessible and usable products for
+				individuals with
+				cognitive and learning disabilities, and will likely lead to easier to use products for everyone,
+				overall. Key parts of
+				this process for people with cognitive and learning disabilities should be:</p>
+			<ul>
+				<li>Including the needs of users with cognitive and learning disabilities in the context of user needs
+					and requirements.</li>
+				<li>Including people with cognitive and learning disabilities in research methods such as usability
+					testing.</li>
+				<li>Including people with cognitive and learning disabilities in the design and development team.</li>
+				<li>Web sites that include people with cognitive and learning disabilities in usability testing and
+					account for their
+					feedback will be easier to use for everyone, including people who are experiencing stress, or mental
+					health issues.</li>
+			</ul>
+			<p>For resources to help you make these processes achievable for you, no matter the size of your
+				organization, read our companion document:</p>
+			<p><a href=""><strong>Building for people with cognitive and learning disabilities into the process
+						🔗</strong></a><br></p>
+
+		</section>
+
+		<div style="border-bottom: 1.5px solid #000000"></div>
+
+		<div>
+			<p>Jump to:
+				<a href="#introduction" class="respec-offending-element"
+					title="Broken local reference found in document."
+					id="respec-offender-broken-local-reference-found-in-document"><button>Contents</button></a>
+				<a href="#how-to-use-this-document"><button>How to use this document</button></a>
+				<a href="#know-the-user"><button>Know the user</button></a>
+			</p>
+		</div>
+
+	</section>
+
+	<section id="design-and-build">
+		<div class="header-wrapper">
+			<h2 id="x3-design-and-build"><bdi class="secno">3. </bdi>Design and build</h2><a class="self-link"
+				href="#design-and-build" aria-label="Permalink for Section 3."></a>
+		</div>
+
+		<p>TThis guide provides assistance making web sites and applications friendly for people with cognitive and
+			learning disabilities. <strong>The patterns in this guide provide practical guidance to improve the
+				accessibility of designs and the design process.</strong> The objectives and patterns presented here
+			provide supplemental guidance beyond the requirements of The Web Content Accessibility Guidelines WCAG
+			[WCAG22]. They are intended to address barriers that could not be included in the normative WCAG [WCAG22]
+			specification and may not otherwise be addressed.</p>
+		<p>Each objective contains a number of practical patterns (repeated designs for controls and other elements)
+			that describe what to do to address user needs. Implementing these patterns is <strong>essential</strong>
+			for some people with cognitive and learning disabilities to be able to use content independently.</p>
+		<ol>
+			<li><a href="#objective-1-design-is-clear-and-helpful">Design is clear and helpful</a></li>
+			<li><a href="#objective-2-interactions-are-clear-and-straightforward">Interactions are clear and
+					straightforward</a></li>
+			<li><a href="#objective-3-functionality-is-supportive">Functionality is supportive</a></li>
+			<li><a href="#objective-4-content-is-understandable">Content is understandable</a></li>
+			<li><a href="#objective-5-help-is-available-and-usable">Help is available and usable</a></li>
+		</ol>
+
+		<section id="objective-1-design-is-clear-and-helpful">
+			<div class="header-wrapper">
+				<h3 id="x3-1-objective-1-design-is-clear-and-helpful"><bdi class="secno">3.1 </bdi>Objective 1: Design
+					is clear and helpful</h3><a class="self-link" href="#objective-1-design-is-clear-and-helpful"
+					aria-label="Permalink for Section 3.1"></a>
+			</div>
+
+			<p>The visual, aural, and media design supports the user to easily understand the purpose and meaning of
+				components, the hierarchy of the page and site, and how to navigate the layouts.</p>
+			<ol>
+				<li><strong>Which roles typically do this?</strong> Designers and information architects.</li>
+				<li><strong>When is this typically done?</strong> During the design phase and in the creation of content
+					and visual assets.</li>
+				<li><strong>Which part of the process can break this?</strong> Implementation, especially when 3P
+					tooling or resources are introduced.</li>
+			</ol>
+
+			<p><strong>Patterns for achieving a helpful design:</strong></p>
+			<section id="recognizable-purpose">
+				<div class="header-wrapper">
+					<h4 id="x3-1-1-recognizable-purpose"><bdi class="secno">3.1.1 </bdi>Recognizable purpose</h4><a
+						class="self-link" href="#recognizable-purpose" aria-label="Permalink for Section 3.1.1"></a>
+				</div>
+
+				<button id="btnall4" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="make-the-purpose-of-your-page-clear">Make the purpose of
+								your page clear</h5><a class="self-link" href="#make-the-purpose-of-your-page-clear"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div11" class="btn" onclick="toggleDiv('div11')">+ Expand</button>
+					</div>
+					<div id="div11" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-clear-visible-labels">Use clear visible labels</h5>
+							<a class="self-link" href="#use-clear-visible-labels"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div12" class="btn" onclick="toggleDiv('div12')">+ Expand</button>
+					</div>
+					<div id="div12" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-familiar-and-consistent-design-patterns">Use
+								familiar and consistent design patterns</h5><a class="self-link"
+								href="#use-familiar-and-consistent-design-patterns"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div22" class="btn" onclick="toggleDiv('div22')">+ Expand</button>
+					</div>
+					<div id="div22" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="clearly-identify-controls-their-use-and-their-relationship-to-the-content-they-affect">
+								Clearly identify controls, their use, and their relationship to
+								the content they affect</h5><a class="self-link"
+								href="#clearly-identify-controls-their-use-and-their-relationship-to-the-content-they-affect"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div13" class="btn" onclick="toggleDiv('div13')">+ Expand</button>
+					</div>
+					<div id="div13" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+			<section id="distinguishable">
+				<div class="header-wrapper">
+					<h4 id="x3-1-2-distinguishable"><bdi class="secno">3.1.2 </bdi>Distinguishable</h4><a
+						class="self-link" href="#distinguishable" aria-label="Permalink for Section 3.1.2"></a>
+				</div>
+
+				<button id="btnall5" class="btnall" onclick="toggleAll()">+ Expand all</button>
+
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="make-it-easy-to-find-the-most-important-features-and-tasks-on-the-site">Make it easy
+								to find the most important features and tasks on
+								the site</h5><a class="self-link"
+								href="#make-it-easy-to-find-the-most-important-features-and-tasks-on-the-site"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div14" class="btn" onclick="toggleDiv('div14')">+ Expand</button>
+					</div>
+					<div id="div14" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="make-it-easy-to-find-the-most-important-actions-and-information-on-the-page">Make it
+								easy to find the most important actions and information
+								on the page</h5><a class="self-link"
+								href="#make-it-easy-to-find-the-most-important-actions-and-information-on-the-page"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div15" class="btn" onclick="toggleDiv('div15')">+ Expand</button>
+					</div>
+					<div id="div15" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="ensure-foreground-content-is-not-obscured-by-background">Ensure foreground content
+								is not obscured by background</h5><a class="self-link"
+								href="#ensure-foreground-content-is-not-obscured-by-background"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div21" class="btn" onclick="toggleDiv('div21')">+ Expand</button>
+					</div>
+					<div id="div21" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-white-spacing">Use white spacing</h5><a
+								class="self-link" href="#use-white-spacing" aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div17" class="btn" onclick="toggleDiv('div17')">+ Expand</button>
+					</div>
+					<div id="div17" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+			<section id="consistent">
+				<div class="header-wrapper">
+					<h4 id="x3-1-3-consistent"><bdi class="secno">3.1.3 </bdi>Consistent</h4><a class="self-link"
+						href="#consistent" aria-label="Permalink for Section 3.1.3"></a>
+				</div>
+
+				<button id="btnall5" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="ensure-controls-and-content-do-not-move-unexpectedly">
+								Ensure controls and content do not move unexpectedly</h5><a class="self-link"
+								href="#ensure-controls-and-content-do-not-move-unexpectedly"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div18" class="btn" onclick="toggleDiv('div18')">+ Expand</button>
+					</div>
+					<div id="div18" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-a-consistent-visual-design">Use a consistent visual
+								design</h5><a class="self-link" href="#use-a-consistent-visual-design"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div19" class="btn" onclick="toggleDiv('div19')">+ Expand</button>
+					</div>
+					<div id="div19" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-a-predictable-hierarchy">Use a predictable hierarchy
+							</h5><a class="self-link" href="#use-a-predictable-hierarchy"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div20" class="btn" onclick="toggleDiv('div20')">+ Expand</button>
+					</div>
+					<div id="div20" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+
+
+		</section>
+		<br>
+		<div style="text-align: center;">
+			<div style="border-bottom: 1px dashed #000000"></div>
+			<p><strong>Jump to objective: &nbsp;&nbsp;</strong><a
+					href="#objective-1-design-is-clear-and-helpful">Design</a>&nbsp;&nbsp;
+				Interactions &nbsp;&nbsp;<a href="#objective-3-functionality-is-supportive">Functionality</a>
+				&nbsp;&nbsp;<a href="#objective-4-content-is-understandable">Content</a>
+				&nbsp;&nbsp;<a href="#objective-5-help-is-available-and-usable">Help</a>
+			</p>
+			<div style="border-bottom: 1px dashed #000000"></div>
+
+		</div>
+
+		<section id="objective-2-interactions-are-clear-and-straightforward">
+			<div class="header-wrapper">
+				<h3 id="x3-2-objective-2-interactions-are-clear-and-straightforward"><bdi class="secno">3.2
+					</bdi>Objective 2: Interactions are clear and straightforward</h3><a class="self-link"
+					href="#objective-2-interactions-are-clear-and-straightforward"
+					aria-label="Permalink for Section 3.2"></a>
+			</div>
+
+			<p>The flows, tasks, and events provide clarity for the user to understand how to interact with the system,
+				and what will and has happened based on how they interact with the interface.</p>
+			<ol>
+				<li><strong>Which roles typically do this?</strong> User experience and interaction designers, content
+					strategists, and technical leads.</li>
+				<li><strong>When is this typically done?</strong> During both the interaction design and engineering
+					design phases.</li>
+				<li><strong>Which part of the process can break this?</strong> Implementation, especially when 3P
+					tooling or resources are introduced.</li>
+			</ol>
+
+			<p><strong>Patterns for achieving clear and straightforward interactions:</strong></p>
+
+			<section id="informative">
+				<div class="header-wrapper">
+					<h4 id="x3-2-1-informative"><bdi class="secno">3.2.1 </bdi>Informative</h4><a class="self-link"
+						href="#informative" aria-label="Permalink for Section 3.2.1"></a>
+				</div>
+
+				<button id="btnall6" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="clearly-state-the-results-and-disadvantages-of-actions-options-and-selections">
+								Clearly state the results and disadvantages of actions, options,
+								and selections</h5><a class="self-link"
+								href="#clearly-state-the-results-and-disadvantages-of-actions-options-and-selections"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div24" class="btn" onclick="toggleDiv('div24')">+ Expand</button>
+					</div>
+					<div id="div24" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="do-not-rely-on-the-user-performing-calculations">Do not
+								rely on the user performing calculations</h5><a class="self-link"
+								href="#do-not-rely-on-the-user-performing-calculations"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div25" class="btn" onclick="toggleDiv('div25')">+ Expand</button>
+					</div>
+					<div id="div25" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="do-not-rely-on-the-user-memorizing-information">Do not
+								rely on the user memorizing information</h5><a class="self-link"
+								href="#do-not-rely-on-the-user-memorizing-information"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div26" class="btn" onclick="toggleDiv('div26')">+ Expand</button>
+					</div>
+					<div id="div26" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="notify-users-of-fees-and-changes-at-the-start-of-a-task">Notify users of fees and
+								changes at the start of a task</h5><a class="self-link"
+								href="#notify-users-of-fees-and-changes-at-the-start-of-a-task"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div27" class="btn" onclick="toggleDiv('div27')">+ Expand</button>
+					</div>
+					<div id="div27" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-information-so-a-user-can-prepare-for-a-task">
+								Provide information so a user can prepare for a task</h5><a class="self-link"
+								href="#provide-information-so-a-user-can-prepare-for-a-task"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div28" class="btn" onclick="toggleDiv('div28')">+ Expand</button>
+					</div>
+					<div id="div28" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-feedback-based-on-user-action">Provide feedback
+								based on user action</h5><a class="self-link"
+								href="#provide-feedback-based-on-user-action"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div29" class="btn" onclick="toggleDiv('div29')">+ Expand</button>
+					</div>
+					<div id="div29" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="user-knows-if-they-are-on-a-new-url-domain-space">User
+								knows if they are on a new URL/domain/space</h5><a class="self-link"
+								href="#user-knows-if-they-are-on-a-new-url-domain-space"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div30" class="btn" onclick="toggleDiv('div30')">+ Expand</button>
+					</div>
+					<div id="div30" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+			<section id="logical">
+				<div class="header-wrapper">
+					<h4 id="x3-2-2-logical"><bdi class="secno">3.2.2 </bdi>Logical</h4><a class="self-link"
+						href="#logical" aria-label="Permalink for Section 3.2.2"></a>
+				</div>
+
+				<button id="btnall7" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="make-short-critical-paths">Make short critical paths
+							</h5><a class="self-link" href="#make-short-critical-paths"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div31" class="btn" onclick="toggleDiv('div31')">+ Expand</button>
+					</div>
+					<div id="div31" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="make-each-step-clear">Make each step clear</h5><a
+								class="self-link" href="#make-each-step-clear"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div32" class="btn" onclick="toggleDiv('div32')">+ Expand</button>
+					</div>
+					<div id="div32" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-step-by-step-guidance">Provide step by step
+								guidance</h5><a class="self-link" href="#provide-step-by-step-guidance"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div33" class="btn" onclick="toggleDiv('div33')">+ Expand</button>
+					</div>
+					<div id="div33" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="separate-each-instruction">Separate each instruction
+							</h5><a class="self-link" href="#separate-each-instruction"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div34" class="btn" onclick="toggleDiv('div34')">+ Expand</button>
+					</div>
+					<div id="div34" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-guidance-for-forms-and-non-standard-controls">
+								Provide guidance for forms and non-standard controls</h5><a class="self-link"
+								href="#provide-guidance-for-forms-and-non-standard-controls"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div35" class="btn" onclick="toggleDiv('div35')">+ Expand</button>
+					</div>
+					<div id="div35" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+			<section id="safe-and-reliable">
+				<div class="header-wrapper">
+					<h4 id="x3-2-3-safe-and-reliable"><bdi class="secno">3.2.3 </bdi>Safe and reliable</h4><a
+						class="self-link" href="#safe-and-reliable" aria-label="Permalink for Section 3.2.3"></a>
+				</div>
+
+				<button id="btnall8" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="design-and-build-forms-to-prevent-mistakes">Design and
+								build forms to prevent mistakes</h5><a class="self-link"
+								href="#design-and-build-forms-to-prevent-mistakes"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div36" class="btn" onclick="toggleDiv('div36')">+ Expand</button>
+					</div>
+					<div id="div36" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="make-it-easy-to-recover-from-errors-and-undo-actions">
+								Make it easy to recover from errors and undo actions</h5><a class="self-link"
+								href="#make-it-easy-to-recover-from-errors-and-undo-actions"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div37" class="btn" onclick="toggleDiv('div37')">+ Expand</button>
+					</div>
+					<div id="div37" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="enable-users-to-go-back">Enable users to go back</h5><a
+								class="self-link" href="#enable-users-to-go-back"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div38" class="btn" onclick="toggleDiv('div38')">+ Expand</button>
+					</div>
+					<div id="div38" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="help-users-restore-focus-and-understand-context">Help
+								users restore focus and understand context</h5><a class="self-link"
+								href="#help-users-restore-focus-and-understand-context"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div39" class="btn" onclick="toggleDiv('div39')">+ Expand</button>
+					</div>
+					<div id="div39" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="limit-interruptions">Limit interruptions</h5><a
+								class="self-link" href="#limit-interruptions"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div40" class="btn" onclick="toggleDiv('div40')">+ Expand</button>
+					</div>
+					<div id="div40" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<br>
+
+		<div style="text-align: center;">
+			<div style="border-bottom: 1px dashed #000000"></div>
+			<p><strong>Jump to objective: &nbsp;&nbsp;</strong><a
+					href="#objective-1-design-is-clear-and-helpful">Design</a>&nbsp;&nbsp;
+				<a href="#objective-2-interactions-are-clear-and-straightforward">Interactions</a>
+				&nbsp;&nbsp;Functionality
+				&nbsp;&nbsp;<a href="#objective-4-content-is-understandable">Content</a>
+				&nbsp;&nbsp;<a href="#objective-5-help-is-available-and-usable">Help</a>
+			</p>
+			<div style="border-bottom: 1px dashed #000000"></div>
+
+		</div>
+
+		<section id="objective-3-functionality-is-supportive">
+			<div class="header-wrapper">
+				<h3 id="x3-3-objective-3-functionality-is-supportive"><bdi class="secno">3.3 </bdi>Objective 3:
+					Functionality is supportive</h3><a class="self-link" href="#objective-3-functionality-is-supportive"
+					aria-label="Permalink for Section 3.3"></a>
+			</div>
+
+			<p>Functionality is incorporated to proactively help the user “behind the scenes,” and/or provides the user
+				with customization / personalization options.</p>
+			<ol>
+				<li><strong>Which roles typically do this?</strong> Engineers, coders, often with design considerations.
+				</li>
+				<li><strong>When is this typically done?</strong> Implementation (Eng), including selection of 3P
+					tooling.</li>
+				<li><strong>Which part of the process can break this?</strong> UX design, UX writing, content strategy.
+				</li>
+			</ol>
+
+			<p><strong>Patterns for supportive functionality:</strong></p>
+			<section id="supportive">
+				<div class="header-wrapper">
+					<h4 id="x3-3-1-supportive"><bdi class="secno">3.3.1 </bdi>Supportive</h4><a class="self-link"
+						href="#supportive" aria-label="Permalink for Section 3.3.1"></a>
+				</div>
+
+				<button id="btnall9" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="avoid-data-loss">Avoid data loss</h5><a
+								class="self-link" href="#avoid-data-loss" aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div42" class="btn" onclick="toggleDiv('div42')">+ Expand</button>
+					</div>
+					<div id="div42" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="avoid-or-support-the-user-through-timeouts-or-timed-tasks">Avoid or support the user
+								through timeouts or timed tasks</h5><a class="self-link"
+								href="#avoid-or-support-the-user-through-timeouts-or-timed-tasks"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div43" class="btn" onclick="toggleDiv('div43')">+ Expand</button>
+					</div>
+					<div id="div43" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="provide-a-login-that-is-clear-single-step-and-does-not-rely-on-cognitive-skills">
+								Provide a login that is clear, single step, and does not rely on
+								cognitive skills</h5><a class="self-link"
+								href="#provide-a-login-that-is-clear-single-step-and-does-not-rely-on-cognitive-skills"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div44" class="btn" onclick="toggleDiv('div44')">+ Expand</button>
+					</div>
+					<div id="div44" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-reminders">Provide reminders</h5><a
+								class="self-link" href="#provide-reminders" aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div45" class="btn" onclick="toggleDiv('div45')">+ Expand</button>
+					</div>
+					<div id="div45" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-help-with-geographic-directions">Provide help
+								with geographic directions</h5><a class="self-link"
+								href="#provide-help-with-geographic-directions"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div46" class="btn" onclick="toggleDiv('div46')">+ Expand</button>
+					</div>
+					<div id="div46" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="inform-returning-users-of-user-interface-changes">Inform
+								returning users of user interface changes</h5><a class="self-link"
+								href="#inform-returning-users-of-user-interface-changes"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div47" class="btn" onclick="toggleDiv('div47')">+ Expand</button>
+					</div>
+					<div id="div47" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+			<section id="flexible">
+				<div class="header-wrapper">
+					<h4 id="x3-3-2-flexible"><bdi class="secno">3.3.2 </bdi>Flexible</h4><a class="self-link"
+						href="#flexible" aria-label="Permalink for Section 3.3.2"></a>
+				</div>
+
+				<button id="btnall10" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-search">Provide search</h5><a class="self-link"
+								href="#provide-search" aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div48" class="btn" onclick="toggleDiv('div48')">+ Expand</button>
+					</div>
+					<div id="div48" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="accept-different-input-formats">Accept different input
+								formats</h5><a class="self-link" href="#accept-different-input-formats"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div49" class="btn" onclick="toggleDiv('div49')">+ Expand</button>
+					</div>
+					<div id="div49" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="allow-misspelling-and-imprecise-formatting-in-text-entry-fields-including-search">
+								Allow misspelling and imprecise formatting in text entry fields
+								(including search)</h5><a class="self-link"
+								href="#allow-misspelling-and-imprecise-formatting-in-text-entry-fields-including-search"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div50" class="btn" onclick="toggleDiv('div50')">+ Expand</button>
+					</div>
+					<div id="div50" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+			<section id="customizable">
+				<div class="header-wrapper">
+					<h4 id="x3-3-3-customizable"><bdi class="secno">3.3.3 </bdi>Customizable</h4><a class="self-link"
+						href="#customizable" aria-label="Permalink for Section 3.3.3"></a>
+				</div>
+
+				<button id="btnall11" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="let-user-control-when-the-content-moves-or-changes">Let
+								user control when the content moves or changes</h5><a class="self-link"
+								href="#let-user-control-when-the-content-moves-or-changes"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div51" class="btn" onclick="toggleDiv('div51')">+ Expand</button>
+					</div>
+					<div id="div51" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="support-the-use-of-apis-extensions-and-assistive-technology">Support the use of
+								APIs, extensions, and assistive technology
+							</h5><a class="self-link"
+								href="#support-the-use-of-apis-extensions-and-assistive-technology"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div52" class="btn" onclick="toggleDiv('div52')">+ Expand</button>
+					</div>
+					<div id="div52" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="support-user-interface-ui-simplification">Support user
+								interface (UI) simplification</h5><a class="self-link"
+								href="#support-user-interface-ui-simplification"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div53" class="btn" onclick="toggleDiv('div53')">+ Expand</button>
+					</div>
+					<div id="div53" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="support-a-personalized-interface">Support a personalized
+								interface</h5><a class="self-link" href="#support-a-personalized-interface"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div54" class="btn" onclick="toggleDiv('div54')">+ Expand</button>
+					</div>
+					<div id="div54" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<br>
+
+		<div style="text-align: center;">
+			<div style="border-bottom: 1px dashed #000000"></div>
+			<p><strong>Jump to objective: &nbsp;&nbsp;</strong><a
+					href="#objective-1-design-is-clear-and-helpful">Design</a>&nbsp;&nbsp;
+				<a href="#objective-2-interactions-are-clear-and-straightforward">Interactions</a> &nbsp;&nbsp;<a
+					href="#objective-3-functionality-is-supportive">Functionality</a>
+				&nbsp;&nbsp;Content
+				&nbsp;&nbsp;<a href="#objective-5-help-is-available-and-usable">Help</a>
+			</p>
+			<div style="border-bottom: 1px dashed #000000"></div>
+
+		</div>
+
+		<section id="objective-4-content-is-understandable">
+			<div class="header-wrapper">
+				<h3 id="x3-4-objective-4-content-is-understandable"><bdi class="secno">3.4 </bdi>Objective 4: Content is
+					understandable</h3><a class="self-link" href="#objective-4-content-is-understandable"
+					aria-label="Permalink for Section 3.4"></a>
+			</div>
+
+			<p>The language, imagery, media, and other content is easy to understand, and/or provides other ways to be
+				understood by those who are better supported with other formats.</p>
+			<ol>
+				<li><strong>Which roles typically do this?</strong> Content folks, visual designers, media creators.
+				</li>
+				<li><strong>When is this typically done?</strong> Content creation, entry, edits.</li>
+				<li><strong>Which part of the process can break this?</strong> Any.</li>
+			</ol>
+
+			<p><strong>Patterns for understandable content:</strong></p>
+			<section id="concise">
+				<div class="header-wrapper">
+					<h4 id="x3-4-1-concise"><bdi class="secno">3.4.1 </bdi>Concise</h4><a class="self-link"
+						href="#concise" aria-label="Permalink for Section 3.4.1"></a>
+				</div>
+
+				<button id="btnall12" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="keep-the-content-concise">Keep the content concise</h5>
+							<a class="self-link" href="#keep-the-content-concise"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div55" class="btn" onclick="toggleDiv('div55')">+ Expand</button>
+					</div>
+					<div id="div55" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="break-the-content-into-chunks">Break the content into
+								chunks</h5><a class="self-link" href="#break-the-content-into-chunks"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div56" class="btn" onclick="toggleDiv('div56')">+ Expand</button>
+					</div>
+					<div id="div56" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="include-only-one-idea-per-block-sentence-paragraph-page">Include only one idea per
+								block (sentence, paragraph, page)</h5><a class="self-link"
+								href="#include-only-one-idea-per-block-sentence-paragraph-page"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div57" class="btn" onclick="toggleDiv('div57')">+ Expand</button>
+					</div>
+					<div id="div57" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+			<section id="direct-meaning">
+				<div class="header-wrapper">
+					<h4 id="x3-4-2-direct-meaning"><bdi class="secno">3.4.2 </bdi>Direct meaning</h4><a
+						class="self-link" href="#direct-meaning" aria-label="Permalink for Section 3.4.2"></a>
+				</div>
+
+				<button id="btnall13" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-clear-words">Use clear words</h5><a
+								class="self-link" href="#use-clear-words" aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div58" class="btn" onclick="toggleDiv('div58')">+ Expand</button>
+					</div>
+					<div id="div58" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-literal-language">Use literal language</h5><a
+								class="self-link" href="#use-literal-language"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div59" class="btn" onclick="toggleDiv('div59')">+ Expand</button>
+					</div>
+					<div id="div59" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-a-simple-tense-and-voice">Use a simple tense and
+								voice</h5><a class="self-link" href="#use-a-simple-tense-and-voice"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div60" class="btn" onclick="toggleDiv('div60')">+ Expand</button>
+					</div>
+					<div id="div60" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="avoid-double-negatives-or-nested-clauses">Avoid double
+								negatives or nested clauses</h5><a class="self-link"
+								href="#avoid-double-negatives-or-nested-clauses"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div61" class="btn" onclick="toggleDiv('div61')">+ Expand</button>
+					</div>
+					<div id="div61" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="explain-implied-content">Explain implied content</h5><a
+								class="self-link" href="#explain-implied-content"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div62" class="btn" onclick="toggleDiv('div62')">+ Expand</button>
+					</div>
+					<div id="div62" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-clear-unambiguous-formatting-and-punctuation">Use
+								clear, unambiguous formatting and punctuation</h5><a class="self-link"
+								href="#use-clear-unambiguous-formatting-and-punctuation"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div63" class="btn" onclick="toggleDiv('div63')">+ Expand</button>
+					</div>
+					<div id="div63" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+			<section id="scaffolded">
+				<div class="header-wrapper">
+					<h4 id="x3-4-3-scaffolded"><bdi class="secno">3.4.3 </bdi>Scaffolded</h4><a class="self-link"
+						href="#scaffolded" aria-label="Permalink for Section 3.4.3"></a>
+				</div>
+
+				<button id="btnall14" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="provide-alternate-content-for-complex-information-and-tasks">Provide alternate
+								content for complex information and tasks</h5><a class="self-link"
+								href="#provide-alternate-content-for-complex-information-and-tasks"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div64" class="btn" onclick="toggleDiv('div64')">+ Expand</button>
+					</div>
+					<div id="div64" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-alternatives-for-numerical-concepts">Provide
+								alternatives for numerical concepts</h5><a class="self-link"
+								href="#provide-alternatives-for-numerical-concepts"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div65" class="btn" onclick="toggleDiv('div65')">+ Expand</button>
+					</div>
+					<div id="div65" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-icons-that-help-the-user">Use icons that help the
+								user</h5><a class="self-link" href="#use-icons-that-help-the-user"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div41" class="btn" onclick="toggleDiv('div41')">+ Expand</button>
+					</div>
+					<div id="div41" class="collapse" style="margin-left: 20px;">
+						<p><strong>📖 A user story</strong></p>
+						<p>As a user with complex communication needs that may include a mild language impairment, I
+							want symbols that help me understand the content.</p>
+						<p><strong><a href="">More stories and user needs around icon support for the user
+									🔗</a></strong></p>
+						<p><strong>✅ What to do</strong></p>
+						<p>Add familiar icons, images, and symbols to important content such as controls and section
+							headings. Each icon or symbol should convey a single meaning and be next to the content it
+							relates to.</p>
+						<div style="margin-left: 2rem;">
+							<p><strong>✓ Use common icons that the user is likely to understand.</strong></p>
+							<div style="margin-left: 60px;">
+								<img src="img/use-icon1.png" width="90%"
+									alt="A universal footer on a website contains three sections, speak to a representative, which has a headset icon, email us with an envelop icon, and mailing address with a stamp icon">
+								<p style="font-size: smaller;">Icons can be especially helpful next to contact, help,
+									and search content, and in callout boxes.</p>
+							</div>
+
+							<p><strong>✓ Provide common icons next to key texts, headings, media sections,
+									“contact us” buttons, and "help" buttons.Use clear and unambiguous icons or symbols
+									that are easy to see and enlarge.</strong></p>
+							<div style="margin-left: 60px;">
+								<p>⭐ Helpful</p>
+								<img src="img/use-icon2.png">
+								<p style="font-size: smaller;">Start each item in a list (such as a select list as in
+									this example, or instructions in a recipe) with an icon that relates to it.</p>
+								<p>ℹ️ Caution</p>
+								<img src="img/use-icon3.png">
+								<p style="font-size: smaller;">Not including icons in this select list may create a
+									barrier for people who have difficulty reading or understanding flower names.</p>
+							</div>
+
+
+
+							<p><strong>✓ Be aware of cultural differences.</strong></p>
+							<div style="margin-left: 60px;">
+								<p>For example, a shopping cart icon ( 🛒 ) may not be helpful in locations where people
+									typically use baskets ( 🧺 ).</p>
+							</div>
+
+							<p><strong>✓ In left-to-right languages, when adding a few icons or symbols to a
+									page place the image to the left of the text.</strong></p>
+							<div style="margin-left: 60px;">
+								<p>In left-to-right languages, the icon would be on the left of the text, at the
+									beginning of the word. In right-to-left languages, the icon would ideally be on the
+									right, also at the beginning of the word. In vertical languages, the icon may be
+									most effective at the top.</p>
+							</div>
+
+							<p><strong>✓ When adding multiple symbols to a paragraph or section of text, place
+									the symbols above the text.</strong></p>
+							<div style="margin-left: 60px;">
+								<p>⭐ Helpful</p>
+								<img src="img/use-icon4.png" width="90%">
+								<p style="font-size: smaller;">For someone who benefits from the icons, they can help to
+									tell the story along with the words.</p>
+
+								<p>ℹ️ Caution</p>
+								<img src="img/use-icon5.png" width="90%">
+								<p style="font-size: smaller;">Too many icons can easily become overwhelming even for
+									those they help.</p>
+							</div>
+
+							<p><strong>✓ Use personalization semantics such as [personalization-semantics-1.0]
+									to help the user load familiar symbols.</strong></p>
+
+						</div>
+
+						<p><strong>🎯 How it helps</strong></p>
+						<p>People who have language comprehension, learning, or reading difficulties <strong>may rely on
+								symbols
+								to understand content and
+								navigate</strong> to content they need. Symbols also help people who struggle with
+							language and
+							attention to navigate content,
+							including media. Clear symbols, icons, and images can also act as signposts to help
+							individuals find what they need.</p>
+						<p><a href=""><strong>More on how symbols can help individuals with content understanding and
+									navigation 🔗</strong></a>
+						</p>
+					</div>
+
+
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="avoid-all-caps-in-written-content">Avoid all caps in
+								written content</h5><a class="self-link" href="#avoid-all-caps-in-written-content"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div66" class="btn" onclick="toggleDiv('div66')">+ Expand</button>
+					</div>
+					<div id="div66" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="avoid-centering-or-full-justifying-text-that-runs-more-than-2-lines">Avoid centering
+								or full justifying text that runs more than
+								2 lines</h5><a class="self-link"
+								href="#avoid-centering-or-full-justifying-text-that-runs-more-than-2-lines"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div67" class="btn" onclick="toggleDiv('div67')">+ Expand</button>
+					</div>
+					<div id="div67" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;"
+								id="include-symbols-and-letters-necessary-to-decipher-the-words">Include symbols and
+								letters necessary to decipher the words
+							</h5><a class="self-link"
+								href="#include-symbols-and-letters-necessary-to-decipher-the-words"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div68" class="btn" onclick="toggleDiv('div68')">+ Expand</button>
+					</div>
+					<div id="div68" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="use-familiar-metrics-and-units">Use familiar metrics and
+								units</h5><a class="self-link" href="#use-familiar-metrics-and-units"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div69" class="btn" onclick="toggleDiv('div69')">+ Expand</button>
+					</div>
+					<div id="div69" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+			</section>
+		</section>
+
+		<br>
+
+		<div style="text-align: center;">
+			<div style="border-bottom: 1px dashed #000000"></div>
+			<p><strong>Jump to objective: &nbsp;&nbsp;</strong><a
+					href="#objective-1-design-is-clear-and-helpful">Design</a>&nbsp;&nbsp;
+				<a href="#objective-2-interactions-are-clear-and-straightforward">Interactions</a> &nbsp;&nbsp;<a
+					href="#objective-3-functionality-is-supportive">Functionality</a>
+				&nbsp;&nbsp;<a href="#objective-4-content-is-understandable">Content</a>
+				&nbsp;&nbsp;Help
+			</p>
+			<div style="border-bottom: 1px dashed #000000"></div>
+
+		</div>
+
+
+		<section id="objective-5-help-is-available-and-usable">
+			<div class="header-wrapper">
+				<h3 id="x3-5-objective-5-help-is-available-and-usable"><bdi class="secno">3.5 </bdi>Objective 5: Help is
+					available and usable</h3><a class="self-link" href="#objective-5-help-is-available-and-usable"
+					aria-label="Permalink for Section 3.5"></a>
+			</div>
+
+			<p>The user is able to complete their journey in an alternate way - including potentially outside of the
+				system - if they choose to.</p>
+			<ol>
+				<li><strong>Which roles typically do this?</strong> Product, though this also has to be designed and
+					implemented.</li>
+				<li><strong>When is this typically done?</strong> Early in project planning, as a user journey.</li>
+				<li><strong>Which part of the process can break this?</strong> Any, especially launch.</li>
+			</ol>
+
+			<p><strong>Patterns for achieving available and usable help:</strong></p>
+			<section id="available">
+				<div class="header-wrapper">
+					<h4 id="x3-5-1-available"><bdi class="secno">3.5.1 </bdi>Available</h4><a class="self-link"
+						href="#available" aria-label="Permalink for Section 3.5.1"></a>
+				</div>
+
+				<button id="btnall15" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="make-it-easy-to-find-help">Make it easy to find help
+							</h5><a class="self-link" href="#make-it-easy-to-find-help"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div70" class="btn" onclick="toggleDiv('div70')">+ Expand</button>
+					</div>
+					<div id="div70" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-human-help-that-can-be-found-in-context">Provide
+								human help that can be found in context</h5><a class="self-link"
+								href="#provide-human-help-that-can-be-found-in-context"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div71" class="btn" onclick="toggleDiv('div71')">+ Expand</button>
+					</div>
+					<div id="div71" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+
+			</section>
+			<section id="alternative-paths">
+				<div class="header-wrapper">
+					<h4 id="x3-5-2-alternative-paths"><bdi class="secno">3.5.2 </bdi>Alternative paths</h4><a
+						class="self-link" href="#alternative-paths" aria-label="Permalink for Section 3.5.2"></a>
+				</div>
+
+				<button id="btnall16" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="let-users-avoid-navigating-voice-menus">Let users avoid
+								navigating voice menus</h5><a class="self-link"
+								href="#let-users-avoid-navigating-voice-menus"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div72" class="btn" onclick="toggleDiv('div72')">+ Expand</button>
+					</div>
+					<div id="div72" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-alternative-content-formats-such-as-easy-read">
+								Provide alternative content formats such as easy read</h5><a class="self-link"
+								href="#provide-alternative-content-formats-such-as-easy-read"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div73" class="btn" onclick="toggleDiv('div73')">+ Expand</button>
+					</div>
+					<div id="div73" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="provide-summary-of-long-documents-and-media">Provide
+								summary of long documents and media</h5><a class="self-link"
+								href="#provide-summary-of-long-documents-and-media"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div74" class="btn" onclick="toggleDiv('div74')">+ Expand</button>
+					</div>
+					<div id="div74" class="collapse" style="margin-left: 20px;">
+						<p>[<strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+
+			</section>
+			<section id="accept-user-feedback-and-thoughts">
+				<div class="header-wrapper">
+					<h4 id="x3-5-3-accept-user-feedback-and-thoughts"><bdi class="secno">3.5.3 </bdi>Accept user
+						feedback and thoughts</h4><a class="self-link" href="#accept-user-feedback-and-thoughts"
+						aria-label="Permalink for Section 3.5.3"></a>
+				</div>
+
+				<button id="btnall17" class="btnall" onclick="toggleAll()">+ Expand all</button>
+				<div class="container">
+					<div class="expand1">
+						<div class="header-wrapper">
+							<h5 style="margin-top: 1.5rem;" id="make-it-easy-to-give-feedback">Make it easy to give
+								feedback</h5><a class="self-link" href="#make-it-easy-to-give-feedback"
+								aria-label="Permalink for this Section"></a>
+						</div>
+						<button id="btn-div75" class="btn" onclick="toggleDiv('div75')">+ Expand</button>
+					</div>
+					<div id="div75" class="collapse" style="margin-left: 20px;">
+						<p><strong>Prototype - content not yet added</strong></p>
+					</div>
+				</div>
+
+			</section>
+		</section>
+
+
+
+	</section>
+
+	<br>
+	<div style="border-bottom: 1.5px solid #000000"></div>
+
+	<div>
+		<p>Jump to:
+			<a href="#how-to-use-this-document"><button>Contents</button></a>
+			<a href="#how-to-use-this-document"><button>How to use this document</button></a>
+			<a href="#know-the-user"><button>Know the user</button></a>
+			<a href="#design-and-build"><button>Design &amp; build</button></a>
+		</p>
+	</div>
+
+	<section class="appendix" id="appendix">
+		<div class="header-wrapper">
+			<h2 id="a-appendix"><bdi class="secno">A. </bdi>Appendix</h2><a class="self-link" href="#appendix"
+				aria-label="Permalink for Appendix A."></a>
+		</div>
+
+		<p>This is just a prototype for user testing! The current document is available at <a
+				href="w3.org/TR/coga-usable">w3.org/TR/coga-usable</a>. In the real
+			document, the appendix will also direct the reader to non-normative resources, details about authorship,
+			etc.
+		</p>
+	</section>
+
+
+
+
+
+
+
+	<script>
+		// <![CDATA[  <-- For SVG support
+		if ('WebSocket' in window) {
+			(function () {
+				function refreshCSS() {
+					var sheets = [].slice.call(document.getElementsByTagName("link"));
+					var head = document.getElementsByTagName("head")[0];
+					for (var i = 0; i < sheets.length; ++i) {
+						var elem = sheets[i];
+						var parent = elem.parentElement || head;
+						parent.removeChild(elem);
+						var rel = elem.rel;
+						if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+							var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+							elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+						}
+						parent.appendChild(elem);
+					}
+				}
+				var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+				var address = protocol + window.location.host + window.location.pathname + '/ws';
+				var socket = new WebSocket(address);
+				socket.onmessage = function (msg) {
+					if (msg.data == 'reload') window.location.reload();
+					else if (msg.data == 'refreshcss') refreshCSS();
+				};
+				if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+					console.log('Live reload enabled.');
+					sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+				}
+			})();
+		}
+		else {
+			console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+		}
+		// ]]>
+	</script>
+
+
+	<p role="navigation" id="back-to-top">
+		<a href="#title"><abbr title="Back to Top">↑</abbr></a>
+	</p>
+	<script id="respec-dfn-panel">(() => {
+			// @ts-check
+			if (document.respec) {
+				document.respec.ready.then(setupPanel);
+			} else {
+				setupPanel();
+			}
+
+			function setupPanel() {
+				const listener = panelListener();
+				document.body.addEventListener("keydown", listener);
+				document.body.addEventListener("click", listener);
+			}
+
+			function panelListener() {
+				/** @type {HTMLElement} */
+				let panel = null;
+				return event => {
+					const { target, type } = event;
+
+					if (!(target instanceof HTMLElement)) return;
+
+					// For keys, we only care about Enter key to activate the panel
+					// otherwise it's activated via a click.
+					if (type === "keydown" && event.key !== "Enter") return;
+
+					const action = deriveAction(event);
+
+					switch (action) {
+						case "show": {
+							hidePanel(panel);
+							/** @type {HTMLElement} */
+							const dfn = target.closest("dfn, .index-term");
+							panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+							const coords = deriveCoordinates(event);
+							displayPanel(dfn, panel, coords);
+							break;
+						}
+						case "dock": {
+							panel.style.left = null;
+							panel.style.top = null;
+							panel.classList.add("docked");
+							break;
+						}
+						case "hide": {
+							hidePanel(panel);
+							panel = null;
+							break;
+						}
+					}
+				};
+			}
+
+			/**
+			 * @param {MouseEvent|KeyboardEvent} event
+			 */
+			function deriveCoordinates(event) {
+				const target = /** @type HTMLElement */ (event.target);
+
+				// We prevent synthetic AT clicks from putting
+				// the dialog in a weird place. The AT events sometimes
+				// lack coordinates, so they have clientX/Y = 0
+				const rect = target.getBoundingClientRect();
+				if (
+					event instanceof MouseEvent &&
+					event.clientX >= rect.left &&
+					event.clientY >= rect.top
+				) {
+					// The event probably happened inside the bounding rect...
+					return { x: event.clientX, y: event.clientY };
+				}
+
+				// Offset to the middle of the element
+				const x = rect.x + rect.width / 2;
+				// Placed at the bottom of the element
+				const y = rect.y + rect.height;
+				return { x, y };
+			}
+
+			/**
+			 * @param {Event} event
+			 */
+			function deriveAction(event) {
+				const target = /** @type {HTMLElement} */ (event.target);
+				const hitALink = !!target.closest("a");
+				if (target.closest("dfn:not([data-cite]), .index-term")) {
+					return hitALink ? "none" : "show";
+				}
+				if (target.closest(".dfn-panel")) {
+					if (hitALink) {
+						return target.classList.contains("self-link") ? "hide" : "dock";
+					}
+					const panel = target.closest(".dfn-panel");
+					return panel.classList.contains("docked") ? "hide" : "none";
+				}
+				if (document.querySelector(".dfn-panel:not([hidden])")) {
+					return "hide";
+				}
+				return "none";
+			}
+
+			/**
+			 * @param {HTMLElement} dfn
+			 * @param {HTMLElement} panel
+			 * @param {{ x: number, y: number }} clickPosition
+			 */
+			function displayPanel(dfn, panel, { x, y }) {
+				panel.hidden = false;
+				// distance (px) between edge of panel and the pointing triangle (caret)
+				const MARGIN = 20;
+
+				const dfnRects = dfn.getClientRects();
+				// Find the `top` offset when the `dfn` can be spread across multiple lines
+				let closestTop = 0;
+				let minDiff = Infinity;
+				for (const rect of dfnRects) {
+					const { top, bottom } = rect;
+					const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+					if (diffFromClickY < minDiff) {
+						minDiff = diffFromClickY;
+						closestTop = top;
+					}
+				}
+
+				const top = window.scrollY + closestTop + dfnRects[0].height;
+				const left = x - MARGIN;
+				panel.style.left = `${left}px`;
+				panel.style.top = `${top}px`;
+
+				// Find if the panel is flowing out of the window
+				const panelRect = panel.getBoundingClientRect();
+				const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+				if (panelRect.right > SCREEN_WIDTH) {
+					const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+					const newCaretOffset = left - newLeft;
+					panel.style.left = `${newLeft}px`;
+					/** @type {HTMLElement} */
+					const caret = panel.querySelector(".caret");
+					caret.style.left = `${newCaretOffset}px`;
+				}
+
+				// As it's a dialog, we trap focus.
+				// TODO: when <dialog> becomes a implemented, we should really
+				// use that.
+				trapFocus(panel, dfn);
+			}
+
+			/**
+			 * @param {HTMLElement} panel
+			 * @param {HTMLElement} dfn
+			 * @returns
+			 */
+			function trapFocus(panel, dfn) {
+				/** @type NodeListOf<HTMLAnchorElement> elements */
+				const anchors = panel.querySelectorAll("a[href]");
+				// No need to trap focus
+				if (!anchors.length) return;
+
+				// Move focus to first anchor element
+				const first = anchors.item(0);
+				first.focus();
+
+				const trapListener = createTrapListener(anchors, panel, dfn);
+				panel.addEventListener("keydown", trapListener);
+
+				// Hiding the panel releases the trap
+				const mo = new MutationObserver(records => {
+					const [record] = records;
+					const target = /** @type HTMLElement */ (record.target);
+					if (target.hidden) {
+						panel.removeEventListener("keydown", trapListener);
+						mo.disconnect();
+					}
+				});
+				mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+			}
+
+			/**
+			 *
+			 * @param {NodeListOf<HTMLAnchorElement>} anchors
+			 * @param {HTMLElement} panel
+			 * @param {HTMLElement} dfn
+			 * @returns
+			 */
+			function createTrapListener(anchors, panel, dfn) {
+				const lastIndex = anchors.length - 1;
+				let currentIndex = 0;
+				return event => {
+					switch (event.key) {
+						// Hitting "Tab" traps us in a nice loop around elements.
+						case "Tab": {
+							event.preventDefault();
+							currentIndex += event.shiftKey ? -1 : +1;
+							if (currentIndex < 0) {
+								currentIndex = lastIndex;
+							} else if (currentIndex > lastIndex) {
+								currentIndex = 0;
+							}
+							anchors.item(currentIndex).focus();
+							break;
+						}
+
+						// Hitting "Enter" on an anchor releases the trap.
+						case "Enter":
+							hidePanel(panel);
+							break;
+
+						// Hitting "Escape" returns focus to dfn.
+						case "Escape":
+							hidePanel(panel);
+							dfn.focus();
+							return;
+					}
+				};
+			}
+
+			/** @param {HTMLElement} panel */
+			function hidePanel(panel) {
+				if (!panel) return;
+				panel.hidden = true;
+				panel.classList.remove("docked");
+			}
+		})()</script>
+	<script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+</html>
