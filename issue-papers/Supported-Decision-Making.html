@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>Cognitive Accessibility Research Modules and Issue Papers</title>
+		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+		<script src="../common/biblio.js" class="remove"></script>
+		<script class="remove">
+	var respecConfig = {
+		// embed RDFa data in the output
+		trace:  true,
+		doRDFa: '1.1',
+		includePermalinks: true,
+		permalinkEdge:     true,
+		permalinkHide:     false,
+		tocIntroductory: true,
+		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+		specStatus:           "ED",
+		noRecTrack: true,
+		//crEnd:                "2012-04-30",
+		//perEnd:               "2013-07-23",
+		//publishDate:          "2013-08-22",
+		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+		
+		// the specifications short name, as in http://www.w3.org/TR/short-name/
+		shortName:            "coga-issue-papers",
+		
+
+		// if you wish the publication date to be other than today, set this
+		//publishDate:  "2017-05-16",
+		copyrightStart:  "2017",
+		license: "document",
+
+		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+		// and its maturity status
+		//previousPublishDate:  "",
+		//previousMaturity:  "",
+		//prevRecURI: "",
+		//previousDiffURI: "",
+
+		// if there a publicly available Editors Draft, this is the link
+		edDraftURI: "https://w3c.github.io/coga/issue-papers/",
+
+		// if this is a LCWD, uncomment and set the end of its review period
+		// lcEnd: "2012-02-21",
+
+		// editors, add as many as you like
+		// only "name" is required
+		editors: [
+			{
+				name: "Lisa Seeman",
+				
+				mailto: "lisa.seeman@zoho.com"
+			},
+		
+		],
+
+		// authors, add as many as you like. 
+		// This is optional, uncomment if you have authors as well as editors.
+		// only "name" is required. Same format as editors.
+
+		//authors:  [
+		//    { name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],
+
+		/*
+		alternateFormats: [
+			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.pdf', label: "PDF version" }
+		],
+		*/
+		
+		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+		
+		// name of the WG
+		wg:           ["Cognitive and Learning Disabilities Accessibility Task Force", "Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
+		
+		// URI of the public WG page
+		wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
+		
+		// name (with the @w3c.org) of the public mailing to which comments are due
+		wgPublicList: "public-coga-comments",
+		
+		// URI of the patent status for this WG, for Rec-track documents
+		// !!!! IMPORTANT !!!!
+		// This is important for Rec-track documents, do not copy a patent URI from a random
+		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+		// Team Contact.
+		wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
+		//maxTocLevel: 2,
+		
+		localBiblio: biblio,
+	};
+		</script>
+	</head>
+	<body>
+		<section id="abstract">
+<p class="ednote" title="Early draft"> This is an early draft. The task force intends to add more research and improved discussion. We also intend to make significant editorial changes to be in line with our style guide, including for citations.
+<br/>
+
+Please feel free to let us know any research we should be looking at, as well as other comments.
+</p>
+
+
+		<p>This document is part of set of papers that describe accessibility issues for users with various cognitive or learning disabilities and mental health issues. See <a href=" index.html"> cognitive or learning disabilities issue papers</a> for other modules.</p>
+			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
+		</section>		
+
+    
+		<section id="sotd">
+			<p>Feedback on any aspect of the document is accepted. For this publication, the Working Groups particularly seek feedback on the following questions:</p>
+			<ul>
+				<li>Are issues for the included user groups well covered?</li>
+				<li>Is there additional research we should look at?</li>
+				<li>Do the issue papers effectively bridge between research and priorities for new work?</li>
+				<li>Should additional user needs be addressed?</li>
+			</ul>
+			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-coga-comments@w3.org?subject=[Issue%20Papers]">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>16 February 2025</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
+		</section>
+	<section>
+			<h2>Introduction / Summary
+</h2>
+    <p>Supported Decision-Making (SDM) is a model that provides human or technological assistance to a person with a disability making a choice. Supported Decision-Making (SDM) allows individuals with disabilities to make choices about their own lives with support from people they choose.
+</p>
+<p>Features typically include:
+</p>
+<ul>
+    <li><strong>The user remains the decision-maker.<br/></strong>They are the one making the final choice, not the care giver or a legal guardian. Note that the user may sometimes elect to delegate decision making in limited circumstances.
+        </li>
+    <li><strong>Helpers and support  </strong>clarify and<strong> </strong>explain options, helping weigh risks and benefits, or assisting with communication (e.g. through AAC, easy-to-understand content, clear format, etc.).
+        </li>
+    <li><strong>The support is tailored to the user.<br></strong>With supported decision-making (SDM) a person should be able to customize the level and type of support they want and stay in control of their decisions. It respects the person's preferences, even if their decisions are unconventional.  For example, a person with dyscalculia may choose for unusual financial decisions to go via a support person.  They may change the support person at any time. 
+        </li>
+</ul>
+<p>Supported decision-making is often not provided on the internet or apps.</p>
+<p>This module describes the advantages and risks in providing SDM online. It includes suggestions so that supported digital decision-making could safely allow more people to participate in the digital world while maintaining dignity and autonomy.</p>
+<p>There are Technology and digital communication can enable SDM in two main areas:
+</p>
+<p>1 Enabling helpers to support online decisions, by sharing the process involved in high risk decisions</p>
+<p>2 Technology and digital communication can also take some of the role or  work involved in supported decision-making. For example, clearly presenting options in a table, and in plain language.  
+</p>
+<p>Disabilities that may require SDM include:</p>
+<ul>
+    <li>cognitive, developmental, intellectual, learning, and specific learning disabilities,</li>
+    <li>language and communication disorders,</li>
+    <li>neurodivergence,</li>
+    <li>traumatic brain injury,</li>
+    <li>age-related cognitive decline</li>
+    <li>mental health disabilities, and</li>
+    <li>temporary impairments that affect cognitive function, such as anxiety, illness, effects of medication, treatments such as chemotherapy, and others.</li>
+</ul>
+<p>Examples of mental health issues include: Bipolar disorder, low impulse control, psychotic disorders and others.</p>
+<p>The target audiences for this document include:</p>
+<ul>
+    <li>decision makers, policy makers, and advocates,</li>
+    <li>researchers,</li>
+    <li>engineers, and solution providers</li>
+    <li>people involved in making technical standards and policies, and</li>
+    <li>product designers, managers, designers, and engineers.</li>
+</ul>
+<p>The examples and strategies in this paper may apply to people who are or are not their own guardians. Having a legal guardian does not mean that a person is not able to or interested in using the internet. However, this module is about how to integrate support, often from a helper, whilst enabling the user to stay in control.</p>
+   		</section>
+
+	<section>
+    <h2>Current Examples of Supported Decision-Making (SDM) Online </h2>
+<p>Currently, there are some tools for supported decision-making online.</p>
+<p>These include:</p>
+<ul>
+    <li>Clear content where risks, benefits, and options are easy to understand and navigate (See <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a>)</li>
+    <li>Filters to avoid certain types of content that may cause emotional distress, anxiety, or trauma responses for the person using the system.</li>
+    <li>Personalization settings such as those that limit time on social media, and safety and privacy features. Note these can be on the operating system or application level.</li>
+    <li>Supportive tools that help organise and support people and the helpers. There can be apps or just a template. This is well developed in addiction recovery.</li>
+</ul>
+<p>Note, that we have not included parental controls, as such tools typically do not support the dignity and autonomy of adult users with disabilities. However they may be refactored in a way to be useful in the future.</p>
+<p><strong>Customizable Supported Decision-Making  </strong>is when the user can change the level of support. For example, the user can set the level, and only change the level of support. For example, the helper can view only and receive notifications about high risk. This allows the helper to give support, but not control.</p>
+<p>More intrusive setting might include :</p>
+<ul>
+    <li>Helper consent required for some transaction and/or activities.</li>
+    <li>The helper can view and postpone some activities.</li>
+</ul>
+<p>This may be appropriate for minor children.</p>
+<p><strong>Guardian/Guardianship: </strong>Guardianship is not the same as Supported Decision Making. Guardianship is a legal status where another person makes a decision on behalf of a person with a disability. There are different levels of guardianship. A person can have a guardian for only certain decisions, like healthcare or finances. <span style="color: rgb(64, 64, 64)">Note </span><span style="color: rgb(34, 34, 34)">that SDM tools  can be used by guardians to involve the individual in decisions  as much as possible. </span>
+</p>
+<p>Guardians are also called <strong>conservators, conservator, legal representative, or custodian. </strong>
+</p>
+<p>A website or process may include complex documents or require a signature. If a person has a guardian, the guardian will need to sign or review these documents on the person with disability’s behalf. If a person has a formal Supported Decision Making Agreement or benefit from supported decision making they may share these types of documents with their helpers or supporters, but will sign or review them themselves.</p>
+<p>In some cases guardianship may be too restrictive. When appropriate for an individual, shared decision making is increasingly used instead of guardianship. This model is becoming increasingly popular for those with cognitive disabilities.</p>
+<p><strong>Other legal Statuses: </strong>Other than guardians, a person might have a legal:</p>
+<ul>
+    <li><strong>Payee</strong>: People who may pay or receive payment on behalf of another person.</li>
+    <li><strong>Power of attorney</strong>: People who can make decisions on another person’s behalf in specific situations. For example, you may sign an agreement that says a person can make decisions for you when you are in the hospital.</li>
+    <li><strong>Shared signature</strong>: A person who provides a second signature for some types of decisions, such as large financial decisions.</li>
+</ul>
+<p><strong>Informed consent </strong>means a person has and understands all the information they need to make decisions. To give informed consent, a person:</p>
+<ul>
+    <li>Has access to the information about the situation,</li>
+    <li>understands they have a choice,</li>
+    <li>understands what they are choosing to do or not to do,</li>
+    <li>is of legal age of consent and is their own legal representative (guardian).</li>
+</ul>
+<p>Consent is also a term used when someone is agreeing on behalf of someone who is not their own legal representative.</p>
+<p><strong>Informed assent i</strong>s making sure a person who cannot make legal decisions themselves has and understands all the information they need for a decision their guardian is making on their behalf. To give informed assent, a person:</p>
+<ul>
+    <li>Understands the decision being made.</li>
+    <li>Agrees to the decision made by their legal representative.</li>
+</ul>
+<p>Informed assent can be required in many online situations such as:</p>
+<ul>
+    <li>Agreeing to have medical procedures,</li>
+    <li>signing contracts,</li>
+    <li>sharing personal data such as health history or financial information,</li>
+    <li>financial agreements,</li>
+    <li>participation in research studies.</li>
+</ul><h2>Current Examples of Supported Decision-Making (SDM) Online </h2>
+<p>Currently, there are some tools for supported decision-making online.</p>
+<p>These include:</p>
+<ul>
+    <li>Clear content where risks, benefits, and options are easy to understand and navigate. (See <a  href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a> for more information.)</li>
+    <li>Filters to avoid certain types of content that may cause emotional distress, anxiety, or trauma responses for the person using the system.</li>
+    <li>Personalization settings such as those that limit time on social media, and safety and privacy features. Note these can be on the operating system or application level.</li>
+    <li>Supportive tools that help organise and support people and the helpers. There can be apps or just a template. This is well developed in addiction recovery.</li>
+</ul>
+<p>Note, that we have not included parental controls, as such tools typically do not support the dignity and autonomy of adult users with disabilities. However they may be refactored in a way to be useful in the future.</p>
+<p><strong>Customizable Supported Decision-Making  </strong>is when the user can change the level of support. For example, the user can set the level, and only change the level of support. For example, the helper can view only and receive notifications about high risk. This allows the helper to give support, but not control.</p>
+<p>More intrusive setting might include :</p>
+<ul>
+    <li>Helper consent required for some transaction and/or activities.</li>
+    <li>The helper can view and postpone some activities.</li>
+</ul>
+<p>This may be appropriate for minor children.</p>
+<p><strong>Guardian/Guardianship: </strong>Guardianship is not the same as Supported Decision Making. Guardianship is a legal status where another person makes a decision on behalf of a person with a disability. There are different levels of guardianship. A person can have a guardian for only certain decisions, like healthcare or finances. <span style="color: rgb(64, 64, 64)">Note </span><span style="color: rgb(34, 34, 34)">that SDM tools  can be used by guardians to involve the individual in decisions  as much as possible. </span>
+</p>
+<p>Guardians are also called <strong>conservators, conservator, legal representative, or custodian. </strong>
+</p>
+<p>A website or process may include complex documents or require a signature. If a person has a guardian, the guardian will need to sign or review these documents on the person with disability’s behalf. If a person has a formal Supported Decision Making Agreement or benefit from supported decision making they may share these types of documents with their helpers or supporters, but will sign or review them themselves.</p>
+<p>In some cases guardianship may be too restrictive. When appropriate for an individual, shared decision making is increasingly used instead of guardianship. This model is becoming increasingly popular for those with cognitive disabilities.</p>
+<p><strong>Other legal Statuses: </strong>Other than guardians, a person might have a legal:</p>
+<ul>
+    <li><strong>Payee</strong>: People who may pay or receive payment on behalf of another person.</li>
+    <li><strong>Power of attorney</strong>: People who can make decisions on another person’s behalf in specific situations. For example, you may sign an agreement that says a person can make decisions for you when you are in the hospital.</li>
+    <li><strong>Shared signature</strong>: A person who provides a second signature for some types of decisions, such as large financial decisions.</li>
+</ul>
+<p><strong>Informed consent </strong>means a person has and understands all the information they need to make decisions. To give informed consent, a person:</p>
+<ul>
+    <li>Has access to the information about the situation,</li>
+    <li>understands they have a choice,</li>
+    <li>understands what they are choosing to do or not to do,</li>
+    <li>is of legal age of consent and is their own legal representative (guardian).</li>
+</ul>
+<p>Consent is also a term used when someone is agreeing on behalf of someone who is not their own legal representative.</p>
+<p><strong>Informed assent</strong> is making sure a person who cannot make legal decisions themselves has and understands all the information they need for a decision their guardian is making on their behalf. To give informed assent, a person:</p>
+<ul>
+    <li>Understands the decision being made, or</li>
+    <li>agrees that the decision is made by their legal representative.</li>
+</ul>
+<p>Informed assent can be required in many online situations such as:</p>
+<ul>
+    <li>Agreeing to have medical procedures,</li>
+    <li>signing contracts,</li>
+    <li>sharing personal data such as health history or financial information, </li>
+    <li>financial agreements, and </li>
+    <li>participation in research studies.</li>
+</ul>
+	</section>
+
+
+    
+	<section>
+	</section>
+    
+	<section>
+	</section>
+    
+	<section>
+	</section>
+    
+	<section>
+	</section>
+    
+	<section>
+	</section>
+    
+	<section>
+	</section>
+    
+	<section>
+	</section>
+  </body>
+</html>
+     	
