@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head><meta charset="utf-8"/>
-		<title>Cognitive Accessibility Issue Papers: Technology-Assisted Indoor Navigation and Wayfindings</title>
+		<title>Cognitive Accessibility Research Modules - Assisted Indoor Navigation / Wayfinding</title>
 		
 		
 	<meta name="description" content="Issues for users with cognitive disabilities using technology assisted indoor navigation and wayfinding."/>
@@ -27,209 +27,339 @@
 	 
 	 
  <section id="abstract">
-			<p class="ednote" title="Early draft">This is an early draft. The task force intends to add more research and improved discussion. We also intend to make significant editorial changes to be in line with our style guide, including for citations.
-<br/>
+	 <p>Technology-assisted navigation through indoor spaces, also known as wayfinding, is often extremely helpful for people who require cognitive accessibility. However, it can create a number of cognitive accessibility issues for people with disabilities.</p>
+<p>
+    This module explores:</p>
+<ul>
+    <li>
+        explores cognitive accessibility issues that may arise when using indoor navigation / wayfinding,
+    </li>
+    <li>
+        key user needs and ways to address these barriers, and
+    </li>
+    <li>
+        suggests solutions and areas for further research.
+    </li>
+</ul>
+This module is intended for
+<ul>
+    <li>
+        researchers,
+    </li>
+    <li>
+        policy makers, and
+    </li>
+    <li>
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
+    </li>
+</ul>
+<p>This document is part of a set of related informative publications from the <a  href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint Task Force of the <a  href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a  href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a  href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
 
-Please feel free to let us know any research we should be looking at, as well as other comments.
-</p>
-
-<p class="ednote" >Original Github version is at <a href="https://github.com/w3c/coga/blob/main/issue-papers/wayfinding-indoors.html">wayfinding-indoors</a></p>
-			<p>This document is part of set of papers that describe accessibility issues for users with various cognitive or learning disabilities and mental health issues. See <a href=" index.html"> cognitive or learning disabilities issue papers</a> for other modules.</p>
-			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
-		</section>
+				</section>
 		
 <section id="sotd">
-			<p>Feedback on any aspect of the document is welcome. The Working Groups particularly seeks feedback on the following questions:</p>
-			<ul>
-				<li>Are issues for the included user groups well covered?</li>
-				<li>Do the issue papers effectively bridge between research and priorities for new work?</li>
-				<li>Should additional user groups should be addressed?</li>
-			</ul>
-			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. You can also send an email to <a href="mailto:public-coga-comments@w3.org?subject=[Issue%20Papers]">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>16 July 2024</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
-		</section>
- 
-<section><h2>Introduction </h2>
-
-<p>This document is an issue paper about technology-assisted navigation through indoor spaces, also known as wayfinding, for people with cognitive and learning disabilities. This paper includes discussion on geolocation and directions from place to place. Wayfinding refers to the ability to navigate to a desired location and back again. Wayfinding means people can orient themselves, explore, and navigate through buildings such as museums, hospitals, airports, and public transportation stations. It is separate from outdoor navigation, such as via global positioning systems (GPS), primarily because GPS does not function inside buildings. See [reference and link to GPS navigation issue paper] for more on outdoor navigation.</p>
-<p>An example use case would be: </p>
+	<p>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of this technical report can be found in the <a  href="https://www.w3.org/TR/">W3C technical reports index</a> at <a  href="https://www.w3.org/TR/">https://www.w3.org/TR/</a>.</p>
+<p>This is an early draft. The Task Force intends to add more research and improved discussion.</p>
+<p>Feedback on any aspect of the document is accepted. For this publication, the Working Groups particularly seek feedback on the following questions:</p>
 <ul>
-<li>Upon entering a large hospital with multiple in-patient and out-patient departments, a user must navigate to their primary care appointment. The user enters their destination into a digital kiosk at the entrance and receives customized directions, as well as information on how to access a public webpage with an adaptive 3-D map from their smartphone.  The webpage that hosts the map also contains information about different areas of the hospital and what services they provide as well as adjustable preferences (based on Upadhyay et al, 2022)</li>
-<li>A user constructs a grocery list by identifying the aisle number and location of each item and then ordering their list to move through the store with clear directions from one item to the next (based on Antonakos, Giordani, and Ashton-Miller, 2004). </li>
-<li>A user is planning a trip that has a short layover in a large, busy airport. The user is able to utilize the airport’s wayfinding app to plot out their connection gates with an estimated travel time (based on National Academies of Sciences, Engineering, and Medicine, 2017). </li></ul>
-	</section>
- 
-<section><h2>Challenges for people with cognitive disabilities</h2>
+    <li>
+        Are issues for the included user groups well covered?
+    </li>
+    <li>
+        Is there additional research we should look at?
+    </li>
+    <li>
+        Does this issue paper effectively bridge between research and priorities for new work?
+    </li>
+    <li>
+        Should additional user needs be addressed?
+    </li>
+</ul>
+<p>To comment, <a  href="https://github.com/w3c/coga/issues/new">file an issue in the W3C coga GitHub repository</a>. If this is not feasible, send email to <a  href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a  href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>16 February 2026</strong>. In-progress updates to the document may be viewed in the <a  href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
+<p>This document was published by the <a  href="https://www.w3.org/WAI/APA/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a  href="https://www.w3.org/WAI/GL/">Accessible Platform Architectures Working Group</a>, and the Accessibility Guidelines Working Group as an Editor's Draft.</p>
+
+<p>This document was produced by groups operating under the <a  href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>. The group does not expect this document to become a W3C Recommendation. W3C maintains a <a  href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a  href="https://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a>, and a public list of any patent disclosures (Accessibility Guidelines Working Group) made in connection with the deliverables of each group; these pages also include instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains <a  href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a> must disclose the information in accordance with <a  href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the W3C Patent Policy</a>.</p>
+<p>This document is governed by the <a  href="https://www.w3.org/2019/Process-20190301/">1 March 2019 W3C Process Document</a>.</p>
+
+				</section>
+ <section>
+	 <h2>Introduction </h2>
+
+
+<p>
+    This module looks at cognitive accessibility issues that may arise when using technology-assisted navigation through indoor spaces, also known as wayfinding. This paper includes discussion on geolocation and directions from place to place. Wayfinding refers to the ability to navigate to a desired location and back again. Wayfinding means people can orient themselves, explore, and navigate through buildings such as museums, hospitals, airports, and public transportation stations. Wayfinding is separate from outdoor navigation, such as via global positioning systems (GPS), primarily because GPS does not function inside buildings.</p>
+<p>This issue paper addresses technology-assisted navigation, or wayfinding, within indoor environments for people with disabilities that require cognitive accessibility support. It explores concepts such as geolocation and directional guidance from one point to another.</p>
+<p>Wayfinding, in this context, refers to the ability to successfully navigate to a desired location and return. This encompasses orienting oneself, exploring, and moving through various indoor spaces like museums, hospitals, airports, and public transportation hubs.</p>
+<p>An example use case would be:</p>
+<ul>
+    <li>
+        Upon entering a large hospital with multiple in-patient and out-patient departments, a user must navigate to their primary care appointment. The user enters their destination into a digital kiosk at the entrance and receives customized directions. In addition, they receive information on how to access a public webpage with an adaptive 3-D map from their smartphone. The webpage that hosts the map also contains information about different areas of the hospital and what services they provide as well as adjustable preferences [RM-Upadhyay1]
+    </li>
+    <li>
+        A user constructs a grocery list by identifying the aisle number and location of each item and then ordering their list to move through the store with clear directions from one item to the next [RM-Antonakos1].
+    </li>
+    <li>
+        A user is planning a trip that has a short layover in a large, busy airport. The user is able to utilize the airport’s wayfinding app to plot out their connection gates with an estimated travel time [RM-Harding1].
+    </li>
+</ul></section>
+ <section>
+<h2>Challenges for people with disabilities that require cognitive accessibility support</h2>
 <p>Wayfinding can produce a wide range of challenges for people with cognitive disabilities. Not all people with cognitive abilities will have difficulties with wayfinding. Some people may experience temporary cognitive issues with wayfinding due medication side-effects, mental health status, or other factors. High demands to cognitive load, negative experiences in wayfinding, and interruptions can impact both the cognitive and physical energy a person can put towards wayfinding. Issues with wayfinding can occur for people with impairments including those that impact:</p>
 <ul>
-<li>Memory;</li>
-<li>Executive function;</li>
-<li>Attention;</li>
-<li>Visuo-Spatial function;</li>
-<li>Language</li>
-<li>Perception processing/interpretation; and/or</li>
-<li>Knowledge acquisition, retention, or recall.</li></ul>
-
- 
-<section>
+    <li>
+        memory,
+    </li>
+    <li>
+        executive function (the brain’s ability to plan, focus, remember, and manage tasks and emotions),
+    </li>
+    <li>
+        attention,
+    </li>
+    <li>
+        visuo-spatial function,
+    </li>
+    <li>
+        language
+    </li>
+    <li>
+        perception processing/interpretation, and/or
+    </li>
+    <li>
+        knowledge acquisition, retention, or recall.
+    </li>
+</ul>
 <h3>Memory</h3>
-<p>People with cognitive disabilities that affect memory may have to:</p>
+<p>People with disabilities that require cognitive accessibility support that affect memory may have to:</p>
 <ul>
-<li>recall where they have been to orient themselves to where they are (spatial awareness);</li>
-<li>review important landmarks multiple times; </li>
-<li>review the name/address/room number of the destination multiple times;</li>
-<li>review a proposed route multiple times;</li>
-<li>repeat aloud or otherwise reiterate a route multiple times; and/or</li>
-<li>return to reviewing parts of a route.</li></ul>
-	</section>
- 
-<section>
+    <li>
+        recall where they have been to orient themselves to where they are (spatial awareness),
+    </li>
+    <li>
+        review important landmarks multiple times,
+    </li>
+    <li>
+        review the name/address/room number of the destination multiple times,
+    </li>
+    <li>
+        review a proposed route multiple times,
+    </li>
+    <li>
+        repeat aloud or otherwise reiterate a route multiple times, and/or
+    </li>
+    <li>
+        return to reviewing parts of a route.
+    </li>
+</ul>
 <h3>Executive function</h3>
-<p>People with cognitive disabilities that affect executive function may have difficulty:</p>
+<p>People with disabilities that require cognitive accessibility support that affect executive function may have difficulty:</p>
 <ul>
-<li>sufficiently processing/understanding proposed routes;</li>
-<li>understanding part of a route if they did not understand the part that preceded it; </li>
-<li>planning how to follow a proposed route;</li>
-<li>reorienting themselves after having their planned route interrupted; and/or</li>
-<li>having a sense of spatial visualization and awareness (where a person is and wants to go).</li></ul>
-	</section>
- 
-<section>
+    <li>
+        sufficiently processing/understanding proposed routes,
+    </li>
+    <li>
+        understanding part of a route if they did not understand the part that preceded it,
+    </li>
+    <li>
+        planning how to follow a proposed route,
+    </li>
+    <li>
+        reorienting themselves after having their planned route interrupted, and/or
+    </li>
+    <li>
+        having a sense of spatial visualization and awareness (where a person is and wants to go).
+    </li>
+</ul>
 <h3>Attention</h3>
-<p>People with cognitive disabilities that affect attention may:</p>
+<p>People with disabilities that require cognitive accessibility support that affect attention may:</p>
 <ul>
-<li>Miss important instructions, clues, and relevant details; and/or</li>
-<li>Be significantly distracted by stimuli occurring around them.</li>
-<li>Have difficulty sorting relevant and extraneous details on a cluttered interface.</li>
-<li>lose focus after interruptions, and struggle to restore context  </li></ul>
-	</section>
- 
-<section>
+    <li>
+        miss important instructions, clues, and relevant details,
+    </li>
+    <li>
+        be significantly distracted by stimuli occurring around them,
+    </li>
+    <li>
+        have difficulty sorting relevant and extraneous details on a cluttered interface, and/or
+    </li>
+    <li>
+        lose focus after interruptions, and struggle to restore context.
+    </li>
+</ul>
 <h3>Visuo-Spatial</h3>
-<p>People with cognitive disabilities that affect visuo-spatial function may have difficulty:</p>
+<p>People with disabilities that require cognitive accessibility support that affect visuo-spatial function may have difficulty:</p>
 <ul>
-<li>Constructing a mental map. </li>
-<li>Orienting or reorienting themselves.</li>
-<li>Wayfinding without detailed directions presented with multiple dimensions (e.g. text, landmark navigation).</li></ul>
-	</section>
- 
-<section>
+    <li>
+        constructing a mental map,
+    </li>
+    <li>
+        orienting or reorienting themselves, and/or
+    </li>
+    <li>
+        wayfinding without detailed directions presented with multiple dimensions (e.g. text, landmark navigation).
+    </li>
+</ul>
 <h3>Language</h3>
-<p>People with cognitive disabilities that affect language may not understand a proposed route if it:</p>
+<p>People with disabilities that require cognitive accessibility support that affect language may not understand a proposed route if it:</p>
 <ul>
-<li>Uses specialized, complex, or unfamiliar vocabulary; </li>
-<li>Is presented in a non-native language;</li>
-<li>Is only presented using written text</li></ul>
-<p>People with cognitive disabilities may not be able to enter their desired destination on a wayfinding aid if they must write and read to do so. </p>
-	</section>
- 
-<section>
+    <li>
+        uses specialized, complex, or unfamiliar vocabulary,
+    </li>
+    <li>
+        is presented in a non-native language, and/or
+    </li>
+    <li>
+        is only presented using written text.
+    </li>
+</ul>
+<p>People with cognitive disabilities may not be able to enter their desired destination on a wayfinding aid if they must write and read to do so.</p>
 <h3>Perception Processing/Interpretation</h3>
-<p>Many people with cognitive disabilities may have difficulty:</p>
+<p>Many people with disabilities that require cognitive accessibility support may have difficulty:</p>
 <ul>
-<li>understanding instructions that are not literal and presented plainly; and/or</li>
-<li>comprehending instructions sufficiently to adequately follow them.</li>
-<li>understanding abstract representations such as maps or satellite images. </li>
-<li>differentiating left and right.</li>
-<li>Orienting themselves in a space.</li>
-<li>Estimating distances presented in meters or feet.</li></ul>
-	</section>
- 
-<section>
+    <li>
+        understanding instructions that are not literal and presented plainly,
+    </li>
+    <li>
+        comprehending instructions sufficiently to adequately follow them,
+    </li>
+    <li>
+        understanding abstract representations such as maps or satellite images,
+    </li>
+    <li>
+        differentiating left and right,
+    </li>
+    <li>
+        orienting themselves in a space, and/or
+    </li>
+    <li>
+        estimating distances presented in meters or feet.
+    </li>
+</ul>
 <h3>Knowledge Acquisition, Retention, or Recall</h3>
 <p>Some people with cognitive disabilities that impact knowledge acquisition, retention, and recall may not be able to understand a proposed route if it:</p>
 <ul>
-<li>Uses unfamiliar navigation symbols and terminology;</li>
-<li>Necessary background concepts are not explained plainly.</li></ul>
-	</section>
-	</section>
- 
-<section>
+    <li>
+        uses unfamiliar navigation symbols and terminology, and/or
+    </li>
+    <li>
+        necessary background concepts are not explained plainly.
+    </li>
+</ul></section>
+ <section>
 <h2>Proposed Solutions Based on Current Research</h2>
+<h3>Inform user of time to destination up front</h3>
+<ul>
+    <li>
+        Provide real-time information about time to travel to destinations along any available routes.
+    </li>
+</ul>
+<h3>Integrate landmark-based navigation </h3>
+<ul>
+    <li>
+        Maps and directions should integrate easily recognizable landmarks that provide additional help with wayfinding. These should integrate photographs of these landmarks rather than abstract representations, birds-eye view or reliance on cardinal (north / south) or body-relative (left and right) directions. Where possible, allow users to customize routes with their own landmarks.
+    </li>
+</ul>
+<h3>Include both digital and environmental solutions</h3>
+<ul>
+    <li>
+        Include physical wayfinding aids (e.g. signs, directional arrows, color-coded pathways) as well as digital aids.
+    </li>
+</ul>
+<h3>Provide multiple methods for accessing directions </h3>
+<ul>
+    <li>
+        <strong>For example, provide step-by-step directions that are provided in text,audio/video, and a map with a directional overlay such as an arrow that also provides spoken directions. </strong>
+       
+    </li>
+</ul>
+<h3>Present directions in smallest steps possible </h3>
+<ul>
+    <li>
+        <strong>Each step-by-step direction should be a single action (i.e. continue straight; turn left, etc). </strong>
+       
+    </li>
+    <li>
+        Avoid providing too much information at one time.
+    </li>
+</ul>
+<h3>Provide real-time directions</h3>
+<ul>
+    <li>
+        Provide each step in the moment it is needed with sufficient time for the user to react.
+    </li>
+</ul>
+<h3>Provide textual information in clear, concrete language</h3>
+<ul>
+    <li>
+        Use clear language for all written or verbal instructions.
+    </li>
+    <li>
+        Avoid abstract, complex, or specialized language in directions and guidance.
+    </li>
+</ul>
+<h3>Provide photographs of decision-points </h3>
+<ul>
+    <li>
+        <strong>When a user needs to make an adjustment in their course (i.e. turning), providing a user-level photograph of that point in the route.</strong>
+       
+    </li>
+    <li>
+        Avoid using more than one type of visual representation (e.g. do not use both photographs <em>and </em>drawings)
+    </li>
+</ul>
+<h3>Avoid changing routes without user approval </h3>
+<ul>
+    <li>
+        <strong>Proposed route changes should only be implemented if the user is made aware and approves. Users should be made aware of differences in the proposed route such as more steps.</strong>
+       
+    </li>
+</ul>
+<h3>Provide methods to always access directions </h3>
+<ul>
+    <li>
+        <strong>For example, instead of relying only on static kiosks, have methods for users to be able to revisit directions at any time, especially while they are moving through the route.  Include ways to personalize the indication (i.e. rather than a static map, include adaptive instructions that change as the person re-orients themselves). Due to the complexity of access, QR codes are not recommended. </strong>
+       
+    </li>
+</ul>
+<h3>Allow personalization of interface</h3>
+<ul>
+    <li>
+        Users should have control over options like color contrast, text size and font, and sound. This limits distractions and/or increases usability based on their individual needs.
+    </li>
+</ul>
+<h3>Allow multiple modes of input</h3>
+<ul>
+    <li>
+        Users should be able to input their desired destination in multiple ways, including typing, speech, and selecting on a map.
+    </li>
+</ul>
+<h3>Allow personalization of terms including directions and measurements </h3>
+<ul>
+    <li>
+        <strong>Allow users to customize key terms such as distance measurements. </strong>
+       
+    </li>
+</ul>
+<h3>Provide human back-up</h3>
+<ul>
+    <li>
+        <strong>Allow users to contact human support when wayfinding fails. For example, an interactive map of a hospital could have an option to call the front desk integrated into its interface. An additional off-line way to reverse course is also helpful,  if the wayfinding and general internet fails. Note this  could also be  a back up when no service is available to devices - in that case no option to call the front desk would be available.</strong>
+       
+    </li>
+</ul></section>
+ <section>
+<h2>Current Status of These Solutions</h2>
+<p>There has been some attention to indoor wayfinding for people with cognitive disabilities in the academic literature, and a number of prototypes assisting in wayfinding have been developed. While a small number of technologies for cognitive assistance in wayfinding are available on the market, most attention has been devoted to outdoor navigation or public transit. Determining a person’s location and obstacles indoors remains challenging, making technologies that provide accurate real-time location information difficult to develop. Some technologies currently being deployed to address these issues include Bluetooth beacons, magnetic fingerprints, WiFi fingerprints, RFID tags, ultra wideband (UWB), and ultrasound.</p>
 
-<section>
-<h3>Inform user of time to destination up front:</h3>
-<ul>
-<li>Provide real-time information about time to travel to destination along any available routes. </li></ul>
-	</section>
- 
-<section>
-<h3>Integrate landmark-based navigation: </h3>
-<ul>
-<li>Maps and directions should integrate easily recognizable landmarks that provide additional help with wayfinding and integrate photographs of these landmarks rather than abstract representations, birds-eye view or reliance on cardinal or body-relative (left and right) directions. Where possible, allow users to customize routes with their own landmarks. </li></ul>
-	</section>
- 
-<section>
-<h3>Include both digital and environmental solutions:</h3>
-<ul>
-<li>Include physical wayfinding aids (e.g. signs, directional arrows, color-coded pathways) as well as digital aids.</li></ul>
-	</section>
- 
-<section><h3>Provide multiple methods for accessing directions: </h3>
-<ul>
-<li>For example, provide step-by-step directions that are provided in a) text, b) audio/video, and c) a map with a directional overlay such as an arrow that also provides spoken directions. </li></ul>
-	</section>
- 
-<section><h3>Present directions in smallest steps possible: </h3>
-<ul>
-<li>Each step-by-step direction should be a single action (i.e. continue straight; turn left, etc). </li>
-<li>Avoid providing too much information at one time. </li></ul>
-	</section>
- 
-<section><h3>Provide real-time directions:</h3>
-<ul>
-<li>Provide each step in the moment it is needed with sufficient time for user to react. </li></ul>
-	</section>
- 
-<section><h3>Provide textual information in clear, concrete language:</h3>
-<ul>
-<li>Use clear language for all written or verbal instructions. </li>
-<li>Avoid abstract, complex, or specialized language in directions and guidance. </li></ul>
-	</section>
- 
-<section><h3>Provide photographs of decision-points: </h3>
-<ul>
-<li>When a user needs to make an adjustment in their course (i.e. turning), providing a user-level photograph of that point in the route.</li>
-<li>Avoid using more than one type of visual representation (e.g. do not use both photographs and drawings)</li></ul>
-	</section>
- 
-<section><h3>Avoid changing routes without user approval: </h3>
-<ul>
-<li>Proposed route changes should only be implemented if the user is made aware and approves. Users should be made aware of differences in the proposed route such as more steps.</li></ul>
-	</section>
- 
-<section><h3>Provide methods to always access directions: </h3>
-<ul>
-<li>For example, instead of relying only on static kiosks, have methods for users to be able to revisit directions at any time, especially while they are moving through the route.  Include ways to personalize the indication (i.e. rather than a static map, include adaptive instructions that change as the person re-orients themselves). Due to the complexity of access, QR codes are not recommended. </li></ul>
-	</section>
- 
-<section><h3>Allow personalization of interface:</h3>
-<ul>
-<li>Users should have control over options like color contrast, text size and font, and sound in order to limit distractions and/or increase usability based on their individual needs. </li></ul>
 </section>
- 
-<section>
-<h3>Allow multiple modes of input:</h3>
-<ul>
-<li>Users should be able to input their desired destination in multiple ways, including typing, speech, and selecting on a map. </li></ul>
-	</section>
- 
-<section><h3>Allow personalization of terms including directions and measurements: </h3>
-<ul>
-<li>Allow users to customize key terms such as distance measurements. </li></ul>
-	</section>
- 
-<section><h3>Provide human back-up: </h3>
-<ul>
-<li>Allow users to contact human support when wayfinding fails. For example, an interactive map of a hospital could have an option to call the front desk integrated into its interface.</li></ul>
-	</section>
- </section>
-
-<section><h2>Current Status of These Solutions</h2>
-<p>There has been some attention to indoor wayfinding for people with cognitive disabilities in the academic literature, and a number of prototypes assisting in wayfinding have been developed. While a small number of technologies for cognitive assistance in wayfinding are available on the market, most attention has been devoted to outdoor navigation or public transit. Determining a person’s location and obstacles indoors remains challenging, making technologies that provide accurate real-time location information difficult to develop. Some technologies currently being deployed to address these issues include Bluetooth beacons, magnetic fingerprints, WiFi fingerprints, RFID tags, ultra wideband (UWB), and ultrasound. </p>
- </section>
+	<section><h2>References</h2>
+ <p class="ednote" > Note that this section needs to be cleaned up and full citations will be added.</p>
+<p></p>
+<p>Most Citations are the row number in <a href="https://docs.google.com/spreadsheets/d/1eKNrofGubnpQE6mO-vxmI-1MW5nA2LDj0LxebREPRGA/edit?resourcekey#gid=1686096268">Mental Health Literature Review (Responses)</a></p>
+<p>Unless they have the letters RC  when they are the row from  <a href="https://docs.google.com/spreadsheets/d/1Cu_qVP1WBz2TbsrAjLbbeb55RAlJmu9kfHamriL1Ocs/edit#gid=1686096268">coga general research database </a></p>
+</section>
 
 <section>
-<h2> Research Sources </h2>
+<h2> Other Sources </h2>
 <p class="ednote">This section needs cleanup.</p>
 <ul>
 <li>BlindSquare - “Pioneering accessible navigation - indoors and outdoors. Know where you are, know where you're going, travel with confidence.”</li>
