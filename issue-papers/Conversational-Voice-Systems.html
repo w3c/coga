@@ -1,6 +1,7 @@
 <!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head><meta charset="utf-8"/>
-		<title>Cognitive Accessibility Issue Papers - Conversational Voice Systems</title>
+		<title>Cognitive Accessibility Issue Papers - Voice Systems and Conversational Interfaces
+</title>
 		
 		
 	<meta name="description" content="Issues for users with cognitive disabilities using conversational voice systems, including voice menu systems."/>
@@ -27,310 +28,450 @@
 	 
 	 
  <section id="abstract">
-<p class="ednote" title="Early draft"> This is an early draft. The task force intends to add more research and improved discussion. We also intend to make significant editorial changes to be in line with our style guide, including for citations.
-<br/>
-
-Please feel free to let us know any research we should be looking at, as well as other comments.
+<p>Voice systems and conversational interfaces can create a number of cognitive accessibility issues for people with disabilities. These technologies include artificial intelligence (AI) voice assistants, natural language processing (NLP) systems, voice menu systems, and interactive voice response (IVR) systems.
 </p>
+<p>This module explores:</p>
+<ul>
+    <li>
+        cognitive accessibility issues that may arise when using voice systems and conversational interfaces,
+    </li>
+    <li>
+        key user needs and ways to address these barriers, and
+    </li>
+    <li>
+        areas for further research.
+    </li>
+</ul>
+This module is intended for:
+<ul>
+    <li>
+        researchers,    </li>
+    <li>
+        policy makers, and
+    </li>
+    <li>
+     designers, content creators, and developers who want to have a more in-depth understanding of inclusion issues.
+    </li>
+</ul>
+<p>This document is part of a set of modules or papers that describe accessibility issues for users with various disabilities that impact cognitive accessibility. See <a href="https://raw.githack.com/w3c/coga/issue-papers-v2/issue-papers/index.html">cognitive or learning disabilities issue papers</a> for other modules.</p>
+<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of:</p>
+<ul>
+    <li>
+        <p>the <a  href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG), and</p>
+    </li>
+    <li>
+        <p>the <a  href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
+    </li>
+</ul>
 
-
-
-
-			<p>This document is part of set of papers that describe accessibility issues for users with various cognitive or learning disabilities and mental health issues. See <a href=" index.html"> cognitive or learning disabilities issue papers</a> for other modules.</p>
-			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
 		</section>
 		<section id="sotd">
-			<p>Feedback on any aspect of the document is welcome. The Working Groups particularly seeks feedback on the following questions:</p>
-			<ul>
-				<li>Are issues for the included user groups well covered?</li>
-				<li>Do the issue papers effectively bridge between research and priorities for new work?</li>
-				<li>Should additional user groups should be addressed?</li>
-			</ul>
-			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. You can also send an email to <a href="mailto:public-coga-comments@w3.org?subject=[Issue%20Papers]">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>16 July 2024</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
+			<p class="ednote"  Title = "Early Draft">This is an early draft. The task force intends to add more research and discussion and make editorial changes to comply with our style guide, including for citations. Please share your feedback, including any research we should consider adding to this document.</p>
+<p>This document is part of a set of modules or papers that describe accessibility issues for users with various disabilities that impact cognitive accessibility. See <a   href="https://raw.githack.com/w3c/coga/issue-papers-v2/issue-papers/index.html"> cognitive or learning disabilities issue papers </a> for other modules.</p>
+<p>This document is part of a set of related informative publications from the <a   href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/"> Cognitive and Learning Disabilities Accessibility Task Force </a> (COGA TF), a joint task force of:</p>
+<ul>
+    <li>
+        the <a   href="http://www.w3.org/WAI/APA/"> Accessible Platform Architectures Working Group </a> (APA WG), and
+    </li>
+    <li>
+        the <a   href="http://www.w3.org/WAI/GL/"> Accessibility Guidelines Working Group </a> (AG WG) of the <a   href="http://www.w3.org/WAI/"> Web Accessibility Initiative </a>.
+    </li>
+</ul>
+<p>Feedback on any aspect of the document is welcome. The APA and AG Working Groups particularly seek feedback on the following questions:</p>
+<ul>
+    <li>
+       Are issues for the included user groups well covered?
+    </li>
+    <li>
+        Does the issue paper effectively bridge between research and priorities for new work?
+    </li>
+    <li>
+       Should additional user groups be addressed?
+    </li>
+    <li>
+        Are there any more research papers we should consider adding to this document?
+    </li>
+</ul>
+<p>To comment, <a   href="https://github.com/w3c/coga/issues/new"> file an issue in the W3C coga GitHub repository </a>. You can also send an email to <a   href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a   href="http://lists.w3.org/Archives/Public/public-aria/"> comment archive </a>). Comments are requested by 16 February 2026. In-progress updates to the document may be viewed in the <a   href="http://w3c.github.io/coga/issue-papers/"> publicly visible editors' draft </a>.</p>
 		</section>
  
 		 <section><h2>Introduction </h2>
-<p>In this issue paper, we address issues for users with cognitive disabilities using conversational voice systems. Conversational voice systems, including voice menu systems and voice user interfaces, are systems with bi-directional communication in which a user:</p>
+			<p>This module looks at cognitive accessibility issues that may arise when using voice systems and conversational interfaces. These technologies involve bi-directional communication:</p>
 <ul>
- <li>Supplies a spoken prompt and receives a spoken response from the system</li>
- <li>Receives a spoken prompt from the system and supplies either a spoken or manual reply (for example, a button push)</li>
+    <li>
+        <p>The user speaks and the system talks back, or</p>
+    </li>
+    <li>
+        <p>The system speaks and the user answers by talking or pressing a button.</p>
+    </li>
 </ul>
-<p>Conversational Voice Systems may include:&nbsp;</p>
+<h4> Disabilities that may require cognitive accessibility support </h4>
+<p> Disabilities that may require cognitive accessibility support include:</p>
 <ul>
- <li>
- <strong>Voice Menu Systems</strong>
- used in telephone self-service applications that require the user to respond by pressing keys on a telephone keypad or verbally responding (or both).&nbsp;</li>
- <li>
-<strong>Voice User Interfaces</strong>
- (VUIs) or conversational interfaces such as Siri, Cortana, Amazon Alexa or Google Assistant.These systems use voice recognition and artificial intelligence to allow users to interact with them via spoken commands.&nbsp;&nbsp;</li>
+    <li>
+       cognitive, developmental, intellectual, learning, and specific learning disabilities,
+    </li>
+    <li>
+       language and communication disorders,
+    </li>
+    <li>
+        neurodivergence,
+    </li>
+    <li>
+        traumatic brain injury,
+    </li>
+    <li>
+        age-related cognitive decline,
+    </li>
+    <li>
+       mental health disabilities, and
+    </li>
+    <li>
+        temporary impairments that affect cognitive function, such as anxiety, illness, effects of medication, treatments such as chemotherapy, and others.
+    </li>
 </ul>
-<p>It is worth noting that many crucial systems integrate voice systems, including emergency notifications, healthcare scheduling, prescription refilling, and more. With this in mind, full accessibility needs to be supported.</p>
+<p>Examples of specific disabilities that may require cognitive accessibility support include attention deficit hyperactivity disorder (ADHD),  autism spectrum disorder, dyslexia, dyscalculia, mild cognitive impairment (MCI), Down syndrome, aphasia, and others. 
+</p>
+<p>Cognitive accessibility also supports benefit a broad range of users, including:</p>
+<ul>
+    <li>
+        people who may not be fluent in a language, and
+    </li>
+    <li>
+      people who may have different educational or cultural backgrounds.
+    </li>
+</ul>
+<h4> Voice systems and conversational interfaces </h4>
+<p>Voice systems and conversational interfaces may include:</p>
+<ul>
+    <li>
+        <strong>Voice Menu Systems</strong> in telephone self-service applications that require the user to respond by pressing keys or saying words. These systems are sometimes called  interactive voice response (IVR). 
+            </li>
+</ul>
+<ul>
+    <li>
+        <strong>Voice User Interfaces (VUIs)</strong> or conversational interfaces such as Amazon Alexa, Cortana, Google Assistant, or Siri. These interfaces tend to use voice recognition, natural language processing (NLP), and artificial intelligence (AI) to understand and respond to users.
+    </li>
+</ul>
+<p>It is worth noting that many crucial systems integrate voice systems and conversational interfaces, including emergency notifications, healthcare scheduling, prescription refilling, and more. With this in mind, full accessibility needs to be supported.</p>
 <p>An example use case of a voice system used in telephone self-service may be as follows:</p>
 <ul>
- <li>Upon dialing the number, the user may be asked "Press 1 for hours of operation, Press 2 to refill your prescription, press 3 to speak to the pharmacist.” The system then waits for a response.&nbsp;</li>
+    <li>
+      Upon dialing the number, the user may be asked: "Press 1 for hours of operation, press 2 to refill your prescription, press 3 to speak to the pharmacist.” The system then waits for a response.    </li>
 </ul>
-<p>An example of a use case for a voice user interface may be as follows:&nbsp;</p>
+<p>An example use case for a conversational interface may be as follows:</p>
 <ul>
- <li>The user says the activating phrase to begin an interaction with the VUI such as “Hello, [Name of System].”The user then asks, “What is the weather today?” The VUI provides a verbal response.&nbsp;</li>
+    <li>
+        The user says the activating phrase to begin an interaction with the VUI such as “Hello, [Name of System].” The user then asks, “What is the weather forecast for today?” The VUI provides a verbal response.
+    </li>
 </ul>
-<p>Voice systems are often implemented with the
- <a target="_blank" href="https://www.w3.org/TR/voicexml20/">
- <span style="color:rgb(17, 85, 204);">W3C VoiceXML 2.0
- </span>
- </a>standard and supporting standards from the
- <a target="_blank" href="https://www.w3.org/Voice/">
- <span style="color:rgb(17, 85, 204);">Voice Browser Working Group</span></a>.</p>
-<p>VoiceXML 2.0 has an appendix regarding accessibility that briefly discusses use by users with hearing and speech disabilities as well as&nbsp; WCAG and WAI specifications. Cognitive disability is mentioned once in regards to allowing users to control the length of time before time out. See
- <a target="_blank" href="https://www.w3.org/TR/voicexml20/#dmlAAccessibility">
- <span style="color:rgb(17, 85, 204);">VoiceXML2.0#accessibility</span>
- </a>
- for more.&nbsp;</p>
-<p>
-<strong>Do we need to include something about training AI for VUIs or is this covered elsewhere?</strong>
-</p></section>
+<p>Voice systems are often implemented with the <a   href="https://www.w3.org/TR/voicexml20/"> W3C VoiceXML 2.0 </a> [voicexml20] standard and supporting standards from the <a   href="https://www.w3.org/Voice/"> Voice Browser Working Group </a>. [VBWG]</p>
+<p>VoiceXML 2.0 has an appendix regarding accessibility that briefly discusses users with hearing and speech disabilities as well as WCAG and WAI specifications. Cognitive disabilities are mentioned once in a bullet about allowing users to control the length of time before a timeout. See <a   href="https://www.w3.org/TR/voicexml20/#dmlAAccessibility"> VoiceXML 2.0 </a> [voicexml20] Appendix H - Accessibility.</p>
+<p class="ednote">We are planning to expand this paper to include more information about challenges with internationalization and localization that users may encounter with voice systems and conversational interfaces.</p>
+ 
+</section>
  <section>
-<h2>Challenges for People with Cognitive Disabilities</h2>
-<p>Voice technology can create a number of challenges for people with cognitive disabilities, due to its heavy demands on memory and on the ability to understand and produce speech in real time. In particular, voice systems and VUIs can be inaccessible to people with cognitive disabilities that affect:&nbsp;</p>
+<h2>Challenges for People with Disabilities that Impact Cognitive Accessibility</h2>
+<p>Voice systems and conversational interfaces can create a number of cognitive accessibility barriers.<em> </em>These technologies can create challenges due to heavy demands on memory and on the ability to understand and produce speech in real time. In particular, voice systems and VUIs can be inaccessible to people with disabilities that affect:</p>
 <ul>
- <li>&nbsp;Memory</li>
- <li>Executive Function</li>
- <li>Reasoning</li>
- <li>Knowledge</li>
- <li>Processing Speed</li>
- <li>Attention</li>
- <li>Language and Auditory Perception</li>
- <li>Speech and Language Production</li>
- <li>Mental Health</li>
-</ul><section>
-<h3>Memory: Recalling and Responding to Prompts</h3>
-<p>
- <strong>General:
- </strong>The user needs to recall information needed to successfully interact with the system, such as activating phrases, as well as information presented by the system during the interaction</p>
-<p>
- <strong>Voice Menu Systems:
- </strong>Systems that rely on menus that present several choices at once may pose challenges for users with disabilities related to working memory. Such systems require users to hold multiple pieces of information, such as the number associated with an option, while processing the terms that follow.&nbsp; This is true of systems that require either a voice response or a key press.&nbsp;</p>
-<p>Extensive lists that require strong working memory may result in users with cognitive disabilities making the wrong selection. Holding a list of 5-7 items (which is often considered the standard amount to use in working memory) may be difficult for someone with cognitive impairment/ working memory impairment.&nbsp;</p>
-<p>
- <strong>Voice User Interfaces:
- </strong>For VUIs, users may be required to remember key phrases (such as activating phrases like “Hey Google”) in order to operate successfully. Users who may not be able to recall such phrases due to long-term memory impairments may not be able to operate the system.&nbsp;</p>
-</section>
-<section> 
-	<h3>Executive function: Deciding When to Respond&nbsp;</h3>
-<p>
- <strong>General:
- </strong>When interacting with a system, if a system response is too slow, a user with disabilities related to executive functioning may not know that their input has registered, and may press the key or speak again.&nbsp;</p>
-<p>
- <strong>Voice Menu Systems:
- </strong>The user needs to be able to decide when to act on a menu choice. If the user does not know how many options will be presented or if the system presents them too slowly, they may make an incorrect choice based on partial information.&nbsp;</p>
-</section>
-<section> <h3>Reasoning: Making the Correct Selection</h3>
-<p>
- <strong>Voice Menu Systems:
- </strong>The user may need to compare similar options such as "billing", "accounts," "sales" and decide which is the service that is best suited to solve the issue at hand. Without additional context or prior knowledge,the user is likely to select the wrong menu option.</p>
+    <li>
+          memory,</p>
+    </li>
+    <li>
+          executive function (the brain’s ability to plan, focus, remember, and manage tasks and emotions),  
+    </li>
+    <li>
+          reasoning,  
+    </li>
+    <li>
+          knowledge,  
+    </li>
+    <li>
+          processing speed.  
+    </li>
+    <li>
+          attention,  
+    </li>
+    <li>
+          language and auditory perception,  
+    </li>
+    <li>
+          speech and language production and comprehension, and  
+    </li>
+    <li>
+          mental health.  
+    </li>
+</ul>
+<h3> General Concerns </h3>
+<p>Voice systems and conversational interfaces depend on the users’ knowledge and abilities. Many groups fall outside the norm in these categories. In these cases, the system often fails.</p>
+<p><strong>Training and artificial intelligence (AI):</strong> User groups in this module's scope often have different speech patterns, vocabulary, impaired memory, executive function, and cognitive function.</p>
+<p>For the system to work well, it must be trained with a set of training content where different abilities and impairments are well represented. This includes long-term impairments such as mild cognitive impairment (MCI), learning disabilities, intellectual disabilities, and mood disorders, as well as temporary disabilities such as stress.</p>
+<p><strong>Requirements, user needs, and functional needs: </strong>Similarly, when teams use user needs and functional needs in the product lifecycle, they often focus on peers or groups with biases in terms of cognitive abilities. For example, university students are often used for focus groups, but often do not represent cognitive and speech issues associated with aging. It is essential to include user needs from a diverse perspective beyond neurotypical audiences (See <a   href="https://docs.google.com/document/d/1B1vCqlU1IF5UmqxhJAy8Khdi-kRQNPalVX8f3lCMr7w/edit?tab=t.0#heading=h.at0k2knwycsb"> User Story and User Needs </a>.)</p>
+<p><strong>Testing:</strong> It is also essential to test with a wide group of users with diverse cognitive abilities to determine whether the system actually works as intended. Watch for increased levels of frustration, errors, and worsening of the users’ mood.</p>
 
- </section>
-<section> 
-	<h3>Knowledge: Interpreting Responses</h3>
-<p>
- <strong>General: </strong>If responses produced by a system are not provided in clear and accessible language, the user may have difficulty interpreting them, meaning that even if the request is appropriately processed by the system, the response may be inaccessible to the user.&nbsp;</p>
-</section>
-<section> 
-	<h3>Processing Speed</h3>
-<p>
- <strong>General:
-</strong>Systems that time out may not give users with cognitive disabilities affecting processing speed sufficient time to interpret information and formulate a response. Advertisements and additional, unrequested information also increase the amount of processing required.</p>
-</section>
-<section> 
-	<h3>Attention: Making Correct Selections</h3>
-<p>
- <strong>Voice Menu Systems:
- </strong>The user needs to focus on the different options and select the correct one. Having long or multi-level spoken menus without written counterparts, inserting advertisements, or otherwise including additional, unrequested information may make it harder to retain attention for users with attention-related disabilities.&nbsp;</p>
-</section>
-<section> 
-	<h3>Language and Auditory Perception: Correctly Interpreting Spoken Information</h3>
-<p>
- <strong>General:
- </strong>The user needs to interpret the correct terms and match them to their needs within a certain time limit. This involves speech perception and language understanding: sounds of language are heard, interpreted and understood, within a given time.&nbsp;</p>
-<p>Users with disabilities related to language and auditory perception may make mistakes in interpretation due to auditory-only input.&nbsp;</p>
-</section>
-<section> 
-	<h3>Speech and Language Production: Responding to Voice and Speech Recognition Systems</h3>
-<p>
- <strong>General:
- </strong>The user needs to be able to formulate a spoken response to the prompt before the system "times out" and generates another prompt.&nbsp;</p>
-<p>Users who utilize assistive and augmentative communication devices (AAC) or speech-to-speech technologies may require additional time to respond before the system times out.&nbsp;</p>
-<p>In directed dialog systems the user only needs to be able to speak a word or short phrase. However, increasingly, natural language systems allow the user to describe their issue in their own words. While this feature is an advantage for some users because it does not require them to remember menu options, it can be problematic for users with disabilities that impact their ability to produce spontaneous speech, such as people with aphasia, or autistic people for whom stress may impact spoken communication.</p>
-<p>Speech recognition systems may not recognize and be responsive to inputs from users with disabilities that impact the intelligibility of their speech, such as people with Down syndrome.&nbsp;</p>
-<p>Users may not be able to interact with a system that requires a verbal input but does not recognize their speech.&nbsp;</p>
-</section>
-<section> 
-	<h3>Mental Health: Interacting with Conversational Voice Systems</h3>
-<p>
- <strong>General:
- </strong>Mental health, such as anxiety levels, may also impact a user’s ability to interact with a conversational voice system. High demands to cognitive load, negative experiences with conversational systems, and interruptions can exacerbate anxiety or frustration, and decrease a user’s ability to interact with a system.&nbsp;&nbsp;</p>
-</section>
-	 </section>
-<section>
- <h2>Proposed Solutions Based on Current Research</h2>
-<section>
- <h3>Ensure Human Backup is Available and Reachable</h3>
-<p>
- <strong>Voice Menu Systems:
- </strong>For users who are unable to use the automated system, it must be possible to reach a human through an easy transfer process (e.g., not by being directed to call another phone number).&nbsp;</p>
-<p>For telephone self-service systems, there should be a reserved digit for requesting a human operator. The most common digit used for this purpose is "0"; however, if another digit is already in widespread use in a particular country, then that digit should always be available to get to a human agent. Systems especially should not attempt to make it difficult for users to reach an agent through the use of complex digit combinations. This could be enforced by requiring implementations to not allow the reserved digit to mean anything other than going to an operator. Other digits similarly could be used for specific reserved functions, keeping in mind that too many reserved digits will be confusing and difficult to learn. Remembering more than one or two reserved digits may be problematic for some users, but repeated verbal recitals of the reserved digits will also be distracting.&nbsp;</p></section><section>
-<h3>Allow Users To Change Settings</h3>
-<p>User-specific settings can be used to customize the voice user interface, keeping in mind that the available mechanisms for invoking user-specific settings are minimal in a voice interface (speech or DTMF tones). If it is difficult to set user preferences, they won't be used. Setting preferences by natural language is the most natural ("slow down!") but is not currently very common. Examples of customization include:</p>
-<p>
- <strong>General:</strong>
-</p>
+<h3> Memory: Recalling and Responding to Prompts </h3>
+<p><strong>General: </strong>The user needs to recall information to successfully interact with the system, such as activating phrases, as well as information presented by the system during the interaction.</p>
+<p><strong>Voice Menu Systems: </strong>Menus that present several choices at once may pose challenges for users with disabilities related to working memory. Such systems require users to hold multiple pieces of information, such as the number associated with an option, while processing the terms that follow. This is true of systems that require either a voice response or a key press.</p>
+<p>Many designers assume that users can remember lists of about seven items. This assumes a typical working memory. People with impaired working memory can hold significantly fewer items simultaneously. As a result, they may not be able to use a system that requires them to compare items or remember numbers while processing words or directions.</p>
+<p>However, with a supportive design and prompts that reduce cognitive load, voice menus can be used even by people who can only hold two or three items in their working memories.</p>
+<p>For example, the instruction “to speak to a nurse, press 2” stands by itself and does not require remembering anything before or after. Pausing between “to speak to a nurse” and “press 2” gives users time to decide if they want to speak to a nurse before they are given the rest of the instructions. The order of the instruction is important, and so is the pacing. The goal is to give users time to process the prompt and reduce the need for memory.</p>
+<p><strong>Voice User Interfaces: </strong>For VUIs, users may be required to remember key phrases (such as activating phrases like “Hey, Google”) in order to operate successfully. Users who have difficulty recalling such phrases due to long-term memory impairments may not be able to operate the system.</p>
+
+<h3> Executive Function: Deciding When to Respond </h3>
+<p><strong>General: </strong>If a system response is too slow, a user with disabilities related to executive functioning may not know if their input was received and may press the key or speak again.</p>
+<p><strong>Voice Menu Systems: </strong>The user needs to be able to decide when to act on a menu choice. If the user does not know how many options will be presented or if the system presents them too slowly, the user may make an incorrect choice based on partial information.</p>
+
+<h3> Reasoning: Making the Correct Selection </h3>
+<p><strong>Voice Menu Systems: </strong>The user may need to compare similar options such as "billing," "accounts," and "sales," and decide which one is best suited to accomplish their goal. Without additional context or prior knowledge, the user is likely to select the wrong menu option.</p>
+
+	 <h3> Knowledge: Interpreting Responses </h3>
+<p><strong>General: </strong>If responses produced by a system are not provided in clear and accessible language, the user may have difficulty interpreting them. The user may not understand the response or know if they are using the system correctly.</p>
+<h3> Processing Speed </h3>
+<p><strong>General: </strong>Systems that time out may not give users with disabilities that affect processing speed sufficient time to interpret information and formulate a response. Advertisements and additional, unrequested information also increase the amount of processing required.</p>
+<h3> Attention: Making Correct Selections </h3>
+<p><strong>Voice Menu Systems: </strong>The user needs to focus on the different options and select the correct one. It can be challenging to focus on long or multi-level spoken menus without written counterparts. Advertisements or other unrequested information may also make it harder for users with attention-related disabilities to stay focused on the task they are trying to complete.</p>
+<h3> Language and Auditory Perception: Correctly Interpreting Spoken Information </h3>
+<p><strong>General: </strong>The user needs to interpret the terms and choose the one that most closely matches the user’s goal. This involves speech perception, language understanding, and time limits. The sounds of language need to be heard, interpreted, and understood within a given time.</p>
+<p>Users with disabilities related to language and auditory perception may make mistakes in interpretation due to auditory-only input.</p>
+<h3> Speech and Language Production: Responding to Voice and Speech Recognition Systems </h3>
+<p>We identified three issues to consider that apply to all kinds of voice systems or conversational interfaces:</p>
+<p><strong>Timeouts: </strong>The user needs to formulate a spoken response to the prompt before the system "times out" and generates another prompt. For example: Users of assistive and augmentative communication devices (AAC) or speech-to-speech technologies may require significant additional time to respond before the system times out.</p>
+<p><strong>Spontaneous speech:</strong> In directed dialog systems that<span style="color: rgb(71, 71, 71)">  guide the user through a series of predefined questions and responses, the user only needs to be able to speak a word or short phrase. However, the increasing use of natural language systems means the user may need to describe their issue in their own words. This feature is an advantage for some users because it does not require them to remember menu options. But it can be problematic for users with disabilities that impact their ability to produce spontaneous speech, such as people with aphasia or autistic people for whom stress may impact spoken communication.</p>
+<p><strong>Speech recognition:</strong> Speech recognition systems might not work well for people whose speech sounds different. Users may not be able to interact with a system that requires verbal input but does not recognize their speech. This affects many groups such as users with MCI or Down syndrome.</p>
+
+	 <h3> Mental Health: Interacting with Voice Systems and Conversational Interfaces </h3>
+<p><strong>General: </strong>Mental health, such as anxiety, may also impact a user’s ability to interact with voice systems or conversational interfaces. High demands on cognitive load, negative experiences with technology, and interruptions can exacerbate anxiety or frustration, and decrease a user’s ability to interact with a system. Note that many people requiring cognitive accessibility supports find their skills are reduced as anxiety and cognitive load increases.</p>
+</section><section>	
+	<h2>User Story and User Needs</h2>
+<p class="ednote">This list of user needs is not complete. We are also seeking feedback on the format for presenting user needs.</p>
+<p>As a user who has cognitive accessibility needs, I need to get human help, without going through a complex menu system (VoiceXML [voicexml30]) or a complex voice recognition menu system that relies on memory and <a   href="https://raw.githack.com/w3c/coga/MH_Proposals/content-usable/index.html#dfn-executive-function"> executive function </a>, so that I can set an appointment or find out some information.</p>
+<p>As a user who has cognitive accessibility needs, I need to use the system without relying on a good memory, learning new information, or dealing with distraction or cognitive overload.</p>
+<h3> Related user needs </h3>
 <ol>
- <li>Extra time should be a user setting for both the speed of speech and ability for the user to define if they need a slower speech or more input time etc.</li>
- <li>Timed text should be adjustable (as with all accessible media).</li>
- <li>The user should be able to extend or disable time out as a system default on their device</li>
- <li>Advertisement and other information should not be read as it can confuse the user, increase cognitive load, and can make it harder to retain attention.</li>
- <li>Terms used should be as simple as possible. Uncommon and unfamiliar terms should be explained.</li>
+    <li>
+          I need to complete my task without learning new terms or phrases.  
+    </li>
+    <li>
+          I need to complete my task without remembering option values such as “press 2” for something.  
+    </li>
+    <li>
+          When I need to choose an option, I need clear understandable information so I can hear the option before the number to select, so I do not have to remember the number while processing the words.  
+    </li>
+    <li>
+          When I need to choose an option, I need the choices presented in a way that does not expect me to remember multiple options, criteria, or prompts at the same time.  
+    </li>
+    <li>
+          I need all the information to make the right choice before I forget options.  
+    </li>
+    <li>
+          I need to easily find a process to select simple help, and not multi-step help.  
+    </li>
+    <li>
+          I need to easily find a human by pressing a reserved digit that I know (typically the number 0).  
+    </li>
+    <li>
+          I need simple-to-navigate voice-menu systems with limited options that make sense to me, so I can identify options quickly and don’t struggle with multiple steps.  
+    </li>
+    <li>
+          I need to know if my response was okay so I know what is going on and don’t get too frustrated.  
+    </li>
+    <li>
+          As a user with impaired processing speed, I need sufficient time and pauses between each option so I can process what was said.  
+    </li>
+    <li>
+          I need time to look up any information requested such as my phone number, as I do not always remember it.  
+    </li>
+    <li>
+          I need to know where I am in the process and if the step is completed.  
+    </li>
+    <li>
+          I need the system to recognize my speech even if it is not typical.  
+    </li>
+    <li>
+          As a slow speaker, I need the system to wait for my response.  
+    </li>
+    <li>
+          I need to easily go back when I make a mistake, without having to start at the beginning.  
+    </li>
+    <li>
+          As a user who often finds menus unusable, I need usability best practices to help me navigate voice systems.  
+    </li>
+    <li>
+          I need to spend my energy completing my task. I do not want to waste my energy while I struggle to understand other material, such as special offers or promotions.  
+    </li>
+    <li>
+          I need to focus on my task to remember what I am doing. Please do not give me distracting information such as special offers, in the middle of my task.  
+    </li>
+    <li>
+          I need the steps to be as short as possible so I do not get cognitive overload.  
+    </li>
+    <li>
+          I need help identifying the right words to say in a voice menu, and the words should be the ones I would use.  
+    </li>
+    <li>
+          I need a process that I can use that does not rely on a lot of words.  
+    </li>
+    <li>
+          I need processes that do not rely on memory or access to information that I entered during previous steps in a process.  
+    </li>
+    <li>
+          I need to be able to use a site without remembering or transcribing passwords, codes, and usernames.  
+    </li>
+    <li>
+          I need to know what the next steps are and when I am finished.  
+    </li>
 </ol>
-<p>
- <strong>Voice Menu Systems:</strong>
-</p>
+<h3> <strong>Related Personas</strong> </h3>
+<ul>
+    <li>
+          <a   href="https://raw.githack.com/w3c/coga/MH_Proposals/content-usable/index.html#gopal-a-retired-lawyer-with-dementia"> Gopal </a>
+          
+    </li>
+    <li>
+          <a   href="https://raw.githack.com/w3c/coga/MH_Proposals/content-usable/index.html#maria-a-user-who-has-memory-loss"> Maria </a>
+          
+    </li>
+</ul>
+ </section><section>	
+<h2>Proposed Solutions Based on Current Research</h2>
+<h3> Ensure Human Backup is Available and Reachable </h3>
+<p>For users who are unable to use the automated voice system, it must be possible to reach a human through an easy transfer process rather than being directed to call another phone number.</p>
+<p>For telephone self-service systems, there should be a reserved digit for requesting a human operator. The most common digit used for this purpose is "0." However, if another digit is already in widespread use in a particular country, then that digit should always be available to get to a human agent.</p>
+<p>Systems should avoid making users reach an agent through the use of complex digit combinations. This could be enforced by requiring implementations to</p>
+<ul>
+    <li>
+        use the 0 digit consistently to reach an operator, and  
+    </li>
+    <li>
+        not allow the reserved digit (0) to mean anything other than going to an operator.  
+    </li>
+</ul>
+<p>Other numbers can be used for special actions too, but there shouldn’t be too many—too many rules can be confusing and hard to remember. Also, repeating these options too often can be distracting.</p>
+<p>Human help should be trained to support users with disabilities. Too often, human help places users back into the system they did not manage.</p>
+<h3> Allow Users To Change Settings </h3>
+<p>Make it easy to set user preferences when available, such as adjusting the settings by using natural language ("Slow down!"). Examples of customization include:</p>
 <ol>
- <li>Error recovery should be simple, and take you to a human operator. Error response should not end the interaction or send them to a more complex menu. For telephone-based systems, they should use a reserved digit.</li>
- <li>Examples and advice should be given on how to build a prompt that reduces the cognitive load</li>
- <ol>
- <li>Example 1: Reducing cognitive load: The prompt "<em>press 1 for the secretary,"</em> requires the user to remember the digit 1 while interpreting the term secretary. It is less good then the prompt "<em>for the secretary (pause): press 1</em>" or "<em> for the secretary (pause) or for more help (pause): press 1</em>"</li>
- <li>Example 2: Setting a default for a human operator as the number 0</li>
- </ol>
+    <li>
+          Extra time should be a user setting for both the speed of speech and for more input time.  
+    </li>
+    <li>
+          Timed text should be adjustable (as with all accessible media).  
+    </li>
+    <li>
+          The user should be able to extend or disable timeout as a system default on their device.  
+    </li>
+    <li>
+          Advertisements and other extraneous information should not be read aloud as they can confuse the user, increase cognitive load, and make it harder to retain attention.  
+    </li>
+    <li>
+          Terms used should be as simple as possible. Uncommon and unfamiliar terms should be explained.  
+    </li>
+    <li>
+          Consider customizable activation phrases for VUIs.  
+    </li>
+    <li>
+          Consider customizable voices, including regional and standard accents, to create familiarity for the user.  
+    </li>
 </ol>
-<p>
- <strong>Voice User Interfaces</strong>
-</p>
+<h3> Simplify Error Recovery </h3>
+<p>Error recovery should be simple and take the user to a human operator. Error response should not end the interaction or lead to a more complex menu. Keypad or telephone-based systems should use a reserved digit to help with error recovery. Example: Setting a default for a human operator as the number 0.</p>
+<h3> Design Prompts to Reduce Cognitive Load </h3>
+<p>Give prompts in ways that reduce the cognitive load. For example, the prompt "<em>press 1 for the help desk,"</em> requires the user to remember the digit 1 while interpreting the term “help desk.” This wording is harder to process than the prompt "<em>for the help desk (pause): press 1</em>" or "<em>for the help desk (pause) or for more help (pause): press 1.</em>"</p>
+<h3> Remove Unnecessary Words </h3>
+<p>Avoid additional information such as special offers or extra text that does not support the task directly. For example, the following sentences can cause anxiety or add to the users’ cognitive load:</p>
+<ul>
+    <li>
+          "We are here to help you, and we have been for the last 25 years. We enjoy helping our customers." 
+    </li>
+    <li>
+          "Avoid unnecessary delays by answering the following questions quickly and correctly." 
+    </li>
+</ul>
+<h3> Ensure Voice and Speech Recognition for All Users </h3>
+<p>Natural language understanding (NLU) or natural language interpretation (NLI) and AI systems allow users to state their requests in their own words, which can help users who have difficulty remembering menu options or mapping the menu options to their goals. However, the following should be taken into account:</p>
 <ol>
- <li>Consider customizable activation phrases for VUIs.</li>
- <li>Consider customizable voices, including regional and standard accents to create familiarity for the user.&nbsp;</li>
+    <li>
+          Many groups requiring cognitive accessibility supports have different speech patterns. Therefore, the system should be trained and tested with diverse user groups who require cognitive accessibility supports. Train and test speech recognition for users with non-typical speech patterns or speech impairments related to disability. Include contingencies for pauses, use of incorrect terms, and mistakes.  
+    </li>
+    <li>
+          Ensure alternative access for users whose speech is not recognized. Natural language interfaces can be challenging for users who have difficulty producing speech or language. Alternative access should be available. This should include a menu dialog that can work without speech (such as via text), directed dialog (menu-based) fallback, and/or transfer to a human agent.  
+    </li>
+    <li>
+          Make sure fallbacks are tested extensively with a diverse user group to ensure that they do reach human help. Ensure fallbacks do not result in frustrating loops.  
+    </li>
+    <li>
+          Use existing standards for speech recognition if they’re available for the languages your system supports. For example, the European Telecommunications Standards Institute (ETSI) [ETSI-ES202-076] has a standard for voice commands in many European languages. When using existing standards, keep in mind that asking users to remember too many commands can be overwhelming.  
+    </li>
 </ol>
-</section><section>
-<h3>Ensure Voice and Speech&nbsp; Recognition for All Users</h3>
+<h3> Follow Best Practices in General Voice Interaction Design </h3>
+<p>Standard best practices in VUI apply to users with disabilities that impact cognitive accessibility, and should be followed, such as those provided by the Association for Conversational Interaction Design Wiki [<a   href="http://acixd.org/"> ACIxD </a>] or <a   href="https://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf"> ETSI ETR 096 </a> [ETSI-ETR-096].</p>
+<p>Some examples of generally accepted best practices in VUI design include:</p>
 <ol>
- <li>For speech recognition based systems, an existing ETSI standard for voice commands for many European languages exists and should be used where possible [ETSI 202 076], keeping in mind that expecting people to learn more than a few commands places a burden on the user.</li>
- <li>Natural language understanding systems allow users to state their requests in their own words, and can be useful for users who have difficulty remembering menu options, or who have difficulty mapping the offered menu options to their goals. However, natural language interfaces can be difficult to use for users who have difficulty producing speech or language. Directed dialog (menu-based) fallback or transfer to an agent should be provided.</li>
- <li>Test speech recognition for users with non-normative speech patterns or speech impairments related to disability. Include contingencies for pauses, use of incorrect terms, and mistakes. Ensure alternative access for users whose speech is not recognized.&nbsp;</li>
+    <li>
+          Pauses between phrases to allow processing time.  
+    </li>
+    <li>
+          Long timeouts.  
+    </li>
+    <li>
+          Simple error recovery, taking the user to a human operator if the error persists.  
+    </li>
+    <li>
+          No advertisements or extraneous information.  
+    </li>
+    <li>
+          Jargon-free and simple terms.  
+    </li>
+    <li>
+          Ability to review the conversation as it is happening, such as through a visual log.  
+    </li>
 </ol>
-</section>
- <section>
-<h3>Follow Best Practices in General Voice Interaction Design</h3>
-<p>Standard best practices in voice user interface apply to users with cognitive disabilities, and should be followed, such as those provided by the Association for Voice Interaction Design Wiki [<a target="_blank" href="http://acixd.org/">
- <span style="color:rgb(17, 85, 204);">AVIxD</span>
-</a>] or
- <a target="_blank" href="https://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf">
- <span style="color:rgb(17, 85, 204);">ETSI ETR 096</span>
-</a>. Some examples of generally accepted best practices in voice user interface design:</p>
+<p>See the <a   href="http://acixd.org/"> ACIxD wiki </a> [ACIxD] for additional recommendations and details.</p>
+<h3> Follow Best Practices in Cognitively Accessible VUI Design </h3>
+<p>Some specific best practices for users with disabilities that impact cognitive accessibility include:</p>
 <ol>
- <li>Pauses between phrases to allow processing time.&nbsp;</li>
- <li>Long time outs.</li>
- <li>Simple error recovery, taking user to human operator if error persists.</li>
- <li>No advertisements or extraneous information presented.</li>
- <li>Jargon-free and simple terms.</li>
- <li>Ability to review the conversation as it is happening, such as through a visual log.&nbsp;</li>
+    <li>
+          <strong>Manageable lists: </strong>Repeat and/or chunk lists into manageable groups. Each list item should be a single idea.  
+    </li>
+    <li>
+          <strong>Reminders: </strong>Provide cues as to what the user needs to do and when.  
+    </li>
+    <li>
+          <strong>Guided instructions: </strong>Provide instructions to guide the user through the steps in the process.  
+    </li>
+    <li>
+          <strong>Task history:</strong> Include methods that inform the user of what they have done recently to help prevent repeating a task and to inform the user where they are in a process.  
+    </li>
+    <li>
+          <strong>Timers:</strong> Track the user’s time on a step and provide cues or reminders if thresholds of time are crossed.  
+    </li>
+    <li>
+          <strong>Task overview:</strong> Provide a way to attain a list of all the steps required and information needed to complete the task or process.  
+    </li>
 </ol>
-<p>See the AVIxD wiki cited above for additional recommendation and detail.</p>
- </section>
- <section>
-<h3>Implement Best Practices in Cognitively Accessible VUI Design</h3>
-<p>Some specific best practices for users with cognitive disabilities include:</p>
+<h3> Follow Appropriate Legislative Requirements </h3>
+<p>For example, in Section 255 [Title42-section255] of the U.S. Telecommunications Act, paragraph 1193.41 Input, Controls, and Mechanical Functions clauses (g), (h) and (i) apply to cognitive disabilities and require that equipment should be operable without time-dependent controls, the ability to speak, and should be operable by persons with limited cognitive skills.</p>
+<h3> Integrate New Technology-Based Solutions </h3>
+<p>Recent technological developments may be helpful for users with disabilities that require cognitive accessibility supports.</p>
 <ol>
- <li>
- <strong>Manageable Lists:
- </strong>Repeat and/or chunk lists into manageable groups. Each list item should be a single idea.</li>
- <li>
- <strong>Reminders:
- </strong>Provide cues as to what the user needs to do and when.</li>
- <li>
- <strong>Guided Instructions:
- </strong>Provide guided instructions to walk user through the steps in the process</li>
- <li>
- <strong>Task History:</strong>
- Include methods that inform the user of what you have done recently to help prevent from repeating tasks and to allow the user to know where they are in the process.</li>
- <li>
- <strong>Timers:</strong>
- Provide timers to track the user’s time on a step and invoke cues or reminders if thresholds of time are crossed</li>
- <li>
- <strong>Task Overview:</strong>
- Provide a way to attain a list of all the steps required and information needed to complete the task or process.</li>
+    <li>
+          <strong>Visual VUI:</strong> When a call comes in on a smartphone, the system can ask the user if they want to switch to a visual interface that mirrors the voice interface. This allows a user to see the prompts instead of having to remember what they heard. Where possible, supplement text with images, symbols, or icons to increase understandability.  
+    </li>
+    <li>
+          <strong>Adaptive voice interface: </strong>This technology is sensitive to the user's behavior and changes the voice interface dynamically. For example, it can slow down or speed up to match the user's speech rate.  
+    </li>
+    <li>
+          <strong>Tapered prompts: </strong>Best practices in VUI design include adjusting the prompts based on the user's behavior. For example, if the user takes a long time to respond to a prompt, a simpler or more explanatory version of prompts may be used instead of the default.  This approach may give longer instructions with simpler words to users who need more guidance, while allowing experienced users to move quickly through the system. 
+          
+    </li>
 </ol>
- </section>
- <section>
-<h3>Follow Appropriate Legislative Requirements</h3>
-<p>For example, the U.S. Telecommunications Act Section 255 Accessibility Guidelines [Section255] paragraph 1193.41 Input, control, and mechanical functions, clauses (g), (h) and (i) apply to cognitive disabilities and require that equipment should be operable without time-dependent controls, the ability to speak, and should be operable by persons with limited cognitive skills.</p>
-	 </section><section>
-<h3>Integrate New Technology-Based Solutions</h3>
-<p>Recent technological developments may be helpful for users with cognitive disabilities.</p>
-<ol>
- <li>Visual VUI: When a call comes in on a smartphone, the system can ask the user if they want to switch over to a visual interface which mirrors the voice interface. This allows a user to see the prompts instead of having to remember them. If and where possible, supplementing text with images, symbols, or icons can increase understandability.&nbsp;</li>
- <li>Adaptive voice interface: This is a technology that is sensitive to the user's behavior and changes the voice interface dynamically. For example, it can slow down or speed up to match the user's speech rate.</li>
- <li>Tapered prompts: Best practices in voice user interface design include providing several different prompts for each point in the interaction. The different prompts are used based on the user's behavior. For example, if the user takes a long time to respond to a prompt, a simpler or more explanatory version of the prompt may be used instead of the default.</li>
-</ol>
- </section><section>
-<h3>Status of these solutions</h3>
-<p>Note: The above proposed solutions have been tested for users in the general population and have been shown to improve the usability of voice systems. Some of these solutions have been tested with users with cognitive disabilities, primarily in academic research contexts.</p>
-<p>Currently VoiceXML does not directly enforce accessibility for people with cognitive disabilities. However, a considerable literature on voice user interface design exists and is in many cases very applicable to cognitive accessibility for voice systems. Developers must become aware of these resources and of the need to design systems with these users in mind.</p>
- </section>
-</section>
-<section><h2>References</h2>
-<ol>
- <li>[AVIxD]
- <a target="_blank" href="http://videsign.wikispaces.com/">
- <span style="color:rgb(17, 85, 204);">The Association for Voice Interaction Design Wiki</span>
- </a>
- </li>
- <li>[ETSI 202 076]<a target="_blank" href="http://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf">
- <span style="color:rgb(0, 0, 0);"></span>
- <span style="color:rgb(17, 85, 204);">ETSI ES 202 076 V2.1.1 (2009-06)</span>
- </a>
- </li>
- <li>[ETSI ETR 096]
- <a target="_blank" href="http://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf">
- <span style="color:rgb(17, 85, 204);">ETSI ETR 096 Human factors guidelines for the design of minimum phone based user interface to computer services</span>
- </a>
- </li>
- <li>[Section255]
- <a target="_blank" href="https://www.access-board.gov/guidelines-and-standards/communications-and-it/about-the-telecommunications-act-guidelines/section-255-guidelines">
- <span style="color:rgb(17, 85, 204);">Telecommunications Act Section 255 Accessibility Guidelines</span>
- </a>
- </li>
- <li>[Adaptive]<a target="_blank" href="http://cdn2.hubspot.net/hub/120925/file-59944739-pdf/documents/Adaptive_Voice_WhitePaper.pdf">
- <span style="color:rgb(17, 85, 204);">Adaptive Voice White Paper</span>
- </a>
- </li>
- <li>Clark, L. et al. (2019). The State of Speech in HCI: Trends, Themes, and Challenges.
- <em>Interacting with Computers,
- </em>31 (4). DOI: 10.1093/iwc/iwz016</li>
- <li>Ferland, L., et al. (2018). Assistive AI for Coping with Memory Loss.
- <em>Association for the Advancement of Artificial Intelligence.
- </em>
- <a target="_blank" href="https://www-users.cse.umn.edu/~gini/publications/papers/ferland-aaai18w.pdf">
- <span style="color:rgb(17, 85, 204);">https://www-users.cse.umn.edu/~gini/publications/papers/ferland-aaai18w.pdf</span>
- </a>
- </li>
- <li>Dahl, D. (2015). Voice Should Be User-Friendly--to All Users.
- <em>Speech Technology Magazine</em>,
- <em>20</em>(4), 8.&nbsp;</li>
- <li>Braun, M., Wolfel, M., Renner, G., &amp; Menschik, C. (2020). Accessibility of Different Natural User Interfaces for People with Intellectual Disabilities.
- <em>2020 International Conference on Cyberworlds (CW), Cyberworlds (CW), 2020 International Conference on, CW</em>, 211–218. https://doi.org/10.1109/CW49994.2020.00041.</li>
- <li>A. Pradhan, K. Mehta, and L. Findlater, “”Accessibility Came by Accident”: Use of Voice-Controlled Intelligent Personal Assistants by People with Disabilities,” in Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems - CHI ’18. Montreal QC, Canada: ACM Press, 2018, pp. 1–13.</li>
- <li>Wolters MK, Kelly F, Kilgour J. Designing a spoken dialogue interface to an intelligent cognitive assistant for people with dementia.
- <em>Health Informatics Journal</em>. 2016;22(4):854-866. doi:<a target="_blank" href="https://doi.org/10.1177/1460458215593329">
- <span style="color:rgb(17, 85, 204);">10.1177/1460458215593329</span>
- </a>.</li>
-</ol>
-<p>Search terms in World Cat:</p>
-<ol>
- <li>Voice User Interface + cognitive disabilit* OR intellectual disabilit* OR learning disabilit*</li>
- <li>Conversational voice system + cognitive disabilit* OR intellectual disabilit* OR learning disabilit*</li>
- <li>Conversational voice system + intellectual disabilit* OR learning disabilit*</li>
- <li>Voice response system + cognitive disabilit* OR intellectual disabilit* OR learning disabilit*</li>
- <li>Conversational assistant + cognitive disabilit* OR intellectual disabilit* OR learning disabilit*</li>
-</ol>
-</section>
+<h3> Status of these solutions </h3>
+<p>Note: The proposed solutions in this document have been tested for users in the general population and have been shown to improve the usability of voice systems. Some of these solutions have been tested with users with disabilities that require cognitive accessibility supports, primarily in academic research contexts.</p>
+<p>Currently, VoiceXML does not directly enforce accessibility for people with disabilities that impact cognitive accessibility. However, considerable literature on VUI design exists and in many cases applies to cognitive accessibility for voice systems. Developers must become aware of these resources and of the need to design systems with these users in mind.</p>
+
+
+</section><section>	
+	<h2>References</h2>
 </section></section>
 </body>
 </html>
