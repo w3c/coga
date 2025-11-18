@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Cognitive Accessibility Issue Papers</title>
+		<title>Cognitive Accessibility Research Modules and Issue Papers</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
 		<script src="../common/biblio.js" class="remove"></script>
 		<script class="remove">
@@ -48,16 +48,10 @@
 		editors: [
 			{
 				name: "Lisa Seeman",
-				url: 'http://accessibility.athena-ict.com',
+				
 				mailto: "lisa.seeman@zoho.com"
 			},
-			{
-				name: "Ruoxi Ran",
-				url: 'https://www.w3.org',
-				mailto: "Ran@w3.org",
-				company: "W3C",
-				companyURI: "https://www.w3.org"
-			}
+		
 		],
 
 		// authors, add as many as you like. 
@@ -102,55 +96,209 @@
 	</head>
 	<body>
 		<section id="abstract">
-<p class="ednote" title="Early draft"> This is an early draft. The task force intends to add more research and improved discussion. We also intend to make significant editorial changes to be in line with our style guide, including for citations.
+			<p>This set of modules looks at different Web technologies and provides:
+<ul>
+    <li>
+        a detailed analysis of accessibility issues for people with disabilities that may require cognitive accessibility supports,
+     
+    </li>
+    <li>
+        <p>user needs,</p>
+    </li>
+    <li>areas for further research, and directions for solutions.    </li>
+</ul>	</p>	
+			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
+		</section>
+		<section id="sotd">
+			<p > This is an early draft. The task force intends to add more research and improved discussion. We also intend to make significant editorial changes to be in line with our style guide, including for citations.
 <br/>
 
 Please feel free to let us know any research we should be looking at, as well as other comments.
 </p>
-
-
-			<p>This is a set of papers that describe accessibility issues for users with various cognitive or learning disabilities and mental health issues. </p>
-			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
-		</section>
-		<section id="sotd">
 			<p>Feedback on any aspect of the document is accepted. For this publication, the Working Groups particularly seek feedback on the following questions:</p>
 			<ul>
 				<li>Are issues for the included user groups well covered?</li>
+				<li>Is there additional research we should look at?</li>
 				<li>Do the issue papers effectively bridge between research and priorities for new work?</li>
-				<li>Should additional user groups should be addressed?</li>
+				<li>Should additional user needs be addressed?</li>
 			</ul>
-			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-coga-comments@w3.org?subject=[Issue%20Papers]">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>16 June 2024</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
+			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-coga-comments@w3.org?subject=[Issue%20Papers]">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>16 February 2026</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
 		</section>
 	<section>
 			<h2>Introduction</h2>
-		  <p class="ednote" >We intend to add an overview about issues and  cognitive or learning disabilities and mental health issues. </p>
+<p>This set of modules looks at different Web technologies and provides:</p>
+<ul>
+    <li>
+        a detailed analysis of accessibility issues for people with disabilities that may require cognitive accessibility supports,
+     
+    </li>
+    <li>
+        <p>user needs,</p>
+    </li>
+    <li>areas for further research, and directions for solutions.    </li>
+</ul>
+		<p>Disabilities that may require cognitive accessibility support include:</p>
+<ul>
+    <li>
+    cognitive, developmental, intellectual, learning, and specific learning disabilities,
+    </li>
+    <li>
+        language and communication disorders,
+    </li>
+    <li>
+        neurodivergence,
+    </li>
+    <li>
+        traumatic brain injury,
+    </li>
+    <li>
+        age-related cognitive decline,
+    </li>
+    <li>
+        mental health disabilities, and
+    </li>
+    <li>
+        temporary impairments that affect cognitive function, such as anxiety, illness, effects of medication, treatments such as chemotherapy and others.
+    </li>
+</ul>
+<p>
+    <br>Examples of specific disabilities include attention deficit hyperactivity disorder (ADHD), autism spectrum disorder, dyslexia and dyscalculia, mild cognitive impairment (MCI), Down syndrome, aphasia, and others.
+</p>
+		<p>Modules identify topics for further research and directions for solutions. They are intended for:
+<ul>
+    <li>
+        Researchers,
+    </li>
+    <li>
+        policy makers, and
+    </li>
+    <li>
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
+    </li>
+</ul></p>
+<p>These modules are also used as sources for <a  href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities,</a> which contains practical advice for developers.</p>
+<h3>Why This Work is Important</h3>
+<p>The web is now the main way people stay informed, connect with others, and do things like banking and shopping. People with disabilities who can’t use these tools may become more isolated from society.</p>
+<p>In fact, everyday physical objects are often connected to the Internet and have ICT (information and communication technology) or Web interfaces. Using these interfaces is an essential component of maintaining independence, staying in the workforce longer, and staying safe.</p>
+<p>Consider the impact as the population ages. By 2050, 21.1% of the world’s population will be over 60, and this number is higher in developed countries. Many people over 60 start to notice changes in their memory and cognitive function such as:</p>
+<ul>
+    <li>
+        38.4% of people have Age-Associated Memory Impairment,
+    </li>
+
+    <li>
+        15.3% have Mild Cognitive Impairment, and
+    </li>
+    <li>
+        8.8% may have dementia. (Source to be added)
+    </li>
+</ul>
+<p>When older adults cannot use technology because it's hard to access or understand, they often need more help from others to do things they could do by themselves. This takes away their independence, violates their rights, and also makes the cost of care much higher for society.</p>
+<p>Another growing concern is mental health. Many emotional disabilities affect cognitive function. As the mental crisis grows, it becomes more and more important for people to be able to use services, technology and access committee activities through mental health challenges.</p>
+<p>Of course there are many other groups included in this work. We invite you to look at this draft and share your thoughts. We’re especially interested in hearing how these issues might affect your technologies and work.</p>
+<h3>About Disabilities That May Require Cognitive Accessibility Support</h3>
+<p>Cognitive and learning disabilities and mental health issues include long-term, short-term, and permanent difficulties relating to cognitive functions, such as:</p>
+<ul>
+    <li>
+        Learning, communication, reading, writing, or math,
+    </li>
+    <li>
+       ability to understand or process new or complex information and learn new skills, with a reduced ability to cope independently,
+    </li>
+    <li>
+        emotional regulation, anxiety, mood and mental health, and / or
+    </li>
+    <li>
+        memory and attention or visual, language, or numerical thinking.
+    </li>
+</ul>
+<p>This is discussed more in the introduction to <a href="https://www.w3.org/TR/coga-usable#background">Making Content Usable for People with Cognitive and Learning Disabilities.</a>
+</p>
+<h3>Challenges in Researching These Issues</h3>
+<p>Challenges we found while writing these modules include:</p>
+<ul>
+    <li>
+       <strong>Lack of availability of open research:</strong> Most research on this topic is behind a "paywall," so developers and policymakers may not be able to see which techniques actually work to help people with disabilities.
+    </li>
+    <li>
+       <strong>Wide range of impairments</strong> that involve cognitive and learning disabilities and mental health issues: Each one can have unique symptoms and specific digital accessibility needs, making it harder to know how to meet everyone’s needs.
+    </li>
+    <li>
+       <strong>Lack of disclosure or self-identification:</strong> A major challenge is that our users may choose not to talk publicly about their impairments. Some might feel embarrassed and avoid asking for help, fearing discrimination, especially at work. Others may not realize they have a disability or how it affects them.
+    </li>
+    <li>
+       <strong>Attitudes and misinformation:</strong> Developers may feel people with cognitive disabilities are not in their “target audience” and so have no interest in their inclusion. Additionally, studies of usability often over-sample college students. Thus the results work less well for groups that are not well represented among sub-groups of college students (such as the aging population).
+    </li>
+</ul>
 		</section>
 	<section>
 		<h2>Modules</h2>
-		  <p class="ednote" >We intend to add text to explain these modules. </p>
-		<ul>
-			 <li><a href="Conversational-Voice-Systems.html" >Conversational Voice Systems </a></li>  
-			<li><a href="Technology-Assisted-Indoor-Navigation-and-Wayfindings.html" >Technology-Assisted Indoor Navigation and Wayfinding</a>
-			 <li><a href="Online-Safety-and-Wellbeing.html" >Online Safety and Wellbeing (Algorithms and Data)</a></li>
+		<p>These modules are split into two sections. The first section covers new modules and our current work. The second section includes older modules from a previous analysis by the Cognitive and Learning Disabilities Task Force. Each module talks about a technology-related issue or topic on the internet and includes:</p>
+<ul>
+    <li>
+       challenges and risks for people with cognitive or learning disabilities and mental health issues,    </li>
+    <li>
+        related user needs, and
+    </li>
+    <li>
+    possible solutions and areas for research and development.
+    </li>
+</ul>
+<p>The current modules are:</p>
+<ul>
+    <li>
+       <a href="https://w3c.github.io/coga/issue-papers/Conversational-Voice-Systems.html">Voice Systems and Conversational Interfaces</a>  <br/>     
+       
+           
+               This module covers issues that our users face when using conversational voice systems. Conversational voice systems include:
+                <ul>
+                    <li>
+                        voice menu systems,
+                    </li>
+                    <li>
+                       voice user interfaces and
+                    </li>
+                    <li>
+                        voice AI assistants.
+                    </li>
+                </ul>
+            
+       
+    </li>
+    <li>
+       <a href="https://w3c.github.io/coga/issue-papers/Technology-Assisted-Indoor-Navigation-and-Wayfindings.html">Technology-Assisted Indoor Navigation and Wayfinding</a>
+        
+       <br/> 
+                This module is about technology that helps users navigate indoor spaces, also known as wayfinding.
+           
+    </li>
+    <li>
+        <a href="https://w3c.github.io/coga/issue-papers/Online-Safety-and-Wellbeing.html">Online Safety and Wellbeing (Algorithms and Data)</a>
+       <br/> 
+       
+                This module covers safety issues that our users face on the internet including cybercrime, mental health, wellbeing, privacy, and more.
+           
+    </li>
+    <li>
+        <a  href="https://docs.google.com/document/d/1g9N-_3l-d6t0ppZcIIZ98k00x7ZE7h3ayq0OCX9Ycu4/edit?tab=t.0#heading=h.rhs6n8lpznbz">Supported Decision-Making (shared decision-making) Online</a>(link will need to be changed)        
+       <br/> This module describes the advantages and risks of supporting Supported Decision-Making (SDM). It offers suggestions for safely supporting SDM online, helping more people take part in the digital world while keeping their dignity and independence.
+           
+    </li>
+</ul>
 
-			
-			  <!-- <li><a href="Personalization-and-Trigger-Warnings.html" >Personalization and Trigger Warnings</a></li> 
-			 <li> <a href="user-testing.html" >Ethical User Testing with People with Learning and Cognitive Disabilities</a> </li>
-			<li><a href="Supported-Decision-Making.html" >Supported Decision Making</a></li> -->
-		      </li></ul>
-		<section>	<h3>Older Issue Papers</h3>
+		<section>	<h3>Older Modules and Issue Papers</h3>
 		<p class="ednote" title="Old issue papers">This is our second batch of issue papers / modules. Older drafts of issue papers may be out of date, incomplete, or may contain errors. 
 			We intend to add the follwoing text to each older paper. "Editors Note: This draft is out of date, there may be new research and new technologies that are relevant to this topic."
-</p>			
-Older Topics (editor's drafts only) include:
+</p>		
+			
+<p>This section contains older modules and issue papers from a previous analysis by the task force. These drafts may be out of date, incomplete, or may have errors. While we believe these modules are still valuable, we are not currently maintaining them. Please let us know if you think any of these modules need to be updated.</p>
+<p>The older modules  (editor's drafts only) include:</p>
 		<ul>
 			  <li><a href="personalization-preferences.html" >Personalization and Preferences</a></li>
 			  <li><a href="privacy-security.html" >Security and Privacy Technologies</a></li>
 			  <li><a href="multi-modal.html" >Multi-modal Content Delivery</a></li>
 			  <li><a href="distractions.html" >Distractions</a></li>
-			  <li><a href="voice-menus.html" >Voice Menu Systems</a></li>
 			  <li><a href="payments.html" >Online Payments</a> </li>
-			  <li><a href="safety.html" >Online Safety</a></li>
 			  <li><a href="symbols-non-verbal.html" >Symbols for Non-Verbal</a></li>
 			  <li><a href="math.html" >Numbers and Math</a></li>
 			 <li><a href="flat-design.html" >Flat Design</a></li>
@@ -187,14 +335,13 @@ Older Topics (editor's drafts only) include:
 		
 		<div data-include='../common/acknowledgements.html' data-oninclude='fixIncludes' data-include-replace='true'>Acknowledgements placeholder</div>-->
         <section>
-          <h2>Significant contributors to the issue papers </h2> 
+          <h2> Significant Contributors to the Research Modules </h2> 
           <dl><dt>
           </dt>
-        
-            <dd></dd>
+           <dd></dd>
           </dl>
        
-         <p class="ednote" title="add teams"> Add team here. </p>
+         <p class="ednote" title="add teams"> Add team here to include: Becca, Julie, John k, Len, Eric  </p>
         </section>
 	</body>
 </html>
