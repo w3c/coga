@@ -767,5 +767,155 @@ var biblio = {
 									"href": "https://doi.org/10.1089/cyber.2020.0478",
 										"status": "academic paper"
 	}
+
+	"CA": {
+    "title": "The Colby Act",
+    "date": "2021",
+ 
+    "etAl": "false",
+    "publisher": " Alabama Care",
+    "href": "https://www.youtube.com/watch?v=00ahyKABIAw",
+    "status": "standard"
+  },
+  "coga-usable": {
+    "title": "Making Content Usable for People with Cognitive and Learning Disabilities",
+    "date": "29 April 2021",
+    "authors": [
+      "Lisa Seeman-Horwitz",
+      "Rachael Bradley Montgomery",
+      "Steve Lee",
+      "Ruoxi Ran"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/coga-usable/",
+    "status": "standard"
+  },
+  "EFTA": {
+    "title": "Electronic Fund Transfer Act (Regulation E)",
+    "date": "2025",
+    "etAl": "false",
+    "publisher": "National Credit Union Administration",
+    "href": "https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e",
+    "status": "standard"
+  },
+  "ETSI-ES202-076V211": {
+    "title": "ETSI ES 202 076 V2.1.1 (2009-06): Generic spoken command vocabulary for ICT devices and services.",
+    "date": "2009",
+   ,
+    "publisher": "European Technical Standards Institute",
+    "href": "http://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf",
+    "status": "standard"
+  },
+  "ETSI-ETR-096": {
+    "title": "ETSI ETR 096 Human factors guidelines for the design of minimum phone based user interface to computer services.",
+    "date": "1993",
+       "publisher": "European Technical Standards Institute",
+    "href": "http://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf",
+    "status": "standard"
+  },
+  "GDPR": {
+    "title": "General Data Protection Regulation",
+    "date": "2023",
+   
+    "publisher": "GDPR.eu",
+    "href": "https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/",
+    "status": "standard"
+  },
+  "GLBA": {
+    "title": "Gramm-Leach-Blilely ACT (GBLA)",
+    "date": "1999",
+
+    "publisher": "US Federal Trade Commission",
+    "href": "https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act",
+    "status": "standard"
+  },
+  "MENCAP": {
+    "title": "The Mental Capacity Act",
+    "date": "",
+    "authors": [],
+    "etAl": "false",
+    "publisher": "MenCap.org",
+    "href": "https://www.mencap.org.uk/advice-and-support/mental-capacity-act",
+    "status": "standard"
+  },
+  "Title42-section255": {
+    "title": "U.S. Telecommunications Act Section 255 Accessibility Guidelines",
+    "date": "1996",
+   
+    "publisher": "United States Code, Title 42, Section 255.",
+    "href": "https://www.access-board.gov/ict/guide/2555_guide.md.html",
+    "status": "standard"
+  },
+  "VBWG": {
+    "title": "Voice Browser Working Group",
+    "date": "12 October 2015",
+       "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/Voice/",
+    "status": "standard"
+  },
+  "voicexml2.0": {
+    "title": "Voice Extensible Markup Language (VoiceXML) Version 2.0",
+    "date": "16 March 2004",
+    "authors": [
+      "S. McGlashan",
+      "D. Burnett",
+      "J. Carter",
+      "P. Danielsen",
+      "J. Ferrans",
+      "A. Hunt",
+      "B. Lucas",
+      "B. Porter",
+      "K. Rehor",
+      "S. Tryphonas",
+      "Editors"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml20/",
+    "status": "standard"
+  },
+  "voicexml21": {
+    "title": "Voice Extensible Markup Language (VoiceXML) 2.1",
+    "date": "2007",
+    "authors": [
+      "M. Oshry",
+      "R.J. Auburn",
+      "P. Baggia",
+      "M. Bodell",
+      "D. Burke",
+      "D. Burnett",
+      "E. Candell",
+      "J. Carter",
+      "S. McGlashan",
+      "A. Lee",
+      "B. Porter"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml21/",
+    "status": "standard"
+  },
+
+  "voicexml30": {
+    "title": "Voice Extensible Markup Language (VoiceXML) 3.0",
+    "date": "2010",
+    "authors": [
+      "S. McGlashan",
+      "D. Burnett",
+      "R. Akolkar",
+      "R.J. Auburn",
+      "P. Baggia",
+      "J. Barnett",
+      "M. Bodell",
+      "J. Carter",
+      "M. Deshmukh"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml30/",
+    "status": "standard"
+  },
+
 	
 };
