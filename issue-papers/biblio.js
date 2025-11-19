@@ -792,7 +792,7 @@ var biblio = {
     "status": "standard"
   },
   "EFTA": {
-    "title": "Electronic Fund Transfer Act (Regulation E)",
+    "title": "Electronic Fund Transfer Act Regulation E",
     "date": "2025",
     "etAl": "false",
     "publisher": "National Credit Union Administration",
@@ -802,7 +802,7 @@ var biblio = {
   "ETSI-ES202-076V211": {
     "title": "ETSI ES 202 076 V2.1.1 (2009-06): Generic spoken command vocabulary for ICT devices and services.",
     "date": "2009",
-   ,
+ 
     "publisher": "European Technical Standards Institute",
     "href": "http://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf",
     "status": "standard"
@@ -832,9 +832,7 @@ var biblio = {
   },
   "MENCAP": {
     "title": "The Mental Capacity Act",
-    "date": "",
-    "authors": [],
-    "etAl": "false",
+   
     "publisher": "MenCap.org",
     "href": "https://www.mencap.org.uk/advice-and-support/mental-capacity-act",
     "status": "standard"
