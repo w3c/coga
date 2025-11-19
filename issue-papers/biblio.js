@@ -768,6 +768,14 @@ var biblio = {
 										"status": "academic paper"
 	}
 
+  "EFTA": {
+    "title": "Electronic Fund Transfer Act Regulation E",
+    "date": "2025",
+    "etAl": "false",
+    "publisher": "National Credit Union Administration",
+    "href": "https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e",
+    "status": "standard"
+  },
 
 
 	
