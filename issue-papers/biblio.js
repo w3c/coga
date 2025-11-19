@@ -800,7 +800,7 @@ var biblio = {
     "status": "standard"
   },
   "ETSI-ES202-076V211": {
-    "title": "ETSI ES 202 076 V2.1.1 (2009-06): Generic spoken command vocabulary for ICT devices and services.",
+    "title": "ETSI ES 202 076 V2.1.1 2009-06: Generic spoken command vocabulary for ICT devices and services.",
     "date": "2009",
  
     "publisher": "European Technical Standards Institute",
@@ -818,12 +818,12 @@ var biblio = {
     "title": "General Data Protection Regulation",
     "date": "2023",
    
-    "publisher": "GDPR.eu",
+    "publisher": "GDPR eu",
     "href": "https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/",
     "status": "standard"
   },
   "GLBA": {
-    "title": "Gramm-Leach-Blilely ACT (GBLA)",
+    "title": "Gramm-Leach-Blilely ACT ",
     "date": "1999",
 
     "publisher": "US Federal Trade Commission",
@@ -853,7 +853,7 @@ var biblio = {
     "status": "standard"
   },
   "voicexml2.0": {
-    "title": "Voice Extensible Markup Language (VoiceXML) Version 2.0",
+    "title": "Voice Extensible Markup Language Version 2.0",
     "date": "16 March 2004",
     "authors": [
       "S. McGlashan",
@@ -874,7 +874,7 @@ var biblio = {
     "status": "standard"
   },
   "voicexml21": {
-    "title": "Voice Extensible Markup Language (VoiceXML) 2.1",
+    "title": "Voice Extensible Markup Language  2.1",
     "date": "2007",
     "authors": [
       "M. Oshry",
@@ -896,7 +896,7 @@ var biblio = {
   },
 
   "voicexml30": {
-    "title": "Voice Extensible Markup Language (VoiceXML) 3.0",
+    "title": "Voice Extensible Markup Language  3.0",
     "date": "2010",
     "authors": [
       "S. McGlashan",
