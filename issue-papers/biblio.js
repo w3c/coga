@@ -768,29 +768,6 @@ var biblio = {
 										"status": "academic paper"
 	}
 
-	"CA": {
-    "title": "The Colby Act",
-    "date": "2021",
- 
-    "etAl": "false",
-    "publisher": " Alabama Care",
-    "href": "https://www.youtube.com/watch?v=00ahyKABIAw",
-    "status": "standard"
-  },
-  "coga-usable": {
-    "title": "Making Content Usable for People with Cognitive and Learning Disabilities",
-    "date": "29 April 2021",
-    "authors": [
-      "Lisa Seeman-Horwitz",
-      "Rachael Bradley Montgomery",
-      "Steve Lee",
-      "Ruoxi Ran"
-    ],
-    "etAl": "true",
-    "publisher": "World Wide Web Consortium",
-    "href": "https://www.w3.org/TR/coga-usable/",
-    "status": "standard"
-  },
 
 
 	
