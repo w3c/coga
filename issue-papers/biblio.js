@@ -813,6 +813,86 @@ var biblio = {
     "date": "1999",
     "publisher": "US Federal Trade Commission",
     "href": "https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act"
+  },
+	
+  "MENCAP": {
+    "title": "The Mental Capacity Act",
+    "publisher": "MenCap.org",
+    "href": "https://www.mencap.org.uk/advice-and-support/mental-capacity-act"
+  },
+
+  "Title42-section255": {
+    "title": "U.S. Telecommunications Act Section 255 Accessibility Guidelines",
+    "date": "1996",
+    "publisher": "United States Code, Title 42, Section 255.",
+    "href": "https://www.access-board.gov/ict/guide/2555_guide.md.html"
+  },
+
+  "VBWG": {
+    "title": "Voice Browser Working Group",
+    "date": "12 October 2015",
+       "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/Voice/"
+  },
+
+  "voicexml2.0": {
+    "title": "Voice Extensible Markup Language Version 2.0",
+    "date": "16 March 2004",
+    "authors": [
+      "S. McGlashan",
+      "D. Burnett",
+      "J. Carter",
+      "P. Danielsen",
+      "J. Ferrans",
+      "A. Hunt",
+      "B. Lucas",
+      "B. Porter",
+      "K. Rehor",
+      "S. Tryphonas"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml20/"
+  },
+
+  "voicexml21": {
+    "title": "Voice Extensible Markup Language  2.1",
+    "date": "2007",
+    "authors": [
+      "M. Oshry",
+      "R.J. Auburn",
+      "P. Baggia",
+      "M. Bodell",
+      "D. Burke",
+      "D. Burnett",
+      "E. Candell",
+      "J. Carter",
+      "S. McGlashan",
+      "A. Lee",
+      "B. Porter"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml21/"
+  },
+
+  "voicexml30": {
+    "title": "Voice Extensible Markup Language  3.0",
+    "date": "2010",
+    "authors": [
+      "S. McGlashan",
+      "D. Burnett",
+      "R. Akolkar",
+      "R.J. Auburn",
+      "P. Baggia",
+      "J. Barnett",
+      "M. Bodell",
+      "J. Carter",
+      "M. Deshmukh"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml30/"
   }
 
 
