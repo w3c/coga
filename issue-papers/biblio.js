@@ -775,7 +775,17 @@ var biblio = {
     "publisher": "National Credit Union Administration",
     "href": "https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e"
   
-  }
+  },
+	"CA": {
+    "title": "The Colby Act",
+    "date": "2021",
+ 
+    "etAl": "false",
+    "publisher": " Alabama Care",
+    "href": "https://www.youtube.com/watch?v=00ahyKABIAw",
+    "status": "standard"
+  },
+
 
 
 	
