@@ -786,6 +786,35 @@ var biblio = {
     "status": "standard"
   },
 
+ "ETSI-ES202-076V211": {
+    "title": "ETSI ES 202 076 V2.1.1 2009-06: Generic spoken command vocabulary for ICT devices and services.",
+    "date": "2009",
+    "publisher": "European Technical Standards Institute",
+    "href": "http://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf",
+    "status": "standard"
+  },
+  "ETSI-ETR-096": {
+    "title": "ETSI ETR 096 Human factors guidelines for the design of minimum phone based user interface to computer services.",
+    "date": "1993",
+       "publisher": "European Technical Standards Institute",
+    "href": "http://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf",
+    "status": "standard"
+  },
+  "GDPR": {
+    "title": "General Data Protection Regulation",
+    "date": "2023",
+    "publisher": "GDPR eu",
+    "href": "https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/",
+    "status": "standard"
+  },
+  "GLBA": {
+    "title": "Gramm-Leach-Blilely ACT ",
+    "date": "1999",
+
+    "publisher": "US Federal Trade Commission",
+    "href": "https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act",
+    "status": "standard"
+  }
 
 
 	
