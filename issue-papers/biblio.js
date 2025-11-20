@@ -766,7 +766,7 @@ var biblio = {
 								"issue": "4",
 									"href": "https://doi.org/10.1089/cyber.2020.0478",
 										"status": "academic paper"
-	}
+	},
 
   "EFTA": {
     "title": "Electronic Fund Transfer Act Regulation E",
