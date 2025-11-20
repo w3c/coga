@@ -893,6 +893,290 @@ var biblio = {
     "etAl": "true",
     "publisher": "World Wide Web Consortium",
     "href": "https://www.w3.org/TR/voicexml30/"
+  },
+
+"RC-ACLU1": {
+    "title": "Supported Decision-Making: Frequently Asked Questions",
+    "date": "",
+    "authors": [],
+    "etAl": "false",
+    "publisher": "ACLU",
+    "href": "https://www.aclu.org/sites/default/files/field_document/faq_about_supported_decision_making.pdf",
+    "status": "other"
+  },
+	
+  "RC-Alberta1": {
+    "title": "Supported Decision-making",
+    "date": "",
+    "authors": [],
+    "etAl": "false",
+    "publisher": "",
+    "href": "https://www.alberta.ca/supported-decision-making",
+    "status": "other"
+  },
+	
+  "RC-ASAN1": {
+    "title": "Supported Decision-making: Why the Right to Make Choices With Support Matters",
+    "date": "2020",
+    "publisher": "Autistic Self Advocacy Network",
+    "href": "https://autisticadvocacy.org/actioncenter/issues/choices/sdm/",
+    "status": "other"
+  },
+	
+  "RC-CNBC1": {
+    "title": "Here’s how online scammers prey on older Americans, and what they should know to fight back",
+    "date": "November 2019",
+    "authors": [
+      "Kate Fazzini"
+    ],
+    "etAl": "false",
+    "publisher": "CNBC",
+    "href": "https://www.cnbc.com/2019/11/23/new-research-pinpoints-how-elderly-people-are-targeted-in-online-scams.html",
+    "status": "other"
+  },
+	
+  "RC-CPR1": {
+    "title": "About Supported Decision-Making",
+    "date": "2018",
+       "etAl": "false",
+    "publisher": "Center for Public Representation",
+    "href": "https://supporteddecisions.org/about-supported-decision-making/",
+    "status": "other"
+  },
+	
+  "RC-DRCNH1": {
+    "title": "What is Supported Decision-Making?",
+    "date": "2021",
+    "publisher": "DRCNH.org",
+    "href": "https://drcnh.org/know-your-rights/what-is-supported-decision-making/",
+    "status": "other"
+  },
+	
+  "RC-E1": {
+    "title": "Social media for knowledge-sharing: A systematic literature review",
+    "date": " 2019",
+    "authors": [
+     "Yunis Ali Ahmed",
+      "Mohammad Nazir Ahmad"
+    ],
+    "etAl": "true",
+    "publisher": "Elsevier",
+    "href": "https://www.sciencedirect.com/science/article/abs/pii/S0736585317306688",
+    "status": "other"
+  },
+	
+   "RC-GATOR1": {
+    "title": "Guardianship Alternatives and Transfer-of-Rights Glossary",
+    "date": "2023",
+    "publisher": "Gator",
+    "href": "https://gator.communityinclusion.org/#glossary",
+    "status": "other"
+  },
+	
+  "RC-HHS1": {
+    "title": "Informed Consent FAQs",
+    "date": "2025",
+     "publisher": "US Department of Health and Human Services",
+    "href": "https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html",
+    "status": "other"
+  },
+	
+  "RC-SD1": {
+    "title": "Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model",
+    "date": "June 2016",
+    "authors": [
+      "Rongjun Yu"
+    ],
+    "etAl": "false",
+    "publisher": "Elsevier",
+    "href": "https://www.sciencedirect.com/science/article/pii/S2352289515300187?via%3Dihub",
+    "status": "other"
+  },
+	
+  "RC-IG1": {
+    "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Australia",
+    "date": "2016",
+     "publisher": "International Guardianship",
+    "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Australia.pdf",
+    "status": "other"
+  },
+	
+  "RC-IG2": {
+    "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Canada",
+    "date": "2012",
+     "publisher": "International Guardianship",
+    "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Canada.pdf",
+    "status": "other"
+  },
+	
+  "RC-IG3": {
+    "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Japan",
+    "date": "2016",
+       "publisher": "International Guardianship",
+    "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Japan.pdf",
+    "status": "other"
+  },
+
+	  "RC-IG4": {
+    "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship USA",
+    "date": "2016",
+       "publisher": "International Guardianship",
+    "href": "https://www.international-guardianship.com/pdf/GBC/GBC_USA.pdf",
+    "status": "other"
+  },
+
+  "RC-M1": {
+    "title": "Designing good mental health into the way we bank",
+    "date": "Oct 30, 2018",
+    "authors": [
+      "Design Council",
+      "Monzo Bank"
+    ],
+    "etAl": "false",
+    "publisher": "Medium",
+    "href": "https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b",
+    "status": "other"
+  },
+	
+  "RC-MNC1": {
+    "title": "Guardianship",
+    "date": "2024",
+       "publisher": "Minnesota Judicial Branch",
+    "href": "https://www.mncourts.gov/help-topics/guardianship.aspx#tab02Duties",
+    "status": "other"
+  },
+	
+  "RC-NA1": {
+    "title": "The Intersection of Behavioral Health, Mental Health, and Health Literacy",
+    "date": "2019",
+	 "publisher": "National Academies of Sciences, Engineering, and Medicine",
+    "href": "https://nap.nationalacademies.org/catalog/25278/the-intersection-of-behavioral-health-mental-health-and-health-literacy",
+    "status": "other"
+  },
+	
+  "RC-NID1": {
+    "title": "Managing your affairs and enduring power of attorney",
+    "publisher": "NIDirect.gov.uk",
+    "href": "https://www.nidirect.gov.uk/articles/managing-your-affairs-and-enduring-power-attorney",
+    "status": "other"
+  },
+	
+  "RC-NYC1": {
+    "title": "Guardianship of an Intellectually or Developmentally Disabled Adult",
+    "date": "2022",
+    "publisher": "NY Courts",
+    "href": "https://nycourts.gov/courthelp/Guardianship/17A.shtml",
+    "status": "other"
+  },
+	
+  "RC-RC-OPGS1": {
+    "title": "Terms Used, Letter G",
+    "publisher": "Office of the Public Guardian Scotland",
+    "href": "https://www.publicguardian-scotland.gov.uk/general/terms-used#letterg",
+    "status": "other"
+  },
+  "RC-RC-OPGS12": {
+    "title": "Welcome to the Office of the Public Guardian in Scotland",
+      "publisher": "Office of the Public Guardian Scotland",
+    "href": "https://www.publicguardian-scotland.gov.uk/",
+    "status": "other"
+  },
+	
+  "RC-RC-OPGS2": {
+    "title": "What is a guardianship order?",
+    "etAl": "false",
+    "publisher": "Office of the Public Guardian Scotland",
+    "href": "https://www.publicguardian-scotland.gov.uk/guardianship-orders",
+    "status": "other"
+  },
+	
+  "RC-SDMNY1": {
+    "title": "What is Supported Decision-Making?",
+    "date": "2024",
+    "publisher": "SDMNY",
+    "href": "https://sdmny.org/about-supported-decision-making/what-is-supported-decision-making/",
+    "status": "other"
+  },
+  "RC-UKGov1": {
+    "title": "Policy paper: Requesting information about a guardianship order",
+    "date": "2022",
+    "publisher": "Gov.UK",
+    "href": "https://www.gov.uk/government/publications/requesting-information-about-a-guardianship-order",
+    "status": "other"
+  },
+	
+  "RC-W31": {
+    "title": "Invited Expert and Collaborator Agreement",
+    "date": "2014",
+    "publisher": "W3.org",
+    "href": "https://www.w3.org/Consortium/Legal/2007/06-invited-expert",
+    "status": "other"
+  },
+	
+  "RC-YLS1": {
+    "title": "Banking for All: Why Financial Institutions Need to Offer Supportive Banking Features",
+    "date": "April 2019",
+    "authors": [
+      "Brittany Farr",
+           "Brian Cash",
+      "Annie Harper",
+         ],
+    "etAl": "true",
+    "publisher": "Yale Law School",
+    "href": "https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf",
+    "status": "other"
+  },
+	
+  "RC-BS1": {
+    "title": "BlindSquare - “Pioneering accessible navigation - indoors and outdoors. Know where you are, know where you're going, travel with confidence",
+    "date": "July 16, 2025",
+    "etAl": "false",
+    "href": "https://apps.apple.com/ph/app/blindsquare/id500557255",
+    "status": "other"
+  },
+	
+  "RC-WFINDR1": {
+    "title": "Wayfindr Standard Issued to Address Exponentially Growing Indoor Audio Navigation Market.",
+     "date": "2017",
+	  "publisher": "The Global Initiative for Inclusive ICTs",
+	  "href": "https://g3ict.org/publication/wayfindr-accelerating-the-adoption-of-indoor-audio-navigation-with-a-standard-user-interface#:~:text=G3ict%20%E2%80%93%20the%20Global%20Initiative%20for,with%20Disabilities%20at%20UN%20DESA.",
+    "status": "other"
+  },
+
+  "RC-WAI1": {
+    "title": "Accessible Way-Finding using Web Technologies.",
+    "date": "December 3, 2014",
+    "publisher": "W3C Symposia, W3C/WAI Research and Development Working Group",
+    "href": "https://www.w3.org/WAI/RD/2014/way-finding/",
+    "status": "other"
+  },
+	
+  "RC-WAI2": {
+    "title": "Extended Abstract for the RDWG Symposium on Accessible Way-Finding Using Web Technologies, Accessible Wayfinding Ontologies for People with Disabilities",
+    "date": "December 3, 2014",
+    "authors": [
+      "Benner",
+      "J H Karimi",
+    ],
+    "etAl": "false",
+    "publisher": "W3C Proceedings",
+    "href": "https://www.w3.org/WAI/RD/2014/way-finding/paper9",
+    "status": "other"
+  },
+
+  "RC-COGA1": {
+    "title": "Cognitive Accessibility Design Pattern - Provide Help with Directions",
+    "etAl": "false",
+    "publisher": "COGA",
+    "href": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p06-supported-wayfinding/",
+    "status": "other"
+  },
+	
+  "RC-IAD1": {
+    "title": "Wikipedia - Internet Addiction Disorder",
+       "publisher": "Wikipedia",
+    "href": "https://en.wikipedia.org/wiki/Internet_addiction_disorder#:~:text=Internet%20addiction%20disorder%20(IAD)%2C%20also,compulsive%20use%20of%20the%20internet%2C",
+    "status": "other"
   }
 
 
