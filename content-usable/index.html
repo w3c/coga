@@ -246,40 +246,46 @@
        <h1>Design and build</h1>
       		<p>(WIP text)Some common designs create barriers for people with cognitive and learning disabilities. The five principles in this document contain patterns designed to avoid such cognitive accessibility barriers. While this guidance may improve usability for all, these patterns are essential for some people with cognitive and learning disabilities to be able to use content independently.</p>
 		  	<p class="note">This is supplemental guidance beyond the requirements of The Web Content Accessibility Guidelines WCAG [WCAG22]. These cognitive supports are <strong>intended to address barriers that could not be included</strong> in the normative WCAG [WCAG22] specification and may not otherwise be addressed. These cognitive supports are also helping inform the development of WCAG 3.</p>
+
+		  <button id="btnall2" class="btnall" onclick="toggleAll()">+ Expand all</button>
 		  
-	   <section id="design-1-1-clear">
-		   <h2>Design is clear</h2>
+	   <div class="container" id="design-1-1-clear">
+		   <div class="expand1">
+		   		<h2>Design is clear</h2>
+				<p>(WIP text)Focus on clear visual (or audio) communication, and predictable page layouts and navigation.</p>
+				<button id="btn-div1" class="btn" onclick="toggleDiv('div1')">+ Expand</button>
+		   </div>
 
-			<p>(WIP text)Focus on clear visual (or audio) communication, and predictable page layouts and navigation.</p>
-
-		   <section id="design-1-1-clear-1">
-			   <h3>Recognizeable purpose</h3>
-			   <ol type="a">
-				   <li>Make the purpose of your page clear</li>
-				   <li>Use clear visible labels</li>
-				   <li>Use familiar and consistent design patterns</li>
-				   <li>Clearly idenetify controls and their use</li>
-			   </ol>
-		   </section>
-		    <section id="design-1-1-clear-2">
-			   <h3>Distinguishable</h3>
-			    <ol type="a">
-				   <li>Make it easy to find the most important features and tasks on the site</li>
-				   <li>Make it easy to find the most important actions and information on the page</li>
-				   <li>Ensure foreground content is not obscured by background</li>
-				   <li>Use white spacing</li>
-			   </ol>
-		   </section>
-		    <section id="design-1-1-clear-3">
-			   <h3>Consistent</h3>
-			    <ol type="a">
-				   <li>Ensure controls and content do not move unexpectedly</li>
-				   <li>Use familiar and consistent design patterns</li>
-				   <li>Use a predictable hierarchy</li>
-			   </ol>
-
-		   </section>
-	   </section>
+		   <div id="div1" class="collapse"
+			   <section id="design-1-1-clear-1">
+				   <h3>Recognizeable purpose</h3>
+				   <ol type="a">
+					   <li>Make the purpose of your page clear</li>
+					   <li>Use clear visible labels</li>
+					   <li>Use familiar and consistent design patterns</li>
+					   <li>Clearly idenetify controls and their use</li>
+				   </ol>
+			   </section>
+			    <section id="design-1-1-clear-2">
+				   <h3>Distinguishable</h3>
+				    <ol type="a">
+					   <li>Make it easy to find the most important features and tasks on the site</li>
+					   <li>Make it easy to find the most important actions and information on the page</li>
+					   <li>Ensure foreground content is not obscured by background</li>
+					   <li>Use white spacing</li>
+				   </ol>
+			   </section>
+			    <section id="design-1-1-clear-3">
+				   <h3>Consistent</h3>
+				    <ol type="a">
+					   <li>Ensure controls and content do not move unexpectedly</li>
+					   <li>Use familiar and consistent design patterns</li>
+					   <li>Use a predictable hierarchy</li>
+				   </ol>		
+			   </section>
+		   </div>
+	   </div>
+		  
  	   <section id="design-1-2-logical">
 		   <h2>Interactions are logical</h2>
 
