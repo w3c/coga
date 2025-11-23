@@ -835,7 +835,7 @@ var biblio = {
     "href": "https://www.w3.org/Voice/"
   },
 
-  "voicexml2.0": {
+  "voicexml20": {
     "title": "Voice Extensible Markup Language Version 2.0",
     "date": "16 March 2004",
     "authors": [
