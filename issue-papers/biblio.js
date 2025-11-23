@@ -768,6 +768,14 @@ var biblio = {
 										"status": "academic paper"
 	},
 
+	"ACIxD": {
+    "title": "The Association for Conversational Interaction Design Wiki",
+    "date": "2019",
+    "publisher": "The Association for Conversational Interaction Design",
+    "href": "http://acixd.org/wiki/doku.php",
+    "status": "standard"
+  },
+
   "EFTA": {
     "title": "Electronic Fund Transfer Act Regulation E",
     "date": "2025",
