@@ -28,7 +28,7 @@ var biblio = {
 										"status": "academic paper"
 	},
 	"RM-huang1": {
-		"title": "Users’ Adoption of Mental Health Apps: Examining the Impact of Information Cues.",
+		"title": "Users Adoption of Mental Health Apps: Examining the Impact of Information Cues.",
 			"date": "2017",
 				"authors": ["H. Huang", "M. Bashir"],
 					"etAl": "false",
@@ -37,11 +37,11 @@ var biblio = {
 										"status": "academic paper"
 	},
 	"RM-bakker1": {
-		"title": "Mental health smartphone apps: review and evidence-based recommendations for future developments.",
+		"title": "Mental health smartphone apps review and evidence based recommendations for future developments.",
 			"date": "2016",
 				"authors": ["D. Bakker", "N. Kazantizis", "D. Rickwood", "N. Rickard"],
 					"etAl": "false",
-						"publisher": "JMIR Mental Health 3:1",
+						"publisher": "JMIR Mental Health 3 1",
 									"href": "https://mental.jmir.org/2016/1/e7/",
 										"status": "academic paper"
 	},
@@ -52,7 +52,6 @@ var biblio = {
 				"authors": ["J. Torous", "J. Lipschitz", "J. Ng", "M. Firth"],
 					"etAl": "false",
 						"publisher": "JMIR Mental Health 5:1",
-
 									"href": "https://mental.jmir.org/2018/1/e48/",
 										"status": "academic paper"
 	},
@@ -87,7 +86,7 @@ var biblio = {
 										"status": "academic paper"
 	},
 	"RM-lipschitz1": {
-		"title": "Improving Usability of mHealth Technology for Patients With Serious Mental Illness: A Qualitative Study.",
+		"title": "Improving Usability of mHealth Technology for Patients With Serious Mental Illness, A Qualitative Study.",
 			"date": "2018",
 				"authors": ["J. Lipschitz", "J. Torous", "M. Firth", "J. Ng"],
 					"etAl": "false",
@@ -111,8 +110,7 @@ var biblio = {
 			"date": "2020",
 				"authors": ["M. Subramaniam", "C. Shafiee Hanjani", "J. Abdin", "Y. Pang", "S. Picco"],
 					"etAl": "false",
-						"publisher": "JMIR Mental Health 7:8",
-
+						"publisher": "JMIR Mental Health 7 8",
 									"href": "https://mental.jmir.org/2020/8/e17598/",
 										"status": "academic paper"
 	},
@@ -589,7 +587,7 @@ var biblio = {
 									"href": "",
 										"status": "academic paper"
 	},
-	"RM-monteith2": {
+	"RM-monteith1": {
 		"title": "Internet of things issues related to psychiatry",
 			"date": "2021",
 				"authors": ["S. Monteith", "T. Glenn", "J. Geddes", "et al."],
