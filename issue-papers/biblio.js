@@ -1181,7 +1181,7 @@ var biblio = {
   "RC-IAD1": {
     "title": "Wikipedia - Internet Addiction Disorder",
        "publisher": "Wikipedia",
-    "href": "https://en.wikipedia.org/wiki/Internet_addiction_disorder#:~:text=Internet%20addiction%20disorder%20(IAD)%2C%20also,compulsive%20use%20of%20the%20internet%2C",
+    "href": "https://en.wikipedia.org/wiki/Internet_addiction_disorder",
     "status": "other"
   },
 
@@ -1196,16 +1196,17 @@ var biblio = {
     "href": " https://doi.org/10.1093/geronb/gby109",
     "status": "academic paper"
   },
+	
 	 "RM-oneil1": {
-    "title": "Weapons of Math Destruction  Chapter 6 Personality Tests, Chapter 10 Facebook experiments",
+    "title": "Weapons of Math Destruction  Chapter 6 Personality Tests Chapter 10 Facebook experiments",
     "date": "2016",
     "authors": [
-      "O Neil",
-      "Cathy"
+      "O Neil Cathy"
     ],
     "etAl": "false",
     "href": "https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815",
   },
+	
 	  "RM-caplan1": {
     "title": "Relations Among Loneliness, Social Anxiety, and Problematic Internet Use",
     "date": "2007",
@@ -1217,9 +1218,10 @@ var biblio = {
     "href": "https://doi.org/10.1089/cpb.2006.9963",
     "status": "academic paper"
   },
+	
 	  "RM-hardy1": {
     "title": "The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,2018, Pages 282-290, ISSN 0747-5632",
-    "date": "",
+    "date": "2016",
     "authors": [
       "Bruce W Hardy",
       "Jessica Castonguay"
@@ -1229,11 +1231,12 @@ var biblio = {
     "href": "https://doi.org/10.1016/j.chb.2018.04.005",
     "status": "academic paper"
   },
-	 "RM-hökby": {
+	
+	 "RM-hokby": {
     "title": "Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents",
     "date": "2016",
     "authors": [
-      "Hökby S",
+      "Hokby S",
       "Hadlaczky G",
       "Westerlund J"
     ],
@@ -1255,6 +1258,7 @@ var biblio = {
     "href": "",
     "status": "academic paper"
   },
+	
 	  "RC-nas1": {
     "title": "Enhancing Airport Wayfinding for Aging Travelers and Persons with Disabilities Washington, DC",
     "date": "2017",
