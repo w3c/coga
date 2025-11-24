@@ -1183,6 +1183,63 @@ var biblio = {
        "publisher": "Wikipedia",
     "href": "https://en.wikipedia.org/wiki/Internet_addiction_disorder#:~:text=Internet%20addiction%20disorder%20(IAD)%2C%20also,compulsive%20use%20of%20the%20internet%2C",
     "status": "other"
+  },
+
+	"RM-ang1": {
+    "title": "Going Online to Stay Connected Online Social Participation Buffers the Relationship Between Pain and Depression",
+    "date": "2019",
+    "authors": [
+      "Shannon Ang",
+      "Tuo-Yu Chen"
+    ],
+    "etAl": "true",
+    "href": " https://doi.org/10.1093/geronb/gby109",
+    "status": "academic paper"
+  },
+	 "RM-oneil1": {
+    "title": "Weapons of Math Destruction  Chapter 6 Personality Tests, Chapter 10 Facebook experiments",
+    "date": "2016",
+    "authors": [
+      "O Neil",
+      "Cathy"
+    ],
+    "etAl": "false",
+    "href": "https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815",
+  },
+	  "RM-caplan1": {
+    "title": "Relations Among Loneliness, Social Anxiety, and Problematic Internet Use",
+    "date": "2007",
+    "authors": [
+      "S Caplan"
+    ],
+    "etAl": "false",
+    "publisher": "CyberPsychology & Behavior",
+    "href": "https://doi.org/10.1089/cpb.2006.9963",
+    "status": "academic paper"
+  },
+	  "RM-hardy1": {
+    "title": "The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,2018, Pages 282-290, ISSN 0747-5632",
+    "date": "",
+    "authors": [
+      "Bruce W Hardy",
+      "Jessica Castonguay"
+    ],
+    "etAl": "false",
+    "publisher": "Computers in Human Behavior",
+    "href": "https://doi.org/10.1016/j.chb.2018.04.005",
+    "status": "academic paper"
+  },
+	 "RM-hökby": {
+    "title": "Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents",
+    "date": "2016",
+    "authors": [
+      "Hökby S",
+      "Hadlaczky G",
+      "Westerlund J"
+    ],
+    "etAl": "true",
+    "publisher": "JMIR Ment Health ;3(3):e31 Published 2016 Jul 13 doi:102196/mental5925",
+    "status": "academic paper"
   }
 
 
