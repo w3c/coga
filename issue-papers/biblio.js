@@ -1231,7 +1231,7 @@ var biblio = {
     "status": "academic paper"
   },
 
-	 "RM-hokby": {
+	 "RM-hökby1": {
     "title": "Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents",
     "date": "2016",
     "authors": [
@@ -1282,7 +1282,22 @@ var biblio = {
     "publisher": "In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2022), ",
     "href": "https://doi.org/10.1145/3491101.3503557",
     "status": "academic paper"
-}
+},
+	"RM-karim1": {
+    "title": "Social Media Use and Its Connection to Mental Health: A Systematic Review",
+    "date": "2020",
+    "authors": [
+      "Fazida Karim",
+      "Azeezat A Oyewande",
+      "Lamis F Abdalla",
+      "Reem Chaudhry Ehsanullah",
+      "Safeera Khan"
+    ],
+    "etAl": "true",
+    "publisher": "",
+    "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/",
+    "status": "academic paper"
+  }
 	
  
 	
