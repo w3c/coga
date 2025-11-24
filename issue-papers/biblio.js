@@ -1244,7 +1244,7 @@ var biblio = {
     "status": "academic paper"
   },
 	
-  "RM-antonakos1": {
+  "RC-antonakos1": {
     "title": "Wayfinding with Visuo-Spatial Impairment from Stroke and Traumatic Brain Injury",
     "date": "",
     "authors": [
