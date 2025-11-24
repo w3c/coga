@@ -1231,4 +1231,58 @@ var biblio = {
     "href": "https://doi.org/10.1016/j.chb.2018.04.005",
     "status": "academic paper"
   },
+
+	 "RM-hokby": {
+    "title": "Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents",
+    "date": "2016",
+    "authors": [
+      "Hokby S",
+      "Hadlaczky G",
+      "Westerlund J"
+    ],
+    "etAl": "true",
+    "publisher": "JMIR Ment Health3(3):e31 Published 2016 Jul 13 doi:102196/mental5925",
+    "status": "academic paper"
+  },
 	
+  "RM-antonakos1": {
+    "title": "Wayfinding with Visuo-Spatial Impairment from Stroke and Traumatic Brain Injury",
+    "date": "",
+    "authors": [
+      "antonakos C",
+      "Giordani B",
+      "Ashton-Miller J"
+    ],
+    "etAl": "false",
+    "publisher": "",
+    "href": "",
+    "status": "academic paper"
+  },
+	
+	  "RC-nas1": {
+    "title": "Enhancing Airport Wayfinding for Aging Travelers and Persons with Disabilities Washington, DC",
+    "date": "2017",
+    "authors": [
+      "National Academies of Sciences Engineering and Medicine"
+    ],
+    "etAl": "false",
+    "publisher": "National Academies of Sciences Engineering and Medicine",
+    "href": "https://doi.org/10.17226/24930",
+    "status": "academic paper"
+  },
+	
+	"RC-upadhyay1": {
+    "title": "A Case Study on Improving Accessibility of Healthcare Care Facility in Low-resource Settings",
+    "date": "2022",
+    "authors": [
+      "Vikas Upadhyay",
+      "Tigmanshu Bhatnagar",
+      "Catherine Holloway",
+    ],
+    "etAl": "true",
+    "publisher": "In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2022), ",
+    "href": "https://doi.org/10.1145/3491101.3503557",
+    "status": "academic paper"
+
+}	
+}
