@@ -12,215 +12,6 @@
    	<script class="remove">window.addEventListener('load', (event) => {document.respec.ready.then(() => {postRespec();});});</script>
     <link href="../common/common.css" rel="stylesheet" type="text/css" />
     <link href="content-usable.css" rel="stylesheet" type="text/css" />
-
-	  	<script>
-
-		function toggleSotd(divId) {
-			var div = document.getElementById(divId);
-			if (div.classList.contains("collapse")) {
-				div.classList.remove("collapse");
-				div.classList.add("expand");
-				document.getElementById(`btn-sotd`).innerText = "- Collapse Status of This Document";
-			} else {
-				div.classList.remove("expand");
-				div.classList.add("collapse");
-				document.getElementById(`btn-sotd`).innerText = "Show Status of This Document";
-			}
-		}
-
-		function toggleToc(divId) {
-			var div = document.getElementById(divId);
-			if (div.classList.contains("collapse")) {
-				div.classList.remove("collapse");
-				div.classList.add("expand");
-				document.getElementById(`btn-toc`).innerText = "- Collapse Table of Contents";
-			} else {
-				div.classList.remove("expand");
-				div.classList.add("collapse");
-				document.getElementById(`btn-toc`).innerText = "Show Table of Contents";
-			}
-		}
-
-		document.addEventListener('DOMContentLoaded', function () {
-			function toggleAll() {
-				const buttons = document.querySelectorAll('.btnall');
-
-				buttons.forEach(button => {
-					button.addEventListener('click', event => {
-						event.stopImmediatePropagation();
-
-						const isExpanded = button.innerText === '+ Expand all';
-						const toggleText = isExpanded ? '- Collapse all' : '+ Expand all';
-
-
-						buttons.forEach(btn => btn.innerText = toggleText);
-
-						for (let i = 1; i <= 100; i++) {
-							const divId = `div${i}`;
-							const div = document.getElementById(divId);
-							if (div) {
-								if (isExpanded && !div.classList.contains("expand")) {
-									div.classList.add("expand");
-									div.classList.remove("collapse");
-								} else if (!isExpanded && div.classList.contains("expand")) {
-									div.classList.add("collapse");
-									div.classList.remove("expand");
-								}
-							}
-
-							const btnId = `btn-div${i}`;
-							const btn = document.getElementById(btnId);
-							if (btn) {
-								btn.innerText = div.classList.contains("expand") ? "- Collapse" : "+ Expand";
-							}
-						}
-					});
-				});
-			}
-
-			// Call the function to initialize the event listeners
-			toggleAll();
-		});
-		function toggleAllhowto() {
-			var allButtonsTogglehowto = document.getElementById("allButtonsTogglehowto");
-			if (allButtonsTogglehowto.innerText === "+ Expand All") {
-				allButtonsTogglehowto.innerText = "- Collapse All";
-				for (var i = 1; i <= 7; i++) {
-					var divId = `div${i}`;
-					var div = document.getElementById(divId);
-					div.classList.remove("collapse");
-					div.classList.add("expand");
-					document.getElementById(`btn-div${i}`).innerText = "- Collapse";
-				}
-			} else {
-				allButtonsTogglehowto.innerText = "+ Expand All";
-				for (var i = 1; i <= 7; i++) {
-					var divId = `div${i}`;
-					var div = document.getElementById(divId);
-					div.classList.remove("expand");
-					div.classList.add("collapse");
-					document.getElementById(`btn-div${i}`).innerText = "+ Expand";
-				}
-			}
-		}
-		function toggleAlldesign() {
-			var allButtonsToggledesign = document.getElementById("allButtonsToggledesign");
-			if (allButtonsToggledesign.innerText === "+ Expand All") {
-				allButtonsToggledesign.innerText = "- Collapse All";
-				for (var i = 8; i <= 10; i++) {
-					var divId = `div${i}`;
-					var div = document.getElementById(divId);
-					div.classList.remove("collapse");
-					div.classList.add("expand");
-					document.getElementById(`btn-div${i}`).innerText = "- Collapse";
-				}
-			} else {
-				allButtonsToggledesign.innerText = "+ Expand All";
-				for (var i = 8; i <= 10; i++) {
-					var divId = `div${i}`;
-					var div = document.getElementById(divId);
-					div.classList.remove("expand");
-					div.classList.add("collapse");
-					document.getElementById(`btn-div${i}`).innerText = "+ Expand";
-				}
-			}
-		}
-
-		function toggleDiv(divId) {
-			var div = document.getElementById(divId);
-			if (div.classList.contains("collapse")) {
-				div.classList.remove("collapse");
-				div.classList.add("expand");
-				document.getElementById('btn-' + divId).innerText = "- Collapse";
-			} else {
-				div.classList.remove("expand");
-				div.classList.add("collapse");
-				document.getElementById('btn-' + divId).innerText = "+ Expand";
-			}
-		}
-
-
-	</script>
-
-	<script class="remove">
-		var respecConfig = {
-			// embed RDFa data in the output
-			trace: true,
-			useExperimentalStyles: true,
-			doRDFa: '1.1',
-			includePermalinks: true,
-			permalinkEdge: true,
-			permalinkHide: false,
-			noRecTrack: true,
-			tocIntroductory: true,
-			lint: { "no-unused-dfns": false },
-			// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-			specStatus: "ED",
-			//crEnd:                "",
-			//perEnd:               "",
-			diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
-
-			// the specifications short name, as in https://www.w3.org/TR/short-name/
-			shortName: "coga-usable",
-
-
-			// if you wish the publication date to be other than today, set this
-			//publishDate:  "2014-12-11",
-			copyrightStart: "2022",
-			license: "w3c-software-doc",
-
-			// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
-			// and its maturity status
-			// previousPublishDate:  "2005-11-23",
-			// previousMaturity:  "NOTE",
-			//prevRecURI: "",
-			//previousDiffURI: "",
-
-			// if there a publicly available Editors Draft, this is the link
-			// edDraftURI: "https://w3c.github.io/apa/caur/",
-
-			// if this is a LCWD, uncomment and set the end of its review period
-			// lcEnd: "2012-02-21",
-
-			// editors, add as many as you like
-			// only "name" is required
-			editors: [
-				{
-					name: "Lisa",
-					mailto: "lisa1seeman@gmail.com",
-					w3cid: 74028
-				},
-
-			],
-
-			// authors, add as many as you like.
-			// This is optional, uncomment if you have authors as well as editors.
-			// only "name" is required. Same format as editors.
-
-			//authors:  [
-			//    { name: "Your Name", url: "http://example.org/",
-			//      company: "Your Company", companyURI: "http://example.com/" },
-			//],
-
-			/*
-			alternateFormats: [
-				{ uri: 'wcag21-diff.html', label: "Diff from Previous Recommendation" } ,
-				{ uri: 'wcag21.ps', label: "PostScript version" },
-				{ uri: 'wcag21.pdf', label: "PDF version" }
-			],
-			*/
-
-			// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
-
-			group: ["apa", "ag"],
-			github: "w3c/coga",
-			maxTocLevel: 3
-
-		};
-
-
-	</script>
-
   </head>
 
   <body style="line-height: 2; font-size: 1.2em;">
@@ -246,17 +37,13 @@
        <h1>Design and build</h1>
       		<p>(WIP text)Some common designs create barriers for people with cognitive and learning disabilities. The five principles in this document contain patterns designed to avoid such cognitive accessibility barriers. While this guidance may improve usability for all, these patterns are essential for some people with cognitive and learning disabilities to be able to use content independently.</p>
 		  	<p class="note">This is supplemental guidance beyond the requirements of The Web Content Accessibility Guidelines WCAG [WCAG22]. These cognitive supports are <strong>intended to address barriers that could not be included</strong> in the normative WCAG [WCAG22] specification and may not otherwise be addressed. These cognitive supports are also helping inform the development of WCAG 3.</p>
-
-		  <button id="btnall2" class="btnall" onclick="toggleAll()">+ Expand all</button>
 		  
-	   <section id="design-1-1-clear"><div class="container">
-		   <div class="expand1">
+	   <section id="design-1-1-clear">
+	
 		   		<h2>Design is clear</h2>
 				<p>(WIP text)Focus on clear visual (or audio) communication, and predictable page layouts and navigation.</p>
-				<button id="btn-div1" class="btn" onclick="toggleDiv('div1')">+ Expand</button>
-		   </div>
 
-		   <div id="div1" class="collapse">
+		   <section id="design-1-1-clear-1">
 				   <h3>Recognizeable purpose</h3>
 				   <ol type="a">
 					   <li>Make the purpose of your page clear</li>
@@ -264,6 +51,8 @@
 					   <li>Use familiar and consistent design patterns</li>
 					   <li>Clearly idenetify controls and their use</li>
 				   </ol>
+		   </section>
+		   <section id="design-1-1-clear-2">
 				   <h3>Distinguishable</h3>
 				    <ol type="a">
 					   <li>Make it easy to find the most important features and tasks on the site</li>
@@ -271,14 +60,17 @@
 					   <li>Ensure foreground content is not obscured by background</li>
 					   <li>Use white spacing</li>
 				   </ol>
+		   </section>
+		   <section id="design-1-1-clear-3">
 				   <h3>Consistent</h3>
 				    <ol type="a">
 					   <li>Ensure controls and content do not move unexpectedly</li>
 					   <li>Use familiar and consistent design patterns</li>
 					   <li>Use a predictable hierarchy</li>
 				   </ol>		
-		   </div>
-	   </div></section>
+		   </section>
+
+	   </section>
 		  
  	   <section id="design-1-2-logical">
 		   <h2>Interactions are logical</h2>
@@ -296,7 +88,7 @@
 				   <li>Provide feedback based on user action</li>
 			   </ol>
 		   </section>
-		    <section id="design-1-2-logical-2">
+		   <section id="design-1-2-logical-2">
 			   <h3>Straightforward steps</h3>
 			    <ol type="a">
 				   <li>Make short critical paths</li>
@@ -306,7 +98,7 @@
 				   <li>Provide guidance for forms and non-standard controls</li>
 			   </ol>
 		   </section>
-		    <section id="design-1-2-logical-3">
+		   <section id="design-1-2-logical-3">
 			   <h3>Safe and reliable</h3>
 			    <ol type="a">
 				   <li>Design and build forms to prevent mistakes</li>
