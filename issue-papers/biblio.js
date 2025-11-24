@@ -1299,7 +1299,7 @@ var biblio = {
     "status": "academic paper"
   },
 	
- "RM-majid1": {
+ "RC-majid1": {
     "title": "From envy to social anxiety and rumination: How social media site addiction triggers task distraction amongst nurses",
     "date": "2019",
     "authors": [
@@ -1335,7 +1335,70 @@ var biblio = {
     "publisher": " J. technol. behav. sci. 5, 245–257 (2020). ",
     "href": "https://doi.org/10.1007/s41347-020-00134-x",
     "status": "academic paper"
+  },
+	
+	"RC-odgers1": {
+    "title": "Annual Research Review: Adolescent mental health in the digital age: facts, fears, and future directions",
+    "date": "2020",
+    "authors": [
+      "C L Odgers",
+      "M R Jensen"
+    ],
+    "etAl": "false",
+    "publisher": "Child Psychol Psychiatry. 2020 Mar;61(3):336-348. doi: 10.1111/jcpp.13190.  PMID: 31951670; PMCID: PMC8221420. ",
+    "href": "https://pubmed.ncbi.nlm.nih.gov/31951670/ ",
+    "status": "academic paper"
+  },
+
+  "RC-ophoff1": {
+    "title": "Cognitive function vs accessible authentication insights from dyslexia research",
+    "date": "2021",
+    "authors": [
+      "Ophoff",
+      "Jacques",
+      "Graham Johnson",
+      "and Karen Renaud"
+    ],
+    "etAl": "true",
+    "publisher": " Proceedings of the 18th International Web for All Conference. ",
+    "href": " https://dl.acm.org/doi/abs/10.1145/3430263.3452427",
+    "status": "academic paper"
+  }	,
+	"RC-shakya": {
+    "title": "Association of Facebook Use With Compromised Well-Being A Longitudinal Study",
+    "date": "2017",
+    "authors": [
+      "Shakya HB",
+      "Christakis NA"
+    ],
+    "etAl": "false",
+    "publisher": "Am J Epidemiol",
+    "href": "https://pubmed.ncbi.nlm.nih.gov/28093386/",
+    "status": "academic paper"
+  },
+	 "RC-tiggemann1": {
+    "title": "NetTwweens The internet and body image concerns in preteenage girls",
+    "date": "2013",
+    "authors": [
+      "M Tiggemann",
+      "A Slater  "
+    ],
+    "etAl": "false",
+    "publisher": "The Journal of Early Adolescence Volume 34(5) ",
+    "href": "https://doi.org/10.1177/0272431613501083 ",
+    "status": "academic paper"
+  },
+	"RC-venkit1": {
+    "title": "\"Automated ableism: An exploration of explicit disability biases in sentiment and toxicity analysis models",
+    "date": "2023",
+    "authors": [
+      "PN Venkit",
+      "M Srinath",
+      "S Wilson"
+    ],
+    "etAl": "false",
+    "publisher": "arXiv preprint arXiv:2307.09209",
+    "href": "https://arxiv.org/abs/2307.09209",
+    "status": "academic paper"
   }
-	
-	
 };
