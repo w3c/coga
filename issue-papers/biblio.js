@@ -1283,7 +1283,7 @@ var biblio = {
     "href": "https://doi.org/10.1145/3491101.3503557",
     "status": "academic paper"
 },
-	"RM-karim1": {
+	"RC-karim1": {
     "title": "Social Media Use and Its Connection to Mental Health: A Systematic Review",
     "date": "2020",
     "authors": [
@@ -1297,8 +1297,45 @@ var biblio = {
     "publisher": "",
     "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/",
     "status": "academic paper"
+  },
+	
+ "RM-majid1": {
+    "title": "From envy to social anxiety and rumination: How social media site addiction triggers task distraction amongst nurses",
+    "date": "2019",
+    "authors": [
+      "Majid",
+      "A"
+    ],
+    "etAl": "false",
+    "publisher": " Journal of Nursing Mangement.  ",
+    "href": "https://doi.org/10.1111/jonm.12948",
+    "status": "academic paper"
+  },
+	
+ "RC-moura1": {
+    "title": "Encoding normative ethics: On algorithmic bias and disability",
+    "date": "2023",
+    "authors": [
+      "Moura I"
+    ],
+    "etAl": "false",
+    "publisher": "First Monday",
+    "href": "https://doi.org/10.5210/fm.v28i1.12905 ",
+    "status": "academic paper"
+  },
+	
+	"RC-naslund1": {
+    "title": "Social Media and Mental Health: Benefits, Risks, and Opportunities for Research and Practice",
+    "date": "2020",
+    "authors": [
+      "Naslund",
+      "J"
+    ],
+    "etAl": "true",
+    "publisher": " J. technol. behav. sci. 5, 245–257 (2020). ",
+    "href": "https://doi.org/10.1007/s41347-020-00134-x",
+    "status": "academic paper"
   }
 	
- 
 	
 };
