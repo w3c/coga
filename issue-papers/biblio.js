@@ -1364,7 +1364,7 @@ var biblio = {
     "href": " https://dl.acm.org/doi/abs/10.1145/3430263.3452427",
     "status": "academic paper"
   }	,
-	"RC-shakya": {
+	"RC-shakya1": {
     "title": "Association of Facebook Use With Compromised Well-Being A Longitudinal Study",
     "date": "2017",
     "authors": [
