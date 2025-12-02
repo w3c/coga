@@ -28,7 +28,7 @@ var biblio = {
 										"status": "academic paper"
 	},
 	"RM-huang1": {
-		"title": "Users’ Adoption of Mental Health Apps: Examining the Impact of Information Cues.",
+		"title": "Users Adoption of Mental Health Apps: Examining the Impact of Information Cues.",
 			"date": "2017",
 				"authors": ["H. Huang", "M. Bashir"],
 					"etAl": "false",
@@ -37,11 +37,11 @@ var biblio = {
 										"status": "academic paper"
 	},
 	"RM-bakker1": {
-		"title": "Mental health smartphone apps: review and evidence-based recommendations for future developments.",
+		"title": "Mental health smartphone apps review and evidence based recommendations for future developments.",
 			"date": "2016",
 				"authors": ["D. Bakker", "N. Kazantizis", "D. Rickwood", "N. Rickard"],
 					"etAl": "false",
-						"publisher": "JMIR Mental Health 3:1",
+						"publisher": "JMIR Mental Health 3 1",
 									"href": "https://mental.jmir.org/2016/1/e7/",
 										"status": "academic paper"
 	},
@@ -52,7 +52,6 @@ var biblio = {
 				"authors": ["J. Torous", "J. Lipschitz", "J. Ng", "M. Firth"],
 					"etAl": "false",
 						"publisher": "JMIR Mental Health 5:1",
-
 									"href": "https://mental.jmir.org/2018/1/e48/",
 										"status": "academic paper"
 	},
@@ -87,7 +86,7 @@ var biblio = {
 										"status": "academic paper"
 	},
 	"RM-lipschitz1": {
-		"title": "Improving Usability of mHealth Technology for Patients With Serious Mental Illness: A Qualitative Study.",
+		"title": "Improving Usability of mHealth Technology for Patients With Serious Mental Illness, A Qualitative Study.",
 			"date": "2018",
 				"authors": ["J. Lipschitz", "J. Torous", "M. Firth", "J. Ng"],
 					"etAl": "false",
@@ -111,8 +110,7 @@ var biblio = {
 			"date": "2020",
 				"authors": ["M. Subramaniam", "C. Shafiee Hanjani", "J. Abdin", "Y. Pang", "S. Picco"],
 					"etAl": "false",
-						"publisher": "JMIR Mental Health 7:8",
-
+						"publisher": "JMIR Mental Health 7 8",
 									"href": "https://mental.jmir.org/2020/8/e17598/",
 										"status": "academic paper"
 	},
@@ -589,7 +587,7 @@ var biblio = {
 									"href": "",
 										"status": "academic paper"
 	},
-	"RM-monteith2": {
+	"RM-monteith1": {
 		"title": "Internet of things issues related to psychiatry",
 			"date": "2021",
 				"authors": ["S. Monteith", "T. Glenn", "J. Geddes", "et al."],
@@ -766,6 +764,641 @@ var biblio = {
 								"issue": "4",
 									"href": "https://doi.org/10.1089/cyber.2020.0478",
 										"status": "academic paper"
-	}
+	},
+
+	"ACIxD": {
+    "title": "The Association for Conversational Interaction Design Wiki",
+    "date": "2019",
+    "publisher": "The Association for Conversational Interaction Design",
+    "href": "http://acixd.org/wiki/doku.php",
+    "status": "standard"
+  },
+
+  "EFTA": {
+    "title": "Electronic Fund Transfer Act Regulation E",
+    "date": "2025",
+    "etAl": "false",
+    "publisher": "National Credit Union Administration",
+    "href": "https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e"
+  
+  },
 	
+	"CA": {
+    "title": "The Colby Act",
+    "date": "2021",
+    "etAl": "false",
+    "publisher": " Alabama Care",
+    "href": "https://www.youtube.com/watch?v=00ahyKABIAw"
+    
+  },
+
+ "ETSI-ES202-076V211": {
+    "title": "ETSI ES 202 076 V2.1.1 2009-06: Generic spoken command vocabulary for ICT devices and services.",
+    "date": "2009",
+    "publisher": "European Technical Standards Institute",
+    "href": "http://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"
+
+  },
+  "ETSI-ETR-096": {
+    "title": "ETSI ETR 096 Human factors guidelines for the design of minimum phone based user interface to computer services.",
+    "date": "1993",
+       "publisher": "European Technical Standards Institute",
+    "href": "http://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf"
+ 
+  },
+	
+  "GDPR": {
+    "title": "General Data Protection Regulation",
+    "date": "2023",
+    "publisher": "GDPR eu",
+    "href": "https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/"
+  },
+	
+  "GLBA": {
+    "title": "Gramm-Leach-Blilely ACT ",
+    "date": "1999",
+    "publisher": "US Federal Trade Commission",
+    "href": "https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act"
+  },
+	
+  "MENCAP": {
+    "title": "The Mental Capacity Act",
+    "publisher": "MenCap.org",
+    "href": "https://www.mencap.org.uk/advice-and-support/mental-capacity-act"
+  },
+
+  "Title42-section255": {
+    "title": "U.S. Telecommunications Act Section 255 Accessibility Guidelines",
+    "date": "1996",
+    "publisher": "United States Code, Title 42, Section 255.",
+    "href": "https://www.access-board.gov/ict/guide/2555_guide.md.html"
+  },
+
+  "VBWG": {
+    "title": "Voice Browser Working Group",
+    "date": "12 October 2015",
+       "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/Voice/"
+  },
+
+  "voicexml20": {
+    "title": "Voice Extensible Markup Language Version 2.0",
+    "date": "16 March 2004",
+    "authors": [
+      "S. McGlashan",
+      "D. Burnett",
+      "J. Carter",
+      "P. Danielsen",
+      "J. Ferrans",
+      "A. Hunt",
+      "B. Lucas",
+      "B. Porter",
+      "K. Rehor",
+      "S. Tryphonas"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml20/"
+  },
+
+  "voicexml21": {
+    "title": "Voice Extensible Markup Language  2.1",
+    "date": "2007",
+    "authors": [
+      "M. Oshry",
+      "R.J. Auburn",
+      "P. Baggia",
+      "M. Bodell",
+      "D. Burke",
+      "D. Burnett",
+      "E. Candell",
+      "J. Carter",
+      "S. McGlashan",
+      "A. Lee",
+      "B. Porter"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml21/"
+  },
+
+  "voicexml30": {
+    "title": "Voice Extensible Markup Language  3.0",
+    "date": "2010",
+    "authors": [
+      "S. McGlashan",
+      "D. Burnett",
+      "R. Akolkar",
+      "R.J. Auburn",
+      "P. Baggia",
+      "J. Barnett",
+      "M. Bodell",
+      "J. Carter",
+      "M. Deshmukh"
+    ],
+    "etAl": "true",
+    "publisher": "World Wide Web Consortium",
+    "href": "https://www.w3.org/TR/voicexml30/"
+  },
+
+"RC-ACLU1": {
+    "title": "Supported Decision-Making: Frequently Asked Questions",
+    "date": "",
+    "authors": [],
+    "etAl": "false",
+    "publisher": "ACLU",
+    "href": "https://www.aclu.org/sites/default/files/field_document/faq_about_supported_decision_making.pdf",
+    "status": "other"
+  },
+	
+  "RC-Alberta1": {
+    "title": "Supported Decision-making",
+    "date": "",
+    "authors": [],
+    "etAl": "false",
+    "publisher": "",
+    "href": "https://www.alberta.ca/supported-decision-making",
+    "status": "other"
+  },
+	
+  "RC-ASAN1": {
+    "title": "Supported Decision-making: Why the Right to Make Choices With Support Matters",
+    "date": "2020",
+    "publisher": "Autistic Self Advocacy Network",
+    "href": "https://autisticadvocacy.org/actioncenter/issues/choices/sdm/",
+    "status": "other"
+  },
+	
+  "RC-CNBC1": {
+    "title": "Here’s how online scammers prey on older Americans, and what they should know to fight back",
+    "date": "November 2019",
+    "authors": [
+      "Kate Fazzini"
+    ],
+    "etAl": "false",
+    "publisher": "CNBC",
+    "href": "https://www.cnbc.com/2019/11/23/new-research-pinpoints-how-elderly-people-are-targeted-in-online-scams.html",
+    "status": "other"
+  },
+	
+  "RC-CPR1": {
+    "title": "About Supported Decision-Making",
+    "date": "2018",
+       "etAl": "false",
+    "publisher": "Center for Public Representation",
+    "href": "https://supporteddecisions.org/about-supported-decision-making/",
+    "status": "other"
+  },
+	
+  "RC-DRCNH1": {
+    "title": "What is Supported Decision-Making?",
+    "date": "2021",
+    "publisher": "DRCNH.org",
+    "href": "https://drcnh.org/know-your-rights/what-is-supported-decision-making/",
+    "status": "other"
+  },
+	
+  "RC-E1": {
+    "title": "Social media for knowledge-sharing: A systematic literature review",
+    "date": " 2019",
+    "authors": [
+     "Yunis Ali Ahmed",
+      "Mohammad Nazir Ahmad"
+    ],
+    "etAl": "true",
+    "publisher": "Elsevier",
+    "href": "https://www.sciencedirect.com/science/article/abs/pii/S0736585317306688",
+    "status": "other"
+  },
+	
+   "RC-GATOR1": {
+    "title": "Guardianship Alternatives and Transfer-of-Rights Glossary",
+    "date": "2023",
+    "publisher": "Gator",
+    "href": "https://gator.communityinclusion.org/#glossary",
+    "status": "other"
+  },
+	
+  "RC-HHS1": {
+    "title": "Informed Consent FAQs",
+    "date": "2025",
+     "publisher": "US Department of Health and Human Services",
+    "href": "https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html",
+    "status": "other"
+  },
+	
+  "RC-SD1": {
+    "title": "Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model",
+    "date": "June 2016",
+    "authors": [
+      "Rongjun Yu"
+    ],
+    "etAl": "false",
+    "publisher": "Elsevier",
+    "href": "https://www.sciencedirect.com/science/article/pii/S2352289515300187?via%3Dihub",
+    "status": "other"
+  },
+	
+  "RC-IG1": {
+    "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Australia",
+    "date": "2016",
+     "publisher": "International Guardianship",
+    "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Australia.pdf",
+    "status": "other"
+  },
+	
+  "RC-IG2": {
+    "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Canada",
+    "date": "2012",
+     "publisher": "International Guardianship",
+    "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Canada.pdf",
+    "status": "other"
+  },
+	
+  "RC-IG3": {
+    "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Japan",
+    "date": "2016",
+       "publisher": "International Guardianship",
+    "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Japan.pdf",
+    "status": "other"
+  },
+
+	  "RC-IG4": {
+    "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship USA",
+    "date": "2016",
+       "publisher": "International Guardianship",
+    "href": "https://www.international-guardianship.com/pdf/GBC/GBC_USA.pdf",
+    "status": "other"
+  },
+
+  "RC-M1": {
+    "title": "Designing good mental health into the way we bank",
+    "date": "Oct 30, 2018",
+    "authors": [
+      "Design Council",
+      "Monzo Bank"
+    ],
+    "etAl": "false",
+    "publisher": "Medium",
+    "href": "https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b",
+    "status": "other"
+  },
+	
+  "RC-MNC1": {
+    "title": "Guardianship",
+    "date": "2024",
+       "publisher": "Minnesota Judicial Branch",
+    "href": "https://www.mncourts.gov/help-topics/guardianship.aspx#tab02Duties",
+    "status": "other"
+  },
+	
+  "RC-NA1": {
+    "title": "The Intersection of Behavioral Health, Mental Health, and Health Literacy",
+    "date": "2019",
+	 "publisher": "National Academies of Sciences, Engineering, and Medicine",
+    "href": "https://nap.nationalacademies.org/catalog/25278/the-intersection-of-behavioral-health-mental-health-and-health-literacy",
+    "status": "other"
+  },
+	
+  "RC-NID1": {
+    "title": "Managing your affairs and enduring power of attorney",
+    "publisher": "NIDirect.gov.uk",
+    "href": "https://www.nidirect.gov.uk/articles/managing-your-affairs-and-enduring-power-attorney",
+    "status": "other"
+  },
+	
+  "RC-NYC1": {
+    "title": "Guardianship of an Intellectually or Developmentally Disabled Adult",
+    "date": "2022",
+    "publisher": "NY Courts",
+    "href": "https://nycourts.gov/courthelp/Guardianship/17A.shtml",
+    "status": "other"
+  },
+	
+  "RC-OPGS1": {
+    "title": "Terms Used, Letter G",
+    "publisher": "Office of the Public Guardian Scotland",
+    "href": "https://www.publicguardian-scotland.gov.uk/general/terms-used#letterg",
+    "status": "other"
+  },
+  "RC-OPGS12": {
+    "title": "Welcome to the Office of the Public Guardian in Scotland",
+      "publisher": "Office of the Public Guardian Scotland",
+    "href": "https://www.publicguardian-scotland.gov.uk/",
+    "status": "other"
+  },
+	
+  "RC-OPGS2": {
+    "title": "What is a guardianship order?",
+    "etAl": "false",
+    "publisher": "Office of the Public Guardian Scotland",
+    "href": "https://www.publicguardian-scotland.gov.uk/guardianship-orders",
+    "status": "other"
+  },
+	
+  "RC-SDMNY1": {
+    "title": "What is Supported Decision-Making?",
+    "date": "2024",
+    "publisher": "SDMNY",
+    "href": "https://sdmny.org/about-supported-decision-making/what-is-supported-decision-making/",
+    "status": "other"
+  },
+  "RC-UKGov1": {
+    "title": "Policy paper: Requesting information about a guardianship order",
+    "date": "2022",
+    "publisher": "Gov.UK",
+    "href": "https://www.gov.uk/government/publications/requesting-information-about-a-guardianship-order",
+    "status": "other"
+  },
+	
+  "RC-W31": {
+    "title": "Invited Expert and Collaborator Agreement",
+    "date": "2014",
+    "publisher": "W3.org",
+    "href": "https://www.w3.org/Consortium/Legal/2007/06-invited-expert",
+    "status": "other"
+  },
+	
+  "RC-YLS1": {
+    "title": "Banking for All: Why Financial Institutions Need to Offer Supportive Banking Features",
+    "date": "April 2019",
+    "authors": [
+      "Brittany Farr",
+           "Brian Cash",
+      "Annie Harper",
+         ],
+    "etAl": "true",
+    "publisher": "Yale Law School",
+    "href": "https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf",
+    "status": "other"
+  },
+	
+  "RC-BS1": {
+    "title": "BlindSquare - “Pioneering accessible navigation - indoors and outdoors. Know where you are, know where you're going, travel with confidence",
+    "date": "July 16, 2025",
+    "etAl": "false",
+    "href": "https://apps.apple.com/ph/app/blindsquare/id500557255",
+    "status": "other"
+  },
+	
+  "RC-WFINDR1": {
+    "title": "Wayfindr Standard Issued to Address Exponentially Growing Indoor Audio Navigation Market.",
+     "date": "2017",
+	  "publisher": "The Global Initiative for Inclusive ICTs",
+	  "href": "https://g3ict.org/publication/wayfindr-accelerating-the-adoption-of-indoor-audio-navigation-with-a-standard-user-interface#:~:text=G3ict%20%E2%80%93%20the%20Global%20Initiative%20for,with%20Disabilities%20at%20UN%20DESA.",
+    "status": "other"
+  },
+
+  "RC-WAI1": {
+    "title": "Accessible Way-Finding using Web Technologies.",
+    "date": "December 3, 2014",
+    "publisher": "W3C Symposia, W3C/WAI Research and Development Working Group",
+    "href": "https://www.w3.org/WAI/RD/2014/way-finding/",
+    "status": "other"
+  },
+	
+  "RC-WAI2": {
+    "title": "Extended Abstract for the RDWG Symposium on Accessible Way-Finding Using Web Technologies, Accessible Wayfinding Ontologies for People with Disabilities",
+    "date": "December 3, 2014",
+    "authors": [
+      "Benner",
+      "J H Karimi",
+    ],
+    "etAl": "false",
+    "publisher": "W3C Proceedings",
+    "href": "https://www.w3.org/WAI/RD/2014/way-finding/paper9",
+    "status": "other"
+  },
+
+  "RC-COGA1": {
+    "title": "Cognitive Accessibility Design Pattern - Provide Help with Directions",
+    "etAl": "false",
+    "publisher": "COGA",
+    "href": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p06-supported-wayfinding/",
+    "status": "other"
+  },
+	 "RC-IAD1": {
+    "title": "Wikipedia - Internet Addiction Disorder",
+       "publisher": "Wikipedia",
+    "href": "https://en.wikipedia.org/wiki/Internet_addiction_disorder",
+    "status": "other"
+  },
+
+  "RM-ang1": {
+    "title": "Going Online to Stay Connected Online Social Participation Buffers the Relationship Between Pain and Depression",
+    "date": "2019",
+    "authors": [
+      "Shannon Ang",
+      "Tuo-Yu Chen"
+    ],
+    "etAl": "true",
+    "href": " https://doi.org/10.1093/geronb/gby109",
+    "status": "academic paper"
+  },
+	
+	  "RM-oneil1": {
+      "title": "Weapons of Math Destruction  Chapter 6 Personality Tests Chapter 10 Facebook experiments",
+      "date": "2016",
+      "authors": [
+      "O Neil Cathy"
+    ],
+    "etAl": "false",
+    "href": "https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815"
+  },
+	
+	  "RM-caplan1": {
+    "title": "Relations Among Loneliness, Social Anxiety, and Problematic Internet Use",
+    "date": "2007",
+    "authors": [
+      "S Caplan"
+    ],
+    "etAl": "false",
+    "publisher": "CyberPsychology & Behavior",
+    "href": "https://doi.org/10.1089/cpb.2006.9963",
+    "status": "academic paper"
+  },
+	
+	  "RM-hardy1": {
+    "title": "The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,Pages 282-290, ISSN 0747-5632",
+    "date": "2016",
+    "authors": [
+      "Bruce W Hardy",
+      "Jessica Castonguay"
+    ],
+    "etAl": "false",
+    "publisher": "Computers in Human Behavior",
+    "href": "https://doi.org/10.1016/j.chb.2018.04.005",
+    "status": "academic paper"
+  },
+
+	 "RM-hökby1": {
+    "title": "Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents",
+    "date": "2016",
+    "authors": [
+      "Hokby S",
+      "Hadlaczky G",
+      "Westerlund J"
+    ],
+    "etAl": "true",
+    "publisher": "JMIR Ment Health3(3):e31 Published 2016 Jul 13 doi:102196/mental5925",
+    "status": "academic paper"
+  },
+	
+  "RC-antonakos1": {
+    "title": "Wayfinding with Visuo-Spatial Impairment from Stroke and Traumatic Brain Injury",
+    "date": "",
+    "authors": [
+      "antonakos C",
+      "Giordani B",
+      "Ashton-Miller J"
+    ],
+    "etAl": "false",
+    "publisher": "",
+    "href": "",
+    "status": "academic paper"
+  },
+	
+	  "RC-nas1": {
+    "title": "Enhancing Airport Wayfinding for Aging Travelers and Persons with Disabilities Washington, DC",
+    "date": "2017",
+    "authors": [
+      "National Academies of Sciences Engineering and Medicine"
+    ],
+    "etAl": "false",
+    "publisher": "National Academies of Sciences Engineering and Medicine",
+    "href": "https://doi.org/10.17226/24930",
+    "status": "academic paper"
+  },
+	
+	"RC-upadhyay1": {
+    "title": "A Case Study on Improving Accessibility of Healthcare Care Facility in Low-resource Settings",
+    "date": "2022",
+    "authors": [
+      "Vikas Upadhyay",
+      "Tigmanshu Bhatnagar",
+      "Catherine Holloway",
+    ],
+    "etAl": "true",
+    "publisher": "In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2022), ",
+    "href": "https://doi.org/10.1145/3491101.3503557",
+    "status": "academic paper"
+},
+	"RC-karim1": {
+    "title": "Social Media Use and Its Connection to Mental Health: A Systematic Review",
+    "date": "2020",
+    "authors": [
+      "Fazida Karim",
+      "Azeezat A Oyewande",
+      "Lamis F Abdalla",
+      "Reem Chaudhry Ehsanullah",
+      "Safeera Khan"
+    ],
+    "etAl": "true",
+    "publisher": "",
+    "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/",
+    "status": "academic paper"
+  },
+	
+ "RC-majid1": {
+    "title": "From envy to social anxiety and rumination: How social media site addiction triggers task distraction amongst nurses",
+    "date": "2019",
+    "authors": [
+      "Majid",
+      "A"
+    ],
+    "etAl": "false",
+    "publisher": " Journal of Nursing Mangement.  ",
+    "href": "https://doi.org/10.1111/jonm.12948",
+    "status": "academic paper"
+  },
+	
+ "RC-moura1": {
+    "title": "Encoding normative ethics: On algorithmic bias and disability",
+    "date": "2023",
+    "authors": [
+      "Moura I"
+    ],
+    "etAl": "false",
+    "publisher": "First Monday",
+    "href": "https://doi.org/10.5210/fm.v28i1.12905 ",
+    "status": "academic paper"
+  },
+	
+	"RC-naslund1": {
+    "title": "Social Media and Mental Health: Benefits, Risks, and Opportunities for Research and Practice",
+    "date": "2020",
+    "authors": [
+      "Naslund",
+      "J"
+    ],
+    "etAl": "true",
+    "publisher": " J. technol. behav. sci. 5, 245–257 (2020). ",
+    "href": "https://doi.org/10.1007/s41347-020-00134-x",
+    "status": "academic paper"
+  },
+	
+	"RC-odgers1": {
+    "title": "Annual Research Review: Adolescent mental health in the digital age: facts, fears, and future directions",
+    "date": "2020",
+    "authors": [
+      "C L Odgers",
+      "M R Jensen"
+    ],
+    "etAl": "false",
+    "publisher": "Child Psychol Psychiatry. 2020 Mar;61(3):336-348. doi: 10.1111/jcpp.13190.  PMID: 31951670; PMCID: PMC8221420. ",
+    "href": "https://pubmed.ncbi.nlm.nih.gov/31951670/ ",
+    "status": "academic paper"
+  },
+
+  "RC-ophoff1": {
+    "title": "Cognitive function vs accessible authentication insights from dyslexia research",
+    "date": "2021",
+    "authors": [
+      "Ophoff",
+      "Jacques",
+      "Graham Johnson",
+      "and Karen Renaud"
+    ],
+    "etAl": "true",
+    "publisher": " Proceedings of the 18th International Web for All Conference. ",
+    "href": " https://dl.acm.org/doi/abs/10.1145/3430263.3452427",
+    "status": "academic paper"
+  }	,
+	"RC-shakya1": {
+    "title": "Association of Facebook Use With Compromised Well-Being A Longitudinal Study",
+    "date": "2017",
+    "authors": [
+      "Shakya HB",
+      "Christakis NA"
+    ],
+    "etAl": "false",
+    "publisher": "Am J Epidemiol",
+    "href": "https://pubmed.ncbi.nlm.nih.gov/28093386/",
+    "status": "academic paper"
+  },
+	 "RC-tiggemann1": {
+    "title": "NetTwweens The internet and body image concerns in preteenage girls",
+    "date": "2013",
+    "authors": [
+      "M Tiggemann",
+      "A Slater  "
+    ],
+    "etAl": "false",
+    "publisher": "The Journal of Early Adolescence Volume 34(5) ",
+    "href": "https://doi.org/10.1177/0272431613501083 ",
+    "status": "academic paper"
+  },
+	"RC-venkit1": {
+    "title": "\"Automated ableism: An exploration of explicit disability biases in sentiment and toxicity analysis models",
+    "date": "2023",
+    "authors": [
+      "PN Venkit",
+      "M Srinath",
+      "S Wilson"
+    ],
+    "etAl": "false",
+    "publisher": "arXiv preprint arXiv:2307.09209",
+    "href": "https://arxiv.org/abs/2307.09209",
+    "status": "academic paper"
+  }
 };

@@ -1,26 +1,99 @@
 <!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 	<head><meta charset="utf-8"/>
 		<title>Cognitive Accessibility Research Modules - Online Safety and Wellbeing (Algorithms and Data)</title>
+			
+	<meta name="description" content="Issues with online safety and wellbeing (Algorithms, AI and Data) for people with cognitive disabilities."/>
+	<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
+		<script src="biblio.js" class="remove"></script>
+		<script class="remove">
+	var respecConfig = {
+		// embed RDFa data in the output
+		trace:  true,
+		doRDFa: '1.1',
+		includePermalinks: true,
+		permalinkEdge:     true,
+		permalinkHide:     false,
+		tocIntroductory: true,
+		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+		specStatus:           "ED",
+		noRecTrack: true,
+		//crEnd:                "2012-04-30",
+		//perEnd:               "2013-07-23",
+		//publishDate:          "2013-08-22",
+		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 		
+		// the specifications short name, as in http://www.w3.org/TR/short-name/
+ shortName: "COGA-Safety",
 		
-	<meta name="description" content="Issues for users with cognitive disabilities using Online Safety and Wellbeing (Algorithms and Data)."/>
-		<script
- src="https://www.w3.org/Tools/respec/respec-w3c"
- class="remove"
- defer
- ></script>
- <script class="remove">
- // All config options at https://respec.org/docs/
- var respecConfig = {
- specStatus: "ED",
- editors: [{ name: "Your Name", url: "https://your-site.com" }],
- github: "w3c/coga/",
- shortName: "safety",
- xref: "safety",
- group: "COGA",
- };
- </script>
 
+		// if you wish the publication date to be other than today, set this
+		//publishDate:  "2017-05-16",
+		copyrightStart:  "2017",
+		license: "document",
+
+		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+		// and its maturity status
+		//previousPublishDate:  "",
+		//previousMaturity:  "",
+		//prevRecURI: "",
+		//previousDiffURI: "",
+
+		// if there a publicly available Editors Draft, this is the link
+		edDraftURI: "https://w3c.github.io/coga/issue-papers/",
+
+		// if this is a LCWD, uncomment and set the end of its review period
+		// lcEnd: "2012-02-21",
+
+		// editors, add as many as you like
+		// only "name" is required
+		editors: [
+			{
+				name: "Lisa Seeman-Horwitz",
+				mailto: "lisa.seeman@zoho.com"
+			},
+			
+	 //{ name: "Rebecca Monteleone", url: "utoledo.edu",mailto: "rebecca.monteleone@utoledo.edu" },  { name: "Eric Hind",}	
+		],
+
+		// authors, add as many as you like. 
+		// This is optional, uncomment if you have authors as well as editors.
+		// only "name" is required. Same format as editors.
+
+		//authors:  [
+		//    { name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],
+
+		/*
+		alternateFormats: [
+			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.pdf', label: "PDF version" }
+		],
+		*/
+		
+		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+		
+		// name of the WG
+		wg:           [  "Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
+		
+		// URI of the public WG page
+		wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
+		
+		// name (with the @w3c.org) of the public mailing to which comments are due
+		wgPublicList: "public-coga-comments",
+		
+		// URI of the patent status for this WG, for Rec-track documents
+		// !!!! IMPORTANT !!!!
+		// This is important for Rec-track documents, do not copy a patent URI from a random
+		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+		// Team Contact.
+		wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
+		//maxTocLevel: 2,
+		
+		localBiblio: biblio,
+	};
+		</script>
 	</head>
 		
  <body>
@@ -53,6 +126,10 @@
         designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
     </li>
 </ul>
+	 <p>This module focuses on explaining the issues that lead to diverse user
+needs impacting web accessibility. For this reason, it may sometimes
+address a broader scope than web accessibility alone.</p>
+
 <p>This document is part of a set of related informative publications from the <a  href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a  href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a  href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a  href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
 	</section>
 		
@@ -110,7 +187,7 @@
 </ul>
 <p>Examples of specific disabilities include attention deficit hyperactivity disorder (ADHD), autism spectrum disorder, dyslexia and dyscalculia, mild cognitive impairment (MCI), Down syndrome, asphasia, and others. 
 </p>
-<p><br/>People with disabilities that require cognitive accessibility support can benefit from using the internet. However, there are risks as all users are at risk of experiencing activities like fraud, terrorism, extortion, harassment and hacking.These activities are collectively referred to as cybercrime [RM-Hökby1].</p>
+<p><br/>People with disabilities that require cognitive accessibility support can benefit from using the internet. However, there are risks as all users are at risk of experiencing activities like fraud, terrorism, extortion, harassment and hacking.These activities are collectively referred to as cybercrime [[RM-hökby1]].</p>
 <p>Examples of cybercrime include:</p>
 <ul>
     <li>
@@ -125,9 +202,10 @@
 </ul>
 <p>People with cognitive and learning disabilities are at higher risk and may be unable to take the recommended safety precautions.</p>
 <p>Not all activities that affect people's safety are illegal. Personal information can be stored and sold to third parties or stolen. This information can be used to hurt the user, including through financial or emotional exploitation. This can include exploiting the user for marketing or to increase click throughs.</p>
-<p>Fear of these dangers can prevent people from using apps and websites that may be valuable to them. For example, mental health apps are a potentially important part of health care. However, research shows that many people do not use mental health services via the web or apps due to concerns about whether mental health information is kept private and how their data is used [RM-Lipschitz1].</p>
+<p>Fear of these dangers can prevent people from using apps and websites that may be valuable to them. For example, mental health apps are a potentially important part of health care. However, research shows that many people do not use mental health services via the web or apps due to concerns about whether mental health information is kept private and how their data is used [[RM-lipschitz1]].</p>
 <p>Other research shows people may avoid apps that make them frustrated with the complexity and cognitive load. This deprives users of support and services. It also means fewer people with cognitive and learning disabilities and mental health conditions are in the data surrounding these services. This makes many groups invisible or underrepresented in data-driven decisions.</p>
 <p>In this issue paper, we lay out potential safety issues for people with cognitive and learning disabilities. Proposed solutions include integrating processes that support safety and user control to ensure mental health, wellbeing, supported consent and decision making, privacy and more. Such a solution could be part of its own certification process.</p>
+	 <p>This module focuses on explaining the issues that lead to diverse userneeds impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
   </section> 
 <section>
 	<h2>Safety Issues for People with Cognitive disabilities</h2>
@@ -135,7 +213,7 @@
 <p class="ednote"> Potentially rewriting this section to focus on the issues on development end that lead to risk/vulnerabilities.</s>
 </p>
 <h4>Hackers and Identity Theft</h4>
-<p>People with cognitive and learning disabilities may not be able to easily use some of the common security measures used on the Web such as two-factor authentication and complex, unique passwords for each login [RM-Ophoff1].</p>
+<p>People with cognitive and learning disabilities may not be able to easily use some of the common security measures used on the Web such as two-factor authentication and complex, unique passwords for each login [[RC-ophoff1]].</p>
 <p>Extra security precautions to increase password strength often make this group more vulnerable to "human error". This can encourage risky behavior such as keeping a list of passwords on a desk that can be viewed by anyone with physical access to the room. Also, when users ask for assistance to complete these security procedures, they can put themselves at high risk of being abused by those they trust to help.</p>
 <h4>Con Artists and Deception</h4>
 <p>These cyber-criminals use deception to gain trust. This enables them to negatively influence the behavior of vulnerable individuals. People with cognitive and learning disabilities who experience difficulty understanding social cues may fail to accurately identify a potentially harmful situation. Those who have difficulty understanding others may be more trusting and more easily believe false information. Also, people with disabilities affecting reasoning, attention or memory may be similarly vulnerable to these situations, as they may struggle to validate presented information.</p>
@@ -160,23 +238,23 @@
 <p>Personalization is important, especially as a way to avoid conflict when meeting varying user needs. However, there is a significant risk that if poorly implemented, user information and vulnerabilities can be exposed. This puts the most vulnerable users of this population at the greatest risk.</p>
 <h4>Algorithms and Privacy</h4>
 <p>Algorithms are computer programs that try to solve a specific problem or achieve a goal. (Goals are set by the programmers and company they work for). Currently, computer algorithms are increasingly responsible for automated decision-making. These decisions use information from tracking our everyday behaviors online and via apps. This data is often sold to or used by companies, including organizations providing critical services such as employment, health care, and credit.</p>
-<p>This creates multiple problems. Many users know that they are at risk of scams and data misuse, and are therefore afraid of using digital services that they may need. All users in a recent study had concerns about privacy and their data being inappropriately shared [RM-Rotondi1].</p>
-<p>The misuse of algorithms has the potential to cause financial harm to people with cognitive and learning disabilities and mental health conditions. As an example, a patent could be filed that included an algorithm that could help financial institutions analyze a person's social network and use that data with regard to granting a person's loan application. [RM-O'Neil1]</p>
-<p>People with cognitive and learning disabilities may be vulnerable to risks related to algorithms and big data. This includes errors and biases in the algorithm and problems with privacy [RM-Venkit1] [RM-Moura1] [RM-Monteith1].</p>
-<p>In another use case, Internet of things (IoT) devices are involved more and more in providing medical care. This can include support for mental illness and cognitive support. Massive amounts of data from as many digital activities through devices as possible are collected. This erodes people's knowledge of what is public, as much of this data is done in homes and other private settings. This data is then used to drive decisions such as loans, insurance coverage, and more. Privacy becomes more important for individuals with mental health diagnoses and cognitive disabilities, especially where there is prejudice and stigma [RM-Monteith1].</p>
+<p>This creates multiple problems. Many users know that they are at risk of scams and data misuse, and are therefore afraid of using digital services that they may need. All users in a recent study had concerns about privacy and their data being inappropriately shared [[RM-rotondi1]].</p>
+<p>The misuse of algorithms has the potential to cause financial harm to people with cognitive and learning disabilities and mental health conditions. As an example, a patent could be filed that included an algorithm that could help financial institutions analyze a person's social network and use that data with regard to granting a person's loan application. [[RM-oneil1]]</p>
+<p>People with cognitive and learning disabilities may be vulnerable to risks related to algorithms and big data. This includes errors and biases in the algorithm and problems with privacy [[RC-venkit1]] [[RC-moura1]] [[RM-monteith1]].</p>
+<p>In another use case, Internet of things (IoT) devices are involved more and more in providing medical care. This can include support for mental illness and cognitive support. Massive amounts of data from as many digital activities through devices as possible are collected. This erodes people's knowledge of what is public, as much of this data is done in homes and other private settings. This data is then used to drive decisions such as loans, insurance coverage, and more. Privacy becomes more important for individuals with mental health diagnoses and cognitive disabilities, especially where there is prejudice and stigma [[RM-monteith1]].</p>
 <p>For example, people who are victims of domestic violence may avoid putting their picture online because they do not want to be easily found, but automated programs for job applications may be biased against profiles without a picture.</p>
 <h3>Social media and Mental Health</h3>
 <p class="ednote"> This section focuses on research from the Mental Health subgroup. More research is needed on social media and cognitive and learning disabilities.</p>
-<p>Prolonged time spent on social media platforms appears to contribute to increased risk for a variety of mental health symptoms and poor wellbeing. This may partly be driven by the detrimental effects of screen time generally on mental health. Research suggests social media usage can cause increased severity of anxiety and depressive symptoms [RM-Hardy1].</p>
-<p>Recent studies have reported negative effects of social media use on mental health of young people particularly. Negative outcomes include social comparison pressure with others (sometimes called social media envy), rumination, depressive symptoms, anxiety, greater feeling of social isolation after being rejected by others on social media, and body image issues (especially in teens) [RM-Ang1][RM-Karim1].</p>
-<p>For preteen girls, time spent on social networking sites produced stronger correlations with body image concern than did overall Internet exposure. This may lead to reduced self esteem, dieting and eating disorders. With overexposure to social media, preteens are highly likely to be exposed to material that they neither fully understand nor are equipped to evaluate sufficiently critically. Similarly, in another study with adults over 30, social media use seemed to correlate with increased anxiety[RM-Tiggemann1] [RM-Hardy1].</p>
-<p>Social media does not seem to have a consistent affect on mental health, and many factors can come into play. The relationship between social media and mental well-being may be affected by age. However, some studies have shown the opposite effect for other groups. For adults aged 18–29, social media use decreases anxiety. This is a counterpoint, where sometimes social media reduces the incidence of anxiety , especially for younger people [RM-Hardy1].</p>
-<p>One study conducted with nurses argues that social networking site addiction stimulates various stressors such as envy, social anxiety and rumination. These stressors can lead to task distraction. A preference for online social interaction was also found to be linked to social anxiety and loneliness.[RM-Majid1][RM-Caplan1]</p>
-<p>Social networking sites have also been associated with likelihood of diminished future well-being and reduced self esteem. Also people with signs of depression linked to social networking sites spend even more time on social networking sites, leading to a vicious circle of depression [RM-Shakya1].</p>
-<p>On the other hand, social media does not seem to have a consistent affect on mental health, and many factors can come into play. The relationship between social media and mental well-being may be affected by age. However, some studies have shown the opposite effect for other groups. For adults aged 18–29, social media use correlates with decreased anxiety.This is a counterpoint, where sometimes social media reduces the incidence, especially for younger people [RM-Hardy1].</p>
-<p>Further, social media has become an important part of the lives of many people with mental health disabilities. Many of these individuals use social media to share their lived experiences with mental illness, to seek support from others, and to search for information about treatment recommendations, accessing mental health services and coping with symptoms. Overall, although time spent on the Internet was found to be negatively associated with mental health, some activities, such as school work, were positively associated. Additionally, studies have also shown social media helped teens cope with isolation in lockdown/covid. [RM-Naslund1][RM-Hökby1][RM-Cauberghe1]</p>
-<p>Online social participation can alleviate the negative effects of pain on mental well-being. Social Media may serve as a source of connection for people who are not able to participate in face-to-face interactions as much as they would like due to pain, disability, or age. Social media can support people with social anxiety and act as a safe form to increase human interaction and make friendships (assuming web sites support cognitive accessibility and social anxiety) [<em>RM-Rotondi2]</em>.</p>
-<p>It is also worth noting that many of the studies reviewed were scientifically weak. For example, studies often have small samples, effects that are not scientifically significant, or show correlation rather than causality. For example, the correlation between social media use and mental health issues may be that users use social media to help with mental health issues. More robust research is needed in this area in order to develop solutions that enable use with less risk [RM-Odgers1].</p>
+<p>Prolonged time spent on social media platforms appears to contribute to increased risk for a variety of mental health symptoms and poor wellbeing. This may partly be driven by the detrimental effects of screen time generally on mental health. Research suggests social media usage can cause increased severity of anxiety and depressive symptoms [[RM-hardy1]].</p>
+<p>Recent studies have reported negative effects of social media use on mental health of young people particularly. Negative outcomes include social comparison pressure with others (sometimes called social media envy), rumination, depressive symptoms, anxiety, greater feeling of social isolation after being rejected by others on social media, and body image issues (especially in teens) [[RM-ang1]][[RC-karim1]].</p>
+<p>For preteen girls, time spent on social networking sites produced stronger correlations with body image concern than did overall Internet exposure. This may lead to reduced self esteem, dieting and eating disorders. With overexposure to social media, preteens are highly likely to be exposed to material that they neither fully understand nor are equipped to evaluate sufficiently critically. Similarly, in another study with adults over 30, social media use seemed to correlate with increased anxiety[[RC-tiggemann1]] [[RM-hardy1]].</p>
+<p>Social media does not seem to have a consistent affect on mental health, and many factors can come into play. The relationship between social media and mental well-being may be affected by age. However, some studies have shown the opposite effect for other groups. For adults aged 18–29, social media use decreases anxiety. This is a counterpoint, where sometimes social media reduces the incidence of anxiety , especially for younger people [[RM-hardy1]].</p>
+<p>One study conducted with nurses argues that social networking site addiction stimulates various stressors such as envy, social anxiety and rumination. These stressors can lead to task distraction. A preference for online social interaction was also found to be linked to social anxiety and loneliness.[[RC-majid1]] [[RM-caplan1]]</p>
+<p>Social networking sites have also been associated with likelihood of diminished future well-being and reduced self esteem. Also people with signs of depression linked to social networking sites spend even more time on social networking sites, leading to a vicious circle of depression [[RC-shakya1]].</p>
+<p>On the other hand, social media does not seem to have a consistent affect on mental health, and many factors can come into play. The relationship between social media and mental well-being may be affected by age. However, some studies have shown the opposite effect for other groups. For adults aged 18–29, social media use correlates with decreased anxiety.This is a counterpoint, where sometimes social media reduces the incidence, especially for younger people [[RM-hardy1]].</p>
+<p>Further, social media has become an important part of the lives of many people with mental health disabilities. Many of these individuals use social media to share their lived experiences with mental illness, to seek support from others, and to search for information about treatment recommendations, accessing mental health services and coping with symptoms. Overall, although time spent on the Internet was found to be negatively associated with mental health, some activities, such as school work, were positively associated. Additionally, studies have also shown social media helped teens cope with isolation in lockdown/covid. [[RC-naslund1]][[RM-hökby1]][[RM-cauberghe1]]</p>
+<p>Online social participation can alleviate the negative effects of pain on mental well-being. Social Media may serve as a source of connection for people who are not able to participate in face-to-face interactions as much as they would like due to pain, disability, or age. Social media can support people with social anxiety and act as a safe form to increase human interaction and make friendships (assuming web sites support cognitive accessibility and social anxiety) [[RM-rotondi2]].</p>
+<p>It is also worth noting that many of the studies reviewed were scientifically weak. For example, studies often have small samples, effects that are not scientifically significant, or show correlation rather than causality. For example, the correlation between social media use and mental health issues may be that users use social media to help with mental health issues. More robust research is needed in this area in order to develop solutions that enable use with less risk [[RC-odgers1]].</p>
 <h3>Longevity of posts </h3>
 <p>Further, people have reported (in response to this paper) that they are afraid of other long term consequences of posting online. For example, if they post about their disability (mental health issues), or if their posts are considered inappropriate or imply health issues, then they worry that it can be used against them or to harm them after recovery has started.</p>
 <h3>Algorithms, AI (Artificial Intelligence) and Curated Content</h3>
@@ -193,23 +271,23 @@
 </ul>
 <h4> Curated content</h4>
 <p>Algorithms often adapt and tailor content to the individual. Often the algorithm changes the content so that the user stays on the site for longer and is more likely to click on links and advertisements. The effect is curated content. Curated content also creates “Echo Chambers,” or environments where you see content that you disproportionately agree with. The user is unlikely to be exposed to different points of view.</p>
-<p>Users may not be aware of the goals, settings and biases of the algorithms, making it harder to realize their isolation. Issues that can get reinforced include unhealthy eating practices, such as eating disorders and antisocial behavior. Anxieties are also often reinforced by being exposed to many voices expressing similar views, such as conspiracy theorists. While this also occurs offline, on the web it happens faster and to a more extreme extent [RM-Tiggemann1].</p>
+<p>Users may not be aware of the goals, settings and biases of the algorithms, making it harder to realize their isolation. Issues that can get reinforced include unhealthy eating practices, such as eating disorders and antisocial behavior. Anxieties are also often reinforced by being exposed to many voices expressing similar views, such as conspiracy theorists. While this also occurs offline, on the web it happens faster and to a more extreme extent [[RC-tiggemann1]].</p>
 <p>When groups are exposed to large amounts of content that disproportionately represents one point of view, and for the sake of clicks, encourages negative reactions to people outside the group, it is more difficult for people to live together and respect differences.</p>
 <h3>Spending and Financial Commitments </h3>
-<p>Conditions that impact emotional regulation may also affect how people act online, and make their reactions more extreme [RM-Yu1].</p>
-<p>For example, mental health conditions may impact spending. Further frustration from difficult interfaces can also cause stress and impair decision-making. When under stress, people can become more impulsive. Research on decision-making shows stress leads to fast intuitive decision-making over slower, more logical or analytical processes [RC-M1].</p>
+<p>Conditions that impact emotional regulation may also affect how people act online, and make their reactions more extreme [RM-Yu1]].</p>
+<p>For example, mental health conditions may impact spending. Further frustration from difficult interfaces can also cause stress and impair decision-making. When under stress, people can become more impulsive. Research on decision-making shows stress leads to fast intuitive decision-making over slower, more logical or analytical processes [RC-M1]].</p>
 <p>For example the internet may enable a person with bipolar disorder to make substantial financial commitments whilst in the manic phase, often with much greater ease than in the physical world.</p>
 <p>Further, some learning and cognitive disabilities impact spending habits and money management. For example a person with dyscalculia may be unable to tell the steep price difference between similar options. In the real world, they may use cash when shopping to limit the effect.</p>
 <h3>Gatekeeping and Restricting Digital Access</h3>
 <p>Risks to users seem to increase with factors such as lower levels of sociability offline, loneliness, anxiety and depression, poorer insight, judgment, discrimination and ability to detect deception online, and reduced experience and life opportunities. Perceived high online risk may lead to gatekeeping restrictions and controlling digital access. Solutions include supportive communities and supported decision-making (see issue paper on supported decision-making)</p>
-<p>However, solution providers must be careful to reinforce the users rights. Restriction may affect online self-determination, participation and development by people with intellectual disabilities and others. There is also a significant risk of solutions being misused to control and oppress marginalized or vulnerable people. Providers should be very cautious about gatekeeping in locations where human rights for everyone are not well established and enforced. This paper only advocates providing tools of autonomy that can not easily be used as tools of repression, marginalisation or isolation. Solutions must be careful to not unnecessarily restrict access and autonomy for vulnerable groups without true consent [RM-Chadwick1].</p>
+<p>However, solution providers must be careful to reinforce the users rights. Restriction may affect online self-determination, participation and development by people with intellectual disabilities and others. There is also a significant risk of solutions being misused to control and oppress marginalized or vulnerable people. Providers should be very cautious about gatekeeping in locations where human rights for everyone are not well established and enforced. This paper only advocates providing tools of autonomy that can not easily be used as tools of repression, marginalisation or isolation. Solutions must be careful to not unnecessarily restrict access and autonomy for vulnerable groups without true consent [RM-Chadwick1]].</p>
 <h3>Internet or Gaming Addiction and Overuse</h3>
-<p>Overuse of some internet features such as gaming can sometimes reach the level of addiction. Internet addiction disorder (IAD), or Internet gaming disorder (IGD) describes conditions in which people develop a problematic, compulsive use of the internet (mainly gaming) that causes some significant impairment in different aspects of their life over a prolonged period of time. This includes neglecting other important areas of life, (work, school, family,) or lying to hide the extent of internet use. Note that while not everyone agrees with this as a clinical diagnosis, the effect is well established [RC-IAD1] [RM-Kim1].</p>
-<p>There is an association between Internet or gaming addiction and serious psychiatric symptoms such as somatization, sensitivity, depression, anxiety, aggression, phobias, and psychosis. This was after controlling for age, sex, education level, marital status, and type of universities [RM-Hökby1].</p>
-<p>In other research, people with schizophrenia or schizoaffective disorder using digital technology report negative feelings “often” or “very often” 56% (255/457). This included feelings of being unable to stop (27%, 123/457), frustration (25%, 114/457), paranoia (24%, 110/457), worry (20%, 91/457), sadness (20%, 91/457), anger (19%, 87/457), mania (16%, 73/457), or envy (16%, 73/457) [RM-Gay1].</p>
+<p>Overuse of some internet features such as gaming can sometimes reach the level of addiction. Internet addiction disorder (IAD), or Internet gaming disorder (IGD) describes conditions in which people develop a problematic, compulsive use of the internet (mainly gaming) that causes some significant impairment in different aspects of their life over a prolonged period of time. This includes neglecting other important areas of life, (work, school, family,) or lying to hide the extent of internet use. Note that while not everyone agrees with this as a clinical diagnosis, the effect is well established [RC-IAD1]] [RM-Kim1]].</p>
+<p>There is an association between Internet or gaming addiction and serious psychiatric symptoms such as somatization, sensitivity, depression, anxiety, aggression, phobias, and psychosis. This was after controlling for age, sex, education level, marital status, and type of universities [RM-Hökby1]].</p>
+<p>In other research, people with schizophrenia or schizoaffective disorder using digital technology report negative feelings “often” or “very often” 56% (255/457). This included feelings of being unable to stop (27%, 123/457), frustration (25%, 114/457), paranoia (24%, 110/457), worry (20%, 91/457), sadness (20%, 91/457), anger (19%, 87/457), mania (16%, 73/457), or envy (16%, 73/457) [RM-Gay1]].</p>
 <h3>Poor Representation in Data Sets</h3>
 <p>More and more decision making processes are based on data that is gathered from phone use and apps, such as smart city infrastructure and traffic allocations. This makes many groups under-represented or even entirely excluded in data-driven decisions. For example, decisions on parking spaces may be based on data from a parking app. People with disabilities may find the app confusing or unusable. They may pay with cash. The data collected by the parking app does not include their patterns or needs and they are left out of the data. When they go to events, their parking needs are not monitored. This can also occur for different public facilities as decision making becomes more data driven. Vertical and horizontal analysis of data needs to be performed to see what groups are missing in the data set, including the different sub-groups of learning cognitive, physical and mental health related disabilities.</p>
-<p>Additionally, as discussed above, many people do not use apps for mental health services and cognitive support due to concerns about how their data is used and whether mental health information will be kept private. Other reasons include the complexity and frustration experienced when these apps are not designed with cognitive learning and emotional disabilities in mind [RM-Lipschitz1].</p>
+<p>Additionally, as discussed above, many people do not use apps for mental health services and cognitive support due to concerns about how their data is used and whether mental health information will be kept private. Other reasons include the complexity and frustration experienced when these apps are not designed with cognitive learning and emotional disabilities in mind [RM-Lipschitz1]].</p>
   </section> 
 <section>
 	<h2>User Story and User Needs </h2>
@@ -235,7 +313,9 @@
 </p>
 	  </section> 
 <section>
-<h2>Proposed Solutions</h2>
+<h2>Possible Solutions for Meeting User Needs</h2>
+			<p>Below are some ideas that might help meet the user needs above. Note that
+digital solutions should also meet [[WCAG21]] and [[coga-usable]]. Also, this module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
 <p>Safety should be a priority when making content accessible for people with cognitive and learning disabilities. All user information must be kept safe, to the fullest extent possible. Any clues that the user has cognitive disabilities, such as a request for a simplified version, should be protected information.</p>
 <p>Personalization systems should be designed so that any information implying vulnerabilities are on the user device and are secure.</p>
 <p>Technical designs that may support privacy include</p>
@@ -249,9 +329,9 @@
 </ul>
 <h3>Giving the user control</h3>
 <h4>Use of data</h4>
-<p>Users should know when data is collected and how that data will be used. This requires testing that different groups of users requiring cognitive accessibility understand the privacy and data terms, including what data may be available or stored, how the data will be used and who will have access to it. It should be simple for users to see their data and make corrections when they discover errors [RM-O'Neil1].</p>
+<p>Users should know when data is collected and how that data will be used. This requires testing that different groups of users requiring cognitive accessibility understand the privacy and data terms, including what data may be available or stored, how the data will be used and who will have access to it. It should be simple for users to see their data and make corrections when they discover errors [RM-oneil1]].</p>
 <p>Settings and sources</p>
-<p>Users should have more control over their personal data and the kind of content they are shown on social media [RM-Bernard1].</p>
+<p>Users should have more control over their personal data and the kind of content they are shown on social media [RM-Bernard1]].</p>
 <p>Users should be able to know the source of their content. Having a bias ranking on different sources may also be helpful. This will allow users to notice the selection bias. This is especially important where a user is unlikely to be exposed to different points of view.</p>
 <p>Also let the user know the setting and the potential biases of the algorithm. This can help the user understand how the content seen may be affected. Give examples to help the user understand this effect.</p>
 <h4>Ease of personalisation</h4>
@@ -259,7 +339,7 @@
 <p>Users should be able to easily cancel data storing in minimal steps. This should be among the first list of options about data. Users should not have to click or scroll to find this option</p>
 <p>Example
     <br/>We would like to use information about you for a few different purposes. Choose from the options below.</p>
-<table>
+<table border="1">
     
     <tbody>
         <tr>
@@ -279,8 +359,7 @@
         </tr>
         <tr>
             <td >
-                <p>Do not store any</p>
-                <p>data about me!</p>
+                <p>Do not store any data about me!</p>
                 <p>(The site might work less well.)</p>
             </td>
             <td >
@@ -320,7 +399,7 @@
         
     </li>
 </ul>
-<p>The helpers can be, friends, family members or professionals. Supported decision making helps people avoid a formal guardian . SDM needs to adapt to the changing needs of the individual. Please see the solutions suggested in the supported decision making issue paper (See <a  href="https://docs.google.com/document/d/1g9N-_3l-d6t0ppZcIIZ98k00x7ZE7h3ayq0OCX9Ycu4/edit">supported decision making issue paper - temporary link</a>)</p>
+<p>The helpers can be, friends, family members or professionals. Supported decision making helps people avoid a formal guardian . SDM needs to adapt to the changing needs of the individual. Please see the solutions suggested in the supported decision making issue paper (See <a  href="Supported-Decision-Making.html">supported decision making issue paper </a>)</p>
 <h3>Social Media and Algorithm Driven Content</h3>
 <p>For social media, provide a graded range of solutions including:</p>
 <ul>
@@ -355,7 +434,7 @@
         Engage in consequential and comparative reasoning and manipulating information rationally, and
     </li>
     <li>
-        Express a clear and consistent decision [RM-Wojtowicz1].
+        Express a clear and consistent decision [RM-Wojtowicz1]].
     </li>
 </ul>
 <ul>
@@ -422,29 +501,158 @@
 <h3>Naming Applications and Services</h3>
 <p>Apps and services should be careful when including disabilities, cognitive emotional and learning impairments, in their name. Consider naming after support provided rather than disability labels. For example, an app may be called “shopping support,” with a description that this may be useful for people with dyscalculia. With this name, people do not have to know they have dyscalculia to know they need support with numbers. In addition it is less obvious to others that they have dyscalculia.</p>
 <p>Research has suggested that app titles related to anxiety disorders and symptoms have lower adoptions and fewer reviews than others.</p>
-<p>Anxiety apps with titles related to mindfulness activities have more installs, reviews, and higher ratings by users. Since app titles related to mindfulness activities (eg, breathing and meditation) signal providing a method to help users reduce their anxiety, users may perceive them to be more useful and applicable. [RM-Huang1][ [RM-Bakker1].</p>
+<p>Anxiety apps with titles related to mindfulness activities have more installs, reviews, and higher ratings by users. Since app titles related to mindfulness activities (eg, breathing and meditation) signal providing a method to help users reduce their anxiety, users may perceive them to be more useful and applicable. [[RM-huang1]] [[RM-bakker1]].</p>
 <h3>Representation in Data</h3>
 <p>When using data for design and decision making, ensure that all groups and subgroups are proportionately represented. Research and longitudinal studies should be performed to ensure that all groups and subgroups of people are proportionately represented in the dataset.</p>
-<p>Given the realities of app accuracy, efficacy, privacy, security, a variety of different technology platforms could be used for collecting data rather than just apps and smartphones. This will avoid biases against communities who struggle to use these devices or apps, and reduce the effect of the digital divide, such as those aging with memory impairments. [RM-Bauer1]</p>
+<p>Given the realities of app accuracy, efficacy, privacy, security, a variety of different technology platforms could be used for collecting data rather than just apps and smartphones. This will avoid biases against communities who struggle to use these devices or apps, and reduce the effect of the digital divide, such as those aging with memory impairments. [[RM-bauer1]]</p>
   </section> 
-<section>
-    </section> 
-<section>
-  <h2>Appendix 1:  Terms </h2>
-<p>Social media refers broadly to web and mobile platforms that allow individuals to connect with others within a virtual network (such as Facebook, Twitter, Instagram, Snapchat, or LinkedIn), where they can share, co-create, or exchange various forms of digital content, including information, messages, photos, or videos <a href="https://link.springer.com/article/10.1007/s41347-020-00134-x#ref-CR2">(Ahmed et al. 2019)</a></p>
+
+<section class="appendix section">
+  <h2>Terms </h2>
+<p>Social media, refers broadly to web and mobile platforms that allow individuals to connect with others within a virtual network (such as Facebook, Twitter, Instagram, Snapchat, or LinkedIn), where they can share, co-create, or exchange various forms of digital content, including information, messages, photos, or videos <a href="https://link.springer.com/article/10.1007/s41347-020-00134-x#ref-CR2">(Ahmed et al. 2019)</a></p>
 <p>Algorithms, refers broadly  to the logic often used to run computer programs.</p>
 </section> 
   
-<section>
-  <h2>Appendix 2:  Acknowledgments and sources</h2>
-<p>Thanks to Crimes against Children Investigations Israel National Cyber Unit for the review. Interviewed by Lisa seeman-horvitz </p>
 
-<section><h3>References</h3>
- <p class="ednote" > Note that this section needs to be cleaned up and made consistent with other issue papers.</p>
-<p></p>
-<p>Most Citations are the row number in <a href="https://docs.google.com/spreadsheets/d/1eKNrofGubnpQE6mO-vxmI-1MW5nA2LDj0LxebREPRGA/edit?resourcekey#gid=1686096268">Mental Health Literature Review (Responses)</a></p>
-<p>Unless they have the letters CG  when they are the row from  <a href="https://docs.google.com/spreadsheets/d/1Cu_qVP1WBz2TbsrAjLbbeb55RAlJmu9kfHamriL1Ocs/edit#gid=1686096268">coga general research database </a></p>
-<p>Other sources</p>
+<section class="appendix section" id="acknowledgements and sources">
+<h2 >Appendix: Acknowledgments</h2>   
+	<p>Thanks to Crimes against Children Investigations Israel National Cyber Unit for the review. Interviewed by Lisa seeman-horvitz </p>
+	
+  
+<section >
+    <h3 >Key contributors and section editors</h3>
+<ul>
+<li>
+
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+</li><li>
+Lisa Seeman-Horwitz, 
+Invited Expert
+</li><li>
+David Swallow, 
+TPGi
+</li>
+</section >
+
+
+<section >
+    <h3 >
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</h3>
+<ul>
+<li>
+	Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+
+</li><li>
+
+Rachael Bradley Montgomery, 
+Library of Congress
+
+</li><li>
+
+Rain Breaw Michaels, 
+Google LLC
+
+</li><li>
+Tiffany Burtin, 
+Invited Expert 
+
+</li><li>
+Deborah Dahl, 
+Conversational Technologies
+
+</li><li>
+Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+E.A. Draffan, 
+Global Symbols
+
+</li><li>
+Jeanne Erickson Cooley, 
+TPGi
+
+
+</li><li>
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+
+John Kirkwood, 
+CityMouse, Inc
+
+</li><li>
+Andy Manea, 
+Invited Expert 
+</li><li>
+Jan McSorley, 
+Invited Expert 
+</li><li>
+Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Abigail Ofer, 
+Evinced Inc.
+
+</li><li>
+
+Justine Pascalides, 
+Amazon
+</li><li>
+Ruoxi Ran, 
+W3C
+
+
+</li><li>
+Julie Rawe, 
+Understood.org
+
+
+</li><li>
+Charlotte Riggle, 
+Amazon
+
+</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Janina Sajka, 
+Invited Expert 
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert 
+</li><li>
+
+Gareth Slinn, 
+Invited Expert 
+</li><li>
+David Swallow, 
+TPGi
+
+
+</li></ul></section>
+</section>
+
+
+<section class = "appendix section"><h2>Additional Sources</h2>
 <ol start="1">
 <li>
 <a href="https://link.springer.com/article/10.1007/s41347-020-00134-x#Sec10">Social Media and Mental Health: Benefits, Risks, and Opportunities for Research and Practice</a></li>

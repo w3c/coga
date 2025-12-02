@@ -5,22 +5,98 @@
 		
 		
 	<meta name="description" content="Issues for users with cognitive disabilities using conversational voice systems, including voice menu systems."/>
-		<script
- src="https://www.w3.org/Tools/respec/respec-w3c"
- class="remove"
- defer
- ></script>
- <script class="remove">
- // All config options at https://respec.org/docs/
- var respecConfig = {
- specStatus: "ED",
- editors: [{ name: "Your Name", url: "https://your-site.com" }],
- github: "w3c/coga/",
- shortName: "VoiceSystems",
- xref: "web-platform",
- group: "my-working-group",
- };
- </script>
+			<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
+		<script src="biblio.js" class="remove"></script>
+		<script class="remove">
+	var respecConfig = {
+		// embed RDFa data in the output
+		trace:  true,
+		doRDFa: '1.1',
+		includePermalinks: true,
+		permalinkEdge:     true,
+		permalinkHide:     false,
+		tocIntroductory: true,
+		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+		specStatus:           "ED",
+		noRecTrack: true,
+		//crEnd:                "2012-04-30",
+		//perEnd:               "2013-07-23",
+		//publishDate:          "2013-08-22",
+		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+		
+		// the specifications short name, as in http://www.w3.org/TR/short-name/
+ shortName: "COGA-Voice",
+		
+
+		// if you wish the publication date to be other than today, set this
+		//publishDate:  "2017-05-16",
+		copyrightStart:  "2017",
+		license: "document",
+
+		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+		// and its maturity status
+		//previousPublishDate:  "",
+		//previousMaturity:  "",
+		//prevRecURI: "",
+		//previousDiffURI: "",
+
+		// if there a publicly available Editors Draft, this is the link
+		edDraftURI: "https://w3c.github.io/coga/issue-papers/",
+
+		// if this is a LCWD, uncomment and set the end of its review period
+		// lcEnd: "2012-02-21",
+
+		// editors, add as many as you like
+		// only "name" is required
+		editors: [
+			{
+				name: "Lisa Seeman-Horwitz",
+				mailto: "lisa.seeman@zoho.com"
+			},
+			//{ name: "Julie Rawe", url: "Understood.org" },		
+	 //{ name: "Rebecca Monteleone", url: "utoledo.edu",mailto: "rebecca.monteleone@utoledo.edu" },
+	 // { name: "Deborah Dahl", url: " conversational-technologies.com",mailto: " dahl@conversational-technologies.com" },
+		],
+
+		// authors, add as many as you like. 
+		// This is optional, uncomment if you have authors as well as editors.
+		// only "name" is required. Same format as editors.
+
+		//authors:  [
+		//    { name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],
+
+		/*
+		alternateFormats: [
+			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.pdf', label: "PDF version" }
+		],
+		*/
+		
+		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+		
+		// name of the WG
+		wg:           [  "Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
+		
+		// URI of the public WG page
+		wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
+		
+		// name (with the @w3c.org) of the public mailing to which comments are due
+		wgPublicList: "public-coga-comments",
+		
+		// URI of the patent status for this WG, for Rec-track documents
+		// !!!! IMPORTANT !!!!
+		// This is important for Rec-track documents, do not copy a patent URI from a random
+		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+		// Team Contact.
+		wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
+		//maxTocLevel: 2,
+		
+		localBiblio: biblio,
+	};
+		</script>
 
 	</head>
 		
@@ -53,6 +129,10 @@ This module is intended for:
      designers, content creators, and developers who want to have a more in-depth understanding of inclusion issues.
     </li>
 </ul>
+	 <p>This module focuses on explaining the issues that lead to diverse user
+needs impacting web accessibility. For this reason, it may sometimes
+address a broader scope than web accessibility alone.</p>
+
 <p>This document is part of a set of modules or papers that describe accessibility issues for users with various disabilities that impact cognitive accessibility. See <a href="https://raw.githack.com/w3c/coga/issue-papers-v2/issue-papers/index.html">cognitive or learning disabilities issue papers</a> for other modules.</p>
 <p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of:</p>
 <ul>
@@ -141,6 +221,7 @@ This module is intended for:
       people who may have different educational or cultural backgrounds.
     </li>
 </ul>
+			 
 <h4> Voice systems and conversational interfaces </h4>
 <p>Voice systems and conversational interfaces may include:</p>
 <ul>
@@ -165,10 +246,11 @@ This module is intended for:
         The user says the activating phrase to begin an interaction with the VUI such as “Hello, [Name of System].” The user then asks, “What is the weather forecast for today?” The VUI provides a verbal response.
     </li>
 </ul>
-<p>Voice systems are often implemented with the <a   href="https://www.w3.org/TR/voicexml20/"> W3C VoiceXML 2.0 </a> [voicexml20] standard and supporting standards from the <a   href="https://www.w3.org/Voice/"> Voice Browser Working Group </a>. [VBWG]</p>
-<p>VoiceXML 2.0 has an appendix regarding accessibility that briefly discusses users with hearing and speech disabilities as well as WCAG and WAI specifications. Cognitive disabilities are mentioned once in a bullet about allowing users to control the length of time before a timeout. See <a   href="https://www.w3.org/TR/voicexml20/#dmlAAccessibility"> VoiceXML 2.0 </a> [voicexml20] Appendix H - Accessibility.</p>
+<p>Voice systems are often implemented with the <a   href="https://www.w3.org/TR/voicexml20/"> W3C VoiceXML 2.0 </a> [[voicexml20]] standard and supporting standards from the <a   href="https://www.w3.org/Voice/"> Voice Browser Working Group </a>. [[VBWG]]</p>
+<p>VoiceXML 2.0 has an appendix regarding accessibility that briefly discusses users with hearing and speech disabilities as well as WCAG and WAI specifications. Cognitive disabilities are mentioned once in a bullet about allowing users to control the length of time before a timeout. See <a   href="https://www.w3.org/TR/voicexml20/#dmlAAccessibility"> VoiceXML 2.0 </a> [[voicexml20]] Appendix H - Accessibility.</p>
 <p class="ednote">We are planning to expand this paper to include more information about challenges with internationalization and localization that users may encounter with voice systems and conversational interfaces.</p>
- 
+ <p>This module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes
+address a broader scope than web accessibility alone.</p> 
 </section>
  <section>
 <h2>Challenges for People with Disabilities that Impact Cognitive Accessibility</h2>
@@ -244,7 +326,7 @@ This module is intended for:
 </section><section>	
 	<h2>User Story and User Needs</h2>
 <p class="ednote">This list of user needs is not complete. We are also seeking feedback on the format for presenting user needs.</p>
-<p>As a user who has cognitive accessibility needs, I need to get human help, without going through a complex menu system (VoiceXML [voicexml30]) or a complex voice recognition menu system that relies on memory and <a   href="https://raw.githack.com/w3c/coga/MH_Proposals/content-usable/index.html#dfn-executive-function"> executive function </a>, so that I can set an appointment or find out some information.</p>
+<p>As a user who has cognitive accessibility needs, I need to get human help, without going through a complex menu system (VoiceXML [[voicexml30]]) or a complex voice recognition menu system that relies on memory and <a   href="https://raw.githack.com/w3c/coga/MH_Proposals/content-usable/index.html#dfn-executive-function"> executive function </a>, so that I can set an appointment or find out some information.</p>
 <p>As a user who has cognitive accessibility needs, I need to use the system without relying on a good memory, learning new information, or dealing with distraction or cognitive overload.</p>
 <h3> Related user needs </h3>
 <ol>
@@ -333,7 +415,9 @@ This module is intended for:
     </li>
 </ul>
  </section><section>	
-<h2>Proposed Solutions Based on Current Research</h2>
+<h2>Possible Solutions for Meeting User Needs</h2>
+			<p>Below are some ideas that might help meet the user needs above. Note that
+digital solutions should also meet [[WCAG21]] and [[coga-usable]]. Also, this module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
 <h3> Ensure Human Backup is Available and Reachable </h3>
 <p>For users who are unable to use the automated voice system, it must be possible to reach a human through an easy transfer process rather than being directed to call another phone number.</p>
 <p>For telephone self-service systems, there should be a reserved digit for requesting a human operator. The most common digit used for this purpose is "0." However, if another digit is already in widespread use in a particular country, then that digit should always be available to get to a human agent.</p>
@@ -400,11 +484,11 @@ This module is intended for:
           Make sure fallbacks are tested extensively with a diverse user group to ensure that they do reach human help. Ensure fallbacks do not result in frustrating loops.  
     </li>
     <li>
-          Use existing standards for speech recognition if they’re available for the languages your system supports. For example, the European Telecommunications Standards Institute (ETSI) [ETSI-ES202-076] has a standard for voice commands in many European languages. When using existing standards, keep in mind that asking users to remember too many commands can be overwhelming.  
+          Use existing standards for speech recognition if they’re available for the languages your system supports. For example, the European Telecommunications Standards Institute (ETSI) [[ETSI-ES202-076V211]] has a standard for voice commands in many European languages. When using existing standards, keep in mind that asking users to remember too many commands can be overwhelming.  
     </li>
 </ol>
 <h3> Follow Best Practices in General Voice Interaction Design </h3>
-<p>Standard best practices in VUI apply to users with disabilities that impact cognitive accessibility, and should be followed, such as those provided by the Association for Conversational Interaction Design Wiki [<a   href="http://acixd.org/"> ACIxD </a>] or <a   href="https://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf"> ETSI ETR 096 </a> [ETSI-ETR-096].</p>
+<p>Standard best practices in VUI apply to users with disabilities that impact cognitive accessibility, and should be followed, such as those provided by the Association for Conversational Interaction Design Wiki [[<a   href="http://acixd.org/"> ACIxD </a>]] or <a   href="https://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf"> ETSI ETR 096 </a> [[ETSI-ETR-096]].</p>
 <p>Some examples of generally accepted best practices in VUI design include:</p>
 <ol>
     <li>
@@ -426,7 +510,7 @@ This module is intended for:
           Ability to review the conversation as it is happening, such as through a visual log.  
     </li>
 </ol>
-<p>See the <a   href="http://acixd.org/"> ACIxD wiki </a> [ACIxD] for additional recommendations and details.</p>
+<p>See the <a   href="http://acixd.org/"> ACIxD wiki </a> [[ACIxD]] for additional recommendations and details.</p>
 <h3> Follow Best Practices in Cognitively Accessible VUI Design </h3>
 <p>Some specific best practices for users with disabilities that impact cognitive accessibility include:</p>
 <ol>
@@ -450,7 +534,7 @@ This module is intended for:
     </li>
 </ol>
 <h3> Follow Appropriate Legislative Requirements </h3>
-<p>For example, in Section 255 [Title42-section255] of the U.S. Telecommunications Act, paragraph 1193.41 Input, Controls, and Mechanical Functions clauses (g), (h) and (i) apply to cognitive disabilities and require that equipment should be operable without time-dependent controls, the ability to speak, and should be operable by persons with limited cognitive skills.</p>
+<p>For example, in Section 255 [[Title42-section255]] of the U.S. Telecommunications Act, paragraph 1193.41 Input, Controls, and Mechanical Functions clauses (g), (h) and (i) apply to cognitive disabilities and require that equipment should be operable without time-dependent controls, the ability to speak, and should be operable by persons with limited cognitive skills.</p>
 <h3> Integrate New Technology-Based Solutions </h3>
 <p>Recent technological developments may be helpful for users with disabilities that require cognitive accessibility supports.</p>
 <ol>
@@ -470,13 +554,140 @@ This module is intended for:
 <p>Currently, VoiceXML does not directly enforce accessibility for people with disabilities that impact cognitive accessibility. However, considerable literature on VUI design exists and in many cases applies to cognitive accessibility for voice systems. Developers must become aware of these resources and of the need to design systems with these users in mind.</p>
 
 
-</section><section>	
-	<h2>References</h2>
-	 <p class="ednote" > Note that this section needs to be cleaned up and full citations will be added.</p>
-<p></p>
-<p>Most Citations are the row number in <a href="https://docs.google.com/spreadsheets/d/1eKNrofGubnpQE6mO-vxmI-1MW5nA2LDj0LxebREPRGA/edit?resourcekey#gid=1686096268">Mental Health Literature Review (Responses)</a></p>
-<p>Unless they have the letters CG  when they are the row from  <a href="https://docs.google.com/spreadsheets/d/1Cu_qVP1WBz2TbsrAjLbbeb55RAlJmu9kfHamriL1Ocs/edit#gid=1686096268">coga general research database </a></p>
-
 </section></section>
+	 <section class="appendix section" id="acknowledgements">
+  <h2 id="d-appendix-acknowledgments">Appendix: Acknowledgments</h2>
+  
+<section >
+    <h3 >Key contributors and section editors</h3>
+<ul>
+
+	<li>
+Deborah Dahl, 
+Conversational Technologies
+
+</li>
+<li>
+
+Rebecca Monteleone, 
+The University of Toledo
+		</li><li>
+Julie Rawe, 
+Understood.org
+
+	</li><li>
+Lisa Seeman-Horwitz, 
+Invited Expert
+</li>
+
+</ul>
+</section >
+
+
+<section >
+    <h3 >
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</h3>
+<ul>
+<li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+
+</li><li>
+
+Rachael Bradley Montgomery, 
+Library of Congress
+
+</li><li>
+
+Rain Breaw Michaels, 
+Google LLC
+
+</li><li>
+Tiffany Burtin, 
+Invited Expert 
+
+</li><li>
+Deborah Dahl, 
+Conversational Technologies
+
+</li><li>
+Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+E.A. Draffan, 
+Global Symbols
+
+</li><li>
+Jeanne Erickson Cooley, 
+TPGi
+
+
+</li><li>
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+
+John Kirkwood, 
+CityMouse, inc
+
+</li><li>
+Andy Manea, 
+Invited Expert 
+</li><li>
+Jan McSorley, 
+Invited Expert 
+</li><li>
+Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Abigail Ofer, 
+Evinced Inc.
+
+</li><li>
+
+Justine Pascalides, 
+Amazon
+</li><li>
+Ruoxi Ran, 
+W3C
+
+
+</li><li>
+Julie Rawe, 
+Understood.org
+
+
+</li><li>
+Charlotte Riggle, 
+Amazon
+
+</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Janina Sajka, 
+Invited Expert 
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert 
+</li><li>
+
+Gareth Slinn, 
+Invited Expert 
+</li><li>
+David Swallow,
+TPGi
+
+
+</li></ul></section>
+</section>
+
 </body>
 </html>

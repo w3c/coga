@@ -2,25 +2,105 @@
 	<head><meta charset="utf-8"/>
 		<title>Cognitive Accessibility Research Modules - Technology Assisted Indoor Navigation / Wayfinding</title>
 		
-		
 	<meta name="description" content="Issues for users with cognitive disabilities using technology assisted indoor navigation and wayfinding."/>
-		<script
- src="https://www.w3.org/Tools/respec/respec-w3c"
- class="remove"
- defer
- ></script>
- <script class="remove">
- // All config options at https://respec.org/docs/
- var respecConfig = {
- specStatus: "ED",
- editors: [{ name: "Your Name", url: "https://your-site.com" }],
+	
+		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
+		<script src="biblio.js" class="remove"></script>
+		<script class="remove">
+	var respecConfig = {
+		// embed RDFa data in the output
+		trace:  true,
+		doRDFa: '1.1',
+		includePermalinks: true,
+		permalinkEdge:     true,
+		permalinkHide:     false,
+		tocIntroductory: true,
+		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
+		specStatus:           "ED",
+		noRecTrack: true,
+		//crEnd:                "2012-04-30",
+		//perEnd:               "2013-07-23",
+		//publishDate:          "2013-08-22",
+		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+		
+		// the specifications short name, as in http://www.w3.org/TR/short-name/
  github: "w3c/coga/",
- shortName: "wayfinding",
- xref: "wayfinding",
- group: "COGA",
- };
- </script>
+ shortName: "coga-wayfinding",
+ 
+		// if you wish the publication date to be other than today, set this
+		//publishDate:  "2017-05-16",
+		copyrightStart:  "2017",
+		license: "document",
 
+		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+		// and its maturity status
+		//previousPublishDate:  "",
+		//previousMaturity:  "",
+		//prevRecURI: "",
+		//previousDiffURI: "",
+
+		// if there a publicly available Editors Draft, this is the link
+		edDraftURI: "https://w3c.github.io/coga/issue-papers/",
+
+		// if this is a LCWD, uncomment and set the end of its review period
+		// lcEnd: "2012-02-21",
+
+		// editors, add as many as you like
+		// only "name" is required
+		editors: [
+			{
+				name: "Lisa Seeman-Horwitz",
+				mailto: "lisa.seeman@zoho.com"
+			},
+	//  { name: "Eric Hind",},		
+	//  { name: "Rebecca Monteleone", url: "utoledo.edu",mailto: "rebecca.monteleone@utoledo.edu" },
+	//   { name: "John Rochford" },
+	//  { name: "John Kirkwood", url: "citymouse.com",mailto: "kirkwood@citymouse.com" }
+
+		
+	 		],
+
+		// authors, add as many as you like. 
+		// This is optional, uncomment if you have authors as well as editors.
+		// only "name" is required. Same format as editors.
+
+		//authors:  [
+		//    { name: "Your Name", url: "http://example.org/",
+		//      company: "Your Company", companyURI: "http://example.com/" },
+		//],
+
+		/*
+		alternateFormats: [
+			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+			{ uri: 'aria.ps', label: "PostScript version" }, 
+			{ uri: 'aria.pdf', label: "PDF version" }
+		],
+		*/
+		
+		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+		
+		// name of the WG
+		wg:           [  "Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
+		
+		// URI of the public WG page
+		wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
+		
+		// name (with the @w3c.org) of the public mailing to which comments are due
+		wgPublicList: "public-coga-comments",
+		
+		// URI of the patent status for this WG, for Rec-track documents
+		// !!!! IMPORTANT !!!!
+		// This is important for Rec-track documents, do not copy a patent URI from a random
+		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+		// Team Contact.
+		wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
+		//maxTocLevel: 2,
+		
+		localBiblio: biblio,
+	};
+		</script>
+		
+	
 	</head>
 		
  <body>
@@ -53,6 +133,7 @@ This module is intended for
         designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
     </li>
 </ul>
+	  <p>This module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
 <p>This document is part of a set of related informative publications from the <a  href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint Task Force of the <a  href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a  href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a  href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
 
 				</section>
@@ -93,15 +174,18 @@ This module is intended for
 <p>An example use case would be:</p>
 <ul>
     <li>
-        Upon entering a large hospital with multiple in-patient and out-patient departments, a user must navigate to their primary care appointment. The user enters their destination into a digital kiosk at the entrance and receives customized directions. In addition, they receive information on how to access a public webpage with an adaptive 3-D map from their smartphone. The webpage that hosts the map also contains information about different areas of the hospital and what services they provide as well as adjustable preferences [RM-Upadhyay1]
+        Upon entering a large hospital with multiple in-patient and out-patient departments, a user must navigate to their primary care appointment. The user enters their destination into a digital kiosk at the entrance and receives customized directions. In addition, they receive information on how to access a public webpage with an adaptive 3-D map from their smartphone. The webpage that hosts the map also contains information about different areas of the hospital and what services they provide as well as adjustable preferences [[RC-upadhyay1]]
     </li>
     <li>
-        A user constructs a grocery list by identifying the aisle number and location of each item and then ordering their list to move through the store with clear directions from one item to the next [RM-Antonakos1].
+        A user constructs a grocery list by identifying the aisle number and location of each item and then ordering their list to move through the store with clear directions from one item to the next [[RC-antonakos1]].
     </li>
     <li>
-        A user is planning a trip that has a short layover in a large, busy airport. The user is able to utilize the airport’s wayfinding app to plot out their connection gates with an estimated travel time [RM-Harding1].
+        A user is planning a trip that has a short layover in a large, busy airport. The user is able to utilize the airport’s wayfinding app to plot out their connection gates with an estimated travel time [[RC-nas1]].
     </li>
-</ul></section>
+</ul>
+  <p>This module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone. Digitally assisted wayfinding sits at the intersection of the digital and physical environments. While there may be solutions in the physical space, our focus here is on digital approaches.
+</p>
+ </section>
  <section>
 <h2>Challenges for people with disabilities that require cognitive accessibility support</h2>
 <p>Wayfinding can produce a wide range of challenges for people with cognitive disabilities. Not all people with cognitive abilities will have difficulties with wayfinding. Some people may experience temporary cognitive issues with wayfinding due medication side-effects, mental health status, or other factors. High demands to cognitive load, negative experiences in wayfinding, and interruptions can impact both the cognitive and physical energy a person can put towards wayfinding. Issues with wayfinding can occur for people with impairments including those that impact:</p>
@@ -252,49 +336,38 @@ This module is intended for
 
 	 
  <section>
-<h2>Proposed Solutions Based on Current Research</h2>
-<h3>Inform user of time to destination up front</h3>
-<ul>
-    <li>
-        Provide real-time information about time to travel to destinations along any available routes.
-    </li>
-</ul>
-<h3>Integrate landmark-based navigation </h3>
-<ul>
-    <li>
+<h2>Possible Solutions for Meeting User Needs</h2>
+			<p>Below are some ideas that might help meet the user needs above. Note that
+digital solutions should also meet [[WCAG21]] and [[coga-usable]]. Also, this module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
+<p><strong>Inform user of time to destination up front</strong>.
+
+        Provide real-time information about time to travel to destinations along any available routes.</p>
+    
+<p><strong>Integrate landmark-based navigation </strong>.
+
         Maps and directions should integrate easily recognizable landmarks that provide additional help with wayfinding. These should integrate photographs of these landmarks rather than abstract representations, birds-eye view or reliance on cardinal (north / south) or body-relative (left and right) directions. Where possible, allow users to customize routes with their own landmarks.
-    </li>
-</ul>
-<h3>Include both digital and environmental solutions</h3>
-<ul>
-    <li>
+    </p>
+
+<p><strong>Include both digital and environmental solutions</strong>.
+
         Include physical wayfinding aids (e.g. signs, directional arrows, color-coded pathways) as well as digital aids.
-    </li>
-</ul>
-<h3>Provide multiple methods for accessing directions </h3>
-<ul>
-    <li>
-        <strong>For example, provide step-by-step directions that are provided in text,audio/video, and a map with a directional overlay such as an arrow that also provides spoken directions. </strong>
+   </p>
+<p><strong>Provide multiple methods for accessing directions </strong>.
+
+       For example, provide step-by-step directions that are provided in text,audio/video, and a map with a directional overlay such as an arrow that also provides spoken directions. 
        
-    </li>
-</ul>
-<h3>Present directions in smallest steps possible </h3>
-<ul>
-    <li>
-        <strong>Each step-by-step direction should be a single action (i.e. continue straight; turn left, etc). </strong>
+    </p>
+<p><strong>Present directions in smallest steps possible </strong>.
+Each step-by-step direction should be a single action (i.e. continue straight; turn left, etc). 
        
-    </li>
-    <li>
+ 
         Avoid providing too much information at one time.
-    </li>
-</ul>
-<h3>Provide real-time directions</h3>
-<ul>
-    <li>
+     </p> 
+<p><strong>Provide real-time directions</strong>.
+
         Provide each step in the moment it is needed with sufficient time for the user to react.
-    </li>
-</ul>
-<h3>Provide textual information in clear, concrete language</h3>
+  </p>
+<p><strong>Provide textual information in clear, concrete language</strong>.
 <ul>
     <li>
         Use clear language for all written or verbal instructions.
@@ -302,70 +375,50 @@ This module is intended for
     <li>
         Avoid abstract, complex, or specialized language in directions and guidance.
     </li>
-</ul>
-<h3>Provide photographs of decision-points </h3>
+</ul></p>
+<p><strong>Provide photographs of decision-points </strong>.
 <ul>
     <li>
-        <strong>When a user needs to make an adjustment in their course (i.e. turning), providing a user-level photograph of that point in the route.</strong>
+       When a user needs to make an adjustment in their course (i.e. turning), providing a user-level photograph of that point in the route.
        
     </li>
     <li>
         Avoid using more than one type of visual representation (e.g. do not use both photographs <em>and </em>drawings)
     </li>
-</ul>
-<h3>Avoid changing routes without user approval </h3>
-<ul>
-    <li>
-        <strong>Proposed route changes should only be implemented if the user is made aware and approves. Users should be made aware of differences in the proposed route such as more steps.</strong>
+</ul></p>
+<p><strong>Avoid changing routes without user approval </strong>.
+
+  Proposed route changes should only be implemented if the user is made aware and approves. Users should be made aware of differences in the proposed route such as more steps.
        
-    </li>
-</ul>
-<h3>Provide methods to always access directions </h3>
-<ul>
-    <li>
-        <strong>For example, instead of relying only on static kiosks, have methods for users to be able to revisit directions at any time, especially while they are moving through the route.  Include ways to personalize the indication (i.e. rather than a static map, include adaptive instructions that change as the person re-orients themselves). Due to the complexity of access, QR codes are not recommended. </strong>
-       
-    </li>
-</ul>
-<h3>Allow personalization of interface</h3>
-<ul>
-    <li>
+   </p>
+<p><strong>Provide methods to always access directions </strong>.
+ 
+        For example, instead of relying only on static kiosks, have methods for users to be able to revisit directions at any time, especially while they are moving through the route.  Include ways to personalize the indication (i.e. rather than a static map, include adaptive instructions that change as the person re-orients themselves). Due to the complexity of access, QR codes are not recommended. 
+    </p>
+<p><strong>Allow personalization of interface</strong>.
+
         Users should have control over options like color contrast, text size and font, and sound. This limits distractions and/or increases usability based on their individual needs.
-    </li>
-</ul>
-<h3>Allow multiple modes of input</h3>
-<ul>
-    <li>
+  </p>
+<p><strong>Allow multiple modes of input</strong>.
+ 
         Users should be able to input their desired destination in multiple ways, including typing, speech, and selecting on a map.
-    </li>
-</ul>
-<h3>Allow personalization of terms including directions and measurements </h3>
-<ul>
-    <li>
-        <strong>Allow users to customize key terms such as distance measurements. </strong>
-       
-    </li>
-</ul>
-<h3>Provide human back-up</h3>
-<ul>
-    <li>
-        <strong>Allow users to contact human support when wayfinding fails. For example, an interactive map of a hospital could have an option to call the front desk integrated into its interface. An additional off-line way to reverse course is also helpful,  if the wayfinding and general internet fails. Note this  could also be  a back up when no service is available to devices - in that case no option to call the front desk would be available.</strong>
-       
-    </li>
-</ul></section>
+   </p>
+<p><strong>Allow personalization of terms including directions and measurements </strong>.
+ 
+       Allow users to customize key terms such as distance measurements. 
+    </p>
+<p><strong>Provide human back-up</strong>.
+
+        Allow users to contact human support when wayfinding fails. For example, an interactive map of a hospital could have an option to call the front desk integrated into its interface. An additional off-line way to reverse course is also helpful,  if the wayfinding and general internet fails. Note this  could also be  a back up when no service is available to devices - in that case no option to call the front desk would be available.
+     </p></section>
  <section>
 <h2>Current Status of These Solutions</h2>
 <p>There has been some attention to indoor wayfinding for people with cognitive disabilities in the academic literature, and a number of prototypes assisting in wayfinding have been developed. While a small number of technologies for cognitive assistance in wayfinding are available on the market, most attention has been devoted to outdoor navigation or public transit. Determining a person’s location and obstacles indoors remains challenging, making technologies that provide accurate real-time location information difficult to develop. Some technologies currently being deployed to address these issues include Bluetooth beacons, magnetic fingerprints, WiFi fingerprints, RFID tags, ultra wideband (UWB), and ultrasound.</p>
 
 </section>
-	<section><h2>References</h2>
- <p class="ednote" > Note that this section needs to be cleaned up and full citations will be added.</p>
-<p></p>
-<p>Most Citations are the row number in <a href="https://docs.google.com/spreadsheets/d/1eKNrofGubnpQE6mO-vxmI-1MW5nA2LDj0LxebREPRGA/edit?resourcekey#gid=1686096268">Mental Health Literature Review (Responses)</a></p>
-<p>Unless they have the letters RC  when they are the row from  <a href="https://docs.google.com/spreadsheets/d/1Cu_qVP1WBz2TbsrAjLbbeb55RAlJmu9kfHamriL1Ocs/edit#gid=1686096268">coga general research database </a></p>
-</section>
+	
 
-<section>
+	 <section class="appendix section">
 <h2> Other Sources </h2>
 <p class="ednote">This section needs cleanup.</p>
 <ul>
@@ -401,7 +454,131 @@ This module is intended for
 <li>McLachlan F, Leng X. Colour here, there, and in-between—Placemaking and wayfinding in mental health environments. Color Res Appl. 2021; 46: 125–139. <a href="https://doi.org/10.1002/col.22570">https://doi.org/10.1002/col.22570</a></li>
 <li>Dalke, H., Little, J., Niemann, E., Camgoz, N., Steadman, G., Hill, S., Stott, L. Color and lighting in hospital design. Optics and Laser Technology, 38 (4-6): 343-365.</li></ul>
  </section>
+	 
 
+<section class="appendix section" id="acknowledgements">
+  <h2 id="d-appendix-acknowledgments">Appendix: Acknowledgments</h2>
+  
+<section >
+    <h3 >Key contributors and section editors</h3>
+<ul>
+<li>
+Eric Hind, 
+Invited Expert 
+</li><li>
+John Kirkwood, 
+CityMouse, Inc
+</li><li>
+	Rebecca Monteleone, 
+The University of Toledo
+</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Lisa Seeman-Horwitz, 
+Invited Expert
+
+</li>
+</section >
+
+
+<section >
+    <h3 >
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</h3>
+<ul>
+<li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+
+</li><li>
+Rachael Bradley Montgomery, 
+Library of Congress
+
+</li><li>
+
+Rain Breaw Michaels, 
+Google LLC
+
+</li><li>
+Tiffany Burtin, 
+Invited Expert 
+</li><li>
+Deborah Dahl, 
+Conversational Technologies
+
+</li><li>
+Jennifer Delisi, 
+Invited Expert 
+</li><li>
+E.A. Draffan, 
+Global Symbols
+</li><li>
+Jeanne Erickson Cooley, 
+TPGi
+
+</li><li>
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+John Kirkwood, 
+CityMouse, Inc
+</li><li>
+Andy Manea, 
+Invited Expert 
+</li><li>
+Jan McSorley, 
+Invited Expert 
+</li><li>
+Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Abigail Ofer, 
+Evinced Inc.
+
+</li><li>
+
+Justine Pascalides, 
+Amazon
+</li><li>
+Ruoxi Ran, 
+W3C
+
+
+</li><li>
+Julie Rawe, 
+Understood.org
+
+
+</li><li>
+Charlotte Riggle, 
+Amazon
+
+</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Janina Sajka, 
+Invited Expert 
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert 
+</li><li>
+
+Gareth Slinn, 
+Invited Expert 
+</li><li>
+David Swallow, 
+TPGi
+
+
+</li></ul></section>
+</section>
 
 
 
