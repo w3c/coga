@@ -4,23 +4,7 @@
 		<title>Cognitive Accessibility Research Modules
 — Supported Decision-Making Online
 </title>
-			<script
- src="https://www.w3.org/Tools/respec/respec-w3c"
- class="remove"
- defer
- ></script>
- <script class="remove">
- // All config options at https://respec.org/docs/
- var respecConfig = {
- specStatus: "ED",
- editors: [{ name: "Your Name", url: "https://your-site.com" }],
- github: "w3c/coga/",
- shortName: "SDM",
-
- };
- </script>
-
-	<script src="https://www.w3.org/Tools/respec/respec-w3c-common" class="remove"></script>
+			<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<script src="biblio.js" class="remove"></script>
 		<script class="remove">
 	var respecConfig = {
@@ -40,7 +24,7 @@
 		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 		
 		// the specifications short name, as in http://www.w3.org/TR/short-name/
-		shortName:            "coga-issue-papers",
+		shortName:            "COGA-SDM",
 		
 
 		// if you wish the publication date to be other than today, set this
@@ -65,11 +49,15 @@
 		// only "name" is required
 		editors: [
 			{
-				name: "Lisa Seeman",
-				url: 'http://accessibility.athena-ict.com',
+				name: "Lisa Seeman-Horwitz",
 				mailto: "lisa.seeman@zoho.com"
 			},
-			
+				//{
+				//	name: "Leonard Beasley",
+					//	url: "CVS", 
+					//mailto: "beasleyl1@aetna.com"
+  
+				//}
 		],
 
 		// authors, add as many as you like. 
@@ -92,7 +80,7 @@
 		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
 		
 		// name of the WG
-		wg:           ["Cognitive and Learning Disabilities Accessibility Task Force", "Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
+		wg:           [  "Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
 		
 		// URI of the public WG page
 		wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
@@ -114,7 +102,7 @@
 	</head>
 	<body>
 		<section id="abstract">
-			<p>Supported decision-making (SDM) is a person-centered approach that empowers individuals with disabilities to make their own choices with the help of trusted supporters. Rather than substituting decision-making authority, SDM emphasizes autonomy, dignity, and inclusion in everyday life. This module introduces the principles and practices of SDM, highlighting its legal, ethical, and practical implications. Participants will explore how to implement SDM in ways that respect individual rights and foster independence.
+			<p>Supported decision-making (SDM) is a person-centered approach that empowers individuals with disabilities to make their own choices with the help of trusted supporters. Rather than substituting decision-making authority, <abbr title="Supported decision making ">SDM</abbr> emphasizes autonomy, dignity, and inclusion in everyday life. This module introduces the principles and practices of SDM, highlighting its legal, ethical, and practical implications. Participants will explore how to implement <abbr title="Supported decision making ">SDM</abbr> in ways that respect individual rights and foster independence.
 	</p>
 <p>This module:</p>
 <ul>
@@ -132,17 +120,21 @@
         suggests possible solutions and areas for further research.
     </li>
 </ul>
-This module is intended for:
+			
+<p>Research modules are <strong>primarily intended for groups in The World Wide Web Consortium (W3C).</strong> For example, they are used as source material for <a  href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>.</p>
+<p>They may also contain useful information for:</p>
 <ul>
     <li>
-        researchers,    </li>
-    <li>
-        policy makers, and
+        researchers,
     </li>
     <li>
-     designers, content creators, and developers who want to have a more in-depth understanding of inclusion issues.
+        inclusion and research-related policy makers,
+    </li>
+    <li>
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
     </li>
 </ul>
+      <p class="ednote">Note that these modules focus on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, they may sometimes address a broader scope than web accessibility alone.</p>
 <p>This document is part of a set of modules that describe accessibility issues for users with various disabilities that impact cognitive accessibility. For other modules, see <a href="https://raw.githack.com/w3c/coga/issue-papers-v2/issue-papers/index.html">Cognitive Accessibility Issue Papers</a>.</p>
 <p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility (COGA) Task Force</a>, a joint task force of the:</p>
 <ul>
@@ -155,16 +147,26 @@ This module is intended for:
 </ul>
 	</section> 
 		
-<section id="sotd">  <h2>Status of This Document</h2>
-<p>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of this technical report can be found in the <a  href="https://www.w3.org/TR/">W3C technical reports index</a> at <a  href="https://www.w3.org/TR/">https://www.w3.org/TR/</a>.</p>
-			<p class="ednote"   title = "Early draft">This is an early draft. The COGA Task Force intends to add more research and discussion, and make editorial changes to comply with our style guide, including for citations. Please share your feedback, including any research we should consider adding to this document.</p>
-<p>Feedback on any aspect of the document is welcome. The AG and APA working groups particularly seek feedback on the following questions:</p>
+<section id="sotd" >  
+			<p class="ednote"   title = "Early Draft">This is an early draft. The task force intends to add more research and discussion and make editorial changes to comply with our style guide, including for citations. Please share your feedback, including any research we should consider adding to this document.</p>
+			
+<p>This document is part of a set of modules or papers that describe accessibility issues for users with various disabilities that impact cognitive accessibility. See <a   href="https://raw.githack.com/w3c/coga/issue-papers-v2/issue-papers/index.html"> cognitive or learning disabilities research modules </a> for other modules.</p>
+<p>This document is part of a set of related informative publications from the <a   href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/"> Cognitive and Learning Disabilities Accessibility Task Force </a> (COGA TF), a joint task force of:</p>
+<ul>
+    <li>
+        the <a   href="http://www.w3.org/WAI/APA/"> Accessible Platform Architectures Working Group </a> (APA WG), and
+    </li>
+    <li>
+        the <a   href="http://www.w3.org/WAI/GL/"> Accessibility Guidelines Working Group </a> (AG WG) of the <a   href="http://www.w3.org/WAI/"> Web Accessibility Initiative </a>.
+    </li>
+</ul>
+<p>Feedback on any aspect of the document is welcome. The APA and AG Working Groups particularly seek feedback on the following questions:</p>
 <ul>
     <li>
        Are issues for the included user groups well covered?
     </li>
     <li>
-        Does the issue paper effectively bridge between research and priorities for new work?
+        Does the research module effectively bridge between research and priorities for new work?
     </li>
     <li>
        Should additional user groups be addressed?
@@ -173,14 +175,30 @@ This module is intended for:
         Are there any more research papers we should consider adding to this document?
     </li>
 </ul>
-<p>To comment, <a href="https://github.com/w3c/coga/issues/new"> file an issue in the W3C coga GitHub repository</a>. Create a separate GitHub issue for each topic, rather than commenting on multiple topics in a single issue. It is free to create a GitHub account to file issues. You can also send an email to <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-coga-comments/">mail archive of previous comments</a>). The deadline for comments is <strong>16 February 2026</strong>. </p>
-<p>In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/"> publicly visible Editor's Draft</a>.</p>
-<p>This document was produced by groups operating under the <a href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>. The group does not expect this document to become a W3C Recommendation. W3C maintains a <a href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a href="https://www.w3.org/groups/wg/apa/ipr/">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a>, and a <a href="https://www.w3.org/groups/wg/ag/ipr/">public list of any patent disclosures (Accessibility Guidelines Working Group)</a> made in connection with the deliverables of each group &mdash; these pages also include instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a> must disclose the information in accordance with <a  href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the W3C Patent Policy</a>.</p>
-<p>This document is governed by the <a  href="https://www.w3.org/policies/process/">18 August 2025 W3C Process Document</a>.</p>		
-        </section>
- 
-		 <section>
-			<h2>Introduction
+<p>To comment, <a   href="https://github.com/w3c/coga/issues/new"> file an issue in the W3C coga GitHub repository </a>. You can also send an email to <a   href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a   href="http://lists.w3.org/Archives/Public/public-aria/"> comment archive </a>). Comments are requested by <strong>15th April 2026</strong>. In-progress updates to the document may be viewed in the <a   href="http://w3c.github.io/coga/issue-papers/"> publicly visible editors' draft </a>.</p>
+<p>
+    
+        This document was produced by groups
+        operating under the
+        <a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C<!---0.498763%--></abbr> Patent Policy</a>.
+      The group does not expect this document to become a <abbr title="World Wide Web Consortium">W3C</abbr> Recommendation.
+     <abbr title="World Wide Web Consortium">W3C</abbr> maintains a
+          <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a
+          <a rel="disclosure" href="https://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a>, and a
+          <a rel="disclosure" class="respec-offending-element"  >public list of any patent disclosures (Accessibility Guidelines Working Group)</a>
+          made in connection with the deliverables of
+          each group; these pages also include
+          instructions for disclosing a patent. An individual who has actual
+          knowledge of a patent which the individual believes contains
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>
+          must disclose the information in accordance with
+          <a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the <abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>.
+      
+  </p>
+			
+		</section>
+	<section>
+			<h2>Introduction / Summary
 </h2>
    <p>Supported decision-making (SDM) is a model that provides human or technological assistance to a person with a disability making a choice. SDM allows individuals with disabilities to make choices about their own lives with support from people they choose.</p>
 <p>SDM typically includes the following features:</p>
@@ -194,16 +212,17 @@ This module is intended for:
     <li>
         <strong>The support is tailored to the user:</strong> With SDM a person should be able to customize the level and type of support they want, and to stay in control of their decisions. SDM respects the person's preferences, even if their decisions are unconventional (for example, a person with dyscalculia may choose to have unusual financial decisions made via a support person). The user may change their support person at any time.</ul>
 <p>Supported decision-making is often not provided on the internet or apps.</p>
-<p>This module describes the advantages and risks in providing SDM online. It includes suggestions so that supported digital decision-making can safely allow more people to participate in the digital world while maintaining dignity and autonomy.</p>
-<p>Technology and digital communication can enable SDM in two main areas:
+<p>This module describes the advantages and risks in providing <abbr title="Supported decision making ">SDM</abbr> online. It includes suggestions so that supported digital decision-making can safely allow more people to participate in the digital world while maintaining dignity and autonomy.</p>
+<p>There are Technology and digital communication can enable <abbr title="Supported decision making ">SDM</abbr> in two main areas:
 </p>
 <ol>
     <li>Enabling helpers to support online decisions, by sharing the process involved in high-risk decisions.</li>
     <li>Taking some of the role or work involved in supported decision-making (for example, clearly presenting options in a table, and in plain language).</li>
 </ol>
-<p>The examples and strategies in this module may apply to people with or without a legal guardian. A person who has a legal guardian may be interested in and able to use the internet. However, this module is about how to integrate support, often from a helper, while enabling the user to stay in control.</p>
+<p>The examples and strategies in this paper may apply to people who are or are not their own guardians. Having a legal guardian does not mean that a person is not able to or interested in using the internet. However, this module is about how to integrate support, often from a helper, whilst enabling the user to stay in control.</p>
+		<p>This module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
 <h3>Disabilities that may require SDM</h3>
-<p>Disabilities that may require SDM include:</p>
+<p>Disabilities that may require <abbr title="Supported decision making ">SDM</abbr> include:</p>
 <ul>
     <li>
         cognitive, developmental, intellectual, learning, and specific learning disabilities,
@@ -227,26 +246,23 @@ This module is intended for:
         temporary impairments that affect cognitive function, such as anxiety, illness, effects of medication, and treatments such as chemotherapy.
     </li>
 </ul>
-<p>Examples of mental health issues include bipolar disorder, low impulse control, and psychotic disorders.</p>
-<h3>Target audience</h3>
-<p>The target audiences for this document include:</p>
+<p>Examples of mental health issues include: Bipolar disorder, low impulse control, psychotic disorders and others.</p>
+<h3>Target Audience</h3>
+<p>Research modules are <strong>primarily intended for groups in The World Wide Web Consortium (W3C).</strong> For example, they are used as source material for <a  href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>.</p>
+<p>They may also contain useful information for:</p>
 <ul>
-    <li>
-        decision makers, policy makers, and advocates,
-    </li>
     <li>
         researchers,
     </li>
     <li>
-        engineers, and solution providers,
+        inclusion and research-related policy makers,
     </li>
     <li>
-        people involved in making technical standards and policies, and
-    </li>
-    <li>
-        product designers, managers, designers, and engineers.
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
     </li>
 </ul>
+<p>Note that these modules focus on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, they may sometimes address a broader scope than web accessibility alone.</p>
+
 		
 	
 	</section><section>
@@ -255,7 +271,7 @@ This module is intended for:
 <p>These include:</p>
 <ol>
     <li>
-        Clear content where risks, benefits, and options are easy to understand and navigate. [[coga-usable]]
+        Clear content where risks, benefits, and options are easy to understand and navigate. See [[coga-usable]].
     </li>
     <li>
         Filters to avoid certain types of content that may cause emotional distress, anxiety, or trauma responses for the person using the system.
@@ -279,7 +295,7 @@ This module is intended for:
     </li>
 </ul>
 <p>This may be appropriate for minor children.</p>
-<p><strong>Guardian/Guardianship: Guardianship is not the same as Supported Decision-Making. Guardianship</strong> is a legal status where another person makes a decision on behalf of a person with a disability. There are different levels of guardianship. A person can have a guardian for only certain decisions, like healthcare or finances. Note that SDM tools can be used by guardians to involve the individual in decisions as much as possible.
+<p><strong>Guardian/Guardianship: Guardianship is not the same as Supported Decision-Making.</strong> Guardianship is a legal status where another person makes a decision on behalf of a person with a disability. There are different levels of guardianship. A person can have a guardian for only certain decisions, like healthcare or finances. Note that <abbr title="Supported decision making ">SDM</abbr> tools can be used by guardians to involve the individual in decisions as much as possible.
 </p>
 <p>Guardians are also called <strong>conservators, conservators, legal representatives, or custodians.</strong>
 </p>
@@ -313,7 +329,7 @@ This module is intended for:
     </li>
 </ul>
 <p>Consent is also a term used when someone is agreeing on behalf of someone who is not their own legal representative.</p>
-<p><strong>Informed assent i</strong>s making sure a person who cannot make legal decisions themselves has and understands all the information they need for a decision their guardian is making on their behalf. To give informed assent, a person:</p>
+<p><strong>Informed assent</strong> is making sure a person who cannot make legal decisions themselves has and understands all the information they need for a decision their guardian is making on their behalf. To give informed assent, a person:</p>
 <ul>
     <li>
         understands the decision being made, and    </li>
@@ -347,14 +363,14 @@ This module is intended for:
 <p>Further, people have reported (in response to this paper) that they are afraid of other long-term consequences of posting online. For example, if they post about mental health issues, or if their posts are considered inappropriate or imply health issues, then that can be used against them or to harm them after recovery has started.</p>
 <p>Note that even after the user removes the original post, shared version or saved versions may persist.</p>
 <h4>Safety</h4>
-<p>The internet is not always a safe place. Like life off the internet, everyone is at risk of having crime as part of their online experience. Usually referred to as cybercrime, these activities, including fraud, terrorism, extortion, harassment, and hacking, are perpetrated by several types of criminals. Some legal activities can affect people's safety.</p>
-<p>Personal information can be stored and sold to third parties or stolen. This information can be used to hurt the user, including financial or emotional exploitation. See issue paper on safety at <a  href="https://raw.githack.com/w3c/coga/issue-papers-v2/issue-papers/Online-Safety-and-Wellbeing.html">Online Safety and Wellbeing (Algorithms and Data)</a>
+<p>The Internet is not always a safe place. Like life off the Internet, everyone is at risk of having crime as part of their online experience. Usually referred to as cybercrime, these activities, including fraud, terrorism, extortion, harassment, and hacking, are perpetrated by several types of criminals. Some legal activities can affect people's safety.</p>
+<p>Personal information can be stored and sold to third parties or stolen. This information can be used to hurt the user, including financial or emotional exploitation. See research module on safety at <a  href="Online-Safety-and-Wellbeing.html">Online Safety and Wellbeing (Algorithms and Data)</a>
 </p>
 <p>People with cognitive impairments and elderly individuals are more likely to be targeted by online financial fraud, and when they lose money, it’s a higher amount than average, according to researchers. [[RC-CNBC1]]</p>
 		</section><section>
-<h2>Problems with current online solutions (for supported decision-making (SDM) online)</h2>
-<p>Although SDM can mitigate many problems facing people with disabilities online, it also creates new problems and issues. These include:</p>
-<h3>Misuse by the helper</h3>
+<h2>Problems with Current Online Solutions (for Supported Decision-Making (SDM) online)</h2>
+<p>Although <abbr title="Supported decision making ">SDM</abbr> can mitigate many problems facing people with disabilities online, it also creates new problems and issues. These include:</p>
+<h3>Misuse by the Helper</h3>
 <p>Unfortunately websites must not assume that helpers are always reliable or honest or have the users’ needs as their main driver.</p>
 <p>There can be many helpers - people or organizations that behave in a way that is harmful, illegal, or morally wrong.</p>
 <p>In addition, care must be taken that supported decision-making is not applied to restrict people's liberty based on sexism, racism or other factors, and or where the support is not the will of the user. Checks may be necessary on a regular basis to confirm that the supported decision-making is on the request of the user without coercion.</p>
@@ -375,8 +391,8 @@ This module is intended for:
        Different support may be required for emergencies or for extremely and unusually @bad desions@ such as long term inappropriate financial decisions or decisions that can put their life at an inappropriate risk.    </li>
 </ul>
 <p>Misuses by the helper may also seem to be justified in the helpers mind. For example, that helper may pressure the user into purchases or presents that the user would not ordinarily buy if the helper had not pressured them. These can be to the benefit of the helper or daily members. For example, an elderly man buying perfume for his aid, may be considered a sign of misuse.</p>
-<h3>Informed Consent in SDM solutions</h3>
-<p>Informed consent with SDM has a variety of issues. These include:</p>
+<h3>Informed Consent In <abbr title="Supported decision making ">SDM</abbr> Solutions</h3>
+<p>Informed consent with <abbr title="Supported decision making ">SDM</abbr> has a variety of issues. These include:</p>
 <ul>
     <li>
        The consent to share information with the helper must be informed consent.    </li>
@@ -414,23 +430,20 @@ This module is intended for:
 <p>There may also be times when autonomy is preferable. (However, if the user is under guardianship this may be removed.)</p>
 <h3>Changing states of the user</h3>
 <p>The end use may require support at times and autonomy at different times. For example, a user with controlled bipolar disorder may want autonomy most of the time, However, if they do have a manic episode they will require more support before decision-making. (However, they are unlikely to set up the system while in a manic state.) Limits on spending or decision-making scope may enable the user to balance the needs in different cycles.</p>
-<p class="ednote"> We are considering adding content in this section on:
+<p class="ednote"> We are considering adding content in this section on:<br/>
 
-<ul>
-    <li>
-        Dignity - At all points the aims must include, maintaining the dignity of the user.    </li>
-    <li>
+        Dignity - At all points the aims must include, maintaining the dignity of the user.    <br/>
         Reliability and stress - Research other points and add discussion (and sources) on this issue.
-    </li>
-    <li>
-       Website support - (Possibly) The main issue is that most websites and apps have no support for SDM. It is unusual for a website to consider the ramifications of SDM in its design or functionality. Exceptions exist, especially in addiction recovery.    </li>
-</ul>
+      <br/>
+       Website support - (Possibly) The main issue is that most websites and apps have no support for SDM. It is unusual for a website to consider the ramifications of <abbr title="Supported decision making ">SDM</abbr> in its design or functionality. Exceptions exist, especially in addiction recovery.    </li>
+   <br/>
 Comments and suggestions are welcome.
 </p>
 <h3>Overuse</h3>
-<p>Consent may be continuously required, and burden the helper. This includes Consent to share information or use cookies.</p>
+<p>Consent may be continuously required, and burden the helper. This includes consent to share information or use cookies.</p>
 			</section><section>
-<h2>User story and user needs </h2>
+<h2>User Story and User Needs </h2>
+				 <p class="ednote">In the next version, we will cross-reference this section with the user needs in <a  href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>. New user needs that are identified in this research module will be included in the next version of <a  href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>. </p>
 
 <ul>
     <li>
@@ -512,8 +525,11 @@ Related user needs:
     </li>
 </ol>
 					</section><section>
-<h2>Proposed solutions and examples </h2>
-<h3>Supported decision-making as a feature</h3>
+<h2>Possible Solutions for Meeting User Needs </h2>
+
+						<p>Below are some ideas that might help meet the user needs above. Note that
+digital solutions should also meet [[WCAG21]] and [[coga-usable]]. Also, this module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
+<h3>Supported Decision-Making as a Feature</h3>
 <p>Supported decision-making [[RC-ACLU1]] lets the user choose how much help they want from a helper. For example, the user can adjust the support levels, such as:</p>
 <ul>
     <li>
@@ -525,9 +541,9 @@ Related user needs:
     <li>
         view and cancellation only.
     </li>
-</ul>
-<p>Supported decision-making (SDM) is a powerful way for businesses and websites to help people stay in control of their choices—especially when making decisions that affect their money, privacy, or well-being. SDM gives users tools to make thoughtful, informed decisions, even if they face challenges with focus, memory, emotional regulation, or pressure from others.</p>
-<p>One of the strengths of SDM is that it can be customized by the user. For example, someone might choose a trusted person—called a “helper”—to support them. The user stays in charge and decides how much access that helper has. Some people may want their helper to give advice only. While others may want their helper to be able to cancel a decision or require approval before continuing.</p>
+</ul> [[RC-ACLU1]]
+<p>Supported decision-making (SDM) is a powerful way for businesses and websites to help people stay in control of their choices—especially when making decisions that affect their money, privacy, or well-being. <abbr title="Supported decision making ">SDM</abbr> gives users tools to make thoughtful, informed decisions, even if they face challenges with focus, memory, emotional regulation, or pressure from others.</p>
+<p>One of the strengths of <abbr title="Supported decision making ">SDM</abbr> is that it can be customized by the user. For example, someone might choose a trusted person, called a “helper”, to support them. The user stays in charge and decides how much access that helper has. Some people may want their helper to give advice only. While others may want their helper to be able to cancel a decision or require approval before continuing.</p>
 <p>By including supported decision-making features, organizations can create safer, more inclusive digital experiences while building greater trust with their customers.</p>
 <p>The following proposed solution aims to allow more users to participate in online activities, support the principles of supported decision whilst making with minimal or no cost to the users dignity or autonomy.</p>
 <h3>Cognitive support</h3>
@@ -553,7 +569,7 @@ Related user needs:
 <p>This can include using a table or bulleted list, simple language, and good use of color and white space.For example, a clear layout of options can help someone who has a short-term memory can see all the advantages and disadvantages without having to remember them.</p>
 <h4>Example 1: Table showing main points for each option before booking</h4>
 <h4><strong>Summary of this hotel option</strong></h4>
-<table style="min-width: 75px">
+<table border="1">
     <colgroup>
         <col>
             <col>
@@ -561,9 +577,9 @@ Related user needs:
     </colgroup>
     <tbody>
         <tr>
-            <th  >
+            <td  >
                 <p></p>
-            </th>
+            </td>
             <th >
                 <p><strong>Hotel Smoliot </strong>
                 </p>
@@ -716,7 +732,7 @@ Related user needs:
 </p>
 <p><strong>How to apply</strong>
 </p>
-<table style="min-width: 50px">
+<table border="1" style="min-width: 50px">
     <colgroup>
         <col>
             <col>
@@ -816,10 +832,10 @@ Related user needs:
 <p>Supported decision-making that can help people check themselves such as:</p>
 <ul>
     <li>
-        <strong>Self-imposed limits</strong> such as per website or shop or category (food, clothes etc). Reminder to switch off social media after user preferred time limit is elapsed or automatic switching off of social media after user preferred time is elapsed. This can also work on an operating system level.
+        <strong>Self-imposed limits</strong>, such as per website or shop or category (food, clothes etc). Reminder to switch off social media after user preferred time limit is elapsed or automatic switching off of social media after user preferred time is elapsed. This can also work on an operating system level.
     </li>
     <li>
-        <strong>User set, controls for helpers</strong>, when appropriate, similar to thoughts discussed in the section for solutions for <a  href="https://docs.google.com/document/d/1g9N-_3l-d6t0ppZcIIZ98k00x7ZE7h3ayq0OCX9Ycu4/edit?tab=t.0#heading=h.ss5m55cpmrhj">Finance and Spending</a>.
+        <strong>User set controls for helpers</strong>, when appropriate, similar to thoughts discussed in the section for solutions for <a  href="https://docs.google.com/document/d/1g9N-_3l-d6t0ppZcIIZ98k00x7ZE7h3ayq0OCX9Ycu4/edit?tab=t.0#heading=h.ss5m55cpmrhj">Finance and Spending</a>.
     </li>
     <li>
         <strong>Double confirmation for posts</strong>, or a cooling off period/ process between writing a post and posting it, where risks to the best interests of the user may be identified.
@@ -827,11 +843,11 @@ Related user needs:
 </ul>
 <ul>
     <li>
-        <strong>Private networks and safe spaces </strong>with protective features such as:  All members are confirmed as having common criteria, and must maintain confidentiality. Moderators are typically present  to reduce risks of inappropriate or unsafe behaviors or posts. This can be a place where people can be themselves without worries of their data being used outside the group, or judgment for their condition.
+        <strong>Private networks and safe spaces</strong>, with protective features such as:  All members are confirmed as having common criteria, and must maintain confidentiality. Moderators are typically present  to reduce risks of inappropriate or unsafe behaviors or posts. This can be a place where people can be themselves without worries of their data being used outside the group, or judgment for their condition.
         
     </li>
     <li>
-        <strong>Warning or support questions or flows</strong> can be added before sharing. For example, safety questions that can be added, with the support of professionals, depending on the user scenario.
+        <strong>Warnings,</strong> or support questions or flows, can be added before sharing. For example, safety questions that can be added, with the support of professionals, depending on the user scenario.
     </li>
 </ul>
 <p>Note these features are only suggestions for further research or testing. They may not be effective.</p>
@@ -931,14 +947,12 @@ Related user needs:
 <p>With other options, people who would be otherwise unable to participate can provide valuable input that would improve the web for many. People are more self-directed, self-determined, more effective and successful when they have an opportunity to use the cognitive supports they need.</p>
 <p>In addition, agreements such as the Invited Expert Collaborator Application has language that may be of concern in a guardianship situation. [[RC-W31]]</p>
 <p>“W3C may, at its discretion, grant Invited Experts access to Member confidential information, generally based on the level of confidentiality of meeting records and other proceedings described in a group charter. This access includes mailing-lists, website, tools, teleconferences and meetings. W3C seeks to ensure that all Invited Experts in a given W3C Group have the access necessary to enable the group to conduct its work.” (Note this applies to participants in non-public groups). W3C AC Representative language may be one model to consider for how to address guardianship situations or the need for shared decision-making and/or cognitive support, in terms of legal language. This is not the only model or necessarily satisfies all needs, but it is a precedent.</p>
-<h3>Recommendation in the W3C</h3>
-<h4>Proposed additional membership options</h4>
+<h3>Recommendations for the W3C</h3>
+<h4>Proposed Additional Membership Options</h4>
 <p>The COGA Task Force recommends that alternative membership options for community group and W3C participation are available. These can include the following options.</p>
-<h5>Before applying to be an Invited Expert or community group Member</h5>
-<p><strong>An opportunity and invitation should be provided for a person considering membership to work with a guardian or shared decision maker to review documents before completing the agreement.</strong>
+<p><strong>Before Applying to be an Invited Expert or Community Member</strong>. An opportunity and invitation should be provided for a person considering membership to work with a guardian or shared decision maker to review documents before completing the agreement.
 </p>
-<h5>Helping people participate</h5>
-<p><strong>A person can choose to have their guardian, or another person they identify, be involved to help with their participation (either as a named member or be a partner in their membership)</strong>. This can include but is not limited to supporting the person to:</p>
+<p><strong>Helping People Participate</strong>. A person can choose to have their guardian, or another person they identify, be involved to help with their participation (either as a named member or be a partner in their membership). This can include but is not limited to supporting the person to:</p>
 <ul>
     <li>
         review content prior to publication, and
@@ -947,29 +961,26 @@ Related user needs:
         manage their communications with the group.
     </li>
 </ul>
-<p><strong>A person with a guardian can have a liaison-type role for the guardian who approves their participation, and then the individual independently participates. </strong>In some cases, guardians may only need to be involved for contract or legal document signatures. For some countries, guardianship may involve authorizing publication of an individual’s name or contains specifically identifying information.</p>
-<h5>  Support person or organization is officially “the Member’s representative”</h5>
-<p><strong>A support organization or person can be the member (on behalf of an individual) in order to facilitate participation by an individual</strong> that may:</p>
+<p>A person with a guardian can have a liaison-type role for the guardian who approves their participation, and then the individual independently participates. In some cases, guardians may only need to be involved for contract or legal document signatures. For some countries, guardianship may involve authorizing publication of an individual’s name or contains specifically identifying information.</p>
+<p><strong>Support Person or Organization</strong> is officially “The Member’s Representative”. A support organization or person can be the member (on behalf of an individual) in order to facilitate participation by an individual that may:</p>
 <ul>
     <li>
         Prefer or need not to be named, or manage the communications.
     </li>
     <li>
         Help facilitate access to meetings and materials. Example: some individuals may not do well with independent use of a computer because they have a disability impacting their judgment but they can and do complete many tasks independently on a computer as long as they are supervised.
-        <ul>
+	</li>
             <li>
                 To ensure their safety, with proper support, they may be able to provide valuable input and ideas for the work of the W3C. An organization can be a supported employment organization, a congregate living facility, or a "self-advocacy" organization.
             </li>
-        </ul>
-    </li>
+       
 </ul>
 <p>Example: Fred lives in a group home. The group home is the official member’s representative. Fred is not named in communications or publications.</p>
-<h4>  A process for those with proposed additional membership options</h4>
-<p><strong>A process should be available for the individual to change their designated support person/organization/guardian</strong>
+<p><strong> A Process for Those with Proposed Additional Membership Options</strong>. A process should be available for the individual to change their designated support person/organization/guardian.
 </p>
 <ul>
     <li>
-        Example: a person selects a support professional they use regularly, then that person takes a different job.
+        Example 1: a person selects a support professional they use regularly, then that person takes a different job.
     </li>
     <li>
         Example 2: a person moves from one supported employment organization to another.
@@ -979,13 +990,139 @@ Related user needs:
     
 	
 	</section>	</section>
-		<section><h2>References</h2>
- <p class="ednote" > Note that this section needs to be cleaned up and full citations will be added.</p>
-<p></p>
-<p>Most Citations are the row number in <a href="https://docs.google.com/spreadsheets/d/1eKNrofGubnpQE6mO-vxmI-1MW5nA2LDj0LxebREPRGA/edit?resourcekey#gid=1686096268">Mental Health Literature Review (Responses)</a></p>
-<p>Unless they have the letters CG  when they are the row from  <a href="https://docs.google.com/spreadsheets/d/1Cu_qVP1WBz2TbsrAjLbbeb55RAlJmu9kfHamriL1Ocs/edit#gid=1686096268">coga general research database </a></p>
-</section>
+		
+<section class="appendix section" id="acknowledgements">
+  <h2 id="d-appendix-acknowledgments">Appendix: Acknowledgments</h2>
+  
+<section >
+    <h3 >Key contributors and section editors</h3>
+<ul>
+<li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+</li><li>
 
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+John Kirkwood, 
+CityMouse, Inc
+	</li><li>
+Julie Rawe, 
+Understood.org
+
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert
+
+</li>
+</section >
+
+
+<section >
+    <h3 >
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</h3>
+<ul>
+<li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+
+</li><li>
+
+Rachael Bradley Montgomery, 
+Library of Congress
+
+</li><li>
+
+Rain Breaw Michaels, 
+Google LLC
+
+</li><li>
+Tiffany Burtin, 
+Invited Expert 
+
+</li><li>
+Deborah Dahl, 
+Conversational Technologies
+
+</li><li>
+Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+E.A. Draffan, 
+Global Symbols
+
+</li><li>
+Jeanne Erickson Cooley, 
+TPGi
+
+
+</li><li>
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+
+John Kirkwood, 
+CityMouse, Inc
+
+</li><li>
+Andy Manea, 
+Invited Expert 
+</li><li>
+Jan McSorley, 
+Invited Expert 
+</li><li>
+Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Abigail Ofer, 
+Evinced Inc.
+
+</li><li>
+
+Justine Pascalides, 
+Amazon
+</li><li>
+Ruoxi Ran, 
+W3C
+</li><li>
+Julie Rawe, 
+Understood.org
+</li><li>
+Charlotte Riggle, 
+Amazon
+</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Janina Sajka, 
+Invited Expert 
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert 
+</li><li>
+
+Gareth Slinn, 
+Invited Expert 
+</li><li>
+David Swallow
+TPGi
+
+
+</li></ul></section>
+</section>
   </body>
 </html>
      	
