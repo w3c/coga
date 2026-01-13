@@ -8,92 +8,82 @@
 		<script src="biblio.js" class="remove"></script>
 		<script class="remove">
 	var respecConfig = {
-		// embed RDFa data in the output
-		trace:  true,
-		doRDFa: '1.1',
-		includePermalinks: true,
-		permalinkEdge:     true,
-		permalinkHide:     false,
-		tocIntroductory: true,
-		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-		specStatus:           "ED",
-		noRecTrack: true,
-		//crEnd:                "2012-04-30",
-		//perEnd:               "2013-07-23",
-		//publishDate:          "2013-08-22",
-		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
-		
-		// the specifications short name, as in http://www.w3.org/TR/short-name/
- github: "w3c/coga/",
- shortName: "coga-wayfinding",
- 
-		// if you wish the publication date to be other than today, set this
-		//publishDate:  "2017-05-16",
-		copyrightStart:  "2017",
-		license: "document",
+		specStatus: "DNOTE",
+        noRecTrack: true,
+        //crEnd:                "2012-04-30",
+        //perEnd:               "2013-07-23",
+        //publishDate:          "2013-08-22",
+        //diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 
-		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
-		// and its maturity status
-		//previousPublishDate:  "",
-		//previousMaturity:  "",
-		//prevRecURI: "",
-		//previousDiffURI: "",
+        // the specifications short name, as in http://www.w3.org/TR/short-name/
+        shortName: "coga-wayfinding",
 
-		// if there a publicly available Editors Draft, this is the link
-		edDraftURI: "https://w3c.github.io/coga/issue-papers/",
 
-		// if this is a LCWD, uncomment and set the end of its review period
-		// lcEnd: "2012-02-21",
+        // if you wish the publication date to be other than today, set this
+        //publishDate:  "2017-05-16",
+        copyrightStart: "2026",
+        license: "document",
+        publishDate: "2026-01-22",
 
-		// editors, add as many as you like
-		// only "name" is required
-		editors: [
-			{
-				name: "Lisa Seeman-Horwitz",
-				mailto: "lisa.seeman@zoho.com"
-			},
-	//  { name: "Eric Hind",},		
-	//  { name: "Rebecca Monteleone", url: "utoledo.edu",mailto: "rebecca.monteleone@utoledo.edu" },
-	//   { name: "John Rochford" },
-	//  { name: "John Kirkwood", url: "citymouse.com",mailto: "kirkwood@citymouse.com" }
+        // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+        // and its maturity status
+        //previousPublishDate:  "",
+        //previousMaturity:  "",
+        //prevRecURI: "",
+        //previousDiffURI: "",
 
-		
-	 		],
+        // if there a publicly available Editors Draft, this is the link
+        edDraftURI: "https://w3c.github.io/coga/research-modules/Technology-Assisted-Indoor-Navigation-and-Wayfindings.html",
 
-		// authors, add as many as you like. 
-		// This is optional, uncomment if you have authors as well as editors.
-		// only "name" is required. Same format as editors.
+        // if this is a LCWD, uncomment and set the end of its review period
+        // lcEnd: "2012-02-21",
 
-		//authors:  [
-		//    { name: "Your Name", url: "http://example.org/",
-		//      company: "Your Company", companyURI: "http://example.com/" },
-		//],
+        // editors, add as many as you like
+        // only "name" is required
+        editors: [
+            {
+                name: "Lisa Seeman-Horwitz",
 
-		/*
-		alternateFormats: [
-			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
-			{ uri: 'aria.ps', label: "PostScript version" }, 
-			{ uri: 'aria.pdf', label: "PDF version" }
-		],
-		*/
-		
-		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
-		
-		// name of the WG
-		group: ["apa", "ag"],
-		
-		// name (with the @w3c.org) of the public mailing to which comments are due
-		wgPublicList: "public-coga-comments",
-		
-		// URI of the patent status for this WG, for Rec-track documents
-		// !!!! IMPORTANT !!!!
-		// This is important for Rec-track documents, do not copy a patent URI from a random
-		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
-		// Team Contact.
-		wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
-		//maxTocLevel: 2,
-		
-		localBiblio: biblio,
+                mailto: "lisa.seeman@zoho.com"
+            },
+
+        ],
+
+        // authors, add as many as you like. 
+        // This is optional, uncomment if you have authors as well as editors.
+        // only "name" is required. Same format as editors.
+
+        //authors:  [
+        //    { name: "Your Name", url: "http://example.org/",
+        //      company: "Your Company", companyURI: "http://example.com/" },
+        //],
+
+        /*
+        alternateFormats: [
+            { uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+            { uri: 'aria.ps', label: "PostScript version" }, 
+            { uri: 'aria.pdf', label: "PDF version" }
+        ],
+        */
+
+        // errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+
+        // name of the WG
+        group: ["apa", "ag"],
+
+        // name (with the @w3c.org) of the public mailing to which comments are due
+        wgPublicList: "public-coga-comments",
+
+        // URI of the patent status for this WG, for Rec-track documents
+        // !!!! IMPORTANT !!!!
+        // This is important for Rec-track documents, do not copy a patent URI from a random
+        // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+        // Team Contact.
+
+        //maxTocLevel: 2,
+
+        localBiblio: biblio,
+        github: "w3c/coga",
 	};
 		</script>
 		
@@ -155,10 +145,6 @@
     </li>
 </ul>
 <p>To comment, <a  href="https://github.com/w3c/coga/issues/new">file an issue in the W3C coga GitHub repository</a>. If this is not feasible, send email to <a  href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a  href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>15th April 2026</strong>. In-progress updates to the document may be viewed in the <a  href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
-<p>This document was published by the <a  href="https://www.w3.org/WAI/APA/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a  href="https://www.w3.org/WAI/GL/">Accessible Platform Architectures Working Group</a>, and the Accessibility Guidelines Working Group as an Editor's Draft.</p>
-
-<p>This document was produced by groups operating under the <a  href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>. The group does not expect this document to become a W3C Recommendation. W3C maintains a <a  href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a  href="https://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a>, and a public list of any patent disclosures (Accessibility Guidelines Working Group) made in connection with the deliverables of each group; these pages also include instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains <a  href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a> must disclose the information in accordance with <a  href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the W3C Patent Policy</a>.</p>
-<p>This document is governed by the <a  href="https://www.w3.org/2019/Process-20190301/">1 March 2019 W3C Process Document</a>.</p>
 
 				</section>
  <section>
