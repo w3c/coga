@@ -607,7 +607,7 @@ var biblio = {
 							"href": "https://www.wsj.com/articles/facebook-knows-instagram-is-toxic-for-teen-girls-company-documents-show-11631620739",
 								"status": "other"
 	},
-	"RM-bernard1": {
+	"RM-Bernard1": {
 		"title": "Difficulties Encountered by People With Depression and Anxiety on the Web: Qualitative Study and Web-Based Expert Survey",
 			"date": "2019",
 				"authors": ["R. Bernard", "C. Sabariego", "A. Cieza"],
@@ -660,7 +660,7 @@ var biblio = {
 									"href": "https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf",
 										"status": "other"
 	},
-	"RM-yu1": {
+	"RM-Yu1": {
 		"title": "Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model",
 			"date": "2016-02",
 				"authors": ["R. Yu"],
