@@ -7,91 +7,82 @@
 		<script src="biblio.js" class="remove"></script>
 		<script class="remove">
 	var respecConfig = {
-		// embed RDFa data in the output
-		trace:  true,
-		doRDFa: '1.1',
-		includePermalinks: true,
-		permalinkEdge:     true,
-		permalinkHide:     false,
-		tocIntroductory: true,
-		// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-		specStatus:           "ED",
-		noRecTrack: true,
-		//crEnd:                "2012-04-30",
-		//perEnd:               "2013-07-23",
-		//publishDate:          "2013-08-22",
-		//diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
-		
-		// the specifications short name, as in http://www.w3.org/TR/short-name/
- shortName: "COGA-Safety",
-		
+		specStatus: "ED",
+        noRecTrack: true,
+        //crEnd:                "2012-04-30",
+        //perEnd:               "2013-07-23",
+        //publishDate:          "2013-08-22",
+        //diffTool:             "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
 
-		// if you wish the publication date to be other than today, set this
-		//publishDate:  "2017-05-16",
-		copyrightStart:  "2017",
-		license: "document",
+        // the specifications short name, as in http://www.w3.org/TR/short-name/
+        shortName: "coga-safety",
 
-		// if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
-		// and its maturity status
-		//previousPublishDate:  "",
-		//previousMaturity:  "",
-		//prevRecURI: "",
-		//previousDiffURI: "",
 
-		// if there a publicly available Editors Draft, this is the link
-		edDraftURI: "https://w3c.github.io/coga/issue-papers/",
+        // if you wish the publication date to be other than today, set this
+        //publishDate:  "2017-05-16",
+        copyrightStart: "2026",
+        license: "document",
+        publishDate: "2026-01-22",
 
-		// if this is a LCWD, uncomment and set the end of its review period
-		// lcEnd: "2012-02-21",
+        // if there is a previously published draft, uncomment this and set its YYYY-MM-DD date
+        // and its maturity status
+        //previousPublishDate:  "",
+        //previousMaturity:  "",
+        //prevRecURI: "",
+        //previousDiffURI: "",
 
-		// editors, add as many as you like
-		// only "name" is required
-		editors: [
-			{
-				name: "Lisa Seeman-Horwitz",
-				mailto: "lisa.seeman@zoho.com"
-			},
-			
-	 //{ name: "Rebecca Monteleone", url: "utoledo.edu",mailto: "rebecca.monteleone@utoledo.edu" },  { name: "Eric Hind",}	
-		],
+        // if there a publicly available Editors Draft, this is the link
+        edDraftURI: "https://w3c.github.io/coga/research-modules/Online-Safety-and-Wellbeing.html",
 
-		// authors, add as many as you like. 
-		// This is optional, uncomment if you have authors as well as editors.
-		// only "name" is required. Same format as editors.
+        // if this is a LCWD, uncomment and set the end of its review period
+        // lcEnd: "2012-02-21",
 
-		//authors:  [
-		//    { name: "Your Name", url: "http://example.org/",
-		//      company: "Your Company", companyURI: "http://example.com/" },
-		//],
+        // editors, add as many as you like
+        // only "name" is required
+        editors: [
+            {
+                name: "Lisa Seeman-Horwitz",
 
-		/*
-		alternateFormats: [
-			{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
-			{ uri: 'aria.ps', label: "PostScript version" }, 
-			{ uri: 'aria.pdf', label: "PDF version" }
-		],
-		*/
-		
-		// errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
-		
-		// name of the WG
-		wg:           [  "Accessible Platform Architectures Working Group", "Accessibility Guidelines Working Group"],
-		
-		// URI of the public WG page
-		wgURI:        ["https://www.w3.org/WAI/APA/", "https://www.w3.org/WAI/GL/"],
-		
-		// name (with the @w3c.org) of the public mailing to which comments are due
-		wgPublicList: "public-coga-comments",
-		
-		// URI of the patent status for this WG, for Rec-track documents
-		// !!!! IMPORTANT !!!!
-		// This is important for Rec-track documents, do not copy a patent URI from a random
-		// document unless you know what you're doing. If in doubt ask your friendly neighbourhood
-		// Team Contact.
-		wgPatentURI:  ["https://www.w3.org/2004/01/pp-impl/83907/status", "https://www.w3.org/2004/01/pp-impl/32212/status"],
-		//maxTocLevel: 2,
-		
-		localBiblio: biblio,
+                mailto: "lisa.seeman@zoho.com"
+            },
+
+        ],
+
+        // authors, add as many as you like. 
+        // This is optional, uncomment if you have authors as well as editors.
+        // only "name" is required. Same format as editors.
+
+        //authors:  [
+        //    { name: "Your Name", url: "http://example.org/",
+        //      company: "Your Company", companyURI: "http://example.com/" },
+        //],
+
+        /*
+        alternateFormats: [
+            { uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
+            { uri: 'aria.ps', label: "PostScript version" }, 
+            { uri: 'aria.pdf', label: "PDF version" }
+        ],
+        */
+
+        // errata: 'http://www.w3.org/2010/02/rdfa/errata.html',
+
+        // name of the WG
+        group: ["apa", "ag"],
+
+        // name (with the @w3c.org) of the public mailing to which comments are due
+        wgPublicList: "public-coga-comments",
+
+        // URI of the patent status for this WG, for Rec-track documents
+        // !!!! IMPORTANT !!!!
+        // This is important for Rec-track documents, do not copy a patent URI from a random
+        // document unless you know what you're doing. If in doubt ask your friendly neighbourhood
+        // Team Contact.
+
+        //maxTocLevel: 2,
+
+        localBiblio: biblio,
+        github: "w3c/coga",
 	};
 		</script>
 	</head>
@@ -152,11 +143,7 @@
     </li>
 </ul>
 <p>To comment, <a  href="https://github.com/w3c/coga/issues/new">file an issue in the W3C coga GitHub repository</a>. If this is not feasible, send email to <a  href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a  href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>15th April 2026</strong>. In-progress updates to the document may be viewed in the <a  href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
-<p>This document was published by the <a  href="https://www.w3.org/WAI/APA/">Cognitive and Learning Disabilities Accessibility Task Force</a>, the <a  href="https://www.w3.org/WAI/GL/">Accessible Platform Architectures Working Group</a>, and the Accessibility Guidelines Working Group as an Editor's Draft.</p>
-<p>Comments regarding this document are welcome. Please send them to <a  href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a  href="https://lists.w3.org/Archives/Public/public-coga-comments/">archives</a>).</p>
-<p>Publication as an Editor's Draft does not imply endorsement by the W3C Membership. This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
-<p>This document was produced by groups operating under the <a  href="https://www.w3.org/Consortium/Patent-Policy/">W3C Patent Policy</a>. The group does not expect this document to become a W3C Recommendation. W3C maintains a <a  href="https://www.w3.org/2004/01/pp-impl/83907/status">public list of any patent disclosures (Cognitive and Learning Disabilities Accessibility Task Force)</a>, a <a  href="https://www.w3.org/2004/01/pp-impl/32212/status">public list of any patent disclosures (Accessible Platform Architectures Working Group)</a>, and a public list of any patent disclosures (Accessibility Guidelines Working Group) made in connection with the deliverables of each group; these pages also include instructions for disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains <a  href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a> must disclose the information in accordance with <a  href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure">section 6 of the W3C Patent Policy</a>.</p>
-<p>This document is governed by the <a  href="https://www.w3.org/2019/Process-20190301/">1 March 2019 W3C Process Document</a>.</p>
+
 		</section>
  
 <section><h2>Introduction </h2>
@@ -273,20 +260,20 @@
 <p>Users may not be aware of the goals, settings and biases of the algorithms, making it harder to realize their isolation. Issues that can get reinforced include unhealthy eating practices, such as eating disorders and antisocial behavior. Anxieties are also often reinforced by being exposed to many voices expressing similar views, such as conspiracy theorists. While this also occurs offline, on the web it happens faster and to a more extreme extent [[RC-tiggemann1]].</p>
 <p>When groups are exposed to large amounts of content that disproportionately represents one point of view, and for the sake of clicks, encourages negative reactions to people outside the group, it is more difficult for people to live together and respect differences.</p>
 <h3>Spending and Financial Commitments </h3>
-<p>Conditions that impact emotional regulation may also affect how people act online, and make their reactions more extreme [RM-Yu1]].</p>
-<p>For example, mental health conditions may impact spending. Further frustration from difficult interfaces can also cause stress and impair decision-making. When under stress, people can become more impulsive. Research on decision-making shows stress leads to fast intuitive decision-making over slower, more logical or analytical processes [RC-M1]].</p>
+<p>Conditions that impact emotional regulation may also affect how people act online, and make their reactions more extreme [[RM-Yu1]].</p>
+<p>For example, mental health conditions may impact spending. Further frustration from difficult interfaces can also cause stress and impair decision-making. When under stress, people can become more impulsive. Research on decision-making shows stress leads to fast intuitive decision-making over slower, more logical or analytical processes [[RC-M1]].</p>
 <p>For example the internet may enable a person with bipolar disorder to make substantial financial commitments whilst in the manic phase, often with much greater ease than in the physical world.</p>
 <p>Further, some learning and cognitive disabilities impact spending habits and money management. For example a person with dyscalculia may be unable to tell the steep price difference between similar options. In the real world, they may use cash when shopping to limit the effect.</p>
 <h3>Gatekeeping and Restricting Digital Access</h3>
 <p>Risks to users seem to increase with factors such as lower levels of sociability offline, loneliness, anxiety and depression, poorer insight, judgment, discrimination and ability to detect deception online, and reduced experience and life opportunities. Perceived high online risk may lead to gatekeeping restrictions and controlling digital access. Solutions include supportive communities and supported decision-making (see the research module on supported decision-making)</p>
-<p>However, solution providers must be careful to reinforce the users rights. Restriction may affect online self-determination, participation and development by people with intellectual disabilities and others. There is also a significant risk of solutions being misused to control and oppress marginalized or vulnerable people. Providers should be very cautious about gatekeeping in locations where human rights for everyone are not well established and enforced. This paper only advocates providing tools of autonomy that can not easily be used as tools of repression, marginalisation or isolation. Solutions must be careful to not unnecessarily restrict access and autonomy for vulnerable groups without true consent [RM-Chadwick1]].</p>
+<p>However, solution providers must be careful to reinforce the users rights. Restriction may affect online self-determination, participation and development by people with intellectual disabilities and others. There is also a significant risk of solutions being misused to control and oppress marginalized or vulnerable people. Providers should be very cautious about gatekeeping in locations where human rights for everyone are not well established and enforced. This paper only advocates providing tools of autonomy that can not easily be used as tools of repression, marginalisation or isolation. Solutions must be careful to not unnecessarily restrict access and autonomy for vulnerable groups without true consent [[RC-Chadwick1]].</p>
 <h3>Internet or Gaming Addiction and Overuse</h3>
-<p>Overuse of some internet features such as gaming can sometimes reach the level of addiction. Internet addiction disorder (IAD), or Internet gaming disorder (IGD) describes conditions in which people develop a problematic, compulsive use of the internet (mainly gaming) that causes some significant impairment in different aspects of their life over a prolonged period of time. This includes neglecting other important areas of life, (work, school, family,) or lying to hide the extent of internet use. Note that while not everyone agrees with this as a clinical diagnosis, the effect is well established [RC-IAD1]] [RM-Kim1]].</p>
-<p>There is an association between Internet or gaming addiction and serious psychiatric symptoms such as somatization, sensitivity, depression, anxiety, aggression, phobias, and psychosis. This was after controlling for age, sex, education level, marital status, and type of universities [RM-Hökby1]].</p>
-<p>In other research, people with schizophrenia or schizoaffective disorder using digital technology report negative feelings “often” or “very often” 56% (255/457). This included feelings of being unable to stop (27%, 123/457), frustration (25%, 114/457), paranoia (24%, 110/457), worry (20%, 91/457), sadness (20%, 91/457), anger (19%, 87/457), mania (16%, 73/457), or envy (16%, 73/457) [RM-Gay1]].</p>
+<p>Overuse of some internet features such as gaming can sometimes reach the level of addiction. Internet addiction disorder (IAD), or Internet gaming disorder (IGD) describes conditions in which people develop a problematic, compulsive use of the internet (mainly gaming) that causes some significant impairment in different aspects of their life over a prolonged period of time. This includes neglecting other important areas of life, (work, school, family,) or lying to hide the extent of internet use. Note that while not everyone agrees with this as a clinical diagnosis, the effect is well established [[RC-IAD1]] [[RC-Kim1]].</p>
+<p>There is an association between Internet or gaming addiction and serious psychiatric symptoms such as somatization, sensitivity, depression, anxiety, aggression, phobias, and psychosis. This was after controlling for age, sex, education level, marital status, and type of universities [[RM-Hökby1]].</p>
+<p>In other research, people with schizophrenia or schizoaffective disorder using digital technology report negative feelings “often” or “very often” 56% (255/457). This included feelings of being unable to stop (27%, 123/457), frustration (25%, 114/457), paranoia (24%, 110/457), worry (20%, 91/457), sadness (20%, 91/457), anger (19%, 87/457), mania (16%, 73/457), or envy (16%, 73/457) [[RC-Gay1]].</p>
 <h3>Poor Representation in Data Sets</h3>
 <p>More and more decision making processes are based on data that is gathered from phone use and apps, such as smart city infrastructure and traffic allocations. This makes many groups under-represented or even entirely excluded in data-driven decisions. For example, decisions on parking spaces may be based on data from a parking app. People with disabilities may find the app confusing or unusable. They may pay with cash. The data collected by the parking app does not include their patterns or needs and they are left out of the data. When they go to events, their parking needs are not monitored. This can also occur for different public facilities as decision making becomes more data driven. Vertical and horizontal analysis of data needs to be performed to see what groups are missing in the data set, including the different sub-groups of learning cognitive, physical and mental health related disabilities.</p>
-<p>Additionally, as discussed above, many people do not use apps for mental health services and cognitive support due to concerns about how their data is used and whether mental health information will be kept private. Other reasons include the complexity and frustration experienced when these apps are not designed with cognitive learning and emotional disabilities in mind [RM-Lipschitz1]].</p>
+<p>Additionally, as discussed above, many people do not use apps for mental health services and cognitive support due to concerns about how their data is used and whether mental health information will be kept private. Other reasons include the complexity and frustration experienced when these apps are not designed with cognitive learning and emotional disabilities in mind [[RM-Lipschitz1]].</p>
   </section> 
 <section>
 	<h2>User Story and User Needs </h2>
@@ -330,9 +317,9 @@ digital solutions should also meet [[WCAG21]] and [[coga-usable]]. Also, this mo
 </ul>
 <h3>Giving the user control</h3>
 <h4>Use of data</h4>
-<p>Users should know when data is collected and how that data will be used. This requires testing that different groups of users requiring cognitive accessibility understand the privacy and data terms, including what data may be available or stored, how the data will be used and who will have access to it. It should be simple for users to see their data and make corrections when they discover errors [RM-oneil1]].</p>
+<p>Users should know when data is collected and how that data will be used. This requires testing that different groups of users requiring cognitive accessibility understand the privacy and data terms, including what data may be available or stored, how the data will be used and who will have access to it. It should be simple for users to see their data and make corrections when they discover errors [[RM-oneil1]].</p>
 <p>Settings and sources</p>
-<p>Users should have more control over their personal data and the kind of content they are shown on social media [RM-Bernard1]].</p>
+<p>Users should have more control over their personal data and the kind of content they are shown on social media [[RM-Bernard1]].</p>
 <p>Users should be able to know the source of their content. Having a bias ranking on different sources may also be helpful. This will allow users to notice the selection bias. This is especially important where a user is unlikely to be exposed to different points of view.</p>
 <p>Also let the user know the setting and the potential biases of the algorithm. This can help the user understand how the content seen may be affected. Give examples to help the user understand this effect.</p>
 <h4>Ease of personalisation</h4>
@@ -435,7 +422,7 @@ digital solutions should also meet [[WCAG21]] and [[coga-usable]]. Also, this mo
         Engage in consequential and comparative reasoning and manipulating information rationally, and
     </li>
     <li>
-        Express a clear and consistent decision [RM-Wojtowicz1]].
+        Express a clear and consistent decision [[RC-Wojtowicz1]].
     </li>
 </ul>
 <ul>
