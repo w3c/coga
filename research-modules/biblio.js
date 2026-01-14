@@ -1389,7 +1389,7 @@ var biblio = {
     "status": "academic paper"
   },
 	"RC-venkit1": {
-    "title": "\"Automated ableism: An exploration of explicit disability biases in sentiment and toxicity analysis models",
+    "title": "Automated ableism: An exploration of explicit disability biases in sentiment and toxicity analysis models",
     "date": "2023",
     "authors": [
       "PN Venkit",
@@ -1400,5 +1400,59 @@ var biblio = {
     "publisher": "arXiv preprint arXiv:2307.09209",
     "href": "https://arxiv.org/abs/2307.09209",
     "status": "academic paper"
-  }
+  },
+	"RC-Chadwick1": {
+		"title": "Online risk for people with intellectual disabilities",
+		"date": "2019",
+		"authors": [
+			" Chadwick, D.D"
+		],
+		"etAl": "false",
+		"publisher": "Tizard Learning Disability Review",
+		"href": "https://doi.org/10.1108/TLDR-03-2019-0008",
+		"volume": "24",
+		"issue": "4",
+		"status": "academic paper"
+	},
+	"RC-Kim1": {
+		"title": "Impulsivity and compulsivity in Internet gaming disorder: A comparison with obsessive-compulsive disorder and alcohol use disorder.",
+		"date": "2017",
+		"authors": [
+			"Kim YJ",
+			"Lim JA",
+			"Lee JY",
+			"Oh S",
+			"Kim SN",
+			"Kim DJ",
+			"Ha JE",
+			"Kwon JS",
+			"Choi JS"
+		],
+		"etAl": "false",
+		"publisher": "J Behav Addict",
+		"status": "academic paper"
+	},
+	"RC-Gay1": {
+		"title": "igital Technology Use Among Individuals with Schizophrenia: Results of an Online Survey",
+		"authors": [
+			"Katrina Gay",
+			"John Torous",
+			"Adam Joseph",
+			"Anand Pandya",
+			"Ken Duckworth"
+		],
+		"etAl": "false",
+		"href": " https://mental.jmir.org/2016/2/e15?utm_source=TrendMD&utm_medium=cpc&utm_campaign=JMIR_TrendMD_0"
+	},
+	"RC-Wojtowicz1": {
+		"title": "Exploring Innovative Approaches. In The Intersection of Behavioral Health, Mental Health, and Health Literacy: Proceedings of a Workshop.",
+		"date": "2019",
+		"authors": [
+			"Wojtowicz",
+			"A., Alper"
+		],
+		"etAl": "false",
+		"publisher": "J., & National Academies of Sciences, Engineering, and Medicine.",
+		"href": "https://arxiv.org/abs/2307.09209"
+	}
 };
