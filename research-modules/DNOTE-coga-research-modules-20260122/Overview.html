@@ -1,0 +1,2648 @@
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 35.6.1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
+.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+		
+<title>Cognitive Accessibility Research Modules</title>
+		
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:italic}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+		
+		
+	
+<meta name="color-scheme" content="light">
+<meta name="description" content="This set of modules looks at different Web technologies and provides:">
+<link rel="canonical" href="https://www.w3.org/TR/coga-research-modules/">
+<style>
+var:hover{text-decoration:underline;cursor:pointer}
+var.respec-hl{color:var(--color,#000);background-color:var(--bg-color);box-shadow:0 0 0 2px var(--bg-color)}
+@media (prefers-color-scheme:dark){
+var.respec-hl{filter:saturate(.9) brightness(.9)}
+}
+var.respec-hl-c1{--bg-color:#f4d200}
+var.respec-hl-c2{--bg-color:#ff87a2}
+var.respec-hl-c3{--bg-color:#96e885}
+var.respec-hl-c4{--bg-color:#3eeed2}
+var.respec-hl-c5{--bg-color:#eacfb6}
+var.respec-hl-c6{--bg-color:#82ddff}
+var.respec-hl-c7{--bg-color:#ffbcf2}
+@media print{
+var.respec-hl{background:0 0;color:#000;box-shadow:unset}
+}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#222;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "DNOTE",
+  "noRecTrack": true,
+  "shortName": "coga-research-modules",
+  "copyrightStart": "2026",
+  "license": "document",
+  "publishDate": "2026-01-22",
+  "edDraftURI": "https://w3c.github.io/coga/research-modules/",
+  "editors": [
+    {
+      "name": "Lisa Seeman-Horwitz",
+      "mailto": "lisa.seeman@zoho.com",
+      "url": "mailto:lisa.seeman@zoho.com"
+    }
+  ],
+  "group": [
+    "apa",
+    "ag"
+  ],
+  "wgPublicList": "public-coga-comments",
+  "localBiblio": {
+    "ADI-1": {
+      "title": "World Alzheimer Report 2010",
+      "publishDate": "2010",
+      "authors": [
+        "Alzheimer's disease International"
+      ],
+      "etAl": "false"
+    },
+    "AE-1": {
+      "title": "2006-2008: European Collaboration on Dementia (EuroCoDe)",
+      "publishDate": "April 2012",
+      "authors": [
+        "Alzheimer Europe"
+      ],
+      "etAl": "false"
+    },
+    "Alm-1": {
+      "title": "Making software accessible to people with severe memory deficits",
+      "authors": [
+        "Alm, N.",
+        "Dye, R."
+      ],
+      "etAl": "true",
+      "publisher": " Proceedings of Accessible Design in the digital world, Dundee, 23-25 August 2005",
+      "publishDate": "2005"
+    },
+    "Alm-2": {
+      "title": "An interactive entertainment system usable by elderly people with dementia",
+      "authors": [
+        "Alm, N.",
+        "Astell, A."
+      ],
+      "etAl": "true",
+      "publisher": "Lecture Notes in Computer Science (including sub-series Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics), Volume 4555 LNCS, Part 2, pages 617-623. ",
+      "publishDate": "2007"
+    },
+    "Alm-3": {
+      "title": "A communication support system for older people with dementia",
+      "authors": [
+        "Alm, N.",
+        "Dye, R."
+      ],
+      "etAl": "true",
+      "publisher": "IEEE Computer, Volume 40 Issue 5, pages 35-41",
+      "publishDate": "2007"
+    },
+    "Alm-4": {
+      "title": "Designing an interface usable by people with dementia",
+      "authors": [
+        "Alm, N.",
+        "Dye, R."
+      ],
+      "etAl": "true",
+      "publisher": "Proceedings of the 2003 conference on Universal usability (CUU '03). ACM, New York, NY, USA, pages 156-157",
+      "publishDate": "2003"
+    },
+    "Alton-1": {
+      "title": "Short term auditory memory",
+      "authors": [
+        "Alton, S."
+      ],
+      "publisher": "Down Syndrome NSW",
+      "etAl": "false",
+      "publishDate": "2013"
+    },
+    "APA-1": {
+      "title": "Diagnostic and statistical manual of mental disorders (DSM-5)",
+      "authors": [
+        "American Psychiatric Association"
+      ],
+      "etAl": "false",
+      "publisher": "Washington D.C.: American Psychiatric Association.",
+      "publishDate": "2013"
+    },
+    "Arcos-Burgos-1": {
+      "title": "A common variant of the latrophilin 3 gene, LPHN3, confers susceptibility to ADHD and predicts effectiveness of stimulant medication",
+      "authors": [
+        "Arcos-Burgos, M."
+      ],
+      "etAl": "true",
+      "publisher": "Molecular Psychiatry, Vol 15 No. 11",
+      "publishDate": "2010"
+    },
+    "Armstrong-1": {
+      "title": "Developing smart phone applications for people with Alzheimer's disease",
+      "authors": [
+        "Armstrong, N.",
+        "Nugent, C. D."
+      ],
+      "etAl": "true",
+      "publisher": "Proceedings of the IEEE / EMBS Region 8 International Conference on Information Technology Applications in Biomedicine, ITAB",
+      "publishDate": "2010"
+    },
+    "ASHA-1": {
+      "title": "Definitions of communication disorders and variations",
+      "authors": [
+        "American Speech-Language-Hearing Association"
+      ],
+      "etAl": "false",
+      "href": "http://www.asha.org/policy/RP1993-00208/",
+      "publishDate": "1993"
+    },
+    "ASHA-2": {
+      "title": "Augmentative and Alternative Communication (AAC)",
+      "authors": [
+        "American Speech-Language-Hearing Association"
+      ],
+      "etAl": "false",
+      "href": "http://www.asha.org/public/speech/disorders/AAC/"
+    },
+    "ASHA-3": {
+      "title": "Guidelines for meeting the communication needs of persons with severe disabilities",
+      "authors": [
+        "the National Joint Committee for the Communicative Needs of Persons with Severe Disabilities"
+      ],
+      "etAl": "false",
+      "href": "http://www.asha.org/policy/GL1992-00201/",
+      "publisher": "Asha, 34(Suppl. 7)",
+      "publishDate": "1992"
+    },
+    "Astell-1": {
+      "title": "Working with people with dementia to develop technology: The CIRCA and Living in the Moment projects",
+      "authors": [
+        "Astell, A. J.",
+        "Alm, N."
+      ],
+      "etAl": "true",
+      "publisher": "Journal of Dementia Care, Volume 17, Issue 1, pages 36-39",
+      "publishDate": "2009"
+    },
+    "Astell-2": {
+      "title": " \"Living in the Moment\": Developing an interactive multimedia activity system for elderly people with dementia",
+      "authors": [
+        "Astell, A. J.",
+        "Ellis, M. P."
+      ],
+      "etAl": "true",
+      "publisher": "Proceedings of the International Workshop on Cognitive Prostheses and Assisted Communication, pages 16-20",
+      "publishDate": "2006"
+    },
+    "Banaschewski-1": {
+      "title": "Colour perception in ADHD",
+      "authors": [
+        "Banaschewski, T."
+      ],
+      "etAl": "true",
+      "publisher": "Journal of child psychology and psychiatry, and allied disciplines, Vol 47 Issue 6",
+      "publishDate": "2006"
+    },
+    "BBC-1": {
+      "title": "My web, my way. Making the web easier to use",
+      "authors": [
+        "British Broadcasting Corporation (BBC)"
+      ],
+      "href": "http://www.bbc.co.uk/accessibility/guides/allguides_index.shtml",
+      "etAl": "false"
+    },
+    "Benson-1": {
+      "title": "The Neurology of Thinking",
+      "publisher": "Oxford Univ. Press",
+      "authors": [
+        "Benson, D. F."
+      ],
+      "etAl": "false",
+      "publishDate": "1994"
+    },
+    "Bercow-1": {
+      "title": "The Bercow Report: A Review of Services for Children and Young People 0 to 19 with Speech, Language and Communication Needs",
+      "etAl": "false",
+      "href": "http://dera.ioe.ac.uk/8405/1/7771-dcsf-bercow.pdf",
+      "publishDate": "2008"
+    },
+    "Berninger-1": {
+      "title": "A Multidisciplinary Approach to Understanding Developmental Dyslexia Within Working-Memory Architecture: Genotypes, Phenotypes, Brain, and Instruction",
+      "publisher": "Developmental Neuropsychology 33 (6)",
+      "authors": [
+        "Berninger, B.",
+        "Virginia W."
+      ],
+      "etAl": true,
+      "publishDate": "2008"
+    },
+    "Black-1": {
+      "title": "Localization and Neuro-imaging in Neuropsychology",
+      "publisher": "Academic Press",
+      "editors": "Kertesz, A.",
+      "authors": [
+        "Black, S. E.",
+        "Behrmann, M."
+      ],
+      "etAl": "false",
+      "publishDate": "1994"
+    },
+    "Boman-1": {
+      "title": "First steps in designing a videophone for people with dementia: Identification of users' potentials and the requirements of communication technology",
+      "authors": [
+        "Boman, I.",
+        "Rosenberg, L."
+      ],
+      "etAl": "true",
+      "publisher": "Disability and Rehabilitation: Assistive Technology, Volume 7, Issue 5, pages 356-363",
+      "publishDate": "September 2012"
+    },
+    "Brandenburg-1": {
+      "title": "Mobile computing technology and aphasia: An integrated review of accessibility and potential uses",
+      "authors": [
+        "Brandenburg, C.",
+        "Worrall, A.",
+        "Rodriguez, A. D.",
+        "Copland, D."
+      ],
+      "etAl": "false",
+      "publisher": "Aphasiology, Vol 27 Issue 4",
+      "publishDate": "2013"
+    },
+    "Brennan-1": {
+      "title": "The relationship between specific features of aphasia-friendly written material and comprehension of written material for people with aphasia: An exploratory study",
+      "authors": [
+        "Brennan, A.",
+        "Worrall, L.",
+        "McKenna, K."
+      ],
+      "etAl": "false",
+      "publisher": "Aphasiology, Vol 19 Issue 8",
+      "publishDate": "2005",
+      "href": "http://www.tandfonline.com/doi/abs/10.1080/02687030444000958"
+    },
+    "Bruandet-1": {
+      "title": "A cognitive characterization of dyscalculia in Turner syndrome",
+      "authors": [
+        "Bruandet, M."
+      ],
+      "publisher": "Neuropsychologia, Vol 42, Issue 3",
+      "etAl": true,
+      "publishDate": "2004"
+    },
+    "Bussing-1": {
+      "title": "Explanatory Models of ADHD Do They Differ by Ethnicity, Child Gender, or Treatment Status?",
+      "authors": [
+        "Bussing, R."
+      ],
+      "etAl": true,
+      "publisher": "Journal of Emotional and Behavioral Disorders, Vol 6 Issue 4",
+      "publishDate": "1998"
+    },
+    "Butterworth-1": {
+      "title": "The Mathematical Brain",
+      "publisher": "London: Macmillan",
+      "authors": [
+        "Butterworth, B."
+      ],
+      "etAl": "false",
+      "publishDate": "1999"
+    },
+    "Cao-1": {
+      "title": "Deficient orthographic and phonological representations in children with dyslexia revealed by brain activation patterns",
+      "href": "http://onlinelibrary.wiley.com/doi/10.1111/j.1469-7610.2006.01684.x/abstract;jsessionid=0C68D8EFA292BDC2CD782A68E41AD2D4.f03t03",
+      "publisher": "Journal of Child Psychology and Psychiatry, Vol 47, Issue 10",
+      "authors": [
+        "Fan Cao",
+        "Tali Bitan",
+        "Tai-Li Chou"
+      ],
+      "etAl": true,
+      "publishDate": "2006"
+    },
+    "Carter-1": {
+      "title": "UltraHaptics: Multi-Point Mid-Air Haptic Feedback for Touch Surfaces",
+      "authors": [
+        "Carter, T.",
+        "Seah, S. A."
+      ],
+      "etAl": "true",
+      "href": "https://www.youtube.com/watch?v=2QkbVr4J7CM",
+      "publisher": "BristolIG",
+      "publishDate": "2013"
+    },
+    "Castellanos-1": {
+      "title": "Characterizing cognition in ADHD: beyond executive dysfunction",
+      "authors": [
+        "Castellanos, F. X.",
+        "Sonuga-Barke, J. S.",
+        "Milham, M. P.",
+        "Tannock, R."
+      ],
+      "publisher": "Trends in Cognitive Sciences, Vol 10 Issue 3",
+      "etAl": "false",
+      "publishDate": "2006"
+    },
+    "CDC-1": {
+      "title": "Attention-Deficit / Hyperactivity Disorder (ADHD) Symptoms and Diagnosis",
+      "authors": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "href": "http://www.cdc.gov/ncbddd/adhd/diagnosis.html",
+      "etAl": "false",
+      "publishDate": "2014"
+    },
+    "CDC-2": {
+      "title": "Attention-Deficit / Hyperactivity Disorder (ADHD) Key Findings: Trends in the Parent-Report of Health Care Provider-Diagnosis and Medication Treatment for ADHD: United States, 2003-2011",
+      "authors": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "href": "http://www.cdc.gov/ncbddd/adhd/features/key-findings-adhd72013.html",
+      "etAl": "false",
+      "publishDate": "2014"
+    },
+    "CDC-3": {
+      "title": "Attention-Deficit / Hyperactivity Disorder (ADHD): Facts About ADHD",
+      "authors": [
+        "Centers for Disease Control and Prevention"
+      ],
+      "href": "http://www.cdc.gov/ncbddd/adhd/facts.html",
+      "etAl": "false",
+      "publishDate": "2014"
+    },
+    "CDC-4": {
+      "title": "Autism Spectrum Disorder (ASD): Facts About ASD",
+      "authors": [
+        "United States Centers for Disease Control and Prevention"
+      ],
+      "etAl": "false",
+      "href": "http://www.cdc.gov/ncbddd/autism/facts.html"
+    },
+    "CDC-5": {
+      "title": "Autism Spectrum Disorder (ASD): Data & Statistics",
+      "authors": [
+        "United States Centers for Disease Control and Prevention"
+      ],
+      "etAl": "false",
+      "href": "http://www.cdc.gov/ncbddd/autism/data.html"
+    },
+    "CDC-6": {
+      "title": "Prevalence of Autism Spectrum Disorder Among Children Aged 8 Years — Autism and Developmental Disabilities Monitoring Network, 11 Sites, United States",
+      "authors": [
+        "National Center on Birth Defects and Developmental Disabilities, Centers for Disease Control and Prevention"
+      ],
+      "editors": "Baio, J.",
+      "etAl": "false",
+      "href": "http://www.cdc.gov/mmwr/preview/mmwrhtml/ss6302a1.htm?s_cid=ss6302a1_w",
+      "publisher": "Surveillance Summaries, Vol 63 No. SS02"
+    },
+    "Chandaria-1": {
+      "title": "Short changed: Protecting people with dementia from financial abuse",
+      "publishDate": "December 2011",
+      "authors": [
+        "Chandaria, K."
+      ],
+      "etAl": "false",
+      "publisher": "Alzheimer’s Society"
+    },
+    "COGA-1": {
+      "title": "Cognitive Accessibility User Research; Aging and Dementia",
+      "href": "https://www.w3.org/TR/coga-user-research/#aging-and-dementia",
+      "publisher": "W3C",
+      "editors": [
+        "Lisa Seeman",
+        "Michael Cooper"
+      ],
+      "etAl": "false",
+      "deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+    },
+    "coga-gap-analysis": {
+      "title": "Cognitive Accessibility Roadmap and Gap Analysis",
+      "href": "https://w3c.github.io/coga/gap-analysis/",
+      "publisher": "W3C",
+      "editors": [
+        "Lisa Seeman",
+        "Michael Cooper"
+      ],
+      "etAl": "false",
+      "deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+    },
+    "coga-issue-papers": {
+      "title": "Issue Papers for the The Cognitive and Learning Disabilities Accessibility Task Force (COGA)",
+      "href": "https://w3c.github.io/coga/issue-papers/",
+      "publisher": "W3C",
+      "editors": [
+        "Lisa Seeman",
+        "Michael Cooper"
+      ],
+      "etAl": "false",
+      "deliveredBy": "https://www.w3.org/WAI/PF/cognitive-a11y-tf/"
+    },
+    "Cohen-Kadosh-1": {
+      "title": "Virtual Dyscalculia Induced by Parietal-Lobe TMS Impairs Automatic Magnitude Processing",
+      "publisher": "Current Biology, Vol 17, Issue 8",
+      "authors": [
+        "Cohen Kadosh, R."
+      ],
+      "etAl": "true",
+      "publishDate": "2007",
+      "href": "http://www.sciencedirect.com/science/article/pii/S0960982207010652"
+    },
+    "communication-matters-1": {
+      "title": "Shining a light on Augmentative and Alternative Communication",
+      "authors": [
+        "Communication Matters"
+      ],
+      "publisher": "Communication Matters Conference 2011",
+      "href": "http://www.communicationmatters.org.uk/shining-a-light-on-aac",
+      "etAl": "false",
+      "publishDate": "2013"
+    },
+    "Connect-1": {
+      "title": "Aphasia questions and answers: How many people have aphasia?",
+      "authors": [
+        "Connect - the communication disability network"
+      ],
+      "etAl": "false",
+      "href": "http://www.ukconnect.org/aphasiaquestionsandanswers_302.aspx"
+    },
+    "Cudd-1": {
+      "title": "How Individual Should Digital AT User Interfaces Be for People with Dementia",
+      "authors": [
+        "Cudd, P.",
+        "Greasley, P."
+      ],
+      "etAl": "true",
+      "publisher": "Assistive Technology Research Series, Volume 33: Assistive Technology: From Research to Practice, pages 602-609",
+      "publishDate": "2013"
+    },
+    "CUMC-1": {
+      "title": "Where Alzheimer's starts and how it spreads",
+      "authors": [
+        "Columbia University Medical Center"
+      ],
+      "etAl": "false",
+      "publisher": "ScienceDaily Research News",
+      "href": "http://www.sciencedaily.com/releases/2013/12/131222160018.htm",
+      "publishDate": "2013"
+    },
+    "Cummins-1": {
+      "title": "Tools To manage Your Adult ADHD - UPDATED",
+      "authors": [
+        "Cummins, M."
+      ],
+      "href": "http://marlacummins.com/50-tools-to-manage-your-adult-adhd/",
+      "etAl": "false",
+      "publishDate": "2014"
+    },
+    "Czamara-1": {
+      "title": "Children with ADHD symptoms have a higher risk for reading, spelling and math difficulties in the GINIplus and LISAplus cohort studies",
+      "authors": [
+        "Czamara, D."
+      ],
+      "publisher": "PLOS One, Vol 8(5)",
+      "etAl": "true",
+      "publishDate": "2013"
+    },
+    "Dahn-1": {
+      "title": "Supporting senior citizens in using tablet computers",
+      "authors": [
+        "Dahn, I.",
+        "Ferdinand, P.",
+        "Lachmann, P."
+      ],
+      "etAl": "false",
+      "editors": [
+        "Miesenberger, K.",
+        "Fels, D.",
+        "Archambault, D.",
+        "Peňáz, P.",
+        "Zagler, W."
+      ],
+      "publisher": "Computers helping people with special needs, 14 international conference ICCHP 2014, pages 323-330",
+      "publishDate": "2014"
+    },
+    "Davies-1": {
+      "title": " A user driven approach to develop a cognitive prosthetic to address the unmet needs of people with mild dementia",
+      "authors": [
+        "Davies, R. J.",
+        "Nugent, C. D."
+      ],
+      "etAl": "true",
+      "publisher": "Pervasive and Mobile Computing, Volume 5, Issue 3, pages 253-267. ",
+      "publishDate": "2009"
+    },
+    "de-Cock-1": {
+      "title": "Does perinatal exposure to endocrine disruptors induce autism spectrum and attention deficit hyperactivity disorders? Review.",
+      "authors": [
+        "de Cock, M.",
+        "Maas, Y. G.",
+        "Van De Bor, M."
+      ],
+      "etAl": "false",
+      "publisher": "Acta Paediatrica (Review), Vol 101 Issue 8",
+      "publishDate": "2012"
+    },
+    "De-Magalhaes-1": {
+      "title": "Welcome to senescence.info! An educational and information resource on the science of aging",
+      "publishDate": "December 2014",
+      "authors": [
+        "De Magalhaes, J. P."
+      ],
+      "etAl": "false",
+      "href": "http://www.senescence.info/"
+    },
+    "DEEP-1": {
+      "title": "Creating websites for people with dementia",
+      "authors": [
+        "Dementia Engagement and Empowerment Project (DEEP) "
+      ],
+      "etAl": "false",
+      "href": "http://dementiavoices.org.uk/wp-content/uploads/2013/11/DEEP-Guide-Creating-websites.pdf"
+    },
+    "Dejerine-1": {
+      "title": "Sur un cas de cécité verbale avec agraphie, suivi d’autopsie",
+      "publisher": "C. R. Societe du Biologie 43",
+      "authors": [
+        "Dejerine, J."
+      ],
+      "etAl": "false",
+      "publishDate": "1891"
+    },
+    "Demonet-1": {
+      "title": "A PET study of cognitive strategies in normal subjects during language tasks influence of phonetic ambiguity and sequence processing on phoneme monitoring",
+      "publisher": "Brain 117",
+      "authors": [
+        "Demonet, J. F.",
+        "Price, C.",
+        "Wise., R.",
+        "Frackowiak, R. S. J."
+      ],
+      "etAl": "false",
+      "publishDate": "1994"
+    },
+    "Demurie-1": {
+      "title": "Common alterations in sensitivity to type but not amount of reward in ADHD and autism spectrum disorders",
+      "authors": [
+        "Demurie, E.",
+        "Roeyers, H.",
+        "Baeyens, D.",
+        "Sonuga-Barke, E."
+      ],
+      "publisher": "Journal of Child Psychology and Psychiatry, Vol 52 Issue 11",
+      "etAl": "false",
+      "publishDate": "2011"
+    },
+    "Dietz-1": {
+      "title": "Reading comprehension by people with chronic aphasia: A comparison of three levels of visuographic contextual support",
+      "authors": [
+        "Dietz, A.",
+        "Hux, K.",
+        "McKelvey, M. L.",
+        "Beukelman, D. R.",
+        "Weissling, K."
+      ],
+      "etAl": "false",
+      "publisher": "Aphasiology, Vol 23 Issues 7-8",
+      "publishDate": "2009"
+    },
+    "Dobsz-1": {
+      "title": "Tablets in the rehabilitation of memory impairment",
+      "authors": [
+        "Dobsz, K.",
+        "Dobsz, M."
+      ],
+      "etAl": "true",
+      "editors": [
+        "Miesenberger, K.",
+        "Fels, D.",
+        "Archambault, D.",
+        "Peňáz, P.",
+        "Zagler, W."
+      ],
+      "publisher": "Computers helping people with special needs, 14 international conference ICCHP 2014, pages 399-402",
+      "publishDate": "2014"
+    },
+    "Donnelly-1": {
+      "title": "A mobile multimedia technology to aid those with alzheimer's disease",
+      "authors": [
+        "Donnelly, M.",
+        "Nugent, C"
+      ],
+      "etAl": "true",
+      "publisher": "IEEE Multimedia, Volume 17, Issue 2, pages 42-51",
+      "publishDate": "2010"
+    },
+    "Duffy-1": {
+      "title": "The Write Tools for ADHD Students",
+      "authors": [
+        "Duffy, F."
+      ],
+      "publisher": "ADDitude",
+      "href": "http://www.additudemag.com/adhd/article/9365.html",
+      "etAl": "false",
+      "publishDate": "n. d."
+    },
+    "ECS-1": {
+      "title": "Arab Symbol Dictionary for AAC",
+      "etAl": "false",
+      "publisher": "ECS Accessibility Team",
+      "href": "http://access.ecs.soton.ac.uk/blog/symboldictionary/"
+    },
+    "Eden-1": {
+      "title": "Abnormal processing of visual motion in dyslexia revealed by functional brain imaging",
+      "publisher": "Nature (London) 389",
+      "authors": [
+        "Eden, G. F",
+        "VanMeter, J. W.",
+        "Rumsey, J. M.",
+        "Maisog, J. M.",
+        "Woods, R. P.",
+        "Zeffiro, T. A."
+      ],
+      "etAl": "false",
+      "publishDate": "1996"
+    },
+    "ETSI": {
+      "title": "The European Telecommunications Standards Institute",
+      "etAl": "false",
+      "href": "http://www.etsi.org/"
+    },
+    "ETSI-EG-202-325": {
+      "title": "Human Factors (HF); User Profile Management",
+      "authors": [
+        "ETSI"
+      ],
+      "publisher": "EG 202 325",
+      "etAl": "false",
+      "href": "http://www.etsi.org/deliver/etsi_eg/202300_202399/202325/01.01.01_60/eg_202325v010101p.pdf",
+      "publishDate": "2005"
+    },
+    "ETSI-ES-202-746": {
+      "title": "Human Factors (HF); Personalization and User Profile Management; User Profile Preferences and Information",
+      "authors": [
+        "ETSI"
+      ],
+      "publisher": "ES 202 746",
+      "etAl": "false",
+      "href": "http://www.etsi.org/deliver/etsi_es/202700_202799/202746/01.01.01_60/es_202746v010101p.pdf",
+      "publishDate": "2010"
+    },
+    "ETSI-ES-202-642": {
+      "title": "Human Factors (HF); Personalization of eHealth systems by using eHealth user profiles (eHealth)",
+      "authors": [
+        "ETSI"
+      ],
+      "publisher": "ES 202 642",
+      "etAl": "false",
+      "href": "http://www.etsi.org/deliver/etsi_es/202600_202699/202642/01.01.01_60/es_202642v010101p.pdf",
+      "publishDate": "2010"
+    },
+    "ETSI-TS-102-747": {
+      "title": "Human Factors (HF); Personalization and User Profile Management; Architectural Framework",
+      "authors": [
+        "ETSI"
+      ],
+      "publisher": "TS 102 747",
+      "etAl": "false",
+      "href": "http://www.etsi.org/deliver/etsi_ts/102700_102799/102747/01.01.01_60/ts_102747v010101p.pdf",
+      "publishDate": "2010"
+    },
+    "Fabian-1": {
+      "title": "The Evolution of Aging",
+      "authors": [
+        "Fabian, D.",
+        "Flatt, T."
+      ],
+      "etAl": "false",
+      "publisher": "Nature Education Knowledge, Vol 3 Issue 10",
+      "publishDate": "December 2011"
+    },
+    "Faraone-1": {
+      "title": "The worldwide prevalence of ADHD: is it an American condition?",
+      "authors": [
+        "Faraone, S. V.",
+        "Sergeant, J.",
+        "Gilberg, C.",
+        "Biedrman, J."
+      ],
+      "etAl": "false",
+      "publisher": "World Psychiatry, Vol 2 Issue 2",
+      "publishDate": "2003"
+    },
+    "Fernández-1": {
+      "title": "Registering eye movements during reading in Alzheimer’s disease: Difficulties in predicting upcoming words",
+      "authors": [
+        "Fernández, G.",
+        "Laubrock, J."
+      ],
+      "etAl": "true",
+      "publisher": "Journal of Clinical and Experimental Neuropsychology, Volume 36,  Issue 3, pages 302-316",
+      "publishDate": "2014"
+    },
+    "Franke-1": {
+      "title": "The genetics of attention deficit/hyperactivity disorder in adults, a review.",
+      "authors": [
+        "Franke, B."
+      ],
+      "etAl": true,
+      "publisher": "Molecular Psychiarty, Vol 17 No. 10",
+      "publishDate": "2012"
+    },
+    "Friedman-1": {
+      "title": "Clinical Neuropsychology",
+      "publisher": "Oxford Univ. Press, New York",
+      "authors": [
+        "Friedman, R. F.",
+        "Ween, J. E.",
+        "Albert, M. L."
+      ],
+      "editors": [
+        "Heilman, K. M.",
+        "Valenstein, E."
+      ],
+      "etAl": "false",
+      "publishDate": "1993"
+    },
+    "Friston-1": {
+      "title": "Statistical parametric maps in functional imaging: a general linear approach",
+      "publisher": "Human Brain Mapping, Vol 2, Issue 4",
+      "authors": [
+        "Friston, K. J.",
+        "Ashburner, J.",
+        "Frith, C. D",
+        "Poline, J.-B.",
+        "Heather,J. D.",
+        "Frackowiak, R. S. J."
+      ],
+      "etAl": "false",
+      "publishDate": "1995"
+    },
+    "Galaburda-1": {
+      "title": "Dyslexia and Development: Neurobiological Aspects of Extra-ordinary Brains, Part 998",
+      "publisher": "Harvard University Press",
+      "authors": [
+        "Galaburda, A. M."
+      ],
+      "etAl": "false",
+      "publishDate": "1993"
+    },
+    "Geary-1": {
+      "title": "Mathematical disabilities: cognitive, neuropsychological, and genetic components",
+      "authors": [
+        "Geary, D.C."
+      ],
+      "publisher": "Psychological Bulletin, Vol 114, Issue 2",
+      "etAl": "false",
+      "publishDate": "1993",
+      "href": "http://psycnet.apa.org/psycinfo/1994-02259-001"
+    },
+    "Germanò-1": {
+      "title": "Comorbidity of ADHD and Dyslexia",
+      "authors": [
+        "Germanò, E.",
+        "Gagliano, A.",
+        "Curatolo, P."
+      ],
+      "publisher": "Developmental Neuropsychology, Vol 35 Issue 5",
+      "etAl": "false",
+      "publishDate": "2010"
+    },
+    "Geschwind-1": {
+      "title": "Disconnexion syndromes in animals and man. I.",
+      "publisher": "Brain 88",
+      "authors": [
+        "Geschwind, N. "
+      ],
+      "etAl": "false",
+      "publishDate": "1965"
+    },
+    "Ghidella-1": {
+      "title": "Aphasia websites: An examination of their quality and communicative accessibility",
+      "authors": [
+        "Ghidella, C.",
+        "Murray, S.",
+        "Smart, M.",
+        "McKenna, K.",
+        "Worrall, L."
+      ],
+      "etAl": "false",
+      "publisher": "Aphasiology, Vol 19 Issue 12",
+      "publishDate": "2005"
+    },
+    "GPII": {
+      "title": "The Global Public Inclusive Infrastructure",
+      "etAl": "false",
+      "href": "http://gpii.net/"
+    },
+    "Greasley-1": {
+      "title": "Language and Communication in the Dementias: Implications for User Interface Design",
+      "authors": [
+        "Greasley, P.",
+        "Cudd, P."
+      ],
+      "etAl": "false",
+      "publisher": "AAATE proceedings",
+      "publishDate": "2013"
+    },
+    "Hellman-1": {
+      "title": "Usable User Interfaces for Persons with Memory Impairments",
+      "authors": [
+        "Hellman, R."
+      ],
+      "etAl": "false",
+      "publisher": "Advanced Technologies and Societal Change, pages 167-176",
+      "publishDate": "2012"
+    },
+    "Henderson-1": {
+      "title": "Anatomy of posterior pathways in reading: A reassessment",
+      "publisher": "Brain Lang. 29",
+      "authors": [
+        "Henderson, V. W."
+      ],
+      "etAl": "false",
+      "publishDate": "1986"
+    },
+    "Herbert-1": {
+      "title": "Accessible Information Guidelines",
+      "authors": [
+        "Herbert, R.",
+        "Haw, C.",
+        "Brown, C.",
+        "Gregory, E.",
+        "Brumfitt, S."
+      ],
+      "etAl": "false",
+      "publisher": "London: Stroke Association",
+      "publishDate": "2012"
+    },
+    "Horton-1": {
+      "title": "Book Excerpt: A Web for Everyone",
+      "authors": [
+        "Horton, S.",
+        "Quesenbery, W."
+      ],
+      "etAl": "false",
+      "href": "http://uxmag.com/articles/book-excerpt-a-web-for-everyone",
+      "publisher": "UX Magazine, No. 1216",
+      "publishDate": "2014"
+    },
+    "Hyry-1": {
+      "title": "Requirements guideline of assistive technology for people suffering from dementia",
+      "authors": [
+        "Hyry, J.",
+        "Yamamoto, G.",
+        "Pulli, P."
+      ],
+      "etAl": "false",
+      "publisher": "ACM International Conference Proceeding Series. ISABEL '11 Proceedings of the 4th International Symposium on Applied Sciences in Biomedical and Communication Technologies, Article Number 39",
+      "publishDate": "2011"
+    },
+    "ISO 9241-112": {
+      "href": "https://www.iso.org/standard/64840.html",
+      "publisher": "International Standards Organization",
+      "title": "Ergonomics of human-system interaction — Part 112: Principles for the presentation of information"
+    },
+    "Kadesjö-1": {
+      "title": "The Comorbidity of ADHD in the General Population of Swedish School-age Children",
+      "authors": [
+        "Kadesjö, B.",
+        "Gillberg, C.",
+        "Nigg, J. T.",
+        "Sergeant , J. A."
+      ],
+      "publisher": "Journal of Child Psychology and Psychiatry, Vol 42 Issue 4",
+      "etAl": "false",
+      "publishDate": "2001"
+    },
+    "Karlsson-1": {
+      "title": " The challenge of coming to terms with the use of a new digital assistive device: A case study of two persons with mild dementia",
+      "authors": [
+        "Karlsson, E.",
+        "Axelsson, K."
+      ],
+      "etAl": "true",
+      "publisher": "Open Nursing Journal, Volume 5, pages, 102-110",
+      "publishDate": "2011"
+    },
+    "Kerkhof-1": {
+      "title": "Memory aid to structure and support daily activities for people with dementia",
+      "authors": [
+        "Kerkhof, Y.",
+        "Rabiee, F.",
+        "Willems, C. G."
+      ],
+      "etAl": "false",
+      "publisher": "Assistive Technology Research Series, Volume 29, pages 3-9",
+      "publishDate": "2011"
+    },
+    "Kessler-1": {
+      "title": "The prevalence and correlates of adult ADHD in the United States: results from the National Comorbidity Survey Replication",
+      "authors": [
+        "Kessler, R. C."
+      ],
+      "etAl": true,
+      "publisher": "The American Journal of Psychiatry, Vol 163 Issue 4",
+      "publishDate": "2006"
+    },
+    "Khan-1": {
+      "title": "olecular drivers and cortical spread of lateral entorhinal cortex dysfunction in preclinical Alzheimer's disease",
+      "authors": [
+        "Kahn, A. U.",
+        "Liu, L."
+      ],
+      "etAl": "true",
+      "publisher": "Nature Neuroscience, Volume 17, Issue 2, pages 304-311",
+      "publishDate": "February 2014"
+    },
+    "Kim-1": {
+      "title": "Prevalence of autism spectrum disorders in a total population sample",
+      "authors": [
+        "Kim, Y.",
+        "Leventhal, B.",
+        "Koh, Y."
+      ],
+      "etAl": true,
+      "publisher": "American Journal of Psychiatry, Vol 170 Issue 6",
+      "publishDate": "2013"
+    },
+    "Kitching-1": {
+      "title": "Patient information lea?ets: The state of the art",
+      "authors": [
+        "Kitching, J."
+      ],
+      "etAl": "false",
+      "publisher": "Journal of the Royal Society of Medicine , Vol 83 Issue 5",
+      "publishDate": "1990"
+    },
+    "Ladislav-1": {
+      "title": "Developmental Dyscalculia",
+      "publisher": "Journal of Learning Disabilities.  vol. 7 no. 3",
+      "authors": [
+        "Ladislav, K."
+      ],
+      "etAl": "false",
+      "publishDate": "1974",
+      "href": "http://ldx.sagepub.com/content/7/3/164.short"
+    },
+    "Lauriks-1": {
+      "title": "Review of ICT-based services for identified unmet needs in people with dementia",
+      "authors": [
+        "Lauriks, S.",
+        "Reinersmann, A."
+      ],
+      "etAl": "true",
+      "publisher": "Ageing Research Reviews, Volume 6, Issue 3, pages 223-246",
+      "publishDate": "2007"
+    },
+    "Lim-1": {
+      "title": "Usability of tablet computers by people with early-stage dementia",
+      "authors": [
+        " Lim, F. S.",
+        "Wallace, T."
+      ],
+      "etAl": "true",
+      "publisher": "Gerontology, Volume 59, Number 2, pages 174-182",
+      "publishDate": "2013"
+    },
+    "Lindsay-1": {
+      "title": "Attentional function as measured by a Continuous Performance Task in children with dyscalculia",
+      "authors": [
+        "Lindsay, R. L.",
+        "Tomazic, T.",
+        "Accardo, P. J."
+      ],
+      "etAl": "false",
+      "publisher": "Journal of developmental and behavioral pediatrics, Vol 22 Issue 5",
+      "publishDate": "2001"
+    },
+    "Lundälv-1": {
+      "title": "AAC Vocabulary Standardisation and Harmonisation",
+      "authors": [
+        "Lundälv, M.",
+        "Derbring, S."
+      ],
+      "etAl": "false",
+      "href": "http://link.springer.com/chapter/10.1007%2F978-3-642-31534-3_46",
+      "publisher": "Computers Helping People with Special Needs, Lecture Notes in Computer Science, Vol. 7383, pages 303-310",
+      "publishDate": "2012"
+    },
+    "Lyon-1": {
+      "title": "Neuroimaging a window to the neurological foundations of learning and behavior in children",
+      "publisher": "Brookes Publishing Company",
+      "authors": [
+        "Lyon, G.",
+        "Rumsey J.",
+        "Constable, R. T.",
+        "Shaywitz, S."
+      ],
+      "etAl": "false",
+      "publishDate": "1996"
+    },
+    "Martinussen-1": {
+      "title": "A Meta-Analysis of Working Memory Impairments in Children With Attention-Deficit/Hyperactivity Disorder",
+      "authors": [
+        "Martinussen, R.",
+        "Hayden, J.",
+        "Hogg-Johnson, S.",
+        "Tannock, R."
+      ],
+      "publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 44 Issue 4",
+      "etAl": "false",
+      "publishDate": "2005"
+    },
+    "Mayo-1": {
+      "title": "Attention-deficit/hyperactivity disorder (ADHD) in children Treatments and drugs",
+      "authors": [
+        "Mayo Clinic"
+      ],
+      "etAl": "false",
+      "href": "http://www.mayoclinic.org/diseases-conditions/adhd/basics/treatment/con-20023647",
+      "publishDate": "n. d."
+    },
+    "Meiland-1": {
+      "title": "Functional requirements for assistive technology for people with cognitive impairments and dementia",
+      "authors": [
+        "Meiland, F. J. M.",
+        "De Boer, M. E."
+      ],
+      "etAl": "true",
+      "publisher": "Communications in Computer and Information Science Volume 277 CCIS, pages 146-151",
+      "publishDate": "2011"
+    },
+    "mailto": {
+      "title": "The 'mailto' URI Scheme",
+      "href": "https://tools.ietf.org/html/rfc6068",
+      "publisher": "Internet Engineering Task Force (IETF)",
+      "publishDate": "2010"
+    },
+    "Meyer-1": {
+      "title": "Fine motor skills in South African children with symptoms of ADHD: influence of subtype, gender, age, and hand dominance",
+      "authors": [
+        "Meyer, A.",
+        "Sagvolden, T."
+      ],
+      "etAl": "false",
+      "publisher": "Behavioral and Brain Functions, Vol 2 Issue 1",
+      "publishDate": "2006"
+    },
+    "Milliken-1": {
+      "title": "Autism Challenges and Avoidances, Interview of Anonymous User X",
+      "authors": [
+        "Milliken, N.",
+        "Grainger J"
+      ],
+      "publishDate": "2014"
+    },
+    "Mosby-1": {
+      "title": "Mosby's Medical Dictionary, 8th edition",
+      "authors": [
+        "Mosby"
+      ],
+      "etAl": "false",
+      "publisher": "Elsevier",
+      "publishDate": "2009"
+    },
+    "Muskens-1": {
+      "title": "Never too Old to Use a Tablet: Designing Tablet Applications for the Cognitively and Physically Impaired Elderly",
+      "authors": [
+        "Muskens, L.",
+        "van Lent, R."
+      ],
+      "etAl": "true",
+      "editors": [
+        "Miesenberger, K.",
+        "Fels, D.",
+        "Archambault, D.",
+        "Peňáz, P.",
+        "Zagler, W."
+      ],
+      "publisher": "Computers helping people with special needs, 14 international conference ICCHP 2014, pages 392 - 393",
+      "publishDate": "2014"
+    },
+    "NIA-1": {
+      "title": "Alzheimer's Disease Fact Sheet",
+      "authors": [
+        "National Institute on Aging"
+      ],
+      "etAl": "false",
+      "href": "https://www.nia.nih.gov/alzheimers/publication/alzheimers-disease-fact-sheet",
+      "publisher": "National Institutes of Health"
+    },
+    "NIDCD-1": {
+      "title": "Quick Statistics",
+      "authors": [
+        "National Institute on Deafness and Other Communication Disorders (NIDCD)"
+      ],
+      "etAl": "false",
+      "href": "http://www.nidcd.nih.gov/health/statistics/vsl/Pages/stats.aspx",
+      "publishDate": "07 June 2010"
+    },
+    "Nigg-1": {
+      "title": "Cognitive Impairments Found With Attention-Deficit/Hyperactivity Disorder",
+      "authors": [
+        "Nigg, J. T."
+      ],
+      "etAl": "false",
+      "publisher": "Psychiatric Times",
+      "publishDate": "2009",
+      "href": "http://www.psychiatrictimes.com/adhd/cognitive-impairments-found-attention-deficithyperactivity-disorder"
+    },
+    "Noun-Project-1": {
+      "publisher": "The Noun Project",
+      "etAl": "false",
+      "href": "https://thenounproject.com/about/"
+    },
+    "Nunes-1": {
+      "title": "Design recommendations for tv user interfaces for older adults: findings from the eCAALYX project",
+      "authors": [
+        "Nunes, F.",
+        "Kerwin, M."
+      ],
+      "etAl": "true",
+      "publisher": "ASSETS '12 Proceedings of the 14th international ACM SIGACCESS conference on Computers and accessibility, pages 41-48",
+      "publishDate": "2012"
+    },
+    "NRC-1": {
+      "title": "About ADHD Causes and Brain Chemistry",
+      "authors": [
+        "National Resource Center on ADHD"
+      ],
+      "etAl": "false",
+      "href": "http://www.help4adhd.org/en/about/causes",
+      "publishDate": "n. d."
+    },
+    "O'Neill-1": {
+      "title": "Video reminders as cognitive prosthetics for people with dementia",
+      "authors": [
+        "O'Neill, S. A.",
+        "Mason, S."
+      ],
+      "etAl": "true",
+      "publisher": "Ageing International, Volume 36, Issue 2, pages, 267-282",
+      "publishDate": "2011"
+    },
+    "Orpwood-1": {
+      "title": "Designing technology to improve quality of life for people with dementia: User-led approaches.",
+      "authors": [
+        "Orpwoodm R.",
+        "Chadd, J."
+      ],
+      "etAl": "true",
+      "publisher": "Universal Access in the Information Society, Volume 9, Issue 3, pages 249-259",
+      "publishDate": "2010"
+    },
+    "Pauc-1": {
+      "title": "Comorbidity of dyslexia, dyspraxia, attention deficit disorder (ADD), attention deficit hyperactive disorder (ADHD), obsessive compulsive disorder (OCD) and Tourette's syndrome in children: A prospective epidemiological study",
+      "authors": [
+        "Pauc, R."
+      ],
+      "publisher": "Clinical Chiropractic, Vol 8 Issue 4",
+      "etAl": "false",
+      "publishDate": "2005"
+    },
+    "personalization-semantics-1.0": {
+      "title": "Personalization Semantics 1.0",
+      "href": "https://www.w3.org/TR/personalization-semantics-1.0/",
+      "publisher": "W3C",
+      "editors": [
+        "Rich Schwerdtfeger",
+        "Lisa Seeman",
+        "Michael Cooper"
+      ],
+      "etAl": "false",
+      "deliveredBy": "https://www.w3.org/WAI/ARIA/"
+    },
+    "Paulesu-1": {
+      "title": "Is developmental dyslexia a disconnection syndrome?",
+      "publisher": "Brain 119",
+      "authors": [
+        "Paulesu, E.",
+        "Frith, U.",
+        "Snowling, M.",
+        "Gallagher, A.",
+        "Morton, J.",
+        "Frackowiak, R. S. J.",
+        "Frith, C. D."
+      ],
+      "etAl": "false",
+      "publishDate": "1996"
+    },
+    "PECS-1": {
+      "title": "What is PECS?",
+      "authors": [
+        "Picture Exchange Communication System USA"
+      ],
+      "etAl": "false",
+      "href": "http://www.pecsusa.com/pecs.php",
+      "publisher": "Pyramid Educational Consultants"
+    },
+    "Petersen-1": {
+      "title": "Activation of extrastriate and frontal cortical areas by visual words and word-like stimuli",
+      "publisher": "Science, Vol 249, Issue 4972",
+      "authors": [
+        "Petersen, S. E.",
+        "Fox, P. T.",
+        "Snyder, A. Z.",
+        "Raichle, M. E."
+      ],
+      "etAl": "false",
+      "publishDate": "1990"
+    },
+    "Pistorius-1": {
+      "title": "Communication: An AAC User's Perspective",
+      "authors": [
+        "Pistorius, M."
+      ],
+      "publisher": "Communication Matters Conference 2011",
+      "etAl": "false",
+      "publishDate": "2011"
+    },
+    "Phiriyapokanon-1": {
+      "title": "Is a big button enough for elderly users? Towards user interface guidelines for elderly users ",
+      "authors": [
+        "Phiriyapokanon, T."
+      ],
+      "etAl": "false",
+      "publisher": "Mälardalen University Press Sweden",
+      "publishDate": "2011"
+    },
+    "Polanczyk-1": {
+      "title": "The worldwide prevalence of ADHD: a systematic review and metaregression analysis",
+      "authors": [
+        "Polanczyk, G."
+      ],
+      "etAl": true,
+      "publisher": "The American Journal of Psychiatry, Vol 164 Issue 6",
+      "publishDate": "2007"
+    },
+    "Price-1": {
+      "title": "Impaired parietal magnitude processing in developmental dyscalculia",
+      "publisher": "Current Biology, Vol 17, Issue 24",
+      "authors": [
+        "Price, G.R."
+      ],
+      "etAl": "true",
+      "publishDate": "2007",
+      "href": "http://www.cell.com/current-biology/retrieve/pii/S0960982207020726"
+    },
+    "Pugh-1": {
+      "title": "Cerebral organization of component processes in reading",
+      "publisher": "Brain 119",
+      "authors": [
+        "Pugh, K.",
+        "Shaywitz, B.",
+        "Constable, R. T.",
+        "Shaywitz, S."
+      ],
+      "etAl": "true",
+      "publishDate": "1996"
+    },
+    "RDWG-1": {
+      "title": "Research Report on Easy to Read on the Web",
+      "etAl": "false",
+      "publisher": "W3C",
+      "href": "http://www.w3.org/WAI/RD/2012/easy-to-read/note/ED-E2R-20140123",
+      "deliveredBy": "http://www.w3.org/WAI/RD/",
+      "status": "ED",
+      "publishDate": "2014"
+    },
+    "Rose-1": {
+      "title": "Exploring the use of graphics in written health information for people with aphasia",
+      "authors": [
+        "Rose, T. A.",
+        "Worrall, L. E.",
+        "Hickson, L. M.",
+        "Hoffmann, T. C."
+      ],
+      "etAl": "false",
+      "publisher": "Aphasiology, Vol 25 Issue 12",
+      "publishDate": "2011"
+    },
+    "Rose-2": {
+      "title": "Guiding principles for printed education materials: Design preferences of people with aphasia",
+      "authors": [
+        "Rose, T. A.",
+        "Worrall, L. E.",
+        "Hickson, L. M.",
+        "Hoffmann, T. C."
+      ],
+      "etAl": "false",
+      "publisher": "International Journal of Speech-Language Pathology, Vol14 Issue 1",
+      "publishDate": "2012"
+    },
+    "Rumsey-1": {
+      "title": "Failure to activate the left temporal cortex in dyslexia: insights from a multiple case study of dyslexic adults",
+      "publisher": "Arch. Neurol. 54",
+      "authors": [
+        "Rumsey, J. M.",
+        "Nace, K.",
+        "Donohue, B.",
+        "Wise, D.",
+        "Maisog, J. M.",
+        "Andreason, P."
+      ],
+      "etAl": "false",
+      "publishDate": "1997"
+    },
+    "Sato-1": {
+      "title": "How voice augmentation supports elderly web users",
+      "authors": [
+        "Sato, D.",
+        "Kobayashi, M."
+      ],
+      "etAl": "true",
+      "publisher": "ASSETS '11 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 155-162",
+      "publishDate": "2011"
+    },
+    "Semrud-Clikeman-1": {
+      "title": "Comorbidity between ADDH and Learning Disability: A Review and Report in a Clinically Referred Sample",
+      "authors": [
+        "Semrud-Clikeman, M."
+      ],
+      "publisher": "Journal of the American Academy of Child &amp; Adolescent Psychiatry, Vol 31 Issue 3",
+      "etAl": "true",
+      "publishDate": "2013"
+    },
+    "Snowling-1": {
+      "title": "The development of literacy skills in children with Down syndrome: Implications for intervention",
+      "authors": [
+        "Snowling, M.",
+        "Nash, H.",
+        "Henderson, L."
+      ],
+      "etAl": "false",
+      "publishDate": "2008"
+    },
+    "Talairach-1": {
+      "title": "Coplanar Stereotaxic Atlas of the Human Brain. Three-Dimensional Proportional System: An Approach to Cerebral Imaging",
+      "publisher": "Thieme, New York",
+      "authors": [
+        "Talairach, J.",
+        "Tournoux, P."
+      ],
+      "etAl": "false",
+      "publishDate": "1988"
+    },
+    "Tallal-1": {
+      "title": "Temporal information processing in the nervous system: special reference to dyslexia and dysphasia",
+      "publisher": "Annals of the New York Academy of Sciences, Vol. 682",
+      "authors": [
+        "Tallal, P."
+      ],
+      "etAl": "true",
+      "publishDate": "1993"
+    },
+    "Tarleton-1": {
+      "title": "Finding the Right Help",
+      "authors": [
+        "Tarleton, B.",
+        "Marriott, A."
+      ],
+      "etAl": "false",
+      "publisher": "University of Bristol",
+      "href": "http://www.bristol.ac.uk/sps/media/WTWPN_documents/finding-the-right-help-report.pdf",
+      "publishDate": "2008"
+    },
+    "Thilers-1": {
+      "title": "Accelerated postmenopausal cognitive decline is restricted to women with normal BMI: longitudinal evidence from the Betula project.",
+      "publishDate": "May 2010",
+      "authors": [
+        "Thilers, P. P."
+      ],
+      "etAl": "true",
+      "publisher": "Psychoneuroendocrinology, Volume 35, Issue 4, Pages 516–524, Elsevier Inc."
+    },
+    "Trewin-1": {
+      "title": "Understanding the role of age and fluid intelligence in information search",
+      "authors": [
+        "Trewin, S.",
+        "Richards, J. T."
+      ],
+      "etAl": "true",
+      "publisher": "ASSETS '12 Proceedings of the 14th international ACM SIGACCESS conference on Computers and accessibility, pages 119-126",
+      "publishDate": "2012"
+    },
+    "Savitch-1": {
+      "title": " Accessible websites for people with dementia: A preliminary investigation into information architecture",
+      "authors": [
+        "Savitch, N.",
+        "Zaphiris, P."
+      ],
+      "etAl": "false",
+      "publisher": "Lecture Notes in Computer Science (including sub-series Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics) Volume 4061 LNCS, pages 144-151. ",
+      "publishDate": "2006"
+    },
+    "Section255": {
+      "title": "Telecommunications Access for People with Disabilities",
+      "publisher": "Federal Communications Commission",
+      "href": "https://www.fcc.gov/consumers/guides/telecommunications-access-people-disabilities",
+      "publishDate": "2021"
+    },
+    "Shalev-1": {
+      "title": "Developmental Dyscalculia",
+      "publisher": "Journal of Child Neurology vol. 19 no. 10",
+      "authors": [
+        "Shalev, R.S."
+      ],
+      "etAl": "false",
+      "publishDate": "2004"
+    },
+    "Shalev-2": {
+      "title": "Developmental Dyscalculia Is a Familial Learning Disability",
+      "publisher": "Journal of learning disabilities,  vol. 34, no. 1",
+      "authors": [
+        "Shalev, R.S."
+      ],
+      "etAl": "true",
+      "publishDate": "2001",
+      "href": "http://ldx.sagepub.com/content/34/1/59.short"
+    },
+    "Shaywitz-1": {
+      "title": "Functional disruption in the organization of the brain for reading in dyslexia",
+      "publisher": "Proc. Natl. Acad. Sci. USA Vol. 95",
+      "authors": [
+        "Shaywitz S."
+      ],
+      "etAl": "true",
+      "publishDate": "1998"
+    },
+    "Sinfield-1": {
+      "title": "Colors and ADHD: How Color Coding Can Make Your Life Easier",
+      "authors": [
+        "Sinfield, J."
+      ],
+      "etAl": "false",
+      "href": "http://untappedbrilliance.com/colors-adhd",
+      "publishDate": "2014"
+    },
+    "Smith-1": {
+      "title": "Adult ADD / ADHD Self-Help",
+      "authors": [
+        "Smith, M.",
+        "Segal, R."
+      ],
+      "publisher": "Helpguide",
+      "href": "http://www.helpguide.org/articles/add-adhd/adult-adhd-attention-deficit-disorder-self-help.htm",
+      "etAl": "false"
+    },
+    "Soar-1": {
+      "title": "The potential of information and communication technologies to support ageing and independent living",
+      "authors": [
+        " Soar, J."
+      ],
+      "etAl": "false",
+      "publisher": "Annals of Telecommunications- Annales Des Telecommunications, Volume 65, Issue 9, pages, 479-483",
+      "publishDate": "October 2010"
+    },
+    "Stein-1": {
+      "title": "The magnocellular theory of developmental dyslexia",
+      "publisher": "Dyslexia. 2001 Jan-Mar;7(1)",
+      "authors": [
+        "Stein J."
+      ],
+      "etAl": "false"
+    },
+    "Tartakovsky-1": {
+      "title": "15 ADHD-Friendly Tips to Fire Up Your Focus",
+      "authors": [
+        "Tartakovsky, M."
+      ],
+      "publisher": "Psych Central",
+      "href": "http://psychcentral.com/lib/15-adhd-friendly-tips-to-fire-up-your-focus/00010767",
+      "etAl": "false",
+      "publishDate": "2013"
+    },
+    "Taylor-1": {
+      "title": "Eye movement when reading could be early indicator of Alzheimer's",
+      "authors": [
+        "Taylor",
+        "Francis"
+      ],
+      "etAl": "false",
+      "publisher": "ScienceDaily Research News",
+      "href": "http://www.sciencedaily.com/releases/2014/03/140326114514.htm",
+      "publishDate": "March 2014"
+    },
+    "Topo-1": {
+      "title": " Technology studies to meet the needs of people with dementia and their caregivers: A literature review",
+      "authors": [
+        "Topo, P."
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Applied Gerontology Volume 28, Number 1, pages 5-37",
+      "publishDate": "February 2009"
+    },
+    "UN-1": {
+      "title": "Emerging issues and trends",
+      "publisher": "United Nations Expert Meeting on Building Inclusive Societies and Development through Promotion of Accessible Information and Communication Technologies (ICTs);  Tokyo, Japan",
+      "etAl": "false",
+      "href": "http://www.un.org/disabilities/default.asp?id=1596",
+      "publishDate": "2012"
+    },
+    "UKAS-1": {
+      "title": "Dementia 2013 infographic - text only version",
+      "authors": [
+        "UK: Alzheimer's Society"
+      ],
+      "etAl": "false",
+      "href": "http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=2164"
+    },
+    "UKAS-2": {
+      "title": "Changes in behaviour",
+      "authors": [
+        "UK: Alzheimer's Society"
+      ],
+      "etAl": "false",
+      "href": "http://www.alzheimers.org.uk/site/scripts/documents_info.php?documentID=159"
+    },
+    "WAI": {
+      "title": "Developing Websites for Older People: How WCAG 2.0 Applies",
+      "authors": [
+        "Web Accessibility Initiative (WAI)"
+      ],
+      "etAl": "false",
+      "href": "http://www.w3.org/WAI/older-users/developing",
+      "deliveredBy": "http://www.w3.org/WAI/",
+      "publisher": "W3C"
+    },
+    "WAI-ARIA": {
+      "title": "Accessible Rich Internet Applications (WAI-ARIA) 1.1",
+      "href": "http://www.w3.org/TR/wai-aria-1.1/",
+      "status": "WD",
+      "publisher": "W3C",
+      "authors": [
+        "James Craig",
+        "Michael Cooper",
+        "Shane McCarron"
+      ],
+      "etAl": "true",
+      "deliveredBy": "http://www.w3.org/WAI/PF/"
+    },
+    "Watson-1": {
+      "title": "The Best ADHD iPhone &amp; Android Apps of the Year",
+      "authors": [
+        "Watson, S."
+      ],
+      "publisher": "Healthline",
+      "href": "http://www.healthline.com/health-slideshow/top-adhd-android-iphone-apps",
+      "etAl": "false",
+      "publishDate": "2014"
+    },
+    "WebAIM-1": {
+      "title": "Cognitive Disabilities",
+      "authors": [
+        "WebAIM"
+      ],
+      "etAl": "false",
+      "publisher": "Center for Persons with DisabilitiesUtah State University",
+      "href": "http://webaim.org/articles/cognitive/",
+      "publishDate": "2013"
+    },
+    "WebAIM-2": {
+      "title": "Cognitive Web Accessibility Checklist",
+      "authors": [
+        "WebAIM"
+      ],
+      "etAl": "false",
+      "href": "http://wave.webaim.org/cognitive",
+      "publisher": "Center for Persons with Disabilities, Utah State University",
+      "publishDate": "2009"
+    },
+    "WebMD-1": {
+      "title": "Executive Function Skills and Disorders",
+      "authors": [
+        "WebMD"
+      ],
+      "etAl": "false",
+      "publisher": "LLC",
+      "href": "http://www.webmd.com/add-adhd/guide/executive-function",
+      "publishDate": "2012"
+    },
+    "Weiler-1": {
+      "title": "Information processing deficits in children with attention-deficit/hyperactivity disorder, inattentive type, and children with reading disability",
+      "authors": [
+        "Weiler, M. D.",
+        "Bernstein, J. H.",
+        "Bellinger, D.",
+        "Waber, D. P."
+      ],
+      "publisher": "Journal of Learning Disabilities, Vol 35 Issue 5",
+      "etAl": "false",
+      "publishDate": "2002"
+    },
+    "Widgit-1": {
+      "title": "Widgit Symbols",
+      "authors": [
+        "Widgit"
+      ],
+      "etAl": "false",
+      "href": "http://www.widgit.com/symbols/widgit_symbols.htm"
+    },
+    "Wikipedia-1": {
+      "title": "Attention deficit hyperactivity disorder",
+      "publisher": "Wikipedia",
+      "href": "http://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder",
+      "etAl": "false",
+      "publishDate": "2014"
+    },
+    "Willcutt-1": {
+      "title": "Recent Developments in Neuropsychological Models of Childhood Psychiatric Disorders",
+      "authors": [
+        "Willcutt, E.",
+        "Sonuga-Barke, E.",
+        "Nigg, J. T.",
+        "Sergeant , J. A."
+      ],
+      "editors": [
+        "T. Banaschewski",
+        " L. A. Rohde"
+      ],
+      "publisher": "Advances in Biological Psychiatry, Vol 24: Recent Trends and Developments, Basel: Karger",
+      "etAl": "false",
+      "publishDate": "2008"
+    },
+    "WHO-1": {
+      "title": "The ICD-10 Classification of Mental and Behavioural Disorders Clinical descriptions and diagnostic guidelines",
+      "authors": [
+        "World Health Organisation"
+      ],
+      "publisher": "s. l.",
+      "etAl": "false",
+      "publishDate": "2014"
+    },
+    "WHO-2": {
+      "title": "Genes and human disease",
+      "authors": [
+        "World Health Organisation"
+      ],
+      "etAl": "false",
+      "href": "http://www.who.int/genomics/public/geneticdiseases/en/index1.html",
+      "publishDate": "n. d."
+    },
+    "WHO-3": {
+      "title": "Ageing",
+      "authors": [
+        "World Health Organization"
+      ],
+      "etAl": "false",
+      "href": "http://www.who.int/topics/ageing/en/"
+    },
+    "WHO-4": {
+      "title": "Dementia",
+      "authors": [
+        "World Health Organization"
+      ],
+      "etAl": "false",
+      "publishDate": "2015",
+      "href": "http://www.who.int/mediacentre/factsheets/fs362/en/"
+    },
+    "Wilson-1": {
+      "title": "Dyscalculia primer and resource guide",
+      "authors": [
+        "Wilson, A.J."
+      ],
+      "etAl": "false",
+      "publishDate": "2008",
+      "href": "http://www.oecd.org/edu/ceri/dyscalculiaprimerandresourceguide.htm"
+    },
+    "Wockl-1": {
+      "title": "Basic senior personas: a representative design tool covering the spectrum of European older adults",
+      "authors": [
+        "Wockl, B.",
+        "Yildizoglu, U."
+      ],
+      "etAl": "true",
+      "publisher": "ASSETS '12 The proceedings of the 13th international ACM SIGACCESS conference on computers and accessibility, pages 25-32",
+      "publishDate": "2012"
+    }
+  },
+  "github": "w3c/coga",
+  "publishISODate": "2026-01-22T00:00:00.000Z",
+  "generatedSubtitle": "W3C Group Note Draft 22 January 2026"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-DNOTE"></head>
+	<body data-new-gr-c-s-check-loaded="14.1269.0" data-gr-ext-installed="" class="h-entry informative"><div class="head">
+    <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+  </a></p>
+    <h1 id="title" class="title">Cognitive Accessibility Research Modules</h1> 
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#DNOTE">W3C Group Note Draft</a> <time class="dt-published" datetime="2026-01-22">22 January 2026</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://www.w3.org/TR/2026/DNOTE-coga-research-modules-20260122/">https://www.w3.org/TR/2026/DNOTE-coga-research-modules-20260122/</a>
+              </dd>
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/coga-research-modules/">https://www.w3.org/TR/coga-research-modules/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/research-modules/">https://w3c.github.io/coga/research-modules/</a></dd>
+        <dt>History:</dt><dd>
+                    <a href="https://www.w3.org/standards/history/coga-research-modules/">https://www.w3.org/standards/history/coga-research-modules/</a>
+                  </dd><dd>
+                    <a href="https://github.com/w3c/coga/commits/">Commit history</a>
+                  </dd>
+        
+        
+        
+        
+        
+        <dt>Editor:</dt><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman-Horwitz</a>
+  </dd>
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/coga/">GitHub w3c/coga</a>
+        (<a href="https://github.com/w3c/coga/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/coga/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/coga/issues/">open issues</a>)
+      </dd><dd><a href="mailto:public-coga-comments@w3.org?subject=%5Bcoga-research-modules%5D%20YOUR%20TOPIC%20HERE">public-coga-comments@w3.org</a> with subject line <kbd>[coga-research-modules] <em>… message topic …</em></kbd> (<a rel="discussion" href="https://lists.w3.org/Archives/Public/public-coga-comments">archives</a>)</dd>
+        
+        
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/policies/#copyright">Copyright</a>
+    ©
+    2026
+    
+    <a href="https://www.w3.org/">World Wide Web Consortium</a>.
+    <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+    <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/copyright/document-license/" title="W3C Document License">document use</a> rules apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
+			<p>This set of modules looks at different Web technologies and provides:
+</p><ul>
+    <li>
+        a detailed analysis of accessibility issues for people with disabilities that may require cognitive accessibility supports,
+     
+    </li>
+    <li>
+        user needs,
+    </li>
+    <li>areas for further research, and directions for solutions.    </li>
+</ul>
+	<p>Research modules are <strong>primarily intended for groups in The World Wide Web Consortium (<abbr title="World Wide Web Consortium">W3C</abbr>).</strong> For example, they are used as source material for <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>.</p>
+<p>They may also contain useful information for:</p>	
+			<ul>
+    <li>
+        researchers,
+    </li>
+    <li>
+        inclusion and research-related policy makers,
+    </li>
+    <li>
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
+    </li>
+</ul>
+
+			
+			<p>These modules focus on explaining the issues that lead to diverse user
+needs impacting web accessibility. For this reason, they may sometimes
+address a broader scope than web accessibility alone.
+</p>	
+			<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
+		</section>
+		<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> standards and drafts index</a>.</em></p>
+			<p> This is an early draft. The task force intends to add more research and improved discussion. We also intend to make significant editorial changes to be in line with our style guide, including for citations.
+<br>
+
+Please feel free to let us know any research we should be looking at, as well as other comments.
+</p>
+			<p>Feedback on any aspect of the document is accepted. For this publication, the Working Groups particularly seek feedback on the following questions:</p>
+			<ul>
+				<li>Are issues for the included user groups well covered?</li>
+				<li>Is there additional research we should look at?</li>
+				<li>Do the research modules effectively bridge between research and priorities for new work?</li>
+				<li>Should additional user needs be addressed?</li>
+			</ul>
+			<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-coga-comments@w3.org?subject=[Issue%20Papers]">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>15th April 2026</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/research-modules/">publicly visible editors' draft</a>.</p>
+		<p>
+    This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/groups/wg/ag">Accessibility Guidelines Working Group</a> as
+    a Group Note Draft using the
+        <a href="https://www.w3.org/policies/process/20250818/#recs-and-notes">Note track</a>. 
+  </p><p>Group Note Drafts are not endorsed by
+        <abbr title="World Wide Web Consortium">W3C</abbr> nor its Members. </p><p>
+    This is a draft document and may be updated, replaced, or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than a work in progress.
+    
+  </p><p data-deliverer="83907,35422">
+    
+        The
+        <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>
+        does not carry any licensing requirements or commitments on this
+        document.
+      
+    
+  </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20250818/">18 August 2025 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#why-this-work-is-important"><bdi class="secno">1.1 </bdi>Why This Work is Important</a></li><li class="tocline"><a class="tocxref" href="#about-disabilities-that-may-require-cognitive-accessibility-support"><bdi class="secno">1.2 </bdi>About Disabilities That May Require Cognitive Accessibility Support</a></li><li class="tocline"><a class="tocxref" href="#challenges-in-researching-these-issues"><bdi class="secno">1.3 </bdi>Challenges in Researching These Issues</a></li></ol></li><li class="tocline"><a class="tocxref" href="#modules"><bdi class="secno">2. </bdi>Modules</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#older-research-modules"><bdi class="secno">2.1 </bdi>Older Research Modules</a></li></ol></li><li class="tocline"><a class="tocxref" href="#significant-contributors-to-the-research-modules"><bdi class="secno">A. </bdi> Significant Contributors to the Research Modules </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#key-contributors-and-section-editors"><bdi class="secno">A.1 </bdi>Key contributors and section editors</a></li></ol></li><li class="tocline"><a class="tocxref" href="#participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><bdi class="secno">B. </bdi>
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</a></li></ol></nav>
+	<section id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div>
+			
+<p>This set of modules looks at different Web technologies and provides:</p>
+<ul>
+    <li>
+        a detailed analysis of accessibility issues for people with disabilities that may require cognitive accessibility supports,
+     
+    </li>
+    <li>
+        <p>user needs,</p>
+    </li>
+    <li>areas for further research, and directions for solutions.    </li>
+</ul>
+		<p>Disabilities that may require cognitive accessibility support include:</p>
+<ul>
+    <li>
+    cognitive, developmental, intellectual, learning, and specific learning disabilities,
+    </li>
+    <li>
+        language and communication disorders,
+    </li>
+    <li>
+        neurodivergence,
+    </li>
+    <li>
+        traumatic brain injury,
+    </li>
+    <li>
+        age-related cognitive decline,
+    </li>
+    <li>
+        mental health disabilities, and
+    </li>
+    <li>
+        temporary impairments that affect cognitive function, such as anxiety, illness, effects of medication, treatments such as chemotherapy, and others.
+    </li>
+</ul>
+<p>
+    <br>Examples of specific disabilities include attention deficit hyperactivity disorder (ADHD), autism spectrum disorder, dyslexia and dyscalculia, mild cognitive impairment (MCI), Down syndrome, aphasia, and others.
+</p>
+		<p>Research modules identify issues for inclusion, use cases, topics for further research and directions for solutions. <strong>They are primarily intended for groups in The World Wide Web Consortium (<abbr title="World Wide Web Consortium">W3C</abbr>).</strong> For example, they are used as source material for <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>.</p>
+<p>They may also contain useful information for:</p>
+<ul>
+    <li>
+        researchers,
+    </li>
+    <li>
+        inclusion and research-related policy makers,
+    </li>
+    <li>
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
+    </li>
+</ul>
+<p>Note that these modules focus on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, they may sometimes address a broader scope than web accessibility alone.</p>
+		<p>Note that these research modules used to be referred to as issue papers.</p>
+<section id="why-this-work-is-important"><div class="header-wrapper"><h3 id="x1-1-why-this-work-is-important"><bdi class="secno">1.1 </bdi>Why This Work is Important</h3><a class="self-link" href="#why-this-work-is-important" aria-label="Permalink for Section 1.1"></a></div>
+<p>The web is now the main way people stay informed, connect with others, and do things like banking and shopping. People with disabilities who can’t use these tools may become more isolated from society.</p>
+<p>In fact, everyday physical objects are often connected to the Internet and have ICT (information and communication technology) or Web interfaces. Using these interfaces is an essential component of maintaining independence, staying in the workforce longer, and staying safe.</p>
+<p>Consider the impact as the population ages. By 2050, 21.1% of the world’s population will be over 60, and this number is higher in developed countries. Many people over 60 start to notice changes in their memory and cognitive function such as:</p>
+<ul>
+    <li>
+        38.4% of people have Age-Associated Memory Impairment,
+    </li>
+
+    <li>
+        15.3% have Mild Cognitive Impairment, and
+    </li>
+    <li>
+        8.8% may have dementia. (Source to be added)
+    </li>
+</ul>
+<p>When older adults cannot use technology because it's hard to access or understand, they often need more help from others to do things they could do by themselves. This takes away their independence, violates their rights, and also makes the cost of care much higher for society.</p>
+<p>Another growing concern is mental health. Many emotional disabilities affect cognitive function. As the mental crisis grows, it becomes more and more important for people to be able to use services, technology and access community activities through mental health challenges.</p>
+<p>Of course there are many other groups included in this work. We invite you to look at this draft and share your thoughts. We’re especially interested in hearing how these issues might affect your technologies and work.</p>
+</section><section id="about-disabilities-that-may-require-cognitive-accessibility-support"><div class="header-wrapper"><h3 id="x1-2-about-disabilities-that-may-require-cognitive-accessibility-support"><bdi class="secno">1.2 </bdi>About Disabilities That May Require Cognitive Accessibility Support</h3><a class="self-link" href="#about-disabilities-that-may-require-cognitive-accessibility-support" aria-label="Permalink for Section 1.2"></a></div>
+<p>Cognitive and learning disabilities and mental health issues include long-term, short-term, and permanent difficulties relating to cognitive functions, such as:</p>
+<ul>
+    <li>
+        learning, communication, reading, writing, or math,
+    </li>
+    <li>
+       ability to understand or process new or complex information and learn new skills, with a reduced ability to cope independently,
+    </li>
+    <li>
+        emotional regulation, anxiety, mood and mental health, and / or
+    </li>
+    <li>
+        memory and attention or visual, language, or numerical thinking.
+    </li>
+</ul>
+<p>This is discussed more in the introduction to <a href="https://www.w3.org/TR/coga-usable#background">Making Content Usable for People with Cognitive and Learning Disabilities.</a>
+</p>
+</section><section id="challenges-in-researching-these-issues"><div class="header-wrapper"><h3 id="x1-3-challenges-in-researching-these-issues"><bdi class="secno">1.3 </bdi>Challenges in Researching These Issues</h3><a class="self-link" href="#challenges-in-researching-these-issues" aria-label="Permalink for Section 1.3"></a></div>
+<p>Challenges we found while writing these modules include:</p>
+<ul>
+    <li>
+       <strong>Lack of availability of open research:</strong> Most research on this topic is behind a "paywall," so developers and policymakers may not be able to see which techniques actually work to help people with disabilities.
+    </li>
+    <li>
+       <strong>Wide range of impairments</strong> that involve cognitive and learning disabilities and mental health issues: Each one can have unique symptoms and specific digital accessibility needs, making it harder to know how to meet everyone’s needs.
+    </li>
+    <li>
+       <strong>Lack of disclosure or self-identification:</strong> A major challenge is that our users may choose not to talk publicly about their impairments. Some might feel embarrassed and avoid asking for help, fearing discrimination, especially at work. Others may not realize they have a disability or how it affects them.
+    </li>
+    <li>
+       <strong>Attitudes and misinformation:</strong> Developers may feel people with cognitive disabilities are not in their “target audience” and so have no interest in their inclusion. Additionally, studies of usability often over-sample college students. Thus the results work less well for groups that are not well represented among sub-groups of college students (such as the aging population).
+    </li>
+</ul>
+		</section></section>
+	<section id="modules"><div class="header-wrapper"><h2 id="x2-modules"><bdi class="secno">2. </bdi>Modules</h2><a class="self-link" href="#modules" aria-label="Permalink for Section 2."></a></div>
+		
+		<p>These modules are split into two sections. The first section covers new modules and our current work. The second section includes older modules from a previous analysis by the Cognitive and Learning Disabilities Task Force. Each module talks about a technology-related issue or topic on the internet and includes:</p>
+<ul>
+    <li>
+       challenges and risks for people with cognitive or learning disabilities and mental health issues,    </li>
+    <li>
+        related user needs, and
+    </li>
+    <li>
+    possible solutions and areas for research and development.
+    </li>
+</ul>
+<p>The current modules are:</p>
+<ul>
+    <li>
+       <a href="Conversational-Voice-Systems.html">Voice Systems and Conversational Interfaces</a>  <br>     
+       
+           
+               This module covers issues that our users face when using conversational voice systems. Conversational voice systems include:
+                <ul>
+                    <li>
+                        voice menu systems,
+                    </li>
+                    <li>
+                       voice user interfaces and
+                    </li>
+                    <li>
+                        voice AI assistants.
+                    </li>
+                </ul>
+            
+       
+    </li>
+    <li>
+       <a href="Technology-Assisted-Indoor-Navigation-and-Wayfindings.html">Technology-Assisted Indoor Navigation and Wayfinding</a>
+        
+       <br> 
+                This module is about technology that helps users navigate indoor spaces, also known as wayfinding.
+           
+    </li>
+    <li>
+        <a href="Online-Safety-and-Wellbeing.html">Online Safety and Wellbeing (Algorithms and Data)</a>
+       <br> 
+       
+                This module covers safety issues that our users face on the internet including cybercrime, mental health, wellbeing, privacy, and more.
+           
+    </li>
+    <li>
+        <a href="Supported-Decision-Making.html">Supported Decision-Making Online</a>       
+       <br> This module describes the advantages and risks of supporting Supported Decision-Making (SDM). It offers suggestions for safely supporting SDM online, helping more people take part in the digital world while keeping their dignity and independence.
+           
+    </li>
+</ul>
+
+		<section id="older-research-modules"><div class="header-wrapper"><h3 id="x2-1-older-research-modules"><bdi class="secno">2.1 </bdi>Older Research Modules</h3><a class="self-link" href="#older-research-modules" aria-label="Permalink for Section 2.1"></a></div>	
+		<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="4"><span>Editor's note</span><span class="issue-label">: Older Research Modules</span></div><p class="">This is our second batch of research modules. Older drafts of research modules may be out of date, incomplete, or may contain errors. We have added the following text to each older paper. "Editors Note: This draft is out of date, and there may be new research and new technologies that are relevant to this topic." <br>
+Please let us know if you think any of these modules need to be updated and maintained.
+
+</p></div>		
+			
+<p>This is our second batch of research modules. While we believe these modules are still valuable, we are deprecating them. This is because they may be out of date, incomplete, or may contain errors. Please let us know if you think any of these modules need to be updated and maintained.
+</p>
+			<p>Note that these research modules used to be referred to as issue papers.</p>
+<p>The older modules  (editor's drafts only) include:</p>
+		<ul>
+			<li><a href="https://w3c.github.io/coga/research-modules/personalization-preferences.html">Personalization and Preferences</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/privacy-security.html">Security and Privacy Technologies</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/multi-modal.html">Multi-modal Content Delivery</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/distractions.html">Distractions</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/payments.html">Online Payments</a> </li>
+			<li><a href="https://w3c.github.io/coga/research-modules/symbols-non-verbal.html">Symbols for Non-Verbal</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/math.html">Numbers and Math</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/flat-design.html">Flat Design</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/graded-help.html">Graded Help</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/task-completion.html">Task Completion</a></li>
+			<li><a href="https://w3c.github.io/coga/research-modules/wot.html">Web of Things</a></li>
+
+			
+	  </ul>
+
+	</section> </section>
+		
+		
+		
+		
+	   <section class="appendix section" id="significant-contributors-to-the-research-modules"><div class="header-wrapper"><h2 id="a-significant-contributors-to-the-research-modules"><bdi class="secno">A. </bdi> Significant Contributors to the Research Modules </h2><a class="self-link" href="#significant-contributors-to-the-research-modules" aria-label="Permalink for Appendix A."></a></div>
+           
+  
+    <section id="key-contributors-and-section-editors"><div class="header-wrapper"><h3 id="a-1-key-contributors-and-section-editors"><bdi class="secno">A.1 </bdi>Key contributors and section editors</h3><a class="self-link" href="#key-contributors-and-section-editors" aria-label="Permalink for Appendix A.1"></a></div>
+<ul>
+
+	
+<li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+</li><li>
+	Tiffany Burtin, 
+Invited Expert 
+
+</li><li>
+Deborah Dahl, 
+Conversational Technologies
+
+</li>
+<li>Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+E.A. Draffan, 
+Global Symbols
+
+</li><li>
+
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+John Kirkwood, 
+CityMouse, Inc
+</li><li>
+Rebecca Monteleone, 
+The University of Toledo
+		</li><li>
+Julie Rawe, 
+Understood.org</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Lisa Seeman-Horwitz, 
+Invited Expert
+</li>
+<li>
+David Swallow,
+TPGi</li>
+</ul>
+</section></section>
+
+
+<section id="participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><div class="header-wrapper"><h2 id="b-participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><bdi class="secno">B. </bdi>
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</h2><a class="self-link" href="#participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication" aria-label="Permalink for Section B."></a></div>
+    
+<ul>
+<li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+
+</li><li>
+
+Rachael Bradley Montgomery, 
+Library of Congress
+
+</li><li>
+
+Rain Breaw Michaels, 
+Google LLC
+
+</li><li>
+Tiffany Burtin, 
+Invited Expert 
+
+</li><li>
+
+Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+E.A. Draffan, 
+Global Symbols
+
+</li><li>
+Jeanne Erickson Cooley, 
+TPGi
+
+
+</li><li>
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+
+John Kirkwood, 
+CityMouse, Inc
+
+</li><li>
+Andy Manea, 
+Invited Expert 
+</li><li>
+Jan McSorley, 
+Invited Expert 
+</li><li>
+Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Abigail Ofer, 
+Evinced Inc.
+
+</li><li>
+
+Justine Pascalides, 
+Amazon
+</li><li>
+Ruoxi Ran, 
+<abbr title="World Wide Web Consortium">W3C</abbr>
+
+
+</li><li>
+Julie Rawe, 
+Understood.org
+
+
+</li><li>
+Charlotte Riggle, 
+Amazon
+
+</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Janina Sajka, 
+Invited Expert 
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert 
+</li><li>
+
+Gareth Slinn, 
+Invited Expert 
+</li><li>
+David Swallow,
+TPGi
+
+
+</li></ul></section>
+
+    
+	
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-highlight-vars">(() => {
+// @ts-check
+
+if (document.respec) {
+  document.respec.ready.then(setupVarHighlighter);
+} else {
+  setupVarHighlighter();
+}
+
+function setupVarHighlighter() {
+  document
+    .querySelectorAll("var")
+    .forEach(varElem => varElem.addEventListener("click", highlightListener));
+}
+
+function highlightListener(ev) {
+  ev.stopPropagation();
+  const { target: varElem } = ev;
+  const hightligtedElems = highlightVars(varElem);
+  const resetListener = () => {
+    const hlColor = getHighlightColor(varElem);
+    hightligtedElems.forEach(el => removeHighlight(el, hlColor));
+    [...HL_COLORS.keys()].forEach(key => HL_COLORS.set(key, true));
+  };
+  if (hightligtedElems.length) {
+    document.body.addEventListener("click", resetListener, { once: true });
+  }
+}
+
+// availability of highlight colors. colors from var.css
+const HL_COLORS = new Map([
+  ["respec-hl-c1", true],
+  ["respec-hl-c2", true],
+  ["respec-hl-c3", true],
+  ["respec-hl-c4", true],
+  ["respec-hl-c5", true],
+  ["respec-hl-c6", true],
+  ["respec-hl-c7", true],
+]);
+
+function getHighlightColor(target) {
+  // return current colors if applicable
+  const { value } = target.classList;
+  const re = /respec-hl-\w+/;
+  const activeClass = re.test(value) && value.match(re);
+  if (activeClass) return activeClass[0];
+
+  // first color preference
+  if (HL_COLORS.get("respec-hl-c1") === true) return "respec-hl-c1";
+
+  // otherwise get some other available color
+  return [...HL_COLORS.keys()].find(c => HL_COLORS.get(c)) || "respec-hl-c1";
+}
+
+function highlightVars(varElem) {
+  const textContent = norm(varElem.textContent);
+  const parent = varElem.closest(".algorithm, section");
+  const highlightColor = getHighlightColor(varElem);
+
+  const varsToHighlight = [...parent.querySelectorAll("var")].filter(
+    el =>
+      norm(el.textContent) === textContent &&
+      el.closest(".algorithm, section") === parent
+  );
+
+  // update availability of highlight color
+  const colorStatus = varsToHighlight[0].classList.contains("respec-hl");
+  HL_COLORS.set(highlightColor, colorStatus);
+
+  // highlight vars
+  if (colorStatus) {
+    varsToHighlight.forEach(el => removeHighlight(el, highlightColor));
+    return [];
+  } else {
+    varsToHighlight.forEach(el => addHighlight(el, highlightColor));
+  }
+  return varsToHighlight;
+}
+
+function removeHighlight(el, highlightColor) {
+  el.classList.remove("respec-hl", highlightColor);
+  // clean up empty class attributes so they don't come in export
+  if (!el.classList.length) el.removeAttribute("class");
+}
+
+function addHighlight(elem, highlightColor) {
+  elem.classList.add("respec-hl", highlightColor);
+}
+
+/**
+ * Same as `norm` from src/core/utils, but our build process doesn't allow
+ * imports in runtime scripts, so duplicated here.
+ * @param {string} str
+ */
+function norm(str) {
+  return str.trim().replace(/\s+/g, " ");
+}
+})()</script><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

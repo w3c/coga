@@ -1,0 +1,3359 @@
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 35.6.1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
+.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+		
+<title>Cognitive Accessibility Research Modules - Supported Decision-Making Online</title>
+			
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:italic}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+		
+		
+	
+<meta name="color-scheme" content="light">
+<meta name="description" content="Supported decision-making (SDM) is a person-centered approach that empowers individuals with disabilities to make their own choices with the help of trusted supporters. Rather than substituting decision-making authority, SDM emphasizes autonomy, dignity, and inclusion in everyday life. This module introduces the principles and practices of SDM, highlighting its legal, ethical, and practical implications. Participants will explore how to implement SDM in ways that respect individual rights and foster independence.">
+<link rel="canonical" href="https://www.w3.org/TR/coga-sdm/">
+<style>
+var:hover{text-decoration:underline;cursor:pointer}
+var.respec-hl{color:var(--color,#000);background-color:var(--bg-color);box-shadow:0 0 0 2px var(--bg-color)}
+@media (prefers-color-scheme:dark){
+var.respec-hl{filter:saturate(.9) brightness(.9)}
+}
+var.respec-hl-c1{--bg-color:#f4d200}
+var.respec-hl-c2{--bg-color:#ff87a2}
+var.respec-hl-c3{--bg-color:#96e885}
+var.respec-hl-c4{--bg-color:#3eeed2}
+var.respec-hl-c5{--bg-color:#eacfb6}
+var.respec-hl-c6{--bg-color:#82ddff}
+var.respec-hl-c7{--bg-color:#ffbcf2}
+@media print{
+var.respec-hl{background:0 0;color:#000;box-shadow:unset}
+}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#222;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "DNOTE",
+  "noRecTrack": true,
+  "shortName": "coga-sdm",
+  "copyrightStart": "2026",
+  "license": "document",
+  "publishDate": "2026-01-22",
+  "edDraftURI": "https://w3c.github.io/coga/research-modules/Supported-Decision-Making.html",
+  "editors": [
+    {
+      "name": "Lisa Seeman-Horwitz",
+      "mailto": "lisa.seeman@zoho.com",
+      "url": "mailto:lisa.seeman@zoho.com"
+    }
+  ],
+  "group": [
+    "apa",
+    "ag"
+  ],
+  "wgPublicList": "public-coga-comments",
+  "localBiblio": {
+    "RM-rotondi1": {
+      "title": "Designing eHealth applications to reduce cognitive effort for persons with severe mental illness: page complexity, navigation simplicity, and comprehensibility.",
+      "date": "2017",
+      "authors": [
+        "A.J. Rotondi",
+        "M.R. Spring",
+        "B.H. Hanusa",
+        "S.M. Eack",
+        "G.L. Haas"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Human Factors 4:1",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5247620/",
+      "status": "academic paper"
+    },
+    "RM-good1": {
+      "title": "Accessing Web Based Health Care and Republishers for Mental Health: Interface Design Considerations for People Experiencing Mental Illness.",
+      "date": "2014",
+      "authors": [
+        "A. Good",
+        "A. Sambhanthan"
+      ],
+      "etAl": "false",
+      "publisher": "Lecture Notes in Computer Science",
+      "href": "https://link.springer.com/content/pdf/10.1007/978-3-319-07635-5_3.pdf",
+      "status": "academic paper"
+    },
+    "RM-renaldo1": {
+      "title": "Barriers and Facilitation Measures Related to People With Mental Disorders When Using the Web: A Systematic Review.",
+      "date": "2016",
+      "authors": [
+        "B. Renaldo",
+        "C. Sabariego",
+        "A. Cieza"
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Medical Internet Research 18:6",
+      "href": "https://www.jmir.org/2016/6/e157/PDF",
+      "status": "academic paper"
+    },
+    "RM-huang1": {
+      "title": "Users Adoption of Mental Health Apps: Examining the Impact of Information Cues.",
+      "date": "2017",
+      "authors": [
+        "H. Huang",
+        "M. Bashir"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mhealth Uhealth 5:6",
+      "href": "https://mhealth.jmir.org/2017/6/e83/",
+      "status": "academic paper"
+    },
+    "RM-bakker1": {
+      "title": "Mental health smartphone apps review and evidence based recommendations for future developments.",
+      "date": "2016",
+      "authors": [
+        "D. Bakker",
+        "N. Kazantizis",
+        "D. Rickwood",
+        "N. Rickard"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 3 1",
+      "href": "https://mental.jmir.org/2016/1/e7/",
+      "status": "academic paper"
+    },
+    "RM-torous1": {
+      "title": "Fostering engagement with mental health apps.",
+      "date": "2018",
+      "authors": [
+        "J. Torous",
+        "J. Lipschitz",
+        "J. Ng",
+        "M. Firth"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 5:1",
+      "href": "https://mental.jmir.org/2018/1/e48/",
+      "status": "academic paper"
+    },
+    "RM-torous2": {
+      "title": "Creating a digital health smartphone app and digital phenotyping platform for mental health and diverse healthcare needs: an interdisciplinary and collaborative approach.",
+      "date": "2019",
+      "authors": [
+        "J. Torous",
+        "J. Wisniewski",
+        "M. Bird",
+        "M. Carpenter",
+        "S. David",
+        "J. Elejalde",
+        "S. Fulford",
+        "S. Guimond",
+        "J. Hays",
+        "S. Humm",
+        "M. Keshavan",
+        "R. Onnela",
+        "D. Rauch",
+        "H. Shrier"
+      ],
+      "etAl": "true",
+      "publisher": "Journal of Technology in Behavioral Science 4:2",
+      "href": "https://link.springer.com/article/10.1007/s41347-019-00095-w",
+      "status": "academic paper"
+    },
+    "RM-firth1": {
+      "title": "The efficacy of smartphone-based mental health interventions for depressive symptoms: a meta-analysis of randomized controlled trials.",
+      "date": "2017",
+      "authors": [
+        "J. Firth",
+        "J. Torous",
+        "F. Nicholas",
+        "M. Carney",
+        "L. Rosenbaum",
+        "P. Sarris"
+      ],
+      "etAl": "false",
+      "publisher": "World Psychiatry 16:3",
+      "href": "https://onlinelibrary.wiley.com/doi/10.1002/wps.20472",
+      "status": "academic paper"
+    },
+    "RM-firth2": {
+      "title": "Mobile Phone-Based Interventions for Mental Health: A Systematic Review of Randomized Controlled Trials.",
+      "date": "2017",
+      "authors": [
+        "J. Firth",
+        "J. Torous",
+        "F. Nicholas",
+        "R. Carney",
+        "L. Rosenbaum",
+        "P. Sarris"
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Medical Internet Research 19:11",
+      "href": "https://www.jmir.org/2017/11/e255/",
+      "status": "academic paper"
+    },
+    "RM-lipschitz1": {
+      "title": "Improving Usability of mHealth Technology for Patients With Serious Mental Illness, A Qualitative Study.",
+      "date": "2018",
+      "authors": [
+        "J. Lipschitz",
+        "J. Torous",
+        "M. Firth",
+        "J. Ng"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Human Factors 5:1",
+      "href": "https://humanfactors.jmir.org/2018/1/e2/",
+      "status": "academic paper"
+    },
+    "RM-bailey1": {
+      "title": "Barriers and Facilitators to Technology Use Among Older Adults with Serious Mental Illness.",
+      "date": "2018",
+      "authors": [
+        "E. Bailey",
+        "N. Alvarez-Jimenez",
+        "M. Garcia",
+        "S. Gleeson"
+      ],
+      "etAl": "false",
+      "publisher": "Psychiatric Rehabilitation Journal 41:4",
+      "href": "https://psycnet.apa.org/doi/10.1037/prj0000323",
+      "status": "academic paper"
+    },
+    "RM-subramaniam1": {
+      "title": "Barriers and facilitators to using mental health apps: systematic literature review.",
+      "date": "2020",
+      "authors": [
+        "M. Subramaniam",
+        "C. Shafiee Hanjani",
+        "J. Abdin",
+        "Y. Pang",
+        "S. Picco"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 7 8",
+      "href": "https://mental.jmir.org/2020/8/e17598/",
+      "status": "academic paper"
+    },
+    "RM-larsen1": {
+      "title": "Using Mindfulness Smartphone Apps Supported by Theory to Improve Mental Health Outcomes: A Systematic Review.",
+      "date": "2019",
+      "authors": [
+        "M.E. Larsen",
+        "S. Nicholas",
+        "H. Christensen"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 6:11",
+      "href": "https://mental.jmir.org/2019/11/e12294/",
+      "status": "academic paper"
+    },
+    "RM-martinez1": {
+      "title": "Acceptability of mHealth interventions for mental health among older adults: Systematic review.",
+      "date": "2022",
+      "authors": [
+        "C. Martínez-Alcalá",
+        "J. Pliego-Pastrana",
+        "M. Rosales-Lagarde",
+        "C. Lopez-Noguerola"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Aging 5:3",
+      "volume": "5",
+      "issue": "3",
+      "href": "https://aging.jmir.org/2022/3/e34918/",
+      "status": "academic paper"
+    },
+    "RM-bentley1": {
+      "title": "Building Mental Health into the Design of Digital Health Interventions.",
+      "date": "2018",
+      "authors": [
+        "C. Bentley",
+        "S. Powell",
+        "T. Woodall",
+        "L. Ainsworth",
+        "M. Gowland"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 5:6",
+      "volume": "5",
+      "issue": "6",
+      "href": "https://mental.jmir.org/2018/6/e11752/",
+      "status": "academic paper"
+    },
+    "RM-michie1": {
+      "title": "The behavior change wheel: A new method for characterizing and designing behavior change interventions.",
+      "date": "2011",
+      "authors": [
+        "S. Michie",
+        "M. van Stralen",
+        "R. West"
+      ],
+      "etAl": "false",
+      "publisher": "Implementation Science 6:42",
+      "volume": "6",
+      "issue": "42",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/1748-5908-6-42",
+      "status": "academic paper"
+    },
+    "RM-michie2": {
+      "title": "A refined taxonomy of behaviour change techniques to help people change their physical activity and healthy eating behaviours: the CALO-RE taxonomy.",
+      "date": "2011",
+      "authors": [
+        "S. Michie",
+        "M.M. van Stralen",
+        "R. West"
+      ],
+      "etAl": "false",
+      "publisher": "Psychology & Health 26:11",
+      "volume": "26",
+      "issue": "11",
+      "href": "https://www.tandfonline.com/doi/abs/10.1080/08870446.2010.540664",
+      "status": "academic paper"
+    },
+    "RM-michie3": {
+      "title": "The Behavior Change Technique Taxonomy (v1) of 93 hierarchically clustered techniques: building an international consensus for the reporting of behavior change interventions.",
+      "date": "2013",
+      "authors": [
+        "S. Michie",
+        "M. Richardson",
+        "M. Johnston",
+        "C. Abraham",
+        "J. Francis",
+        "W. Hardeman",
+        "M. Eccles",
+        "J. Cane",
+        "C. Wood"
+      ],
+      "etAl": "true",
+      "publisher": "Annals of Behavioral Medicine 46:1",
+      "volume": "46",
+      "issue": "1",
+      "href": "https://academic.oup.com/abm/article/46/1/81/4563838",
+      "status": "academic paper"
+    },
+    "RM-barnett1": {
+      "title": "Understanding Innovators’ Experiences of Barriers and Facilitators in Implementing Digital Health Interventions: Qualitative Interview Study.",
+      "date": "2020",
+      "authors": [
+        "K. Barnett",
+        "S. Vasileiou",
+        "R. Dinesen",
+        "J. Wilson"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Human Factors 7:3",
+      "volume": "7",
+      "issue": "3",
+      "href": "https://humanfactors.jmir.org/2020/3/e17271/",
+      "status": "academic paper"
+    },
+    "RM-greenhalgh1": {
+      "title": "Beyond adoption: a new framework for theorizing and evaluating nonadoption, abandonment, and challenges to the scale-up, spread, and sustainability of health and care technologies.",
+      "date": "2017",
+      "authors": [
+        "T. Greenhalgh",
+        "J. Wherton",
+        "C. Papoutsi",
+        "J. Lynch",
+        "G. Hughes",
+        "C. A'Court",
+        "S. Hinder",
+        "N. Fahy",
+        "R. Procter",
+        "S. Shaw"
+      ],
+      "etAl": "true",
+      "publisher": "Journal of Medical Internet Research 19:11",
+      "volume": "19",
+      "issue": "11",
+      "href": "https://www.jmir.org/2017/11/e367/",
+      "status": "academic paper"
+    },
+    "RM-greenhalgh2": {
+      "title": "Frameworks for supporting implementation of e-health interventions: systematic review and qualitative synthesis.",
+      "date": "2012",
+      "authors": [
+        "T. Greenhalgh",
+        "G. Robert",
+        "F. Macfarlane",
+        "P. Bate",
+        "O. Kyriakidou"
+      ],
+      "etAl": "false",
+      "publisher": "BMC Medical Informatics and Decision Making 12:87",
+      "volume": "12",
+      "issue": "87",
+      "href": "https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/1472-6947-12-87",
+      "status": "academic paper"
+    },
+    "RM-nilsen1": {
+      "title": "Making sense of implementation theories, models and frameworks.",
+      "date": "2015",
+      "authors": [
+        "P. Nilsen"
+      ],
+      "etAl": "false",
+      "publisher": "Implementation Science 10:53",
+      "volume": "10",
+      "issue": "53",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/s13012-015-0242-0",
+      "status": "academic paper"
+    },
+    "RM-cane1": {
+      "title": "Validation of the theoretical domains framework for use in behaviour change and implementation research.",
+      "date": "2012",
+      "authors": [
+        "J. Cane",
+        "D. O’Connor",
+        "S. Michie"
+      ],
+      "etAl": "false",
+      "publisher": "Implementation Science 7:37",
+      "volume": "7",
+      "issue": "37",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/1748-5908-7-37",
+      "status": "academic paper"
+    },
+    "RM-proctor1": {
+      "title": "Outcomes for implementation research: conceptual distinctions, measurement challenges, and research agenda.",
+      "date": "2011",
+      "authors": [
+        "E. Proctor",
+        "R. Silmere",
+        "M. Raghavan",
+        "H. Hovmand",
+        "G. Aarons",
+        "A. Bunger",
+        "R. Griffey",
+        "P. Hensley"
+      ],
+      "etAl": "true",
+      "publisher": "Administration and Policy in Mental Health and Mental Health Services Research 38:2",
+      "volume": "38",
+      "issue": "2",
+      "href": "https://link.springer.com/article/10.1007/s10488-010-0319-7",
+      "status": "academic paper"
+    },
+    "RM-damschroder1": {
+      "title": "Fostering implementation of health services research findings into practice: a consolidated framework for advancing implementation science.",
+      "date": "2009",
+      "authors": [
+        "L.J. Damschroder",
+        "D.C. Aron",
+        "R.E. Keith",
+        "S.R. Kirsh",
+        "J.A. Alexander",
+        "J.C. Lowery"
+      ],
+      "etAl": "true",
+      "publisher": "Implementation Science 4:50",
+      "volume": "4",
+      "issue": "50",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/1748-5908-4-50",
+      "status": "academic paper"
+    },
+    "RM-rogers1": {
+      "title": "Diffusion of Innovations (5th Edition).",
+      "date": "2003",
+      "authors": [
+        "E.M. Rogers"
+      ],
+      "etAl": "false",
+      "publisher": "Free Press",
+      "href": "https://books.google.com/books/about/Diffusion_of_Innovations_5th_Edition.html?id=9U1K5LjUOwEC",
+      "status": "academic book"
+    },
+    "RM-davis1": {
+      "title": "Perceived usefulness, perceived ease of use, and user acceptance of information technology.",
+      "date": "1989",
+      "authors": [
+        "F.D. Davis"
+      ],
+      "etAl": "false",
+      "publisher": "MIS Quarterly 13:3",
+      "volume": "13",
+      "issue": "3",
+      "href": "https://www.jstor.org/stable/249008",
+      "status": "academic paper"
+    },
+    "RM-venkatesh1": {
+      "title": "User acceptance of information technology: Toward a unified view.",
+      "date": "2003",
+      "authors": [
+        "V. Venkatesh",
+        "M.G. Morris",
+        "G.B. Davis",
+        "F.D. Davis"
+      ],
+      "etAl": "false",
+      "publisher": "MIS Quarterly 27:3",
+      "volume": "27",
+      "issue": "3",
+      "href": "https://www.jstor.org/stable/30036540",
+      "status": "academic paper"
+    },
+    "RM-pierce1": {
+      "title": "Digital Accessibility Laws and Policies: What You Need to Know.",
+      "date": "2018",
+      "authors": [
+        "J. Pierce"
+      ],
+      "etAl": "false",
+      "publisher": "WebAIM",
+      "href": "https://webaim.org/articles/laws/",
+      "status": "blog"
+    },
+    "RM-who1": {
+      "title": "WHO Guideline: Recommendations on Digital Interventions for Health System Strengthening.",
+      "date": "2019",
+      "authors": [
+        "World Health Organization"
+      ],
+      "etAl": "false",
+      "publisher": "WHO",
+      "href": "https://www.who.int/publications/i/item/9789241550505",
+      "status": "report"
+    },
+    "RM-bauer1": {
+      "title": "Implementation Science: What Is It and Why Should I Care?",
+      "date": "2015",
+      "authors": [
+        "M.S. Bauer",
+        "J. Damschroder",
+        "H. Hagedorn",
+        "J. Smith",
+        "C. Kilbourne"
+      ],
+      "etAl": "true",
+      "publisher": "Psychiatry Research 228:2",
+      "volume": "228",
+      "issue": "2",
+      "href": "https://www.sciencedirect.com/science/article/abs/pii/S0165178115000834",
+      "status": "academic paper"
+    },
+    "RM-proctor2": {
+      "title": "Implementation strategies: recommendations for specifying and reporting.",
+      "date": "2013",
+      "authors": [
+        "E.K. Proctor",
+        "R. Powell",
+        "J. McMillen"
+      ],
+      "etAl": "false",
+      "publisher": "Implementation Science 8:139",
+      "volume": "8",
+      "issue": "139",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/1748-5908-8-139",
+      "status": "academic paper"
+    },
+    "RM-powell1": {
+      "title": "A refined compilation of implementation strategies: results from the Expert Recommendations for Implementing Change (ERIC) project.",
+      "date": "2015",
+      "authors": [
+        "B.J. Powell",
+        "T.J. Waltz",
+        "M.J. Chinman",
+        "L. Damschroder",
+        "J.L. Smith",
+        "M. Matthieu",
+        "J.A. Proctor"
+      ],
+      "etAl": "true",
+      "publisher": "Implementation Science 10:21",
+      "volume": "10",
+      "issue": "21",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/s13012-015-0209-1",
+      "status": "academic paper"
+    },
+    "RM-glasgow1": {
+      "title": "RE-AIM Planning and Evaluation Framework: Adapting to New Science and Practice With a 20-Year Review.",
+      "date": "2019",
+      "authors": [
+        "R.E. Glasgow",
+        "P.C. Estabrooks"
+      ],
+      "etAl": "false",
+      "publisher": "Frontiers in Public Health 7:64",
+      "volume": "7",
+      "issue": "64",
+      "href": "https://www.frontiersin.org/articles/10.3389/fpubh.2019.00064/full",
+      "status": "academic paper"
+    },
+    "RM-waltz1": {
+      "title": "Use of concept mapping to characterize relationships among implementation strategies and assess their feasibility and importance: results from the Expert Recommendations for Implementing Change (ERIC) study.",
+      "date": "2015",
+      "authors": [
+        "T.J. Waltz",
+        "B.J. Powell",
+        "M.J. Chinman",
+        "L.J. Damschroder",
+        "J.L. Smith",
+        "M.M. Matthieu",
+        "J.A. Proctor"
+      ],
+      "etAl": "true",
+      "publisher": "Implementation Science 10:109",
+      "volume": "10",
+      "issue": "109",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/s13012-015-0295-0",
+      "status": "academic paper"
+    },
+    "RM-lazar1": {
+      "title": "Research on Accessible Technology and Computing: What’s Next?",
+      "date": "2017",
+      "authors": [
+        "J. Lazar",
+        "J. Goldstein",
+        "A. Taylor"
+      ],
+      "etAl": "false",
+      "publisher": "ACM Transactions on Accessible Computing 10:1",
+      "volume": "10",
+      "issue": "1",
+      "href": "https://dl.acm.org/doi/10.1145/3078652",
+      "status": "academic paper"
+    },
+    "RM-koopman1": {
+      "title": "A systematic review of technology-based interventions for people with cognitive disabilities",
+      "date": "2018",
+      "authors": [
+        "R. Koopman",
+        "S. Wang",
+        "L. Young"
+      ],
+      "etAl": "false",
+      "publisher": "Disability and Rehabilitation: Assistive Technology 13:7",
+      "volume": "13",
+      "issue": "7",
+      "href": "https://www.tandfonline.com/doi/full/10.1080/17483107.2018.1440487",
+      "status": "academic paper"
+    },
+    "WCAG21": {
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.1",
+      "date": "2018",
+      "authors": [
+        "W3C"
+      ],
+      "etAl": "false",
+      "publisher": "W3C Recommendation",
+      "href": "https://www.w3.org/TR/WCAG21/",
+      "status": "standard",
+      "id": "wcag21"
+    },
+    "section508": {
+      "title": "Section 508: Rehabilitation Act, Accessibility Requirements",
+      "date": "2017",
+      "authors": [
+        "U.S. Access Board"
+      ],
+      "etAl": "false",
+      "publisher": "Government Standard",
+      "href": "https://www.access-board.gov/ict/",
+      "status": "standard"
+    },
+    "RM-petrie1": {
+      "title": "Designing for older and disabled people: Where do we go from here?",
+      "date": "2015",
+      "authors": [
+        "H. Petrie",
+        "J. Kheir"
+      ],
+      "etAl": "false",
+      "publisher": "Universal Access in the Information Society 14:4",
+      "volume": "14",
+      "issue": "4",
+      "href": "https://link.springer.com/article/10.1007/s10209-014-0372-3",
+      "status": "academic paper"
+    },
+    "RM-freire1": {
+      "title": "Understanding the Accessibility of Mobile Health Apps for Individuals With Cognitive Disabilities",
+      "date": "2020",
+      "authors": [
+        "T. Freire",
+        "A. Lobato",
+        "R. Rego"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR mHealth and uHealth 8:3",
+      "volume": "8",
+      "issue": "3",
+      "href": "https://mhealth.jmir.org/2020/3/e16239/",
+      "status": "academic paper"
+    },
+    "RM-thornton1": {
+      "title": "Specific features of current and emerging mobile health apps: user views among people with and without mental health problems",
+      "date": "2018-12-4",
+      "authors": [
+        "L. Thornton",
+        "F. Kay-Lambkin"
+      ],
+      "etAl": "false",
+      "publisher": "MHealth",
+      "href": "https://mhealth.amegroups.com/article/view/22771/html",
+      "status": "academic paper"
+    },
+    "RM-rotondi2": {
+      "title": "Critical Design Elements of E-Health Applications for Users With Severe Mental Illness: Singular Focus, Simple Architecture, Prominent Contents, Explicit Navigation, and Inclusive Hyperlinks",
+      "date": "2015",
+      "authors": [
+        "A.J. Rotondi",
+        "S.M. Eack",
+        "B.H. Hanusa",
+        "M.B. Spring",
+        "G.L. Haas"
+      ],
+      "etAl": "false",
+      "publisher": "Schizophrenia Bulletin",
+      "href": "https://doi.org/10.1093/schbul/sbt194",
+      "status": "academic paper"
+    },
+    "RM-hasson1": {
+      "title": "Psychophysiological effects of a web-based stress management system: A prospective, randomized controlled intervention study of IT and media workers",
+      "date": "2005",
+      "authors": [
+        "D. Hasson",
+        "U.M. Anderberg",
+        "T. Theorell"
+      ],
+      "etAl": "true",
+      "publisher": "BMC Public Health",
+      "href": "https://doi.org/10.1186/1471-2458-5-78",
+      "status": "academic paper"
+    },
+    "RM-achtyes1": {
+      "title": "Off-hours use of a smartphone intervention to extend support for individuals with schizophrenia spectrum disorders recently discharged from a psychiatric hospital",
+      "date": "2019",
+      "authors": [
+        "E.D. Achtyes",
+        "D. Ben-Zeev",
+        "Z. Luo",
+        "H. Mayle",
+        "B. Burke",
+        "A.J. Rotondi",
+        "J.D. Gottlieb",
+        "M.F. Brunette",
+        "K.T. Mueser",
+        "S. Gingerich",
+        "P.S. Meyer-Kalos",
+        "P. Marcy",
+        "N.R. Schooler",
+        "D.G. Robinson",
+        "J.M. Kane"
+      ],
+      "etAl": "true",
+      "publisher": "Schizophrenia Research",
+      "href": "https://www.sciencedirect.com/science/article/abs/pii/S0920996418306777?via%3Dihub",
+      "status": "academic paper"
+    },
+    "RM-gudith1": {
+      "title": "CHI '08: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "date": "2008",
+      "authors": [
+        "G. Mark Gudith",
+        "U. Klocke"
+      ],
+      "etAl": "false",
+      "publisher": "ACM",
+      "volume": "",
+      "issue": "",
+      "href": "https://doi.org/10.1145/1357054.1357072",
+      "status": "conference paper"
+    },
+    "RM-gmark1": {
+      "title": "Email Duration, Batching and Self-interruption: Patterns of Email Use on Productivity and Stress",
+      "date": "2016",
+      "authors": [
+        "G. Mark",
+        "S.T. Iqbal",
+        "M. Czerwinski",
+        "P. Johns",
+        "A. Sano"
+      ],
+      "etAl": "false",
+      "publisher": "ACM",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.ics.uci.edu/~gmark/Home_page/Publications_files/CHI%2016%20Email%20Duration.pdf",
+      "status": "conference paper"
+    },
+    "RM-kuniecki1": {
+      "title": "The color red attracts attention in an emotional context. An ERP study",
+      "date": "2015",
+      "authors": [
+        "M. Kuniecki",
+        "J. Pilarczyk",
+        "S. Pilarczyk"
+      ],
+      "etAl": "false",
+      "publisher": "Frontiers in Human Neuroscience",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.frontiersin.org/articles/10.3389/fnhum.2015.00212/full",
+      "status": "academic paper"
+    },
+    "RM-thielsch1": {
+      "title": "Depressive symptoms and web user experience",
+      "date": "2018",
+      "authors": [
+        "T. Thielsch",
+        "C. Thielsch"
+      ],
+      "etAl": "false",
+      "publisher": "PeerJ",
+      "volume": "",
+      "issue": "",
+      "href": "https://peerj.com/articles/4439/",
+      "status": "academic paper"
+    },
+    "RM-muranaka1": {
+      "title": "Unobtrusive notification based on auditory changes in ambient music",
+      "date": "2021",
+      "authors": [
+        "Y. Muranaka",
+        "M. Al-Sada",
+        "T. Nakajima"
+      ],
+      "etAl": "false",
+      "publisher": "IEEE 3rd Global Conference on Life Sciences and Technologies (LifeTech)",
+      "volume": "",
+      "issue": "",
+      "href": "https://ieeexplore.ieee.org/document/9391913",
+      "status": "conference paper"
+    },
+    "RM-gallud1": {
+      "title": "Smartphone Notifications: A Study on the Sound to Soundless Tendency",
+      "date": "2015",
+      "authors": [
+        "J. Gallud",
+        "R. Tesoriero"
+      ],
+      "etAl": "false",
+      "publisher": "Mobile HCI",
+      "volume": "",
+      "issue": "",
+      "href": "https://dl.acm.org/doi/epdf/10.1145/2786567.2793706",
+      "status": "conference paper"
+    },
+    "RM-lukasik1": {
+      "title": "The Relationship of Anxiety and Stress With Working Memory Performance in a Large Non-depressed Sample",
+      "date": "2019",
+      "authors": [
+        "K. Lukasik",
+        "O. Waris",
+        "A. Soveri",
+        "M. Lehtonen",
+        "M. Laine"
+      ],
+      "etAl": "false",
+      "publisher": "Frontiers in Psychology",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00004/full",
+      "status": "academic paper"
+    },
+    "RM-przybylski1": {
+      "title": "Motivational, emotional, and behavioral correlates of fear of missing out",
+      "date": "2013",
+      "authors": [
+        "A.K. Przybylski",
+        "K. Murayama",
+        "C.R. DeHaan",
+        "V. Gladwell"
+      ],
+      "etAl": "false",
+      "publisher": "Computers in Human Behavior",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.sciencedirect.com/science/article/abs/pii/S0747563213000800#ab005",
+      "status": "academic paper"
+    },
+    "RM-cowan1": {
+      "title": "The magical number 4 in short-term memory: A reconsideration of mental storage capacity",
+      "date": "2000",
+      "authors": [
+        "N. Cowan"
+      ],
+      "etAl": "false",
+      "publisher": "Behavioral and Brain Sciences",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/div-classtitlethe-magical-number-4-in-short-term-memory-a-reconsideration-of-mental-storage-capacitydiv/44023F1147D4A1D44BDC0AD226838496",
+      "status": "academic paper"
+    },
+    "RM-iqbal1": {
+      "title": "Oasis: A framework for linking notification delivery to the perceptual structure of goal-directed tasks",
+      "date": "2010",
+      "authors": [
+        "S.T. Iqbal",
+        "B.P. Bailey"
+      ],
+      "etAl": "false",
+      "publisher": "ACM Transactions on Computer-Human Interaction (TOCHI)",
+      "volume": "",
+      "issue": "",
+      "href": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oCQdMjoAAAAJ&citation_for_view=oCQdMjoAAAAJ:Se3iqnhoufwC",
+      "status": "conference paper"
+    },
+    "RM-mcmanus1": {
+      "title": "Barriers to learning online experienced by students with a mental health disability",
+      "date": "2017",
+      "authors": [
+        "D. McManus",
+        "R. Dryer",
+        "M. Henning"
+      ],
+      "etAl": "false",
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "href": "",
+      "status": "academic paper"
+    },
+    "RM-monteith1": {
+      "title": "Internet of things issues related to psychiatry",
+      "date": "2021",
+      "authors": [
+        "S. Monteith",
+        "T. Glenn",
+        "J. Geddes",
+        "et al."
+      ],
+      "etAl": "true",
+      "publisher": "International Journal of Bipolar Disorders",
+      "volume": "9",
+      "issue": "11",
+      "href": "https://doi.org/10.1186/s40345-020-00216-y",
+      "status": "academic paper"
+    },
+    "RC-WSJ1": {
+      "title": "Facebook Knows Instagram Is Toxic for Teen Girls, Company Documents Show",
+      "date": "2021-09-14",
+      "authors": [
+        "G. Wells",
+        "J. Horwitz",
+        "D. Seetharaman"
+      ],
+      "etAl": "false",
+      "publisher": "Wall Street Journal",
+      "href": "https://www.wsj.com/articles/facebook-knows-instagram-is-toxic-for-teen-girls-company-documents-show-11631620739",
+      "status": "other"
+    },
+    "RM-Bernard1": {
+      "title": "Difficulties Encountered by People With Depression and Anxiety on the Web: Qualitative Study and Web-Based Expert Survey",
+      "date": "2019",
+      "authors": [
+        "R. Bernard",
+        "C. Sabariego",
+        "A. Cieza"
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Medical Internet Research",
+      "volume": "21",
+      "issue": "10",
+      "href": "https://www.jmir.org/2019/10/e12514/",
+      "status": "academic paper"
+    },
+    "RM-szalma1": {
+      "title": "Human Computer Interaction Fundamentals",
+      "date": "2009",
+      "authors": [
+        "J.L. Szalma",
+        "P.A. Hancock"
+      ],
+      "etAl": "false",
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "href": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.458.7291&rep=rep1&status=pdf#page=110",
+      "status": "academic paper"
+    },
+    "RM-bunyi1": {
+      "title": "Accessibility and Digital Mental Health: Considerations for More Accessible and Equitable Mental Health Apps",
+      "date": "2021",
+      "authors": [
+        "J. Bunyi",
+        "K.E. Ringland",
+        "S.M. Schueller"
+      ],
+      "etAl": "false",
+      "publisher": "Frontiers in Digital Health",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.frontiersin.org/articles/10.3389/fdgth.2021.742196/full",
+      "status": "academic paper"
+    },
+    "RC-DesignCouncil1": {
+      "title": "Designing good mental health into the way we bank: Our insights with Monzo Bank",
+      "date": "2018",
+      "authors": [
+        "Design Council"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b",
+      "status": "other"
+    },
+    "RM-farr1": {
+      "title": "Banking for All: Why Financial Institutions Need to Offer Supportive Banking Features",
+      "date": "2019",
+      "authors": [
+        "B. Farr",
+        "B. Cash",
+        "A. Harper"
+      ],
+      "etAl": "false",
+      "publisher": "The Ludwig Center for Community and Economic Development at Yale Law School",
+      "volume": "",
+      "issue": "",
+      "href": "https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf",
+      "status": "other"
+    },
+    "RM-Yu1": {
+      "title": "Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model",
+      "date": "2016-02",
+      "authors": [
+        "R. Yu"
+      ],
+      "etAl": "false",
+      "publisher": "Neurobiology of Stress",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5146206/",
+      "status": "academic paper"
+    },
+    "RM-behar1": {
+      "title": "Wearables and mHealth in mental health and neurological disorders",
+      "date": "2019",
+      "authors": [
+        "J.A. Behar",
+        "J. Oster",
+        "M. De Vos",
+        "G.D. Clifford"
+      ],
+      "etAl": "false",
+      "publisher": "Physiological Measurement",
+      "volume": "40",
+      "issue": "7",
+      "href": "",
+      "status": "academic paper"
+    },
+    "RC-locke1": {
+      "title": "Designing for stressed out users: Part 1",
+      "date": "2021-12-23",
+      "authors": [
+        "H. Locke"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/@h_locke/designing-for-stressed-out-users-part-1-4489793dbe41",
+      "status": "other"
+    },
+    "RC-locke2": {
+      "title": "Designing for stressed out users: Part 2",
+      "date": "2021-12-23",
+      "authors": [
+        "H. Locke"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/@h_locke/designing-for-stressed-out-users-part-2-efc00857ad3e",
+      "status": "other"
+    },
+    "RC-locke3": {
+      "title": "Designing for stressed out users: Part 3",
+      "date": "2020-05-02",
+      "authors": [
+        "H. Locke"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/@h_locke/designing-for-stressed-out-users-part-3-4c076c1955fc",
+      "status": "other"
+    },
+    "RM-bridgland1": {
+      "title": "A Meta-Analysis of the Effects of Trigger Warnings, Content Warnings, and Content Notes",
+      "date": "2022",
+      "authors": [
+        "V. Bridgland",
+        "P. Jones",
+        "B. Bellet"
+      ],
+      "etAl": "false",
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "href": "https://doi.org/10.31219/osf.io/qav9m",
+      "status": "academic paper"
+    },
+    "RM-boysen1": {
+      "title": "Trigger warning efficacy: The impact of warnings on affect, attitudes, and learning",
+      "date": "2021",
+      "authors": [
+        "G.A. Boysen",
+        "R.A. Isaacs",
+        "L. Tretter",
+        "S. Markowski"
+      ],
+      "etAl": "false",
+      "publisher": "Scholarship of Teaching and Learning in Psychology",
+      "volume": "7",
+      "issue": "1",
+      "href": "https://doi.org/10.1037/stl0000150",
+      "status": "academic paper"
+    },
+    "RM-bridgland2": {
+      "title": "Something Distressing This Way Comes: The Effects of Trigger Warnings on Avoidance Behaviors in an Analogue Trauma Task",
+      "date": "2022",
+      "authors": [
+        "V.M.E. Bridgland",
+        "M.K.T. Takarangi"
+      ],
+      "etAl": "false",
+      "publisher": "Behavior Therapy",
+      "volume": "53",
+      "issue": "",
+      "href": "https://doi.org/10.1016/j.beth.2021.10.005",
+      "status": "academic paper"
+    },
+    "RM-gainsburg1": {
+      "title": "Trigger warnings as an interpersonal emotion-regulation tool: Avoidance, attention, and affect depend on beliefs",
+      "date": "2018",
+      "authors": [
+        "I. Gainsburg",
+        "A. Earl"
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Experimental Social Psychology",
+      "volume": "79",
+      "issue": "",
+      "href": "https://doi.org/10.1016/j.jesp.2018.08.006",
+      "status": "academic paper"
+    },
+    "RM-cauberghe1": {
+      "title": "How Adolescents Use Social Media to Cope with Feelings of Loneliness and Anxiety During COVID-19 Lockdown",
+      "date": "2021-04",
+      "authors": [
+        "V. Cauberghe",
+        "I. Van Wesenbeeck",
+        "S. De Jans",
+        "L. Hudders",
+        "K. Ponnet"
+      ],
+      "etAl": "false",
+      "publisher": "Cyberpsychology, Behavior, and Social Networking",
+      "volume": "24",
+      "issue": "4",
+      "href": "https://doi.org/10.1089/cyber.2020.0478",
+      "status": "academic paper"
+    },
+    "ACIxD": {
+      "title": "The Association for Conversational Interaction Design Wiki",
+      "date": "2019",
+      "publisher": "The Association for Conversational Interaction Design",
+      "href": "http://acixd.org/wiki/doku.php",
+      "status": "standard"
+    },
+    "EFTA": {
+      "title": "Electronic Fund Transfer Act Regulation E",
+      "date": "2025",
+      "etAl": "false",
+      "publisher": "National Credit Union Administration",
+      "href": "https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e",
+      "id": "efta"
+    },
+    "CA": {
+      "title": "The Colby Act",
+      "date": "2021",
+      "etAl": "false",
+      "publisher": " Alabama Care",
+      "href": "https://www.youtube.com/watch?v=00ahyKABIAw"
+    },
+    "ETSI-ES202-076V211": {
+      "title": "ETSI ES 202 076 V2.1.1 2009-06: Generic spoken command vocabulary for ICT devices and services.",
+      "date": "2009",
+      "publisher": "European Technical Standards Institute",
+      "href": "http://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"
+    },
+    "ETSI-ETR-096": {
+      "title": "ETSI ETR 096 Human factors guidelines for the design of minimum phone based user interface to computer services.",
+      "date": "1993",
+      "publisher": "European Technical Standards Institute",
+      "href": "http://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf"
+    },
+    "GDPR": {
+      "title": "General Data Protection Regulation",
+      "date": "2023",
+      "publisher": "GDPR eu",
+      "href": "https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/",
+      "id": "gdpr"
+    },
+    "GLBA": {
+      "title": "Gramm-Leach-Blilely ACT ",
+      "date": "1999",
+      "publisher": "US Federal Trade Commission",
+      "href": "https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act",
+      "id": "glba"
+    },
+    "MENCAP": {
+      "title": "The Mental Capacity Act",
+      "publisher": "MenCap.org",
+      "href": "https://www.mencap.org.uk/advice-and-support/mental-capacity-act"
+    },
+    "Title42-section255": {
+      "title": "U.S. Telecommunications Act Section 255 Accessibility Guidelines",
+      "date": "1996",
+      "publisher": "United States Code, Title 42, Section 255.",
+      "href": "https://www.access-board.gov/ict/guide/2555_guide.md.html"
+    },
+    "VBWG": {
+      "title": "Voice Browser Working Group",
+      "date": "12 October 2015",
+      "publisher": "World Wide Web Consortium",
+      "href": "https://www.w3.org/Voice/"
+    },
+    "voicexml20": {
+      "title": "Voice Extensible Markup Language Version 2.0",
+      "date": "16 March 2004",
+      "authors": [
+        "S. McGlashan",
+        "D. Burnett",
+        "J. Carter",
+        "P. Danielsen",
+        "J. Ferrans",
+        "A. Hunt",
+        "B. Lucas",
+        "B. Porter",
+        "K. Rehor",
+        "S. Tryphonas"
+      ],
+      "etAl": "true",
+      "publisher": "World Wide Web Consortium",
+      "href": "https://www.w3.org/TR/voicexml20/"
+    },
+    "voicexml21": {
+      "title": "Voice Extensible Markup Language  2.1",
+      "date": "2007",
+      "authors": [
+        "M. Oshry",
+        "R.J. Auburn",
+        "P. Baggia",
+        "M. Bodell",
+        "D. Burke",
+        "D. Burnett",
+        "E. Candell",
+        "J. Carter",
+        "S. McGlashan",
+        "A. Lee",
+        "B. Porter"
+      ],
+      "etAl": "true",
+      "publisher": "World Wide Web Consortium",
+      "href": "https://www.w3.org/TR/voicexml21/"
+    },
+    "voicexml30": {
+      "title": "Voice Extensible Markup Language  3.0",
+      "date": "2010",
+      "authors": [
+        "S. McGlashan",
+        "D. Burnett",
+        "R. Akolkar",
+        "R.J. Auburn",
+        "P. Baggia",
+        "J. Barnett",
+        "M. Bodell",
+        "J. Carter",
+        "M. Deshmukh"
+      ],
+      "etAl": "true",
+      "publisher": "World Wide Web Consortium",
+      "href": "https://www.w3.org/TR/voicexml30/"
+    },
+    "RC-ACLU1": {
+      "title": "Supported Decision-Making: Frequently Asked Questions",
+      "date": "",
+      "authors": [],
+      "etAl": "false",
+      "publisher": "ACLU",
+      "href": "https://www.aclu.org/sites/default/files/field_document/faq_about_supported_decision_making.pdf",
+      "status": "other",
+      "id": "rc-aclu1"
+    },
+    "RC-Alberta1": {
+      "title": "Supported Decision-making",
+      "date": "",
+      "authors": [],
+      "etAl": "false",
+      "publisher": "",
+      "href": "https://www.alberta.ca/supported-decision-making",
+      "status": "other"
+    },
+    "RC-ASAN1": {
+      "title": "Supported Decision-making: Why the Right to Make Choices With Support Matters",
+      "date": "2020",
+      "publisher": "Autistic Self Advocacy Network",
+      "href": "https://autisticadvocacy.org/actioncenter/issues/choices/sdm/",
+      "status": "other"
+    },
+    "RC-CNBC1": {
+      "title": "Here’s how online scammers prey on older Americans, and what they should know to fight back",
+      "date": "November 2019",
+      "authors": [
+        "Kate Fazzini"
+      ],
+      "etAl": "false",
+      "publisher": "CNBC",
+      "href": "https://www.cnbc.com/2019/11/23/new-research-pinpoints-how-elderly-people-are-targeted-in-online-scams.html",
+      "status": "other",
+      "id": "rc-cnbc1"
+    },
+    "RC-CPR1": {
+      "title": "About Supported Decision-Making",
+      "date": "2018",
+      "etAl": "false",
+      "publisher": "Center for Public Representation",
+      "href": "https://supporteddecisions.org/about-supported-decision-making/",
+      "status": "other"
+    },
+    "RC-DRCNH1": {
+      "title": "What is Supported Decision-Making?",
+      "date": "2021",
+      "publisher": "DRCNH.org",
+      "href": "https://drcnh.org/know-your-rights/what-is-supported-decision-making/",
+      "status": "other"
+    },
+    "RC-E1": {
+      "title": "Social media for knowledge-sharing: A systematic literature review",
+      "date": " 2019",
+      "authors": [
+        "Yunis Ali Ahmed",
+        "Mohammad Nazir Ahmad"
+      ],
+      "etAl": "true",
+      "publisher": "Elsevier",
+      "href": "https://www.sciencedirect.com/science/article/abs/pii/S0736585317306688",
+      "status": "other"
+    },
+    "RC-GATOR1": {
+      "title": "Guardianship Alternatives and Transfer-of-Rights Glossary",
+      "date": "2023",
+      "publisher": "Gator",
+      "href": "https://gator.communityinclusion.org/#glossary",
+      "status": "other"
+    },
+    "RC-HHS1": {
+      "title": "Informed Consent FAQs",
+      "date": "2025",
+      "publisher": "US Department of Health and Human Services",
+      "href": "https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html",
+      "status": "other",
+      "id": "rc-hhs1"
+    },
+    "RC-SD1": {
+      "title": "Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model",
+      "date": "June 2016",
+      "authors": [
+        "Rongjun Yu"
+      ],
+      "etAl": "false",
+      "publisher": "Elsevier",
+      "href": "https://www.sciencedirect.com/science/article/pii/S2352289515300187?via%3Dihub",
+      "status": "other"
+    },
+    "RC-IG1": {
+      "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Australia",
+      "date": "2016",
+      "publisher": "International Guardianship",
+      "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Australia.pdf",
+      "status": "other",
+      "id": "rc-ig1"
+    },
+    "RC-IG2": {
+      "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Canada",
+      "date": "2012",
+      "publisher": "International Guardianship",
+      "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Canada.pdf",
+      "status": "other"
+    },
+    "RC-IG3": {
+      "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Japan",
+      "date": "2016",
+      "publisher": "International Guardianship",
+      "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Japan.pdf",
+      "status": "other"
+    },
+    "RC-IG4": {
+      "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship USA",
+      "date": "2016",
+      "publisher": "International Guardianship",
+      "href": "https://www.international-guardianship.com/pdf/GBC/GBC_USA.pdf",
+      "status": "other"
+    },
+    "RC-M1": {
+      "title": "Designing good mental health into the way we bank",
+      "date": "Oct 30, 2018",
+      "authors": [
+        "Design Council",
+        "Monzo Bank"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b",
+      "status": "other",
+      "id": "rc-m1"
+    },
+    "RC-MNC1": {
+      "title": "Guardianship",
+      "date": "2024",
+      "publisher": "Minnesota Judicial Branch",
+      "href": "https://www.mncourts.gov/help-topics/guardianship.aspx#tab02Duties",
+      "status": "other"
+    },
+    "RC-NA1": {
+      "title": "The Intersection of Behavioral Health, Mental Health, and Health Literacy",
+      "date": "2019",
+      "publisher": "National Academies of Sciences, Engineering, and Medicine",
+      "href": "https://nap.nationalacademies.org/catalog/25278/the-intersection-of-behavioral-health-mental-health-and-health-literacy",
+      "status": "other",
+      "id": "rc-na1"
+    },
+    "RC-NID1": {
+      "title": "Managing your affairs and enduring power of attorney",
+      "publisher": "NIDirect.gov.uk",
+      "href": "https://www.nidirect.gov.uk/articles/managing-your-affairs-and-enduring-power-attorney",
+      "status": "other"
+    },
+    "RC-NYC1": {
+      "title": "Guardianship of an Intellectually or Developmentally Disabled Adult",
+      "date": "2022",
+      "publisher": "NY Courts",
+      "href": "https://nycourts.gov/courthelp/Guardianship/17A.shtml",
+      "status": "other"
+    },
+    "RC-OPGS1": {
+      "title": "Terms Used, Letter G",
+      "publisher": "Office of the Public Guardian Scotland",
+      "href": "https://www.publicguardian-scotland.gov.uk/general/terms-used#letterg",
+      "status": "other"
+    },
+    "RC-OPGS12": {
+      "title": "Welcome to the Office of the Public Guardian in Scotland",
+      "publisher": "Office of the Public Guardian Scotland",
+      "href": "https://www.publicguardian-scotland.gov.uk/",
+      "status": "other"
+    },
+    "RC-OPGS2": {
+      "title": "What is a guardianship order?",
+      "etAl": "false",
+      "publisher": "Office of the Public Guardian Scotland",
+      "href": "https://www.publicguardian-scotland.gov.uk/guardianship-orders",
+      "status": "other"
+    },
+    "RC-SDMNY1": {
+      "title": "What is Supported Decision-Making?",
+      "date": "2024",
+      "publisher": "SDMNY",
+      "href": "https://sdmny.org/about-supported-decision-making/what-is-supported-decision-making/",
+      "status": "other"
+    },
+    "RC-UKGov1": {
+      "title": "Policy paper: Requesting information about a guardianship order",
+      "date": "2022",
+      "publisher": "Gov.UK",
+      "href": "https://www.gov.uk/government/publications/requesting-information-about-a-guardianship-order",
+      "status": "other"
+    },
+    "RC-W31": {
+      "title": "Invited Expert and Collaborator Agreement",
+      "date": "2014",
+      "publisher": "W3.org",
+      "href": "https://www.w3.org/Consortium/Legal/2007/06-invited-expert",
+      "status": "other",
+      "id": "rc-w31"
+    },
+    "RC-YLS1": {
+      "title": "Banking for All: Why Financial Institutions Need to Offer Supportive Banking Features",
+      "date": "April 2019",
+      "authors": [
+        "Brittany Farr",
+        "Brian Cash",
+        "Annie Harper"
+      ],
+      "etAl": "true",
+      "publisher": "Yale Law School",
+      "href": "https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf",
+      "status": "other",
+      "id": "rc-yls1"
+    },
+    "RC-BS1": {
+      "title": "BlindSquare - “Pioneering accessible navigation - indoors and outdoors. Know where you are, know where you're going, travel with confidence",
+      "date": "July 16, 2025",
+      "etAl": "false",
+      "href": "https://apps.apple.com/ph/app/blindsquare/id500557255",
+      "status": "other"
+    },
+    "RC-WFINDR1": {
+      "title": "Wayfindr Standard Issued to Address Exponentially Growing Indoor Audio Navigation Market.",
+      "date": "2017",
+      "publisher": "The Global Initiative for Inclusive ICTs",
+      "href": "https://g3ict.org/publication/wayfindr-accelerating-the-adoption-of-indoor-audio-navigation-with-a-standard-user-interface#:~:text=G3ict%20%E2%80%93%20the%20Global%20Initiative%20for,with%20Disabilities%20at%20UN%20DESA.",
+      "status": "other"
+    },
+    "RC-WAI1": {
+      "title": "Accessible Way-Finding using Web Technologies.",
+      "date": "December 3, 2014",
+      "publisher": "W3C Symposia, W3C/WAI Research and Development Working Group",
+      "href": "https://www.w3.org/WAI/RD/2014/way-finding/",
+      "status": "other"
+    },
+    "RC-WAI2": {
+      "title": "Extended Abstract for the RDWG Symposium on Accessible Way-Finding Using Web Technologies, Accessible Wayfinding Ontologies for People with Disabilities",
+      "date": "December 3, 2014",
+      "authors": [
+        "Benner",
+        "J H Karimi"
+      ],
+      "etAl": "false",
+      "publisher": "W3C Proceedings",
+      "href": "https://www.w3.org/WAI/RD/2014/way-finding/paper9",
+      "status": "other"
+    },
+    "RC-COGA1": {
+      "title": "Cognitive Accessibility Design Pattern - Provide Help with Directions",
+      "etAl": "false",
+      "publisher": "COGA",
+      "href": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p06-supported-wayfinding/",
+      "status": "other"
+    },
+    "RC-IAD1": {
+      "title": "Wikipedia - Internet Addiction Disorder",
+      "publisher": "Wikipedia",
+      "href": "https://en.wikipedia.org/wiki/Internet_addiction_disorder",
+      "status": "other"
+    },
+    "RM-ang1": {
+      "title": "Going Online to Stay Connected Online Social Participation Buffers the Relationship Between Pain and Depression",
+      "date": "2019",
+      "authors": [
+        "Shannon Ang",
+        "Tuo-Yu Chen"
+      ],
+      "etAl": "true",
+      "href": " https://doi.org/10.1093/geronb/gby109",
+      "status": "academic paper"
+    },
+    "RM-oneil1": {
+      "title": "Weapons of Math Destruction  Chapter 6 Personality Tests Chapter 10 Facebook experiments",
+      "date": "2016",
+      "authors": [
+        "O Neil Cathy"
+      ],
+      "etAl": "false",
+      "href": "https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815"
+    },
+    "RM-caplan1": {
+      "title": "Relations Among Loneliness, Social Anxiety, and Problematic Internet Use",
+      "date": "2007",
+      "authors": [
+        "S Caplan"
+      ],
+      "etAl": "false",
+      "publisher": "CyberPsychology & Behavior",
+      "href": "https://doi.org/10.1089/cpb.2006.9963",
+      "status": "academic paper"
+    },
+    "RM-hardy1": {
+      "title": "The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,Pages 282-290, ISSN 0747-5632",
+      "date": "2016",
+      "authors": [
+        "Bruce W Hardy",
+        "Jessica Castonguay"
+      ],
+      "etAl": "false",
+      "publisher": "Computers in Human Behavior",
+      "href": "https://doi.org/10.1016/j.chb.2018.04.005",
+      "status": "academic paper"
+    },
+    "RM-hökby1": {
+      "title": "Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents",
+      "date": "2016",
+      "authors": [
+        "Hokby S",
+        "Hadlaczky G",
+        "Westerlund J"
+      ],
+      "etAl": "true",
+      "publisher": "JMIR Ment Health3(3):e31 Published 2016 Jul 13 doi:102196/mental5925",
+      "status": "academic paper"
+    },
+    "RC-antonakos1": {
+      "title": "Wayfinding with Visuo-Spatial Impairment from Stroke and Traumatic Brain Injury",
+      "date": "",
+      "authors": [
+        "antonakos C",
+        "Giordani B",
+        "Ashton-Miller J"
+      ],
+      "etAl": "false",
+      "publisher": "",
+      "href": "",
+      "status": "academic paper"
+    },
+    "RC-nas1": {
+      "title": "Enhancing Airport Wayfinding for Aging Travelers and Persons with Disabilities Washington, DC",
+      "date": "2017",
+      "authors": [
+        "National Academies of Sciences Engineering and Medicine"
+      ],
+      "etAl": "false",
+      "publisher": "National Academies of Sciences Engineering and Medicine",
+      "href": "https://doi.org/10.17226/24930",
+      "status": "academic paper"
+    },
+    "RC-upadhyay1": {
+      "title": "A Case Study on Improving Accessibility of Healthcare Care Facility in Low-resource Settings",
+      "date": "2022",
+      "authors": [
+        "Vikas Upadhyay",
+        "Tigmanshu Bhatnagar",
+        "Catherine Holloway"
+      ],
+      "etAl": "true",
+      "publisher": "In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2022), ",
+      "href": "https://doi.org/10.1145/3491101.3503557",
+      "status": "academic paper"
+    },
+    "RC-karim1": {
+      "title": "Social Media Use and Its Connection to Mental Health: A Systematic Review",
+      "date": "2020",
+      "authors": [
+        "Fazida Karim",
+        "Azeezat A Oyewande",
+        "Lamis F Abdalla",
+        "Reem Chaudhry Ehsanullah",
+        "Safeera Khan"
+      ],
+      "etAl": "true",
+      "publisher": "",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/",
+      "status": "academic paper"
+    },
+    "RC-majid1": {
+      "title": "From envy to social anxiety and rumination: How social media site addiction triggers task distraction amongst nurses",
+      "date": "2019",
+      "authors": [
+        "Majid",
+        "A"
+      ],
+      "etAl": "false",
+      "publisher": " Journal of Nursing Mangement.  ",
+      "href": "https://doi.org/10.1111/jonm.12948",
+      "status": "academic paper"
+    },
+    "RC-moura1": {
+      "title": "Encoding normative ethics: On algorithmic bias and disability",
+      "date": "2023",
+      "authors": [
+        "Moura I"
+      ],
+      "etAl": "false",
+      "publisher": "First Monday",
+      "href": "https://doi.org/10.5210/fm.v28i1.12905 ",
+      "status": "academic paper"
+    },
+    "RC-naslund1": {
+      "title": "Social Media and Mental Health: Benefits, Risks, and Opportunities for Research and Practice",
+      "date": "2020",
+      "authors": [
+        "Naslund",
+        "J"
+      ],
+      "etAl": "true",
+      "publisher": " J. technol. behav. sci. 5, 245–257 (2020). ",
+      "href": "https://doi.org/10.1007/s41347-020-00134-x",
+      "status": "academic paper"
+    },
+    "RC-odgers1": {
+      "title": "Annual Research Review: Adolescent mental health in the digital age: facts, fears, and future directions",
+      "date": "2020",
+      "authors": [
+        "C L Odgers",
+        "M R Jensen"
+      ],
+      "etAl": "false",
+      "publisher": "Child Psychol Psychiatry. 2020 Mar;61(3):336-348. doi: 10.1111/jcpp.13190.  PMID: 31951670; PMCID: PMC8221420. ",
+      "href": "https://pubmed.ncbi.nlm.nih.gov/31951670/ ",
+      "status": "academic paper"
+    },
+    "RC-ophoff1": {
+      "title": "Cognitive function vs accessible authentication insights from dyslexia research",
+      "date": "2021",
+      "authors": [
+        "Ophoff",
+        "Jacques",
+        "Graham Johnson",
+        "and Karen Renaud"
+      ],
+      "etAl": "true",
+      "publisher": " Proceedings of the 18th International Web for All Conference. ",
+      "href": " https://dl.acm.org/doi/abs/10.1145/3430263.3452427",
+      "status": "academic paper"
+    },
+    "RC-shakya1": {
+      "title": "Association of Facebook Use With Compromised Well-Being A Longitudinal Study",
+      "date": "2017",
+      "authors": [
+        "Shakya HB",
+        "Christakis NA"
+      ],
+      "etAl": "false",
+      "publisher": "Am J Epidemiol",
+      "href": "https://pubmed.ncbi.nlm.nih.gov/28093386/",
+      "status": "academic paper"
+    },
+    "RC-tiggemann1": {
+      "title": "NetTwweens The internet and body image concerns in preteenage girls",
+      "date": "2013",
+      "authors": [
+        "M Tiggemann",
+        "A Slater  "
+      ],
+      "etAl": "false",
+      "publisher": "The Journal of Early Adolescence Volume 34(5) ",
+      "href": "https://doi.org/10.1177/0272431613501083 ",
+      "status": "academic paper"
+    },
+    "RC-venkit1": {
+      "title": "Automated ableism: An exploration of explicit disability biases in sentiment and toxicity analysis models",
+      "date": "2023",
+      "authors": [
+        "PN Venkit",
+        "M Srinath",
+        "S Wilson"
+      ],
+      "etAl": "false",
+      "publisher": "arXiv preprint arXiv:2307.09209",
+      "href": "https://arxiv.org/abs/2307.09209",
+      "status": "academic paper"
+    },
+    "RC-Chadwick1": {
+      "title": "Online risk for people with intellectual disabilities",
+      "date": "2019",
+      "authors": [
+        " Chadwick, D.D"
+      ],
+      "etAl": "false",
+      "publisher": "Tizard Learning Disability Review",
+      "href": "https://doi.org/10.1108/TLDR-03-2019-0008",
+      "volume": "24",
+      "issue": "4",
+      "status": "academic paper"
+    },
+    "RC-Kim1": {
+      "title": "Impulsivity and compulsivity in Internet gaming disorder: A comparison with obsessive-compulsive disorder and alcohol use disorder.",
+      "date": "2017",
+      "authors": [
+        "Kim YJ",
+        "Lim JA",
+        "Lee JY",
+        "Oh S",
+        "Kim SN",
+        "Kim DJ",
+        "Ha JE",
+        "Kwon JS",
+        "Choi JS"
+      ],
+      "etAl": "false",
+      "publisher": "J Behav Addict",
+      "status": "academic paper"
+    },
+    "RC-Gay1": {
+      "title": "igital Technology Use Among Individuals with Schizophrenia: Results of an Online Survey",
+      "authors": [
+        "Katrina Gay",
+        "John Torous",
+        "Adam Joseph",
+        "Anand Pandya",
+        "Ken Duckworth"
+      ],
+      "etAl": "false",
+      "href": " https://mental.jmir.org/2016/2/e15?utm_source=TrendMD&utm_medium=cpc&utm_campaign=JMIR_TrendMD_0"
+    },
+    "RC-Wojtowicz1": {
+      "title": "Exploring Innovative Approaches. In The Intersection of Behavioral Health, Mental Health, and Health Literacy: Proceedings of a Workshop.",
+      "date": "2019",
+      "authors": [
+        "Wojtowicz",
+        "A., Alper"
+      ],
+      "etAl": "false",
+      "publisher": "J., & National Academies of Sciences, Engineering, and Medicine.",
+      "href": "https://arxiv.org/abs/2307.09209"
+    }
+  },
+  "github": "w3c/coga",
+  "publishISODate": "2026-01-22T00:00:00.000Z",
+  "generatedSubtitle": "W3C Group Note Draft 22 January 2026"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-DNOTE"></head>
+	<body class="h-entry informative" data-new-gr-c-s-check-loaded="14.1269.0" data-gr-ext-installed=""><div class="head">
+    <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+  </a></p>
+    <h1 id="title" class="title">Cognitive Accessibility Research Modules - Supported Decision-Making Online</h1> 
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#DNOTE">W3C Group Note Draft</a> <time class="dt-published" datetime="2026-01-22">22 January 2026</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://www.w3.org/TR/2026/DNOTE-coga-sdm-20260122/">https://www.w3.org/TR/2026/DNOTE-coga-sdm-20260122/</a>
+              </dd>
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/coga-sdm/">https://www.w3.org/TR/coga-sdm/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/research-modules/Supported-Decision-Making.html">https://w3c.github.io/coga/research-modules/Supported-Decision-Making.html</a></dd>
+        <dt>History:</dt><dd>
+                    <a href="https://www.w3.org/standards/history/coga-sdm/">https://www.w3.org/standards/history/coga-sdm/</a>
+                  </dd><dd>
+                    <a href="https://github.com/w3c/coga/commits/">Commit history</a>
+                  </dd>
+        
+        
+        
+        
+        
+        <dt>Editor:</dt><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman-Horwitz</a>
+  </dd>
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/coga/">GitHub w3c/coga</a>
+        (<a href="https://github.com/w3c/coga/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/coga/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/coga/issues/">open issues</a>)
+      </dd><dd><a href="mailto:public-coga-comments@w3.org?subject=%5Bcoga-sdm%5D%20YOUR%20TOPIC%20HERE">public-coga-comments@w3.org</a> with subject line <kbd>[coga-sdm] <em>… message topic …</em></kbd> (<a rel="discussion" href="https://lists.w3.org/Archives/Public/public-coga-comments">archives</a>)</dd>
+        
+        
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/policies/#copyright">Copyright</a>
+    ©
+    2026
+    
+    <a href="https://www.w3.org/">World Wide Web Consortium</a>.
+    <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+    <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/copyright/document-license/" title="W3C Document License">document use</a> rules apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+		<section id="abstract" class="introductory"><h2>Abstract</h2>
+			<p>Supported decision-making (<abbr title="Supported decision making">SDM</abbr>) is a person-centered approach that empowers individuals with disabilities to make their own choices with the help of trusted supporters. Rather than substituting decision-making authority, <abbr title="Supported decision making ">SDM</abbr> emphasizes autonomy, dignity, and inclusion in everyday life. This module introduces the principles and practices of <abbr title="Supported decision making">SDM</abbr>, highlighting its legal, ethical, and practical implications. Participants will explore how to implement <abbr title="Supported decision making ">SDM</abbr> in ways that respect individual rights and foster independence.
+	</p>
+<p>This module explores:</p>
+<ul>
+   <li>
+        identifies the need for supported decision-making online,
+    </li>
+	<li>
+        identifies issues with supported decision-making that may arise when using the internet for people requiring cognitive accessibility, 
+
+    </li>
+    <li>
+        identifies key user needs and ways to address these barriers, and
+    </li>
+    <li>
+        suggests possible solutions and areas for further research.
+    </li>
+</ul>
+			
+<p>Research modules are <strong>primarily intended for groups in The World Wide Web Consortium (<abbr title="World Wide Web Consortium">W3C</abbr>).</strong> For example, they are used as source material for <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>.</p>
+<p>They may also contain useful information for:</p>
+<ul>
+    <li>
+        researchers,
+    </li>
+    <li>
+        inclusion and research-related policy makers,
+    </li>
+    <li>
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
+    </li>
+</ul>
+<p>Note that these modules focus on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, they may sometimes address a broader scope than web accessibility alone.</p>
+			
+<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of:</p>
+<ul>
+    <li>
+        the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG), and
+    </li>
+    <li>
+        the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.
+    </li>
+</ul> <p></p>
+	</section> 
+		
+<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> standards and drafts index</a>.</em></p>  
+			<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span><span class="issue-label">: Early Draft</span></div><p class="">This is an early draft. The task force intends to add more research and discussion and make editorial changes to comply with our style guide, including for citations. Please share your feedback, including any research we should consider adding to this document.</p></div>
+			
+<p>This document is part of a set of modules or papers that describe accessibility issues for users with various disabilities that impact cognitive accessibility. See <a href="https://raw.githack.com/w3c/coga/issue-papers-v2/issue-papers/index.html"> cognitive or learning disabilities research modules </a> for other modules.</p>
+<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/"> Cognitive and Learning Disabilities Accessibility Task Force </a> (COGA TF), a joint task force of:</p>
+<ul>
+    <li>
+        the <a href="http://www.w3.org/WAI/APA/"> Accessible Platform Architectures Working Group </a> (APA WG), and
+    </li>
+    <li>
+        the <a href="http://www.w3.org/WAI/GL/"> Accessibility Guidelines Working Group </a> (AG WG) of the <a href="http://www.w3.org/WAI/"> Web Accessibility Initiative </a>.
+    </li>
+</ul>
+<p>Feedback on any aspect of the document is welcome. The APA and AG Working Groups particularly seek feedback on the following questions:</p>
+<ul>
+    <li>
+       Are issues for the included user groups well covered?
+    </li>
+    <li>
+        Does the research module effectively bridge between research and priorities for new work?
+    </li>
+    <li>
+       Should additional user groups be addressed?
+    </li>
+    <li>
+        Are there any more research papers we should consider adding to this document?
+    </li>
+</ul>
+<p>To comment, <a href="https://github.com/w3c/coga/issues/new"> file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository </a>. You can also send an email to <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/"> comment archive </a>). Comments are requested by <strong>15th April 2026</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/"> publicly visible editors' draft </a>.</p>
+
+			
+		<p>
+    This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/groups/wg/ag">Accessibility Guidelines Working Group</a> as
+    a Group Note Draft using the
+        <a href="https://www.w3.org/policies/process/20250818/#recs-and-notes">Note track</a>. 
+  </p><p>Group Note Drafts are not endorsed by
+        <abbr title="World Wide Web Consortium">W3C</abbr> nor its Members. </p><p>
+    This is a draft document and may be updated, replaced, or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than a work in progress.
+    
+  </p><p data-deliverer="83907,35422">
+    
+        The
+        <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>
+        does not carry any licensing requirements or commitments on this
+        document.
+      
+    
+  </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20250818/">18 August 2025 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction-summary"><bdi class="secno">1. </bdi>Introduction / Summary
+</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#disabilities-that-may-require-sdm"><bdi class="secno">1.1 </bdi>Disabilities that may require <abbr title="Supported decision making">SDM</abbr></a></li><li class="tocline"><a class="tocxref" href="#target-audience"><bdi class="secno">1.2 </bdi>Target Audience</a></li></ol></li><li class="tocline"><a class="tocxref" href="#examples-of-supported-decision-making-sdm-online"><bdi class="secno">2. </bdi>Examples of Supported Decision-Making (<abbr title="Supported decision making">SDM</abbr>) Online </a></li><li class="tocline"><a class="tocxref" href="#challenges-faced-by-people-needing-cognitive-accessibility-support-and-mental-health-assistance-face-when-making-decisions-online"><bdi class="secno">3. </bdi>Challenges Faced by People Needing Cognitive Accessibility Support and Mental Health Assistance Face When Making Decisions Online</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informed-consent-online"><bdi class="secno">3.1 </bdi>Informed Consent Online</a></li><li class="tocline"><a class="tocxref" href="#spending-and-emotional-regulation"><bdi class="secno">3.2 </bdi>Spending and Emotional Regulation</a></li><li class="tocline"><a class="tocxref" href="#appropriate-sharing"><bdi class="secno">3.3 </bdi>Appropriate Sharing</a></li><li class="tocline"><a class="tocxref" href="#longevity-of-content-and-recovery"><bdi class="secno">3.4 </bdi>Longevity of Content and Recovery</a></li><li class="tocline"><a class="tocxref" href="#safety"><bdi class="secno">3.5 </bdi>Safety</a></li></ol></li><li class="tocline"><a class="tocxref" href="#problems-with-current-online-solutions-for-supported-decision-making-sdm-online"><bdi class="secno">4. </bdi>Problems with Current Online Solutions (for Supported Decision-Making (<abbr title="Supported decision making">SDM</abbr>) online)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#misuse-by-the-helper"><bdi class="secno">4.1 </bdi>Misuse by the Helper</a></li><li class="tocline"><a class="tocxref" href="#informed-consent-in-sdm-solutions"><bdi class="secno">4.2 </bdi>Informed Consent In <abbr title="Supported decision making ">SDM</abbr> Solutions</a></li><li class="tocline"><a class="tocxref" href="#accessibility-of-terms"><bdi class="secno">4.3 </bdi>Accessibility of Terms </a></li><li class="tocline"><a class="tocxref" href="#autonomy"><bdi class="secno">4.4 </bdi>Autonomy</a></li><li class="tocline"><a class="tocxref" href="#changing-states-of-the-user"><bdi class="secno">4.5 </bdi>Changing States of the User</a></li><li class="tocline"><a class="tocxref" href="#overuse"><bdi class="secno">4.6 </bdi>Overuse</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-story-and-user-needs"><bdi class="secno">5. </bdi>User Story and User Needs </a></li><li class="tocline"><a class="tocxref" href="#principles-for-supported-decision-making"><bdi class="secno">6. </bdi>Principles for Supported Decision-Making</a></li><li class="tocline"><a class="tocxref" href="#possible-solutions-for-meeting-user-needs"><bdi class="secno">7. </bdi>Possible Solutions for Meeting User Needs </a><ol class="toc"><li class="tocline"><a class="tocxref" href="#supported-decision-making-as-a-feature"><bdi class="secno">7.1 </bdi>Supported Decision-Making as a Feature</a></li><li class="tocline"><a class="tocxref" href="#cognitive-support"><bdi class="secno">7.2 </bdi>Cognitive Support</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#example-1-table-showing-main-points-for-each-option-before-booking"><bdi class="secno">7.2.1 </bdi>Example 1 - Table showing main points for each option before booking</a></li><li class="tocline"><a class="tocxref" href="#summary-of-this-hotel-option"><bdi class="secno">7.2.2 </bdi><strong>Summary of this hotel option</strong></a></li><li class="tocline"><a class="tocxref" href="#example-2-if-then-table"><bdi class="secno">7.2.3 </bdi>Example 2 - if / then table</a></li></ol></li><li class="tocline"><a class="tocxref" href="#confirming-understanding"><bdi class="secno">7.3 </bdi>Confirming Understanding</a></li><li class="tocline"><a class="tocxref" href="#finance-and-spending"><bdi class="secno">7.4 </bdi>Finance and Spending</a></li><li class="tocline"><a class="tocxref" href="#legal-and-privacy-requirements"><bdi class="secno">7.5 </bdi>Legal and Privacy Requirements</a></li><li class="tocline"><a class="tocxref" href="#social-media-and-algorithm-driven-content"><bdi class="secno">7.6 </bdi>Social Media and Algorithm-Driven Content</a></li></ol></li><li class="tocline"><a class="tocxref" href="#supported-decision-making-in-the-w3c-public-private-partnerships-and-similar-organizations"><bdi class="secno">8. </bdi>Supported decision-making in the <abbr title="World Wide Web Consortium">W3C</abbr>, public private partnerships, and similar organizations.</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recommendations-for-the-w3c"><bdi class="secno">8.1 </bdi>Recommendations for the <abbr title="World Wide Web Consortium">W3C</abbr></a><ol class="toc"><li class="tocline"><a class="tocxref" href="#proposed-additional-membership-options"><bdi class="secno">8.1.1 </bdi>Proposed Additional Membership Options</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#d-appendix-acknowledgments"><bdi class="secno">A. </bdi>Appendix: Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#key-contributors-and-section-editors"><bdi class="secno">A.1 </bdi>Key contributors and section editors</a></li><li class="tocline"><a class="tocxref" href="#participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><bdi class="secno">A.2 </bdi>
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+	<section id="introduction-summary"><div class="header-wrapper"><h2 id="x1-introduction-summary"><bdi class="secno">1. </bdi>Introduction / Summary
+</h2><a class="self-link" href="#introduction-summary" aria-label="Permalink for Section 1."></a></div>
+			
+   <p>Supported Decision-Making (<abbr title="Supported decision making">SDM</abbr>) is a model that provides human or technological assistance to a person with a disability making a choice. Supported Decision-Making (<abbr title="Supported decision making">SDM</abbr>) allows individuals with disabilities to make choices about their own lives with support from people they choose.</p>
+<p>Features typically include:</p>
+<ul>
+    <li>
+        <strong>The user remains the decision-maker.<br></strong>They are the one making the final choice, not the care giver or a legal guardian. Note that the user may sometimes elect to delegate decision-making in limited circumstances.
+    </li>
+    <li>
+        <strong>Helpers and support </strong>clarify and<strong> </strong>explain options, helping weigh risks and benefits, or assisting with communication (for example, through alternative and augmented communication, easy-to-understand content, clear format, etc.).
+    </li>
+    <li>
+        <strong>The support is tailored to the user.<br></strong>With supported decision-making (<abbr title="Supported decision making">SDM</abbr>) a person should be able to customize the level and type of support they want and stay in control of their decisions. It respects the person's preferences, even if their decisions are unconventional. For example, a person with dyscalculia may choose for unusual financial decisions to go via a support person. They may change the support person at any time.</li></ul>
+<p>Supported decision-making is often not provided on the internet or apps.</p>
+<p>This module describes the advantages and risks in providing <abbr title="Supported decision making ">SDM</abbr> online. It includes suggestions so that supported digital decision-making can safely allow more people to participate in the digital world while maintaining dignity and autonomy.</p>
+<p>There are Technology and digital communication can enable <abbr title="Supported decision making ">SDM</abbr> in two main areas:
+</p>
+<ol>
+    <li>
+Enabling helpers to support online decisions, by sharing the process involved in high risk decisions.    </li>
+    <li>
+       Technology and digital communication can also take some of the role or work involved in supported decision-making. For example, clearly presenting options in a table, and in plain language. 
+        
+    </li>
+</ol>
+<p>The examples and strategies in this paper may apply to people who are or are not their own guardians. Having a legal guardian does not mean that a person is not able to or interested in using the internet. However, this module is about how to integrate support, often from a helper, whilst enabling the user to stay in control.</p>
+		<p>This module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
+<section id="disabilities-that-may-require-sdm"><div class="header-wrapper"><h3 id="x1-1-disabilities-that-may-require-sdm"><bdi class="secno">1.1 </bdi>Disabilities that may require <abbr title="Supported decision making">SDM</abbr></h3><a class="self-link" href="#disabilities-that-may-require-sdm" aria-label="Permalink for Section 1.1"></a></div>
+<p>Disabilities that may require <abbr title="Supported decision making ">SDM</abbr> include:</p>
+<ul>
+    <li>
+        cognitive, developmental, intellectual, learning, and specific learning disabilities,
+    </li>
+    <li>
+       language and communication disorders,&gt;
+    </li>
+    <li>
+        neurodivergence,
+    </li>
+    <li>
+       traumatic brain injury,
+    </li>
+    <li>
+        age-related cognitive decline,
+    </li>
+    <li>
+        mental health disabilities, and
+    </li>
+    <li>
+        temporary impairments that affect cognitive function, such as anxiety, illness, effects of medication, treatments such as chemotherapy, and others.
+    </li>
+</ul>
+<p>Examples of mental health issues include: Bipolar disorder, low impulse control, psychotic disorders and others.</p>
+</section><section id="target-audience"><div class="header-wrapper"><h3 id="x1-2-target-audience"><bdi class="secno">1.2 </bdi>Target Audience</h3><a class="self-link" href="#target-audience" aria-label="Permalink for Section 1.2"></a></div>
+<p>Research modules are <strong>primarily intended for groups in The World Wide Web Consortium (<abbr title="World Wide Web Consortium">W3C</abbr>).</strong> For example, they are used as source material for <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>.</p>
+<p>They may also contain useful information for:</p>
+<ul>
+    <li>
+        researchers,
+    </li>
+    <li>
+        inclusion and research-related policy makers,
+    </li>
+    <li>
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
+    </li>
+</ul>
+<p>Note that these modules focus on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, they may sometimes address a broader scope than web accessibility alone.</p>
+
+		
+	
+	</section></section><section id="examples-of-supported-decision-making-sdm-online"><div class="header-wrapper"><h2 id="x2-examples-of-supported-decision-making-sdm-online"><bdi class="secno">2. </bdi>Examples of Supported Decision-Making (<abbr title="Supported decision making">SDM</abbr>) Online </h2><a class="self-link" href="#examples-of-supported-decision-making-sdm-online" aria-label="Permalink for Section 2."></a></div>
+
+<p>Currently, there are some tools for supported decision-making online.</p>
+<p>These include:</p>
+<ol>
+    <li>
+        Clear content where risks, benefits, and options are easy to understand and navigate. See [<cite><a class="bibref" data-link-type="biblio" href="#bib-coga-usable" title="Making Content Usable for People with Cognitive and Learning Disabilities">coga-usable</a></cite>].
+    </li>
+    <li>
+        Filters to avoid certain types of content that may cause emotional distress, anxiety, or trauma responses for the person using the system.
+    </li>
+    <li>
+        Personalization settings such as those that limit time on social media, and safety and privacy features. Note these can be on the operating system or application level.
+    </li>
+    <li>
+        Supportive tools that help organize and support people and the helpers. There can be apps or just a template. This is well-developed in addiction recovery.    </li>
+</ol>
+<p>Note, that we have not included parental controls, as such tools typically do not support the dignity and autonomy of adult users with disabilities. However, they may be refactored in a way to be useful in the future.</p>
+<p><strong>Customizable supported design-making </strong>is when the level of support can change. (It is usually set by the user.) For example, the user can set a desired level of support. They can set it so the helper has view only permissions and receives notifications about high risk activity.</p>
+<p>This allows a helper to provide support, but not take control.</p>
+<p>More intrusive setting might include:</p>
+<ul>
+    <li>
+        Helper consent required for some transaction and/or activities.
+    </li>
+    <li>
+        Helper tools for viewing and canceling activities.
+    </li>
+</ul>
+<p>This may be appropriate for minor children.</p>
+<p><strong>Guardian/Guardianship: Guardianship is not the same as Supported Decision-Making.</strong> Guardianship is a legal status where another person makes a decision on behalf of a person with a disability. There are different levels of guardianship. A person can have a guardian for only certain decisions, like healthcare or finances. Note that <abbr title="Supported decision making ">SDM</abbr> tools can be used by guardians to involve the individual in decisions as much as possible.
+</p>
+<p>Guardians are also called <strong>conservators, conservators, legal representatives, or custodians.</strong>
+</p>
+<p>A website or process may include complex documents or require a signature. If a person has a guardian, the guardian will need to sign or review these documents on the person with disability’s behalf. If a person has a formal Supported Decision-Making Agreement or benefits from supported decision-making they may share these types of documents with their helpers or supporters, but will sign or review them themselves.</p>
+<p>In some cases guardianship may be too restrictive. When appropriate for an individual, shared decision-making is increasingly used instead of guardianship. This model is becoming increasingly popular for those with cognitive accessibility support.</p>
+<p><strong>Other legal Statuses: </strong>Other than guardians, a person might have a legal:</p>
+<ul>
+    <li>
+        <strong>Payee</strong>: People who may pay or receive payment on behalf of another person.&gt;
+    </li>
+    <li>
+        <strong>Power of attorney</strong>. People who can make decisions on another person’s behalf in specific situations. For example, you may sign an agreement that says a person can make decisions for you when you are in the hospital.
+    </li>
+    <li>
+        <strong>Shared signature</strong>: A person who provides a second signature for some types of decisions, such as large financial decisions.
+    </li>
+</ul>
+<p><strong>Informed consent </strong>means a person has and understands all the information they need to make decisions. To give informed consent, a person:</p>
+<ul>
+    <li>
+        has access to the information about the situation,
+    </li>
+    <li>
+        understands they have a choice,
+    </li>
+    <li>
+        understands what they are choosing to do or not to do, and
+    </li>
+    <li>
+        is of legal age of consent and is their own legal representative (guardian). [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-hhs1" title="Informed Consent FAQs">RC-HHS1</a></cite>]
+    </li>
+</ul>
+<p>Consent is also a term used when someone is agreeing on behalf of someone who is not their own legal representative.</p>
+<p><strong>Informed assent</strong> is making sure a person who cannot make legal decisions themselves has and understands all the information they need for a decision their guardian is making on their behalf. To give informed assent, a person:</p>
+<ul>
+    <li>
+        understands the decision being made, and    </li>
+    <li>
+        agrees to the decision made by their legal representative.    </li>
+</ul>
+<p>Informed assent can be required in many online situations such as:</p>
+<ul>
+    <li>
+        agreeing to have medical procedures,    </li>
+    <li>
+        signing contracts,    </li>
+    <li>
+        sharing personal data such as health history, financial information, etc.,    </li>
+    <li>
+        financial agreements, and    </li>
+    <li>
+        participation in research studies.    </li>
+</ul>
+		</section><section id="challenges-faced-by-people-needing-cognitive-accessibility-support-and-mental-health-assistance-face-when-making-decisions-online"><div class="header-wrapper"><h2 id="x3-challenges-faced-by-people-needing-cognitive-accessibility-support-and-mental-health-assistance-face-when-making-decisions-online"><bdi class="secno">3. </bdi>Challenges Faced by People Needing Cognitive Accessibility Support and Mental Health Assistance Face When Making Decisions Online</h2><a class="self-link" href="#challenges-faced-by-people-needing-cognitive-accessibility-support-and-mental-health-assistance-face-when-making-decisions-online" aria-label="Permalink for Section 3."></a></div>
+
+<p>Being online results in many risks to the user that can be reduced via <abbr title="Supported decision making">SDM</abbr>. Some examples of them are:</p>
+<section id="informed-consent-online"><div class="header-wrapper"><h3 id="x3-1-informed-consent-online"><bdi class="secno">3.1 </bdi>Informed Consent Online</h3><a class="self-link" href="#informed-consent-online" aria-label="Permalink for Section 3.1"></a></div>
+<p>In many cases online the user “agrees” terms or a situation without being able to understand them or being in a mental position to agree. Nonetheless, it can be difficult or impossible to retract. For informed consent or informed assent there is a basic need for the person to understand the information.</p>
+<p>Accessibility of digital formats is also important for both informed consent and informed assent as is enabling the use of assistive technology.</p>
+</section><section id="spending-and-emotional-regulation"><div class="header-wrapper"><h3 id="x3-2-spending-and-emotional-regulation"><bdi class="secno">3.2 </bdi>Spending and Emotional Regulation</h3><a class="self-link" href="#spending-and-emotional-regulation" aria-label="Permalink for Section 3.2"></a></div>
+<p>Cognitive learning and Mental health conditions often impact spending [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-m1" title="Designing good mental health into the way we bank">RC-M1</a></cite>]. Further frustration from difficult interfaces can also cause stress and impair decision-making. When under stress, people can become more impulsive. Research on decision-making under stress shows a change towards fast intuitive decision-making over slow logical or analytical process in making decisions. Emotional regulation may also decrease how people act on line, and make their reactions more extreme. [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-ig1" title="Guardianship by Country: Resource for Second World Congress on Adult Guardianship Australia">RC-IG1</a></cite>]</p>
+</section><section id="appropriate-sharing"><div class="header-wrapper"><h3 id="x3-3-appropriate-sharing"><bdi class="secno">3.3 </bdi>Appropriate Sharing</h3><a class="self-link" href="#appropriate-sharing" aria-label="Permalink for Section 3.3"></a></div>
+<p>Cases have been reported where impairments in decision-making and emotional regulation have caused people to share information about family, friends, room mates etc that is personal in nature and violates the subject's privacy.</p>
+</section><section id="longevity-of-content-and-recovery"><div class="header-wrapper"><h3 id="x3-4-longevity-of-content-and-recovery"><bdi class="secno">3.4 </bdi>Longevity of Content and Recovery</h3><a class="self-link" href="#longevity-of-content-and-recovery" aria-label="Permalink for Section 3.4"></a></div>
+<p>Further, people have reported (in response to this paper) that they are afraid of other long-term consequences of posting online. For example, if they post about mental health issues, or if their posts are considered inappropriate or imply health issues, then that can be used against them or to harm them after recovery has started.</p>
+<p>Note that even after the user removes the original post, shared version or saved versions may persist.</p>
+</section><section id="safety"><div class="header-wrapper"><h3 id="x3-5-safety"><bdi class="secno">3.5 </bdi>Safety</h3><a class="self-link" href="#safety" aria-label="Permalink for Section 3.5"></a></div>
+<p>The Internet is not always a safe place. Like life off the Internet, everyone is at risk of having crime as part of their online experience. Usually referred to as cybercrime, these activities, including fraud, terrorism, extortion, harassment, and hacking, are perpetrated by several types of criminals. Some legal activities can affect people's safety.</p>
+<p>Personal information can be stored and sold to third parties or stolen. This information can be used to hurt the user, including financial or emotional exploitation. See research module on safety at <a href="Online-Safety-and-Wellbeing.html">Online Safety and Wellbeing (Algorithms and Data)</a>
+</p>
+<p>People with cognitive impairments and elderly individuals are more likely to be targeted by online financial fraud, and when they lose money, it’s a higher amount than average, according to researchers. [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-cnbc1" title="Here’s how online scammers prey on older Americans, and what they should know to fight back">RC-CNBC1</a></cite>]</p>
+		</section></section><section id="problems-with-current-online-solutions-for-supported-decision-making-sdm-online"><div class="header-wrapper"><h2 id="x4-problems-with-current-online-solutions-for-supported-decision-making-sdm-online"><bdi class="secno">4. </bdi>Problems with Current Online Solutions (for Supported Decision-Making (<abbr title="Supported decision making">SDM</abbr>) online)</h2><a class="self-link" href="#problems-with-current-online-solutions-for-supported-decision-making-sdm-online" aria-label="Permalink for Section 4."></a></div>
+
+<p>Although <abbr title="Supported decision making ">SDM</abbr> can mitigate many problems facing people with disabilities online, it also creates new problems and issues. These include:</p>
+<section id="misuse-by-the-helper"><div class="header-wrapper"><h3 id="x4-1-misuse-by-the-helper"><bdi class="secno">4.1 </bdi>Misuse by the Helper</h3><a class="self-link" href="#misuse-by-the-helper" aria-label="Permalink for Section 4.1"></a></div>
+<p>Unfortunately websites must not assume that helpers are always reliable or honest or have the users’ needs as their main driver.</p>
+<p>There can be many helpers - people or organizations that behave in a way that is harmful, illegal, or morally wrong.</p>
+<p>In addition, care must be taken that supported decision-making is not applied to restrict people's liberty based on sexism, racism or other factors, and or where the support is not the will of the user. Checks may be necessary on a regular basis to confirm that the supported decision-making is on the request of the user without coercion.</p>
+<p>Also individual transactions can be reaffirmed by the user themselves. For example, the user may receive a message that a transaction has happened or been blocked to confirm that consent with this.</p>
+<p>Where this can not be achieved, it may be better to not support <abbr title="Supported decision making">SDM</abbr>.</p>
+<p>Each case should be evaluated for potential missuses. These may include:</p>
+<ul>
+    <li>
+        Sometimes the helper can make decisions that the user does not fully want.
+    </li>
+    <li>
+        They may also pressure the user to do what help thinks is a good idea.
+    </li>
+    <li>
+        Whenever possible the independent consent of the user should be required, and not just the helper.
+    </li>
+    <li>
+       Different support may be required for emergencies or for extremely and unusually @bad desions@ such as long term inappropriate financial decisions or decisions that can put their life at an inappropriate risk.    </li>
+</ul>
+<p>Misuses by the helper may also seem to be justified in the helpers mind. For example, that helper may pressure the user into purchases or presents that the user would not ordinarily buy if the helper had not pressured them. These can be to the benefit of the helper or daily members. For example, an elderly man buying perfume for his aid, may be considered a sign of misuse.</p>
+</section><section id="informed-consent-in-sdm-solutions"><div class="header-wrapper"><h3 id="x4-2-informed-consent-in-sdm-solutions"><bdi class="secno">4.2 </bdi>Informed Consent In <abbr title="Supported decision making ">SDM</abbr> Solutions</h3><a class="self-link" href="#informed-consent-in-sdm-solutions" aria-label="Permalink for Section 4.2"></a></div>
+<p>Informed consent with <abbr title="Supported decision making ">SDM</abbr> has a variety of issues. These include:</p>
+<ul>
+    <li>
+       The consent to share information with the helper must be informed consent.    </li>
+    <li>
+       Users may want to change their mind with consent. Can consent easily be removed?    </li>
+    <li>
+        Does removing consent also mean removing support that is actually needed?        <ul>
+            <li>
+                Can consent be mapped to services provided? Then people can make decisions about the need for consent and level of service.            </li>
+        </ul>
+    </li>
+    <li>
+        Can consent be broken into levels of need and then progressively disclosed when users activate the next level of need?    </li>
+</ul>
+<p>For example, site use terms and conditions are required at account set up, but we can have other consent topics when activating a live video session and yet another at the moment they want to have something shipped to them.</p>
+<p>This may lighten the load of trying to understand what they are specifically consenting to and there should be a direct relationship to the users’ desired task.</p>
+<ul>
+    <li>
+        May need to re-collect consent when the organization changes the way they work or use the information. (Sometimes this is legally required.)    </li>
+</ul>
+</section><section id="accessibility-of-terms"><div class="header-wrapper"><h3 id="x4-3-accessibility-of-terms"><bdi class="secno">4.3 </bdi>Accessibility of Terms </h3><a class="self-link" href="#accessibility-of-terms" aria-label="Permalink for Section 4.3"></a></div>
+<p>Efforts should be made to ensure that terms are accessible to all. These include:</p>
+<ul>
+    <li>
+        Ensuring that terms are accessible to assistive technologies that read content aloud or produce braille outputs.    </li>
+    <li>
+        Using plain language so that terms are easily understood by people needing cognitive support.    </li>
+    <li>
+       Incorporating symbols or other tools that individuals may use to support understanding written content whenever possible.    </li>
+    <li>
+       Making text accessible for sharing between individuals needing cognitive support and their legal representatives or support persons. These individuals may assist by answering questions or helping to evaluate decision options. This shared access is especially critical during emergencies or periods of impaired health when the person needing support may not be physically close to their helper.    </li>
+</ul>
+</section><section id="autonomy"><div class="header-wrapper"><h3 id="x4-4-autonomy"><bdi class="secno">4.4 </bdi>Autonomy</h3><a class="self-link" href="#autonomy" aria-label="Permalink for Section 4.4"></a></div>
+<p>Supported decision-making does not assume the user is under guardianship and they maintain the right to autonomy. They may wish to keep information secret from the helper. There may be specific topics that they wish to maintain autonomy whilst appreciating the help and support on other topics. For example, the user may wish support for grocery shopping but wish for privacy and confidentiality with regards to buying cigarettes.</p>
+<p>There may also be times when autonomy is preferable. (However, if the user is under guardianship this may be removed.)</p>
+</section><section id="changing-states-of-the-user"><div class="header-wrapper"><h3 id="x4-5-changing-states-of-the-user"><bdi class="secno">4.5 </bdi>Changing States of the User</h3><a class="self-link" href="#changing-states-of-the-user" aria-label="Permalink for Section 4.5"></a></div>
+<p>The end use may require support at times and autonomy at different times. For example, a user with controlled bipolar disorder may want autonomy most of the time, However, if they do have a manic episode they will require more support before decision-making. (However, they are unlikely to set up the system while in a manic state.) Limits on spending or decision-making scope may enable the user to balance the needs in different cycles.</p>
+<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span></div><p class=""> We are considering adding content in this section on:<br>
+
+        Dignity - At all points the aims must include, maintaining the dignity of the user.    <br>
+        Reliability and stress - Research other points and add discussion (and sources) on this issue.
+      <br>
+       Website support - (Possibly) The main issue is that most websites and apps have no support for <abbr title="Supported decision making">SDM</abbr>. It is unusual for a website to consider the ramifications of <abbr title="Supported decision making ">SDM</abbr> in its design or functionality. Exceptions exist, especially in addiction recovery.    
+   <br>
+Comments and suggestions are welcome.
+</p></div>
+</section><section id="overuse"><div class="header-wrapper"><h3 id="x4-6-overuse"><bdi class="secno">4.6 </bdi>Overuse</h3><a class="self-link" href="#overuse" aria-label="Permalink for Section 4.6"></a></div>
+<p>Consent may be continuously required, and burden the helper. This includes consent to share information or use cookies.</p>
+			</section></section><section id="user-story-and-user-needs"><div class="header-wrapper"><h2 id="x5-user-story-and-user-needs"><bdi class="secno">5. </bdi>User Story and User Needs </h2><a class="self-link" href="#user-story-and-user-needs" aria-label="Permalink for Section 5."></a></div>
+
+				 <div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="3"><span>Editor's note</span></div><p class="">In the next version, we will cross-reference this section with the user needs in <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>. New user needs that are identified in this research module will be included in the next version of <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>. </p></div>
+
+<ul>
+    <li>
+       As a user with a disability affecting my ability to make choices, I need design that helps me understand my choices and know what the consequences are.    </li>
+    <li>
+       As a user with a disability affecting my ability to make choices, I need support making decisions that may affect my financial or physical well-being.    </li>
+    <li>
+        As a user with a disability affecting my ability to make choices, I need to know my autonomy is respected.    </li>
+    <li>
+       As a user with a disability affecting my ability to make choices, I need to the system to help me stay safe online including from, hackers, bad actors , “helpers” and people I know.    </li>
+</ul>
+<p>User needs</p>
+<ul>
+    <li>
+        As a user with a disability making choices, I need tools that help regulate my emotions to avoid making harmful, irrational, impulsive, or irreversible decisions.    </li>
+    <li>
+        As a user with a disability making choices, I need tools that help me maintain an appropriate level of information sharing and tools that manage permission levels, transparency, and audit trails.    </li>
+    <li>
+        As a user with a disability making choices, I need tools to identify specific people who can act on my behalf. These tools need to give me the ability to identify the level of access to my information, sharing my information, and decision-making making each helper is allowed.
+    </li>
+    <li>
+        As a user with a disability making choices, I need protection from misuse by helpers with clear role definitions, monitoring tools, and a way to update or revoke roles when appropriate.    </li>
+</ul>
+Related user needs:
+<ol>
+    <li>
+        I need support and explanations for my choices. The advantages or disadvantages are clear to me, and I understand the effects of my choice. For example, when choosing a cheaper airline ticket, you often pay for a meal.
+    </li>
+    <li>
+        I need financial decision-making support like budgeting tools, spending alerts and shared account access to prevent financial issues.
+    </li>
+    <li>
+        I need to understand the language used, including vocabulary, syntax, tense, and other aspects of language.
+    </li>
+    <li>
+        I need images, diagrams, or video clips to help me understand ideas (more than a lot of words).
+    </li>
+    <li>
+        I need support to manage the task, such as letting me know what information I will need (credit card, full address, etc.) before I start.
+    </li>
+    <li>
+        I need to know where I am in the process to avoid disorientation, including what I have done and what my next step will be.
+    </li>
+    <li>
+        I need to spend my energy completing my task. I do not want to waste my energy while I struggle to understand other material, such as special offers or promotions.
+    </li>
+    <li>
+        I need to know how to get human help and manage the process easily.
+    </li>
+</ol>
+				</section><section id="principles-for-supported-decision-making"><div class="header-wrapper"><h2 id="x6-principles-for-supported-decision-making"><bdi class="secno">6. </bdi>Principles for Supported Decision-Making</h2><a class="self-link" href="#principles-for-supported-decision-making" aria-label="Permalink for Section 6."></a></div>
+
+<p>Researchers have identified four dimensions for reasoned and responsible design in decision-making:</p>
+<ol>
+    <li>
+        understanding the nature as well as the risks and benefits of alternatives, [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-na1" title="The Intersection of Behavioral Health, Mental Health, and Health Literacy">RC-NA1</a></cite>]
+    </li>
+    <li>
+        appreciating and applying the relevant information to one’s self and one’s own situation, [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-na1" title="The Intersection of Behavioral Health, Mental Health, and Health Literacy">RC-NA1</a></cite>]
+    </li>
+    <li>
+        engaging in consequential and comparative reasoning and manipulating information rationally, [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-na1" title="The Intersection of Behavioral Health, Mental Health, and Health Literacy">RC-NA1</a></cite>]  and
+    </li>
+    <li>
+        expressing a clear and consistent decision. [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-na1" title="The Intersection of Behavioral Health, Mental Health, and Health Literacy">RC-NA1</a></cite>] Note that a consistent decision will be the same over time. For example, a user with bipolar who wants to make a purchase when manic would also want to make the same purchase when out of the manic phase.
+    </li>
+</ol>
+<p>Other projects have emphasized the right to remove consent at any point in a process.</p>
+<p>The helper's role is often to enable:</p>
+<ol>
+    <li>
+        understanding and support of consent,
+    </li>
+    <li>
+        balancing short-term impulses or mental state with long-term intentions, and
+    </li>
+    <li>
+        supporting health and financial safety. Note that it needs to be reasonable. People may choose to smoke, eat unhealthy foods etc., that is all within reasonable behavior.
+    </li>
+</ol>
+					</section><section id="possible-solutions-for-meeting-user-needs"><div class="header-wrapper"><h2 id="x7-possible-solutions-for-meeting-user-needs"><bdi class="secno">7. </bdi>Possible Solutions for Meeting User Needs </h2><a class="self-link" href="#possible-solutions-for-meeting-user-needs" aria-label="Permalink for Section 7."></a></div>
+
+
+						<p>Below are some ideas that might help meet the user needs above. Note that
+digital solutions should also meet [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-coga-usable" title="Making Content Usable for People with Cognitive and Learning Disabilities">coga-usable</a></cite>]. Also, this module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
+<section id="supported-decision-making-as-a-feature"><div class="header-wrapper"><h3 id="x7-1-supported-decision-making-as-a-feature"><bdi class="secno">7.1 </bdi>Supported Decision-Making as a Feature</h3><a class="self-link" href="#supported-decision-making-as-a-feature" aria-label="Permalink for Section 7.1"></a></div>
+<p>Supported decision-making [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-aclu1" title="Supported Decision-Making: Frequently Asked Questions">RC-ACLU1</a></cite>] lets the user choose how much help they want from a helper. For example, the user can adjust the support levels, such as:</p>
+<ul>
+    <li>
+        helper consent required,
+    </li>
+    <li>
+        view only (to give support) with notifications, and
+    </li>
+    <li>
+        view and cancellation only.
+    </li>
+</ul> [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-aclu1" title="Supported Decision-Making: Frequently Asked Questions">RC-ACLU1</a></cite>]
+<p>Supported decision-making (<abbr title="Supported decision making">SDM</abbr>) is a powerful way for businesses and websites to help people stay in control of their choices—especially when making decisions that affect their money, privacy, or well-being. <abbr title="Supported decision making ">SDM</abbr> gives users tools to make thoughtful, informed decisions, even if they face challenges with focus, memory, emotional regulation, or pressure from others.</p>
+<p>One of the strengths of <abbr title="Supported decision making ">SDM</abbr> is that it can be customized by the user. For example, someone might choose a trusted person, called a “helper”, to support them. The user stays in charge and decides how much access that helper has. Some people may want their helper to give advice only. While others may want their helper to be able to cancel a decision or require approval before continuing.</p>
+<p>By including supported decision-making features, organizations can create safer, more inclusive digital experiences while building greater trust with their customers.</p>
+<p>The following proposed solution aims to allow more users to participate in online activities, support the principles of supported decision whilst making with minimal or no cost to the users dignity or autonomy.</p>
+</section><section id="cognitive-support"><div class="header-wrapper"><h3 id="x7-2-cognitive-support"><bdi class="secno">7.2 </bdi>Cognitive Support</h3><a class="self-link" href="#cognitive-support" aria-label="Permalink for Section 7.2"></a></div>
+<p>A good design can add cognitive support, and help people understand the options,and make the best decision for them. Making Content Usable for People with Cognitive and Learning Disabilities at <a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a> has many design patterns that help. For example:</p>
+<p>Clear presentation helps decision-making.</p>
+<p>Make it easy for the user to see what they hard to know what you are agreeing too - with risks identified and separation of each option:</p>
+<ul>
+    <li>
+        <p>using clear and simple language,
+    </p></li>
+    <li>
+        uses aids to comprehension such as graphics and icons,
+    </li>
+    <li>
+        avoiding cluttered pages, cognitive overload etc.mention patterns todo with task completion etc., and
+    </li>
+    <li>
+        avoiding distractions Use a clear layout, that aids comprehension including good use of chunk and whitespace.
+    </li>
+</ul>
+<p>For example, a user may have an impaired short-term / working memory. They can not remember many items at the same time. A clear layout of options can help someone who has a short-term memory can see all the advantages and disadvantages without having to remember them.</p>
+<p>A good layout can help users see what options are and make a decision.</p>
+<p>This can include using a table or bulleted list, simple language, and good use of color and white space.For example, a clear layout of options can help someone who has a short-term memory can see all the advantages and disadvantages without having to remember them.</p>
+<section id="example-1-table-showing-main-points-for-each-option-before-booking"><div class="header-wrapper"><h4 id="x7-2-1-example-1-table-showing-main-points-for-each-option-before-booking"><bdi class="secno">7.2.1 </bdi>Example 1 - Table showing main points for each option before booking</h4><a class="self-link" href="#example-1-table-showing-main-points-for-each-option-before-booking" aria-label="Permalink for Section 7.2.1"></a></div>
+</section><section id="summary-of-this-hotel-option"><div class="header-wrapper"><h4 id="x7-2-2-summary-of-this-hotel-option"><bdi class="secno">7.2.2 </bdi><strong>Summary of this hotel option</strong></h4><a class="self-link" href="#summary-of-this-hotel-option" aria-label="Permalink for Section 7.2.2"></a></div>
+<table border="1">
+    <colgroup>
+        <col>
+            <col>
+                <col>
+    </colgroup>
+    <tbody>
+        <tr>
+            <td>
+                <p></p>
+            </td>
+            <th>
+                <p><strong>Hotel Smoliot </strong>
+                </p>
+            </th>
+            <th>
+                <p><strong>Hotel W3 Inn </strong>
+                </p>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>Cost</strong>
+                </p>
+                <p><strong>Including taxes </strong>
+                </p>
+            </th>
+            <td>
+                <p>$440 for the full trip
+                </p>
+                <p>($110 a night)
+                </p>
+            </td>
+            <td>
+                <p>$400 for the full trip
+                </p>
+                <p>($100 a night)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>Cleanliness </strong>
+                </p>
+            </th>
+            <td>
+                <p>Great
+                </p>
+            </td>
+            <td>
+                <p>Good but some places are better 
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>Accessibility </strong>
+                </p>
+            </th>
+            <td>
+                <p>✅ Yes
+                </p>
+            </td>
+            <td>
+                <p>There are steps to some of the rooms
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>Breakfast</strong>
+                </p>
+            </th>
+            <td>
+                <p>None
+                </p>
+            </td>
+            <td>
+                <p>✅ Included 
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>Free wifi</strong>
+                </p>
+            </th>
+            <td>
+                <p>✅ included
+                </p>
+            </td>
+            <td>
+                <p>✅ included
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>Pool</strong>
+                </p>
+            </th>
+            <td>
+                <p>No
+                </p>
+            </td>
+            <td>
+                <p>No
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>Parking</strong>
+                </p>
+            </th>
+            <td>
+                <p>Yes
+                </p>
+            </td>
+            <td>
+                <p>No
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>How people have rated this hotel overall</strong>
+                </p>
+            </th>
+            <td>
+                <p>⭐⭐⭐
+                </p>
+                <p> 3 out of 5 (ok)
+                </p>
+            </td>
+            <td>
+                <p>⭐⭐⭐⭐
+                </p>
+                <p> 4 out of 5 (good)
+                </p>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p><strong>Can I cancel</strong>
+                </p>
+            </th>
+            <td>
+                <p>You would have to pay for two nights ($200)
+                </p>
+            </td>
+            <td>
+                <p>✅ Yes You can cancel until the day you are meant to go there.
+                </p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</section><section id="example-2-if-then-table"><div class="header-wrapper"><h4 id="x7-2-3-example-2-if-then-table"><bdi class="secno">7.2.3 </bdi>Example 2 - if / then table</h4><a class="self-link" href="#example-2-if-then-table" aria-label="Permalink for Section 7.2.3"></a></div>
+<p><strong>Welcome to our companies job applications page</strong>
+</p>
+<p><strong>How to apply</strong>
+</p>
+<table border="1" style="min-width: 50px">
+    <colgroup>
+        <col>
+            <col>
+    </colgroup>
+    <tbody>
+        <tr>
+            <th>
+                <p><strong>If</strong>
+                </p>
+            </th>
+            <th>
+                <p><strong>Then</strong>
+                </p>
+            </th>
+        </tr>
+        <tr>
+            <th>
+                <p>If you want to work in programing:</p>
+            </th>
+            <td>
+                <ul>
+                    <li>
+                        <p>Make a resume.</p>
+                    </li>
+                    <li>
+                        <p>Get some sample code that you wrote.</p>
+                    </li>
+                    <li>
+                        <p>Send them to <a href="mailto:programing@example.com">programing@example.com</a>.</p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <p>If you want to work in design:</p>
+            </th>
+            <td>
+                <ul>
+                    <li>
+                        <p>Make a resume.</p>
+                    </li>
+                    <li>
+                        <p>Get some sample pages that you designed.</p>
+                    </li>
+                    <li>
+                        <p>Send them to <a href="mailto:design@example.com">design@example.com</a>.</p>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p>In the above table the user can see clearly what to do. Compare this table to having multiple steps in the same block of text without separation.</p>
+<p>For example: Having the text and information without breaking it up!</p>
+<ul>
+    <li>
+        <p>If you want to work in programming, write to <a href="mailto:programing@example.com">programing@example.com</a> with a resume and sample code that you wrote. If you want to work in design, write to <a href="mailto:design@example.com">design@example.com</a> with a resume and sample pages.</p>
+    </li>
+</ul>
+</section></section><section id="confirming-understanding"><div class="header-wrapper"><h3 id="x7-3-confirming-understanding"><bdi class="secno">7.3 </bdi>Confirming Understanding</h3><a class="self-link" href="#confirming-understanding" aria-label="Permalink for Section 7.3"></a></div>
+<p>Cognitive tests can be added that confirm the user understands what they are agreeing to.</p>
+<p>Note that this is not a simple yes or no option. This involves the user demonstrating understanding the terms.</p>
+<p>Can I leave at any time?</p>
+<ul>
+    <li>
+        Yes - I can opt out at any time.
+    </li>
+    <li>
+        No - I can opt out in the next payment cycle (3 times a year) by changing the payments option in the settings.
+    </li>
+    <li>
+        No - I can not opt out.
+    </li>
+</ul>
+</section><section id="finance-and-spending"><div class="header-wrapper"><h3 id="x7-4-finance-and-spending"><bdi class="secno">7.4 </bdi>Finance and Spending</h3><a class="self-link" href="#finance-and-spending" aria-label="Permalink for Section 7.4"></a></div>
+<p>Supported Decision Making allows users to consistently make decisions, despite difficulties with emotion regulation and other cognitive, learning and emotional challenges. For example, increased impulsivity, can make it harder to resist the temptation to spend. Businesses can support decision-making online by offering features like:</p>
+<ul>
+    <li>
+        <p>Self-Imposed Spending limit (per website or shop, category (food close ect)
+    </p></li>
+    <li>
+        Cooling off period (use cases: mania, resisting pressure from the site or sales team)
+    </li>
+    <li>
+        Double confirmation with a helper or support person (helper and/or guardian) under user controlled conditions (such as a dark pattern, possible exploitation or other user agreed scenarios.)
+    </li>
+</ul>
+<p>Source: [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-yls1" title="Banking for All: Why Financial Institutions Need to Offer Supportive Banking Features">RC-YLS1</a></cite>]</p>
+</section><section id="legal-and-privacy-requirements"><div class="header-wrapper"><h3 id="x7-5-legal-and-privacy-requirements"><bdi class="secno">7.5 </bdi>Legal and Privacy Requirements</h3><a class="self-link" href="#legal-and-privacy-requirements" aria-label="Permalink for Section 7.5"></a></div>
+<p>All supported decision-making features must follow privacy and consent laws that apply to the type of services they offer and where they operate. In the U.S., this includes national laws like the Gramm-Leach-Bliley Act (GLBA) [<cite><a class="bibref" data-link-type="biblio" href="#bib-glba" title="Gramm-Leach-Blilely ACT ">GLBA</a></cite>], which says financial institutions must get permission before sharing a person’s private information. Other laws, like the Electronic Fund Transfer Act (EFTA, also known as Regulation E) [<cite><a class="bibref" data-link-type="biblio" href="#bib-efta" title="Electronic Fund Transfer Act Regulation E">EFTA</a></cite>], protect people from unauthorized money transfers. Some state laws have additional rules about how and when consent must be given, especially for banking or healthcare features. In many states, businesses are also required to report suspected financial abuse or exploitation.</p>
+<p>Outside the U.S., laws like the European Union’s General Data Protection Regulation (GDPR) [<cite><a class="bibref" data-link-type="biblio" href="#bib-gdpr" title="General Data Protection Regulation">GDPR</a></cite>] set strict rules on how personal data is collected, stored, and shared, and require clear, informed consent.</p>
+<p>This document does not provide legal advice, so organizations should check with legal experts to make sure they are meeting all the rules when supporting decision-making.</p>
+</section><section id="social-media-and-algorithm-driven-content"><div class="header-wrapper"><h3 id="x7-6-social-media-and-algorithm-driven-content"><bdi class="secno">7.6 </bdi>Social Media and Algorithm-Driven Content</h3><a class="self-link" href="#social-media-and-algorithm-driven-content" aria-label="Permalink for Section 7.6"></a></div>
+<p>Social media platforms and algorithm-based content feeds can present serious risks to people with cognitive and learning disabilities, especially when decision-making is affected by emotional regulation, impulsivity, or difficulty understanding consequences. Algorithms often promote engaging content that may not be safe or appropriate. Without the right support, these environments can lead to oversharing, impulsive purchases, extended screen time, or exposure to harmful interactions. See …Safety document ref</p>
+<div class="note" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="3"><span>Editor's note</span></div><p class=""> Some of this section might be better in our Safety document. A review is needed to identify how this content can be included or referenced in both documents.</p></div>
+<p>Supported decision-making that can help people check themselves such as:</p>
+<ul>
+    <li>
+        <strong>Self-imposed limits</strong>, such as per website or shop or category (food, clothes etc). Reminder to switch off social media after user preferred time limit is elapsed or automatic switching off of social media after user preferred time is elapsed. This can also work on an operating system level.
+    </li>
+    <li>
+        <strong>User set controls for helpers</strong>, when appropriate, similar to thoughts discussed in the section for solutions for <a href="https://docs.google.com/document/d/1g9N-_3l-d6t0ppZcIIZ98k00x7ZE7h3ayq0OCX9Ycu4/edit?tab=t.0#heading=h.ss5m55cpmrhj">Finance and Spending</a>.
+    </li>
+    <li>
+        <strong>Double confirmation for posts</strong>, or a cooling off period/ process between writing a post and posting it, where risks to the best interests of the user may be identified.
+    </li>
+</ul>
+<ul>
+    <li>
+        <strong>Private networks and safe spaces</strong>, with protective features such as:  All members are confirmed as having common criteria, and must maintain confidentiality. Moderators are typically present  to reduce risks of inappropriate or unsafe behaviors or posts. This can be a place where people can be themselves without worries of their data being used outside the group, or judgment for their condition.
+        
+    </li>
+    <li>
+        <strong>Warnings,</strong> or support questions or flows, can be added before sharing. For example, safety questions that can be added, with the support of professionals, depending on the user scenario.
+    </li>
+</ul>
+<p>Note these features are only suggestions for further research or testing. They may not be effective.</p>
+</section></section><section id="supported-decision-making-in-the-w3c-public-private-partnerships-and-similar-organizations"><div class="header-wrapper"><h2 id="x8-supported-decision-making-in-the-w3c-public-private-partnerships-and-similar-organizations"><bdi class="secno">8. </bdi>Supported decision-making in the <abbr title="World Wide Web Consortium">W3C</abbr>, public private partnerships, and similar organizations.</h2><a class="self-link" href="#supported-decision-making-in-the-w3c-public-private-partnerships-and-similar-organizations" aria-label="Permalink for Section 8."></a></div>
+	
+<p>This section focuses on how the <abbr title="World Wide Web Consortium">W3C</abbr> can address <abbr title="Supported decision making">SDM</abbr>, but the same principles and ideas can be adapted to other organizations with similar features such as:</p>
+<ul>
+    <li>
+        committee meetings, and<p></p>
+    </li>
+    <li>
+        public participation or feedback etc.<p></p>
+    </li>
+</ul>
+<p>Supported decision-making may benefit current members of the <abbr title="World Wide Web Consortium">W3C</abbr> as well as new members, and potential community members.</p>
+<p>Some examples of when a guardian, shared decision maker, or support person can be involved may include:</p>
+<ul>
+    <li>
+        Joining groups and subgroups,
+    </li>
+    <li>
+        Deciding when the person’s full name can be included in public minutes and credits (note: in some locations, the ability to publicize a person’s full name is always the decision of the individual, regardless of guardianship status);
+    </li>
+    <li>
+        Supporting an individual in deciding if a personal story should be shared, if it is private, potentially damaging, or if it contains personal health information. Example: a guardian would prevent someone from potentially publishing something that might cause others risk, such as a story about a specific company’s website, personnel, or process.
+    </li>
+    <li>
+        Provide administrative, communication, decision-making, or cognitive supports as needed.
+    </li>
+    <li>
+        Agree to travel to, or host, a meeting.
+    </li>
+    <li>
+        Other tasks identified by the guardian as being affected by guardianship.
+    </li>
+</ul>
+<p>Each individual may have unique needs. Some may need only one of these options and may wish to participate independently in all other ways. Others may need more than one of these options.</p>
+<p>It should be noted that there is a movement away from guardianship and towards shared decision-making in some places.</p>
+<p>For example, some individuals may find <abbr title="World Wide Web Consortium">W3C</abbr> processes inaccessible or too challenging or to participate in their current form. This unintentionally leaves some people out of the <abbr title="World Wide Web Consortium">W3C</abbr> process, including some needing cognitive accessibility support. Being left out of the process means that the needs of some people needing cognitive accessibility support will be invisible.</p>
+<p>Effective participation in the current state of <abbr title="World Wide Web Consortium">W3C</abbr> membership may require the support of a shared decision maker or guardian in particular to:</p>
+<ul>
+    <li>
+        have the ability to determine when they are safe in online interactions,
+    </li>
+    <li>
+        participate in legal agreements/contracts (understand them, legally be able to sign on their own behalf, be sure to follow through with them/adhere to them, etc.), and
+    </li>
+    <li>
+        manage complex communications through multiple methods which includes tracking and responding to communications, scheduling time to participate, etc.
+        <ul>
+            <li>
+                Example: following a thread through multiple communication channels.
+            </li>
+            <li>
+                Example: Reviewing a document, and understanding the timing of responses, method for filing issues, and the protocol for participating in meetings.
+            </li>
+            <li>
+                Example: finding the status of a current topic, which Working Group is currently addressing it and how, which communication channel/tool contains the information (minutes, Github, task list, working draft).
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>Some of these individuals may have guardians or support because their disability may impact their ability to:</p>
+<ul>
+    <li>
+        understand the impacts of risks (immediate and long-term) around digital and other publications that can include their name and/or personal details,
+    </li>
+    <li>
+        understand complex communications such as contracts/agreements for participation,
+    </li>
+    <li>
+        determine who to trust in online interactions, and
+    </li>
+    <li>
+        independently make decisions related to these risks.
+    </li>
+</ul>
+<p>Some information related to challenges experienced accessing digital information is personal. Participation in <abbr title="World Wide Web Consortium">W3C</abbr> Working Groups sometimes involves sharing personal challenges experienced. Navigating when and how to share these personal experiences without making a person more vulnerable is a complex process. Some people will need support to navigate this.
+</p><p>Some communities within the disability community are vulnerable to targeted attacks, especially in online interactions. These can include becoming a target of online predators.</p>
+<ul>
+    <li>
+        One example: robocalls and phishing attacks targeting older adults with limited computer skills or age-related cognitive issues.
+    </li>
+    <li>
+        Another example: in online interactions, when a person’s identity is available through publications (official notes, meeting minutes, use case publications), people they would not encounter in their daily interactions may become aware of them. This can be important if:
+        <ul>
+            <li>
+                the person shares personal use cases related to their disability, and
+            </li>
+            <li>
+                the person’s address is findable on the internet.
+            </li>
+        </ul>
+    </li>
+</ul>
+<p>It should be noted, some very talented individuals are currently unable to fully participate or share at their full capacity, or be a productive member of the working and community groups.</p>
+<p>With other options, people who would be otherwise unable to participate can provide valuable input that would improve the web for many. People are more self-directed, self-determined, more effective and successful when they have an opportunity to use the cognitive supports they need.</p>
+<p>In addition, agreements such as the Invited Expert Collaborator Application has language that may be of concern in a guardianship situation. [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-w31" title="Invited Expert and Collaborator Agreement">RC-W31</a></cite>]</p>
+<p>“<abbr title="World Wide Web Consortium">W3C</abbr> may, at its discretion, grant Invited Experts access to Member confidential information, generally based on the level of confidentiality of meeting records and other proceedings described in a group charter. This access includes mailing-lists, website, tools, teleconferences and meetings. <abbr title="World Wide Web Consortium">W3C</abbr> seeks to ensure that all Invited Experts in a given <abbr title="World Wide Web Consortium">W3C</abbr> Group have the access necessary to enable the group to conduct its work.” (Note this applies to participants in non-public groups). <abbr title="World Wide Web Consortium">W3C</abbr> AC Representative language may be one model to consider for how to address guardianship situations or the need for shared decision-making and/or cognitive support, in terms of legal language. This is not the only model or necessarily satisfies all needs, but it is a precedent.</p>
+<section id="recommendations-for-the-w3c"><div class="header-wrapper"><h3 id="x8-1-recommendations-for-the-w3c"><bdi class="secno">8.1 </bdi>Recommendations for the <abbr title="World Wide Web Consortium">W3C</abbr></h3><a class="self-link" href="#recommendations-for-the-w3c" aria-label="Permalink for Section 8.1"></a></div>
+<section id="proposed-additional-membership-options"><div class="header-wrapper"><h4 id="x8-1-1-proposed-additional-membership-options"><bdi class="secno">8.1.1 </bdi>Proposed Additional Membership Options</h4><a class="self-link" href="#proposed-additional-membership-options" aria-label="Permalink for Section 8.1.1"></a></div>
+<p>The COGA Task Force recommends that alternative membership options for community group and <abbr title="World Wide Web Consortium">W3C</abbr> participation are available. These can include the following options.</p>
+<p><strong>Before Applying to be an Invited Expert or Community Member</strong>. An opportunity and invitation should be provided for a person considering membership to work with a guardian or shared decision maker to review documents before completing the agreement.
+</p>
+<p><strong>Helping People Participate</strong>. A person can choose to have their guardian, or another person they identify, be involved to help with their participation (either as a named member or be a partner in their membership). This can include but is not limited to supporting the person to:</p>
+<ul>
+    <li>
+        review content prior to publication, and
+    </li>
+    <li>
+        manage their communications with the group.
+    </li>
+</ul>
+<p>A person with a guardian can have a liaison-type role for the guardian who approves their participation, and then the individual independently participates. In some cases, guardians may only need to be involved for contract or legal document signatures. For some countries, guardianship may involve authorizing publication of an individual’s name or contains specifically identifying information.</p>
+<p><strong>Support Person or Organization</strong> is officially “The Member’s Representative”. A support organization or person can be the member (on behalf of an individual) in order to facilitate participation by an individual that may:</p>
+<ul>
+    <li>
+        Prefer or need not to be named, or manage the communications.
+    </li>
+    <li>
+        Help facilitate access to meetings and materials. Example: some individuals may not do well with independent use of a computer because they have a disability impacting their judgment but they can and do complete many tasks independently on a computer as long as they are supervised.
+	</li>
+            <li>
+                To ensure their safety, with proper support, they may be able to provide valuable input and ideas for the work of the <abbr title="World Wide Web Consortium">W3C</abbr>. An organization can be a supported employment organization, a congregate living facility, or a "self-advocacy" organization.
+            </li>
+       
+</ul>
+<p>Example: Fred lives in a group home. The group home is the official member’s representative. Fred is not named in communications or publications.</p>
+<p><strong> A Process for Those with Proposed Additional Membership Options</strong>. A process should be available for the individual to change their designated support person/organization/guardian.
+</p>
+<ul>
+    <li>
+        Example 1: a person selects a support professional they use regularly, then that person takes a different job.
+    </li>
+    <li>
+        Example 2: a person moves from one supported employment organization to another.
+    </li>
+</ul>
+<p>Accessibility of digital formats is also important for both informed consent and informed assent.</p>
+    
+	
+	</section></section></section>	
+		
+<section class="appendix section" id="acknowledgements"><div class="header-wrapper"><h2 id="d-appendix-acknowledgments"><bdi class="secno">A. </bdi>Appendix: Acknowledgments</h2><a class="self-link" href="#d-appendix-acknowledgments" aria-label="Permalink for Appendix A."></a></div>
+  
+  
+<section id="key-contributors-and-section-editors"><div class="header-wrapper"><h3 id="a-1-key-contributors-and-section-editors"><bdi class="secno">A.1 </bdi>Key contributors and section editors</h3><a class="self-link" href="#key-contributors-and-section-editors" aria-label="Permalink for Appendix A.1"></a></div>
+    
+<ul>
+<li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+</li><li>
+
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+John Kirkwood, 
+CityMouse, Inc
+	</li><li>
+Julie Rawe, 
+Understood.org
+
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert
+
+</li>
+</ul></section>
+
+
+<section id="participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><div class="header-wrapper"><h3 id="a-2-participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><bdi class="secno">A.2 </bdi>
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</h3><a class="self-link" href="#participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication" aria-label="Permalink for Appendix A.2"></a></div>
+    
+<ul>
+<li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+
+</li><li>
+
+Rachael Bradley Montgomery, 
+Library of Congress
+
+</li><li>
+
+Rain Breaw Michaels, 
+Google LLC
+
+</li><li>
+Tiffany Burtin, 
+Invited Expert 
+
+</li><li>
+Deborah Dahl, 
+Conversational Technologies
+
+</li><li>
+Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+E.A. Draffan, 
+Global Symbols
+
+</li><li>
+Jeanne Erickson Cooley, 
+TPGi
+
+
+</li><li>
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+
+John Kirkwood, 
+CityMouse, Inc
+
+</li><li>
+Andy Manea, 
+Invited Expert 
+</li><li>
+Jan McSorley, 
+Invited Expert 
+</li><li>
+Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Abigail Ofer, 
+Evinced Inc.
+
+</li><li>
+
+Justine Pascalides, 
+Amazon
+</li><li>
+Ruoxi Ran, 
+<abbr title="World Wide Web Consortium">W3C</abbr>
+</li><li>
+Julie Rawe, 
+Understood.org
+</li><li>
+Charlotte Riggle, 
+Amazon
+</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Janina Sajka, 
+Invited Expert 
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert 
+</li><li>
+
+Gareth Slinn, 
+Invited Expert 
+</li><li>
+David Swallow
+TPGi
+
+
+</li></ul></section>
+</section>
+  
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+     	
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="b-references"><bdi class="secno">B. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix B."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="b-1-informative-references"><bdi class="secno">B.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix B.1"></a></div>
+    
+    <dl class="bibliography"><dt id="bib-coga-usable">[coga-usable]</dt><dd>
+      <a href="https://www.w3.org/TR/coga-usable/"><cite>Making Content Usable for People with Cognitive and Learning Disabilities</cite></a>. Lisa Seeman-Horwitz; Rachael Bradley Montgomery; Steve Lee; Ruoxi Ran.  W3C. 29 April 2021. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a>
+    </dd><dt id="bib-efta">[EFTA]</dt><dd>
+      <a href="https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e"><cite>Electronic Fund Transfer Act Regulation E</cite></a>.  National Credit Union Administration. 2025. URL: <a href="https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e">https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e</a>
+    </dd><dt id="bib-gdpr">[GDPR]</dt><dd>
+      <a href="https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/"><cite>General Data Protection Regulation</cite></a>.  GDPR eu. 2023. URL: <a href="https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/">https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/</a>
+    </dd><dt id="bib-glba">[GLBA]</dt><dd>
+      <a href="https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act"><cite>Gramm-Leach-Blilely ACT </cite></a>.  US Federal Trade Commission. 1999. URL: <a href="https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act">https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act</a>
+    </dd><dt id="bib-rc-aclu1">[RC-ACLU1]</dt><dd>
+      <a href="https://www.aclu.org/sites/default/files/field_document/faq_about_supported_decision_making.pdf"><cite>Supported Decision-Making: Frequently Asked Questions</cite></a>.  ACLU. other. URL: <a href="https://www.aclu.org/sites/default/files/field_document/faq_about_supported_decision_making.pdf">https://www.aclu.org/sites/default/files/field_document/faq_about_supported_decision_making.pdf</a>
+    </dd><dt id="bib-rc-cnbc1">[RC-CNBC1]</dt><dd>
+      <a href="https://www.cnbc.com/2019/11/23/new-research-pinpoints-how-elderly-people-are-targeted-in-online-scams.html"><cite>Here’s how online scammers prey on older Americans, and what they should know to fight back</cite></a>. Kate Fazzini et al.  CNBC. November 2019. other. URL: <a href="https://www.cnbc.com/2019/11/23/new-research-pinpoints-how-elderly-people-are-targeted-in-online-scams.html">https://www.cnbc.com/2019/11/23/new-research-pinpoints-how-elderly-people-are-targeted-in-online-scams.html</a>
+    </dd><dt id="bib-rc-hhs1">[RC-HHS1]</dt><dd>
+      <a href="https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html"><cite>Informed Consent FAQs</cite></a>.  US Department of Health and Human Services. 2025. other. URL: <a href="https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html">https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html</a>
+    </dd><dt id="bib-rc-ig1">[RC-IG1]</dt><dd>
+      <a href="https://www.international-guardianship.com/pdf/GBC/GBC_Australia.pdf"><cite>Guardianship by Country: Resource for Second World Congress on Adult Guardianship Australia</cite></a>.  International Guardianship. 2016. other. URL: <a href="https://www.international-guardianship.com/pdf/GBC/GBC_Australia.pdf">https://www.international-guardianship.com/pdf/GBC/GBC_Australia.pdf</a>
+    </dd><dt id="bib-rc-m1">[RC-M1]</dt><dd>
+      <a href="https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b"><cite>Designing good mental health into the way we bank</cite></a>. Design Council; Monzo Bank et al.  Medium. Oct 30, 2018. other. URL: <a href="https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b">https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b</a>
+    </dd><dt id="bib-rc-na1">[RC-NA1]</dt><dd>
+      <a href="https://nap.nationalacademies.org/catalog/25278/the-intersection-of-behavioral-health-mental-health-and-health-literacy"><cite>The Intersection of Behavioral Health, Mental Health, and Health Literacy</cite></a>.  National Academies of Sciences, Engineering, and Medicine. 2019. other. URL: <a href="https://nap.nationalacademies.org/catalog/25278/the-intersection-of-behavioral-health-mental-health-and-health-literacy">https://nap.nationalacademies.org/catalog/25278/the-intersection-of-behavioral-health-mental-health-and-health-literacy</a>
+    </dd><dt id="bib-rc-w31">[RC-W31]</dt><dd>
+      <a href="https://www.w3.org/Consortium/Legal/2007/06-invited-expert"><cite>Invited Expert and Collaborator Agreement</cite></a>.  W3.org. 2014. other. URL: <a href="https://www.w3.org/Consortium/Legal/2007/06-invited-expert">https://www.w3.org/Consortium/Legal/2007/06-invited-expert</a>
+    </dd><dt id="bib-rc-yls1">[RC-YLS1]</dt><dd>
+      <a href="https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf"><cite>Banking for All: Why Financial Institutions Need to Offer Supportive Banking Features</cite></a>. Brittany Farr; Brian Cash; Annie Harper et al.  Yale Law School. April 2019. other. URL: <a href="https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf">https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf</a>
+    </dd><dt id="bib-wcag21">[WCAG21]</dt><dd>
+      <a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. W3C et al.  W3C Recommendation. 2018. standard. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a>
+    </dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-highlight-vars">(() => {
+// @ts-check
+
+if (document.respec) {
+  document.respec.ready.then(setupVarHighlighter);
+} else {
+  setupVarHighlighter();
+}
+
+function setupVarHighlighter() {
+  document
+    .querySelectorAll("var")
+    .forEach(varElem => varElem.addEventListener("click", highlightListener));
+}
+
+function highlightListener(ev) {
+  ev.stopPropagation();
+  const { target: varElem } = ev;
+  const hightligtedElems = highlightVars(varElem);
+  const resetListener = () => {
+    const hlColor = getHighlightColor(varElem);
+    hightligtedElems.forEach(el => removeHighlight(el, hlColor));
+    [...HL_COLORS.keys()].forEach(key => HL_COLORS.set(key, true));
+  };
+  if (hightligtedElems.length) {
+    document.body.addEventListener("click", resetListener, { once: true });
+  }
+}
+
+// availability of highlight colors. colors from var.css
+const HL_COLORS = new Map([
+  ["respec-hl-c1", true],
+  ["respec-hl-c2", true],
+  ["respec-hl-c3", true],
+  ["respec-hl-c4", true],
+  ["respec-hl-c5", true],
+  ["respec-hl-c6", true],
+  ["respec-hl-c7", true],
+]);
+
+function getHighlightColor(target) {
+  // return current colors if applicable
+  const { value } = target.classList;
+  const re = /respec-hl-\w+/;
+  const activeClass = re.test(value) && value.match(re);
+  if (activeClass) return activeClass[0];
+
+  // first color preference
+  if (HL_COLORS.get("respec-hl-c1") === true) return "respec-hl-c1";
+
+  // otherwise get some other available color
+  return [...HL_COLORS.keys()].find(c => HL_COLORS.get(c)) || "respec-hl-c1";
+}
+
+function highlightVars(varElem) {
+  const textContent = norm(varElem.textContent);
+  const parent = varElem.closest(".algorithm, section");
+  const highlightColor = getHighlightColor(varElem);
+
+  const varsToHighlight = [...parent.querySelectorAll("var")].filter(
+    el =>
+      norm(el.textContent) === textContent &&
+      el.closest(".algorithm, section") === parent
+  );
+
+  // update availability of highlight color
+  const colorStatus = varsToHighlight[0].classList.contains("respec-hl");
+  HL_COLORS.set(highlightColor, colorStatus);
+
+  // highlight vars
+  if (colorStatus) {
+    varsToHighlight.forEach(el => removeHighlight(el, highlightColor));
+    return [];
+  } else {
+    varsToHighlight.forEach(el => addHighlight(el, highlightColor));
+  }
+  return varsToHighlight;
+}
+
+function removeHighlight(el, highlightColor) {
+  el.classList.remove("respec-hl", highlightColor);
+  // clean up empty class attributes so they don't come in export
+  if (!el.classList.length) el.removeAttribute("class");
+}
+
+function addHighlight(elem, highlightColor) {
+  elem.classList.add("respec-hl", highlightColor);
+}
+
+/**
+ * Same as `norm` from src/core/utils, but our build process doesn't allow
+ * imports in runtime scripts, so duplicated here.
+ * @param {string} str
+ */
+function norm(str) {
+  return str.trim().replace(/\s+/g, " ");
+}
+})()</script><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

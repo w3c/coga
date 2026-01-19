@@ -1,0 +1,2985 @@
+<!DOCTYPE html><html lang="en" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 35.6.1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
+.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+		
+<title>Cognitive Accessibility Research Modules - Online Safety and Wellbeing (Algorithms and Data)</title>
+			
+	
+<meta name="description" content="Issues with online safety and wellbeing (Algorithms, AI and Data) for people with cognitive disabilities.">
+	
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:italic}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+		
+		
+	
+<meta name="color-scheme" content="light">
+<meta name="description" content="Internet use and apps can create a number of risks for people requiring cognitive accessibility. This module/paper covers safety issues for these users, including cybercrime, mental health, wellbeing, privacy, and more.">
+<link rel="canonical" href="https://www.w3.org/TR/coga-safety/">
+<style>
+var:hover{text-decoration:underline;cursor:pointer}
+var.respec-hl{color:var(--color,#000);background-color:var(--bg-color);box-shadow:0 0 0 2px var(--bg-color)}
+@media (prefers-color-scheme:dark){
+var.respec-hl{filter:saturate(.9) brightness(.9)}
+}
+var.respec-hl-c1{--bg-color:#f4d200}
+var.respec-hl-c2{--bg-color:#ff87a2}
+var.respec-hl-c3{--bg-color:#96e885}
+var.respec-hl-c4{--bg-color:#3eeed2}
+var.respec-hl-c5{--bg-color:#eacfb6}
+var.respec-hl-c6{--bg-color:#82ddff}
+var.respec-hl-c7{--bg-color:#ffbcf2}
+@media print{
+var.respec-hl{background:0 0;color:#000;box-shadow:unset}
+}
+</style>
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#222;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "specStatus": "DNOTE",
+  "noRecTrack": true,
+  "shortName": "coga-safety",
+  "copyrightStart": "2026",
+  "license": "document",
+  "publishDate": "2026-01-22",
+  "edDraftURI": "https://w3c.github.io/coga/research-modules/Online-Safety-and-Wellbeing.html",
+  "editors": [
+    {
+      "name": "Lisa Seeman-Horwitz",
+      "mailto": "lisa.seeman@zoho.com",
+      "url": "mailto:lisa.seeman@zoho.com"
+    }
+  ],
+  "group": [
+    "apa",
+    "ag"
+  ],
+  "wgPublicList": "public-coga-comments",
+  "localBiblio": {
+    "RM-rotondi1": {
+      "title": "Designing eHealth applications to reduce cognitive effort for persons with severe mental illness: page complexity, navigation simplicity, and comprehensibility.",
+      "date": "2017",
+      "authors": [
+        "A.J. Rotondi",
+        "M.R. Spring",
+        "B.H. Hanusa",
+        "S.M. Eack",
+        "G.L. Haas"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Human Factors 4:1",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5247620/",
+      "status": "academic paper",
+      "id": "rm-rotondi1"
+    },
+    "RM-good1": {
+      "title": "Accessing Web Based Health Care and Republishers for Mental Health: Interface Design Considerations for People Experiencing Mental Illness.",
+      "date": "2014",
+      "authors": [
+        "A. Good",
+        "A. Sambhanthan"
+      ],
+      "etAl": "false",
+      "publisher": "Lecture Notes in Computer Science",
+      "href": "https://link.springer.com/content/pdf/10.1007/978-3-319-07635-5_3.pdf",
+      "status": "academic paper"
+    },
+    "RM-renaldo1": {
+      "title": "Barriers and Facilitation Measures Related to People With Mental Disorders When Using the Web: A Systematic Review.",
+      "date": "2016",
+      "authors": [
+        "B. Renaldo",
+        "C. Sabariego",
+        "A. Cieza"
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Medical Internet Research 18:6",
+      "href": "https://www.jmir.org/2016/6/e157/PDF",
+      "status": "academic paper"
+    },
+    "RM-huang1": {
+      "title": "Users Adoption of Mental Health Apps: Examining the Impact of Information Cues.",
+      "date": "2017",
+      "authors": [
+        "H. Huang",
+        "M. Bashir"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mhealth Uhealth 5:6",
+      "href": "https://mhealth.jmir.org/2017/6/e83/",
+      "status": "academic paper",
+      "id": "rm-huang1"
+    },
+    "RM-bakker1": {
+      "title": "Mental health smartphone apps review and evidence based recommendations for future developments.",
+      "date": "2016",
+      "authors": [
+        "D. Bakker",
+        "N. Kazantizis",
+        "D. Rickwood",
+        "N. Rickard"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 3 1",
+      "href": "https://mental.jmir.org/2016/1/e7/",
+      "status": "academic paper",
+      "id": "rm-bakker1"
+    },
+    "RM-torous1": {
+      "title": "Fostering engagement with mental health apps.",
+      "date": "2018",
+      "authors": [
+        "J. Torous",
+        "J. Lipschitz",
+        "J. Ng",
+        "M. Firth"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 5:1",
+      "href": "https://mental.jmir.org/2018/1/e48/",
+      "status": "academic paper"
+    },
+    "RM-torous2": {
+      "title": "Creating a digital health smartphone app and digital phenotyping platform for mental health and diverse healthcare needs: an interdisciplinary and collaborative approach.",
+      "date": "2019",
+      "authors": [
+        "J. Torous",
+        "J. Wisniewski",
+        "M. Bird",
+        "M. Carpenter",
+        "S. David",
+        "J. Elejalde",
+        "S. Fulford",
+        "S. Guimond",
+        "J. Hays",
+        "S. Humm",
+        "M. Keshavan",
+        "R. Onnela",
+        "D. Rauch",
+        "H. Shrier"
+      ],
+      "etAl": "true",
+      "publisher": "Journal of Technology in Behavioral Science 4:2",
+      "href": "https://link.springer.com/article/10.1007/s41347-019-00095-w",
+      "status": "academic paper"
+    },
+    "RM-firth1": {
+      "title": "The efficacy of smartphone-based mental health interventions for depressive symptoms: a meta-analysis of randomized controlled trials.",
+      "date": "2017",
+      "authors": [
+        "J. Firth",
+        "J. Torous",
+        "F. Nicholas",
+        "M. Carney",
+        "L. Rosenbaum",
+        "P. Sarris"
+      ],
+      "etAl": "false",
+      "publisher": "World Psychiatry 16:3",
+      "href": "https://onlinelibrary.wiley.com/doi/10.1002/wps.20472",
+      "status": "academic paper"
+    },
+    "RM-firth2": {
+      "title": "Mobile Phone-Based Interventions for Mental Health: A Systematic Review of Randomized Controlled Trials.",
+      "date": "2017",
+      "authors": [
+        "J. Firth",
+        "J. Torous",
+        "F. Nicholas",
+        "R. Carney",
+        "L. Rosenbaum",
+        "P. Sarris"
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Medical Internet Research 19:11",
+      "href": "https://www.jmir.org/2017/11/e255/",
+      "status": "academic paper"
+    },
+    "RM-lipschitz1": {
+      "title": "Improving Usability of mHealth Technology for Patients With Serious Mental Illness, A Qualitative Study.",
+      "date": "2018",
+      "authors": [
+        "J. Lipschitz",
+        "J. Torous",
+        "M. Firth",
+        "J. Ng"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Human Factors 5:1",
+      "href": "https://humanfactors.jmir.org/2018/1/e2/",
+      "status": "academic paper",
+      "id": "rm-lipschitz1"
+    },
+    "RM-bailey1": {
+      "title": "Barriers and Facilitators to Technology Use Among Older Adults with Serious Mental Illness.",
+      "date": "2018",
+      "authors": [
+        "E. Bailey",
+        "N. Alvarez-Jimenez",
+        "M. Garcia",
+        "S. Gleeson"
+      ],
+      "etAl": "false",
+      "publisher": "Psychiatric Rehabilitation Journal 41:4",
+      "href": "https://psycnet.apa.org/doi/10.1037/prj0000323",
+      "status": "academic paper"
+    },
+    "RM-subramaniam1": {
+      "title": "Barriers and facilitators to using mental health apps: systematic literature review.",
+      "date": "2020",
+      "authors": [
+        "M. Subramaniam",
+        "C. Shafiee Hanjani",
+        "J. Abdin",
+        "Y. Pang",
+        "S. Picco"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 7 8",
+      "href": "https://mental.jmir.org/2020/8/e17598/",
+      "status": "academic paper"
+    },
+    "RM-larsen1": {
+      "title": "Using Mindfulness Smartphone Apps Supported by Theory to Improve Mental Health Outcomes: A Systematic Review.",
+      "date": "2019",
+      "authors": [
+        "M.E. Larsen",
+        "S. Nicholas",
+        "H. Christensen"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 6:11",
+      "href": "https://mental.jmir.org/2019/11/e12294/",
+      "status": "academic paper"
+    },
+    "RM-martinez1": {
+      "title": "Acceptability of mHealth interventions for mental health among older adults: Systematic review.",
+      "date": "2022",
+      "authors": [
+        "C. Martínez-Alcalá",
+        "J. Pliego-Pastrana",
+        "M. Rosales-Lagarde",
+        "C. Lopez-Noguerola"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Aging 5:3",
+      "volume": "5",
+      "issue": "3",
+      "href": "https://aging.jmir.org/2022/3/e34918/",
+      "status": "academic paper"
+    },
+    "RM-bentley1": {
+      "title": "Building Mental Health into the Design of Digital Health Interventions.",
+      "date": "2018",
+      "authors": [
+        "C. Bentley",
+        "S. Powell",
+        "T. Woodall",
+        "L. Ainsworth",
+        "M. Gowland"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Mental Health 5:6",
+      "volume": "5",
+      "issue": "6",
+      "href": "https://mental.jmir.org/2018/6/e11752/",
+      "status": "academic paper"
+    },
+    "RM-michie1": {
+      "title": "The behavior change wheel: A new method for characterizing and designing behavior change interventions.",
+      "date": "2011",
+      "authors": [
+        "S. Michie",
+        "M. van Stralen",
+        "R. West"
+      ],
+      "etAl": "false",
+      "publisher": "Implementation Science 6:42",
+      "volume": "6",
+      "issue": "42",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/1748-5908-6-42",
+      "status": "academic paper"
+    },
+    "RM-michie2": {
+      "title": "A refined taxonomy of behaviour change techniques to help people change their physical activity and healthy eating behaviours: the CALO-RE taxonomy.",
+      "date": "2011",
+      "authors": [
+        "S. Michie",
+        "M.M. van Stralen",
+        "R. West"
+      ],
+      "etAl": "false",
+      "publisher": "Psychology & Health 26:11",
+      "volume": "26",
+      "issue": "11",
+      "href": "https://www.tandfonline.com/doi/abs/10.1080/08870446.2010.540664",
+      "status": "academic paper"
+    },
+    "RM-michie3": {
+      "title": "The Behavior Change Technique Taxonomy (v1) of 93 hierarchically clustered techniques: building an international consensus for the reporting of behavior change interventions.",
+      "date": "2013",
+      "authors": [
+        "S. Michie",
+        "M. Richardson",
+        "M. Johnston",
+        "C. Abraham",
+        "J. Francis",
+        "W. Hardeman",
+        "M. Eccles",
+        "J. Cane",
+        "C. Wood"
+      ],
+      "etAl": "true",
+      "publisher": "Annals of Behavioral Medicine 46:1",
+      "volume": "46",
+      "issue": "1",
+      "href": "https://academic.oup.com/abm/article/46/1/81/4563838",
+      "status": "academic paper"
+    },
+    "RM-barnett1": {
+      "title": "Understanding Innovators’ Experiences of Barriers and Facilitators in Implementing Digital Health Interventions: Qualitative Interview Study.",
+      "date": "2020",
+      "authors": [
+        "K. Barnett",
+        "S. Vasileiou",
+        "R. Dinesen",
+        "J. Wilson"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR Human Factors 7:3",
+      "volume": "7",
+      "issue": "3",
+      "href": "https://humanfactors.jmir.org/2020/3/e17271/",
+      "status": "academic paper"
+    },
+    "RM-greenhalgh1": {
+      "title": "Beyond adoption: a new framework for theorizing and evaluating nonadoption, abandonment, and challenges to the scale-up, spread, and sustainability of health and care technologies.",
+      "date": "2017",
+      "authors": [
+        "T. Greenhalgh",
+        "J. Wherton",
+        "C. Papoutsi",
+        "J. Lynch",
+        "G. Hughes",
+        "C. A'Court",
+        "S. Hinder",
+        "N. Fahy",
+        "R. Procter",
+        "S. Shaw"
+      ],
+      "etAl": "true",
+      "publisher": "Journal of Medical Internet Research 19:11",
+      "volume": "19",
+      "issue": "11",
+      "href": "https://www.jmir.org/2017/11/e367/",
+      "status": "academic paper"
+    },
+    "RM-greenhalgh2": {
+      "title": "Frameworks for supporting implementation of e-health interventions: systematic review and qualitative synthesis.",
+      "date": "2012",
+      "authors": [
+        "T. Greenhalgh",
+        "G. Robert",
+        "F. Macfarlane",
+        "P. Bate",
+        "O. Kyriakidou"
+      ],
+      "etAl": "false",
+      "publisher": "BMC Medical Informatics and Decision Making 12:87",
+      "volume": "12",
+      "issue": "87",
+      "href": "https://bmcmedinformdecismak.biomedcentral.com/articles/10.1186/1472-6947-12-87",
+      "status": "academic paper"
+    },
+    "RM-nilsen1": {
+      "title": "Making sense of implementation theories, models and frameworks.",
+      "date": "2015",
+      "authors": [
+        "P. Nilsen"
+      ],
+      "etAl": "false",
+      "publisher": "Implementation Science 10:53",
+      "volume": "10",
+      "issue": "53",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/s13012-015-0242-0",
+      "status": "academic paper"
+    },
+    "RM-cane1": {
+      "title": "Validation of the theoretical domains framework for use in behaviour change and implementation research.",
+      "date": "2012",
+      "authors": [
+        "J. Cane",
+        "D. O’Connor",
+        "S. Michie"
+      ],
+      "etAl": "false",
+      "publisher": "Implementation Science 7:37",
+      "volume": "7",
+      "issue": "37",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/1748-5908-7-37",
+      "status": "academic paper"
+    },
+    "RM-proctor1": {
+      "title": "Outcomes for implementation research: conceptual distinctions, measurement challenges, and research agenda.",
+      "date": "2011",
+      "authors": [
+        "E. Proctor",
+        "R. Silmere",
+        "M. Raghavan",
+        "H. Hovmand",
+        "G. Aarons",
+        "A. Bunger",
+        "R. Griffey",
+        "P. Hensley"
+      ],
+      "etAl": "true",
+      "publisher": "Administration and Policy in Mental Health and Mental Health Services Research 38:2",
+      "volume": "38",
+      "issue": "2",
+      "href": "https://link.springer.com/article/10.1007/s10488-010-0319-7",
+      "status": "academic paper"
+    },
+    "RM-damschroder1": {
+      "title": "Fostering implementation of health services research findings into practice: a consolidated framework for advancing implementation science.",
+      "date": "2009",
+      "authors": [
+        "L.J. Damschroder",
+        "D.C. Aron",
+        "R.E. Keith",
+        "S.R. Kirsh",
+        "J.A. Alexander",
+        "J.C. Lowery"
+      ],
+      "etAl": "true",
+      "publisher": "Implementation Science 4:50",
+      "volume": "4",
+      "issue": "50",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/1748-5908-4-50",
+      "status": "academic paper"
+    },
+    "RM-rogers1": {
+      "title": "Diffusion of Innovations (5th Edition).",
+      "date": "2003",
+      "authors": [
+        "E.M. Rogers"
+      ],
+      "etAl": "false",
+      "publisher": "Free Press",
+      "href": "https://books.google.com/books/about/Diffusion_of_Innovations_5th_Edition.html?id=9U1K5LjUOwEC",
+      "status": "academic book"
+    },
+    "RM-davis1": {
+      "title": "Perceived usefulness, perceived ease of use, and user acceptance of information technology.",
+      "date": "1989",
+      "authors": [
+        "F.D. Davis"
+      ],
+      "etAl": "false",
+      "publisher": "MIS Quarterly 13:3",
+      "volume": "13",
+      "issue": "3",
+      "href": "https://www.jstor.org/stable/249008",
+      "status": "academic paper"
+    },
+    "RM-venkatesh1": {
+      "title": "User acceptance of information technology: Toward a unified view.",
+      "date": "2003",
+      "authors": [
+        "V. Venkatesh",
+        "M.G. Morris",
+        "G.B. Davis",
+        "F.D. Davis"
+      ],
+      "etAl": "false",
+      "publisher": "MIS Quarterly 27:3",
+      "volume": "27",
+      "issue": "3",
+      "href": "https://www.jstor.org/stable/30036540",
+      "status": "academic paper"
+    },
+    "RM-pierce1": {
+      "title": "Digital Accessibility Laws and Policies: What You Need to Know.",
+      "date": "2018",
+      "authors": [
+        "J. Pierce"
+      ],
+      "etAl": "false",
+      "publisher": "WebAIM",
+      "href": "https://webaim.org/articles/laws/",
+      "status": "blog"
+    },
+    "RM-who1": {
+      "title": "WHO Guideline: Recommendations on Digital Interventions for Health System Strengthening.",
+      "date": "2019",
+      "authors": [
+        "World Health Organization"
+      ],
+      "etAl": "false",
+      "publisher": "WHO",
+      "href": "https://www.who.int/publications/i/item/9789241550505",
+      "status": "report"
+    },
+    "RM-bauer1": {
+      "title": "Implementation Science: What Is It and Why Should I Care?",
+      "date": "2015",
+      "authors": [
+        "M.S. Bauer",
+        "J. Damschroder",
+        "H. Hagedorn",
+        "J. Smith",
+        "C. Kilbourne"
+      ],
+      "etAl": "true",
+      "publisher": "Psychiatry Research 228:2",
+      "volume": "228",
+      "issue": "2",
+      "href": "https://www.sciencedirect.com/science/article/abs/pii/S0165178115000834",
+      "status": "academic paper",
+      "id": "rm-bauer1"
+    },
+    "RM-proctor2": {
+      "title": "Implementation strategies: recommendations for specifying and reporting.",
+      "date": "2013",
+      "authors": [
+        "E.K. Proctor",
+        "R. Powell",
+        "J. McMillen"
+      ],
+      "etAl": "false",
+      "publisher": "Implementation Science 8:139",
+      "volume": "8",
+      "issue": "139",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/1748-5908-8-139",
+      "status": "academic paper"
+    },
+    "RM-powell1": {
+      "title": "A refined compilation of implementation strategies: results from the Expert Recommendations for Implementing Change (ERIC) project.",
+      "date": "2015",
+      "authors": [
+        "B.J. Powell",
+        "T.J. Waltz",
+        "M.J. Chinman",
+        "L. Damschroder",
+        "J.L. Smith",
+        "M. Matthieu",
+        "J.A. Proctor"
+      ],
+      "etAl": "true",
+      "publisher": "Implementation Science 10:21",
+      "volume": "10",
+      "issue": "21",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/s13012-015-0209-1",
+      "status": "academic paper"
+    },
+    "RM-glasgow1": {
+      "title": "RE-AIM Planning and Evaluation Framework: Adapting to New Science and Practice With a 20-Year Review.",
+      "date": "2019",
+      "authors": [
+        "R.E. Glasgow",
+        "P.C. Estabrooks"
+      ],
+      "etAl": "false",
+      "publisher": "Frontiers in Public Health 7:64",
+      "volume": "7",
+      "issue": "64",
+      "href": "https://www.frontiersin.org/articles/10.3389/fpubh.2019.00064/full",
+      "status": "academic paper"
+    },
+    "RM-waltz1": {
+      "title": "Use of concept mapping to characterize relationships among implementation strategies and assess their feasibility and importance: results from the Expert Recommendations for Implementing Change (ERIC) study.",
+      "date": "2015",
+      "authors": [
+        "T.J. Waltz",
+        "B.J. Powell",
+        "M.J. Chinman",
+        "L.J. Damschroder",
+        "J.L. Smith",
+        "M.M. Matthieu",
+        "J.A. Proctor"
+      ],
+      "etAl": "true",
+      "publisher": "Implementation Science 10:109",
+      "volume": "10",
+      "issue": "109",
+      "href": "https://implementationscience.biomedcentral.com/articles/10.1186/s13012-015-0295-0",
+      "status": "academic paper"
+    },
+    "RM-lazar1": {
+      "title": "Research on Accessible Technology and Computing: What’s Next?",
+      "date": "2017",
+      "authors": [
+        "J. Lazar",
+        "J. Goldstein",
+        "A. Taylor"
+      ],
+      "etAl": "false",
+      "publisher": "ACM Transactions on Accessible Computing 10:1",
+      "volume": "10",
+      "issue": "1",
+      "href": "https://dl.acm.org/doi/10.1145/3078652",
+      "status": "academic paper"
+    },
+    "RM-koopman1": {
+      "title": "A systematic review of technology-based interventions for people with cognitive disabilities",
+      "date": "2018",
+      "authors": [
+        "R. Koopman",
+        "S. Wang",
+        "L. Young"
+      ],
+      "etAl": "false",
+      "publisher": "Disability and Rehabilitation: Assistive Technology 13:7",
+      "volume": "13",
+      "issue": "7",
+      "href": "https://www.tandfonline.com/doi/full/10.1080/17483107.2018.1440487",
+      "status": "academic paper"
+    },
+    "WCAG21": {
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.1",
+      "date": "2018",
+      "authors": [
+        "W3C"
+      ],
+      "etAl": "false",
+      "publisher": "W3C Recommendation",
+      "href": "https://www.w3.org/TR/WCAG21/",
+      "status": "standard",
+      "id": "wcag21"
+    },
+    "section508": {
+      "title": "Section 508: Rehabilitation Act, Accessibility Requirements",
+      "date": "2017",
+      "authors": [
+        "U.S. Access Board"
+      ],
+      "etAl": "false",
+      "publisher": "Government Standard",
+      "href": "https://www.access-board.gov/ict/",
+      "status": "standard"
+    },
+    "RM-petrie1": {
+      "title": "Designing for older and disabled people: Where do we go from here?",
+      "date": "2015",
+      "authors": [
+        "H. Petrie",
+        "J. Kheir"
+      ],
+      "etAl": "false",
+      "publisher": "Universal Access in the Information Society 14:4",
+      "volume": "14",
+      "issue": "4",
+      "href": "https://link.springer.com/article/10.1007/s10209-014-0372-3",
+      "status": "academic paper"
+    },
+    "RM-freire1": {
+      "title": "Understanding the Accessibility of Mobile Health Apps for Individuals With Cognitive Disabilities",
+      "date": "2020",
+      "authors": [
+        "T. Freire",
+        "A. Lobato",
+        "R. Rego"
+      ],
+      "etAl": "false",
+      "publisher": "JMIR mHealth and uHealth 8:3",
+      "volume": "8",
+      "issue": "3",
+      "href": "https://mhealth.jmir.org/2020/3/e16239/",
+      "status": "academic paper"
+    },
+    "RM-thornton1": {
+      "title": "Specific features of current and emerging mobile health apps: user views among people with and without mental health problems",
+      "date": "2018-12-4",
+      "authors": [
+        "L. Thornton",
+        "F. Kay-Lambkin"
+      ],
+      "etAl": "false",
+      "publisher": "MHealth",
+      "href": "https://mhealth.amegroups.com/article/view/22771/html",
+      "status": "academic paper"
+    },
+    "RM-rotondi2": {
+      "title": "Critical Design Elements of E-Health Applications for Users With Severe Mental Illness: Singular Focus, Simple Architecture, Prominent Contents, Explicit Navigation, and Inclusive Hyperlinks",
+      "date": "2015",
+      "authors": [
+        "A.J. Rotondi",
+        "S.M. Eack",
+        "B.H. Hanusa",
+        "M.B. Spring",
+        "G.L. Haas"
+      ],
+      "etAl": "false",
+      "publisher": "Schizophrenia Bulletin",
+      "href": "https://doi.org/10.1093/schbul/sbt194",
+      "status": "academic paper",
+      "id": "rm-rotondi2"
+    },
+    "RM-hasson1": {
+      "title": "Psychophysiological effects of a web-based stress management system: A prospective, randomized controlled intervention study of IT and media workers",
+      "date": "2005",
+      "authors": [
+        "D. Hasson",
+        "U.M. Anderberg",
+        "T. Theorell"
+      ],
+      "etAl": "true",
+      "publisher": "BMC Public Health",
+      "href": "https://doi.org/10.1186/1471-2458-5-78",
+      "status": "academic paper"
+    },
+    "RM-achtyes1": {
+      "title": "Off-hours use of a smartphone intervention to extend support for individuals with schizophrenia spectrum disorders recently discharged from a psychiatric hospital",
+      "date": "2019",
+      "authors": [
+        "E.D. Achtyes",
+        "D. Ben-Zeev",
+        "Z. Luo",
+        "H. Mayle",
+        "B. Burke",
+        "A.J. Rotondi",
+        "J.D. Gottlieb",
+        "M.F. Brunette",
+        "K.T. Mueser",
+        "S. Gingerich",
+        "P.S. Meyer-Kalos",
+        "P. Marcy",
+        "N.R. Schooler",
+        "D.G. Robinson",
+        "J.M. Kane"
+      ],
+      "etAl": "true",
+      "publisher": "Schizophrenia Research",
+      "href": "https://www.sciencedirect.com/science/article/abs/pii/S0920996418306777?via%3Dihub",
+      "status": "academic paper"
+    },
+    "RM-gudith1": {
+      "title": "CHI '08: Proceedings of the SIGCHI Conference on Human Factors in Computing Systems",
+      "date": "2008",
+      "authors": [
+        "G. Mark Gudith",
+        "U. Klocke"
+      ],
+      "etAl": "false",
+      "publisher": "ACM",
+      "volume": "",
+      "issue": "",
+      "href": "https://doi.org/10.1145/1357054.1357072",
+      "status": "conference paper"
+    },
+    "RM-gmark1": {
+      "title": "Email Duration, Batching and Self-interruption: Patterns of Email Use on Productivity and Stress",
+      "date": "2016",
+      "authors": [
+        "G. Mark",
+        "S.T. Iqbal",
+        "M. Czerwinski",
+        "P. Johns",
+        "A. Sano"
+      ],
+      "etAl": "false",
+      "publisher": "ACM",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.ics.uci.edu/~gmark/Home_page/Publications_files/CHI%2016%20Email%20Duration.pdf",
+      "status": "conference paper"
+    },
+    "RM-kuniecki1": {
+      "title": "The color red attracts attention in an emotional context. An ERP study",
+      "date": "2015",
+      "authors": [
+        "M. Kuniecki",
+        "J. Pilarczyk",
+        "S. Pilarczyk"
+      ],
+      "etAl": "false",
+      "publisher": "Frontiers in Human Neuroscience",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.frontiersin.org/articles/10.3389/fnhum.2015.00212/full",
+      "status": "academic paper"
+    },
+    "RM-thielsch1": {
+      "title": "Depressive symptoms and web user experience",
+      "date": "2018",
+      "authors": [
+        "T. Thielsch",
+        "C. Thielsch"
+      ],
+      "etAl": "false",
+      "publisher": "PeerJ",
+      "volume": "",
+      "issue": "",
+      "href": "https://peerj.com/articles/4439/",
+      "status": "academic paper"
+    },
+    "RM-muranaka1": {
+      "title": "Unobtrusive notification based on auditory changes in ambient music",
+      "date": "2021",
+      "authors": [
+        "Y. Muranaka",
+        "M. Al-Sada",
+        "T. Nakajima"
+      ],
+      "etAl": "false",
+      "publisher": "IEEE 3rd Global Conference on Life Sciences and Technologies (LifeTech)",
+      "volume": "",
+      "issue": "",
+      "href": "https://ieeexplore.ieee.org/document/9391913",
+      "status": "conference paper"
+    },
+    "RM-gallud1": {
+      "title": "Smartphone Notifications: A Study on the Sound to Soundless Tendency",
+      "date": "2015",
+      "authors": [
+        "J. Gallud",
+        "R. Tesoriero"
+      ],
+      "etAl": "false",
+      "publisher": "Mobile HCI",
+      "volume": "",
+      "issue": "",
+      "href": "https://dl.acm.org/doi/epdf/10.1145/2786567.2793706",
+      "status": "conference paper"
+    },
+    "RM-lukasik1": {
+      "title": "The Relationship of Anxiety and Stress With Working Memory Performance in a Large Non-depressed Sample",
+      "date": "2019",
+      "authors": [
+        "K. Lukasik",
+        "O. Waris",
+        "A. Soveri",
+        "M. Lehtonen",
+        "M. Laine"
+      ],
+      "etAl": "false",
+      "publisher": "Frontiers in Psychology",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00004/full",
+      "status": "academic paper"
+    },
+    "RM-przybylski1": {
+      "title": "Motivational, emotional, and behavioral correlates of fear of missing out",
+      "date": "2013",
+      "authors": [
+        "A.K. Przybylski",
+        "K. Murayama",
+        "C.R. DeHaan",
+        "V. Gladwell"
+      ],
+      "etAl": "false",
+      "publisher": "Computers in Human Behavior",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.sciencedirect.com/science/article/abs/pii/S0747563213000800#ab005",
+      "status": "academic paper"
+    },
+    "RM-cowan1": {
+      "title": "The magical number 4 in short-term memory: A reconsideration of mental storage capacity",
+      "date": "2000",
+      "authors": [
+        "N. Cowan"
+      ],
+      "etAl": "false",
+      "publisher": "Behavioral and Brain Sciences",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/div-classtitlethe-magical-number-4-in-short-term-memory-a-reconsideration-of-mental-storage-capacitydiv/44023F1147D4A1D44BDC0AD226838496",
+      "status": "academic paper"
+    },
+    "RM-iqbal1": {
+      "title": "Oasis: A framework for linking notification delivery to the perceptual structure of goal-directed tasks",
+      "date": "2010",
+      "authors": [
+        "S.T. Iqbal",
+        "B.P. Bailey"
+      ],
+      "etAl": "false",
+      "publisher": "ACM Transactions on Computer-Human Interaction (TOCHI)",
+      "volume": "",
+      "issue": "",
+      "href": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=oCQdMjoAAAAJ&citation_for_view=oCQdMjoAAAAJ:Se3iqnhoufwC",
+      "status": "conference paper"
+    },
+    "RM-mcmanus1": {
+      "title": "Barriers to learning online experienced by students with a mental health disability",
+      "date": "2017",
+      "authors": [
+        "D. McManus",
+        "R. Dryer",
+        "M. Henning"
+      ],
+      "etAl": "false",
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "href": "",
+      "status": "academic paper"
+    },
+    "RM-monteith1": {
+      "title": "Internet of things issues related to psychiatry",
+      "date": "2021",
+      "authors": [
+        "S. Monteith",
+        "T. Glenn",
+        "J. Geddes",
+        "et al."
+      ],
+      "etAl": "true",
+      "publisher": "International Journal of Bipolar Disorders",
+      "volume": "9",
+      "issue": "11",
+      "href": "https://doi.org/10.1186/s40345-020-00216-y",
+      "status": "academic paper",
+      "id": "rm-monteith1"
+    },
+    "RC-WSJ1": {
+      "title": "Facebook Knows Instagram Is Toxic for Teen Girls, Company Documents Show",
+      "date": "2021-09-14",
+      "authors": [
+        "G. Wells",
+        "J. Horwitz",
+        "D. Seetharaman"
+      ],
+      "etAl": "false",
+      "publisher": "Wall Street Journal",
+      "href": "https://www.wsj.com/articles/facebook-knows-instagram-is-toxic-for-teen-girls-company-documents-show-11631620739",
+      "status": "other"
+    },
+    "RM-Bernard1": {
+      "title": "Difficulties Encountered by People With Depression and Anxiety on the Web: Qualitative Study and Web-Based Expert Survey",
+      "date": "2019",
+      "authors": [
+        "R. Bernard",
+        "C. Sabariego",
+        "A. Cieza"
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Medical Internet Research",
+      "volume": "21",
+      "issue": "10",
+      "href": "https://www.jmir.org/2019/10/e12514/",
+      "status": "academic paper",
+      "id": "rm-bernard1"
+    },
+    "RM-szalma1": {
+      "title": "Human Computer Interaction Fundamentals",
+      "date": "2009",
+      "authors": [
+        "J.L. Szalma",
+        "P.A. Hancock"
+      ],
+      "etAl": "false",
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "href": "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.458.7291&rep=rep1&status=pdf#page=110",
+      "status": "academic paper"
+    },
+    "RM-bunyi1": {
+      "title": "Accessibility and Digital Mental Health: Considerations for More Accessible and Equitable Mental Health Apps",
+      "date": "2021",
+      "authors": [
+        "J. Bunyi",
+        "K.E. Ringland",
+        "S.M. Schueller"
+      ],
+      "etAl": "false",
+      "publisher": "Frontiers in Digital Health",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.frontiersin.org/articles/10.3389/fdgth.2021.742196/full",
+      "status": "academic paper"
+    },
+    "RC-DesignCouncil1": {
+      "title": "Designing good mental health into the way we bank: Our insights with Monzo Bank",
+      "date": "2018",
+      "authors": [
+        "Design Council"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b",
+      "status": "other"
+    },
+    "RM-farr1": {
+      "title": "Banking for All: Why Financial Institutions Need to Offer Supportive Banking Features",
+      "date": "2019",
+      "authors": [
+        "B. Farr",
+        "B. Cash",
+        "A. Harper"
+      ],
+      "etAl": "false",
+      "publisher": "The Ludwig Center for Community and Economic Development at Yale Law School",
+      "volume": "",
+      "issue": "",
+      "href": "https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf",
+      "status": "other"
+    },
+    "RM-Yu1": {
+      "title": "Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model",
+      "date": "2016-02",
+      "authors": [
+        "R. Yu"
+      ],
+      "etAl": "false",
+      "publisher": "Neurobiology of Stress",
+      "volume": "",
+      "issue": "",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5146206/",
+      "status": "academic paper",
+      "id": "rm-yu1"
+    },
+    "RM-behar1": {
+      "title": "Wearables and mHealth in mental health and neurological disorders",
+      "date": "2019",
+      "authors": [
+        "J.A. Behar",
+        "J. Oster",
+        "M. De Vos",
+        "G.D. Clifford"
+      ],
+      "etAl": "false",
+      "publisher": "Physiological Measurement",
+      "volume": "40",
+      "issue": "7",
+      "href": "",
+      "status": "academic paper"
+    },
+    "RC-locke1": {
+      "title": "Designing for stressed out users: Part 1",
+      "date": "2021-12-23",
+      "authors": [
+        "H. Locke"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/@h_locke/designing-for-stressed-out-users-part-1-4489793dbe41",
+      "status": "other"
+    },
+    "RC-locke2": {
+      "title": "Designing for stressed out users: Part 2",
+      "date": "2021-12-23",
+      "authors": [
+        "H. Locke"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/@h_locke/designing-for-stressed-out-users-part-2-efc00857ad3e",
+      "status": "other"
+    },
+    "RC-locke3": {
+      "title": "Designing for stressed out users: Part 3",
+      "date": "2020-05-02",
+      "authors": [
+        "H. Locke"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/@h_locke/designing-for-stressed-out-users-part-3-4c076c1955fc",
+      "status": "other"
+    },
+    "RM-bridgland1": {
+      "title": "A Meta-Analysis of the Effects of Trigger Warnings, Content Warnings, and Content Notes",
+      "date": "2022",
+      "authors": [
+        "V. Bridgland",
+        "P. Jones",
+        "B. Bellet"
+      ],
+      "etAl": "false",
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "href": "https://doi.org/10.31219/osf.io/qav9m",
+      "status": "academic paper"
+    },
+    "RM-boysen1": {
+      "title": "Trigger warning efficacy: The impact of warnings on affect, attitudes, and learning",
+      "date": "2021",
+      "authors": [
+        "G.A. Boysen",
+        "R.A. Isaacs",
+        "L. Tretter",
+        "S. Markowski"
+      ],
+      "etAl": "false",
+      "publisher": "Scholarship of Teaching and Learning in Psychology",
+      "volume": "7",
+      "issue": "1",
+      "href": "https://doi.org/10.1037/stl0000150",
+      "status": "academic paper"
+    },
+    "RM-bridgland2": {
+      "title": "Something Distressing This Way Comes: The Effects of Trigger Warnings on Avoidance Behaviors in an Analogue Trauma Task",
+      "date": "2022",
+      "authors": [
+        "V.M.E. Bridgland",
+        "M.K.T. Takarangi"
+      ],
+      "etAl": "false",
+      "publisher": "Behavior Therapy",
+      "volume": "53",
+      "issue": "",
+      "href": "https://doi.org/10.1016/j.beth.2021.10.005",
+      "status": "academic paper"
+    },
+    "RM-gainsburg1": {
+      "title": "Trigger warnings as an interpersonal emotion-regulation tool: Avoidance, attention, and affect depend on beliefs",
+      "date": "2018",
+      "authors": [
+        "I. Gainsburg",
+        "A. Earl"
+      ],
+      "etAl": "false",
+      "publisher": "Journal of Experimental Social Psychology",
+      "volume": "79",
+      "issue": "",
+      "href": "https://doi.org/10.1016/j.jesp.2018.08.006",
+      "status": "academic paper"
+    },
+    "RM-cauberghe1": {
+      "title": "How Adolescents Use Social Media to Cope with Feelings of Loneliness and Anxiety During COVID-19 Lockdown",
+      "date": "2021-04",
+      "authors": [
+        "V. Cauberghe",
+        "I. Van Wesenbeeck",
+        "S. De Jans",
+        "L. Hudders",
+        "K. Ponnet"
+      ],
+      "etAl": "false",
+      "publisher": "Cyberpsychology, Behavior, and Social Networking",
+      "volume": "24",
+      "issue": "4",
+      "href": "https://doi.org/10.1089/cyber.2020.0478",
+      "status": "academic paper",
+      "id": "rm-cauberghe1"
+    },
+    "ACIxD": {
+      "title": "The Association for Conversational Interaction Design Wiki",
+      "date": "2019",
+      "publisher": "The Association for Conversational Interaction Design",
+      "href": "http://acixd.org/wiki/doku.php",
+      "status": "standard"
+    },
+    "EFTA": {
+      "title": "Electronic Fund Transfer Act Regulation E",
+      "date": "2025",
+      "etAl": "false",
+      "publisher": "National Credit Union Administration",
+      "href": "https://ncua.gov/regulation-supervision/manuals-guides/federal-consumer-financial-protection-guide/deposit-related-regulations-and-statutes/electronic-fund-transfer-act-regulation-e"
+    },
+    "CA": {
+      "title": "The Colby Act",
+      "date": "2021",
+      "etAl": "false",
+      "publisher": " Alabama Care",
+      "href": "https://www.youtube.com/watch?v=00ahyKABIAw"
+    },
+    "ETSI-ES202-076V211": {
+      "title": "ETSI ES 202 076 V2.1.1 2009-06: Generic spoken command vocabulary for ICT devices and services.",
+      "date": "2009",
+      "publisher": "European Technical Standards Institute",
+      "href": "http://www.etsi.org/deliver/etsi_es/202000_202099/202076/02.01.01_50/es_202076v020101m.pdf"
+    },
+    "ETSI-ETR-096": {
+      "title": "ETSI ETR 096 Human factors guidelines for the design of minimum phone based user interface to computer services.",
+      "date": "1993",
+      "publisher": "European Technical Standards Institute",
+      "href": "http://www.etsi.org/deliver/etsi_etr/001_099/096/01_60/etr_096e01p.pdf"
+    },
+    "GDPR": {
+      "title": "General Data Protection Regulation",
+      "date": "2023",
+      "publisher": "GDPR eu",
+      "href": "https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/"
+    },
+    "GLBA": {
+      "title": "Gramm-Leach-Blilely ACT ",
+      "date": "1999",
+      "publisher": "US Federal Trade Commission",
+      "href": "https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act"
+    },
+    "MENCAP": {
+      "title": "The Mental Capacity Act",
+      "publisher": "MenCap.org",
+      "href": "https://www.mencap.org.uk/advice-and-support/mental-capacity-act"
+    },
+    "Title42-section255": {
+      "title": "U.S. Telecommunications Act Section 255 Accessibility Guidelines",
+      "date": "1996",
+      "publisher": "United States Code, Title 42, Section 255.",
+      "href": "https://www.access-board.gov/ict/guide/2555_guide.md.html"
+    },
+    "VBWG": {
+      "title": "Voice Browser Working Group",
+      "date": "12 October 2015",
+      "publisher": "World Wide Web Consortium",
+      "href": "https://www.w3.org/Voice/"
+    },
+    "voicexml20": {
+      "title": "Voice Extensible Markup Language Version 2.0",
+      "date": "16 March 2004",
+      "authors": [
+        "S. McGlashan",
+        "D. Burnett",
+        "J. Carter",
+        "P. Danielsen",
+        "J. Ferrans",
+        "A. Hunt",
+        "B. Lucas",
+        "B. Porter",
+        "K. Rehor",
+        "S. Tryphonas"
+      ],
+      "etAl": "true",
+      "publisher": "World Wide Web Consortium",
+      "href": "https://www.w3.org/TR/voicexml20/"
+    },
+    "voicexml21": {
+      "title": "Voice Extensible Markup Language  2.1",
+      "date": "2007",
+      "authors": [
+        "M. Oshry",
+        "R.J. Auburn",
+        "P. Baggia",
+        "M. Bodell",
+        "D. Burke",
+        "D. Burnett",
+        "E. Candell",
+        "J. Carter",
+        "S. McGlashan",
+        "A. Lee",
+        "B. Porter"
+      ],
+      "etAl": "true",
+      "publisher": "World Wide Web Consortium",
+      "href": "https://www.w3.org/TR/voicexml21/"
+    },
+    "voicexml30": {
+      "title": "Voice Extensible Markup Language  3.0",
+      "date": "2010",
+      "authors": [
+        "S. McGlashan",
+        "D. Burnett",
+        "R. Akolkar",
+        "R.J. Auburn",
+        "P. Baggia",
+        "J. Barnett",
+        "M. Bodell",
+        "J. Carter",
+        "M. Deshmukh"
+      ],
+      "etAl": "true",
+      "publisher": "World Wide Web Consortium",
+      "href": "https://www.w3.org/TR/voicexml30/"
+    },
+    "RC-ACLU1": {
+      "title": "Supported Decision-Making: Frequently Asked Questions",
+      "date": "",
+      "authors": [],
+      "etAl": "false",
+      "publisher": "ACLU",
+      "href": "https://www.aclu.org/sites/default/files/field_document/faq_about_supported_decision_making.pdf",
+      "status": "other"
+    },
+    "RC-Alberta1": {
+      "title": "Supported Decision-making",
+      "date": "",
+      "authors": [],
+      "etAl": "false",
+      "publisher": "",
+      "href": "https://www.alberta.ca/supported-decision-making",
+      "status": "other"
+    },
+    "RC-ASAN1": {
+      "title": "Supported Decision-making: Why the Right to Make Choices With Support Matters",
+      "date": "2020",
+      "publisher": "Autistic Self Advocacy Network",
+      "href": "https://autisticadvocacy.org/actioncenter/issues/choices/sdm/",
+      "status": "other"
+    },
+    "RC-CNBC1": {
+      "title": "Here’s how online scammers prey on older Americans, and what they should know to fight back",
+      "date": "November 2019",
+      "authors": [
+        "Kate Fazzini"
+      ],
+      "etAl": "false",
+      "publisher": "CNBC",
+      "href": "https://www.cnbc.com/2019/11/23/new-research-pinpoints-how-elderly-people-are-targeted-in-online-scams.html",
+      "status": "other"
+    },
+    "RC-CPR1": {
+      "title": "About Supported Decision-Making",
+      "date": "2018",
+      "etAl": "false",
+      "publisher": "Center for Public Representation",
+      "href": "https://supporteddecisions.org/about-supported-decision-making/",
+      "status": "other"
+    },
+    "RC-DRCNH1": {
+      "title": "What is Supported Decision-Making?",
+      "date": "2021",
+      "publisher": "DRCNH.org",
+      "href": "https://drcnh.org/know-your-rights/what-is-supported-decision-making/",
+      "status": "other"
+    },
+    "RC-E1": {
+      "title": "Social media for knowledge-sharing: A systematic literature review",
+      "date": " 2019",
+      "authors": [
+        "Yunis Ali Ahmed",
+        "Mohammad Nazir Ahmad"
+      ],
+      "etAl": "true",
+      "publisher": "Elsevier",
+      "href": "https://www.sciencedirect.com/science/article/abs/pii/S0736585317306688",
+      "status": "other"
+    },
+    "RC-GATOR1": {
+      "title": "Guardianship Alternatives and Transfer-of-Rights Glossary",
+      "date": "2023",
+      "publisher": "Gator",
+      "href": "https://gator.communityinclusion.org/#glossary",
+      "status": "other"
+    },
+    "RC-HHS1": {
+      "title": "Informed Consent FAQs",
+      "date": "2025",
+      "publisher": "US Department of Health and Human Services",
+      "href": "https://www.hhs.gov/ohrp/regulations-and-policy/guidance/faq/informed-consent/index.html",
+      "status": "other"
+    },
+    "RC-SD1": {
+      "title": "Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model",
+      "date": "June 2016",
+      "authors": [
+        "Rongjun Yu"
+      ],
+      "etAl": "false",
+      "publisher": "Elsevier",
+      "href": "https://www.sciencedirect.com/science/article/pii/S2352289515300187?via%3Dihub",
+      "status": "other"
+    },
+    "RC-IG1": {
+      "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Australia",
+      "date": "2016",
+      "publisher": "International Guardianship",
+      "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Australia.pdf",
+      "status": "other"
+    },
+    "RC-IG2": {
+      "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Canada",
+      "date": "2012",
+      "publisher": "International Guardianship",
+      "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Canada.pdf",
+      "status": "other"
+    },
+    "RC-IG3": {
+      "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship Japan",
+      "date": "2016",
+      "publisher": "International Guardianship",
+      "href": "https://www.international-guardianship.com/pdf/GBC/GBC_Japan.pdf",
+      "status": "other"
+    },
+    "RC-IG4": {
+      "title": "Guardianship by Country: Resource for Second World Congress on Adult Guardianship USA",
+      "date": "2016",
+      "publisher": "International Guardianship",
+      "href": "https://www.international-guardianship.com/pdf/GBC/GBC_USA.pdf",
+      "status": "other"
+    },
+    "RC-M1": {
+      "title": "Designing good mental health into the way we bank",
+      "date": "Oct 30, 2018",
+      "authors": [
+        "Design Council",
+        "Monzo Bank"
+      ],
+      "etAl": "false",
+      "publisher": "Medium",
+      "href": "https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b",
+      "status": "other",
+      "id": "rc-m1"
+    },
+    "RC-MNC1": {
+      "title": "Guardianship",
+      "date": "2024",
+      "publisher": "Minnesota Judicial Branch",
+      "href": "https://www.mncourts.gov/help-topics/guardianship.aspx#tab02Duties",
+      "status": "other"
+    },
+    "RC-NA1": {
+      "title": "The Intersection of Behavioral Health, Mental Health, and Health Literacy",
+      "date": "2019",
+      "publisher": "National Academies of Sciences, Engineering, and Medicine",
+      "href": "https://nap.nationalacademies.org/catalog/25278/the-intersection-of-behavioral-health-mental-health-and-health-literacy",
+      "status": "other"
+    },
+    "RC-NID1": {
+      "title": "Managing your affairs and enduring power of attorney",
+      "publisher": "NIDirect.gov.uk",
+      "href": "https://www.nidirect.gov.uk/articles/managing-your-affairs-and-enduring-power-attorney",
+      "status": "other"
+    },
+    "RC-NYC1": {
+      "title": "Guardianship of an Intellectually or Developmentally Disabled Adult",
+      "date": "2022",
+      "publisher": "NY Courts",
+      "href": "https://nycourts.gov/courthelp/Guardianship/17A.shtml",
+      "status": "other"
+    },
+    "RC-OPGS1": {
+      "title": "Terms Used, Letter G",
+      "publisher": "Office of the Public Guardian Scotland",
+      "href": "https://www.publicguardian-scotland.gov.uk/general/terms-used#letterg",
+      "status": "other"
+    },
+    "RC-OPGS12": {
+      "title": "Welcome to the Office of the Public Guardian in Scotland",
+      "publisher": "Office of the Public Guardian Scotland",
+      "href": "https://www.publicguardian-scotland.gov.uk/",
+      "status": "other"
+    },
+    "RC-OPGS2": {
+      "title": "What is a guardianship order?",
+      "etAl": "false",
+      "publisher": "Office of the Public Guardian Scotland",
+      "href": "https://www.publicguardian-scotland.gov.uk/guardianship-orders",
+      "status": "other"
+    },
+    "RC-SDMNY1": {
+      "title": "What is Supported Decision-Making?",
+      "date": "2024",
+      "publisher": "SDMNY",
+      "href": "https://sdmny.org/about-supported-decision-making/what-is-supported-decision-making/",
+      "status": "other"
+    },
+    "RC-UKGov1": {
+      "title": "Policy paper: Requesting information about a guardianship order",
+      "date": "2022",
+      "publisher": "Gov.UK",
+      "href": "https://www.gov.uk/government/publications/requesting-information-about-a-guardianship-order",
+      "status": "other"
+    },
+    "RC-W31": {
+      "title": "Invited Expert and Collaborator Agreement",
+      "date": "2014",
+      "publisher": "W3.org",
+      "href": "https://www.w3.org/Consortium/Legal/2007/06-invited-expert",
+      "status": "other"
+    },
+    "RC-YLS1": {
+      "title": "Banking for All: Why Financial Institutions Need to Offer Supportive Banking Features",
+      "date": "April 2019",
+      "authors": [
+        "Brittany Farr",
+        "Brian Cash",
+        "Annie Harper"
+      ],
+      "etAl": "true",
+      "publisher": "Yale Law School",
+      "href": "https://law.yale.edu/sites/default/files/area/clinic/document/banking_for_all_cedc.report.final.pdf",
+      "status": "other"
+    },
+    "RC-BS1": {
+      "title": "BlindSquare - “Pioneering accessible navigation - indoors and outdoors. Know where you are, know where you're going, travel with confidence",
+      "date": "July 16, 2025",
+      "etAl": "false",
+      "href": "https://apps.apple.com/ph/app/blindsquare/id500557255",
+      "status": "other"
+    },
+    "RC-WFINDR1": {
+      "title": "Wayfindr Standard Issued to Address Exponentially Growing Indoor Audio Navigation Market.",
+      "date": "2017",
+      "publisher": "The Global Initiative for Inclusive ICTs",
+      "href": "https://g3ict.org/publication/wayfindr-accelerating-the-adoption-of-indoor-audio-navigation-with-a-standard-user-interface#:~:text=G3ict%20%E2%80%93%20the%20Global%20Initiative%20for,with%20Disabilities%20at%20UN%20DESA.",
+      "status": "other"
+    },
+    "RC-WAI1": {
+      "title": "Accessible Way-Finding using Web Technologies.",
+      "date": "December 3, 2014",
+      "publisher": "W3C Symposia, W3C/WAI Research and Development Working Group",
+      "href": "https://www.w3.org/WAI/RD/2014/way-finding/",
+      "status": "other"
+    },
+    "RC-WAI2": {
+      "title": "Extended Abstract for the RDWG Symposium on Accessible Way-Finding Using Web Technologies, Accessible Wayfinding Ontologies for People with Disabilities",
+      "date": "December 3, 2014",
+      "authors": [
+        "Benner",
+        "J H Karimi"
+      ],
+      "etAl": "false",
+      "publisher": "W3C Proceedings",
+      "href": "https://www.w3.org/WAI/RD/2014/way-finding/paper9",
+      "status": "other"
+    },
+    "RC-COGA1": {
+      "title": "Cognitive Accessibility Design Pattern - Provide Help with Directions",
+      "etAl": "false",
+      "publisher": "COGA",
+      "href": "https://www.w3.org/WAI/WCAG2/supplemental/patterns/o7p06-supported-wayfinding/",
+      "status": "other"
+    },
+    "RC-IAD1": {
+      "title": "Wikipedia - Internet Addiction Disorder",
+      "publisher": "Wikipedia",
+      "href": "https://en.wikipedia.org/wiki/Internet_addiction_disorder",
+      "status": "other",
+      "id": "rc-iad1"
+    },
+    "RM-ang1": {
+      "title": "Going Online to Stay Connected Online Social Participation Buffers the Relationship Between Pain and Depression",
+      "date": "2019",
+      "authors": [
+        "Shannon Ang",
+        "Tuo-Yu Chen"
+      ],
+      "etAl": "true",
+      "href": " https://doi.org/10.1093/geronb/gby109",
+      "status": "academic paper",
+      "id": "rm-ang1"
+    },
+    "RM-oneil1": {
+      "title": "Weapons of Math Destruction  Chapter 6 Personality Tests Chapter 10 Facebook experiments",
+      "date": "2016",
+      "authors": [
+        "O Neil Cathy"
+      ],
+      "etAl": "false",
+      "href": "https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815",
+      "id": "rm-oneil1"
+    },
+    "RM-caplan1": {
+      "title": "Relations Among Loneliness, Social Anxiety, and Problematic Internet Use",
+      "date": "2007",
+      "authors": [
+        "S Caplan"
+      ],
+      "etAl": "false",
+      "publisher": "CyberPsychology & Behavior",
+      "href": "https://doi.org/10.1089/cpb.2006.9963",
+      "status": "academic paper",
+      "id": "rm-caplan1"
+    },
+    "RM-hardy1": {
+      "title": "The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,Pages 282-290, ISSN 0747-5632",
+      "date": "2016",
+      "authors": [
+        "Bruce W Hardy",
+        "Jessica Castonguay"
+      ],
+      "etAl": "false",
+      "publisher": "Computers in Human Behavior",
+      "href": "https://doi.org/10.1016/j.chb.2018.04.005",
+      "status": "academic paper",
+      "id": "rm-hardy1"
+    },
+    "RM-hökby1": {
+      "title": "Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents",
+      "date": "2016",
+      "authors": [
+        "Hokby S",
+        "Hadlaczky G",
+        "Westerlund J"
+      ],
+      "etAl": "true",
+      "publisher": "JMIR Ment Health3(3):e31 Published 2016 Jul 13 doi:102196/mental5925",
+      "status": "academic paper",
+      "id": "rm-hökby1"
+    },
+    "RC-antonakos1": {
+      "title": "Wayfinding with Visuo-Spatial Impairment from Stroke and Traumatic Brain Injury",
+      "date": "",
+      "authors": [
+        "antonakos C",
+        "Giordani B",
+        "Ashton-Miller J"
+      ],
+      "etAl": "false",
+      "publisher": "",
+      "href": "",
+      "status": "academic paper"
+    },
+    "RC-nas1": {
+      "title": "Enhancing Airport Wayfinding for Aging Travelers and Persons with Disabilities Washington, DC",
+      "date": "2017",
+      "authors": [
+        "National Academies of Sciences Engineering and Medicine"
+      ],
+      "etAl": "false",
+      "publisher": "National Academies of Sciences Engineering and Medicine",
+      "href": "https://doi.org/10.17226/24930",
+      "status": "academic paper"
+    },
+    "RC-upadhyay1": {
+      "title": "A Case Study on Improving Accessibility of Healthcare Care Facility in Low-resource Settings",
+      "date": "2022",
+      "authors": [
+        "Vikas Upadhyay",
+        "Tigmanshu Bhatnagar",
+        "Catherine Holloway"
+      ],
+      "etAl": "true",
+      "publisher": "In CHI Conference on Human Factors in Computing Systems Proceedings (CHI 2022), ",
+      "href": "https://doi.org/10.1145/3491101.3503557",
+      "status": "academic paper"
+    },
+    "RC-karim1": {
+      "title": "Social Media Use and Its Connection to Mental Health: A Systematic Review",
+      "date": "2020",
+      "authors": [
+        "Fazida Karim",
+        "Azeezat A Oyewande",
+        "Lamis F Abdalla",
+        "Reem Chaudhry Ehsanullah",
+        "Safeera Khan"
+      ],
+      "etAl": "true",
+      "publisher": "",
+      "href": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/",
+      "status": "academic paper",
+      "id": "rc-karim1"
+    },
+    "RC-majid1": {
+      "title": "From envy to social anxiety and rumination: How social media site addiction triggers task distraction amongst nurses",
+      "date": "2019",
+      "authors": [
+        "Majid",
+        "A"
+      ],
+      "etAl": "false",
+      "publisher": " Journal of Nursing Mangement.  ",
+      "href": "https://doi.org/10.1111/jonm.12948",
+      "status": "academic paper",
+      "id": "rc-majid1"
+    },
+    "RC-moura1": {
+      "title": "Encoding normative ethics: On algorithmic bias and disability",
+      "date": "2023",
+      "authors": [
+        "Moura I"
+      ],
+      "etAl": "false",
+      "publisher": "First Monday",
+      "href": "https://doi.org/10.5210/fm.v28i1.12905 ",
+      "status": "academic paper",
+      "id": "rc-moura1"
+    },
+    "RC-naslund1": {
+      "title": "Social Media and Mental Health: Benefits, Risks, and Opportunities for Research and Practice",
+      "date": "2020",
+      "authors": [
+        "Naslund",
+        "J"
+      ],
+      "etAl": "true",
+      "publisher": " J. technol. behav. sci. 5, 245–257 (2020). ",
+      "href": "https://doi.org/10.1007/s41347-020-00134-x",
+      "status": "academic paper",
+      "id": "rc-naslund1"
+    },
+    "RC-odgers1": {
+      "title": "Annual Research Review: Adolescent mental health in the digital age: facts, fears, and future directions",
+      "date": "2020",
+      "authors": [
+        "C L Odgers",
+        "M R Jensen"
+      ],
+      "etAl": "false",
+      "publisher": "Child Psychol Psychiatry. 2020 Mar;61(3):336-348. doi: 10.1111/jcpp.13190.  PMID: 31951670; PMCID: PMC8221420. ",
+      "href": "https://pubmed.ncbi.nlm.nih.gov/31951670/ ",
+      "status": "academic paper",
+      "id": "rc-odgers1"
+    },
+    "RC-ophoff1": {
+      "title": "Cognitive function vs accessible authentication insights from dyslexia research",
+      "date": "2021",
+      "authors": [
+        "Ophoff",
+        "Jacques",
+        "Graham Johnson",
+        "and Karen Renaud"
+      ],
+      "etAl": "true",
+      "publisher": " Proceedings of the 18th International Web for All Conference. ",
+      "href": " https://dl.acm.org/doi/abs/10.1145/3430263.3452427",
+      "status": "academic paper",
+      "id": "rc-ophoff1"
+    },
+    "RC-shakya1": {
+      "title": "Association of Facebook Use With Compromised Well-Being A Longitudinal Study",
+      "date": "2017",
+      "authors": [
+        "Shakya HB",
+        "Christakis NA"
+      ],
+      "etAl": "false",
+      "publisher": "Am J Epidemiol",
+      "href": "https://pubmed.ncbi.nlm.nih.gov/28093386/",
+      "status": "academic paper",
+      "id": "rc-shakya1"
+    },
+    "RC-tiggemann1": {
+      "title": "NetTwweens The internet and body image concerns in preteenage girls",
+      "date": "2013",
+      "authors": [
+        "M Tiggemann",
+        "A Slater  "
+      ],
+      "etAl": "false",
+      "publisher": "The Journal of Early Adolescence Volume 34(5) ",
+      "href": "https://doi.org/10.1177/0272431613501083 ",
+      "status": "academic paper",
+      "id": "rc-tiggemann1"
+    },
+    "RC-venkit1": {
+      "title": "Automated ableism: An exploration of explicit disability biases in sentiment and toxicity analysis models",
+      "date": "2023",
+      "authors": [
+        "PN Venkit",
+        "M Srinath",
+        "S Wilson"
+      ],
+      "etAl": "false",
+      "publisher": "arXiv preprint arXiv:2307.09209",
+      "href": "https://arxiv.org/abs/2307.09209",
+      "status": "academic paper",
+      "id": "rc-venkit1"
+    },
+    "RC-Chadwick1": {
+      "title": "Online risk for people with intellectual disabilities",
+      "date": "2019",
+      "authors": [
+        " Chadwick, D.D"
+      ],
+      "etAl": "false",
+      "publisher": "Tizard Learning Disability Review",
+      "href": "https://doi.org/10.1108/TLDR-03-2019-0008",
+      "volume": "24",
+      "issue": "4",
+      "status": "academic paper",
+      "id": "rc-chadwick1"
+    },
+    "RC-Kim1": {
+      "title": "Impulsivity and compulsivity in Internet gaming disorder: A comparison with obsessive-compulsive disorder and alcohol use disorder.",
+      "date": "2017",
+      "authors": [
+        "Kim YJ",
+        "Lim JA",
+        "Lee JY",
+        "Oh S",
+        "Kim SN",
+        "Kim DJ",
+        "Ha JE",
+        "Kwon JS",
+        "Choi JS"
+      ],
+      "etAl": "false",
+      "publisher": "J Behav Addict",
+      "status": "academic paper",
+      "id": "rc-kim1"
+    },
+    "RC-Gay1": {
+      "title": "igital Technology Use Among Individuals with Schizophrenia: Results of an Online Survey",
+      "authors": [
+        "Katrina Gay",
+        "John Torous",
+        "Adam Joseph",
+        "Anand Pandya",
+        "Ken Duckworth"
+      ],
+      "etAl": "false",
+      "href": " https://mental.jmir.org/2016/2/e15?utm_source=TrendMD&utm_medium=cpc&utm_campaign=JMIR_TrendMD_0",
+      "id": "rc-gay1"
+    },
+    "RC-Wojtowicz1": {
+      "title": "Exploring Innovative Approaches. In The Intersection of Behavioral Health, Mental Health, and Health Literacy: Proceedings of a Workshop.",
+      "date": "2019",
+      "authors": [
+        "Wojtowicz",
+        "A., Alper"
+      ],
+      "etAl": "false",
+      "publisher": "J., & National Academies of Sciences, Engineering, and Medicine.",
+      "href": "https://arxiv.org/abs/2307.09209",
+      "id": "rc-wojtowicz1"
+    }
+  },
+  "github": "w3c/coga",
+  "publishISODate": "2026-01-22T00:00:00.000Z",
+  "generatedSubtitle": "W3C Group Note Draft 22 January 2026"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/W3C-DNOTE"></head>
+		
+ <body class="h-entry informative" data-new-gr-c-s-check-loaded="14.1269.0" data-gr-ext-installed=""><div class="head">
+    <p class="logos"><a class="logo" href="https://www.w3.org/"><img crossorigin="" alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
+  </a></p>
+    <h1 id="title" class="title">Cognitive Accessibility Research Modules - Online Safety and Wellbeing (Algorithms and Data)</h1> 
+    <p id="w3c-state"><a href="https://www.w3.org/standards/types#DNOTE">W3C Group Note Draft</a> <time class="dt-published" datetime="2026-01-22">22 January 2026</time></p>
+    <details open="">
+      <summary>More details about this document</summary>
+      <dl>
+        <dt>This version:</dt><dd>
+                <a class="u-url" href="https://www.w3.org/TR/2026/DNOTE-coga-safety-20260122/">https://www.w3.org/TR/2026/DNOTE-coga-safety-20260122/</a>
+              </dd>
+        <dt>Latest published version:</dt><dd>
+                <a href="https://www.w3.org/TR/coga-safety/">https://www.w3.org/TR/coga-safety/</a>
+              </dd>
+        <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/coga/research-modules/Online-Safety-and-Wellbeing.html">https://w3c.github.io/coga/research-modules/Online-Safety-and-Wellbeing.html</a></dd>
+        <dt>History:</dt><dd>
+                    <a href="https://www.w3.org/standards/history/coga-safety/">https://www.w3.org/standards/history/coga-safety/</a>
+                  </dd><dd>
+                    <a href="https://github.com/w3c/coga/commits/">Commit history</a>
+                  </dd>
+        
+        
+        
+        
+        
+        <dt>Editor:</dt><dd class="editor p-author h-card vcard">
+    <a class="ed_mailto u-email email p-name" href="mailto:lisa.seeman@zoho.com">Lisa Seeman-Horwitz</a>
+  </dd>
+        
+        
+        <dt>Feedback:</dt><dd>
+        <a href="https://github.com/w3c/coga/">GitHub w3c/coga</a>
+        (<a href="https://github.com/w3c/coga/pulls/">pull requests</a>,
+        <a href="https://github.com/w3c/coga/issues/new/choose">new issue</a>,
+        <a href="https://github.com/w3c/coga/issues/">open issues</a>)
+      </dd><dd><a href="mailto:public-coga-comments@w3.org?subject=%5Bcoga-safety%5D%20YOUR%20TOPIC%20HERE">public-coga-comments@w3.org</a> with subject line <kbd>[coga-safety] <em>… message topic …</em></kbd> (<a rel="discussion" href="https://lists.w3.org/Archives/Public/public-coga-comments">archives</a>)</dd>
+        
+        
+      </dl>
+    </details>
+    
+    
+    <p class="copyright">
+    <a href="https://www.w3.org/policies/#copyright">Copyright</a>
+    ©
+    2026
+    
+    <a href="https://www.w3.org/">World Wide Web Consortium</a>.
+    <abbr title="World Wide Web Consortium">W3C</abbr><sup>®</sup>
+    <a href="https://www.w3.org/policies/#Legal_Disclaimer">liability</a>,
+    <a href="https://www.w3.org/policies/#W3C_Trademarks">trademark</a> and
+    <a rel="license" href="https://www.w3.org/copyright/document-license/" title="W3C Document License">document use</a> rules apply.
+  </p>
+    <hr title="Separator for header">
+  </div>
+	 
+	 
+ <section id="abstract" class="introductory"><h2>Abstract</h2>
+
+<p>Internet use and apps can create a number of risks for people requiring cognitive accessibility. This module/paper covers safety issues for these users, including cybercrime, mental health, wellbeing, privacy, and more.</p>
+<p>This module:</p>
+<ul>
+    <li>
+        identifies safety issues that may arise when using the internet for people requiring cognitive accessibility,
+    </li>
+    <li>
+        identifies key user needs and ways to address these barriers, and
+    </li>
+    <li>
+        suggests areas for further research and potential solutions.
+    </li>
+</ul>
+<p>Research modules are<strong> primarily intended for groups in The World Wide Web Consortium (<abbr title="World Wide Web Consortium">W3C</abbr>).</strong> For example, they are used as source material for <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>.</p>
+<p>They may also contain useful information for:</p>
+<ul>
+    <li>
+        researchers,
+    </li>
+    <li>
+        inclusion and research-related policy makers,
+    </li>
+    <li>
+        designers, content creators, and developers who wish to have a more in-depth understanding of inclusion issues.
+    </li>
+</ul>
+<p>Note that these modules focus on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, they may sometimes address a broader scope than web accessibility alone.</p>
+
+<p>This document is part of a set of related informative publications from the <a href="http://www.w3.org/WAI/PF/cognitive-a11y-tf/">Cognitive and Learning Disabilities Accessibility Task Force</a> (COGA TF), a joint task force of the <a href="http://www.w3.org/WAI/APA/">Accessible Platform Architectures Working Group</a> (APA WG) and the <a href="http://www.w3.org/WAI/GL/">Accessibility Guidelines Working Group</a> (AG WG) of the <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a>.</p>
+	</section>
+		
+<section id="sotd" class="introductory"><h2>Status of This Document</h2><p><em>This section describes the status of this
+      document at the time of its publication. A list of current <abbr title="World Wide Web Consortium">W3C</abbr>
+      publications and the latest revision of this technical report can be found
+      in the
+      <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> standards and drafts index</a>.</em></p>
+		
+<p>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current <abbr title="World Wide Web Consortium">W3C</abbr> publications and the latest revision of this technical report can be found in the <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> at <a href="https://www.w3.org/TR/">https://www.w3.org/TR/</a>.</p>
+<p>This is an early draft. The Task Force intends to add more research and improved discussion.</p>
+<p>Feedback on any aspect of the document is accepted. For this publication, the Working Groups particularly seek feedback on the following questions:</p>
+<ul>
+    <li>
+        Are issues for the included user groups well covered?
+    </li>
+    <li>
+        Is there additional research we should look at?
+    </li>
+    <li>
+        Does this research module effectively bridge between research and priorities for new work?
+    </li>
+    <li>
+        Should additional user needs be addressed?
+    </li>
+</ul>
+<p>To comment, <a href="https://github.com/w3c/coga/issues/new">file an issue in the <abbr title="World Wide Web Consortium">W3C</abbr> coga GitHub repository</a>. If this is not feasible, send email to <a href="mailto:public-coga-comments@w3.org">public-coga-comments@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/public-aria/">comment archive</a>). Comments are requested by <strong>15th April 2026</strong>. In-progress updates to the document may be viewed in the <a href="http://w3c.github.io/coga/issue-papers/">publicly visible editors' draft</a>.</p>
+
+		<p>
+    This document was published by the <a href="https://www.w3.org/groups/wg/apa">Accessible Platform Architectures Working Group</a> and the <a href="https://www.w3.org/groups/wg/ag">Accessibility Guidelines Working Group</a> as
+    a Group Note Draft using the
+        <a href="https://www.w3.org/policies/process/20250818/#recs-and-notes">Note track</a>. 
+  </p><p>Group Note Drafts are not endorsed by
+        <abbr title="World Wide Web Consortium">W3C</abbr> nor its Members. </p><p>
+    This is a draft document and may be updated, replaced, or obsoleted by other
+    documents at any time. It is inappropriate to cite this document as other
+    than a work in progress.
+    
+  </p><p data-deliverer="83907,35422">
+    
+        The
+        <a href="https://www.w3.org/policies/patent-policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent
+          Policy</a>
+        does not carry any licensing requirements or commitments on this
+        document.
+      
+    
+  </p><p>
+                      This document is governed by the
+                      <a id="w3c_process_revision" href="https://www.w3.org/policies/process/20250818/">18 August 2025 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>.
+                    </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction </a></li><li class="tocline"><a class="tocxref" href="#safety-issues-for-people-with-cognitive-disabilities"><bdi class="secno">2. </bdi>Safety Issues for People with Cognitive disabilities</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cybercrime"><bdi class="secno">2.1 </bdi>Cybercrime</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hackers-and-identity-theft"><bdi class="secno">2.1.1 </bdi>Hackers and Identity Theft</a></li><li class="tocline"><a class="tocxref" href="#con-artists-and-deception"><bdi class="secno">2.1.2 </bdi>Con Artists and Deception</a></li><li class="tocline"><a class="tocxref" href="#sexual-predators-and-physical-safety"><bdi class="secno">2.1.3 </bdi>Sexual predators and Physical Safety</a></li></ol></li><li class="tocline"><a class="tocxref" href="#data-algorithms-and-privacy"><bdi class="secno">2.2 </bdi>Data, Algorithms and privacy</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#personalization"><bdi class="secno">2.2.1 </bdi>Personalization </a></li><li class="tocline"><a class="tocxref" href="#algorithms-and-privacy"><bdi class="secno">2.2.2 </bdi>Algorithms and Privacy</a></li></ol></li><li class="tocline"><a class="tocxref" href="#social-media-and-mental-health"><bdi class="secno">2.3 </bdi>Social media and Mental Health</a></li><li class="tocline"><a class="tocxref" href="#longevity-of-posts"><bdi class="secno">2.4 </bdi>Longevity of posts </a></li><li class="tocline"><a class="tocxref" href="#algorithms-ai-artificial-intelligence-and-curated-content"><bdi class="secno">2.5 </bdi>Algorithms, AI (Artificial Intelligence) and Curated Content</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#curated-content"><bdi class="secno">2.5.1 </bdi> Curated content</a></li></ol></li><li class="tocline"><a class="tocxref" href="#spending-and-financial-commitments"><bdi class="secno">2.6 </bdi>Spending and Financial Commitments </a></li><li class="tocline"><a class="tocxref" href="#gatekeeping-and-restricting-digital-access"><bdi class="secno">2.7 </bdi>Gatekeeping and Restricting Digital Access</a></li><li class="tocline"><a class="tocxref" href="#internet-or-gaming-addiction-and-overuse"><bdi class="secno">2.8 </bdi>Internet or Gaming Addiction and Overuse</a></li><li class="tocline"><a class="tocxref" href="#poor-representation-in-data-sets"><bdi class="secno">2.9 </bdi>Poor Representation in Data Sets</a></li></ol></li><li class="tocline"><a class="tocxref" href="#user-story-and-user-needs"><bdi class="secno">3. </bdi>User Story and User Needs </a></li><li class="tocline"><a class="tocxref" href="#possible-solutions-for-meeting-user-needs"><bdi class="secno">4. </bdi>Possible Solutions for Meeting User Needs</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#giving-the-user-control"><bdi class="secno">4.1 </bdi>Giving the user control</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#use-of-data"><bdi class="secno">4.1.1 </bdi>Use of data</a></li><li class="tocline"><a class="tocxref" href="#ease-of-personalisation"><bdi class="secno">4.1.2 </bdi>Ease of personalisation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#supported-decision-making"><bdi class="secno">4.2 </bdi>Supported decision making</a></li><li class="tocline"><a class="tocxref" href="#social-media-and-algorithm-driven-content"><bdi class="secno">4.3 </bdi>Social Media and Algorithm Driven Content</a></li><li class="tocline"><a class="tocxref" href="#a-process-for-safety-and-wellbeing"><bdi class="secno">4.4 </bdi>A Process for Safety and Wellbeing</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#hackers"><bdi class="secno">4.4.1 </bdi>Hackers</a></li><li class="tocline"><a class="tocxref" href="#sexual-predators-and-con-artists"><bdi class="secno">4.4.2 </bdi>Sexual predators and Con Artists</a></li></ol></li><li class="tocline"><a class="tocxref" href="#naming-applications-and-services"><bdi class="secno">4.5 </bdi>Naming Applications and Services</a></li><li class="tocline"><a class="tocxref" href="#representation-in-data"><bdi class="secno">4.6 </bdi>Representation in Data</a></li></ol></li><li class="tocline"><a class="tocxref" href="#terms"><bdi class="secno">A. </bdi>Terms </a></li><li class="tocline"><a class="tocxref" href="#acknowledgements and sources"><bdi class="secno">B. </bdi>Appendix: Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#key-contributors-and-section-editors"><bdi class="secno">B.1 </bdi>Key contributors and section editors</a></li><li class="tocline"><a class="tocxref" href="#participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><bdi class="secno">B.2 </bdi>
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</a></li></ol></li><li class="tocline"><a class="tocxref" href="#additional-sources"><bdi class="secno">C. </bdi>Additional Sources</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">D. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">D.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+ 
+<section id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction </h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div>
+<p>Disabilities that may require cognitive accessibility support include:</p>
+<ul>
+    <li>
+        cognitive, developmental, intellectual, learning, and specific learning disabilities,
+    </li>
+    <li>
+        language and communication disorders,
+    </li>
+    <li>
+        neurodivergence,
+    </li>
+    <li>
+        traumatic brain injury,
+    </li>
+    <li>
+        age-related cognitive decline,
+    </li>
+    <li>
+        mental health disabilities, and
+    </li>
+    <li>
+        temporary impairments that affect cognitive function, such as anxiety, illness, effects of medication, treatments such as chemotherapy and others.
+    </li>
+</ul>
+<p>Examples of specific disabilities include attention deficit hyperactivity disorder (ADHD), autism spectrum disorder, dyslexia and dyscalculia, mild cognitive impairment (MCI), Down syndrome, asphasia, and others. 
+</p>
+<p><br>People with disabilities that require cognitive accessibility support can benefit from using the internet. However, there are risks as all users are at risk of experiencing activities like fraud, terrorism, extortion, harassment and hacking.These activities are collectively referred to as cybercrime [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-hökby1" title="Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents">RM-hökby1</a></cite>].</p>
+<p>Examples of cybercrime include:</p>
+<ul>
+    <li>
+        Hackers steal someone’s identity, information or money without the user being aware of what is happening.
+    </li>
+    <li>
+        Con Artists or cheats misleading people into giving them information or sometimes money.
+    </li>
+    <li>
+        Sexual predators using the Internet to identify vulnerable people and exploit them, either online or offline.
+    </li>
+</ul>
+<p>People with cognitive and learning disabilities are at higher risk and may be unable to take the recommended safety precautions.</p>
+<p>Not all activities that affect people's safety are illegal. Personal information can be stored and sold to third parties or stolen. This information can be used to hurt the user, including through financial or emotional exploitation. This can include exploiting the user for marketing or to increase click throughs.</p>
+<p>Fear of these dangers can prevent people from using apps and websites that may be valuable to them. For example, mental health apps are a potentially important part of health care. However, research shows that many people do not use mental health services via the web or apps due to concerns about whether mental health information is kept private and how their data is used [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-lipschitz1" title="Improving Usability of mHealth Technology for Patients With Serious Mental Illness, A Qualitative Study.">RM-lipschitz1</a></cite>].</p>
+<p>Other research shows people may avoid apps that make them frustrated with the complexity and cognitive load. This deprives users of support and services. It also means fewer people with cognitive and learning disabilities and mental health conditions are in the data surrounding these services. This makes many groups invisible or underrepresented in data-driven decisions.</p>
+<p>In this research module, we lay out potential safety issues for people with cognitive and learning disabilities. Proposed solutions include integrating processes that support safety and user control to ensure mental health, wellbeing, supported consent and decision making, privacy and more. Such a solution could be part of its own certification process.</p>
+	 <p>This module focuses on explaining the issues that lead to diverse userneeds impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
+  </section> 
+<section id="safety-issues-for-people-with-cognitive-disabilities"><div class="header-wrapper"><h2 id="x2-safety-issues-for-people-with-cognitive-disabilities"><bdi class="secno">2. </bdi>Safety Issues for People with Cognitive disabilities</h2><a class="self-link" href="#safety-issues-for-people-with-cognitive-disabilities" aria-label="Permalink for Section 2."></a></div>
+	
+<section id="cybercrime"><div class="header-wrapper"><h3 id="x2-1-cybercrime"><bdi class="secno">2.1 </bdi>Cybercrime</h3><a class="self-link" href="#cybercrime" aria-label="Permalink for Section 2.1"></a></div>
+<div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><p class=""> Potentially rewriting this section to focus on the issues on development end that lead to risk/vulnerabilities.
+</p></div>
+<section id="hackers-and-identity-theft"><div class="header-wrapper"><h4 id="x2-1-1-hackers-and-identity-theft"><bdi class="secno">2.1.1 </bdi>Hackers and Identity Theft</h4><a class="self-link" href="#hackers-and-identity-theft" aria-label="Permalink for Section 2.1.1"></a></div>
+<p>People with cognitive and learning disabilities may not be able to easily use some of the common security measures used on the Web such as two-factor authentication and complex, unique passwords for each login [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-ophoff1" title="Cognitive function vs accessible authentication insights from dyslexia research">RC-ophoff1</a></cite>].</p>
+<p>Extra security precautions to increase password strength often make this group more vulnerable to "human error". This can encourage risky behavior such as keeping a list of passwords on a desk that can be viewed by anyone with physical access to the room. Also, when users ask for assistance to complete these security procedures, they can put themselves at high risk of being abused by those they trust to help.</p>
+</section><section id="con-artists-and-deception"><div class="header-wrapper"><h4 id="x2-1-2-con-artists-and-deception"><bdi class="secno">2.1.2 </bdi>Con Artists and Deception</h4><a class="self-link" href="#con-artists-and-deception" aria-label="Permalink for Section 2.1.2"></a></div>
+<p>These cyber-criminals use deception to gain trust. This enables them to negatively influence the behavior of vulnerable individuals. People with cognitive and learning disabilities who experience difficulty understanding social cues may fail to accurately identify a potentially harmful situation. Those who have difficulty understanding others may be more trusting and more easily believe false information. Also, people with disabilities affecting reasoning, attention or memory may be similarly vulnerable to these situations, as they may struggle to validate presented information.</p>
+</section><section id="sexual-predators-and-physical-safety"><div class="header-wrapper"><h4 id="x2-1-3-sexual-predators-and-physical-safety"><bdi class="secno">2.1.3 </bdi>Sexual predators and Physical Safety</h4><a class="self-link" href="#sexual-predators-and-physical-safety" aria-label="Permalink for Section 2.1.3"></a></div>
+<p>People with cognitive and learning disabilities may be more at risk of being a victim of a sexual crime. Some potential reasons for this include:</p>
+<ul>
+    <li>
+        they tend to be unaware of someone using a fake identity or misleading information,
+    </li>
+    <li>
+        they are dependent on caregivers and family who they are afraid of disappointing, which makes them susceptible to blackmail,
+    </li>
+    <li>
+        they tend to believe false information and find it harder to validate facts, and
+    </li>
+    <li>
+        they are less likely to identify unreasonable requests.
+    </li>
+</ul>
+</section></section><section id="data-algorithms-and-privacy"><div class="header-wrapper"><h3 id="x2-2-data-algorithms-and-privacy"><bdi class="secno">2.2 </bdi>Data, Algorithms and privacy</h3><a class="self-link" href="#data-algorithms-and-privacy" aria-label="Permalink for Section 2.2"></a></div>
+<section id="personalization"><div class="header-wrapper"><h4 id="x2-2-1-personalization"><bdi class="secno">2.2.1 </bdi>Personalization </h4><a class="self-link" href="#personalization" aria-label="Permalink for Section 2.2.1"></a></div>
+<p>Personalization is important, especially as a way to avoid conflict when meeting varying user needs. However, there is a significant risk that if poorly implemented, user information and vulnerabilities can be exposed. This puts the most vulnerable users of this population at the greatest risk.</p>
+</section><section id="algorithms-and-privacy"><div class="header-wrapper"><h4 id="x2-2-2-algorithms-and-privacy"><bdi class="secno">2.2.2 </bdi>Algorithms and Privacy</h4><a class="self-link" href="#algorithms-and-privacy" aria-label="Permalink for Section 2.2.2"></a></div>
+<p>Algorithms are computer programs that try to solve a specific problem or achieve a goal. (Goals are set by the programmers and company they work for). Currently, computer algorithms are increasingly responsible for automated decision-making. These decisions use information from tracking our everyday behaviors online and via apps. This data is often sold to or used by companies, including organizations providing critical services such as employment, health care, and credit.</p>
+<p>This creates multiple problems. Many users know that they are at risk of scams and data misuse, and are therefore afraid of using digital services that they may need. All users in a recent study had concerns about privacy and their data being inappropriately shared [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-rotondi1" title="Designing eHealth applications to reduce cognitive effort for persons with severe mental illness: page complexity, navigation simplicity, and comprehensibility.">RM-rotondi1</a></cite>].</p>
+<p>The misuse of algorithms has the potential to cause financial harm to people with cognitive and learning disabilities and mental health conditions. As an example, a patent could be filed that included an algorithm that could help financial institutions analyze a person's social network and use that data with regard to granting a person's loan application. [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-oneil1" title="Weapons of Math Destruction  Chapter 6 Personality Tests Chapter 10 Facebook experiments">RM-oneil1</a></cite>]</p>
+<p>People with cognitive and learning disabilities may be vulnerable to risks related to algorithms and big data. This includes errors and biases in the algorithm and problems with privacy [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-venkit1" title="Automated ableism: An exploration of explicit disability biases in sentiment and toxicity analysis models">RC-venkit1</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-moura1" title="Encoding normative ethics: On algorithmic bias and disability">RC-moura1</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-monteith1" title="Internet of things issues related to psychiatry">RM-monteith1</a></cite>].</p>
+<p>In another use case, Internet of things (IoT) devices are involved more and more in providing medical care. This can include support for mental illness and cognitive support. Massive amounts of data from as many digital activities through devices as possible are collected. This erodes people's knowledge of what is public, as much of this data is done in homes and other private settings. This data is then used to drive decisions such as loans, insurance coverage, and more. Privacy becomes more important for individuals with mental health diagnoses and cognitive disabilities, especially where there is prejudice and stigma [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-monteith1" title="Internet of things issues related to psychiatry">RM-monteith1</a></cite>].</p>
+<p>For example, people who are victims of domestic violence may avoid putting their picture online because they do not want to be easily found, but automated programs for job applications may be biased against profiles without a picture.</p>
+</section></section><section id="social-media-and-mental-health"><div class="header-wrapper"><h3 id="x2-3-social-media-and-mental-health"><bdi class="secno">2.3 </bdi>Social media and Mental Health</h3><a class="self-link" href="#social-media-and-mental-health" aria-label="Permalink for Section 2.3"></a></div>
+<div class="note" id="issue-container-generatedID-0"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="3"><span>Editor's note</span></div><p class=""> This section focuses on research from the Mental Health subgroup. More research is needed on social media and cognitive and learning disabilities.</p></div>
+<p>Prolonged time spent on social media platforms appears to contribute to increased risk for a variety of mental health symptoms and poor wellbeing. This may partly be driven by the detrimental effects of screen time generally on mental health. Research suggests social media usage can cause increased severity of anxiety and depressive symptoms [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-hardy1" title="The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,Pages 282-290, ISSN 0747-5632">RM-hardy1</a></cite>].</p>
+<p>Recent studies have reported negative effects of social media use on mental health of young people particularly. Negative outcomes include social comparison pressure with others (sometimes called social media envy), rumination, depressive symptoms, anxiety, greater feeling of social isolation after being rejected by others on social media, and body image issues (especially in teens) [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-ang1" title="Going Online to Stay Connected Online Social Participation Buffers the Relationship Between Pain and Depression">RM-ang1</a></cite>][<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-karim1" title="Social Media Use and Its Connection to Mental Health: A Systematic Review">RC-karim1</a></cite>].</p>
+<p>For preteen girls, time spent on social networking sites produced stronger correlations with body image concern than did overall Internet exposure. This may lead to reduced self esteem, dieting and eating disorders. With overexposure to social media, preteens are highly likely to be exposed to material that they neither fully understand nor are equipped to evaluate sufficiently critically. Similarly, in another study with adults over 30, social media use seemed to correlate with increased anxiety[<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-tiggemann1" title="NetTwweens The internet and body image concerns in preteenage girls">RC-tiggemann1</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-hardy1" title="The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,Pages 282-290, ISSN 0747-5632">RM-hardy1</a></cite>].</p>
+<p>Social media does not seem to have a consistent affect on mental health, and many factors can come into play. The relationship between social media and mental well-being may be affected by age. However, some studies have shown the opposite effect for other groups. For adults aged 18–29, social media use decreases anxiety. This is a counterpoint, where sometimes social media reduces the incidence of anxiety , especially for younger people [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-hardy1" title="The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,Pages 282-290, ISSN 0747-5632">RM-hardy1</a></cite>].</p>
+<p>One study conducted with nurses argues that social networking site addiction stimulates various stressors such as envy, social anxiety and rumination. These stressors can lead to task distraction. A preference for online social interaction was also found to be linked to social anxiety and loneliness.[<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-majid1" title="From envy to social anxiety and rumination: How social media site addiction triggers task distraction amongst nurses">RC-majid1</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-caplan1" title="Relations Among Loneliness, Social Anxiety, and Problematic Internet Use">RM-caplan1</a></cite>]</p>
+<p>Social networking sites have also been associated with likelihood of diminished future well-being and reduced self esteem. Also people with signs of depression linked to social networking sites spend even more time on social networking sites, leading to a vicious circle of depression [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-shakya1" title="Association of Facebook Use With Compromised Well-Being A Longitudinal Study">RC-shakya1</a></cite>].</p>
+<p>On the other hand, social media does not seem to have a consistent affect on mental health, and many factors can come into play. The relationship between social media and mental well-being may be affected by age. However, some studies have shown the opposite effect for other groups. For adults aged 18–29, social media use correlates with decreased anxiety.This is a counterpoint, where sometimes social media reduces the incidence, especially for younger people [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-hardy1" title="The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,Pages 282-290, ISSN 0747-5632">RM-hardy1</a></cite>].</p>
+<p>Further, social media has become an important part of the lives of many people with mental health disabilities. Many of these individuals use social media to share their lived experiences with mental illness, to seek support from others, and to search for information about treatment recommendations, accessing mental health services and coping with symptoms. Overall, although time spent on the Internet was found to be negatively associated with mental health, some activities, such as school work, were positively associated. Additionally, studies have also shown social media helped teens cope with isolation in lockdown/covid. [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-naslund1" title="Social Media and Mental Health: Benefits, Risks, and Opportunities for Research and Practice">RC-naslund1</a></cite>][<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-hökby1" title="Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents">RM-hökby1</a></cite>][<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-cauberghe1" title="How Adolescents Use Social Media to Cope with Feelings of Loneliness and Anxiety During COVID-19 Lockdown">RM-cauberghe1</a></cite>]</p>
+<p>Online social participation can alleviate the negative effects of pain on mental well-being. Social Media may serve as a source of connection for people who are not able to participate in face-to-face interactions as much as they would like due to pain, disability, or age. Social media can support people with social anxiety and act as a safe form to increase human interaction and make friendships (assuming web sites support cognitive accessibility and social anxiety) [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-rotondi2" title="Critical Design Elements of E-Health Applications for Users With Severe Mental Illness: Singular Focus, Simple Architecture, Prominent Contents, Explicit Navigation, and Inclusive Hyperlinks">RM-rotondi2</a></cite>].</p>
+<p>It is also worth noting that many of the studies reviewed were scientifically weak. For example, studies often have small samples, effects that are not scientifically significant, or show correlation rather than causality. For example, the correlation between social media use and mental health issues may be that users use social media to help with mental health issues. More robust research is needed in this area in order to develop solutions that enable use with less risk [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-odgers1" title="Annual Research Review: Adolescent mental health in the digital age: facts, fears, and future directions">RC-odgers1</a></cite>].</p>
+</section><section id="longevity-of-posts"><div class="header-wrapper"><h3 id="x2-4-longevity-of-posts"><bdi class="secno">2.4 </bdi>Longevity of posts </h3><a class="self-link" href="#longevity-of-posts" aria-label="Permalink for Section 2.4"></a></div>
+<p>Further, people have reported (in response to this paper) that they are afraid of other long term consequences of posting online. For example, if they post about their disability (mental health issues), or if their posts are considered inappropriate or imply health issues, then they worry that it can be used against them or to harm them after recovery has started.</p>
+</section><section id="algorithms-ai-artificial-intelligence-and-curated-content"><div class="header-wrapper"><h3 id="x2-5-algorithms-ai-artificial-intelligence-and-curated-content"><bdi class="secno">2.5 </bdi>Algorithms, AI (Artificial Intelligence) and Curated Content</h3><a class="self-link" href="#algorithms-ai-artificial-intelligence-and-curated-content" aria-label="Permalink for Section 2.5"></a></div>
+<p>Editor’s Note: This section focuses on research from the Mental Health subgroup. More research is needed on AI and curated content and cognitive and learning disability.</p>
+<p>Algorithms and artificial intelligence can make all the above issues worse.</p>
+<p>Artificial intelligence (AI) and cognitive computing can empower algorithms by learning. This includes learning the individual users' behaviors. For example, an algorithm may have a goal to increase the time the user spends on a web site or application. AI could then continuously adapt the algorithm to be more effective for each individual user. In our example they will be learning what makes you more likely to click on a link. Unfortunately, this is often anger, fear, and other negative emotions. This may have two main effects on the mental health of the user:</p>
+<ul>
+    <li>
+        Existing mental health issues may become worse and
+    </li>
+    <li>
+        People may develop mental health issues, such as anxiety, depression and paranoia.
+    </li>
+</ul>
+<section id="curated-content"><div class="header-wrapper"><h4 id="x2-5-1-curated-content"><bdi class="secno">2.5.1 </bdi> Curated content</h4><a class="self-link" href="#curated-content" aria-label="Permalink for Section 2.5.1"></a></div>
+<p>Algorithms often adapt and tailor content to the individual. Often the algorithm changes the content so that the user stays on the site for longer and is more likely to click on links and advertisements. The effect is curated content. Curated content also creates “Echo Chambers,” or environments where you see content that you disproportionately agree with. The user is unlikely to be exposed to different points of view.</p>
+<p>Users may not be aware of the goals, settings and biases of the algorithms, making it harder to realize their isolation. Issues that can get reinforced include unhealthy eating practices, such as eating disorders and antisocial behavior. Anxieties are also often reinforced by being exposed to many voices expressing similar views, such as conspiracy theorists. While this also occurs offline, on the web it happens faster and to a more extreme extent [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-tiggemann1" title="NetTwweens The internet and body image concerns in preteenage girls">RC-tiggemann1</a></cite>].</p>
+<p>When groups are exposed to large amounts of content that disproportionately represents one point of view, and for the sake of clicks, encourages negative reactions to people outside the group, it is more difficult for people to live together and respect differences.</p>
+</section></section><section id="spending-and-financial-commitments"><div class="header-wrapper"><h3 id="x2-6-spending-and-financial-commitments"><bdi class="secno">2.6 </bdi>Spending and Financial Commitments </h3><a class="self-link" href="#spending-and-financial-commitments" aria-label="Permalink for Section 2.6"></a></div>
+<p>Conditions that impact emotional regulation may also affect how people act online, and make their reactions more extreme [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-yu1" title="Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model">RM-Yu1</a></cite>].</p>
+<p>For example, mental health conditions may impact spending. Further frustration from difficult interfaces can also cause stress and impair decision-making. When under stress, people can become more impulsive. Research on decision-making shows stress leads to fast intuitive decision-making over slower, more logical or analytical processes [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-m1" title="Designing good mental health into the way we bank">RC-M1</a></cite>].</p>
+<p>For example the internet may enable a person with bipolar disorder to make substantial financial commitments whilst in the manic phase, often with much greater ease than in the physical world.</p>
+<p>Further, some learning and cognitive disabilities impact spending habits and money management. For example a person with dyscalculia may be unable to tell the steep price difference between similar options. In the real world, they may use cash when shopping to limit the effect.</p>
+</section><section id="gatekeeping-and-restricting-digital-access"><div class="header-wrapper"><h3 id="x2-7-gatekeeping-and-restricting-digital-access"><bdi class="secno">2.7 </bdi>Gatekeeping and Restricting Digital Access</h3><a class="self-link" href="#gatekeeping-and-restricting-digital-access" aria-label="Permalink for Section 2.7"></a></div>
+<p>Risks to users seem to increase with factors such as lower levels of sociability offline, loneliness, anxiety and depression, poorer insight, judgment, discrimination and ability to detect deception online, and reduced experience and life opportunities. Perceived high online risk may lead to gatekeeping restrictions and controlling digital access. Solutions include supportive communities and supported decision-making (see the research module on supported decision-making)</p>
+<p>However, solution providers must be careful to reinforce the users rights. Restriction may affect online self-determination, participation and development by people with intellectual disabilities and others. There is also a significant risk of solutions being misused to control and oppress marginalized or vulnerable people. Providers should be very cautious about gatekeeping in locations where human rights for everyone are not well established and enforced. This paper only advocates providing tools of autonomy that can not easily be used as tools of repression, marginalisation or isolation. Solutions must be careful to not unnecessarily restrict access and autonomy for vulnerable groups without true consent [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-chadwick1" title="Online risk for people with intellectual disabilities">RC-Chadwick1</a></cite>].</p>
+</section><section id="internet-or-gaming-addiction-and-overuse"><div class="header-wrapper"><h3 id="x2-8-internet-or-gaming-addiction-and-overuse"><bdi class="secno">2.8 </bdi>Internet or Gaming Addiction and Overuse</h3><a class="self-link" href="#internet-or-gaming-addiction-and-overuse" aria-label="Permalink for Section 2.8"></a></div>
+<p>Overuse of some internet features such as gaming can sometimes reach the level of addiction. Internet addiction disorder (IAD), or Internet gaming disorder (IGD) describes conditions in which people develop a problematic, compulsive use of the internet (mainly gaming) that causes some significant impairment in different aspects of their life over a prolonged period of time. This includes neglecting other important areas of life, (work, school, family,) or lying to hide the extent of internet use. Note that while not everyone agrees with this as a clinical diagnosis, the effect is well established [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-iad1" title="Wikipedia - Internet Addiction Disorder">RC-IAD1</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-kim1" title="Impulsivity and compulsivity in Internet gaming disorder: A comparison with obsessive-compulsive disorder and alcohol use disorder.">RC-Kim1</a></cite>].</p>
+<p>There is an association between Internet or gaming addiction and serious psychiatric symptoms such as somatization, sensitivity, depression, anxiety, aggression, phobias, and psychosis. This was after controlling for age, sex, education level, marital status, and type of universities [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-hökby1" title="Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents">RM-Hökby1</a></cite>].</p>
+<p>In other research, people with schizophrenia or schizoaffective disorder using digital technology report negative feelings “often” or “very often” 56% (255/457). This included feelings of being unable to stop (27%, 123/457), frustration (25%, 114/457), paranoia (24%, 110/457), worry (20%, 91/457), sadness (20%, 91/457), anger (19%, 87/457), mania (16%, 73/457), or envy (16%, 73/457) [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-gay1" title="igital Technology Use Among Individuals with Schizophrenia: Results of an Online Survey">RC-Gay1</a></cite>].</p>
+</section><section id="poor-representation-in-data-sets"><div class="header-wrapper"><h3 id="x2-9-poor-representation-in-data-sets"><bdi class="secno">2.9 </bdi>Poor Representation in Data Sets</h3><a class="self-link" href="#poor-representation-in-data-sets" aria-label="Permalink for Section 2.9"></a></div>
+<p>More and more decision making processes are based on data that is gathered from phone use and apps, such as smart city infrastructure and traffic allocations. This makes many groups under-represented or even entirely excluded in data-driven decisions. For example, decisions on parking spaces may be based on data from a parking app. People with disabilities may find the app confusing or unusable. They may pay with cash. The data collected by the parking app does not include their patterns or needs and they are left out of the data. When they go to events, their parking needs are not monitored. This can also occur for different public facilities as decision making becomes more data driven. Vertical and horizontal analysis of data needs to be performed to see what groups are missing in the data set, including the different sub-groups of learning cognitive, physical and mental health related disabilities.</p>
+<p>Additionally, as discussed above, many people do not use apps for mental health services and cognitive support due to concerns about how their data is used and whether mental health information will be kept private. Other reasons include the complexity and frustration experienced when these apps are not designed with cognitive learning and emotional disabilities in mind [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-lipschitz1" title="Improving Usability of mHealth Technology for Patients With Serious Mental Illness, A Qualitative Study.">RM-Lipschitz1</a></cite>].</p>
+  </section></section> 
+<section id="user-story-and-user-needs"><div class="header-wrapper"><h2 id="x3-user-story-and-user-needs"><bdi class="secno">3. </bdi>User Story and User Needs </h2><a class="self-link" href="#user-story-and-user-needs" aria-label="Permalink for Section 3."></a></div>
+	
+<div class="note" id="issue-container-generatedID-1"><div role="heading" class="ednote-title marker" id="h-ednote-1" aria-level="3"><span>Editor's note</span></div><p class=""> This list of user needs is not complete. We are also seeking feedback on the format for presenting user needs.</p></div>
+
+	 <div class="note" id="issue-container-generatedID-2"><div role="heading" class="ednote-title marker" id="h-ednote-2" aria-level="3"><span>Editor's note</span></div><p class="">In the next version, we will cross-reference this section with the user needs in <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>. New user needs that are identified in this research module will be included in the next version of <a href="https://www.w3.org/TR/coga-usable/">Making Content Usable for People with Cognitive and Learning Disabilities</a>. </p></div>
+<ul>
+    <li>
+        As a user who has cognitive accessibility needs, I need extra support to be safe and secure when using a web site, especially if providing information or communicating with others.
+    </li>
+    <li>
+        As a user who has cognitive accessibility needs, I need web content that safeguards against cybercrime such as hacking and exploitation that does not rely on memory or complex social reasoning.
+    </li>
+    <li>
+        As a user with cognitive accessibility needs, I need privacy and data protection options presented clearly and in accessible language.
+    </li>
+    <li>
+        As a user who requires cognitive accessibility and with a mood disorder, I need help avoiding apps and content that may increase anxiety, negatively impact my mental health or social exclusion.
+    </li>
+    <li>
+        As a user with impaired executive function at times, I need supported decision making that does not affect my autonomy when I am able to make the decisions.
+    </li>
+</ul>
+<p>Related Persona: <a href="https://www.w3.org/TR/coga-usable/#gopal-a-retired-lawyer-with-dementia">Gopal</a>, <a href="https://www.w3.org/TR/coga-usable/#kwame-a-traumatic-brain-injury-survivor">Kwame</a>, <a href="https://www.w3.org/TR/coga-usable/#tal-a-student-who-has-dyslexia-and-impaired-eye-hand-coordination">Tal</a>
+</p>
+	  </section> 
+<section id="possible-solutions-for-meeting-user-needs"><div class="header-wrapper"><h2 id="x4-possible-solutions-for-meeting-user-needs"><bdi class="secno">4. </bdi>Possible Solutions for Meeting User Needs</h2><a class="self-link" href="#possible-solutions-for-meeting-user-needs" aria-label="Permalink for Section 4."></a></div>
+
+			<p>Below are some ideas that might help meet the user needs above. Note that
+digital solutions should also meet [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag21" title="Web Content Accessibility Guidelines (WCAG) 2.1">WCAG21</a></cite>] and [<cite><a class="bibref" data-link-type="biblio" href="#bib-coga-usable" title="Making Content Usable for People with Cognitive and Learning Disabilities">coga-usable</a></cite>]. Also, this module focuses on explaining the issues that lead to diverse user needs impacting web accessibility. For this reason, it may sometimes address a broader scope than web accessibility alone.</p>
+<p>Safety should be a priority when making content accessible for people with cognitive and learning disabilities. All user information must be kept safe, to the fullest extent possible. Any clues that the user has cognitive disabilities, such as a request for a simplified version, should be protected information.</p>
+<p>Personalization systems should be designed so that any information implying vulnerabilities are on the user device and are secure.</p>
+<p>Technical designs that may support privacy include</p>
+<ul>
+    <li>
+        Simplification and other user accommodations are performed at the client end, without cookies or other mechanisms for storing these choices.
+    </li>
+    <li>
+        Use of functional requirements can also be a safer alternative to describing user needs in systems such as meta-data. For example, a text to speech rendering could be preferable during sports and does not mean the user can not read.
+    </li>
+</ul>
+<section id="giving-the-user-control"><div class="header-wrapper"><h3 id="x4-1-giving-the-user-control"><bdi class="secno">4.1 </bdi>Giving the user control</h3><a class="self-link" href="#giving-the-user-control" aria-label="Permalink for Section 4.1"></a></div>
+<section id="use-of-data"><div class="header-wrapper"><h4 id="x4-1-1-use-of-data"><bdi class="secno">4.1.1 </bdi>Use of data</h4><a class="self-link" href="#use-of-data" aria-label="Permalink for Section 4.1.1"></a></div>
+<p>Users should know when data is collected and how that data will be used. This requires testing that different groups of users requiring cognitive accessibility understand the privacy and data terms, including what data may be available or stored, how the data will be used and who will have access to it. It should be simple for users to see their data and make corrections when they discover errors [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-oneil1" title="Weapons of Math Destruction  Chapter 6 Personality Tests Chapter 10 Facebook experiments">RM-oneil1</a></cite>].</p>
+<p>Settings and sources</p>
+<p>Users should have more control over their personal data and the kind of content they are shown on social media [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-bernard1" title="Difficulties Encountered by People With Depression and Anxiety on the Web: Qualitative Study and Web-Based Expert Survey">RM-Bernard1</a></cite>].</p>
+<p>Users should be able to know the source of their content. Having a bias ranking on different sources may also be helpful. This will allow users to notice the selection bias. This is especially important where a user is unlikely to be exposed to different points of view.</p>
+<p>Also let the user know the setting and the potential biases of the algorithm. This can help the user understand how the content seen may be affected. Give examples to help the user understand this effect.</p>
+</section><section id="ease-of-personalisation"><div class="header-wrapper"><h4 id="x4-1-2-ease-of-personalisation"><bdi class="secno">4.1.2 </bdi>Ease of personalisation</h4><a class="self-link" href="#ease-of-personalisation" aria-label="Permalink for Section 4.1.2"></a></div>
+<p>Protecting one's data is often a site by site issue. Users should be able to set data protections themselves. This requires testing that different groups of users requiring cognitive accessibility understand the risks of different setting, and can change the setting to what they want.</p>
+<p>Users should be able to easily cancel data storing in minimal steps. This should be among the first list of options about data. Users should not have to click or scroll to find this option</p>
+<p>Example
+    <br>We would like to use information about you for a few different purposes. Choose from the options below.</p>
+<table border="1">
+    
+    <tbody>
+        <tr>
+            <th>
+                <p>Option 1</p>
+            </th>
+            <th>
+                <p>Option 2</p>
+            </th>
+            <th>
+                <p>Option 3</p>
+                <p></p>
+            </th>
+            <th>
+                <p>Option 4</p>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                <p>Do not store any data about me!</p>
+                <p>(The site might work less well.)</p>
+            </td>
+            <td>
+                <p>Only use data that is used by the site to function well</p>
+            </td>
+            <td>
+                <p>I want to choose different usages.</p>
+            </td>
+            <td>
+                <p>I am OK with all uses of my data in your standard data usage.</p>
+                <p>(See our data usages)</p>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</section></section><section id="supported-decision-making"><div class="header-wrapper"><h3 id="x4-2-supported-decision-making"><bdi class="secno">4.2 </bdi>Supported decision making</h3><a class="self-link" href="#supported-decision-making" aria-label="Permalink for Section 4.2"></a></div>
+<p>Supported decision making (SDM) are functions that help people with disabilities make decisions as independently as possible whilst staying safe. This includes choosing helpers to help them make choices. See links including;</p>
+<ul>
+    <li>
+        <a href="Supported-Decision-Making.html">Supported Decision-making</a>
+        
+    </li>
+    <li>
+        <a href="https://www.aclu.org/sites/default/files/field_document/faq_about_supported_decision_making.pdf">Supported Decision-Making: Frequently Asked Questions</a>
+        
+    </li>
+    <li>
+        <a href="https://supporteddecisions.org/about-supported-decision-making/">About Supported Decision-Making</a>
+        
+    </li>
+    <li>
+        <a href="https://drcnh.org/know-your-rights/what-is-supported-decision-making/">What is Supported Decision-Making?</a>
+        
+    </li>
+    <li>
+        <a href="https://sdmny.org/about-supported-decision-making/what-is-supported-decision-making/">What is Supported Decision-Making, SDMNY</a>
+        
+    </li>
+</ul>
+<p>The helpers can be, friends, family members or professionals. Supported decision making helps people avoid a formal guardian . SDM needs to adapt to the changing needs of the individual. Please see the solutions suggested in the <a href="Supported-Decision-Making.html">supported decision making research module </a>.</p>
+</section><section id="social-media-and-algorithm-driven-content"><div class="header-wrapper"><h3 id="x4-3-social-media-and-algorithm-driven-content"><bdi class="secno">4.3 </bdi>Social Media and Algorithm Driven Content</h3><a class="self-link" href="#social-media-and-algorithm-driven-content" aria-label="Permalink for Section 4.3"></a></div>
+<p>For social media, provide a graded range of solutions including:</p>
+<ul>
+    <li>
+        <strong>Right to Delete: </strong>Users should have a right to delete social media content. For example, a person may wish to remove posts made during a psychotic episode. In another example, they may post about needing support during a crisis. However, later they may be on a path to recovery and not want people to know about their previous struggles. They should be able to completely remove old posts and comments such that they can move on with their lives. This should include posts and pictures that other people have reposted.
+    </li>
+    <li>
+        <strong>Right to Remove Personal Information</strong>: People may also post information that compromises their safety, such as their phone number, and they should be able to remove it.
+    </li>
+    <li>
+        <strong>Adjust Content: </strong>Users should be able to adjust content feeds dynamically. For example, a person experiencing a manic episode may wish to avoid content that they typically engage with at other times.
+    </li>
+    <li>
+        <strong>Supported Decision-Making: </strong>Supported decision making can help people check themselves. Please see the solutions suggested in the <a href="Supported-Decision-Making.html">supported decision making research module </a>.
+    </li>
+</ul>
+</section><section id="a-process-for-safety-and-wellbeing"><div class="header-wrapper"><h3 id="x4-4-a-process-for-safety-and-wellbeing"><bdi class="secno">4.4 </bdi>A Process for Safety and Wellbeing</h3><a class="self-link" href="#a-process-for-safety-and-wellbeing" aria-label="Permalink for Section 4.4"></a></div>
+<p>This paper recommends establishing a process that promotes wellbeing of the users. Such a process could include:</p>
+<ul>
+    <li>
+        Design that encourages supported and consistent decision-making. Design should help users:
+    </li>
+</ul>
+<ul>
+    <li>
+        Understand the nature risks and benefits of treatments and alternatives,
+    </li>
+    <li>
+        Appreciate and apply the relevant information to one’s self and one’s own situation,
+    </li>
+    <li>
+        Engage in consequential and comparative reasoning and manipulating information rationally, and
+    </li>
+    <li>
+        Express a clear and consistent decision [<cite><a class="bibref" data-link-type="biblio" href="#bib-rc-wojtowicz1" title="Exploring Innovative Approaches. In The Intersection of Behavioral Health, Mental Health, and Health Literacy: Proceedings of a Workshop.">RC-Wojtowicz1</a></cite>].
+    </li>
+</ul>
+<ul>
+    <li>
+        Best practices for safety and wellbeing in this sector.
+    </li>
+    <li>
+        Review and constant improvement of algorithms and other risks that may affect mental health and safety, including for diverse user groups and vulnerable groups.
+    </li>
+    <li>
+        Ongoing analytical studies and longitudinal studies for the effect of safety and wellbeing as above.
+    </li>
+    <li>
+        Certification that mental health is being included ongoing in diverse user groups and vulnerable groups.
+    </li>
+    <li>
+        Identification of problems, which are then corrected in a timely manner, and retested until fully addressed.
+    </li>
+    <li>
+        Alerting users and caregivers of all known risks.
+    </li>
+    <li>
+        Guarantee of the level of privacy of data, and the ease of which users can control their data.
+    </li>
+    <li>
+        Supported decision-making where risks are otherwise unavoidable.
+    </li>
+    <li>
+        Support for integrating safe caregivers and helpers. Please see the solutions suggested in the <a href="Supported-Decision-Making.html">supported decision making research module</a>.
+    </li>
+</ul>
+<section id="hackers"><div class="header-wrapper"><h4 id="x4-4-1-hackers"><bdi class="secno">4.4.1 </bdi>Hackers</h4><a class="self-link" href="#hackers" aria-label="Permalink for Section 4.4.1"></a></div>
+<p>Security should be strong and easily used by those with cognitive disabilities, such as a biometrics option. For a full discussion see the <a href="https://w3c.github.io/coga/issue-papers/privacy-security.html">research module on security</a>.</p>
+</section><section id="sexual-predators-and-con-artists"><div class="header-wrapper"><h4 id="x4-4-2-sexual-predators-and-con-artists"><bdi class="secno">4.4.2 </bdi>Sexual predators and Con Artists</h4><a class="self-link" href="#sexual-predators-and-con-artists" aria-label="Permalink for Section 4.4.2"></a></div>
+<ul>
+    <li>
+        A site with a chat option should prevent any exchange of personal information.
+    </li>
+    <li>
+        Users should be regularly warned to avoid scams.
+    </li>
+    <li>
+        Getting help and or reporting something worrying should be simple to do. Users should know they will never be penalized for reporting something.
+    </li>
+    <li>
+        Users should find it easy to report cyber crime. These reports should go to the correct place and be swiftly addressed.
+    </li>
+    <li>
+        Provide easy to use videos and tips that provide explanations about cyber criminals, how to stay safe and how to report anything you find odd.
+    </li>
+    <li>
+        Server-side solutions, such as analytics, should be employed to find cyber-criminals.
+    </li>
+    <li>
+        Advertisements and paid articles should be vetted for reliability. They should be clearly marked as external content in an easy to understand way.
+    </li>
+    <li>
+        Users should be made aware when they are leaving your site or going to a less trustworthy site, including when following links from other users.
+    </li>
+    <li>
+        Sites offering sexual content or intended for chats of sexual nature should state that clearly.
+    </li>
+</ul>
+</section></section><section id="naming-applications-and-services"><div class="header-wrapper"><h3 id="x4-5-naming-applications-and-services"><bdi class="secno">4.5 </bdi>Naming Applications and Services</h3><a class="self-link" href="#naming-applications-and-services" aria-label="Permalink for Section 4.5"></a></div>
+<p>Apps and services should be careful when including disabilities, cognitive emotional and learning impairments, in their name. Consider naming after support provided rather than disability labels. For example, an app may be called “shopping support,” with a description that this may be useful for people with dyscalculia. With this name, people do not have to know they have dyscalculia to know they need support with numbers. In addition it is less obvious to others that they have dyscalculia.</p>
+<p>Research has suggested that app titles related to anxiety disorders and symptoms have lower adoptions and fewer reviews than others.</p>
+<p>Anxiety apps with titles related to mindfulness activities have more installs, reviews, and higher ratings by users. Since app titles related to mindfulness activities (eg, breathing and meditation) signal providing a method to help users reduce their anxiety, users may perceive them to be more useful and applicable. [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-huang1" title="Users Adoption of Mental Health Apps: Examining the Impact of Information Cues.">RM-huang1</a></cite>] [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-bakker1" title="Mental health smartphone apps review and evidence based recommendations for future developments.">RM-bakker1</a></cite>].</p>
+</section><section id="representation-in-data"><div class="header-wrapper"><h3 id="x4-6-representation-in-data"><bdi class="secno">4.6 </bdi>Representation in Data</h3><a class="self-link" href="#representation-in-data" aria-label="Permalink for Section 4.6"></a></div>
+<p>When using data for design and decision making, ensure that all groups and subgroups are proportionately represented. Research and longitudinal studies should be performed to ensure that all groups and subgroups of people are proportionately represented in the dataset.</p>
+<p>Given the realities of app accuracy, efficacy, privacy, security, a variety of different technology platforms could be used for collecting data rather than just apps and smartphones. This will avoid biases against communities who struggle to use these devices or apps, and reduce the effect of the digital divide, such as those aging with memory impairments. [<cite><a class="bibref" data-link-type="biblio" href="#bib-rm-bauer1" title="Implementation Science: What Is It and Why Should I Care?">RM-bauer1</a></cite>]</p>
+  </section></section> 
+
+<section class="appendix section" id="terms"><div class="header-wrapper"><h2 id="a-terms"><bdi class="secno">A. </bdi>Terms </h2><a class="self-link" href="#terms" aria-label="Permalink for Appendix A."></a></div>
+  
+<p>Social media, refers broadly to web and mobile platforms that allow individuals to connect with others within a virtual network (such as Facebook, Twitter, Instagram, Snapchat, or LinkedIn), where they can share, co-create, or exchange various forms of digital content, including information, messages, photos, or videos <a href="https://link.springer.com/article/10.1007/s41347-020-00134-x#ref-CR2">(Ahmed et al. 2019)</a></p>
+<p>Algorithms, refers broadly  to the logic often used to run computer programs.</p>
+</section> 
+  
+
+<section class="appendix section" id="acknowledgements and sources"><div class="header-wrapper"><h2 id="b-appendix-acknowledgments"><bdi class="secno">B. </bdi>Appendix: Acknowledgments</h2><a class="self-link" href="#acknowledgements and sources" aria-label="Permalink for Appendix B."></a></div>
+   
+	<p>Thanks to Crimes against Children Investigations Israel National Cyber Unit for the review. Interviewed by Lisa seeman-horvitz </p>
+	
+  
+<section id="key-contributors-and-section-editors"><div class="header-wrapper"><h3 id="b-1-key-contributors-and-section-editors"><bdi class="secno">B.1 </bdi>Key contributors and section editors</h3><a class="self-link" href="#key-contributors-and-section-editors" aria-label="Permalink for Appendix B.1"></a></div>
+    
+<ul>
+<li>
+
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+</li><li>
+Lisa Seeman-Horwitz, 
+Invited Expert
+</li><li>
+David Swallow, 
+TPGi
+</li>
+</ul></section>
+
+
+<section id="participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><div class="header-wrapper"><h3 id="b-2-participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication"><bdi class="secno">B.2 </bdi>
+Participants active in the Cognitive and Learning Disabilities Task Force at the time of publication
+</h3><a class="self-link" href="#participants-active-in-the-cognitive-and-learning-disabilities-task-force-at-the-time-of-publication" aria-label="Permalink for Appendix B.2"></a></div>
+    
+<ul>
+<li>
+	Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Leonard Beasley, 
+CVS Pharmacy, Inc.
+
+</li><li>
+
+Rachael Bradley Montgomery, 
+Library of Congress
+
+</li><li>
+
+Rain Breaw Michaels, 
+Google LLC
+
+</li><li>
+Tiffany Burtin, 
+Invited Expert 
+
+</li><li>
+Deborah Dahl, 
+Conversational Technologies
+
+</li><li>
+Jennifer Delisi, 
+Invited Expert 
+
+</li><li>
+E.A. Draffan, 
+Global Symbols
+
+</li><li>
+Jeanne Erickson Cooley, 
+TPGi
+
+
+</li><li>
+Eric Hind, 
+Invited Expert 
+</li><li>
+Rashmi Katakwar, 
+Invited Expert 
+</li><li>
+
+John Kirkwood, 
+CityMouse, Inc
+
+</li><li>
+Andy Manea, 
+Invited Expert 
+</li><li>
+Jan McSorley, 
+Invited Expert 
+</li><li>
+Rebecca Monteleone, 
+The University of Toledo
+
+</li><li>
+Abigail Ofer, 
+Evinced Inc.
+
+</li><li>
+
+Justine Pascalides, 
+Amazon
+</li><li>
+Ruoxi Ran, 
+<abbr title="World Wide Web Consortium">W3C</abbr>
+
+
+</li><li>
+Julie Rawe, 
+Understood.org
+
+
+</li><li>
+Charlotte Riggle, 
+Amazon
+
+</li><li>
+John Rochford, 
+University of Massachusetts Medical School
+</li><li>
+Janina Sajka, 
+Invited Expert 
+</li><li>
+
+Lisa Seeman-Horwitz, 
+Invited Expert 
+</li><li>
+
+Gareth Slinn, 
+Invited Expert 
+</li><li>
+David Swallow, 
+TPGi
+
+
+</li></ul></section>
+</section>
+
+
+<section class="appendix section" id="additional-sources"><div class="header-wrapper"><h2 id="c-additional-sources"><bdi class="secno">C. </bdi>Additional Sources</h2><a class="self-link" href="#additional-sources" aria-label="Permalink for Appendix C."></a></div>
+<ol start="1">
+<li>
+<a href="https://link.springer.com/article/10.1007/s41347-020-00134-x#Sec10">Social Media and Mental Health: Benefits, Risks, and Opportunities for Research and Practice</a></li>
+<li>
+<a href="https://doi.org/10.1093/geronb/gby109">Going Online to Stay Connected: Online Social Participation Buffers the Relationship Between Pain and Depression</a></li>
+<li>
+<a href="https://onlinelibrary.wiley.com/doi/10.1111/jonm.12948">From envy to social anxiety and rumination: How social media site addiction triggers task distraction amongst nurses</a></li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/28093386/">Association of Facebook Use With Compromised Well-Being: A Longitudinal Study</a></li>
+<li>
+<a href="https://www.sciencedirect.com/science/article/pii/S0747563218301675">The moderating role of age in the relationship between social media use and mental well-being: An analysis of the 2016 General Social Survey</a></li>
+<li>
+<a href="https://www.bbc.com/news/blogs-trending-32852043">Can social media cause PTSD?</a></li>
+<li>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/">Social Media Use and Its Connection to Mental Health: A Systematic Review</a></li>
+<li>
+<a href="https://journals.sagepub.com/doi/abs/10.1177/0272431613501083?journalCode=jeaa&amp;">NetTweens: The Internet and Body Image Concerns in Preteenage Girls</a></li></ol>
+
+</section> 
+
+
+
+
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<section id="references" class="appendix"><div class="header-wrapper"><h2 id="d-references"><bdi class="secno">D. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix D."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="d-1-informative-references"><bdi class="secno">D.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix D.1"></a></div>
+    
+    <dl class="bibliography"><dt id="bib-coga-usable">[coga-usable]</dt><dd>
+      <a href="https://www.w3.org/TR/coga-usable/"><cite>Making Content Usable for People with Cognitive and Learning Disabilities</cite></a>. Lisa Seeman-Horwitz; Rachael Bradley Montgomery; Steve Lee; Ruoxi Ran.  W3C. 29 April 2021. W3C Working Group Note. URL: <a href="https://www.w3.org/TR/coga-usable/">https://www.w3.org/TR/coga-usable/</a>
+    </dd><dt id="bib-rc-chadwick1">[RC-Chadwick1]</dt><dd>
+      <a href="https://doi.org/10.1108/TLDR-03-2019-0008"><cite>Online risk for people with intellectual disabilities</cite></a>.  Chadwick, D.D et al.  Tizard Learning Disability Review. 2019. academic paper. URL: <a href="https://doi.org/10.1108/TLDR-03-2019-0008">https://doi.org/10.1108/TLDR-03-2019-0008</a>
+    </dd><dt id="bib-rc-gay1">[RC-Gay1]</dt><dd>
+      <a href=" https://mental.jmir.org/2016/2/e15?utm_source=TrendMD&amp;utm_medium=cpc&amp;utm_campaign=JMIR_TrendMD_0"><cite>igital Technology Use Among Individuals with Schizophrenia: Results of an Online Survey</cite></a>. Katrina Gay; John Torous; Adam Joseph; Anand Pandya; Ken Duckworth et al. URL: <a href=" https://mental.jmir.org/2016/2/e15?utm_source=TrendMD&amp;utm_medium=cpc&amp;utm_campaign=JMIR_TrendMD_0"> https://mental.jmir.org/2016/2/e15?utm_source=TrendMD&amp;utm_medium=cpc&amp;utm_campaign=JMIR_TrendMD_0</a>
+    </dd><dt id="bib-rc-iad1">[RC-IAD1]</dt><dd>
+      <a href="https://en.wikipedia.org/wiki/Internet_addiction_disorder"><cite>Wikipedia - Internet Addiction Disorder</cite></a>.  Wikipedia. other. URL: <a href="https://en.wikipedia.org/wiki/Internet_addiction_disorder">https://en.wikipedia.org/wiki/Internet_addiction_disorder</a>
+    </dd><dt id="bib-rc-karim1">[RC-karim1]</dt><dd>
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/"><cite>Social Media Use and Its Connection to Mental Health: A Systematic Review</cite></a>. Fazida Karim; Azeezat A Oyewande; Lamis F Abdalla; Reem Chaudhry Ehsanullah; Safeera Khan et al. 2020. academic paper. URL: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7364393/</a>
+    </dd><dt id="bib-rc-kim1">[RC-Kim1]</dt><dd>
+      <cite>Impulsivity and compulsivity in Internet gaming disorder: A comparison with obsessive-compulsive disorder and alcohol use disorder.</cite>. Kim YJ; Lim JA; Lee JY; Oh S; Kim SN; Kim DJ; Ha JE; Kwon JS; Choi JS et al.  J Behav Addict. 2017. academic paper. 
+    </dd><dt id="bib-rc-m1">[RC-M1]</dt><dd>
+      <a href="https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b"><cite>Designing good mental health into the way we bank</cite></a>. Design Council; Monzo Bank et al.  Medium. Oct 30, 2018. other. URL: <a href="https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b">https://medium.com/design-council/designing-good-mental-health-into-the-way-we-bank-5082257beb8b</a>
+    </dd><dt id="bib-rc-majid1">[RC-majid1]</dt><dd>
+      <a href="https://doi.org/10.1111/jonm.12948"><cite>From envy to social anxiety and rumination: How social media site addiction triggers task distraction amongst nurses</cite></a>. Majid; A et al.  Journal of Nursing Mangement. 2019. academic paper. URL: <a href="https://doi.org/10.1111/jonm.12948">https://doi.org/10.1111/jonm.12948</a>
+    </dd><dt id="bib-rc-moura1">[RC-moura1]</dt><dd>
+      <a href="https://doi.org/10.5210/fm.v28i1.12905 "><cite>Encoding normative ethics: On algorithmic bias and disability</cite></a>. Moura I et al.  First Monday. 2023. academic paper. URL: <a href="https://doi.org/10.5210/fm.v28i1.12905 ">https://doi.org/10.5210/fm.v28i1.12905 </a>
+    </dd><dt id="bib-rc-naslund1">[RC-naslund1]</dt><dd>
+      <a href="https://doi.org/10.1007/s41347-020-00134-x"><cite>Social Media and Mental Health: Benefits, Risks, and Opportunities for Research and Practice</cite></a>. Naslund; J et al.  J. technol. behav. sci. 5, 245–257 (2020). 2020. academic paper. URL: <a href="https://doi.org/10.1007/s41347-020-00134-x">https://doi.org/10.1007/s41347-020-00134-x</a>
+    </dd><dt id="bib-rc-odgers1">[RC-odgers1]</dt><dd>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/31951670/ "><cite>Annual Research Review: Adolescent mental health in the digital age: facts, fears, and future directions</cite></a>. C L Odgers; M R Jensen et al.  Child Psychol Psychiatry. 2020 Mar;61(3):336-348. doi: 10.1111/jcpp.13190.  PMID: 31951670; PMCID: PMC8221420. 2020. academic paper. URL: <a href="https://pubmed.ncbi.nlm.nih.gov/31951670/ ">https://pubmed.ncbi.nlm.nih.gov/31951670/ </a>
+    </dd><dt id="bib-rc-ophoff1">[RC-ophoff1]</dt><dd>
+      <a href=" https://dl.acm.org/doi/abs/10.1145/3430263.3452427"><cite>Cognitive function vs accessible authentication insights from dyslexia research</cite></a>. Ophoff; Jacques; Graham Johnson; and Karen Renaud et al.  Proceedings of the 18th International Web for All Conference. 2021. academic paper. URL: <a href=" https://dl.acm.org/doi/abs/10.1145/3430263.3452427"> https://dl.acm.org/doi/abs/10.1145/3430263.3452427</a>
+    </dd><dt id="bib-rc-shakya1">[RC-shakya1]</dt><dd>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/28093386/"><cite>Association of Facebook Use With Compromised Well-Being A Longitudinal Study</cite></a>. Shakya HB; Christakis NA et al.  Am J Epidemiol. 2017. academic paper. URL: <a href="https://pubmed.ncbi.nlm.nih.gov/28093386/">https://pubmed.ncbi.nlm.nih.gov/28093386/</a>
+    </dd><dt id="bib-rc-tiggemann1">[RC-tiggemann1]</dt><dd>
+      <a href="https://doi.org/10.1177/0272431613501083 "><cite>NetTwweens The internet and body image concerns in preteenage girls</cite></a>. M Tiggemann; A Slater   et al.  The Journal of Early Adolescence Volume 34(5). 2013. academic paper. URL: <a href="https://doi.org/10.1177/0272431613501083 ">https://doi.org/10.1177/0272431613501083 </a>
+    </dd><dt id="bib-rc-venkit1">[RC-venkit1]</dt><dd>
+      <a href="https://arxiv.org/abs/2307.09209"><cite>Automated ableism: An exploration of explicit disability biases in sentiment and toxicity analysis models</cite></a>. PN Venkit; M Srinath; S Wilson et al.  arXiv preprint arXiv:2307.09209. 2023. academic paper. URL: <a href="https://arxiv.org/abs/2307.09209">https://arxiv.org/abs/2307.09209</a>
+    </dd><dt id="bib-rc-wojtowicz1">[RC-Wojtowicz1]</dt><dd>
+      <a href="https://arxiv.org/abs/2307.09209"><cite>Exploring Innovative Approaches. In The Intersection of Behavioral Health, Mental Health, and Health Literacy: Proceedings of a Workshop.</cite></a>. Wojtowicz; A., Alper et al.  J., &amp; National Academies of Sciences, Engineering, and Medicine. 2019. URL: <a href="https://arxiv.org/abs/2307.09209">https://arxiv.org/abs/2307.09209</a>
+    </dd><dt id="bib-rm-ang1">[RM-ang1]</dt><dd>
+      <a href=" https://doi.org/10.1093/geronb/gby109"><cite>Going Online to Stay Connected Online Social Participation Buffers the Relationship Between Pain and Depression</cite></a>. Shannon Ang; Tuo-Yu Chen et al. 2019. academic paper. URL: <a href=" https://doi.org/10.1093/geronb/gby109"> https://doi.org/10.1093/geronb/gby109</a>
+    </dd><dt id="bib-rm-bakker1">[RM-bakker1]</dt><dd>
+      <a href="https://mental.jmir.org/2016/1/e7/"><cite>Mental health smartphone apps review and evidence based recommendations for future developments.</cite></a>. D. Bakker; N. Kazantizis; D. Rickwood; N. Rickard et al.  JMIR Mental Health 3 1. 2016. academic paper. URL: <a href="https://mental.jmir.org/2016/1/e7/">https://mental.jmir.org/2016/1/e7/</a>
+    </dd><dt id="bib-rm-bauer1">[RM-bauer1]</dt><dd>
+      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0165178115000834"><cite>Implementation Science: What Is It and Why Should I Care?</cite></a>. M.S. Bauer; J. Damschroder; H. Hagedorn; J. Smith; C. Kilbourne et al.  Psychiatry Research 228:2. 2015. academic paper. URL: <a href="https://www.sciencedirect.com/science/article/abs/pii/S0165178115000834">https://www.sciencedirect.com/science/article/abs/pii/S0165178115000834</a>
+    </dd><dt id="bib-rm-bernard1">[RM-Bernard1]</dt><dd>
+      <a href="https://www.jmir.org/2019/10/e12514/"><cite>Difficulties Encountered by People With Depression and Anxiety on the Web: Qualitative Study and Web-Based Expert Survey</cite></a>. R. Bernard; C. Sabariego; A. Cieza et al.  Journal of Medical Internet Research. 2019. academic paper. URL: <a href="https://www.jmir.org/2019/10/e12514/">https://www.jmir.org/2019/10/e12514/</a>
+    </dd><dt id="bib-rm-caplan1">[RM-caplan1]</dt><dd>
+      <a href="https://doi.org/10.1089/cpb.2006.9963"><cite>Relations Among Loneliness, Social Anxiety, and Problematic Internet Use</cite></a>. S Caplan et al.  CyberPsychology &amp; Behavior. 2007. academic paper. URL: <a href="https://doi.org/10.1089/cpb.2006.9963">https://doi.org/10.1089/cpb.2006.9963</a>
+    </dd><dt id="bib-rm-cauberghe1">[RM-cauberghe1]</dt><dd>
+      <a href="https://doi.org/10.1089/cyber.2020.0478"><cite>How Adolescents Use Social Media to Cope with Feelings of Loneliness and Anxiety During COVID-19 Lockdown</cite></a>. V. Cauberghe; I. Van Wesenbeeck; S. De Jans; L. Hudders; K. Ponnet et al.  Cyberpsychology, Behavior, and Social Networking. 2021-04. academic paper. URL: <a href="https://doi.org/10.1089/cyber.2020.0478">https://doi.org/10.1089/cyber.2020.0478</a>
+    </dd><dt id="bib-rm-hardy1">[RM-hardy1]</dt><dd>
+      <a href="https://doi.org/10.1016/j.chb.2018.04.005"><cite>The moderating role of age in the relationship between social media use and mental well-being An analysis of the 2016 General Social Survey,Volume 85,Pages 282-290, ISSN 0747-5632</cite></a>. Bruce W Hardy; Jessica Castonguay et al.  Computers in Human Behavior. 2016. academic paper. URL: <a href="https://doi.org/10.1016/j.chb.2018.04.005">https://doi.org/10.1016/j.chb.2018.04.005</a>
+    </dd><dt id="bib-rm-hökby1">[RM-hökby1]</dt><dd>
+      <cite>Are Mental Health Effects of Internet Use Attributable to the Web-Based Content or Perceived Consequences of Usage? A Longitudinal Study of European Adolescents</cite>. Hokby S; Hadlaczky G; Westerlund J et al.  JMIR Ment Health3(3):e31 Published 2016 Jul 13 doi:102196/mental5925. 2016. academic paper. 
+    </dd><dt id="bib-rm-huang1">[RM-huang1]</dt><dd>
+      <a href="https://mhealth.jmir.org/2017/6/e83/"><cite>Users Adoption of Mental Health Apps: Examining the Impact of Information Cues.</cite></a>. H. Huang; M. Bashir et al.  JMIR Mhealth Uhealth 5:6. 2017. academic paper. URL: <a href="https://mhealth.jmir.org/2017/6/e83/">https://mhealth.jmir.org/2017/6/e83/</a>
+    </dd><dt id="bib-rm-lipschitz1">[RM-lipschitz1]</dt><dd>
+      <a href="https://humanfactors.jmir.org/2018/1/e2/"><cite>Improving Usability of mHealth Technology for Patients With Serious Mental Illness, A Qualitative Study.</cite></a>. J. Lipschitz; J. Torous; M. Firth; J. Ng et al.  JMIR Human Factors 5:1. 2018. academic paper. URL: <a href="https://humanfactors.jmir.org/2018/1/e2/">https://humanfactors.jmir.org/2018/1/e2/</a>
+    </dd><dt id="bib-rm-monteith1">[RM-monteith1]</dt><dd>
+      <a href="https://doi.org/10.1186/s40345-020-00216-y"><cite>Internet of things issues related to psychiatry</cite></a>. S. Monteith; T. Glenn; J. Geddes; et al. et al.  International Journal of Bipolar Disorders. 2021. academic paper. URL: <a href="https://doi.org/10.1186/s40345-020-00216-y">https://doi.org/10.1186/s40345-020-00216-y</a>
+    </dd><dt id="bib-rm-oneil1">[RM-oneil1]</dt><dd>
+      <a href="https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815"><cite>Weapons of Math Destruction  Chapter 6 Personality Tests Chapter 10 Facebook experiments</cite></a>. O Neil Cathy et al. 2016. URL: <a href="https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815">https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815</a>
+    </dd><dt id="bib-rm-rotondi1">[RM-rotondi1]</dt><dd>
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5247620/"><cite>Designing eHealth applications to reduce cognitive effort for persons with severe mental illness: page complexity, navigation simplicity, and comprehensibility.</cite></a>. A.J. Rotondi; M.R. Spring; B.H. Hanusa; S.M. Eack; G.L. Haas et al.  JMIR Human Factors 4:1. 2017. academic paper. URL: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5247620/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5247620/</a>
+    </dd><dt id="bib-rm-rotondi2">[RM-rotondi2]</dt><dd>
+      <a href="https://doi.org/10.1093/schbul/sbt194"><cite>Critical Design Elements of E-Health Applications for Users With Severe Mental Illness: Singular Focus, Simple Architecture, Prominent Contents, Explicit Navigation, and Inclusive Hyperlinks</cite></a>. A.J. Rotondi; S.M. Eack; B.H. Hanusa; M.B. Spring; G.L. Haas et al.  Schizophrenia Bulletin. 2015. academic paper. URL: <a href="https://doi.org/10.1093/schbul/sbt194">https://doi.org/10.1093/schbul/sbt194</a>
+    </dd><dt id="bib-rm-yu1">[RM-Yu1]</dt><dd>
+      <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5146206/"><cite>Stress potentiates decision biases: A stress induced deliberation-to-intuition (SIDI) model</cite></a>. R. Yu et al.  Neurobiology of Stress. 2016-02. academic paper. URL: <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5146206/">https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5146206/</a>
+    </dd><dt id="bib-wcag21">[WCAG21]</dt><dd>
+      <a href="https://www.w3.org/TR/WCAG21/"><cite>Web Content Accessibility Guidelines (WCAG) 2.1</cite></a>. W3C et al.  W3C Recommendation. 2018. standard. URL: <a href="https://www.w3.org/TR/WCAG21/">https://www.w3.org/TR/WCAG21/</a>
+    </dd></dl>
+  </section></section><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-highlight-vars">(() => {
+// @ts-check
+
+if (document.respec) {
+  document.respec.ready.then(setupVarHighlighter);
+} else {
+  setupVarHighlighter();
+}
+
+function setupVarHighlighter() {
+  document
+    .querySelectorAll("var")
+    .forEach(varElem => varElem.addEventListener("click", highlightListener));
+}
+
+function highlightListener(ev) {
+  ev.stopPropagation();
+  const { target: varElem } = ev;
+  const hightligtedElems = highlightVars(varElem);
+  const resetListener = () => {
+    const hlColor = getHighlightColor(varElem);
+    hightligtedElems.forEach(el => removeHighlight(el, hlColor));
+    [...HL_COLORS.keys()].forEach(key => HL_COLORS.set(key, true));
+  };
+  if (hightligtedElems.length) {
+    document.body.addEventListener("click", resetListener, { once: true });
+  }
+}
+
+// availability of highlight colors. colors from var.css
+const HL_COLORS = new Map([
+  ["respec-hl-c1", true],
+  ["respec-hl-c2", true],
+  ["respec-hl-c3", true],
+  ["respec-hl-c4", true],
+  ["respec-hl-c5", true],
+  ["respec-hl-c6", true],
+  ["respec-hl-c7", true],
+]);
+
+function getHighlightColor(target) {
+  // return current colors if applicable
+  const { value } = target.classList;
+  const re = /respec-hl-\w+/;
+  const activeClass = re.test(value) && value.match(re);
+  if (activeClass) return activeClass[0];
+
+  // first color preference
+  if (HL_COLORS.get("respec-hl-c1") === true) return "respec-hl-c1";
+
+  // otherwise get some other available color
+  return [...HL_COLORS.keys()].find(c => HL_COLORS.get(c)) || "respec-hl-c1";
+}
+
+function highlightVars(varElem) {
+  const textContent = norm(varElem.textContent);
+  const parent = varElem.closest(".algorithm, section");
+  const highlightColor = getHighlightColor(varElem);
+
+  const varsToHighlight = [...parent.querySelectorAll("var")].filter(
+    el =>
+      norm(el.textContent) === textContent &&
+      el.closest(".algorithm, section") === parent
+  );
+
+  // update availability of highlight color
+  const colorStatus = varsToHighlight[0].classList.contains("respec-hl");
+  HL_COLORS.set(highlightColor, colorStatus);
+
+  // highlight vars
+  if (colorStatus) {
+    varsToHighlight.forEach(el => removeHighlight(el, highlightColor));
+    return [];
+  } else {
+    varsToHighlight.forEach(el => addHighlight(el, highlightColor));
+  }
+  return varsToHighlight;
+}
+
+function removeHighlight(el, highlightColor) {
+  el.classList.remove("respec-hl", highlightColor);
+  // clean up empty class attributes so they don't come in export
+  if (!el.classList.length) el.removeAttribute("class");
+}
+
+function addHighlight(elem, highlightColor) {
+  elem.classList.add("respec-hl", highlightColor);
+}
+
+/**
+ * Same as `norm` from src/core/utils, but our build process doesn't allow
+ * imports in runtime scripts, so duplicated here.
+ * @param {string} str
+ */
+function norm(str) {
+  return str.trim().replace(/\s+/g, " ");
+}
+})()</script><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
